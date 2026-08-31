@@ -1,0 +1,75 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 포천시 복지환경국 복지정책과",
+  "ctpvNm": "경기도",
+  "inqNum": "5292",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260813",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "servDgst": "포천시 거주 국가보훈대상자 등에 대한 예우와 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003324&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003324",
+  "servNm": "보훈명예(참전유공자) 수당",
+  "sggNm": "포천시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003324",
+  "servNm": "보훈명예(참전유공자) 수당",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 포천시 복지환경국 복지정책과",
+  "ctpvNm": "경기도",
+  "sggNm": "포천시",
+  "servDgst": "포천시 거주 국가보훈대상자 등에 대한 예우와 지원",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 지원대상 : 포천시에 주소를 두고 거주하고 있는 국가유공자증 소지자 &#13;",
+  "slctCritCn": "포천시 거주중인 보훈부에 등록된 보훈대상자",
+  "alwServCn": "1. 보훈명예수당 : 월 30만원2. 참전명예수당 : 월 30만원3. 참전유공자 배우자수당 : 월 15만원4. 독립유공자수당 : 월 35만원5. 사망위로금 : 20만원",
+  "aplyMtdCn": "1) 신청기간 : 연중 2) 신청장소 : 읍·면·동주민센터  3) 신 청 인 : 본인 또는 대리인 4) 구비서류   - 보훈/참전명예수당 : 수당신청서, 국가유공자증 및 신분증, 본인명의통장  - 사망위로금 : 사망위로금신청서, 사망진단서, 신청인신분증, 가족관계증명서, 국가유공자증, 신청인명의통장",
+  "inqNum": "5295",
+  "lastModYmd": "20260813",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-538-3072",
+    "wlfareInfoReldNm": "포천시 복지정책과 보훈수당관련"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "포천시 국가보훈대상자 등 예우 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM1333330035039284&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 제2호서식] 국가보훈대상자 사망위로금 지급신청서.hwpx"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM1332510035039142&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 제1호서식]보훈명예수당 등 지급신청서.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM1335290035039704&amp;atcflSn=1",
+    "wlfareInfoReldNm": "포천시 국가보훈대상자 등 예우 및 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

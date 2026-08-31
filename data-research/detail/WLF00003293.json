@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 삼척시 자치행정국 사회복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "6878",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "노년, 중장년, 아동, 영유아, 청년, 청소년",
+  "servDgst": "거동이 불편한 장애인들에게 집안에서 활동 시 몸을 지지할 수 있는 안전손잡이 설치를 지원하여 장애인의 자립생활 및 안전사고예방에 이바지하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003293&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003293",
+  "servNm": "장애인 안전손잡이 설치 지원 사업",
+  "sggNm": "삼척시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득, 장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003293",
+  "servNm": "장애인 안전손잡이 설치 지원 사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 삼척시 자치행정국 사회복지과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "삼척시",
+  "servDgst": "거동이 불편한 장애인들에게 집안에서 활동 시 몸을 지지할 수 있는 안전손잡이 설치를 지원하여 장애인의 자립생활 및 안전사고예방에 이바지하고자 함",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "삼척시에 주소를 두고 실제 거주하는 거동불편 재가 장애인단, 노인장기요양보험 적용대상자, 연도 중 80만원 이상의 장애인보조기기 지원을 받은자, 3년 이내 동일 지원을 받은 장애인가구는 제외",
+  "slctCritCn": "노인장기요양보험 대상자가 아닌 재가 장애인",
+  "alwServCn": "노인장기요양보험법 상 안전손잡이 설치 지원&#13;소득별 본인부담금 차등적용(일반가구 15%, 차상위가구 7.5%, 기초수급자 0%)",
+  "aplyMtdCn": "읍면동 주민센터 신청서 접수",
+  "inqNum": "6886",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-570-3329",
+    "wlfareInfoReldNm": "삼척시청 사회복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인 안전손잡이 설치사업 추진계획"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240612UUWBM1555170089198511&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

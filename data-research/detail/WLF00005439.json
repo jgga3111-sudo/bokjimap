@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "경기도 화성시 성평등가족국 청년청소년과",
+  "ctpvNm": "경기도",
+  "inqNum": "11267",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년",
+  "servDgst": "청년 주거비 지원을 통한 주거안정",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005439&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005439",
+  "servNm": "화성시 청년 전월세 보증금 대출이자 지원사업",
+  "sggNm": "화성시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005439",
+  "servNm": "화성시 청년 전월세 보증금 대출이자 지원사업",
+  "enfcBgngYmd": "20240401",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 화성시 성평등가족국 청년청소년과",
+  "ctpvNm": "경기도",
+  "sggNm": "화성시",
+  "servDgst": "청년 주거비 지원을 통한 주거안정",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "❍ 기본요건  - 만19세 ~ 39세 청년   - 화성시에 주민등록을 둔 무주택 청년     (세대원이 있는 경우 세대원 전원 무주택기준 충족 필요)  - 2024년 1월 1일 ~ 신청일 사이에 1년 이상 전월세 보증금 대출이자를 상환한 자 ❍ 소득요건: 기준 중위소득 180%이하 ❍ 주택요건  - 화성시 소재 주택 또는 주거용 오피스텔  - 임차전용면적 60㎡이하 (2인가구 이상 85㎡이하)  - 보증금(전세 전환가액) 3억원 이하",
+  "slctCritCn": "❍ 기본요건  - 만19세 ~ 39세 청년   - 화성시에 주민등록을 둔 무주택 청년      (세대원이 있는 경우 세대원 전원 무주택기준 충족 필요)  - 2024년 1월 1일 ~ 신청일 사이에 1년 이상 전월세 보증금 대출이자를 상환한 자 ❍ 소득요건: 기준 중위소득 180%이하 ❍ 주택요건  - 화성시 소재 주택 또는 주거용 오피스텔  - 임차전용면적 60㎡이하 (세대원이 있는 경우 85㎡이하)  - 보증금(전세 전환가액) 3억원 이하* 공고문의 배점표 기준에 따라 고득점자 순으로 선정",
+  "alwServCn": "- 신청인 본인계좌 현금 지급- 연 최대 200만원 (연1회, 생애 최대 2회 지원 가능) * 대출액의 연2%이자 지원 / 대출이율이 2% 이하일 경우 실질 대출금리 적용",
+  "aplyMtdCn": "○신청방법: 잡아바어플라이 통합접수시템을 통한 온라인 접수 (잡아바어플라이에서 '화성' 검색) ○신청기간: 상하반기 연 1회 * 상세 신청일정은 대상자 모집 공고문 (잡아바어플라이 또는 화성시청 홈페이지) 확인 또는 담당자 유선 문의",
+  "inqNum": "11279",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-5189-6217",
+    "wlfareInfoReldNm": "화성시 청년청소년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "화성시 청년 기본 조례 제22조제3항제1호"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240415UUWBM1123080080442279&amp;atcflSn=1",
+    "wlfareInfoReldNm": "사업 신청서 (화성시 청년 전월세 보증금 대출이자 지원사업).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240415UUWBM1050170080429162&amp;atcflSn=1",
+    "wlfareInfoReldNm": "화성시 청년 기본 조례.hwp"
+   }
+  ]
+ }
+}

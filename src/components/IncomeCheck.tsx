@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { save as saveMyIncome } from "@/lib/myIncome";
 import Link from "next/link";
 import {
   BASE_YEAR,
@@ -70,6 +71,19 @@ export default function IncomeCheck({
 
   const median = medianIncome(household);
   const pct = monthly === null ? null : percentOfMedian(household, monthly);
+
+  /*
+    결과를 브라우저에 적어 둔다. 상세 페이지에서 "이 사업, 나는 해당되나?"를
+    대신 계산해 주기 위해서다(MyEligibility). 소득 금액은 저장하지 않고
+    가구원 수와 퍼센트만 남긴다.
+
+    값이 없을 때(입력을 지웠을 때)는 건드리지 않는다. 지우는 건 이용자가
+    "내 결과 지우기"를 눌렀을 때만이다 — 입력창을 비웠다고 예전 결과까지
+    없애면, 다시 계산하려다 만 사람의 기록이 사라진다.
+  */
+  useEffect(() => {
+    if (pct !== null) saveMyIncome(household, pct);
+  }, [household, pct]);
 
   /* 게이지는 200%까지만 그린다. 그 위는 어차피 대부분의 사업 밖이다. */
   const gaugePct = pct === null ? 0 : Math.min(pct, 200);

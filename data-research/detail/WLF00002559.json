@@ -1,0 +1,66 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "대구광역시 중구 관광복지국 복지정책과",
+  "ctpvNm": "대구광역시",
+  "inqNum": "16961",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "servDgst": "동일한 어린이집에 장기 근무하는 보육 교사에게 장기 근속 수당을 지급하여 보육 서비스 질을 높임.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002559&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002559",
+  "servNm": "어린이집보육교사장기근속수당지원",
+  "sggNm": "중구",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002559",
+  "servNm": "어린이집보육교사장기근속수당지원",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대구광역시 중구 관광복지국 복지정책과",
+  "ctpvNm": "대구광역시",
+  "sggNm": "중구",
+  "servDgst": "동일한 어린이집에 장기 근무하는 보육 교사에게 장기 근속 수당을 지급하여 보육 서비스 질을 높임.",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "관내 동일 시설에서 3년, 5년, 7년이상 계속 근무한 보육교사(담임, 야간연장, 방과후 전담)에게 지원* 지원제외- 원장, 간호사, 영양사, 사무원, 조리원, 운전기사 등- 원장 겸직교사 및 어린이집 대표자가 보육교사로 근무",
+  "slctCritCn": "- 지급월 1일 기준 임용일로부터 해당 근무연수 경과- 지원 달 현재 반을 맡고 있는 담임교사- 평일 8시간을 원칙으로 월 15일 이상 실제 근무한 보육교사가 동일 시설에서 3년, 5년, 7년이상 계속 근무한 경우 지원- 야간연장, 야간12시간, 24시간, 방과후 교사는 전담교사에 한해 지원",
+  "alwServCn": "3년이상 ~ 5년미만 근무: 30,000원5년이상 ~ 7년미만 근무: 50,000원7년이상 근무: 70,000원",
+  "aplyMtdCn": "매월 보육통합정보시스템에서 수당 신청할 시 자격 확인후 25일 개인에게 지급",
+  "inqNum": "16975",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "053-661-2603",
+    "wlfareInfoReldNm": "대구 중구청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "영유아보육법 제 36조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20220822TTWAT1108210001318051&amp;atcflSn=1",
+    "wlfareInfoReldNm": "★2020년 어린이집 (자체)지원사업안내.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20220822TTWAT1108210001318052&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2022년 어린이집 구비지원사업 안내.hwp"
+   }
+  ]
+ }
+}

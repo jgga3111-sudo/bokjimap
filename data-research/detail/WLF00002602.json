@@ -1,0 +1,62 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "서울특별시 서대문구 복지문화체육국 가족정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "11661",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260715",
+  "lifeNmArray": "중장년, 노년, 영유아, 아동, 청년, 청소년",
+  "servDgst": "저소득 한부모가족의 최저생활 수준 충족을 위해 법정급여 외 명절(설, 추석)위문금 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002602&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002602",
+  "servNm": "저소득 한부모가족 명절위문금 지원",
+  "sggNm": "서대문구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002602",
+  "servNm": "저소득 한부모가족 명절위문금 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 서대문구 복지문화체육국 가족정책과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "서대문구",
+  "servDgst": "저소득 한부모가족의 최저생활 수준 충족을 위해 법정급여 외 명절(설, 추석)위문금 지급",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "1) 지원대상  - 저소득 한부모가족, 조손가족, 청소년 한부모가족으로서 가구선정 기준 및 소득인정액 기준을     충족한 가구2) 선정기준  O 가구선정기준   - 한부모가족 및 청소년한부모가족의 모 또는 부와 만18세 미만의 자녀로 구성된 가구   - 조손가족의 경우 (외)조부 또는 (외)조모와 만18세 미만의 손자녀로 구성된 가구   O 소득인정액기준    - 한부모 및 조손가족 : 2026년 기준 중위소득 65%이하   - 청소년 한부모가족 : 2026년 기준 중위소득 65%이하  ※ 기초생활수급자 및 시설수급자는 지원대상자에서 제외",
+  "slctCritCn": "* 설, 추석 명절 전일 기준 저소득 한부모가족 - 기준중위소득 65%이내 한부모가구 (청소년한부모가족 기준중위소득 65% 이내) - 기초생계급여, 의료급여수급자 제외",
+  "alwServCn": "지급금액 : 설, 추석 명절에 가구당 5만원 지급(연 2회 지원)",
+  "inqNum": "11689",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-330-1388",
+    "wlfareInfoReldNm": "서대문구 가족정책과 양성평등정책팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서대문구 저소득 주민등의 복지증진에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7745GOWF14GOWF147745&amp;atcflSn=1",
+    "wlfareInfoReldNm": "저소득 주민 등의 복지증진에 관한 조례.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "인천광역시 중구 국제도시행정국 복지지원과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "11100",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260814",
+  "servDgst": "저소득 주민의 경제적 부담을 경감시키고 복지체감도 향상에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005336&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005336",
+  "servNm": "뇌 MRI·MRA 검사비 지원",
+  "sggNm": "영종구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005336",
+  "servNm": "뇌 MRI·MRA 검사비 지원",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 중구 국제도시행정국 복지지원과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "영종구",
+  "servDgst": "저소득 주민의 경제적 부담을 경감시키고 복지체감도 향상에 기여",
+  "trgterIndvdlNmArray": "저소득, 한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "중구에 거주하는 기초생활수급자 및 차상위계층뇌질환(뇌경색, 뇌출혈 등)의 의심 및 원인을 찾기 위한 검사를 받은 경우",
+  "slctCritCn": "중구에 거주하는 기초생활수급자 및 차상위계층뇌질환(뇌경색, 뇌출혈 등)의 의심 및 원인을 찾기 위한 검사를 받은 경우외래진료(첫회) 검사 실비 20~50만원 한도 내본인부담금 15% 자부담건강검진 및 뇌혈관 질환 진단을 받고 추적관찰을 위한 검사비 제외",
+  "alwServCn": "중구에 거주하는 기초생활수급자 및 차상위계층뇌질환(뇌경색, 뇌출혈 등)의 의심 및 원인을 찾기 위한 검사를 받은 경우외래진료(첫회) 검사 실비 20~50만원 한도 내본인부담금 15% 자부담건강검진 및 뇌혈관 질환 진단을 받고 추적관찰을 위한 검사비 제외",
+  "aplyMtdCn": "뇌질환 의심 시 검사 후 본인부담금 납부 → 주소지 동행정복지센터에 신청서류 제출 → 지원대상 적합 여부 확인(사보험 지급내역 등) → 뇌 MRI·MRA 검사비 지원",
+  "inqNum": "11132",
+  "lastModYmd": "20260814",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-760-6983",
+    "wlfareInfoReldNm": "인천광역시 영종구청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 중구 저소득주민의 생활안정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230626UUWBM1404370040611882&amp;atcflSn=1",
+    "wlfareInfoReldNm": "인천광역시 중구 저소득주민의 생활안정 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

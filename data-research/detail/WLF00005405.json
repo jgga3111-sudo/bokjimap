@@ -1,0 +1,83 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "전화, 방문",
+  "bizChrDeptNm": "경기도 평생교육국 청소년과",
+  "ctpvNm": "경기도",
+  "inqNum": "5040",
+  "intrsThemaNmArray": "보호·돌봄, 주거",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "청소년, 청년",
+  "servDgst": "가정 밖 청소년들이 안정적으로 미래를 준비하고 자립 정착할 수 있도록 최소한의 자산 형성에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005405&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005405",
+  "servNm": "청소년 자립두배통장",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005405",
+  "servNm": "청소년 자립두배통장",
+  "enfcBgngYmd": "20220121",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 평생교육국 청소년과",
+  "ctpvNm": "경기도",
+  "servDgst": "가정 밖 청소년들이 안정적으로 미래를 준비하고 자립 정착할 수 있도록 최소한의 자산 형성에 기여",
+  "lifeNmArray": "청소년, 청년",
+  "intrsThemaNmArray": "주거, 보호·돌봄",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문, 전화",
+  "sprtTrgtCn": "○ (연령) 만 15세 이상 24세 이하 가정 밖 청소년○ (거주) 경기도(또는 경기도 소재 청소년복지시설)에 거주하고 있는 청소년○ 청소년복지시설*에서 1년 이상 거주 또는 지원받은 청소년  * 청소년쉼터, 청소년자립지원관, 청소년회복지원시설",
+  "slctCritCn": "○ (연령) 만 15세 이상 24세 이하 가정 밖 청소년○ (거주) 경기도(또는 경기도 소재 청소년복지시설)에 거주하고 있는 청소년○ 청소년복지시설*에서 1년 이상 거주 또는 지원받은 청소년  * 청소년쉼터, 청소년자립지원관, 청소년회복지원시설",
+  "alwServCn": "기본 2년(최대 6년), 매월 저축액의 2배(월 최대20만원) 적립 지원",
+  "aplyMtdCn": "○ 청소년(서류구비) → 쉼터/자립지원관(추천) → 관할 시·군(접수) → 최종선정(도)",
+  "inqNum": "5046",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8008-2575",
+    "wlfareInfoReldNm": "경기도청 청소년과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-360-1824",
+    "wlfareInfoReldNm": "경기남부청소년자립지원관"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-928-1316",
+    "wlfareInfoReldNm": "경기북부청소년자립지원관"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "http://www.stand1824.kr/",
+    "wlfareInfoReldNm": "경기남부청소년자립지원관"
+   },
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "http://www.stand1318.com/",
+    "wlfareInfoReldNm": "경기북부청소년자립지원관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청소년복지 지원법 제32조의2, 경기도 가정 밖 청소년 보호 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240614UUWBM1040320089504803&amp;atcflSn=1",
+    "wlfareInfoReldNm": "청소년복지 지원법 및 경기도 가정 밖 청소년 보호 및 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

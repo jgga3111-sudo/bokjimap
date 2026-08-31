@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷, 우편",
+  "bizChrDeptNm": "강원특별자치도 홍천군 경제진흥국 경제진흥과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "49681",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260717",
+  "lifeNmArray": "청년",
+  "servDgst": "❍ 홍천군 거주 청년이 관내 중소기업에 정규직으로 취업 시 인센티브를 지원하여 장기근속을 장려함으로써 기업의 고용안정을 도모하고 청년인구 유출 방지 및 장기적 인구증가 효과 기대\n❍ 지원금을 홍천사랑카드로 지급하여 지역경제 활성화 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004864&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004864",
+  "servNm": "청년 일자리 근속장려금 지원사업",
+  "sggNm": "홍천군",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004864",
+  "servNm": "청년 일자리 근속장려금 지원사업",
+  "enfcBgngYmd": "20220101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 홍천군 경제진흥국 경제진흥과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "홍천군",
+  "servDgst": "❍ 홍천군 거주 청년이 관내 중소기업에 정규직으로 취업 시 인센티브를 지원하여 장기근속을 장려함으로써 기업의 고용안정을 도모하고 청년인구 유출 방지 및 장기적 인구증가 효과 기대\n❍ 지원금을 홍천사랑카드로 지급하여 지역경제 활성화 도모",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문, 우편, 인터넷",
+  "sprtTrgtCn": "홍천군에 주민등록이 되어 있는 18세 이상 39세 이하 청년으로 관내 소재 중소기업에 \"당해연도에 정규직으로 채용(전환)\"되어 6개월 이상 근속 예정인 청년",
+  "slctCritCn": "○ 청년근로자 - 지원대상: 2026. 1. 1.(당해연도)이후 홍천군 소재 중소기업에 정규직으로 채용(전환)되어 참여 신청일 현재 홍천군에 주민등록이 되어 있는 18세 이상 39세 이하 근속 예정인 청년 근로자( 정년보장 또는 근로계약기간의 정함이 없는 근로자로 주 30시간 이상 근무)○ 재직기업 - 대상: 홍천군에 소재하고, 고용보험 피보험자 수가 300인 미만인 「중소기업기본법」 제2조에 따른 중소기업※ 당해연도 공고문 참조",
+  "alwServCn": "○ 지원내용: 청년근로자 1인당 최대 300만원 3회 분할 지원(참여자로 선정된 후, 근속 후 회차 마다 지급 신청 본인 별도)   - 1차분: 6개월 이상 근속 시 50만원 지원   - 2차분: 1년 이상 근속 시 100만원 지원   - 3차분: 2년 이상 근속 시 150만원 지원",
+  "aplyMtdCn": "당해연도 공고문에 따른 지정 접수 기간에 신청서 접수(문서24, 방문 신청 또는 등기우편 접수)",
+  "inqNum": "49863",
+  "lastModYmd": "20260717",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-430-2897",
+    "wlfareInfoReldNm": "홍천군 경제진흥과 청년지원팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "홍천군 일자리 창출 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3123GOWF16GOWF163123&amp;atcflSn=1",
+    "wlfareInfoReldNm": "홍천군 일자리 창출 지원 조례.hwp"
+   }
+  ]
+ }
+}

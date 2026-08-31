@@ -1,0 +1,75 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 남구 문화환경국 탄소중립과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "13120",
+  "lastModYmd": "20260714",
+  "servDgst": "- 등유 가격의 급격한 인상에 따른 등유 사용가구의 연료비 부담 가중\n- 정부와 시에서 추진하는 난방연료 지원사업과 별개로 우리구에서 등유 부족분을 추가로 지원하는 보편적 에너지공급으로 에너지 복지 향상에 기여코자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005536&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005536",
+  "servNm": "에너지이용취약계층 등유바우처 지원사업",
+  "sggNm": "남구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005536",
+  "servNm": "에너지이용취약계층 등유바우처 지원사업",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 남구 문화환경국 탄소중립과",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "남구",
+  "servDgst": "- 등유 가격의 급격한 인상에 따른 등유 사용가구의 연료비 부담 가중\n- 정부와 시에서 추진하는 난방연료 지원사업과 별개로 우리구에서 등유 부족분을 추가로 지원하는 보편적 에너지공급으로 에너지 복지 향상에 기여코자 함.",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "등유보일러를 사용하는 기초생활수급가구",
+  "slctCritCn": "등유보일러를 사용하는 기초생활수급가구",
+  "alwServCn": "등유 교환용 종이 쿠폰(가구당 16만원)",
+  "aplyMtdCn": "접수방법 : 관할 동 행정복지센터 방문신청 - 대상자 본인 신청(대리인 신청 시 위임장 첨부) - 대상자가 거동이 불편하거나 직접 신청이 어려운 경우 담당 공무원이 확인 후 직권 신청 가능",
+  "inqNum": "13152",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-607-3663",
+    "wlfareInfoReldNm": "전남광주통합특별시 남구청 탄소중립과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-607-3663",
+    "wlfareInfoReldNm": "광주광역시 남구청 탄소중립과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「남구 에너지 기본 조례」, 「남구 에너지 복지 조례」"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「남구 에너지 기본 조례」, 「남구 에너지 복지 조례」"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250609UUWBM1518430141122272&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 에너지이용취약계층 등유바우처 지원사업 추진계획.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250609UUWBM1518430141122272&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 에너지이용취약계층 등유바우처 지원사업 추진계획.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 김해시 복지국 복지정책과",
+  "ctpvNm": "경상남도",
+  "inqNum": "4602",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "임신 · 출산, 청년, 중장년",
+  "servDgst": "경상남도 김해시에 거주하는 장애인가정의 안정적 출산과 양육환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006005&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006005",
+  "servNm": "김해시 장애인가정 출산지원금 지원",
+  "sggNm": "김해시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006005",
+  "servNm": "김해시 장애인가정 출산지원금 지원",
+  "enfcBgngYmd": "20250101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 김해시 복지국 복지정책과",
+  "ctpvNm": "경상남도",
+  "sggNm": "김해시",
+  "servDgst": "경상남도 김해시에 거주하는 장애인가정의 안정적 출산과 양육환경 조성",
+  "lifeNmArray": "청년, 중장년, 임신 · 출산",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신생아의 출생일 기준으로 신생아의 부 또는 모가 김해시에 주민등록을 두고 거주 중인 장애인가정",
+  "slctCritCn": "신생아의 부 또는 모가 장애인복지법 제32조에 따라 장애등록을 한 장애인으로 신생아와 주민등록을 같이하는 세대에 출산지원금 지급",
+  "alwServCn": "- 장애의 정도가 심하지 않은 장애인 가정 : 100만원 지원- 장애의 정도가 심한 장애인 가정 : 150만원 지원단, 보건복지부 여성장애인 출산비용지원 사업을 지원 받거나 경상남도 한부모 가족 등 지원 조례에 따라 출산과 관련된 지원을 받은 사람에게는 그 차액을 지원 함.",
+  "aplyMtdCn": "- 신청방법 : 읍/면/동 주민센터에 신청   구비서류 : 출생증명서(주민등록상 출생신고가 되어 있지 않은 경우), 통장사본 1부.",
+  "inqNum": "4608",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-330-3306",
+    "wlfareInfoReldNm": "김해시 복지국 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "김해시 장애인가정 출산지원금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250611UUWBM1400190141552069&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장애인가정 출산지원금 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

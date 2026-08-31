@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 삼척시 보건소 예방관리과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "27870",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260619",
+  "lifeNmArray": "노년",
+  "servDgst": "대상포진 예방접종으로 감영성질환의 조기발견. 예방 및 자가 건강관리 능력 향상으로 건강한 노후생활 및 삶의 질 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003053&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003053",
+  "servNm": "어르신 대상포진 예방접종비 지원",
+  "sggNm": "삼척시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003053",
+  "servNm": "어르신 대상포진 예방접종비 지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 삼척시 보건소 예방관리과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "삼척시",
+  "servDgst": "대상포진 예방접종으로 감영성질환의 조기발견. 예방 및 자가 건강관리 능력 향상으로 건강한 노후생활 및 삶의 질 도모",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "삼척시에 6개월이상 주민등록을 두고 거주하는 65세이상 어르신",
+  "slctCritCn": "대상포진 예방접종비 1회 지원&#13;-65세이상 일반어르신 84,000원 지원(본인부담금:36,000원)&#13;-저소득 및 차상위어른신 120,000원(100%지원, 본인부담금 없음)",
+  "alwServCn": "대상포진 예방접종비 1회 지원(* 기접종자 제외)-  접종비 120,000원 기준-  65세이상 일반어르신 : 70%지원- 저소득층 65세이상 어르신 : 100%지원",
+  "aplyMtdCn": "- 신청서 작성  (보건소, 보건지소 8.) - 쿠폰발급(보건소, 보건지소 8)* 행정정보공동이용을 통한 주소지 확인 후 쿠폰발급 - 대상포진 예방접종 : 관내 위탁병의원 19기관",
+  "inqNum": "27874",
+  "lastModYmd": "20260619",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-570-4669",
+    "wlfareInfoReldNm": "삼척시보건소 예방관리과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "삼척시 대상포진 예방접종지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=8023GOWF14GOWF148023&amp;atcflSn=1",
+    "wlfareInfoReldNm": "삼척시 대상포진 예방접종 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

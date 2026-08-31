@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경기도 시흥시 보건소 감염병관리과",
+  "ctpvNm": "경기도",
+  "inqNum": "7217",
+  "lastModYmd": "20250705",
+  "lifeNmArray": "중장년",
+  "servDgst": "의료취약계층인 장애인 및 기초생활수급자의 겨울철 질병부담 감소를 위해 인플루엔자 예방접종 무료지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004481&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004481",
+  "servNm": "취약계층 인플루엔자 예방접종 지원사업",
+  "sggNm": "시흥시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득, 장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004481",
+  "servNm": "취약계층 인플루엔자 예방접종 지원사업",
+  "enfcBgngYmd": "20171012",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 시흥시 보건소 감염병관리과",
+  "ctpvNm": "경기도",
+  "sggNm": "시흥시",
+  "servDgst": "의료취약계층인 장애인 및 기초생활수급자의 겨울철 질병부담 감소를 위해 인플루엔자 예방접종 무료지원",
+  "lifeNmArray": "중장년",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "만 50~64세 출생자 중 기초생활수급자 또는 장애의 정도가 심한 장애에 해당하는 자",
+  "slctCritCn": "연령 : 만 50~64세 성인「장애인복지법」에 따른 장애의 정도가 심한 장애인「국민기초생활보장법」에 따른 수급자",
+  "alwServCn": "인플루엔자 예방접종 지원사업· 계절인플루엔자(독감) 예방접종 1회 무료 지원· 지정의료기관에서 무료 접종 가능(기관은 보건소/보건지소에 전화해서 확인)",
+  "inqNum": "7223",
+  "lastModYmd": "20250705",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-380-5488",
+    "wlfareInfoReldNm": "시흥시보건소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "시흥시 감염병 예방 및 관리에 관한 조례 제10조(예방접종 실시 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=9931GOWF14GOWF149931&amp;atcflSn=1",
+    "wlfareInfoReldNm": "시흥시 감염병 예방 및 관리에 관한 조례.HWP"
+   }
+  ]
+ }
+}

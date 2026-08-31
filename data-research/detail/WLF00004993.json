@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 인제군 행정복지국 주민복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "8434",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260811",
+  "lifeNmArray": "청소년",
+  "servDgst": "저소득주민자녀의 장학금(생황비)지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004993&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004993",
+  "servNm": "저소득주민자녀장학금(생활비)지원사업",
+  "sggNm": "인제군",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004993",
+  "servNm": "저소득주민자녀장학금(생활비)지원사업",
+  "enfcBgngYmd": "19930701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 인제군 행정복지국 주민복지과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "인제군",
+  "servDgst": "저소득주민자녀의 장학금(생황비)지원",
+  "lifeNmArray": "청소년",
+  "trgterIndvdlNmArray": "저소득, 한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "기초수급 및 차상위 계층의 자녀",
+  "slctCritCn": "신청일 기준 현재 관내에 주소를 두고 본인 혹은 부양의무자 중 한 명 이상이 실제 거주하며,기초수급, 차상위 계층 이거나 긴급지원을 받고 있는 가구 일반장학금 : 성적 기준을 충족하는 대학생특별장학금 : 전국규모 예체능대회 입상자/군민제안 채택 창안자/다른 학생의 모범이 되어 학교장                   학장, 총장의 추천을 받은 자",
+  "alwServCn": "생활비 현금지원",
+  "aplyMtdCn": "O 읍면동 방문신청 O 대상자 : 기초수급, 차상위 계층 이거나 긴급지원을 받고 있는 가구  O 지원대상  - 일반장학금 : 성적 기준을 충족하는 대학생  - 특별장학금 : 전국규모 예체능대회 입상자/군민제안 채택 창안자/다른 학생의 모범이 되어 학교장, 학장, 총장의 추천을 받은 자",
+  "inqNum": "8440",
+  "lastModYmd": "20260811",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-460-4203",
+    "wlfareInfoReldNm": "인제군 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인제군 사회복지기금 설치 및 운용조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4634GOWF16GOWF164634&amp;atcflSn=1",
+    "wlfareInfoReldNm": "인제군 사회복지기금 설치 및 운용 조례.hwp"
+   }
+  ]
+ }
+}

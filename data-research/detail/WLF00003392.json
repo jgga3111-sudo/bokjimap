@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경기도 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "9517",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260729",
+  "servDgst": "기초생활 수급 중증 장애인가구에 냉난방비 지원으로 생활안정 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003392&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003392",
+  "servNm": "장애인가구 냉난방비",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003392",
+  "servNm": "장애인가구 냉난방비",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "servDgst": "기초생활 수급 중증 장애인가구에 냉난방비 지원으로 생활안정 도모",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "생계 또는 의료급여 수급자 중 중증(1~2급 및 3급 중복장애) 장애인 가구&#13;- 보장시설 수급자 제외",
+  "slctCritCn": "생계 또는 의료급여 수급자 중 중증(1~2급 및 3급 중복장애) 장애인 가구",
+  "alwServCn": "가구당 난방비 월 5만원씩 5개월(1,2,3,11,12월) 지원&#13;가구당 냉방비 월 4만원씩 3개월(7,8,9월) 지원",
+  "inqNum": "9524",
+  "lastModYmd": "20260729",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8008-2431",
+    "wlfareInfoReldNm": "경기도 장애인복지과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "www.gg.go.kr",
+    "wlfareInfoReldNm": "경기도 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경기도 장애인 복지사업 안내"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3754GOWF16GOWF163754&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장애인가구 냉난방비.pdf"
+   }
+  ]
+ }
+}

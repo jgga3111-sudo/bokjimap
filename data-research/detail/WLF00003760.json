@@ -1,0 +1,121 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 기획관리실 인구청년정책담당관",
+  "ctpvNm": "충청북도",
+  "inqNum": "5039",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "청년",
+  "servDgst": "청년층 결혼장려를 통한 출산율 제고, 중소(중견)기업 장기근속 유도 및 청년농업인‧청년소상공인 육성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003760&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003760",
+  "servNm": "충북행복결혼공제사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003760",
+  "servNm": "충북행복결혼공제사업",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 기획관리실 인구청년정책담당관",
+  "ctpvNm": "충청북도",
+  "servDgst": "청년층 결혼장려를 통한 출산율 제고, 중소(중견)기업 장기근속 유도 및 청년농업인‧청년소상공인 육성",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "도내 중소(중견)기업 미혼 근로자 및 청년농업인‧청년소상공인(주민등록상 도내 거주자, 19세~39세)",
+  "slctCritCn": "도내 중소(중견)기업 미혼 근로자 및 청년농업인‧청년소상공인(주민등록상 도내 거주자, 19세~39세)",
+  "alwServCn": "도내 중소(중견)기업 미혼 근로자 및 청년농업인‧청년소상공인이 매월 일정액을 5년간 적립하면 도·시군, 기업에서 매칭적립하여 혼인유지 및 근속시 목돈지급",
+  "aplyMtdCn": "도내 11개 시군 홈페이지 모집공고, 본인주소지 또는 기업체 소재지 시군청 방문접수",
+  "inqNum": "5041",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-420-3115",
+    "wlfareInfoReldNm": "단양군 미래전략과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-850-5262",
+    "wlfareInfoReldNm": "충주시 기획예산과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-201-1763",
+    "wlfareInfoReldNm": "청주시 여성가족과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-220-4774",
+    "wlfareInfoReldNm": "충청북도 인구청년정책담당관"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-871-5413",
+    "wlfareInfoReldNm": "음성군 2030전략실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-830-33208",
+    "wlfareInfoReldNm": "괴산군 미래전략과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-539-4193",
+    "wlfareInfoReldNm": "진천군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-835-4623",
+    "wlfareInfoReldNm": "증평군 미래전략과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-740-3042",
+    "wlfareInfoReldNm": "영동군 미래전략과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-730-3783",
+    "wlfareInfoReldNm": "옥천군 성장정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-540-3710",
+    "wlfareInfoReldNm": "보은군 미래전략과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-641-5273",
+    "wlfareInfoReldNm": "제천시 미래정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "충청북도 인구정책 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM1932120091290106&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 충북행복결혼공제사업 추진계획(변경).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM1921530091289653&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 충북행복결혼공제 시행지침(변경).hwp"
+   }
+  ]
+ }
+}

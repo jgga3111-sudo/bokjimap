@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 복지보건국 노인복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "5525",
+  "intrsThemaNmArray": "서민금융, 일자리, 입양·위탁",
+  "lastModYmd": "20260804",
+  "lifeNmArray": "노년",
+  "servDgst": "강원도형 어르신일자리 제공을 통하여 어르신 소득보장 및 사회활동 기회 제공을 통한 삶의 질 향상",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001818&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001818",
+  "servNm": "100세시대 어르신일자리 사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001818",
+  "servNm": "100세시대 어르신일자리 사업",
+  "enfcBgngYmd": "20170101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 복지보건국 노인복지과",
+  "ctpvNm": "강원특별자치도",
+  "servDgst": "강원도형 어르신일자리 제공을 통하여 어르신 소득보장 및 사회활동 기회 제공을 통한 삶의 질 향상",
+  "lifeNmArray": "노년",
+  "intrsThemaNmArray": "일자리, 입양·위탁, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "- 특화형: (사회서비스형)만 65세 이상, (시장형사업단)만 60세 이상 사업특성 적합자- 취업형: 노인취업지원센터 사업운영비 지원- 인턴형: 만 60세 이상 민간기업 인턴 취업자",
+  "slctCritCn": "사업특성 적합자",
+  "alwServCn": "어르신 욕구에 맞는 다양한 일자리(공익형, 특화형, 인턴형, 취업형) 제공공익형 : 만 65세이상 어르신에게 공공시설 봉사, 지역환경정화 등의 봉사활동 기회를 제공(월 30시간, 27만원 제공)특화형 : 어르신 창업 비용을 지원(한 사업당 최대 7천만원)하여 만 60세 이상 어르신의 수익성 일자리 창출인턴형 : 만 60세 이상 기업에 인턴으로 취업한 어르신에게 급여의 50% 지원(6개월, 월 최대 45만원)취업형 : 어르신 취업 상담 및 알선을 하는 대한노인회 취업지원센터에 활동비 등으로 월 20만원 지원",
+  "aplyMtdCn": "시군 노인일자리 담당부서 및 노인회 취업지원센터에 문의",
+  "inqNum": "5529",
+  "lastModYmd": "20260804",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-249-2677",
+    "wlfareInfoReldNm": "강원특별자치도 노인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "노인복지법 제23조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260803UUWBM1053510203284820&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 노인 및 신중년 일자리 사업 시행계획(완료).hwp"
+   }
+  ]
+ }
+}

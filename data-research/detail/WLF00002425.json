@@ -1,0 +1,295 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 우편",
+  "bizChrDeptNm": "전남광주통합특별시 인구청년이민국 청년희망과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "17383",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "청년",
+  "servDgst": "도내 일하는 청년의 자산형성 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002425&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002425",
+  "servNm": "청년 희망디딤돌 통장 개설 운영",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002425",
+  "servNm": "청년 희망디딤돌 통장 개설 운영",
+  "enfcBgngYmd": "20171123",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 인구청년이민국 청년희망과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "도내 일하는 청년의 자산형성 지원",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 우편",
+  "sprtTrgtCn": "o 공고일 기준 18~45세 이하인 자o 공고일 기준 전남 도내 주민등록을 둔 자o 근로유형에 관계없이 공고일 기준 최근 6개월 동안 3개월 이상의 근로 경력이 있는 자o 가구 소득인정액이 기준소득인정액이 기준중위소득 120%이하인 자",
+  "slctCritCn": "가구 소득인정액이 기준중위소득 120% 이하인 저소득 청년 노동자 및 사업자 *청년(전라남도 청년 기본 조례(만18~ 45세)",
+  "alwServCn": "o 전남 거주 저소득 청년이 매월 일정 금액을 적립하면 본인 저축액과 동일한 금액의 자립지원금을 지자체 재원으로 매칭 적립  * 저축기간 / 1인당 월적립금 : 3년(36개월) / 200천원(본인 100, 지자체 100)  * 1인당 만기 적립금 : 7,200천원(본인 3,600, 지자체 3,600) + 이자",
+  "aplyMtdCn": "공고에 의한 가입자 모집, 선정&#13;",
+  "inqNum": "17388",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-286-2832",
+    "wlfareInfoReldNm": "전남도청 청년희망과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-286-2832",
+    "wlfareInfoReldNm": "전남도청 청년희망과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-270-8706",
+    "wlfareInfoReldNm": "목포시 청년인구과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-270-8706",
+    "wlfareInfoReldNm": "목포시 청년인구과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-659-2153",
+    "wlfareInfoReldNm": "여수시 청년인구정책관"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-659-2153",
+    "wlfareInfoReldNm": "여수시 청년인구정책관"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-749-3226",
+    "wlfareInfoReldNm": "순천시 청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-749-3226",
+    "wlfareInfoReldNm": "순천시 청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-339-7894",
+    "wlfareInfoReldNm": "나주시 기획예산실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-339-7894",
+    "wlfareInfoReldNm": "나주시 기획예산실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-797-1994",
+    "wlfareInfoReldNm": "광양시청 청년일자리과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-797-1994",
+    "wlfareInfoReldNm": "광양시청 청년일자리과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-380-3222",
+    "wlfareInfoReldNm": "담양군 참여소통실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-380-3222",
+    "wlfareInfoReldNm": "담양군 참여소통실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-360-2911",
+    "wlfareInfoReldNm": "곡성군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-360-2911",
+    "wlfareInfoReldNm": "곡성군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-780-2962",
+    "wlfareInfoReldNm": "구레군청 인구청년실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-780-2962",
+    "wlfareInfoReldNm": "구레군청 인구청년실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-830-5833",
+    "wlfareInfoReldNm": "고흥군 인구정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-830-5833",
+    "wlfareInfoReldNm": "고흥군 인구정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-850-5988",
+    "wlfareInfoReldNm": "보성군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-850-5988",
+    "wlfareInfoReldNm": "보성군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-240-8229",
+    "wlfareInfoReldNm": "신안군 귀촌지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-240-8229",
+    "wlfareInfoReldNm": "신안군 귀촌지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-379-3633",
+    "wlfareInfoReldNm": "화순군 인구청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-379-3633",
+    "wlfareInfoReldNm": "화순군 인구청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-860-6257",
+    "wlfareInfoReldNm": "장흥군 인구청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-860-6257",
+    "wlfareInfoReldNm": "장흥군 인구청년정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-430-3087",
+    "wlfareInfoReldNm": "강진군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-430-3087",
+    "wlfareInfoReldNm": "강진군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-530-5062",
+    "wlfareInfoReldNm": "해남군 미래공동체과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-530-5062",
+    "wlfareInfoReldNm": "해남군 미래공동체과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-540-3818",
+    "wlfareInfoReldNm": "진도군 인구정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-540-3818",
+    "wlfareInfoReldNm": "진도군 인구정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-390-7351",
+    "wlfareInfoReldNm": "장성군 인구경제실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-390-7351",
+    "wlfareInfoReldNm": "장성군 인구경제실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5277",
+    "wlfareInfoReldNm": "완도군 인구일자리정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5277",
+    "wlfareInfoReldNm": "완도군 인구일자리정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-470-2553",
+    "wlfareInfoReldNm": "영암군 인구청년과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-470-2553",
+    "wlfareInfoReldNm": "영암군 인구청년과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-5734",
+    "wlfareInfoReldNm": "무안군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-5734",
+    "wlfareInfoReldNm": "무안군 인구정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-320-1727",
+    "wlfareInfoReldNm": "함평군 인구경제과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-320-1727",
+    "wlfareInfoReldNm": "함평군 인구경제과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5197",
+    "wlfareInfoReldNm": "영광군 인구교육정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5197",
+    "wlfareInfoReldNm": "영광군 인구교육정책실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전라남도 청년 기본 조례"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전라남도 청년 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260609UUWBM1347190196008584&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 청년 희망디딤돌 통장사업 대상자 모집 공고.hwpx"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260609UUWBM1347190196008584&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 청년 희망디딤돌 통장사업 대상자 모집 공고.hwpx"
+   }
+  ]
+ }
+}

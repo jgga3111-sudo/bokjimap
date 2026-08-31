@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "인천광역시 남동구 복지국 보육정책과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "6194",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "영유아",
+  "servDgst": "아빠육아휴직 장려금 지급을 통해 일과 가정이 양립하는 아이낳고 기르기 좋은 남동구 실현을 위함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002485&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002485",
+  "servNm": "아빠 육아휴직 장려금 지원",
+  "sggNm": "남동구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002485",
+  "servNm": "아빠 육아휴직 장려금 지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 남동구 복지국 보육정책과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "남동구",
+  "servDgst": "아빠육아휴직 장려금 지급을 통해 일과 가정이 양립하는 아이낳고 기르기 좋은 남동구 실현을 위함.",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "지원대상 : 육아휴직한 남동구거주  남성 육아휴직근로자 , 휴직 대상 자녀가 남동구에 거주하고 있는 신청기한이 도래되지 않은 대상자(신청기한 : 육아휴직 시작일 이후 1개월부터 종료일 이후 12개월 이내)",
+  "slctCritCn": "4가지 조건 모두 충족자 - 남성 육아휴직자가 신청일 기준 1년 전부터 남동구에 거주 - 육아휴직의 대상 자녀가 남동구에 거주 - 고용보험법 제 70조에 따른 육아휴직 급여의 지급조건을 충족하는 자(신청기한 : 육아휴직 시작일 이후 1개월부터 종료일 이후 12개월 이내)- 공공기관에서 제공하는 육아 프로그램 및 교육 이수(2025. 7. 1. 시행)",
+  "alwServCn": "지원기준  * 네가지 조건 모두 충족     1) 육아휴직자가 신청일 기준 1년 전부터 남동구에 거주하는 자     2) 육아휴직의 대상 자녀가 신청일 기준 남동구에 거주하는 자     3) 『고용보험법』 제70조에 따른 육아휴직 급여의 지급조건을 충족     4) 공공기관에서 제공하는 육아 프로그램 및 교육 이수(2025. 7. 1. 시행)",
+  "aplyMtdCn": "1. 필요서류 : 육아휴직확인서(휴직대상아동명 명시), 육아휴직지급결정통지서, 통장사본 지참, 공공기관 제공 육아프로그램 교육 이수증 *육아휴직확인서와 지급결정 통지서는 고용보험 홈페이지에서 발급 가능, 휴직기간이 지난 후 신청시 육아휴직 확인서는 회사에서 고용노동부로 신청한 서류 사본으로 제출주소지 행정복지센터에 방문하여 신청.",
+  "inqNum": "6208",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-453-8363",
+    "wlfareInfoReldNm": "인천 남동구청 보육정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 남동구 아빠 육아휴직 장려금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7682GOWF14GOWF147682&amp;atcflSn=1",
+    "wlfareInfoReldNm": "남동구 아빠 육아휴직 장려금 지원 조례.hwp"
+   }
+  ]
+ }
+}

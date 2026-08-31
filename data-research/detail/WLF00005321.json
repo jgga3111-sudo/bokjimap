@@ -1,0 +1,73 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "인천광역시 계양구 주민복지국 노인장애인복지과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "8449",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260806",
+  "lifeNmArray": "노년",
+  "servDgst": "노후생활의 안정과 장수를 기원하고 경로효친의 사회적 분위기를 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005321&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005321",
+  "servNm": "장수축하금",
+  "sggNm": "계양구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005321",
+  "servNm": "장수축하금",
+  "enfcBgngYmd": "20221001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 계양구 주민복지국 노인장애인복지과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "계양구",
+  "servDgst": "노후생활의 안정과 장수를 기원하고 경로효친의 사회적 분위기를 조성",
+  "lifeNmArray": "노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "계양구에 주민등록을 두고 1년 이상 연속 거주한 100세 어르신을 지원합니다.",
+  "slctCritCn": "지급대상: 계양구에 주민등록을 두고 1년 이상 연속 거주한 100세 어르신지급금액: 1인당 1,000천원(1회에 한함)",
+  "alwServCn": "지급대상: 계양구에 주민등록을 두고 1년 이상 연속 거주한 100세 어르신지급금액: 1인당 1,000천원(1회에 한함)지급방법: 100세 생일이 속한 달의 말일 지급대상자 명의의 금융계좌에 입금",
+  "aplyMtdCn": "장수어르신 주소지 관할 동 행정복지센터에 방문 신청(대상자가 고령인 점을 감안해 장수어르신 본인이 요청할 경우 방문하여 접수)",
+  "inqNum": "8470",
+  "lastModYmd": "20260806",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-450-5388",
+    "wlfareInfoReldNm": "계양구청 노인장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 계양구 장수축하금 지급에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230622UUWBM1832570040254121&amp;atcflSn=1",
+    "wlfareInfoReldNm": "인천광역시 계양구 장수축하금 지급에 관한 조례.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230622UUWBM1809580040253109&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 제2호서식] 장수축하금 지급신청 위임장.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230622UUWBM1808360040252992&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 제1호서식] 장수축하금 지급 신청서.hwp"
+   }
+  ]
+ }
+}

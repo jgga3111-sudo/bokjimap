@@ -1,0 +1,78 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 용인시 처인구보건소 보건정책과",
+  "ctpvNm": "경기도",
+  "inqNum": "6008",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "노년",
+  "servDgst": "용인시 65세이상 취약계층 어르신에게 대상포진 무료 예방접종을 실시하여 질병으로 인한 경제적 부담 경감 및 건강한 노후생활 기여하고자 합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006180&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006180",
+  "servNm": "용인시 취약계층 어르신 대상포진 무료 예방접종",
+  "sggNm": "용인시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006180",
+  "servNm": "용인시 취약계층 어르신 대상포진 무료 예방접종",
+  "enfcBgngYmd": "20220203",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 용인시 처인구보건소 보건정책과",
+  "ctpvNm": "경기도",
+  "sggNm": "용인시",
+  "servDgst": "용인시 65세이상 취약계층 어르신에게 대상포진 무료 예방접종을 실시하여 질병으로 인한 경제적 부담 경감 및 건강한 노후생활 기여하고자 합니다.",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "용인시 65세 이상 기초생활수급자(생계, 주거, 의료급여) 어르신을 대상으로 합니다.",
+  "slctCritCn": "용인시 65세 이상 기초생활수급자(생계, 주거, 의료급여) 어르신을 대상으로 합니다.- 2026년 기준 1961.12.31. 이전 출생자",
+  "alwServCn": "보건소 대상포진 무료 예방접종 실시합니다.",
+  "aplyMtdCn": "- 대상포진 무료 예방접종( 평생 1회)을 실시합니다- 용인시 보건소(처인구, 기흥구, 수지구)를 방문하여 예방접종 받으시면 됩니다.- 백신 소진 시 종기 종료 가능하오니, 반드시 방문 전 보건소 전화문의하여 주시기 바랍니다.* 지원절차: 대상자 자격 및 연령 확인(신분증 및 기초생활수급자 증명서) → 예진표 작성 → 의사 예진 → 예방접종 → 이상반응 관찰 → 귀가",
+  "inqNum": "6015",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-6193-0316",
+    "wlfareInfoReldNm": "용인시 기흥구보건소 감염병관리팀"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-6193-0067",
+    "wlfareInfoReldNm": "용인시 처인구보건소 감염병관리팀"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "03161930805",
+    "wlfareInfoReldNm": "용인시 수지구보건소 감염병관리팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "용인시 대상포진 예방접종 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20251013UUWBM1644310156964518&amp;atcflSn=1",
+    "wlfareInfoReldNm": "용인시 대상포진 예방접종 지원 조례.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230523UUWBM1336260035790168&amp;atcflSn=1",
+    "wlfareInfoReldNm": "예방접종 예진표.hwp"
+   }
+  ]
+ }
+}

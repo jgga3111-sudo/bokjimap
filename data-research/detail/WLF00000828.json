@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "대전광역시 중구 복지환경국 복지정책과",
+  "ctpvNm": "대전광역시",
+  "inqNum": "4876",
+  "lastModYmd": "20260703",
+  "servDgst": "명절을 맞이하여 어려운 구민을 위문,격려함으로써 희망과 용기를 갖도록 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000828&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000828",
+  "servNm": "저소득층 명절 지원사업",
+  "sggNm": "중구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000828",
+  "servNm": "저소득층 명절 지원사업",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대전광역시 중구 복지환경국 복지정책과",
+  "ctpvNm": "대전광역시",
+  "sggNm": "중구",
+  "servDgst": "명절을 맞이하여 어려운 구민을 위문,격려함으로써 희망과 용기를 갖도록 함.",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "sprtTrgtCn": "국민기초(생계,의료)수급자 세대",
+  "slctCritCn": "국민기초(생계,의료)수급자 세대",
+  "alwServCn": "1) 지원기간 : 연 2회(설, 추석) 2) 내      용 : 2만원상당 상품권 3) 전달방법 : 가구별 방문전달",
+  "inqNum": "4899",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "042-606-7135",
+    "wlfareInfoReldNm": "대전광역시 중구 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대전광역시 중구 저소득주민의 생활안정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=2852GOWF15GOWF152852&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대전광역시 중구 저소득주민의 생활안정 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

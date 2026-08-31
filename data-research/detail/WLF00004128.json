@@ -1,0 +1,133 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 복지건강국 돌봄정책과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "7162",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260714",
+  "servDgst": "생활수준은 어려우나, 기초생활보장사업 선정 기준에 맞지않아 지원받지 못하는 취약계층을 지역 자체적으로 발굴 및 지원함으로써 복지사각지대 해소 및 저소득층 생활안정 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004128&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004128",
+  "servNm": "광주형 기초보장제도",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004128",
+  "servNm": "광주형 기초보장제도",
+  "enfcBgngYmd": "20180701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 복지건강국 돌봄정책과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "생활수준은 어려우나, 기초생활보장사업 선정 기준에 맞지않아 지원받지 못하는 취약계층을 지역 자체적으로 발굴 및 지원함으로써 복지사각지대 해소 및 저소득층 생활안정 지원",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "광주거주자 중 국민기초생활보장 등 법정지원을 받지 못하는 비수급 빈곤층으로 소득재산 및 부양기준 기준 동시 충족자 - 소득평가액 기준중위소득 50% 이하",
+  "slctCritCn": "(2025년 기준)- (소득기준) 기준중위소득 50% 이하 *4인기준 : 3,049천원- (재산기준) 일반재산 160백만원 이하, 금융재산 30백만원 이하    - (부양의무자) 국민기초생활보장 생계급여 기준 준용",
+  "alwServCn": "생계급여, 해산 및 장제급여 지급",
+  "aplyMtdCn": "거주지 동 행정복지센터를 통해 연중 신청 가능",
+  "inqNum": "7168",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-960-8347",
+    "wlfareInfoReldNm": "전남광주통합특별시 광산구 복지지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-960-8347",
+    "wlfareInfoReldNm": "광주광역시 광산구 복지지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-410-6321",
+    "wlfareInfoReldNm": "광주광역시 북구 복지관리과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-410-6321",
+    "wlfareInfoReldNm": "전남광주통합특별시 북구 복지관리과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-607-3352",
+    "wlfareInfoReldNm": "전남광주통합특별시 남구 복지지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-607-3352",
+    "wlfareInfoReldNm": "광주광역시 남구 복지지원과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-360-7048",
+    "wlfareInfoReldNm": "전남광주통합특별시 서구 복지급여과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-360-7048",
+    "wlfareInfoReldNm": "광주광역시 서구 복지급여과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-608-2556",
+    "wlfareInfoReldNm": "전남광주통합특별시 동구 복지정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-608-2576",
+    "wlfareInfoReldNm": "광주광역시 동구 복지정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-613-3393",
+    "wlfareInfoReldNm": "전남광주통합특별시 복지건강국 복지정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-613-3393",
+    "wlfareInfoReldNm": "광주광역시 복지건강국 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "광주광역시 저소득주민 생활안정 지원 조례 제4조 및 제5조"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "광주광역시 저소득주민 생활안정 지원 조례 제4조 및 제5조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM1723550091271899&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230522UUWBM1624210035648192&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 광주형기초생활보장제도(신청 서식등).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230522UUWBM1624210035648192&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 광주형기초생활보장제도(신청 서식등).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM1723550091271899&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

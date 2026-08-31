@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경상북도 경주시 보건소 건강증진과",
+  "ctpvNm": "경상북도",
+  "inqNum": "5689",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "servDgst": "출산장려금을 확대 지원하여 관내 출생아 가정의 경제적 부담을 경감하고 출산 친화적 분위기를 조성하고자 하는 사업입니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004748&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004748",
+  "servNm": "경주시 출산장려금 지원",
+  "sggNm": "경주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004748",
+  "servNm": "경주시 출산장려금 지원",
+  "enfcBgngYmd": "20070420",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상북도 경주시 보건소 건강증진과",
+  "ctpvNm": "경상북도",
+  "sggNm": "경주시",
+  "servDgst": "출산장려금을 확대 지원하여 관내 출생아 가정의 경제적 부담을 경감하고 출산 친화적 분위기를 조성하고자 하는 사업입니다.",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "출산축하금 20만원 1회첫째 매월 12만원씩 25회둘째 매월 20만원씩 25회셋째 매월 50만원씩 36회",
+  "slctCritCn": "경주시 출산장려지원에 관한 조례 제3조 (지원대상자의 범위)지원 대상 자녀의 출생일부터 지원일까지 부 또는 모가 지원 대상 자녀와 함께 시에 주민등록을 두고 거주하고 있는 경우에 지원",
+  "alwServCn": "경주시 출산장려지원에 관한 조례 참고",
+  "aplyMtdCn": "(오프라인) 읍면동: 출생신고 시 출산서비스통합처리신청서 작성&#13;(온라인) 정부24",
+  "inqNum": "5700",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-779-8625",
+    "wlfareInfoReldNm": "경주시보건소 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경주시 출산장려지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250626UUWBM1703230143802444&amp;atcflSn=1",
+    "wlfareInfoReldNm": "경주시 출산장려지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

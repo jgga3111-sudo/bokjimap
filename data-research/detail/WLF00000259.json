@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "충청북도 음성군 행정복지국 복지정책과",
+  "ctpvNm": "충청북도",
+  "inqNum": "11262",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "아동, 영유아, 노년, 청소년, 청년, 중장년",
+  "servDgst": "장애인이 복지카드 신청 후 수령 시 읍·면사무소를 재방문하는 번거로움을 해소하고 복지카드 등기 배송 시 등기배송료(3,820원)를 지원하여 장애인 복지증진에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000259&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000259",
+  "servNm": "장애인복지카드 배송비 지원",
+  "sggNm": "음성군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000259",
+  "servNm": "장애인복지카드 배송비 지원",
+  "enfcBgngYmd": "20150311",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 음성군 행정복지국 복지정책과",
+  "ctpvNm": "충청북도",
+  "sggNm": "음성군",
+  "servDgst": "장애인이 복지카드 신청 후 수령 시 읍·면사무소를 재방문하는 번거로움을 해소하고 복지카드 등기 배송 시 등기배송료(3,820원)를 지원하여 장애인 복지증진에 기여",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "장애인복지카드를 신청하는 음성군 주소지를 둔 일반장애인",
+  "slctCritCn": "장애인복지카드를 신청하는 음성군 주소지를 둔 일반장애인",
+  "alwServCn": "복지카드 배송료 3,820원을 지원",
+  "inqNum": "11266",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-871-3344",
+    "wlfareInfoReldNm": "음성군청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법 제30조(경제적부담의 경감)제1항"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6694GOWF15GOWF156694&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장애인복지카드.pdf"
+   }
+  ]
+ }
+}

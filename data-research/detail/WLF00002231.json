@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "서울특별시 복지정책실 복지기획관 복지정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "6348",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "중장년, 노년",
+  "servDgst": "나라를 위해 헌신하였으나 상대적으로 소외되었던 국가유공자를 예우하고 명예를 선양하기 위해 서울시 보훈예우수당을 지원함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002231&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002231",
+  "servNm": "국가유공자 보훈예우수당",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002231",
+  "servNm": "국가유공자 보훈예우수당",
+  "enfcBgngYmd": "20171001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 복지정책실 복지기획관 복지정책과",
+  "ctpvNm": "서울특별시",
+  "servDgst": "나라를 위해 헌신하였으나 상대적으로 소외되었던 국가유공자를 예우하고 명예를 선양하기 위해 서울시 보훈예우수당을 지원함",
+  "lifeNmArray": "중장년, 노년",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "4.19혁명유공자, 5.18민주화운동유공자, 특수임무유공자, 전상,공상군경 및 공상공무원 중 만 65세 이상, 서울시 1개월 이상 거주한 사람(본인)",
+  "slctCritCn": "만65세 이상, 서울시 1개월 이상 거주 4.19혁명유공자, 5.18민주유공자, 특수임무유공자, 전상,공상군경 및 공상공무원 본인",
+  "alwServCn": "월 10만원 지원",
+  "inqNum": "6358",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "120",
+    "wlfareInfoReldNm": "다산콜센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 국가보훈대상자 예우 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=0366GOWF15GOWF150366&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울특별시 국가보훈대상자 예우 및 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

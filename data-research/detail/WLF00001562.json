@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 평택시 복지국 복지정책과",
+  "ctpvNm": "경기도",
+  "inqNum": "4573",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260730",
+  "lifeNmArray": "노년, 중장년, 청년",
+  "servDgst": "국가를 위해 희생, 공헌한 국가유공자 및 유족에게 명예수당 등 지급을 통한 예우 및 자긍심 고취",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001562&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001562",
+  "servNm": "국가보훈대상자 예우 및 지원(보훈수당 지급)",
+  "sggNm": "평택시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001562",
+  "servNm": "국가보훈대상자 예우 및 지원(보훈수당 지급)",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 평택시 복지국 복지정책과",
+  "ctpvNm": "경기도",
+  "sggNm": "평택시",
+  "servDgst": "국가를 위해 희생, 공헌한 국가유공자 및 유족에게 명예수당 등 지급을 통한 예우 및 자긍심 고취",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "○ 명예수당, 사망위로금 - 국가보훈대상자로서 신청일 현재 평택시에 주소를 두고 거주하는 사람.○ 참전유공자 수당 - 신청일 현재 평택시에 주소를 두고 거주하는 참전유공자○ 사망 참전유공자 배우자 복지수당 - 신청일 현재 평택시에 주소를 두고 거주하는 사망 참전유공자의 배우자○ 독립유공자 수당 - 신청일 현재 평택시에 주소를 두고 거주하는 독립유고자 및 유족",
+  "slctCritCn": "평택시 거주 / 국가보훈대상자",
+  "alwServCn": "○ 명예수당 : 월 10만원/85세 이상 13만원○ 참전유공자 수당 : 월 5만원○ 사망 참전유공자의 배우자 복지수당 : 월 5만원○ 사망위로금 : 30만원(1회 한 함)○ 독립유공자 수당 : 월 5만원",
+  "aplyMtdCn": "○ 지급시기 : 신청일이 속한 달부터 매월 20일 계좌입금(단, 사망위로금은 사망일로부터 1년 이내 신청, 10일 이내 지급)&#13;○ 지급방법 : 대상자 계좌에 입금&#13;○ 신청방법 : 거주지 읍면동 주민센터에 신청(국가보훈대상자증, 본인명의 계좌 필요)",
+  "inqNum": "4577",
+  "lastModYmd": "20260730",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8024-3043",
+    "wlfareInfoReldNm": "평택시청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "평택시 국가보훈대상자 등 예우 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240705UUWBM1641310092800236&amp;atcflSn=1",
+    "wlfareInfoReldNm": "평택시 국가보훈대상자 등 예우 및 지원에 관한 조례(24.02.20.).pdf"
+   }
+  ]
+ }
+}

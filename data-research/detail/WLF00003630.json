@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 음성군 행정복지국 복지정책과",
+  "ctpvNm": "충청북도",
+  "inqNum": "6525",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "servDgst": "국가유공자에게 명예수당 지급으로 생활안정에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003630&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003630",
+  "servNm": "보훈업무 추진(국가유공자 수당 지급)",
+  "sggNm": "음성군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003630",
+  "servNm": "보훈업무 추진(국가유공자 수당 지급)",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 음성군 행정복지국 복지정책과",
+  "ctpvNm": "충청북도",
+  "sggNm": "음성군",
+  "servDgst": "국가유공자에게 명예수당 지급으로 생활안정에 기여",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 지원대상  - 참전유공자(6.25, 월남전) 본인  - 참전유공자 의 유족(배우자)  - 전몰군경 유족(국가보훈부에 수권자로 등록된 자)  - 독립유공자 및 유족  - 보국수훈자 본인  - 특수임무유공자(특수임무공로자, 특수임무부상자) 본인  - 특수임무유공자의 유족(배우자)  - 국가보훈대상자(본인)     전상군경, 공상군경, 순직군경, 무공수훈자, 보국수훈자, 공상공무원(65세 이상만 가능)  - 국가보훈대상자 의 유족(본인 사망시 배우자, 없을시 부모)    전상군경, 공상군경, 순직군경, 무공수훈자, 보국수훈자, 공상공무원, 순직군경, 순직공무원(65세 이상만 가능) 2) 선정기군     음성군에 주소를 둔 대상자",
+  "slctCritCn": "국가유공자 및 유족 중 해당자",
+  "alwServCn": "1) 지급금액  - 참전유공자(6.25, 월남전) 본인: 25만원  - 참전유공자 의 유족(배우자) : 18만원  - 참전유공자 사망위로금: 30만원 (1회, 사망후 1년이내에 청구 가능)  - 전몰군경 유족(국가보훈부에 수권자로 등록된 자): 25만원  - 독립유공자 및 유족: 25만원  - 보국수훈자 본인: 18만원  - 특수임무유공자(특수임무공로자, 특수임무부상자) 본인: 18만원  - 특수임무유공자의 유족(배우자): 15만원  - 국가보훈대상자(본인): 25만원     무공수훈자, 전상군경, 공상군경, 공상공무원(65세 이상만 가능)  - 국가보훈대상자 의 유족(본인 사망시 배우자, 없을시 부모): 18만원     무공수훈자, 전상군경, 공상군경, 순직군경, 공상공무원, 순직공무원(65세 이상만 가능)2) 지원체계   읍/면 복지팀에 신청서류 접수후 군에서 기준 확인 후 지급",
+  "aplyMtdCn": "1) 신청방법 : 주민등록상 주소지 관할 읍/면 복지팀에 신청 2) 구비서류 :  신청서1부, 본인 통장사본 1부,  국가유공자증 및 유족증 사본 1부.3) 지급시기 및 지급방법  - 지급시기 : 수당 : 매월 20일 지급(20일이 공휴일인 경우 전일 지급)                  사망위로금 : 신청 시 10일이내 지급  - 지급방법 : 기준 심사 후 개별 통장으로 입금",
+  "inqNum": "6539",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-871-3315",
+    "wlfareInfoReldNm": "음성군청 문화복지국 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "음성군 참전유공자 지원조례, 음성군 국가보훈대상자 예우 및 지원에 관한 조례, 음성군 독립유공자 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260108UUWBM1553130170121882&amp;atcflSn=1",
+    "wlfareInfoReldNm": "보훈수당 현황.hwp"
+   }
+  ]
+ }
+}

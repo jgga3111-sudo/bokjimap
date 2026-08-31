@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 방문",
+  "bizChrDeptNm": "경기도 파주시 복지정책국 여성가족과",
+  "ctpvNm": "경기도",
+  "inqNum": "5088",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260808",
+  "lifeNmArray": "영유아",
+  "servDgst": "출산율 저하 등 사회문제에 적극 대응하고 출산과 양육하기 좋은 환경에 기여하고자 자녀를 출산한 가정에 출생축하금을 지원하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001658&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001658",
+  "servNm": "출생축하 지원",
+  "sggNm": "파주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001658",
+  "servNm": "출생축하 지원",
+  "enfcBgngYmd": "20060102",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 파주시 복지정책국 여성가족과",
+  "ctpvNm": "경기도",
+  "sggNm": "파주시",
+  "servDgst": "출산율 저하 등 사회문제에 적극 대응하고 출산과 양육하기 좋은 환경에 기여하고자 자녀를 출산한 가정에 출생축하금을 지원하고자 함",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "출생신고일 현재 시에 주민등록을 두고 거주하는 보호자로 대상자녀가 주민등록상 동일 세대원인 가정에 출산축하금 지원",
+  "slctCritCn": "첫째자녀 100만원(최초 10만원, 1년 뒤 90만원)둘째자녀 200만원(최조 30만원, 1년 뒤 170만원)셋째자녀 이상 300만원(최초 100만원, 1년 뒤 200만원) 지원",
+  "alwServCn": "신청일 익월 15일 지급",
+  "aplyMtdCn": "1. 온라인 신청 : 정부24 (행복출산원스톱서비스)&#13;2. 방문 신청 : 관할 행정복지센터",
+  "inqNum": "5096",
+  "lastModYmd": "20260808",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-940-4422",
+    "wlfareInfoReldNm": "파주시청 여성가족과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "파주시 출생축하 및 다자녀가정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6669GOWF15GOWF156669&amp;atcflSn=1",
+    "wlfareInfoReldNm": "파주시 출산축하 및 다자녀가정 지원에 관한 조례(경기도 파주시조례)(제1660호)(20201218).hwp"
+   }
+  ]
+ }
+}

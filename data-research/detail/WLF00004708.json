@@ -1,0 +1,59 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 사회복지국 복지정책과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "8129",
+  "intrsThemaNmArray": "서민금융, 안전·위기",
+  "lastModYmd": "20260725",
+  "servDgst": "생계곤란 등 위기 상황에 높인 가구에 신속히 급여 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004708&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004708",
+  "servNm": "부산형 긴급복지지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004708",
+  "servNm": "부산형 긴급복지지원사업",
+  "enfcBgngYmd": "20211001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 사회복지국 복지정책과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "생계곤란 등 위기 상황에 높인 가구에 신속히 급여 지원",
+  "intrsThemaNmArray": "안전·위기, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "ㅇ 지원대상: 법·제도적 지원을 받지 못한 위기 상황에 처한 가구",
+  "slctCritCn": "ㅇ 선정기준      - (위기사유) 주 소득자의 실직, 폐업 등 생계 곤란한 사유 발생   - (소    득) 기준 중위소득 85%이하   - (재    산) 350백만원 이하    - (금    융) 1,384만원 이하(1인기준)",
+  "alwServCn": "ㅇ 지원내용: 생계비(원칙1, 최대3)",
+  "aplyMtdCn": "읍면동 또는 구군 방문신청",
+  "inqNum": "8145",
+  "lastModYmd": "20260725",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-888-3171",
+    "wlfareInfoReldNm": "부산광역시 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 저소득주민의 생활안정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260723UUWBM1042410202175019&amp;atcflSn=1",
+    "wlfareInfoReldNm": "부산광역시 저소득주민의 생활안정 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

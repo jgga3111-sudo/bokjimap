@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "서울특별시 양천구 주민복지국 생활보장과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "8463",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260716",
+  "servDgst": "저소득층이 소외받기 쉬운 명절(설, 추석) 기간에 명절 위문금을 지원하여 훈훈한 명절을 지낼 수 있도록 지원하고자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002817&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002817",
+  "servNm": "저소득 주민지원(명절위문)",
+  "sggNm": "양천구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급, 현물지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002817",
+  "servNm": "저소득 주민지원(명절위문)",
+  "enfcBgngYmd": "20000101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 양천구 주민복지국 생활보장과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "양천구",
+  "servDgst": "저소득층이 소외받기 쉬운 명절(설, 추석) 기간에 명절 위문금을 지원하여 훈훈한 명절을 지낼 수 있도록 지원하고자 함.",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급, 현물지급",
+  "sprtTrgtCn": "- 기초 생계, 의료수급자 가구- 차상위계층(자활, 의료, 장애인) 및 서울형 기초 수급가구",
+  "slctCritCn": "- 기초 생계, 의료급여 수급자, 차상위 계층 및 서울형기초가구로서 주민등록상 양천구에 거주하는 자격 해당자   ※ 기준일 이후 신규 책정자 및 전입자는 명절 이후 추가 지급",
+  "alwServCn": "위문금 : 위문 대상가구 통장으로 구청에서 일괄 입금",
+  "aplyMtdCn": "직접 지원(별도 신청사항 없음)",
+  "inqNum": "8473",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2620-4660",
+    "wlfareInfoReldNm": "양천구청 생활보장과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 양천구 저소득주민의 생활안정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260714UUWBM1601430201141637&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 저소득구민 부가급여 지원 계획 (1).pdf"
+   }
+  ]
+ }
+}

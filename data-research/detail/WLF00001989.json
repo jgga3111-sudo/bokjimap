@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청남도 천안시 동남구 주민복지과",
+  "ctpvNm": "충청남도",
+  "inqNum": "4818",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "servDgst": "국가보훈대상자의 선순위 유족에게 매월 지급되는 금전",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001989&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001989",
+  "servNm": "천안시 보훈명예수당 지급",
+  "sggNm": "천안시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001989",
+  "servNm": "천안시 보훈명예수당 지급",
+  "enfcBgngYmd": "20140101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 천안시 동남구 주민복지과",
+  "ctpvNm": "충청남도",
+  "sggNm": "천안시",
+  "servDgst": "국가보훈대상자의 선순위 유족에게 매월 지급되는 금전",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 지원대상 : 국가보훈대상자의 선순위 유족&#13;2) 선정기준 :&#13;   - 신청일 현재 천안시 주민등록이 되어 있고, 국가보훈부에서 발급한 유족증 소지자&#13;   - 대상자의 신청에 의한 수당지급대상자 결정",
+  "slctCritCn": "신청일 현재 천안시에 주민등록이 되어있고 국가보훈부에 발급한 유족증 소지자",
+  "alwServCn": "1) 지급금액 : 1인당 10만원2) 지급시기 : 매월 말일",
+  "aplyMtdCn": "1) 신청방법 : 거주지 읍면동 주민센터에 보훈명예수당 지급신청&#13;2) 지급시기 및 지급방법 :&#13;  - 지급개시일 : 신청이 있는 달부터 지급(지급일이 토요일 또는 공휴일인 경우는 그전 근무일에 지급)&#13;  - 지급방법 : 대상자 계좌에 구청장이 직접 입금",
+  "inqNum": "4822",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-521-4212",
+    "wlfareInfoReldNm": "천안시 동남구 주민복지과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-521-6212",
+    "wlfareInfoReldNm": "천안시 서북구 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "천안시 보훈명예수당 지급 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4338GOWF15GOWF154338&amp;atcflSn=1",
+    "wlfareInfoReldNm": "천안시보훈명예수당지급조례.txt"
+   }
+  ]
+ }
+}

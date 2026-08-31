@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "부산광역시 여성가족국 아동청소년과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "6271",
+  "intrsThemaNmArray": "보호·돌봄, 교육, 주거, 안전·위기",
+  "lastModYmd": "20260821",
+  "lifeNmArray": "청소년, 아동, 영유아",
+  "servDgst": "보호를 필요로 하는 아동을 가족적 환경에서 성장하도록 지도함으로써 정성적 안정 도모 및 이웃과의 교류 등 사회적응 능력 배양",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002790&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002790",
+  "servNm": "공동생활가정(그룹홈)사업 지원",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "시설입소",
+  "trgterIndvdlNmArray": "한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002790",
+  "servNm": "공동생활가정(그룹홈)사업 지원",
+  "enfcBgngYmd": "20200101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 여성가족국 아동청소년과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "보호를 필요로 하는 아동을 가족적 환경에서 성장하도록 지도함으로써 정성적 안정 도모 및 이웃과의 교류 등 사회적응 능력 배양",
+  "lifeNmArray": "영유아, 아동, 청소년",
+  "trgterIndvdlNmArray": "저소득, 한부모·조손",
+  "intrsThemaNmArray": "주거, 안전·위기, 교육, 보호·돌봄",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "시설입소",
+  "sprtTrgtCn": "-보호자가 없거나 보호자로부터 이탈된 아동 등 보호를 필요로 하는 아동&#13;",
+  "slctCritCn": "- 최소12개월 이상 실질적 운영 시설을 대상으로 지자체 평가를 통해 그룹홈 지원여부 결정",
+  "alwServCn": "-보호를 필요로 하는 아동을 가정형태의 주거환경에서 보호·양육 -시설설치현황 : 26개소-보호인원 : 개소당 7인기준 -보호아동에 대한 지원  · 학령별 용돈 월24천원~50천원 · 교통비 일2,400원 · 문화야외체험활동비 월64천원/인 · 수학여행비 연85천원 ~ 120천원/인 · 학습보조비 월80천원/인 · 심리치료비 연420천원/개소당",
+  "inqNum": "6276",
+  "lastModYmd": "20260821",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-888-1645",
+    "wlfareInfoReldNm": "부산시청 아동청소년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "아동복지법 제59조 및 시행령 제54조(비용보조)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250805UUWBM1611220149508650&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 요보호아동 그룹홈 운영 지원계획.pdf"
+   }
+  ]
+ }
+}

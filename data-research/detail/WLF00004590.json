@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "경상북도 안동시 도시건설국 교통행정과",
+  "ctpvNm": "경상북도",
+  "inqNum": "4742",
+  "lastModYmd": "20260703",
+  "servDgst": "교통약자의 안전하고 편리한 이동권을 보장하여 교통약자의 사회참여와 복지증진",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004590&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004590",
+  "servNm": "교통약자 특별교통수단 콜센터 운영",
+  "sggNm": "안동시",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004590",
+  "servNm": "교통약자 특별교통수단 콜센터 운영",
+  "enfcBgngYmd": "20160301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상북도 안동시 도시건설국 교통행정과",
+  "ctpvNm": "경상북도",
+  "sggNm": "안동시",
+  "servDgst": "교통약자의 안전하고 편리한 이동권을 보장하여 교통약자의 사회참여와 복지증진",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "장애의 정도가 심한 장애인으로서 대중교통의 이용이 어려운 사람(휠체어 장애인 우선) 및 동반가족, 보호자 2인이내장기요양등급 1~3등급으로 65세 이상의 대중교통 이용이 어려운 사람장애인이 탑승한 전통 휠체어(스쿠터 포함)이동 중 고장 시, 일시적으로 휠체어를 이용하는 사람(종합병원급 이상의 전문의 진단서 필요)",
+  "slctCritCn": "장애의 정도가 심한 장애인으로서 대중교통의 이용이 어려운 사람(휠체어 장애인 우선) 및 동반가족, 보호자 2인이내장기요양등급 1~3등급으로 65세 이상의 대중교통 이용이 어려운 사람장애인이 탑승한 전통 휠체어(스쿠터 포함)이동 중 고장 시, 일시적으로 휠체어를 이용하는 사람(종합병원급 이상의 전문의 진단서 필요)",
+  "alwServCn": "안동시 내 : 기본 5km 1,500원, 추가요금 200원/km, 한도 3,000원시외지역 : 운행하는 최상급 시외버스 일반인 요금의 2배이용대상지역 : 안동시와 인접한 시군(봉화, 영주, 예천, 의성, 영양, 청송), 대구(병원치료, 진료에 한함)유료도료 왕복비용 및 주차요금은 이용자가 부담",
+  "aplyMtdCn": "1. 이용심사신청서 작성2. 심사3. 확정 및 통보3. 이용일자 및 시간 예약",
+  "inqNum": "4745",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-840-5429",
+    "wlfareInfoReldNm": "안동시 교통행정과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.andong.go.kr/",
+    "wlfareInfoReldNm": "안동시 교통행정과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "교통약자 이동편의 증진법 제16조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7642GOWF15GOWF157642&amp;atcflSn=1",
+    "wlfareInfoReldNm": "교통약자이동지원센터 운영지침.hwp"
+   }
+  ]
+ }
+}

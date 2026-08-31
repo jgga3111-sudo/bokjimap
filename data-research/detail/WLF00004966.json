@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 청주시 복지국 여성가족과",
+  "ctpvNm": "충청북도",
+  "inqNum": "8239",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260717",
+  "lifeNmArray": "청년",
+  "servDgst": "주택마련 비용 부담을 경감하여 결혼 결정에 긍정적인 영향을 주고, 주거비 부담 완화를 통한 출산여건 개선으로, 출생아수 감소 등 초저출산시대에 적극 대응",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004966&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004966",
+  "servNm": "신혼부부 주택자금 대출이자 지원사업",
+  "sggNm": "청주시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004966",
+  "servNm": "신혼부부 주택자금 대출이자 지원사업",
+  "enfcBgngYmd": "20210101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 청주시 복지국 여성가족과",
+  "ctpvNm": "충청북도",
+  "sggNm": "청주시",
+  "servDgst": "주택마련 비용 부담을 경감하여 결혼 결정에 긍정적인 영향을 주고, 주거비 부담 완화를 통한 출산여건 개선으로, 출생아수 감소 등 초저출산시대에 적극 대응",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준 7년 이내 혼인신고를 한 무주택(1주택) 신혼 부부",
+  "slctCritCn": "˚ 신청일 기준 7년 이내 혼인신고 한 부부     ※ 동일 인물과의 재혼 시 최초 혼인 신고일을 기준으로 함 ˚ 부부 모두 신청일 기준 2025. 7.1.이전부터 청주시에 주소를 두고 있으며, 임대차계약서 대상 주택으로 전입이 되어 있는 가구 ˚ 금융권(제1,2금융권)에서 신혼부부 명의 주택자금 대출을 받은 자로 대출용도에 「주택」,「임차」,「전세」등으로 명기된 경우    ※ 신용 및 일반대출의 경우, 주택자금 용도로 사용하더라도 지원 불가  ˚ 주민등록상 세대구성원 모두 혼인신고일로부터 신청일까지 전세자금의 경우 전국 기준 주택을 소유한 이력이 없는 가구, 매입자금의 경우 주택자금 대상 1주택만을 소유한 이력이 있는 가구 ˚ 소득 기준(전년도 부부합산 연 8,000만원 이하)",
+  "alwServCn": "· 신청일 기준 대출잔액의 1.2%에 해당하는 금액을 당해연도 이자납부(예정)개월 수에 따라 월할 계산하여 일시금 지급   ⇒ 주택자금대출잔액×1.2%×당해연도 이자납부(예정)개월수/12개월     ※ 전세자금의 경우, 당해연도 이자납부(예정)개월수는 임대차계약서상의 계약기간 적용 · 연 1회, 신혼부부 해당 기간 내 최대 5회 지원     ※ 기 지원가구도 매년 신규 신청 · 가구당 연 100만원 이내(유자녀시 110만원까지)(만원미만 절사)",
+  "aplyMtdCn": "방문신청(청주시청 여성가족과)",
+  "inqNum": "8255",
+  "lastModYmd": "20260717",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-201-1763",
+    "wlfareInfoReldNm": "청주시 여성가족과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청주시 저출산.고령사회 대응 및 지원에 관한 조례 제11조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260714UUWBM1633190201150567&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 신혼부부 주택자금 대출이자 지원계획 수정 공고문.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 성남시 도시주택국 주택과",
+  "ctpvNm": "경기도",
+  "inqNum": "5412",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "청소년, 청년, 영유아, 아동, 중장년, 노년",
+  "servDgst": "기초생활보장수급자 및 차상위계층에 속하는 주거환경이 취약한 저소득층에게 전대함으로써 실질적인 자립기반을\n조성할 수 있도록 하기 위함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001276&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001276",
+  "servNm": "저소득가구 전세임대 지원",
+  "sggNm": "성남시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001276",
+  "servNm": "저소득가구 전세임대 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 성남시 도시주택국 주택과",
+  "ctpvNm": "경기도",
+  "sggNm": "성남시",
+  "servDgst": "기초생활보장수급자 및 차상위계층에 속하는 주거환경이 취약한 저소득층에게 전대함으로써 실질적인 자립기반을\n조성할 수 있도록 하기 위함.",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 입주대상  : 아래 요건을 갖춘 무주택 세대  - 기초생활보장수급자 및 차상위계층(기중 중위소득 50% 이하)에 속하는 세대  - 주거 소유 형태가 월세 및 무료 임대(신청일 현재 6개월이상 거주자) 등 주거환경 취약세대  - 주민등록표상 성남시에 1년이상(신청일 현재) 계속 거주하고 있는 세대",
+  "slctCritCn": "성남시 거주 1년이상 계속 거주 세대",
+  "alwServCn": "- 전세보증금 130,000,000원 지원",
+  "aplyMtdCn": "- 시청에서 지원세대 공고 ---&gt; 동 주민센터에서 접수후  구청(사회복지과)송부 ---&gt;구청 사회복지과에서 시청 송부&#13;   ---&gt;시청에서 최종 지원세대 결정 ---&gt; 최종 결정자 구청 사회복지과 통보 ---&gt; 구청에서 심의후 결정대상자에게 통보   ---&gt; 결정자는 전세가구 확정 구청에 통보---&gt; 구청장과 집주인과 계약 거주",
+  "inqNum": "5421",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-729-8933",
+    "wlfareInfoReldNm": "성남시청 주택과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "성남시 저소득가구 전세임대 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=1177GOWF15GOWF151177&amp;atcflSn=1",
+    "wlfareInfoReldNm": "저소득가구 전세임대 지원.hwp"
+   }
+  ]
+ }
+}

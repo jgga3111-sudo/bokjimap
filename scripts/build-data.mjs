@@ -36,15 +36,64 @@ function parseDetail(xml) {
   return { ...rec, ...lists };
 }
 
-/** XML 엔티티 복원 + 캐리지리턴을 줄바꿈으로. 원문 내용은 바꾸지 않는다. */
-function clean(v) {
-  if (!v) return null;
-  const s = v
-    .replaceAll("&amp;", "&")
+/**
+ * XML 엔티티 복원.
+ *
+ * 이름 있는 엔티티 몇 개만 풀었더니 **숫자 엔티티가 그대로 화면에 나왔다.**
+ * 공고문에는 항목 번호로 `&#9312;`(①) 같은 것이 흔하게 쓰여서, 지원대상
+ * 문단이 "&#9312; 소득평가액이…"로 보였다. 정합성 점검이 23건을 잡았다.
+ *
+ * 그래서 `&#NNN;`과 `&#xHH;`를 통째로 푼다. 코드포인트 범위를 벗어난 값은
+ * String.fromCodePoint가 예외를 던지므로 원문 그대로 둔다 — 한 건 때문에
+ * 빌드 전체가 죽는 편이 훨씬 나쁘다.
+ *
+ * ⚠ `&amp;`는 **맨 마지막**에 푼다. 먼저 풀면 원문의 `&amp;#9312;`가
+ * `&#9312;`가 됐다가 다시 ①로 바뀐다 — 원문에 없던 글자를 만들어 내는 셈이다.
+ */
+const decodeNumeric = (s) =>
+  s
+    .replace(/&#x([0-9a-fA-F]+);/g, (m, h) => codePoint(parseInt(h, 16), m))
+    .replace(/&#(\d+);/g, (m, d) => codePoint(Number(d), m));
+
+function decodeEntities(s) {
+  return decodeNumeric(s)
     .replaceAll("&lt;", "<")
     .replaceAll("&gt;", ">")
     .replaceAll("&quot;", '"')
-    .replaceAll("&#13;", "\n")
+    .replaceAll("&apos;", "'")
+    .replaceAll("&nbsp;", " ")
+    .replaceAll("&amp;", "&");
+}
+
+function codePoint(n, original) {
+  try {
+    return String.fromCodePoint(n);
+  } catch {
+    return original;
+  }
+}
+
+/**
+ * 엔티티 복원 + 캐리지리턴을 줄바꿈으로. 원문 내용은 바꾸지 않는다.
+ *
+ * 숫자 엔티티를 **두 번** 푼다. 원본이 이중 인코딩돼 있기 때문이다.
+ *
+ *   원본 XML   …※ &amp;#9312; 30세 이상…
+ *   1차 해독   …※ &#9312; 30세 이상…      ← 여기서 멈추면 화면에 이대로 나온다
+ *   2차 해독   …※ ① 30세 이상…
+ *
+ * 복지로 데이터베이스에 들어 있는 글자가 실제로 `&#9312;`다. 담당자가 항목
+ * 번호를 HTML 엔티티로 적어 넣었고, API는 그 `&`를 규칙대로 `&amp;`로 감쌌다.
+ * 그래서 XML을 제대로 풀어도 HTML 엔티티가 한 겹 남는다.
+ *
+ * 2차에서는 **숫자 엔티티만** 푼다. `&amp;`를 또 풀면 원문에 없던 해독이
+ * 한 단계 더 일어나 진짜 `&` 문자가 든 문장을 망가뜨릴 수 있다.
+ * 남는 위험은 본문에 "&#13;"을 글자 그대로 설명하는 경우뿐인데, 복지 공고문에
+ * 그런 문장은 없다.
+ */
+function clean(v) {
+  if (!v) return null;
+  const s = decodeNumeric(decodeEntities(v))
     .replace(/\r\n?/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();

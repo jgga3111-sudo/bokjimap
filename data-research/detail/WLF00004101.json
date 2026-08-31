@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 수영구 복지환경국 가족행복과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "7894",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260804",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "저출산 극복 및 출산장려 분위기 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004101&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004101",
+  "servNm": "출산장려 지원",
+  "sggNm": "수영구",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004101",
+  "servNm": "출산장려 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 수영구 복지환경국 가족행복과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "수영구",
+  "servDgst": "저출산 극복 및 출산장려 분위기 조성",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "*출산장려금둘째 이후 출산 가구가 다음 중 하나에 해당하는 경우 1. 출산일을 기준으로 부모 모두 현재 관내에 주민등록을 두고 있는 경우2. 출산일을 기준으로 부 또는 모 중 한 사람이 현재 구에 주민등록을 두고 있는 경우로서 다음의 어느 하나에 해당하는 경우 가. 부 또는 모가 외국인인 경우 나. 한부모 가족인 경우 다. 부 또는 모가 직업 등의 사유로 부산광역시 외 다른 시·도에 주민등록을 두고 있는 경우",
+  "slctCritCn": "출산장려금 지급 대상자에 해당하는 둘째이후자녀 출산가정 중 출생일로부터 1년 이내 신청자",
+  "alwServCn": "* 출산장려금&#13;둘째자녀 1,000천원(20만원*5회 지급), 셋째자녀 2,000천원(40만원*5회 지급), 넷째이후 자녀 3,000천원(50만원*6회 지급)&#13;",
+  "aplyMtdCn": "1) 거주지 동 주민센터에서 출생신고 시 행복출산 통합신청 2) 신청서 접수 익월 10일 이내 출생아의 부모(보호자) 계좌에 직접 입금",
+  "inqNum": "7899",
+  "lastModYmd": "20260804",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-610-4326",
+    "wlfareInfoReldNm": "부산광역시 수영구 가족행복과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 수영구 출산장려금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6678GOWF14GOWF146678&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출산지원금 지급 기준 및 사례.hwp"
+   }
+  ]
+ }
+}

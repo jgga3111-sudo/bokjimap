@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 청주시 복지국 장애인복지과",
+  "ctpvNm": "충청북도",
+  "inqNum": "7052",
+  "intrsThemaNmArray": "신체건강",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "청소년, 청년, 노년, 중장년, 영유아, 아동",
+  "servDgst": "혼자서 일상생활하기 어려운 중증장애인의 자립생활 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002044&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002044",
+  "servNm": "중증장애인활동지원서비스 추가  지원",
+  "sggNm": "청주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "저소득, 장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002044",
+  "servNm": "중증장애인활동지원서비스 추가  지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 청주시 복지국 장애인복지과",
+  "ctpvNm": "충청북도",
+  "sggNm": "청주시",
+  "servDgst": "혼자서 일상생활하기 어려운 중증장애인의 자립생활 지원",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "intrsThemaNmArray": "신체건강",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "① 종합조사 급여 13구간 이상 기초생계·의료급여수급자 중 독거장애인 ② 종합조사 급여 13구간 이상 기초생계·의료급여수급자 중 장애인부부 (※단 배우자 심한장애) ③ 종합조사 급여 15구간 이상 희귀난치성 질환자 및 발달장애인(소득기준 무관)",
+  "slctCritCn": "① 종합조사 급여 13구간 이상 기초생계·의료급여수급자 중 독거장애인② 종합조사 급여 13구간 이상 기초생계·의료급여수급자 중 장애인부부 (※단 배우자 심한장애)③ 종합조사 급여 15구간 이상 희귀난치성 질환자 및 발달장애인(소득기준 무관)",
+  "alwServCn": "○ 사업 기간  : 2024. 1 ～ 2024. 12  ○ 지원내용   : 1인당 월60시간 활동보조서비스 지원 ○ 제공금액 및 시간 : 969,000원(60시간)",
+  "aplyMtdCn": "○ 선정 절차  : 매년 예산 범위내에서 모집 계획에 따라      거주지 읍면동주민센터에 신청    ** 장애정도 및 가구실태를 감안하여 배점표 고득점자 순으로 지원대상자 추가선정    ** 장애인 활동지원 기본급여가 우선 소진된 이후에 이용가능하며 월단위로 미사용 바우처는 자동소멸됨.",
+  "inqNum": "7057",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-201-1855",
+    "wlfareInfoReldNm": "청주시청 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청주시 추진계획"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20231023UUWBM1147420053983553&amp;atcflSn=1",
+    "wlfareInfoReldNm": "신청서(시추가).hwp"
+   }
+  ]
+ }
+}

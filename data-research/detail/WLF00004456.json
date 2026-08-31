@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 남원시 행정복지국 주민복지과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "6331",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260716",
+  "servDgst": "장애인 통합복지카드 발급 시 발생하는 수수료를 지원하여 경제적 부담 경감 및 복지카드 유형에 따른 수수료 발생 불평등 해소",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004456&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004456",
+  "servNm": "장애인 통합복지카드(A형) 발급수수료 지원",
+  "sggNm": "남원시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004456",
+  "servNm": "장애인 통합복지카드(A형) 발급수수료 지원",
+  "enfcBgngYmd": "20200101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 남원시 행정복지국 주민복지과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "남원시",
+  "servDgst": "장애인 통합복지카드 발급 시 발생하는 수수료를 지원하여 경제적 부담 경감 및 복지카드 유형에 따른 수수료 발생 불평등 해소",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "남원시 등록 장애인",
+  "slctCritCn": "-장애인통합복지카드(A형) 신규(또는 재발급) 신청자&#13;-남원시 주소등록 장애인&#13;-지원내용 : 통합복지카드(A형)",
+  "alwServCn": "장애인통합복지카드 발급 수수료 지원",
+  "aplyMtdCn": "신분증 지참하여 주소지 주민센터 방문신청--&gt;통합복지카드 신청접수(전산전송)--&gt;한국조폐공사에서&#13;통합복지카드 제작 발송 및 발급수수료 청구",
+  "inqNum": "6335",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-620-6623",
+    "wlfareInfoReldNm": "남원시청 노인장애인과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240618UUWBM1305120089956643&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

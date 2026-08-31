@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 고성군 행정복지국 주민생활과",
+  "ctpvNm": "경상남도",
+  "inqNum": "5155",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260812",
+  "lifeNmArray": "아동, 영유아, 중장년, 청소년, 노년, 청년",
+  "servDgst": "보훈가족 사기양양 및 호국보훈의식 함양",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004447&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004447",
+  "servNm": "보훈가족 및 국가유공자 지원",
+  "sggNm": "고성군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004447",
+  "servNm": "보훈가족 및 국가유공자 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 고성군 행정복지국 주민생활과",
+  "ctpvNm": "경상남도",
+  "sggNm": "고성군",
+  "servDgst": "보훈가족 사기양양 및 호국보훈의식 함양",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "보훈대상자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "ㅇ 국가보훈대상자 - 참전유공자 배우자, 보국수훈자, 전상군경(유족), 공상군경(유족) 등ㅇ 국가보훈대상자 보훈격려금ㅇ 참전유공자 사망위로금 지원",
+  "slctCritCn": "국가보훈대상자",
+  "alwServCn": "ㅇ 보훈명예수당 지급&#13;  - 전몰군경유족, 전.공상군경, 전.공상군경 유족, 무공수훈자, 보국수훈자, 독립유공자유족, 순직군경유족, 참전유공자 미망인: 1인 월10만원&#13; - 보국수훈자: 월10만원&#13;ㅇ 참전유공자 사망위로금 지원: 1인당 500,000원",
+  "aplyMtdCn": "1) 참전명예수당 지원&#13;    - 제출서류: 명예수당 지급신청서, 참전유공자증(국가유공자 유족증), 통장사본&#13;    - 제 출 처 : 읍.면사무소 또는 고성군청 주민생활과&#13;      &#13; 2) 참전유공자 사망위로금 지원&#13;   - 제출서류: 참전유공자 사망위로금 지급신청서, 사망진단서, 가족관계등록부, 통장사본&#13;   - 제 출 처 : 읍.면사무소 또는 고성군청 주민생활과",
+  "inqNum": "5159",
+  "lastModYmd": "20260812",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-670-2354",
+    "wlfareInfoReldNm": "경상남도 고성군청 주민생활과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고성군 국가유공자 등 예우 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7242GOWF15GOWF157242&amp;atcflSn=1",
+    "wlfareInfoReldNm": "고성군 국가보훈대상자 등 예우 등 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

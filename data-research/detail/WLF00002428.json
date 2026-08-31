@@ -1,0 +1,77 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 영광군 인구교육정책실",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "9672",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "청년",
+  "servDgst": "청년이 안정되고 구체적인 미래 계획을 수립할 수 있도록 재정적 지원을 통한 저소득 근로청년의 자립의욕 고취",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002428&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002428",
+  "servNm": "청년 희망 디딤돌 통장 지원사업",
+  "sggNm": "영광군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002428",
+  "servNm": "청년 희망 디딤돌 통장 지원사업",
+  "enfcBgngYmd": "20170101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 영광군 인구교육정책실",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "영광군",
+  "servDgst": "청년이 안정되고 구체적인 미래 계획을 수립할 수 있도록 재정적 지원을 통한 저소득 근로청년의 자립의욕 고취",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "o 공고일 기준 18~45세 이하인 자o 공고일 기준 영광군 내 주민등록을 둔 자o 근로유형에 관계없이 공고일 기준 최근 6개월 동안 3개월 이상의 근로 경력이 있는 자o 가구 소득인정액이 기준소득인정액이 기준중위소득 120%이하인 자",
+  "slctCritCn": "o 공고일 기준 18~45세 이하인 자o 공고일 기준 영광군 내 주민등록을 둔 자o 근로유형에 관계없이 공고일 기준 최근 6개월 동안 3개월 이상의 근로 경력이 있는 자o 가구 소득인정액이 기준소득인정액이 기준중위소득 120%이하인 자",
+  "alwServCn": "청년이 36개월 동안 매월 10만원을 적립시 동일한 금액의 자립지원금을 매월 지원",
+  "aplyMtdCn": "신청기간 별도 공고",
+  "inqNum": "9679",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5197",
+    "wlfareInfoReldNm": "영광군청 인구교육정책실 청년지원팀"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5197",
+    "wlfareInfoReldNm": "영광군청 인구교육정책실 청년지원팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "영광군 청년발전 및 지원에 관한 조례"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "영광군 청년발전 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260615UUWBM0935390196894226&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 청년 희망 디딤돌 통장사업 추진계획.hwpx"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260615UUWBM0935390196894226&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 청년 희망 디딤돌 통장사업 추진계획.hwpx"
+   }
+  ]
+ }
+}

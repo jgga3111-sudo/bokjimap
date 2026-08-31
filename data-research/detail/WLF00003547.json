@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 진천군 복지행정국 가족친화과",
+  "ctpvNm": "충청북도",
+  "inqNum": "22390",
+  "lastModYmd": "20260703",
+  "servDgst": "○장애인 통합복지카드 발급수수료 및 통합카드 배송비지원을 통한 장애인의 편의지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003547&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003547",
+  "servNm": "장애인통합복지카드 발급비, 배송비 지원사업",
+  "sggNm": "진천군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003547",
+  "servNm": "장애인통합복지카드 발급비, 배송비 지원사업",
+  "enfcBgngYmd": "20140101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 진천군 복지행정국 가족친화과",
+  "ctpvNm": "충청북도",
+  "sggNm": "진천군",
+  "servDgst": "○장애인 통합복지카드 발급수수료 및 통합카드 배송비지원을 통한 장애인의 편의지원",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "지원대상  - 장애인 고속도로 통행료 할인카드 발급신청자 중 신규발급 및 기간만료로 인한 재발급 대상자  - 장애인 복지카드(통합카드) 발급 신청자",
+  "slctCritCn": "등록장애인 중 장애인등록증(장애인통합복지카드)의 신규발급 또는 기한만료자",
+  "alwServCn": "1) 지급금액  - 1인 / 4,000원(장애인통합복지카드 발급 수수료 )  - 1인 / 3,820원(장애인통합복지카드 개별배송비)2) 지급처 : 한국조폐공사",
+  "aplyMtdCn": "1) 신청방법 : 읍/면사무소로 경증장애수당 장애인 통합복지카드 발급신청 2) 지원시기 및 지원방법  - 지원시기 : 수시(1인, 1회)   - 지급방법 : 장애인 통합복지카드 발급 수수료 지원",
+  "inqNum": "22403",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-539-3942",
+    "wlfareInfoReldNm": "진천군청 가족친화과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법 시행규칙 제4조(장애인등록증 교부 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=9251GOWF14GOWF149251&amp;atcflSn=1",
+    "wlfareInfoReldNm": "등록증 지침.pdf"
+   }
+  ]
+ }
+}

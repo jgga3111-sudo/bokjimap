@@ -1,0 +1,66 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 평택시 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "4395",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260730",
+  "servDgst": "장사문화의 개선을 도모하고 화장에 대한 수요를 충족할 수 있는 화장시설을 갖추어야하나, 화장시설이 없는 평택시민의 화장문화를 장려하기 위하여 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001345&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001345",
+  "servNm": "평택시 화장 장려금 지원",
+  "sggNm": "평택시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001345",
+  "servNm": "평택시 화장 장려금 지원",
+  "enfcBgngYmd": "20191001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 평택시 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "sggNm": "평택시",
+  "servDgst": "장사문화의 개선을 도모하고 화장에 대한 수요를 충족할 수 있는 화장시설을 갖추어야하나, 화장시설이 없는 평택시민의 화장문화를 장려하기 위하여 지급",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "-평택시 1년 이상 주민등록이 되어 있는 사람이 사망하여 화장한 경우-평택시에 체류지 신고가 계속 3년이상 되어 있는 외국인이 사망하여 화장을 한 경우",
+  "slctCritCn": "(읍면동) 화장장려금 지원 신청, 접수 및 자격확인&#13;(시군구) 지원 자격확인 및 지원금 지급",
+  "alwServCn": "화장장 이용료의 70%실비 지원(최대30만원)",
+  "aplyMtdCn": "시청 노인복지과, 안중·송탄출장소 사회복지과 및 관내 읍·면·동 행정복지센터에서 신청",
+  "inqNum": "4399",
+  "lastModYmd": "20260730",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8024-3124",
+    "wlfareInfoReldNm": "평택시청 노인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "평택시 화장 장려금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230519UUWBM1556070035417127&amp;atcflSn=1",
+    "wlfareInfoReldNm": "화장장려금 신청서 (2).pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=9164GOWF14GOWF149164&amp;atcflSn=1",
+    "wlfareInfoReldNm": "평택시 화장 장려금 지원 조례.hwp"
+   }
+  ]
+ }
+}

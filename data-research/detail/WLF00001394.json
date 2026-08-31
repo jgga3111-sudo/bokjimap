@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 군포시 수도녹지사업소 수도과",
+  "ctpvNm": "경기도",
+  "inqNum": "7738",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260814",
+  "servDgst": "수급자(생계,의료수급자) 및 장애인(장애인연금법상 중증장애인)에 대한 주거안정을 위해 수도요금을 일부 감면",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001394&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001394",
+  "servNm": "수도요금감면(수급자,장애인)",
+  "sggNm": "군포시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001394",
+  "servNm": "수도요금감면(수급자,장애인)",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 군포시 수도녹지사업소 수도과",
+  "ctpvNm": "경기도",
+  "sggNm": "군포시",
+  "servDgst": "수급자(생계,의료수급자) 및 장애인(장애인연금법상 중증장애인)에 대한 주거안정을 위해 수도요금을 일부 감면",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "수급자(생계,의료) 및 장애인(장애인연금법상 중증장애인)",
+  "slctCritCn": "수급자(생계,의료) 및 장애인(장애인연금법상 중증장애인)",
+  "alwServCn": "매월 1세대당 10톤에 해당하는 수도요금을 감면",
+  "aplyMtdCn": "수도요금 감면신청서를 작성하여 수급자증명서 혹은 장애인 증명서를 첨부 주민센터나 수도과로 접수",
+  "inqNum": "7741",
+  "lastModYmd": "20260814",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-390-3232",
+    "wlfareInfoReldNm": "군포시 수도녹지사업소 수도과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "군포시 수도급수조례 및 하수도조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250709UUWBM1603310145556234&amp;atcflSn=1",
+    "wlfareInfoReldNm": "군포시 수도급수 및 하수도 사용 조례.hwpx"
+   }
+  ]
+ }
+}

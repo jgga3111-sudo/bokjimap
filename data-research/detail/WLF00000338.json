@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 김해시 복지국 아동청소년과",
+  "ctpvNm": "경상남도",
+  "inqNum": "4643",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "청소년",
+  "servDgst": "모든 청소년에게 해당 연령에 대한 신분 확인과 함께 문화시설 등 할인혜택 제공을 통해 다양한 문화 체험 기회를 보장하고 건강한 성장 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000338&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000338",
+  "servNm": "청소년증 발급",
+  "sggNm": "김해시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000338",
+  "servNm": "청소년증 발급",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 김해시 복지국 아동청소년과",
+  "ctpvNm": "경상남도",
+  "sggNm": "김해시",
+  "servDgst": "모든 청소년에게 해당 연령에 대한 신분 확인과 함께 문화시설 등 할인혜택 제공을 통해 다양한 문화 체험 기회를 보장하고 건강한 성장 지원",
+  "lifeNmArray": "청소년",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "만9세 ~ 만18세 청소년",
+  "slctCritCn": "9세 ~ 18세 청소년",
+  "alwServCn": "○ 모든 청소년들의 신분확인 수단&#13;○ 교통수당·문화시설 등에서의 할인 및 우대혜택 제공 등",
+  "aplyMtdCn": "○ 신청장소 : 주소지와 관계없이 가까운 읍·면·동주민센터  ○ 제출서류 : 사진1매(3.5×4.5)/신청 확인서 발급 희망시 사진 2장                     발급신청서(주민센터 비치),신분증(대리인 등)",
+  "inqNum": "4650",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-330-6756",
+    "wlfareInfoReldNm": "경상남도 김해시 아동청소년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청소년복지지원법 제4조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7446GOWF14GOWF147446&amp;atcflSn=1",
+    "wlfareInfoReldNm": "청소년증 개요.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경기도 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "6773",
+  "lastModYmd": "20260729",
+  "lifeNmArray": "중장년, 아동, 청년, 청소년",
+  "servDgst": "일상생활 및 사회활동이 어려운 장애인에게 활동보조서비스를 제공하여 장애인의 자립생활과 사회참여 증진",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000718&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000718",
+  "servNm": "장애인활동지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000718",
+  "servNm": "장애인활동지원",
+  "enfcBgngYmd": "20120102",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "servDgst": "일상생활 및 사회활동이 어려운 장애인에게 활동보조서비스를 제공하여 장애인의 자립생활과 사회참여 증진",
+  "lifeNmArray": "아동, 청소년, 청년, 중장년",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "- 장애인활동지원 국고지원 수급자로서 일정요건을 갖춘 자 *국비 급여 소진 후 사용가능",
+  "slctCritCn": "1.독거 혹은 취약가구이면서 기능제한 330점(아동266점) 미만 10시간 ~ 기능제한 360점(아동280점) 이상 137시간&#13;2. 기능제한 360점(아동280점)이상으로 나머지 가구구성원이 직장생활,학교생활,중증장애인, 아동 또는 65세 이상 : 37시간&#13;3. 학교생활 5시간&#13;4.직장생활  20시간&#13;5. 출산 40시간&#13;6.자립준비 70시간&#13;7. 보호자일시부재 10시간&#13;",
+  "alwServCn": "활동보조(신변처리, 가사, 일상생활, 이동보조 등)&#13;방문간호&#13;방문목욕 등",
+  "aplyMtdCn": "읍면동 행정복지센터(주민센터) 방문신청 혹은 복지로www.bokjiro.go.kr) 신청&#13;*국비기본,추가급여 소진 후 사용(당월소진, 이월 불가)",
+  "inqNum": "6779",
+  "lastModYmd": "20260729",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8008-4437",
+    "wlfareInfoReldNm": "경기도 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인활동 지원에 관한 법률 전체"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4364GOWF16GOWF164364&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장애인 활동지원 도추가 지원사업.hwp"
+   }
+  ]
+ }
+}

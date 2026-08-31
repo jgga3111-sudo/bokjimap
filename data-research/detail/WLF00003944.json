@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 진주시 경제통상국 일자리경제과",
+  "ctpvNm": "경상남도",
+  "inqNum": "5084",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260807",
+  "lifeNmArray": "중장년, 청년",
+  "servDgst": "저소득 실업자의 생계지원 및 청년 미취업자의 경험제공 목적의 공공일자리사업",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003944&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003944",
+  "servNm": "공공근로사업추진",
+  "sggNm": "진주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003944",
+  "servNm": "공공근로사업추진",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 진주시 경제통상국 일자리경제과",
+  "ctpvNm": "경상남도",
+  "sggNm": "진주시",
+  "servDgst": "저소득 실업자의 생계지원 및 청년 미취업자의 경험제공 목적의 공공일자리사업",
+  "lifeNmArray": "청년, 중장년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "저소득층, 취약계층, 청년 미취업자",
+  "slctCritCn": "재산, 소득, 자동차, 가구원수, 사회보험료",
+  "alwServCn": "❍ 임    금 : 시급 10,320원❍ 근무조건 : 1일 4~6시간(사업별 상이), 주5일 근무❍ 4대보험 의무가입 : 국민연금, 건강보험, 고용보험, 산재보험",
+  "aplyMtdCn": "읍면동을 통해서 신청&#13;",
+  "inqNum": "5092",
+  "lastModYmd": "20260807",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-749-8110",
+    "wlfareInfoReldNm": "진주시 일자리경제과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고용정책기본법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260806UUWBM1115410203851602&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(붙임) 26년 직접일자리사업 중앙부처 - 자치단체 합동지침(안) - 발송.hwp"
+   }
+  ]
+ }
+}

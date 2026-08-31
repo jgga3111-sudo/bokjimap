@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "제주특별자치도교육청 교육국 정서회복과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "6491",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "청소년",
+  "servDgst": "저소득층 및 다자녀 가정 수학여행비 지원을 통한 경제적 부담 경감\n균등한 교육기회 제공 및 실질적인 교육복지 실현",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005237&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005237",
+  "servNm": "저소득층, 다자녀 가정 수학여행비 추가 지원",
+  "sggNm": "제주특별자치도교육청",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "한부모·조손, 다문화·탈북민, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005237",
+  "servNm": "저소득층, 다자녀 가정 수학여행비 추가 지원",
+  "enfcBgngYmd": "20230301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도교육청 교육국 정서회복과",
+  "ctpvNm": "제주특별자치도",
+  "sggNm": "제주특별자치도교육청",
+  "servDgst": "저소득층 및 다자녀 가정 수학여행비 지원을 통한 경제적 부담 경감\n균등한 교육기회 제공 및 실질적인 교육복지 실현",
+  "lifeNmArray": "청소년",
+  "trgterIndvdlNmArray": "다문화·탈북민, 저소득, 한부모·조손",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "&lt;초‧중‧고 학생 교육비 지원 대상자(저소득층 가정)&gt; -법정수급자: 국민기초생활수급자(생계/의료/주거/교육급여수급자), 한부모가족보호대상자, 법정차상위대상자 -중위소득 60% 이하 -학교장 추천자, 난민, 탈북학생&lt;특수교육 대상자&gt;&lt;다자녀 가정 학생&gt; - 세자녀 이상 가정(모든 학생), 두자녀 가정(둘째)",
+  "slctCritCn": "&lt;초‧중‧고 학생 교육비 지원 대상자(저소득층 가정)&gt; -법정수급자: 국민기초생활수급자(생계/의료/주거/교육급여수급자), 한부모가족보호대상자, 법정차상위대상자 -중위소득 60% 이하 -학교장 추천자, 난민, 탈북학생&lt;특수교육 대상자&gt;&lt;다자녀 가정 학생&gt;-소득 기준 없음 - 세자녀 이상 가정(모든 학생), 두자녀 가정(둘째)",
+  "alwServCn": "전체 학생 대상 기본 지원금을 초과한 수학여행비 전액(실비) 1) 기본 지원금: 초 85,000원(도내), 중 385,000원, 고 385,000원 2) 초등학교는 도내 수학여행인 경우 추가 지원금도 지원 3) 국외 수학여행인 경우 추가 지원금은 최대 50%까지 지원",
+  "aplyMtdCn": "- 소득에 따른 지원자    (방문접수)학부모 주민등록주소지 읍면동 주민센터 방문    (온라인신청: 학생의 부모만 가능)복지로(http://www.bokjiro.go.kr), 교육비 원클릭 신청 시스템(http://oneclick.neis.go.kr)  - 다자녀가정     (방문접수) 학교 방문 접수      (온라인신청)  교육비 원클릭 신청 시스템(http://oneclick.neis.go.kr)-&gt;교육청 자체 복지사업신청-&gt;제주특별자치도교육청 사업 신청하기",
+  "inqNum": "6504",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-0605",
+    "wlfareInfoReldNm": "제주특별자치도교육청 정서복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "초중등교육법, 난민법, 장애인 등에 대한 특수교육법 ,제주특별자치도교육청 탈북가정청소년 교육지원에 관한 조례, 제주특별자치도교육청 다자녀 학생 교육비 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230607UUWBM1958200038202619&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(서식)2023학년도 방과후학교 자유수강권 신청.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260720UUWBM1701050201743334&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026학년도 수학여행비지원 변경 계획.hwp"
+   }
+  ]
+ }
+}

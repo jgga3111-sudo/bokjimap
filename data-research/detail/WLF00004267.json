@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "울산광역시 울주군 보건소 건강관리과",
+  "ctpvNm": "울산광역시",
+  "inqNum": "9248",
+  "intrsThemaNmArray": "서민금융, 임신·출산, 주거, 보호·돌봄, 입양·위탁",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "중장년, 청년, 임신 · 출산",
+  "servDgst": "산전 진료와 분만 및 난임부부의 시술을 위해 관외로 이동 시 경제적 부담 경감 출산장려 정책 필요",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004267&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004267",
+  "servNm": "임산부, 난임부부 진료 교통비 지원",
+  "sggNm": "울주군",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004267",
+  "servNm": "임산부, 난임부부 진료 교통비 지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "울산광역시 울주군 보건소 건강관리과",
+  "ctpvNm": "울산광역시",
+  "sggNm": "울주군",
+  "servDgst": "산전 진료와 분만 및 난임부부의 시술을 위해 관외로 이동 시 경제적 부담 경감 출산장려 정책 필요",
+  "lifeNmArray": "청년, 중장년, 임신 · 출산",
+  "intrsThemaNmArray": "주거, 임신·출산, 입양·위탁, 보호·돌봄, 서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "진료일(산전, 난임시술) 기준으로 6개월 이전부터 계속하여 울주군에 주민등록을 두고 보건소에 임산부 등록이나 난임시술 지원신청(부인기준)을 한 사람",
+  "slctCritCn": "진요일 기준 6개월 이전부터 울주군에 주민등록을 두고 거주한 임산부 및 난임시술여성임산부는 임신 16주부터 출산일까지 임신관련 진료 시 최대 10회 난임으로 시술을 받는 사람은 회계연도 내 난임시술 관련 진료 시 최대 10회 지원가능",
+  "alwServCn": "주민등록상 울주군 거주 6개월 이상된 임산부 및 난임부부(여성)로 1회 10만원 최대 10회 교통비 지원 - 임산부 : 16주 이후 출산일까지- 난임부부 : 회계연도 내 난임시술 관련 진료 시",
+  "aplyMtdCn": "○ 방문 및 온라인(정부24) 신청○ 구비서류    임산부 - 신분증, 진료 입증서류(산부인과 진료 영수증 또는 진료확인서), 통장사본(대상자 본인), 주민등록등초본 (전입일 표기), 통장사본(대상자본인)    난임부부 - 신분증, 난임진단서(정부지원 난임시술 받은 경우 제출생략), 난임시술확인서 또는 진료확인서(보건소 자체서식), 진료비(약제비) 납입 확인서 또는 진료일자별 영수증진료, 통장사본(대상자 본인), 주민등록등초본(전입일 표기)※ 행정정보공동이용 동의한 경우 주민등록등초본, 통장사본 제출 생략※ 대리인 방문 시 가족관계증명서, 대리인 신분증○ 접수처 : 울주군보건소(052-204-2868), 남부통합보건지소(052-204-2817), 범서보건지소(052-204-2832)",
+  "inqNum": "9253",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "052-204-2868",
+    "wlfareInfoReldNm": "울주군보건소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "울산광역시 울주군 출산장려 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230516UUWBM1729220034920027&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출산장려 교통비 지원 조례.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230516UUWBM1727030034919412&amp;atcflSn=1",
+    "wlfareInfoReldNm": "doc03115520230516172630.pdf"
+   }
+  ]
+ }
+}

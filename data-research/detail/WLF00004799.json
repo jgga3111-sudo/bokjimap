@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 무안군 주민생활과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "6419",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260808",
+  "lifeNmArray": "아동",
+  "servDgst": "맞벌이 등 양육공백 가정의 아이돌봄 서비스 이용시 본인부담금 지원을 통해 자녀 돌봄 부담 해소",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004799&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004799",
+  "servNm": "아이돌봄서비스 본인부담금 지원",
+  "sggNm": "무안군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004799",
+  "servNm": "아이돌봄서비스 본인부담금 지원",
+  "enfcBgngYmd": "20210419",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 무안군 주민생활과",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "무안군",
+  "servDgst": "맞벌이 등 양육공백 가정의 아이돌봄 서비스 이용시 본인부담금 지원을 통해 자녀 돌봄 부담 해소",
+  "lifeNmArray": "아동",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준 무안군에 주소를 두고 아이돌봄서비스 이용하는 가정",
+  "slctCritCn": "소득기준과 자녀수에 따라 차등 지원",
+  "alwServCn": "시간제(일반형기준), 영아종일제 아이돌봄서비스 이용시 유형 및 자녀수에 따라 본인부담금 차등 지원(정부지원 시간 내) - 가형: 100%, 나형: 60%, 다형: 50%, 라형: 40%,  마형: 30% - 다자녀(3자녀이상): 100%",
+  "aplyMtdCn": "방문신청(읍면동 주민센터 방문)",
+  "inqNum": "6421",
+  "lastModYmd": "20260808",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-5520",
+    "wlfareInfoReldNm": "무안군청 주민생활과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "무안군 아이돌봄서비스 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250609UUWBM0955290141038678&amp;atcflSn=1",
+    "wlfareInfoReldNm": "무안군 아이돌봄서비스 지원 신청서(2025).hwp"
+   }
+  ]
+ }
+}

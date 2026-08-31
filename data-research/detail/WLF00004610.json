@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 여수시 청년인구정책관",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "5308",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "청년",
+  "servDgst": "여수시 관내 거주 무주택 신혼부부 주택 임차료 지원을 통해 안정적인 지역 내 정착 유도 및 인구유출 방지",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004610&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004610",
+  "servNm": "신혼부부 주택 전세자금 대출이자 지원 사업",
+  "sggNm": "여수시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004610",
+  "servNm": "신혼부부 주택 전세자금 대출이자 지원 사업",
+  "enfcBgngYmd": "20200701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 여수시 청년인구정책관",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "여수시",
+  "servDgst": "여수시 관내 거주 무주택 신혼부부 주택 임차료 지원을 통해 안정적인 지역 내 정착 유도 및 인구유출 방지",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "여수시 관내 주택에 주민등록을 두고 거주 중인 무주택 신혼부부",
+  "slctCritCn": "주민등록 : 부부 1인 이상 해당 주택 거주, 부부 모두 여수시 거주혼인기준 : 혼인신고 7년 이내소득기준 : 부부 합산 연소득 1억원 이하주택기준 : 전용면적 85제곱미터 이하 주택",
+  "alwServCn": "전세대출 실제 이자납부액 기준 월 최대 15만원 이내",
+  "aplyMtdCn": "관할 읍면사무소, 동주민센터 신청서 접수(관련 서류 구비)",
+  "inqNum": "5315",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-659-3426",
+    "wlfareInfoReldNm": "여수시 청년인구정책관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "여수시 인구정책 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250610UUWBM0938230141271800&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(공고문) 2023년 「신혼부부 주택 전세자금 대출이자 지원 사업」.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250610UUWBM0938230141271800&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(공고문) 2023년 「신혼부부 주택 전세자금 대출이자 지원 사업」.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 여주시 문화복지국 가족복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "4616",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260716",
+  "servDgst": "결혼이민자의 국적취득 신청비용 부담 경감으로  안정적 한국생활 정착",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001862&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001862",
+  "servNm": "결혼이민자 귀화 신청비용 지원",
+  "sggNm": "여주시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "다문화·탈북민",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001862",
+  "servNm": "결혼이민자 귀화 신청비용 지원",
+  "enfcBgngYmd": "20200101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 여주시 문화복지국 가족복지과",
+  "ctpvNm": "경기도",
+  "sggNm": "여주시",
+  "servDgst": "결혼이민자의 국적취득 신청비용 부담 경감으로  안정적 한국생활 정착",
+  "trgterIndvdlNmArray": "다문화·탈북민",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "여주시에 거주하는 f-6(결혼이민자) 또는 f-5(영주)를 가진 결혼이민자 ※ 2020년 1월 1일 이후 귀화한 자에 한함",
+  "slctCritCn": "❍ 귀화증서 수여일 기준으로 배우자 또는 본인이 6개월 이전부터 여주시에 주소를 두고 실제로 거주하는 결혼이민자 중 2020년 1월 1일 이후 귀화한 자❍ f-6(결혼이민자) 또는 f-5(영주)를 가진 결혼이민자에 한함",
+  "alwServCn": "❍ 읍․면․동 행정복지센터 및 정부24 접수하여 시청 가족복지과에서 지급대상 여부 검토 후 신청인 계좌로 지원금 입금❍ 접수일부터 15일 이내 지급(지급시 개인별 전화 통보)",
+  "aplyMtdCn": "거주지 읍면동 행정복지센터 방문 접수 및 정부24 온라인 접수",
+  "inqNum": "4619",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-887-2592",
+    "wlfareInfoReldNm": "경기도 여주시 가족복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "여주시 외국인주민 및 다문화가족 지원 조례 제7조 제2항"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240709UUWBM1034350093147979&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

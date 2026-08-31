@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 모바일",
+  "bizChrDeptNm": "경기도 사회적경제국 청년기회과",
+  "ctpvNm": "경기도",
+  "inqNum": "26229",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260822",
+  "lifeNmArray": "청년",
+  "servDgst": "경기도 소재 중소기업에 재직중인 도 거주 청년 노동자에게 임금보전을 통해 청년 노동자 처우개선 및 복지증진",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003473&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003473",
+  "servNm": "청년 노동자 지원사업(중소기업 청년 노동자 지원사업)",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003473",
+  "servNm": "청년 노동자 지원사업(중소기업 청년 노동자 지원사업)",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 사회적경제국 청년기회과",
+  "ctpvNm": "경기도",
+  "servDgst": "경기도 소재 중소기업에 재직중인 도 거주 청년 노동자에게 임금보전을 통해 청년 노동자 처우개선 및 복지증진",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "인터넷, 모바일",
+  "sprtTrgtCn": "- 만19~39세 경기도 거주 청년 중 도내 중소기업 재직자",
+  "slctCritCn": "- 연령: 만19세~만 39세 경기도 거주자- 건강보험료 6개월 평균 138,276원 이하 납부자(월급여 385만원 이하)- 도내 중소기업, 주 36시간 이상, 6개월 이상 근무",
+  "alwServCn": "중소기업 재직 청년 근로자에게 2년간 반기별 120만원 지역화폐 지급",
+  "aplyMtdCn": "온라인 신청(https://youth.jobaba.net)",
+  "inqNum": "26279",
+  "lastModYmd": "20260822",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "1577-0014",
+    "wlfareInfoReldNm": "경기도일자리재단 청년노동자 지원사업"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://youth.jobaba.net",
+    "wlfareInfoReldNm": "경기도일자리재단 청년노동자 지원사업"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경기도 청년 일자리 창출 촉진에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250530UUWBM1542310140130716&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 청년 노동자 지원사업 선발 계획 공고.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 횡성군 도시교통과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "7550",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20250715",
+  "lifeNmArray": "아동, 청소년, 노년",
+  "servDgst": "관내 65세 이상 어르신 및 18세 이하 아동, 청소년 초중고 학생의 이동권 증진을 위한 교통복지 향상을 위한 제도입니다",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005726&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005726",
+  "servNm": "초·중·고 학생 및 65세 이상 어르신 버스요금무료화 지원사업",
+  "sggNm": "횡성군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005726",
+  "servNm": "초·중·고 학생 및 65세 이상 어르신 버스요금무료화 지원사업",
+  "enfcBgngYmd": "20240101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 횡성군 도시교통과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "횡성군",
+  "servDgst": "관내 65세 이상 어르신 및 18세 이하 아동, 청소년 초중고 학생의 이동권 증진을 위한 교통복지 향상을 위한 제도입니다",
+  "lifeNmArray": "아동, 청소년, 노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "관내 65세 이상 어르신 및 18세 이하 아동, 청소년",
+  "slctCritCn": "관내 65세 이상 어르신 및 18세 이하 아동, 청소년 확인",
+  "alwServCn": "전용 교통카드 지급",
+  "aplyMtdCn": "읍면동 산업팀에 방문 하여 신청함",
+  "inqNum": "7561",
+  "lastModYmd": "20250715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-340-2647",
+    "wlfareInfoReldNm": "횡성군 도시교통과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "횡성군 노인 등 대중교통 이용지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240718UUWBM1435250094496094&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2-2. 횡성군 노인 등 대중교통 이용지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

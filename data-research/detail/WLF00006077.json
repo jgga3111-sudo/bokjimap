@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "4928",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260711",
+  "servDgst": "신혼부부 및 자녀출산 가구의 내 집 마련을 위한 주택 구입자금 대출이자 지원으로 주거비 부담 완화 및 맞춤형 주거복지 체계 구축",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006077&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006077",
+  "servNm": "하영드림 주택마련 지원",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006077",
+  "servNm": "하영드림 주택마련 지원",
+  "enfcBgngYmd": "20250701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "신혼부부 및 자녀출산 가구의 내 집 마련을 위한 주택 구입자금 대출이자 지원으로 주거비 부담 완화 및 맞춤형 주거복지 체계 구축",
+  "trgterIndvdlNmArray": "다자녀",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "주택 구입자금 대출을 받은 신혼부부·자녀출산 가구(7년 이내)",
+  "slctCritCn": "❍ (지원기간) 신혼부부(7년) 및 자녀출산(7년) 기간 내 지원 ❍ (주택기준) 전용면적 85㎡ 이하·6억원 이하 주택 ❍ (소득기준) 대출 유형에 따라 소득기준 차등 적용   - 정부 지원 대출 받은 경우: 부부합산 연소득 1억원 이내   - 민간은행 대출 받은 경우: 부부합산 연소득 1억 3천만원 이내",
+  "alwServCn": "❍ (지원내용) 대출이자 최대 1.5%* 지원(3억원 이내)     * 신혼부부(0.2%), 1자녀(0.8%), 2자녀 이상(0.5%)",
+  "aplyMtdCn": "정부24(www.gov.kr)를 통한 온라인 접수",
+  "inqNum": "4937",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-4252",
+    "wlfareInfoReldNm": "제주특별자치도 주택토지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "주거기본법 제15조(주거비 보조)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250627UUWBM1641190143972748&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(공고문) 하영드림 주택마련 지원 사업.hwpx"
+   }
+  ]
+ }
+}

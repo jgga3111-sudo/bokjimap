@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 순천시 시민복지국 보육아동과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "4436",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "영유아",
+  "servDgst": "영유아의 건강과 복지를 증진하고 부모들의 장난감 및 출산육아용품등 구매에 따른 경제적부담을 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003738&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003738",
+  "servNm": "아이사랑 출산육아용품 대여소",
+  "sggNm": "순천시",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현물대여",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003738",
+  "servNm": "아이사랑 출산육아용품 대여소",
+  "enfcBgngYmd": "20170302",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 순천시 시민복지국 보육아동과",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "순천시",
+  "servDgst": "영유아의 건강과 복지를 증진하고 부모들의 장난감 및 출산육아용품등 구매에 따른 경제적부담을 경감",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현물대여",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "회원가입 대상 : 순천시 관내에 주민등록이 되어있는 사람으로서 6세이하 영유아의 직계존속 또는 법정보호자",
+  "slctCritCn": "순천시에 거주중인 6세 미만 아동을 보육하는 모든 가구",
+  "alwServCn": "장난감 및 출산육아용품 대여대여기간 및 수량-장난감 21일(최대 2점), 출산육아용품 90일(최대 1점, 단 좌훈기,보행기,쏘서,점퍼루는 최대30일)",
+  "aplyMtdCn": "장난감 등을 대여하고자 하는 회원은 연회비 20,000원을 납부(대여료는 무상)",
+  "inqNum": "4447",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-749-6897",
+    "wlfareInfoReldNm": "순천시청 보육아동과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "순천시 장난감도서관 및 출산육아용품대여소 설치운영 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4387GOWF15GOWF154387&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2017년 아이사랑 출산ㆍ육아용품대여소 운영 및 출산ㆍ육아용품 구입 계획.hwp"
+   }
+  ]
+ }
+}

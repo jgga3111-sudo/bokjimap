@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경상남도 산청군 행정복지국 행복나눔과",
+  "ctpvNm": "경상남도",
+  "inqNum": "4438",
+  "lastModYmd": "20260813",
+  "lifeNmArray": "노년",
+  "servDgst": "산청군에 거주하는 어르신에 대한 심신의 건강유지 등 보건복지증진",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004526&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004526",
+  "servNm": "노인 목욕비  및 이미용비 지원",
+  "sggNm": "산청군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004526",
+  "servNm": "노인 목욕비  및 이미용비 지원",
+  "enfcBgngYmd": "20130701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 산청군 행정복지국 행복나눔과",
+  "ctpvNm": "경상남도",
+  "sggNm": "산청군",
+  "servDgst": "산청군에 거주하는 어르신에 대한 심신의 건강유지 등 보건복지증진",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "sprtTrgtCn": "0. 지급대상 - 노인목욕비(분기별 12,000원 지원) : 지급기준일 현재 주민등록법 제6조에 따라 산청군에 주민등록을 두고 거주하는 70세이상 노인- 이미용비(분기별 10,000원 지원) : 주민등록법 제6조에 따라 산청군에 주민등록을 두고 거주하는 70세 이상 저소득노인(기초생활수급자 및 차상위계층)",
+  "slctCritCn": "노인목욕비 : 산청군에 주민등록을 두고 거주하는 70세이상자(시설 및 장기요양기관입소자 제외)이미용비 : 산청군에 주민등록을 두고 거주하는 70세 이상 저소득노인(기초생활수급자 및 차상위계층)",
+  "alwServCn": "0. 사업내용: 목욕 및 이미용업체 이용 가능한 바우처 카드 지급0. 지원금액   - 목욕비: 1인 연간 80,000원(분기별 20,000원)   - 이미용비: 1인 연간 40,000원(분기별 10,000원)",
+  "aplyMtdCn": "직접 지원(별도 신청사항 없음)",
+  "inqNum": "4440",
+  "lastModYmd": "20260813",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-970-6853",
+    "wlfareInfoReldNm": "산청군청 행정복지국 행복나눔과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "산청군 노인 목욕비 및 이미용비 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6137GOWF15GOWF156137&amp;atcflSn=1",
+    "wlfareInfoReldNm": "산청군 노인 목욕비 및 이ㆍ미용비 지원 조례.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 군산시 복지환경국 여성가족청소년과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "6386",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "청년, 중장년",
+  "servDgst": "출산, 양육에 소요되는 경제적 부담을 경감하고 출산장려 분위기를 조성하기 위함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000425&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000425",
+  "servNm": "출산장려추진사업(군산시 출산지원금 지급)",
+  "sggNm": "군산시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000425",
+  "servNm": "출산장려추진사업(군산시 출산지원금 지급)",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 군산시 복지환경국 여성가족청소년과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "군산시",
+  "servDgst": "출산, 양육에 소요되는 경제적 부담을 경감하고 출산장려 분위기를 조성하기 위함",
+  "lifeNmArray": "청년, 중장년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "군산시에 출생 신고한 가정으로 신생아의 출생일을 기준으로 부 또는 모가 군산시에 1년 이상 주민등록이 되어 있어야 함",
+  "slctCritCn": "군산시에 출생신고한 가정으로 신생아(이하 출생 후 1년 미만의 '영아')의 출생일을 기준으로 부 또는 모가 시에 1년이상 주민등록이 되어 있어야 함. 거주기간이 1년 미만일 경우 1년 지난날로부터 지원대상이 됨. 단, 신생아(출생 후 1년 미만)에게 지급.",
+  "alwServCn": "1) 지급내용 - 첫째아 : 1인/100만원- 둘째아 : 1인/200만원- 셋째아 : 1인/400만원(200일시금 + 1년 단위로 100 * 2회 분할지급)- 넷째아 : 1인/600만원(300일시금 + 1년 단위로 100 * 3회 분할지급)- 다섯째아  이상: 1인/1500만원(500일시금 + 1년 단위로 250  * 4회 분할지급)",
+  "aplyMtdCn": "1) 신청방법: 거주지 관할 읍면동 행정복지센터로 신청서 제출(출생일로부터 12개월 이내)2) 지급방법: 신청계좌로 입금 3) 제출서류: - 출산서비스 통합처리 신청서 1부- 부 또는 모 명의의 통장사본 1부",
+  "inqNum": "6398",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-454-3253",
+    "wlfareInfoReldNm": "군산시 여성가족청소년과 가족다문화지원계"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "군산시 출산지원금 등에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7211GOWF14GOWF147211&amp;atcflSn=1",
+    "wlfareInfoReldNm": "군산시 출산지원금 등에 관한 조례.hwp"
+   }
+  ]
+ }
+}

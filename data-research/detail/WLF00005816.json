@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 고창군 상하수도사업소",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "13331",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260807",
+  "lifeNmArray": "영유아, 청소년, 아동",
+  "servDgst": "다자녀 가정의 생활에 밀접한 복지 서비스(감면)제공",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005816&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005816",
+  "servNm": "다자녀 상수도 요금감면",
+  "sggNm": "고창군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005816",
+  "servNm": "다자녀 상수도 요금감면",
+  "enfcBgngYmd": "20240701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 고창군 상하수도사업소",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "고창군",
+  "servDgst": "다자녀 가정의 생활에 밀접한 복지 서비스(감면)제공",
+  "lifeNmArray": "영유아, 아동, 청소년",
+  "trgterIndvdlNmArray": "다자녀",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "주민등록법에 따라 세대별 주민등록표에 19세미만 자녀를 2명이상 둔 가정",
+  "slctCritCn": "주민등록법에 따라 세대별 주민등록표에 기재되어 있는 19세 미만의 자녀를 2명 이상 둔 가정",
+  "alwServCn": "주민등록법에 따라 세대별 주민등록표에 기재되어 있는 19세 미만의 자녀를 2명 이상 둔 가정에게 상수도 사용료 20%감면",
+  "aplyMtdCn": "- 다자녀 감면 신청서 작성 후 제출  + 주민등록 등본 제출  + 가족관계증명서(필요시)",
+  "inqNum": "13339",
+  "lastModYmd": "20260807",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-560-8983",
+    "wlfareInfoReldNm": "고창군 상하수도사업소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고창군 상수도 급수 조례 제54조 6항"
+   }
+  ]
+ }
+}

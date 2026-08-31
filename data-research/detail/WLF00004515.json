@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 익산시 보건소 보건지원과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "5466",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "청년, 임신 · 출산",
+  "servDgst": "저출산 고령화시대에 적극적으로 대응하기 위하여 임신에서 출산까지 소요되는 건강관리비용 지원을 통해 경제적 부담 경감 및 산모와 아기가 건강하고 행복한 가족친화도시 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004515&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004515",
+  "servNm": "임산부 280  건강관리비지원사업",
+  "sggNm": "익산시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004515",
+  "servNm": "임산부 280  건강관리비지원사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 익산시 보건소 보건지원과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "익산시",
+  "servDgst": "저출산 고령화시대에 적극적으로 대응하기 위하여 임신에서 출산까지 소요되는 건강관리비용 지원을 통해 경제적 부담 경감 및 산모와 아기가 건강하고 행복한 가족친화도시 조성",
+  "lifeNmArray": "청년, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "?신청일 기준 부부 모두 익산시에 6개월 이상 주소를 두고 있는 임신 24주 이상 여성  (단, 배우자가 직업 등 불가피한 사유로 익산시에 주민등록이 없는 경우    재직증명서 첨부)?미혼인 경우 신청일 기준 익산시에 주민등록을 두고 거주하는 임신 24주 이상 여성?임신 24주 이후 사산 시에도 지원함",
+  "slctCritCn": "?신청일 기준 부부 모두 익산시에 6개월 이상 주소를 두고 있는 임신 24주 이상 여성  (단, 배우자가 직업 등 불가피한 사유로 익산시에 주민등록이 없는 경우    재직증명서 첨부)?미혼인 경우 신청일 기준 익산시에 주민등록을 두고 거주하는 임신 24주 이상 여성?임신 24주 이후 사산 시에도 지원함",
+  "alwServCn": "소득에 관계 없이 임신 1회당 40만원 지원",
+  "aplyMtdCn": "임신 24주이상 ~ 분만 후 12개월 이내 신분증 지참 후 주소지 읍.면.동 사무소에 신청 - 임산부 건강관리비 지원신청 및 임신확인서, 임산부 통장사본(외국인인 경우 배우자 통장사본) - 분만 후 신청할 경우 출생아 익산시 등재된 주민등록등본 - 외국인인 경우 가족관계증명서, 외국인등록증 - 배우자 직업 상 타지 거주로 부부 주소가 다를 경우 가족관계증명서, 재직증명서 또는 사업자등록증 등 - 미혼인 경우 가족관계증명서",
+  "inqNum": "5472",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-859-4855",
+    "wlfareInfoReldNm": "전북특별자치도 익산시 보건소 보건지원과 모자보건실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산 고령사회기본법 제10조(경제적 부담의 경감)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240605UUWBM1605510088292707&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 임산부 건강관리비 지원신청 및 임신확인서(서식).hwpx"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260611UUWBM1132280196481813&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 임산부 280 건강관리비 지원 계획.pdf"
+   }
+  ]
+ }
+}

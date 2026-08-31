@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "인천광역시 강화군 보건소 건강증진과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "11803",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260814",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "servDgst": "출산가정에 건강관리사를 파견하여 산모의 산후 회복과 신생아의 양육을 지원합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001350&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001350",
+  "servNm": "산모신생아 건강관리지원사업",
+  "sggNm": "강화군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001350",
+  "servNm": "산모신생아 건강관리지원사업",
+  "enfcBgngYmd": "20160301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 강화군 보건소 건강증진과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "강화군",
+  "servDgst": "출산가정에 건강관리사를 파견하여 산모의 산후 회복과 신생아의 양육을 지원합니다.",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "■지원대상 기준 중위소득 150%이하 출산가정 및 예외지원대상자 -예외지원대상자 : 둘째아이상 출산가정, 분만취약지 산모, 희귀난치성질환 산모, 장애인산모 및 장애신생아, 쌍생아 이상 출산 가정, 새터민 산모, 결혼이민 산모, 미혼산모 -단, 기준 중위소득 150%초과인 경우,  관내 3개월 이상 주소지를 둔 출산가정에게도 차등적으로 지원",
+  "slctCritCn": "- 기준중위소득 150% 이상, 인천시 예외기준 대상이 아닌경우 관내 3개월이상 주소지를 둔 출산가정",
+  "alwServCn": "산모·신생아 건강관리사 출산가정의 집으로 찾아가 서비스를 제공합니다.-산모건강관리, 신생아 건강관리, 산모 정보제공, 가사활동지원, 정서지원 등",
+  "aplyMtdCn": "■신청기간 : 출산예정일로부터 40일 전 ~ 출산 후 60일 까지  ■신청방법 : 강화군보건소 모자보건실 방문 또는 '복지로' 및 '정부24' 온라인 신청  -산모신생아건강관리지원신청서 및 관련 서류 보건소에 제출■자격결정 및 판정등급 통지■서비스 제공기관에 계약■출산 후 90일 이내 서비스 이용",
+  "inqNum": "11814",
+  "lastModYmd": "20260814",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-930-4068",
+    "wlfareInfoReldNm": "강화군보건소 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "산모신생아건강관리지원사업안내 지침"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240612UUWBM1546490089195567&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 산모신생아 건강관리 지원사업 안내.pdf"
+   }
+  ]
+ }
+}

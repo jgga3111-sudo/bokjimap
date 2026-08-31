@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "인천광역시 미추홀구 복지환경국 기초생활보장과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "9672",
+  "lastModYmd": "20260723",
+  "servDgst": "국민기초생활보장수급자에게 쓰레기봉투 및 음식물 쓰레기봉투를 지원을 통한 고독사 예방",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002331&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002331",
+  "servNm": "국민기초생활보장수급자 쓰레기봉투 및 음식물쓰레기봉투 지원",
+  "sggNm": "미추홀구",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현물지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002331",
+  "servNm": "국민기초생활보장수급자 쓰레기봉투 및 음식물쓰레기봉투 지원",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 미추홀구 복지환경국 기초생활보장과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "미추홀구",
+  "servDgst": "국민기초생활보장수급자에게 쓰레기봉투 및 음식물 쓰레기봉투를 지원을 통한 고독사 예방",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현물지급",
+  "sprtTrgtCn": "○ 국민기초생활보장수급자 중 매월 15일 현재 수급자로 선정 보호 중인 가구",
+  "slctCritCn": "기준중위소득 40%이하인 생계, 의료급여 선정 대상자에게 지원",
+  "alwServCn": "1) 1인가구 - 일반쓰레기봉투    20ℓ                 음식물쓰레기봉투 10ℓ2) 2인가구 - 일반쓰레기봉투    40ℓ                 음식물쓰레기봉투 20ℓ3) 3인가구 - 일반쓰레기봉투    60ℓ                 음식물쓰레기봉투 30ℓ4) 4인이상가구 - 일반쓰레기봉투    80ℓ                       음식물쓰레기봉투 40ℓ",
+  "inqNum": "9674",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-880-4271",
+    "wlfareInfoReldNm": "인천광역시 미추홀구 기초생활보장과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 미추홀구 폐기물 관리에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7338GOWF14GOWF147338&amp;atcflSn=1",
+    "wlfareInfoReldNm": "인천광역시 미추홀구 폐기물 관리에 관한 조례(15조1항).hwp"
+   }
+  ]
+ }
+}

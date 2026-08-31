@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 전화",
+  "bizChrDeptNm": "전북특별자치도 무주군 보건의료원 보건행정과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "4665",
+  "lastModYmd": "20250802",
+  "lifeNmArray": "노년",
+  "servDgst": "만50세이상 의료급여수급권자(1,2종) 및 65세 이상 무주군민에게 대상포진 1회 무료 예방접종을 실시함으로써, 의료 취약계층의 건강증진 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000527&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000527",
+  "servNm": "취약계층 대상포진 예방접종",
+  "sggNm": "무주군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000527",
+  "servNm": "취약계층 대상포진 예방접종",
+  "enfcBgngYmd": "20180604",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 무주군 보건의료원 보건행정과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "무주군",
+  "servDgst": "만50세이상 의료급여수급권자(1,2종) 및 65세 이상 무주군민에게 대상포진 1회 무료 예방접종을 실시함으로써, 의료 취약계층의 건강증진 도모",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문, 전화",
+  "sprtTrgtCn": "- 만50세 이상 의료급여수급권자 1종, 2종(접종일 기준 무주군에 주민등록을 둔 사람)- 만65세 이상 무주군민(접종일 기준 무주군에 주민등록을 1년 이상 둔 사람)  * 대상포진 예방접종 이력이 있는 사람 제외",
+  "slctCritCn": "- 만50세 이상 의료급여수급권자 1종, 2종(접종일 기준 무주군에 주민등록을 둔 사람)- 만65세 이상 무주군민(접종일 기준 무주군에 주민등록을 1년 이상 둔 사람)  * 대상포진 예방접종 이력이 있는 사람 제외",
+  "alwServCn": "대상포진 1회 무료 예방접종",
+  "aplyMtdCn": "의료급여수급권자 증명서, 신분증 소지 후 무주군보건의료원 및 보건지소 방문",
+  "inqNum": "4669",
+  "lastModYmd": "20250802",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-320-8226",
+    "wlfareInfoReldNm": "무주군보건의료원 예방접종실"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://muju.go.kr/index.9is?contentUid=ff8080816cf073f2016cfa6a14bf0a16",
+    "wlfareInfoReldNm": "무주군보건의료원 예방접종실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "무주군 선택예방접종 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230525UUWBM2147530036340521&amp;atcflSn=1",
+    "wlfareInfoReldNm": "무주군 선택예방접종 지원에 관한 조례 (1).pdf"
+   }
+  ]
+ }
+}

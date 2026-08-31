@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청남도 복지보건국 장애인복지과",
+  "ctpvNm": "충청남도",
+  "inqNum": "5101",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "servDgst": "도내 저소득 등록장애인에 대한 각종 수당 및 신문구독 지원 등 도 자체 추가지원을 통한 생활안정 및 경제적 부담 경감도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004111&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004111",
+  "servNm": "장애인 생활안정사업(수당 등 지원)",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 현물지급",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004111",
+  "servNm": "장애인 생활안정사업(수당 등 지원)",
+  "enfcBgngYmd": "20000101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 복지보건국 장애인복지과",
+  "ctpvNm": "충청남도",
+  "servDgst": "도내 저소득 등록장애인에 대한 각종 수당 및 신문구독 지원 등 도 자체 추가지원을 통한 생활안정 및 경제적 부담 경감도모",
+  "trgterIndvdlNmArray": "장애인, 저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 현물지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "충청남도내 거주하며, 각 사업별 선정 기준을 만족하는 등록장애인",
+  "slctCritCn": "ㅇ장애수당 추가지원 : 장애인연금 지급자 중 국민기초생활수급자 및 차상위 장애인&#13;ㅇ부부장애수당 지원 : 부부가 충청남도내 같은 시군의 장애인으로 등록된 세대&#13;ㅇ월세거주 장애인 주거비 지원 : 세대주가 등록장애인인 기준중위소득 80%이하의 월세거주 장애인 가구&#13;ㅇ중증장애인 가구월동비 지원 : 장애인복지법에 따른 중증장애인 중 각호 중, 한가지에 해당하는 자&#13;  - 장애인연금 대상자 중 국민기초생활수급자 및 차상위 장애인&#13;  - 장애인 아동수당 대상자 중 국민기초생활수급자",
+  "alwServCn": "장애수당 추가(월12천원), 부부장애수당(월35천원), 월세거주수당(월50천원),월동비(연131천원),장애인신문 구독 지원(1세대 월 5천원 기준)",
+  "aplyMtdCn": "거주지 읍면동사무소에 신청",
+  "inqNum": "5105",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-635-2631",
+    "wlfareInfoReldNm": "충청남도 보건복지국 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법 제35조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260722UUWBM0905290201992170&amp;atcflSn=1",
+    "wlfareInfoReldNm": "★ 2026년 충청남도 장애인복지사업안내.pdf"
+   }
+  ]
+ }
+}

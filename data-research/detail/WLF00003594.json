@@ -1,0 +1,66 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 임실군 복지환경국 주민복지과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "26338",
+  "lastModYmd": "20260704",
+  "servDgst": "저소득 취약계층에 대한 경제적 지원으로 최소한의 삶의 질 향상 확보 및 지역사회 안정적 정착 기회 부여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003594&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003594",
+  "servNm": "취약계층 명절위로금 (상품권)지원",
+  "sggNm": "임실군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "실물바우처",
+  "trgterIndvdlNmArray": "한부모·조손, 장애인, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003594",
+  "servNm": "취약계층 명절위로금 (상품권)지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 임실군 복지환경국 주민복지과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "임실군",
+  "servDgst": "저소득 취약계층에 대한 경제적 지원으로 최소한의 삶의 질 향상 확보 및 지역사회 안정적 정착 기회 부여",
+  "trgterIndvdlNmArray": "장애인, 저소득, 한부모·조손",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "실물바우처",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "임실군에 주민등록이 되어 있고, 1년 이상 실거주한 다음의 자1. 다문화가족으로서 차상위수급자2. 장애인으로서 차상위수급자3. 주민등록법상 65세 이상 노인으로서 차상위수급자4. 한부모가족",
+  "slctCritCn": "차상위 저소득계층 및 한부모가족",
+  "alwServCn": "예산의 범위에서 1세대당 연 30만원 상당의 상품권을 지원하되, 1세대에 지원 대상자가 2명일 경우 연 40만원, 3명 이상일 경우 연 50만원 상당의 상품권을 지원",
+  "aplyMtdCn": "상품권을 지원받고자 하는 자나 그 가족 및 복지이장 등은 별지 제1호서식의 취약계층 상품권 지원신청서(이하 “신청서”라 한다)를 작성하여 읍면장에게 신청",
+  "inqNum": "26405",
+  "lastModYmd": "20260704",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-640-2083",
+    "wlfareInfoReldNm": "임실군청 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "임실군 취약계층 상품권 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230516UUWBM0836300034777013&amp;atcflSn=1",
+    "wlfareInfoReldNm": "신규신청서.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260609UUWBM1537130196049332&amp;atcflSn=1",
+    "wlfareInfoReldNm": "임실군 취약계층 상품권 지원 조례.pdf"
+   }
+  ]
+ }
+}

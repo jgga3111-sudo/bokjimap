@@ -1,0 +1,73 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 안산시 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "17018",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "노년",
+  "servDgst": "경로효친의 사회적 분위기를 조성하고, 장수노인의 노후생활 안정을 지원하기 위함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002784&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002784",
+  "servNm": "장수수당",
+  "sggNm": "안산시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002784",
+  "servNm": "장수수당",
+  "enfcBgngYmd": "20080101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 안산시 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "sggNm": "안산시",
+  "servDgst": "경로효친의 사회적 분위기를 조성하고, 장수노인의 노후생활 안정을 지원하기 위함",
+  "lifeNmArray": "노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 지원대상  - 만 85세 이상 어르신   2) 선정기준  - 지급기준일 현재  안산시에 1년 이상 거주한 어르신  - 기초연금 수급자는 제외3) 지급금액 : 월 30,000원4) 신청방법 : 거주지 동행정복지센터 방문신청(주민등록증, 통장 지참)",
+  "slctCritCn": "지급기준일 현재, 안산시에 1년이상 거주한 주민등록법상 만85세 이상 어르신(단, 기초연금 수급자 제외)",
+  "alwServCn": "1) 지급금액  - 장수수당 : 월3만원 지급  - 100세축하금 : 50만원 1회 지급(100세가 되는 날)",
+  "aplyMtdCn": "1) 신청방법 : 동주민센터에 장수수당 신청 2) 지급시기 및 지급방법  - 지급개시일 : 장수수당 신청일 다음달 15일 수당지급 개시일로 함  - 지급방법 : 수급자 계좌에 구청장이 직접 입금",
+  "inqNum": "17063",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-481-5213",
+    "wlfareInfoReldNm": "상록구청 주민복지과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-481-6217",
+    "wlfareInfoReldNm": "단원구청 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "안산시노인장수수당지급조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=2197GOWF15GOWF152197&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장수수당 지급조례.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230525UUWBM1519260036251540&amp;atcflSn=1",
+    "wlfareInfoReldNm": "안산시 노인장수수당 지급 신청서(서식).hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "충청북도 괴산군 보건소 건강증진과",
+  "ctpvNm": "충청북도",
+  "inqNum": "15429",
+  "intrsThemaNmArray": "입양·위탁",
+  "lastModYmd": "20260728",
+  "lifeNmArray": "영유아",
+  "servDgst": "저소득층 영아(0~24개월)가정의 육아 필수재인 기저귀 및 조제분유 지원을 통해 경제적 부담 경감 및 아이 낳기 좋은 환경을 조성하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002404&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002404",
+  "servNm": "저소득층 기저귀·조제분유 지원사업",
+  "sggNm": "괴산군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "다자녀, 장애인, 한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002404",
+  "servNm": "저소득층 기저귀·조제분유 지원사업",
+  "enfcBgngYmd": "20151001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 괴산군 보건소 건강증진과",
+  "ctpvNm": "충청북도",
+  "sggNm": "괴산군",
+  "servDgst": "저소득층 영아(0~24개월)가정의 육아 필수재인 기저귀 및 조제분유 지원을 통해 경제적 부담 경감 및 아이 낳기 좋은 환경을 조성하고자 함",
+  "lifeNmArray": "영유아",
+  "trgterIndvdlNmArray": "다자녀, 장애인, 저소득, 한부모·조손",
+  "intrsThemaNmArray": "입양·위탁",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "만 2세 미만의 영아 중 다음 조건 중 한 개 이상 충족 시 지원- 기초생활보장수급자, 차상위계층, 한부모가족 수급 가구의 영아- 기준중위소득 100% 이하(2026. 7.~)의 장애인 또는 다자녀 가구의 영아* 조제분유 : 기저귀 지원대상 중 아동복지시설 등의 아동 또는 산모의 사망·질병으로 모유수유가 불가능한 경우 등",
+  "slctCritCn": "만 2세 미만의 영아 중 다음 조건 중 한 개 이상 충족 시 지원- 기초생활보장수급자, 차상위계층, 한부모가족 수급 가구의 영아- 기준중위소득 100% 이하(2026. 7.~)의 장애인 또는 다자녀 가구의 영아* 조제분유 : 기저귀 지원대상 중 아동복지시설 등의 아동 또는 산모의 사망·질병으로 모유수유가 불가능한 경우 등",
+  "alwServCn": "기저귀 및 조제분유 구매비용 바우처(국민행복카드) 지원(`26년 기준 기저귀 월 9만원, 조제분유 월 11만원)",
+  "aplyMtdCn": "보건소 방문 또는 온라인(복지로, 정부24 행복출산원스톱서비스)",
+  "inqNum": "15445",
+  "lastModYmd": "20260728",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-830-2354",
+    "wlfareInfoReldNm": "괴산군 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산·고령사회기본법 제8조 ~ 제10조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260722UUWBM1819580202118829&amp;atcflSn=1",
+    "wlfareInfoReldNm": "★2026년 모자보건사업 안내.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260223UUWBM0851160176888078&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 1의4] 사회보장급여(사회서비스이용권) 신청(변경)서(사회보장급여 관련 공통서식에 관한 고시).pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 모바일",
+  "bizChrDeptNm": "경기도 사회적경제국 청년기회과",
+  "ctpvNm": "경기도",
+  "inqNum": "80917",
+  "intrsThemaNmArray": "일자리",
+  "lastModYmd": "20260822",
+  "lifeNmArray": "청년",
+  "servDgst": "청년 노동자에게 복리후생을 제공하여 청년노동자 처우개선 및 복지향상",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003927&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003927",
+  "servNm": "청년 노동자 지원사업(청년 복지포인트)",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003927",
+  "servNm": "청년 노동자 지원사업(청년 복지포인트)",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 사회적경제국 청년기회과",
+  "ctpvNm": "경기도",
+  "servDgst": "청년 노동자에게 복리후생을 제공하여 청년노동자 처우개선 및 복지향상",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "인터넷, 모바일",
+  "sprtTrgtCn": "- 경기도 거주 만 19~39세 청년 노동자- 경기도내 중소·중견기업, 소상공업체, 비영리법인(국가·지자체, 공공기관 제외) 재직 청년- 1인 중위소득 150% 이하, 주 36시간 이상, 6개월 이상 근무",
+  "slctCritCn": "- 선정기준: 건강보험료 6개월 평균 138,276원(월 급여 385만원) 이하  ※ 4대 사회보험 미가입자의 경우 6개월 평균 급여에 건강보험요율을 적용- 동점자 처리: 현 직장 장기재직자 순 → 경기도 장기거주자 순",
+  "alwServCn": "-  연간 120만원의 복지포인트 지급을 통한 복리후생 지원 ※ 지정된 복지몰(경기청년몰)에서 사용가능한 포인트로 지급",
+  "aplyMtdCn": "- 청년노동자 지원사업 홈페이지(https://youth.jobaba.net)를 통한 온라인 접수",
+  "inqNum": "80996",
+  "lastModYmd": "20260822",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "1577-0014",
+    "wlfareInfoReldNm": "경기도일자리재단 청년노동자 지원사업"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://youth.jobaba.net",
+    "wlfareInfoReldNm": "경기도일자리재단 청년노동자 지원사업"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경기도 청년 일자리 창출 촉진에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250530UUWBM1536040140128344&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 청년 노동자 지원사업 선발 계획 공고.pdf"
+   }
+  ]
+ }
+}

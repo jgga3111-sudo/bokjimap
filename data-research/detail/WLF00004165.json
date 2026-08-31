@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 밀양시 나노경제국 지역경제과",
+  "ctpvNm": "경상남도",
+  "inqNum": "12413",
+  "intrsThemaNmArray": "서민금융, 일자리, 입양·위탁",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년, 노년, 중장년",
+  "servDgst": "지역 실정에 맞는 사업을 발굴, 추진하여 취업취약계층 실업자에게 구직기간 동안 한시적으로 공공부문의 일자리를 제공하여 생계보조를 통한 사회 안전망 역할 및 근로 기회 부여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004165&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004165",
+  "servNm": "공공근로사업",
+  "sggNm": "밀양시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "다문화·탈북민, 보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004165",
+  "servNm": "공공근로사업",
+  "enfcBgngYmd": "20140101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 밀양시 나노경제국 지역경제과",
+  "ctpvNm": "경상남도",
+  "sggNm": "밀양시",
+  "servDgst": "지역 실정에 맞는 사업을 발굴, 추진하여 취업취약계층 실업자에게 구직기간 동안 한시적으로 공공부문의 일자리를 제공하여 생계보조를 통한 사회 안전망 역할 및 근로 기회 부여",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "다문화·탈북민, 보훈대상자",
+  "intrsThemaNmArray": "일자리, 입양·위탁, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1)신청대상 - 신청일 현재 만18세 이상 만 70세 미만인 자로서 실업자 또는 정기소득이 없는 일용근로자로서 구직등록을 한 자 2) 대상자 선정  - 공공근로사업추진위원회 심의를 거친 선발기준에 의거 선발",
+  "slctCritCn": "가구소득이 기준중위소득 60% 이하재산 3억원 이하",
+  "alwServCn": "근무시간    - 청년(18세~39세): 1일 6시간, 주 30시간 이내(주 5일)    - 65세 미만: 1일 6시간, 주 24시간 이내(주 4일)    - 65세 이상: 1일 5시간, 주 15시간 이내(주 3일)",
+  "aplyMtdCn": "1) 신청방법 : 읍/면/동행정복지센터로 신청2) 신청시기   - 상반기: 2025. 12. 29. ~ 2026. 1. 7.  - 하반기: 2026. 6. 17. ~ 6. 24.",
+  "inqNum": "12416",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-359-5058",
+    "wlfareInfoReldNm": "밀양시 나노경제국 지역경제과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고용정책기본법 제6조(국가와 지방자치단체의 시책)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250612UUWBM0914490141699902&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 공공근로사업 지침(안).hwp"
+   }
+  ]
+ }
+}

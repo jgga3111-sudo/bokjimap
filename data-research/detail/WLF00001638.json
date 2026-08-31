@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "부산광역시 시민건강국 건강정책과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "26130",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260819",
+  "lifeNmArray": "임신 · 출산",
+  "servDgst": "출산가정 대상 산후도우미 지원하는 산모신생아 건강관리 지원 확대로 표준화된 서비스 제공, 경제적 부담경감, 사회적 일자리 창출",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001638&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001638",
+  "servNm": "산모신생아 건강관리사업 확대",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001638",
+  "servNm": "산모신생아 건강관리사업 확대",
+  "enfcBgngYmd": "20210901",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 시민건강국 건강정책과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "출산가정 대상 산후도우미 지원하는 산모신생아 건강관리 지원 확대로 표준화된 서비스 제공, 경제적 부담경감, 사회적 일자리 창출",
+  "lifeNmArray": "임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "-(출산가정)첫째아 기준 중위소득 150%초과, 둘째아 이상 소득관 관계없이 지원-예외지원 가능대상자(희귀난치질환 산모, 장애인 산모 및 장애 신생아, 쌍생아이상 출산가정, 새터민산모, 결혼이민 산모, 미혼모산모)",
+  "slctCritCn": "-(출산가정)첫째아 기준 중위소득 150%초과, 둘째아 이상 소득관 관계없이 지원&#13;-예외지원 가능대상자(희귀난치질환 산모, 장애인 산모 및 장애 신생아, 쌍생아이상 출산가정, 새터민산모, 결혼이민 산모, 미혼모산모)",
+  "alwServCn": "전자바우처",
+  "aplyMtdCn": "신청기한: 출산예정일 40일전부터 출산일로부터 60일까지신청방법: 구군 보건소",
+  "inqNum": "26162",
+  "lastModYmd": "20260819",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-888-3365",
+    "wlfareInfoReldNm": "부산광역시 건강정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산 고령사회 기본법 제8조 및 제10조, 모자보건법,지역자율형 사회서비스 투자사업"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=2509GOWF16GOWF162509&amp;atcflSn=1",
+    "wlfareInfoReldNm": "'21년도 산모·신생아 건강관리지원사업 확대 추진 계획.hwp"
+   }
+  ]
+ }
+}

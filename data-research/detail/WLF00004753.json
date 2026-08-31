@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "부산광역시 해운대구 행정국 교육도서관과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "5045",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청소년",
+  "servDgst": "학부모 경제적 부담경감 및 교육의 공공성 강화",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004753&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004753",
+  "servNm": "고등학교 신입생 입학지원금 지원사업",
+  "sggNm": "해운대구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004753",
+  "servNm": "고등학교 신입생 입학지원금 지원사업",
+  "enfcBgngYmd": "20210501",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 해운대구 행정국 교육도서관과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "해운대구",
+  "servDgst": "학부모 경제적 부담경감 및 교육의 공공성 강화",
+  "lifeNmArray": "청소년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "- 매년 지자체가 정하는 기준일 해운대구민 - 고등학교 신입생 및 학교이외 교육기관 입학 신입생 대상(가구구성현황, 소득, 재산과 무관하게 지급)",
+  "slctCritCn": "- 매년 지자체가 정한 기준일,  해운대구에 주소 둔 고등학교 신입생- 매년 지자체가 정한 기준일,  해운대구에 주소 둔 타시군구 중학교 신입생   - 매년 지자체가 정한 기준일,  해운대구에 주소 둔 학교이외 교육기관 입학 신입생(* 부산시 중학교의 경우 교육청에서 교복 현물지급으로 중복 제외함)",
+  "alwServCn": "1인 300,000원",
+  "aplyMtdCn": "1. 동주민센터 방문신청 → 대상여부 확인(구) → 신청인 개별 계좌입금(구)2. 인터넷 신청(해운대구청, 보조금 24)  → 대상여부 확인(구) → 신청인 개별 계좌입금(구)",
+  "inqNum": "5051",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-749-6565",
+    "wlfareInfoReldNm": "부산광역시 해운대구 교육도서관과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 해운대구 입학지원금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250707UUWBM1647120145169376&amp;atcflSn=1",
+    "wlfareInfoReldNm": "부산광역시 해운대구 입학지원금 지원 조례.hwp"
+   }
+  ]
+ }
+}

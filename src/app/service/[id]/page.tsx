@@ -10,6 +10,7 @@ import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
+import MyEligibility from "@/components/MyEligibility";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -97,12 +98,10 @@ function IncomeBanner({ s }: { s: WelfareService }) {
         <strong>{won(thresholdOf(1, s.medianPercent))}</strong>, 4인 가구{" "}
         <strong>{won(thresholdOf(4, s.medianPercent))}</strong> 이하입니다.
       </p>
-      <Link
-        href="/check"
-        className="mt-3 inline-block rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white hover:brightness-110"
-      >
-        내 소득이 해당되는지 계산하기 →
-      </Link>
+      {/* 자가진단을 이미 한 사람에게는 비교 결과를, 안 한 사람에게는
+          계산하러 가는 버튼을 보여준다. 어느 쪽을 그릴지는 브라우저에
+          저장된 결과가 있느냐에 달렸으므로 MyEligibility가 둘 다 맡는다. */}
+      <MyEligibility percent={s.medianPercent} />
     </div>
   );
 }

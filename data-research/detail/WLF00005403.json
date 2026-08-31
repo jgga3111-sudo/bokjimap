@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 과천시 경제복지국 가족아동과",
+  "ctpvNm": "경기도",
+  "inqNum": "16207",
+  "lastModYmd": "20260819",
+  "lifeNmArray": "아동",
+  "servDgst": "만혼화 현상과 함께 출산․양육비용 등의 경제적 부담으로 인해 출산을 기피하는 경향이 나타나고 있음.\n이러한 경향은 다자녀가정 형성을 저해하는 주요 원인으로 작용하고 있어, 다자녀가정에 대한 양육비 지원을 통해 자녀 양육으로 인한 경제적 부담을 완화하고 저출산 및 인구감소에 대응하기 위함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005403&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005403",
+  "servNm": "다자녀 양육바우처 지원",
+  "sggNm": "과천시",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005403",
+  "servNm": "다자녀 양육바우처 지원",
+  "enfcBgngYmd": "20240101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 과천시 경제복지국 가족아동과",
+  "ctpvNm": "경기도",
+  "sggNm": "과천시",
+  "servDgst": "만혼화 현상과 함께 출산․양육비용 등의 경제적 부담으로 인해 출산을 기피하는 경향이 나타나고 있음.\n이러한 경향은 다자녀가정 형성을 저해하는 주요 원인으로 작용하고 있어, 다자녀가정에 대한 양육비 지원을 통해 자녀 양육으로 인한 경제적 부담을 완화하고 저출산 및 인구감소에 대응하기 위함.",
+  "lifeNmArray": "아동",
+  "trgterIndvdlNmArray": "다자녀",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "ㅇ지원대상 : 8세 이상 ~ 13세 미만의 둘째아 이상 자녀ㅇ지원요건 : 신청일 기준 대상 자녀와 부모 또는 보호자가 과천시에 주민등록을 두고 실제 거주 (대상 자녀 모두 과천시 거주)하는 가정ㅇ지원내용 : 다자녀 출생 순위별 차등하여 바우처 카드 지원(둘째 월 3만원, 셋째 월 5만원, 넷째 이상 월 10만원)  * 단, 바우처의 사용처는 아동의 자기계발 및 진로탐색분야로 제한하여 운영     [예: 예체능 분야 학원(음악, 미술, 무용, 체육 등), 서점, 문구점, 수영장, 체육관, 공연장, 볼링장, 빙상장, 과학관, 미술관]",
+  "slctCritCn": "ㅇ 지원대상 : 8세 이상 ~ 13세 미만의 둘째아 이상 자녀ㅇ 지원요건 : 신청일 기준 대상 자녀와 부모 또는 보호자가 과천시에 주민등록을 두고 실제 거주 (대상 자녀 모두 과천시 거주)하는 가정ㅇ 지원내용 : 다자녀 출생 순위별 차등하여 바우처 카드 지원 - 8세 이상～13세 미만 아동 중, 둘째 월 3만원/ 셋째 월 5만원 / 넷째 이상 월 10만원 * 단, 바우처의 사용처는 아동의 자기계발 및 진로탐색분야로 제한하여 운영   [예: 예체능 분야 학원(음악, 미술, 무용, 체육 등), 서점, 문구점, 수영장, 체육관, 공연장, 볼링장, 빙상장, 과학관, 미술관]",
+  "alwServCn": "다자녀가정 가구 부모의 지역화폐(과천토리) 계좌를 활용하여 해당 자녀 수의 양육바우처 금액을 매월 지원",
+  "aplyMtdCn": "① 신청자 : 대상자 부모 또는 보호자② 관할 동 주민센터 방문③ 신청서, 개인정보 및 행정 정보공동이용 동의서 작성④ 통장사본, 신분증, 관련서류(필요시)",
+  "inqNum": "16216",
+  "lastModYmd": "20260819",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3677-2356",
+    "wlfareInfoReldNm": "과천시 아동복지과 저출생대응팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "과천시 출산·입양장려금 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20231113UUWBM1655010056298024&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(업로드) 과천시 사회보장제도 신설협의 증빙자료(다자녀 양육바우처 지원).pdf"
+   }
+  ]
+ }
+}

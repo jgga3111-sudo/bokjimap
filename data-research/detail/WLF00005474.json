@@ -1,0 +1,54 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "모바일앱, 인터넷",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "7878",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "청년",
+  "servDgst": "잦은 이사와 주택가격 상승으로 경제적 어려움을 겪고 있는 청년가구에 이사비를 지원하여 주거비 부담 완화 및 주거안정 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005474&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005474",
+  "servNm": "제주 청년 이사비 지원",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005474",
+  "servNm": "제주 청년 이사비 지원",
+  "enfcBgngYmd": "20240101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "잦은 이사와 주택가격 상승으로 경제적 어려움을 겪고 있는 청년가구에 이사비를 지원하여 주거비 부담 완화 및 주거안정 도모",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷, 모바일앱",
+  "sprtTrgtCn": "2025년 1월 1일 이후 제주특별자치도에 전입 또는 도내에서 이사 후 전입신고 완료한 만 19세~39세 청년가구- (소득) 가구당 기준 중위소득 180% 이하, (재산) 무주택",
+  "slctCritCn": "가구당 기준 중위소득 180% 이하의 무주택 청년 가구",
+  "alwServCn": "이삿짐센터, 입주청소비용 등 이사 관련 비용 40만원 지원 (이사비용이 40만원 미만일 경우 실제 납부한 금액만 지원)",
+  "aplyMtdCn": "정부24 홈페이지를 통한 온라인 신청",
+  "inqNum": "7906",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-4252",
+    "wlfareInfoReldNm": "제주특별자치도 주택토지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제주특별자치도 주거기본조례 제12조"
+   }
+  ]
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "강원특별자치도 동해시 보건소 예방관리과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "5115",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "노년",
+  "servDgst": "취약계층 어르신 대상포진 무료 예방접종사업을 통해 대상포진 및 대상포진 후 신경통 발병률을 낮춤으로서 질병부담을 감소시키고 건강한 삶을 영위하도록 하고자함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001720&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001720",
+  "servNm": "(취약계층)어르신 대상포진 (무료)예방접종 사업",
+  "sggNm": "동해시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001720",
+  "servNm": "(취약계층)어르신 대상포진 (무료)예방접종 사업",
+  "enfcBgngYmd": "20200801",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 동해시 보건소 예방관리과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "동해시",
+  "servDgst": "취약계층 어르신 대상포진 무료 예방접종사업을 통해 대상포진 및 대상포진 후 신경통 발병률을 낮춤으로서 질병부담을 감소시키고 건강한 삶을 영위하도록 하고자함.",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "동해시에 주민등록을 두고 거주중인 65세 이상 기초생활수급자(대상포진 예방접종 기접종자 제외)",
+  "slctCritCn": "ㅇ 65세 이상으로 기초생활수급자 ㅇ 동해시에 주민등록을 두고 거주중인 자 ㅇ 외국인은 포함되지 않음 ㅇ 과거 대상포진 접종 기록이 없는 자",
+  "alwServCn": "대상포진 약독화 생백신 예방접종 1회 또는 유전자재조합 사백신 예방접종 2회",
+  "inqNum": "5119",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-539-8073",
+    "wlfareInfoReldNm": "동해시 보건소 예방접종실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "동해시 대상포진 예방접종 지원에 관한 조례 제1조, 제2조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250620UUWBM1102070142906787&amp;atcflSn=1",
+    "wlfareInfoReldNm": "동해시 대상포진 예방접종 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

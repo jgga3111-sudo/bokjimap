@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 횡성군 보건소 건강증진과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "4853",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260620",
+  "lifeNmArray": "영유아",
+  "servDgst": "출산 후 출산 양육에 필요한 용품을 지원(대여)",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002035&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002035",
+  "servNm": "출산·육아용품 대여 사업",
+  "sggNm": "횡성군",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현물대여",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002035",
+  "servNm": "출산·육아용품 대여 사업",
+  "enfcBgngYmd": "20190927",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 횡성군 보건소 건강증진과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "횡성군",
+  "servDgst": "출산 후 출산 양육에 필요한 용품을 지원(대여)",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현물대여",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준, 군에 주민등록을 두고 거주하는 임산부 또는 영유아(다만, 영유아의 경우 부 또는 모가 주민등록을 군에 두고 있어야 함)",
+  "slctCritCn": "신청일 기준, 군에 주민등록을 두고 거주하는 임산부 또는 영유아(다만, 영유아의 경우 부 또는 모가 주민등록을 군에 두고 있어야 함)",
+  "alwServCn": "1가구당 2점- 대여기간 : 3개월(최대 1년까지 연장가능)- 유축기의 경우 2개월(최대 2주 더 연장가능)",
+  "aplyMtdCn": "보건소 방문신청",
+  "inqNum": "4857",
+  "lastModYmd": "20260620",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-340-5684",
+    "wlfareInfoReldNm": "횡성군보건소 모자보건실"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.hsg.go.kr/health/index.do",
+    "wlfareInfoReldNm": "횡성군보건소 모자보건실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "횡성군 행복출산 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260617UUWBM1014560197354823&amp;atcflSn=1",
+    "wlfareInfoReldNm": "횡성군 행복출산 지원 조례.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "대구광역시 달성군 교육복지국 복지정책과",
+  "ctpvNm": "대구광역시",
+  "inqNum": "6628",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260717",
+  "lifeNmArray": "노년",
+  "servDgst": "관내 어르신들의 장수를 기원하고 경로효친의 사회적 분위를 조성하는 것을 목적으로 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002183&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002183",
+  "servNm": "장수축하금",
+  "sggNm": "달성군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002183",
+  "servNm": "장수축하금",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대구광역시 달성군 교육복지국 복지정책과",
+  "ctpvNm": "대구광역시",
+  "sggNm": "달성군",
+  "servDgst": "관내 어르신들의 장수를 기원하고 경로효친의 사회적 분위를 조성하는 것을 목적으로 함.",
+  "lifeNmArray": "노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "주민등록법상 만 100세 이상인 자* 지급기준일 현재 대구광역시 달성군에 1년이상 주민등록을 두고 계속 거주하고 있는 장수노인",
+  "slctCritCn": "주민등록법상 만 100세 이상인 자* 지급기준일 현재 대구광역시 달성군에 1년이상 주민등록을 두고 계속 거주하고 있는 장수노인",
+  "alwServCn": "예산의 범위 내에서 1회에 한하여 100만원 상당의 현금 또는 경로상품 지급",
+  "aplyMtdCn": "장수축하금을 지급받고자 하는 자는 별지 제1호 서식에 의한 장수축하금 지급신청서 및 통장사본 등을 주소지 읍면사무소에 제출",
+  "inqNum": "6642",
+  "lastModYmd": "20260717",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldNm": "대구광역시 달성군 복지정책과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://dalseong.daegu.kr/",
+    "wlfareInfoReldNm": "대구광역시 달성군 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대구광역시 달성군 장수축하금 지급 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7239GOWF14GOWF147239&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대구광역시 달성군 장수축하금 지급 조례.hwp"
+   }
+  ]
+ }
+}

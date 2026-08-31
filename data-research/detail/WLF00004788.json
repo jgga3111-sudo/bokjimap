@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "대전광역시 서구 주민복지국 여성가족복지과",
+  "ctpvNm": "대전광역시",
+  "inqNum": "8810",
+  "intrsThemaNmArray": "입양·위탁, 서민금융",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "영유아",
+  "servDgst": "출산에 따른 양육비부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004788&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004788",
+  "servNm": "모든 출산가정 출산지원금 지원",
+  "sggNm": "서구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004788",
+  "servNm": "모든 출산가정 출산지원금 지원",
+  "enfcBgngYmd": "20160701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대전광역시 서구 주민복지국 여성가족복지과",
+  "ctpvNm": "대전광역시",
+  "sggNm": "서구",
+  "servDgst": "출산에 따른 양육비부담 경감",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "입양·위탁, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신생아의 출생일을 기준으로 대전광역시 서구에 주민등록이 되어있는 첫째자녀 이상 출산한 모에게 지급함(아동 또한 서구에 출생등록되어야함)",
+  "slctCritCn": "대전 서구 주민등록 되어 있으면서 첫째아 이상 출산한 모(자녀 출생일로부터 1년 이내 신청)",
+  "alwServCn": "30만원, 1회 지원",
+  "aplyMtdCn": "출생등록시 동행정복지센터를 통해 신청",
+  "inqNum": "8826",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "042-288-3215",
+    "wlfareInfoReldNm": "대전광역시 서구청 여성가족복지과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.seogu.go.kr/kor/sub06_04_02_02.do",
+    "wlfareInfoReldNm": "대전광역시 서구청 여성가족복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대전광역시 서구 출산 장려 및 다자녀가정 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=1949GOWF16GOWF161949&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출생 초기 양육비용 부담 경감을 위한 대전 서구 출산지원금품 확대 지원 계획(결재).hwp"
+   }
+  ]
+ }
+}

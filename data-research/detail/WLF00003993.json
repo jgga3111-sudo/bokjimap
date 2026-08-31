@@ -1,0 +1,72 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 완도군 인구일자리정책실",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "6300",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "청년",
+  "servDgst": "무주택 신혼부부 주거비용 대출이자 지원으로 경제적 부담 경감 및 안정된 정주 여건 조성으로 지역 내 정착을 통한 결혼 출산 장려 및 실질적 인구유입 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003993&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003993",
+  "servNm": "신혼부부 주거비용 대출이자 지원",
+  "sggNm": "완도군",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003993",
+  "servNm": "신혼부부 주거비용 대출이자 지원",
+  "enfcBgngYmd": "20210901",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 완도군 인구일자리정책실",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "완도군",
+  "servDgst": "무주택 신혼부부 주거비용 대출이자 지원으로 경제적 부담 경감 및 안정된 정주 여건 조성으로 지역 내 정착을 통한 결혼 출산 장려 및 실질적 인구유입 도모",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "완도군에 거주하는 무주택 신혼부부로 금융기관에서 주거용도(주택구입, 전세)로 대출받아 관내 신규 주택을 마련한 자신혼부부 : 결혼 7년 이하 / 부부 모두 만49세 이하",
+  "slctCritCn": "- 거주조건 : 신청시 주민등록 기준으로 가구 구성원이 모두 완도에 주소를 둔 경우- 대상조건 : (신혼부부) 결혼 7년이하, 부부 모두 49세 이하- 주택조건 : 주택가격 6억 이하(주택구입·전세 동일) - 소득기준 : 맞벌이 85백만원이하  ※ 거주, 대상, 주택, 소득 기준 모두 충족",
+  "alwServCn": "-청구시 대출 잔액 기준 지원(최대 3년)   1억원 이상 : 15만원  /5천만원 ~ 1억 : 10만원 / 5천만원 이하 : 5만원",
+  "aplyMtdCn": "신청자 본인 방문 신청(우편 팩스 불가)",
+  "inqNum": "6305",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5276",
+    "wlfareInfoReldNm": "완도군청 인구일자리정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5276",
+    "wlfareInfoReldNm": "완도군청 인구일자리정책실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산 고령사회기본법 제10조"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산 고령사회기본법 제10조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=5877GOWF15GOWF155877&amp;atcflSn=1",
+    "wlfareInfoReldNm": "신혼부부 주거비용 대출이자 지원 계획.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경기도 안산시 복지국 여성보육과",
+  "ctpvNm": "경기도",
+  "inqNum": "17720",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "servDgst": "한부모가족의 동절기 난방비 부담을 완화하여 생활안정 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004633&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004633",
+  "servNm": "한부모가족동절기수당(난방비)지원",
+  "sggNm": "안산시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004633",
+  "servNm": "한부모가족동절기수당(난방비)지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 안산시 복지국 여성보육과",
+  "ctpvNm": "경기도",
+  "sggNm": "안산시",
+  "servDgst": "한부모가족의 동절기 난방비 부담을 완화하여 생활안정 도모",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "1. 지원대상- 「한부모가족지원법」에 따라 선정한 한부모가족(국민기초생활보장법에 따른 생계, 의료급여 수급자 제외) 2. 사업내용 - 연간 3개월(12월, 1월, 2월) 난방비 지원(가구당 월 50,000원)",
+  "slctCritCn": "- 기준중위소득 63%이하 한부모가족 및 조손가족- 기준중위소득 65%이하 청소년한부모가족  ** 국민기초생활보장법에 따른 생계급여, 의료급여 대상자 제외",
+  "alwServCn": "1월, 2월, 12월(동절기) 3개월동안 월 50,000원 지급",
+  "inqNum": "17724",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-481-5213",
+    "wlfareInfoReldNm": "상록구청 주민복지과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-481-6217",
+    "wlfareInfoReldNm": "단원구청 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "안산시 한부모가족 지원 조례 제7조3항"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6947GOWF15GOWF156947&amp;atcflSn=1",
+    "wlfareInfoReldNm": "안산시 한부모가족 지원 조례.hwp"
+   }
+  ]
+ }
+}

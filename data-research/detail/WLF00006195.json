@@ -1,0 +1,106 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "서울특별시 서울아리수본부 본부 요금관리부 요금제도과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "16821",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "servDgst": "서울특별시 국민기초생활수급자에 대한 수도(상하수도)요금 감면제도를 시행하여 국민기초생활수급자 가구의 생활안정을 도모하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006195&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006195",
+  "servNm": "국민기초생활수급자 세대 수도요금 감면",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006195",
+  "servNm": "국민기초생활수급자 세대 수도요금 감면",
+  "enfcBgngYmd": "19890519",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 서울아리수본부 본부 요금관리부 요금제도과",
+  "ctpvNm": "서울특별시",
+  "servDgst": "서울특별시 국민기초생활수급자에 대한 수도(상하수도)요금 감면제도를 시행하여 국민기초생활수급자 가구의 생활안정을 도모하고자 함",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "「서울특별시 수도 조례」 제31조 제1항 제3호 및 「서울특별시 하수도 사용 조례」 제34조 제1항 제5호에 따른  「국민기초생활 보장법」에 따른 수급권자",
+  "slctCritCn": "「국민기초생활 보장법」에 따른 수급권자",
+  "alwServCn": "「국민기초생활 보장법」에 따른 수급권자 사람에 대해서는 세대당 월 사용량 중 10세제곱미터 이내에서 수도계량기를 단독으로 사용하는 경우에는 실제 사용량을, 공동으로 사용하는 경우에는 세대당 평균 사용량에 대한 수도요금을 감면한다.*가정용 수도사용량 중 10톤에 해당하는 요금(월 최대 12,300원 감면, 상수도5,800원, 하수도 4,800원, 물이용부담금 1,700원 감면)단,  「장애인복지법」에 따른 장애의 정도가 심한 장애인, 「독립유공자예우에 관한 법률」에 따른 독립유공자 또는 그 유족 중 선순위자 1명 사람은 서로 중복하여 감면을 적용받을 수 없으며, 장애인 이용 및 생활시설에 입주한 사람에 대해서는 감면을 적용하지 아니한다.",
+  "aplyMtdCn": "방문신청절차동주민센터·수도사업소 방문신청(자격확인 후 신청)⇒동주민센터 신청 건 관할 수도사업소 통보⇒중증장애인 거주 세대 수도요금에서 감면온라인신청절자아리수사이버고객센터(https://i121.seoul.go.kr)⇒민원신청⇒수도요금 감면 온라인 신청 ⇒비대면자격확인 ⇒중증장애인 거주 세대 수도요금에서 감면",
+  "inqNum": "16844",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-1183",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 요금제도과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-2000",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 중부수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-3500",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 서부수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-2600",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 동부수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-3200",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 북부수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-3800",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 강서수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-4400",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 남부수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-4700",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 강남수도사업소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3146-5000",
+    "wlfareInfoReldNm": "서울특별시 서울아리수본부 강동수도사업소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 수도 조례, 서울특별시 하수도 사용 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20251119UUWBM1006430161628294&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지  제24의2호서식]수도요금 감면(신규·해지) 신청서(서울특별시 수도 조례 시행규칙).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20251119UUWBM1340290161665221&amp;atcflSn=1",
+    "wlfareInfoReldNm": "관련규정(국민기초생활수급자).hwpx"
+   }
+  ]
+ }
+}

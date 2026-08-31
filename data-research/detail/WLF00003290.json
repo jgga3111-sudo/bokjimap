@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 옥천군 미래전략국 행복교육과",
+  "ctpvNm": "충청북도",
+  "inqNum": "5837",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "아동, 청소년",
+  "servDgst": "학생의 균등한 교육기회 보장 및 원거리 통학에 따른 경제적 비용 부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003290&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003290",
+  "servNm": "초 중 고 학생 통학교통비 지원",
+  "sggNm": "옥천군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003290",
+  "servNm": "초 중 고 학생 통학교통비 지원",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 옥천군 미래전략국 행복교육과",
+  "ctpvNm": "충청북도",
+  "sggNm": "옥천군",
+  "servDgst": "학생의 균등한 교육기회 보장 및 원거리 통학에 따른 경제적 비용 부담 경감",
+  "lifeNmArray": "아동, 청소년",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "옥천군에 주소를 두고 관내 농어촌학교에 재학 중인 초·중·고등학생&#13;거주지에서 학교와의 직선거리가 2킬로미터 이내인 학생은 제외&#13;기숙사이용 학생은 기숙사 입교 퇴교일만 지원",
+  "slctCritCn": "학구조정에 따라 관외 학교에 재학 중인 학생 포함교통카드 할인요금 기준으로 버스요금을 지원초등학생 1,600원, 중 고 학생 2,600원",
+  "alwServCn": "1일 왕복 통학교통비 초등학생 1,600원, 중 고 학생 2,600원",
+  "aplyMtdCn": "학교에 통학교통비 지원 신청&#13;학교는 적격여부(재학여부) 확인, 지원학생명단 군에 제출&#13;군은 대상자 명단 확정 및 지원",
+  "inqNum": "5846",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-730-3604",
+    "wlfareInfoReldNm": "옥천군청 행복교육과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "옥천군 농어촌학교 학생 교통비 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240709UUWBM1518420093214153&amp;atcflSn=1",
+    "wlfareInfoReldNm": "옥천군 농어촌학교 학생 교통비 지원 조례.hwp"
+   }
+  ]
+ }
+}

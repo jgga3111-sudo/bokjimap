@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "충청남도 당진시 문화복지국 여성가족과",
+  "ctpvNm": "충청남도",
+  "inqNum": "15497",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20250531",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "- 신생아 출생을 축하하고 산모와 신생아의 건강관리 도모\n- 생애초기 아동양육에 따른 경제적 부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005363&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005363",
+  "servNm": "신생아 출생지원금 지원",
+  "sggNm": "당진시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005363",
+  "servNm": "신생아 출생지원금 지원",
+  "enfcBgngYmd": "20050215",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 당진시 문화복지국 여성가족과",
+  "ctpvNm": "충청남도",
+  "sggNm": "당진시",
+  "servDgst": "- 신생아 출생을 축하하고 산모와 신생아의 건강관리 도모\n- 생애초기 아동양육에 따른 경제적 부담 경감",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "신생아와 함께 당진시에 주민등록을 두고 일정 거주기간을 만족하는 신생아의 부 또는 모첫째아: 50만원둘째아: 100만원셋째아: 500만원넷째아 이상: 1,000만원",
+  "slctCritCn": "첫째, 둘째아: 1개월 전부터 당진시 거주셋째아 이상: 12개월 전부터 당진시 거주단, 거주기간 요건을 충족하지 않으나 당진시에 주민등록을 두고 거주한 기간이 각 호의 기간을 초과하면 대상",
+  "alwServCn": "- 첫째아: 일시금 50만원- 둘째아: 일시금 100만원- 셋째아: 출생신고 시 200만원, 이후 12개월마다 150만원씩 2회 분할지급- 넷째아 이상: 출생신고 시 400만원, 이후 12개월마다 200만원씩 3회 분할지급※ 셋째아 이상은 12개월마다 '부 또는 모'와 '신생아'의 관내 거주 여부 반드시 확인 후 지급",
+  "aplyMtdCn": "신생아의 출생일로부터 1년 이내 해당 읍면동 행정복지센터 민원실에서 출산 서비스 통합처리 신청서 작성 후 제출",
+  "inqNum": "15508",
+  "lastModYmd": "20250531",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-350-3695",
+    "wlfareInfoReldNm": "충청남도 당진시 여성가족과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「당진시 인구정책 기본 조례」제15조~제20조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250529UUWBM1710560139952778&amp;atcflSn=1",
+    "wlfareInfoReldNm": "당진시 인구정책 기본 조례(충청남도 당진시조례)(제1321호)(20250211).pdf"
+   }
+  ]
+ }
+}

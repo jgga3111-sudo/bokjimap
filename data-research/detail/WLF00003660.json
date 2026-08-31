@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 전화",
+  "bizChrDeptNm": "경상북도 청송군 사회복지과",
+  "ctpvNm": "경상북도",
+  "inqNum": "7320",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260714",
+  "servDgst": "저소득층에게 명절을 맞이하여 위문금 지원을 통하여 정서안정과 문화적인 생활을 영위할 수 있도록 하는것을 목적으로 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003660&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003660",
+  "servNm": "저소득층 명절 위문(설·추석 명절)",
+  "sggNm": "청송군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003660",
+  "servNm": "저소득층 명절 위문(설·추석 명절)",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상북도 청송군 사회복지과",
+  "ctpvNm": "경상북도",
+  "sggNm": "청송군",
+  "servDgst": "저소득층에게 명절을 맞이하여 위문금 지원을 통하여 정서안정과 문화적인 생활을 영위할 수 있도록 하는것을 목적으로 함.",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 전화",
+  "sprtTrgtCn": "- 관내 기초생활수급자 및 복지사각지대 가구",
+  "slctCritCn": "요보호 저소득층",
+  "alwServCn": "- 1가구당 연2회 100,000원상당 현금지원",
+  "aplyMtdCn": "1) 신청방법 : 직권처리2) 지급시기 및 지급방법  - 지급개시일 : 설.추석 명절  - 지급방법 : 계좌이체 및 현금지급",
+  "inqNum": "7337",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "870-6162",
+    "wlfareInfoReldNm": "청송군청 사회복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "사회복지사업법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3714GOWF15GOWF153714&amp;atcflSn=1",
+    "wlfareInfoReldNm": "사회복지사업법(법률)(제17174호)(20200701).hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "대전광역시 동구 미래세대국 가족지원과",
+  "ctpvNm": "대전광역시",
+  "inqNum": "5252",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "servDgst": "출산율 저하 및 인구감소 등의 사회문제에 대응하며, 아이를 출산한 가정을 축하하여 출산장려분위기를 조성하고자 출산장려금 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005249&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005249",
+  "servNm": "출산장려금",
+  "sggNm": "동구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005249",
+  "servNm": "출산장려금",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대전광역시 동구 미래세대국 가족지원과",
+  "ctpvNm": "대전광역시",
+  "sggNm": "동구",
+  "servDgst": "출산율 저하 및 인구감소 등의 사회문제에 대응하며, 아이를 출산한 가정을 축하하여 출산장려분위기를 조성하고자 출산장려금 지원",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "영아의 출생신고일로부터 출산장려금 신청일까지 동구에 주민등록을 두고, 영아와 함께 거주하는 부 또는 모",
+  "slctCritCn": "영아*의 출생일 기준 동구에 주민등록을 두고, 영아와 함께 거주하는 부 또는 모",
+  "alwServCn": "30만 원(현금 / 1회)",
+  "aplyMtdCn": "출생신고 시, 행복출산원스톱서비스를 통한 신청",
+  "inqNum": "5257",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "042-251-4515",
+    "wlfareInfoReldNm": "대전광역시 동구청 가족지원과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://wwww.donggu.go.kr/dg/kor",
+    "wlfareInfoReldNm": "대전광역시 동구청 가족지원과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대전광역시 동구 출산장려 지원에 관한조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260616UUWBM1757120197272431&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대전광역시 동구 출산장려 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

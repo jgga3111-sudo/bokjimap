@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 모바일, 인터넷",
+  "bizChrDeptNm": "강원특별자치도 복지보건국 복지정책과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "18117",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "임신 · 출산, 영유아, 아동",
+  "servDgst": "육아부담경감을 통한 출산장려 및 저출산 극복",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002254&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002254",
+  "servNm": "강원특별자치도 육아기본수당 지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002254",
+  "servNm": "강원특별자치도 육아기본수당 지원사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 복지보건국 복지정책과",
+  "ctpvNm": "강원특별자치도",
+  "servDgst": "육아부담경감을 통한 출산장려 및 저출산 극복",
+  "lifeNmArray": "영유아, 아동, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷, 모바일",
+  "sprtTrgtCn": "2019. 1. 1. 이후 출생아 중 도내 1년 이상 거주자",
+  "slctCritCn": "도내 1년이상 거주자",
+  "alwServCn": "육아기본수당 지원 : 1인당 월 10~50만원(월령별 차등지원)지원기간 : 출생월로부터 95개월간",
+  "aplyMtdCn": "읍면동사무소 방문 및 인터넷(강원혜택이지) 신청",
+  "inqNum": "18126",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "-",
+    "wlfareInfoReldNm": "강원특별자치도 복지정책과 육아지원팀"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "-",
+    "wlfareInfoReldNm": "강원특별자치도 복지정책과 육아지원팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "강원특별자치도 육아기본수당 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3736GOWF16GOWF163736&amp;atcflSn=1",
+    "wlfareInfoReldNm": "지자체 복지서비스 등록자료(강원도 육아기본수당).hwp"
+   }
+  ]
+ }
+}

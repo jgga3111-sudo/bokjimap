@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "부산광역시 수영구 미래전략국 일자리경제과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "43296",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "청년",
+  "servDgst": "어학시험 및 자격증 취득 응시료 지원사업을 통해 취업준비를 위한 경제적 부담을 완화하고 취업역량 강화로 취업률 제고",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004794&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004794",
+  "servNm": "청년 발전을 위한 자격증 취득 응시료 지원",
+  "sggNm": "수영구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004794",
+  "servNm": "청년 발전을 위한 자격증 취득 응시료 지원",
+  "enfcBgngYmd": "20210909",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 수영구 미래전략국 일자리경제과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "수영구",
+  "servDgst": "어학시험 및 자격증 취득 응시료 지원사업을 통해 취업준비를 위한 경제적 부담을 완화하고 취업역량 강화로 취업률 제고",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "연령 : 18세 이상 ~ 39세 이하인 자(신청일 기준)주민등록 : 현재 수영구 주민등록 + 생애합산 1년 이상 주민등록자근로이력 : 미취업자 및 미창업자(1개월 근로시간 60시간 미만 근로자 포함)응시관련 : 시험 응시 후 60일 이내 신청자",
+  "slctCritCn": "자격확인 후 예산범위내에서 선정",
+  "alwServCn": "어학시험, 한국사능력검정시험, 국가전문자격 및 국가공인민간자격 응시료 지원 1인 연 최대 20만원",
+  "aplyMtdCn": "수영구청 홈페이지를 통한 온라인 접수",
+  "inqNum": "43322",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-610-4375",
+    "wlfareInfoReldNm": "부산광역시 수영구 일자리경제과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 수영구 청년 기본 조례 제12조 및 제13조의 2"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250610UUWBM1753560141409858&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 청년 자격증 취득 응시료 지원 사업 추진 계획 (1).pdf"
+   }
+  ]
+ }
+}

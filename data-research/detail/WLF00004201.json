@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 김제시 안전개발국 건축과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "7936",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260618",
+  "lifeNmArray": "청년",
+  "servDgst": "관내 거주하는 청년 및 신혼부부에게 인구정책 지원의 일환으로 주택전세자금 대출이자를 지원해줌으로서 주거비\n부담완화 및 안정된 정주여건을 조성하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004201&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004201",
+  "servNm": "청년 및 신혼부부 전세자금 대출이자 지원",
+  "sggNm": "김제시",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004201",
+  "servNm": "청년 및 신혼부부 전세자금 대출이자 지원",
+  "enfcBgngYmd": "20191202",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 김제시 안전개발국 건축과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "김제시",
+  "servDgst": "관내 거주하는 청년 및 신혼부부에게 인구정책 지원의 일환으로 주택전세자금 대출이자를 지원해줌으로서 주거비\n부담완화 및 안정된 정주여건을 조성하고자 함",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "청년 및 신혼부부&#13;- 청년 : 만18세 이상 39세 이하&#13;- 신혼부부 : 혼인신고일로부터 7년 이내의 부부",
+  "slctCritCn": "중위소득 180% 이하인자",
+  "alwServCn": "주택 전세자금 대출이자 지원",
+  "aplyMtdCn": "직접 방문 신청",
+  "inqNum": "7939",
+  "lastModYmd": "20260618",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-540-3269",
+    "wlfareInfoReldNm": "김제시청 건축과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "김제시 인구정책 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240603UUWBM1538150087887658&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

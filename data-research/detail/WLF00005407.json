@@ -1,0 +1,179 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "전화, 방문, E-mail, 인터넷",
+  "bizChrDeptNm": "서울특별시 복지정책실 복지기획관 장애인자립지원과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "8466",
+  "lastModYmd": "20240110",
+  "lifeNmArray": "청년, 청소년, 아동, 중장년",
+  "servDgst": "서울시 거주 6-65세 미만 돌봄이 필요한 장애인의 주 돌봄 제공자인 가족구성원의 부재 시, 장애당사자에게 일시적으로 돌봄 서비스를 제공합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005407&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005407",
+  "servNm": "장애인가족지원센터 긴급돌봄서비스",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005407",
+  "servNm": "장애인가족지원센터 긴급돌봄서비스",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 복지정책실 복지기획관 장애인자립지원과",
+  "ctpvNm": "서울특별시",
+  "servDgst": "서울시 거주 6-65세 미만 돌봄이 필요한 장애인의 주 돌봄 제공자인 가족구성원의 부재 시, 장애당사자에게 일시적으로 돌봄 서비스를 제공합니다.",
+  "lifeNmArray": "아동, 청소년, 청년, 중장년",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "aplyMtdNm": "방문, 전화, 인터넷, E-mail",
+  "sprtTrgtCn": "아래의 내용에 모두 해당하는 사람은 주소지 자치구 장애인가족지원센터 상담을 통해 대상자로 선정되면, 긴급돌봄 서비스를 제공 받을 수 있습니다.- 서울시 거주 6-65세 미만 등록 장애인- 돌봄이 필요한 장애인- 일시적으로 기존에 받고 있던 돌봄서비스(활동지원 등) 제공 받기 어려운 경우- 돌봄 제공자인 가족구성원이 부재한(경조사, 병원입원 등) 경우",
+  "slctCritCn": "아래의 내용에 모두 해당하는 사람은 주소지 자치구 장애인가족지원센터 상담을 통해 대상자로 선정되면, 긴급돌봄 서비스를 제공 받을 수 있습니다.- 서울시 거주 6-65세 미만 등록 장애인- 돌봄이 필요한 장애인- 일시적으로 기존에 받고 있던 돌봄서비스(활동지원 등) 제공 받기 어려운 경우- 돌봄 제공자인 가족구성원이 부재한(경조사, 병원입원 등) 경우",
+  "alwServCn": "1인당 연간 최대 64시간(1회 최소 2시간 이상 서비스 이용)",
+  "aplyMtdCn": "거주하고 있는 자치구 장애인가족지원센터 전화 상담→서비스 대상자 여부 결정→서비스 신청→서비스 이용",
+  "inqNum": "8474",
+  "lastModYmd": "20240110",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2614-9579",
+    "wlfareInfoReldNm": "구로장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-597-8339",
+    "wlfareInfoReldNm": "서초장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-303-3618",
+    "wlfareInfoReldNm": "마포장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-835-7780",
+    "wlfareInfoReldNm": "동작구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2249-1717",
+    "wlfareInfoReldNm": "동대문장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-907-9633",
+    "wlfareInfoReldNm": "도봉장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6956-5179",
+    "wlfareInfoReldNm": "노원구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6949-3133",
+    "wlfareInfoReldNm": "서울장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2209-0665",
+    "wlfareInfoReldNm": "중랑장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2279-7680",
+    "wlfareInfoReldNm": "중구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-722-7941",
+    "wlfareInfoReldNm": "종로구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-456-0708",
+    "wlfareInfoReldNm": "광진장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-357-3345",
+    "wlfareInfoReldNm": "은평장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-798-9935",
+    "wlfareInfoReldNm": "용산구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2069-0328",
+    "wlfareInfoReldNm": "영등포구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6951-2369",
+    "wlfareInfoReldNm": "양천구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-430-9681",
+    "wlfareInfoReldNm": "송파장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-912-5991",
+    "wlfareInfoReldNm": "성북장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6929-2456",
+    "wlfareInfoReldNm": "성동장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-886-9005",
+    "wlfareInfoReldNm": "관악구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6956-1991",
+    "wlfareInfoReldNm": "강서장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6238-8859",
+    "wlfareInfoReldNm": "강북구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-6959-4439",
+    "wlfareInfoReldNm": "강동구장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-802-0502",
+    "wlfareInfoReldNm": "금천장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3412-8551",
+    "wlfareInfoReldNm": "강남장애인가족지원센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-394-4430",
+    "wlfareInfoReldNm": "서대문장애인가족지원센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 장애인 가족 지원에 관한 조례"
+   }
+  ]
+ }
+}

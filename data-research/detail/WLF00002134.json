@@ -1,0 +1,62 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "서울특별시 강동구 복지가족국 가족정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "6589",
+  "intrsThemaNmArray": "서민금융, 입양·위탁",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "노년, 중장년, 아동, 영유아, 청소년, 청년",
+  "servDgst": "저소득 한부모 가족에게 복지서비스를 지원하여 생활안정 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002134&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002134",
+  "servNm": "저소득 한부모 가정지원",
+  "sggNm": "강동구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002134",
+  "servNm": "저소득 한부모 가정지원",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 강동구 복지가족국 가족정책과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "강동구",
+  "servDgst": "저소득 한부모 가족에게 복지서비스를 지원하여 생활안정 도모",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "intrsThemaNmArray": "입양·위탁, 서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "한부모가족의 모 또는 부와 만 18세(취학 시 만 22세) 미만의 자녀",
+  "slctCritCn": "기준중위소득 65%이하",
+  "alwServCn": "설명절 위문금, 월동대책비 등",
+  "inqNum": "6594",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3425-5766",
+    "wlfareInfoReldNm": "강동구청 가족정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 강동구 한부모가족 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260721UUWBM2000000201968938&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 저소득 한부모 가족 등 지원사업 추진계획.hwpx"
+   }
+  ]
+ }
+}

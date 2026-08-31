@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "전남광주통합특별시 무안군 사회복지과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "4600",
+  "lastModYmd": "20260821",
+  "lifeNmArray": "노년",
+  "servDgst": "만 65세 이상으로 매월 보험료 부과금액이 보건복지부가 정한 최저 보험료 13,100원 이하인 차상위계층에게 국민건강보험료를 지원함으로써 군민의 건강증진과 복지향상 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003457&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003457",
+  "servNm": "차상위 건강보험료 지원",
+  "sggNm": "무안군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003457",
+  "servNm": "차상위 건강보험료 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 무안군 사회복지과",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "무안군",
+  "servDgst": "만 65세 이상으로 매월 보험료 부과금액이 보건복지부가 정한 최저 보험료 13,100원 이하인 차상위계층에게 국민건강보험료를 지원함으로써 군민의 건강증진과 복지향상 도모",
+  "lifeNmArray": "노년",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "○ 지원대상&#13;  - 만 65세 이상 차상위계층으로서 국민건강보험공단(이하“공단”이라 한다) 무안군 지역 가입자로 매월 보험료 부과금액이 보건복지부가 정한 최저 보험료 13,100원 이하인 기가로 한다. 다만 의료급여법, 긴급복지지원법 등에서 지원받은 세대는 제외한다.&#13;  &#13;○ 선정기준&#13;  - 차상위계층 조사 자료와 공단에서 통보받은 보험료 관련 자료를 심사",
+  "slctCritCn": "소득인정액 최저생계비 120%이하가구",
+  "alwServCn": "○ 지급금액&#13;  - 1만원 이하의 월 건강보험료",
+  "inqNum": "4605",
+  "lastModYmd": "20260821",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-5279",
+    "wlfareInfoReldNm": "무안군청 사회복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "차상위 건강보험료 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=0933GOWF15GOWF150933&amp;atcflSn=1",
+    "wlfareInfoReldNm": "무안군 차상위계층 국민건강 보험료 지원조례.txt"
+   }
+  ]
+ }
+}

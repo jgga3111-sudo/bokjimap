@@ -1,0 +1,64 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 보건복지본부 복지정책관 돌봄정책과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "5500",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260821",
+  "servDgst": "법·제도내에서 지원받지 못하는 복지사각지대 위기가구에 대한 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000801&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000801",
+  "servNm": "복지사각지대 해소를 위한 노랑호루라기 지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000801",
+  "servNm": "복지사각지대 해소를 위한 노랑호루라기 지원",
+  "enfcBgngYmd": "20150701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 보건복지본부 복지정책관 돌봄정책과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "법·제도내에서 지원받지 못하는 복지사각지대 위기가구에 대한 지원",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "o 지원대상 : 법·제도에서 지원받지 못하는 위기가정으로 소득.재산.금융재산기준을 모두 충족하는 가구 o 선정기준   - (생계비) 기준중위소득 85%이하, 재산기준 261백만원 이하, 금융재산 800만원이하   - (주거비) 기준중위소득 85%이하, 재산기준 261백만원 이하, 금융재산 1,000만원이하     - (위기사례지원) 기준중위소득 85%이하, 재산기준 261백만원 이하, 금융재산 800만원이하",
+  "slctCritCn": "기준중위소득 85%이하, 금융재산 800만원이하(생계비, 위기사례지원), 1,000만원이하(주거비)일반재산 261백만원 이하",
+  "alwServCn": "o 생계급여, 주거급여, 위기사례지원",
+  "aplyMtdCn": "o 지원절차 : 위기상황발생→ 당사자, 유관기관, 이웃, 경찰서, 사회복지기관 등 신고 및 신청                → 현장조사(3일이내) → 선지원→ 적정성 심의 →  지원 결정 →  지원대상자 지속 관리o 신청, 조사, 급여관리, 급여지급 등의 지원처리절차는 현행 「긴급복지지원제도」를 따름",
+  "inqNum": "5503",
+  "lastModYmd": "20260821",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-613-3391",
+    "wlfareInfoReldNm": "전남광주통합특별시 돌봄정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "긴급복지지원법, 광주광역시 저소득주민의 생활안정 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250109UUWBM1919130117271868&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230526UUWBM1049220036413218&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 노랑호루라기 서식.hwp"
+   }
+  ]
+ }
+}

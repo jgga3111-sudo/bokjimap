@@ -1,0 +1,54 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "우편, 방문",
+  "bizChrDeptNm": "충청남도 산업경제실 경제기획관 일자리기업지원과",
+  "ctpvNm": "충청남도",
+  "inqNum": "4472",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20240627",
+  "lifeNmArray": "중장년, 청년",
+  "servDgst": "도내 구직자의 경제적 부담을 완화하고 취업능력 개발을 지원하기 위한 취업자격증 응시료 취득지원 사업",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005570&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005570",
+  "servNm": "충청남도 취업자격증 취득지원 사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005570",
+  "servNm": "충청남도 취업자격증 취득지원 사업",
+  "enfcBgngYmd": "20230701",
+  "enfcEndYmd": "20261231",
+  "bizChrDeptNm": "충청남도 산업경제실 경제기획관 일자리기업지원과",
+  "ctpvNm": "충청남도",
+  "servDgst": "도내 구직자의 경제적 부담을 완화하고 취업능력 개발을 지원하기 위한 취업자격증 응시료 취득지원 사업",
+  "lifeNmArray": "청년, 중장년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문, 우편",
+  "sprtTrgtCn": "충청남도에 거주하는 만19~64세 구직자",
+  "slctCritCn": "(지원금액) 회당 지원상한액 5만원 / 1인당 연간 최대 2회 지원(총 10만원 한도)  - 신청자 본인이 실제 지출한 응시료 실비로 산정 및 지급  - 1회 지원 상한액(5만원) 초과 시, 초과금액 미지급",
+  "alwServCn": "회당 지원상한액 5만원 / 1인당 연간 최대 2회 지원(총 10만원 한도  - 신청자 본인이 실제 지출한 응시료 실비로 산정 및 지급  - 1회 지원 상한액(5만원) 초과 시, 초과금액 미지급",
+  "aplyMtdCn": "(추진절차) 반기별 공고를 통해 신청자 접수 및 지원금 지급    ※ 기관별 역할      - (도) 지원계획 수립, 예산확보, 사업 추진현황 점검, 사업 결과 분석 등 총괄 운영      - (시군) 사업공고 및 홍보, 신청접수, 자격심사 및 대상자 결정, 지원금 지급(지역화폐), 사후관리(자격증 취득여부 확인, 취업알선 등)",
+  "inqNum": "4486",
+  "lastModYmd": "20240627",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-635-3400",
+    "wlfareInfoReldNm": "충청남도 산업경제실 일자리기업지원과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고용정책기본법 제6조"
+   }
+  ]
+ }
+}

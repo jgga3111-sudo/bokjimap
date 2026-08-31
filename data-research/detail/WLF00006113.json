@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 수영구 복지환경국 복지정책과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "4509",
+  "intrsThemaNmArray": "서민금융, 교육, 일자리",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "청년",
+  "servDgst": "사회 진출 과정에서 어려움을 겪는 청년 경계선지능인을 위한 맞춤형 교육을 통한 취업 연계 및 취업 후 관리를 통한 자립강화와 사회적응을 도와 경제활동의 주체로 성장",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006113&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006113",
+  "servNm": "청년 경계선지능인 지원사업",
+  "sggNm": "수영구",
+  "sprtCycNm": "부정기",
+  "srvPvsnNm": "현금지급, 프로그램/서비스(서비스)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006113",
+  "servNm": "청년 경계선지능인 지원사업",
+  "enfcBgngYmd": "20240701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 수영구 복지환경국 복지정책과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "수영구",
+  "servDgst": "사회 진출 과정에서 어려움을 겪는 청년 경계선지능인을 위한 맞춤형 교육을 통한 취업 연계 및 취업 후 관리를 통한 자립강화와 사회적응을 도와 경제활동의 주체로 성장",
+  "lifeNmArray": "청년",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "일자리, 교육, 서민금융",
+  "sprtCycNm": "부정기",
+  "srvPvsnNm": "현금지급, 프로그램/서비스(서비스)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "부산광역시 거주 19세~39세 경계선 지능인 청년",
+  "slctCritCn": "부산광역시 거주 19세~39세 청년 경계선 지능인",
+  "alwServCn": "출석율 80% 이상시 교통비 및 배움수당 지급",
+  "aplyMtdCn": "부산광역시 수영구 복지정책과 방문 접수",
+  "inqNum": "4513",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-610-4314",
+    "wlfareInfoReldNm": "부산광역시 수영구 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 수영구 경계선지능인 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250707UUWBM1914470145207588&amp;atcflSn=1",
+    "wlfareInfoReldNm": "부산광역시 수영구 경계선지능인 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

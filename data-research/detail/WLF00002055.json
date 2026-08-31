@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 주민복지과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "12464",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20250531",
+  "lifeNmArray": "영유아, 아동, 노년, 중장년, 청소년, 청년",
+  "servDgst": "실질적으로 생활이 곤란하지만 부양의무자 기준 등 기초생활보장 선정기준에 부적합하여 지원을 받지 못하는 저소득층에게 한시적으로 생계비 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002055&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002055",
+  "servNm": "저소득층 특별생계비 지원",
+  "sggNm": "서귀포시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 프로그램/서비스(서비스)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002055",
+  "servNm": "저소득층 특별생계비 지원",
+  "enfcBgngYmd": "20060101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 주민복지과",
+  "ctpvNm": "제주특별자치도",
+  "sggNm": "서귀포시",
+  "servDgst": "실질적으로 생활이 곤란하지만 부양의무자 기준 등 기초생활보장 선정기준에 부적합하여 지원을 받지 못하는 저소득층에게 한시적으로 생계비 지원",
+  "lifeNmArray": "영유아, 아동, 청소년, 청년, 중장년, 노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급, 프로그램/서비스(서비스)",
+  "sprtTrgtCn": "&lt;저소득층 특별생계비 지원 &gt;○ 지원대상  - 1 순위 : 국민기초생활보장수급권자가 기초생계급여를 신청하여 제외되거나 부양의무자 등으로 인하여 중지된 자(중위소득 50% 이하)   - 2 순위: 화재, 재해, 재난 또는 주 소득원이 경제력 상실 등의 사유로 긴급복지, 생계급여 등 공적지원이 어려운 자로서 읍면동장이 추천한 자(중위소득 80% 이하)",
+  "slctCritCn": "&lt;저소득층 특별생계비 지원 &gt;○ 지원대상  - 1 순위 : 국민기초생활보장수급권자가 기초생계급여를 신청하여 제외되거나 부양의무자 등으로 인하여 중지된 자(중위소득 50% 이하)   - 2 순위: 화재, 재해, 재난 또는 주 소득원이 경제력 상실 등의 사유로 긴급복지, 생계급여 등 공적지원이 어려운 자로서 읍면동장이 추천한 자(중위소득 80% 이하)",
+  "alwServCn": "&lt;저소득층 특별생계비&gt;○ 지원기준 : 1인가구 195,410원, 2인가구 324,790원, 3인가구 416,980원, 4인가구 507,670원5인가구 618,660원, 6인가구 679,390원",
+  "aplyMtdCn": "읍면동주민센터에서 신청",
+  "inqNum": "12470",
+  "lastModYmd": "20250531",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-760-2533",
+    "wlfareInfoReldNm": "서귀포시청 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저소득층을 위한 자체사업 운영지침"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250526UUWBM1712110139432529&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년도 저소득층을 위한 자체사업 운영지침.hwp"
+   }
+  ]
+ }
+}

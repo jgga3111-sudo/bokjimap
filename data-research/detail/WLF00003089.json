@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 창원시 창원보건소 건강관리과",
+  "ctpvNm": "경상남도",
+  "inqNum": "5691",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년",
+  "servDgst": "경제적 부담 경감 및 출산 친화적 사회분위기 조성으로 출산율 안정에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003089&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003089",
+  "servNm": "임산부 진료비 플러스 사업",
+  "sggNm": "창원시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003089",
+  "servNm": "임산부 진료비 플러스 사업",
+  "enfcBgngYmd": "20200701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 창원시 창원보건소 건강관리과",
+  "ctpvNm": "경상남도",
+  "sggNm": "창원시",
+  "servDgst": "경제적 부담 경감 및 출산 친화적 사회분위기 조성으로 출산율 안정에 기여",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준 창원시에 1년 이상 주소를 둔 임산부(2020.01.01.~ 신청일 현재 임산부)",
+  "slctCritCn": "신청일 기준 창원시에 1년 이상 주소를 둔 임산부(2020.01.01.~ 신청일 현재 임산부)",
+  "alwServCn": "국민행복 카드 소진 후 임신·출산 진료비 최대 20만원 지원",
+  "aplyMtdCn": "신청일 기준 임산부 주민등록주소지 관할 보건소 방문 신청",
+  "inqNum": "5701",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-225-7198",
+    "wlfareInfoReldNm": "창원보건소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "창원시 출산장려 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240722UUWBM1304250094878190&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

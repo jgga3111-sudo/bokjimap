@@ -19,6 +19,13 @@
  *  2. 응답이 <wantedDtl>로 감싸여 있는데 래퍼를 안 벗기면 정규식이 문서
  *     전체를 한 건으로 삼켜 **본문 필드가 전부 사라진다**. 173건을 그렇게
  *     날렸다. → 원본 XML을 먼저 저장한다. 파싱이 틀려도 한도를 다시 안 쓴다.
+ *
+ *  3. (2026-09-01) **두 API의 한도는 완전히 별개다.**
+ *     중앙부처 API는 정확히 **100건**에서 code 22가 났는데, 그 시점에 지자체
+ *     API는 멀쩡히 응답했다. 개발계정 한도를 "하루 1,000콜"로 뭉뚱그려 알고
+ *     있었지만 실제로는 활용신청 건마다 따로 걸려 있고, 중앙부처 쪽은 100이다.
+ *     → 한쪽이 막혀도 **다른 쪽은 계속 받는다.** 예전에는 아무 쪽에서든 code
+ *     22가 나오면 전체를 멈췄고, 그 바람에 지자체 570건을 남겨 둔 채 끝났다.
  * ────────────────────────────────────────────────────────────
  *
  * 재개 가능: 이미 받은 servId는 건너뛴다. 중간에 끊겨도 다시 돌리면 이어진다.
@@ -114,14 +121,31 @@ console.log(
   `이번 실행: ${todo.length}건 (조회수 ${todo[0]?.inqNum} ~ ${todo.at(-1)?.inqNum})`,
 );
 
-let ok = 0;
+const LABEL = { central: "중앙부처", local: "지자체" };
+
+const ok = { central: 0, local: 0 };
 let fail = 0;
+let skipped = 0;
 let cursor = 0;
 let stop = null;
+
+/**
+ * 한도가 끝난 **엔드포인트**를 담는다.
+ *
+ * 예전에는 code 22가 한 번 나오면 전체를 멈췄다. 그런데 두 API의 한도는
+ * 별개라, 중앙부처가 100건에서 막혔을 때 지자체는 아직 살아 있었다.
+ * 그대로 멈추면 그날 받을 수 있는 지자체 사업을 통째로 버리게 된다.
+ */
+const exhausted = new Set();
 
 async function worker() {
   while (cursor < todo.length && !stop) {
     const r = todo[cursor++];
+    /* 이미 막힌 쪽은 부르지 않는다. 불러 봐야 실패만 쌓인다. */
+    if (exhausted.has(r.provider)) {
+      skipped++;
+      continue;
+    }
     try {
       const xml = await fetchOne(r.provider, r.servId);
       await writeFile(`${RAW}/${r.servId}.xml`, xml);
@@ -133,19 +157,38 @@ async function worker() {
           1,
         ),
       );
-      ok++;
-      if (ok % 50 === 0) console.log(`  ${ok}/${todo.length} ...`);
+      ok[r.provider]++;
+      const total = ok.central + ok.local;
+      if (total % 50 === 0) console.log(`  ${total}/${todo.length} ...`);
       await sleep(DELAY_MS);
     } catch (e) {
+      if (e.quota) {
+        /* 이 항목은 못 받았지만 실패로 세지 않는다 — 우리 잘못이 아니고,
+           done에 안 들어가므로 다음 실행에서 그대로 이어받는다. */
+        if (!exhausted.has(r.provider)) {
+          exhausted.add(r.provider);
+          console.log(
+            `  ⏸ ${LABEL[r.provider]} API 한도 소진(${ok[r.provider]}건에서). 이쪽만 멈추고 나머지는 계속.`,
+          );
+        }
+        if (exhausted.size === Object.keys(ENDPOINT).length) {
+          stop = "양쪽 API 모두 한도 소진 — 내일 다시 실행하면 이어받는다";
+        }
+        continue;
+      }
       fail++;
       console.error(`  실패 ${r.servId} (${r.servNm}): ${e.message}`);
-      if (e.quota) stop = "일일 한도 소진 — 내일 다시 실행하면 이어받는다";
-      if (fail > 20 && ok === 0) stop = "연속 실패 — 중단";
+      if (fail > 20 && ok.central + ok.local === 0) stop = "연속 실패 — 중단";
     }
   }
 }
 
 await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
-console.log(`\n성공 ${ok} / 실패 ${fail}${stop ? `\n중단: ${stop}` : ""}`);
-console.log(`누적 상세: ${done.size + ok}건`);
+const got = ok.central + ok.local;
+console.log(
+  `\n성공 ${got} (중앙부처 ${ok.central} / 지자체 ${ok.local}) · 실패 ${fail}`,
+);
+if (skipped) console.log(`한도 소진으로 건너뜀 ${skipped}건 — 내일 이어받는다`);
+if (stop) console.log(`중단: ${stop}`);
+console.log(`누적 상세: ${done.size + got}건`);

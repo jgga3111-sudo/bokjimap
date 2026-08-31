@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 영월군 여성가족과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "5198",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260828",
+  "lifeNmArray": "청소년",
+  "servDgst": "저소득 청소년 생활 및 활동비 지원등으로 인한 학업 기회 제공 등",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004063&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004063",
+  "servNm": "청소년 특별지원",
+  "sggNm": "영월군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004063",
+  "servNm": "청소년 특별지원",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 영월군 여성가족과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "영월군",
+  "servDgst": "저소득 청소년 생활 및 활동비 지원등으로 인한 학업 기회 제공 등",
+  "lifeNmArray": "청소년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "중의소득 100% 이하의 위기 청소년",
+  "slctCritCn": "중의소득 100% 이하",
+  "alwServCn": "생활지원, 활동지원, 기타(교복 및 수학여행비)지원 등",
+  "aplyMtdCn": "신청서 및 특별지원조사서 직접 제출",
+  "inqNum": "5205",
+  "lastModYmd": "20260828",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-370-2690",
+    "wlfareInfoReldNm": "영월군청 여성가족과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "www.yw.go.kr",
+    "wlfareInfoReldNm": "영월군청 여성가족과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청소년복지지원법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230622UUWBM1437310040207668&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 위기청소년 특별지원 사업 운영 사업안내.pdf"
+   }
+  ]
+ }
+}

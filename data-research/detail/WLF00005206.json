@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "충청남도 논산시 행정복지국 인구청년교육과",
+  "ctpvNm": "충청남도",
+  "inqNum": "7696",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260811",
+  "lifeNmArray": "청년",
+  "servDgst": "결혼에 따른 청년들의 경제적 부담 경감 및 안정적인 정착 지원을 위한 결혼 친화적 환경을 조성하여 청년인구 유입 및 저출산 극복",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005206&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005206",
+  "servNm": "논산시 청년결혼축하금 지원사업",
+  "sggNm": "논산시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "지역화폐, 현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005206",
+  "servNm": "논산시 청년결혼축하금 지원사업",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 논산시 행정복지국 인구청년교육과",
+  "ctpvNm": "충청남도",
+  "sggNm": "논산시",
+  "servDgst": "결혼에 따른 청년들의 경제적 부담 경감 및 안정적인 정착 지원을 위한 결혼 친화적 환경을 조성하여 청년인구 유입 및 저출산 극복",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급, 지역화폐",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "• 연령 및 혼인, 주소요건 모두 충족되는 자 (연령) 혼인신고일 기준 부부 모두 만18세 이상 만45세 이하인 자        ※ 논산시 청년지원 기본 조례에 따른 청년 연령 (혼인) 부부 중 1명이상 초혼인 경우 (주소)     - 혼인신고일 기준 계속하여 부부 중 1명 이상이 시에 6개월 이상 주민등록을 두고 거주    - 결혼축하금 최초 신청일 현재 부부 모두 시에 주민등록을 두고 거주    - 3차 신청시까지 부부 모두 시에 주민등록을 두고 혼인관계를 유지할 것",
+  "slctCritCn": "연령 및 혼인, 주소요건 모두 충족되는 자 (연령) 혼인신고일 기준 부부 모두 만18세 이상 만45세 이하인 자  ※ 논산시 청년지원 기본 조례에 따른 청년 연령 (혼인) ①부부 중 1명 이상 초혼인 경우 ②2023.1.1.이후 혼인신고 한 부부 (주소)   ①혼인신고일 기준 계속하여 부부 중 1명 이상이 시에 6개월 이상 주민등록을 두고 거주  ②결혼축하금 최초 신청일 현재 부부 모두 시에 주민등록(외국인 배우자의 경우 주민등록표에 등재)을 두고 거주  ③3차 신청시까지 부부 모두 시에 주민등록을 두고 혼인관계를 유지할 것  (신청시기) 혼인신고일로부터 6개월이 경과 한 날부터 1년 이내",
+  "alwServCn": "총 700백만원 지급(3회 분할 지급)1차 : 300백만원(혼인신고 6개월 경과 후 지원금 신청시)2차 : 200백만원(결혼축하금 최초 신청일로 부터 2년 경과 후)3차 : 200백만원(결혼축하금 최초 신청일로 부터 3년 경과 후)",
+  "aplyMtdCn": "신청서 작성 및 첨부서류 제출",
+  "inqNum": "7702",
+  "lastModYmd": "20260811",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-746-5762",
+    "wlfareInfoReldNm": "충청남도 논산시 인구청년교육과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "논산시 청년지원 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230605UUWBM1848260037950133&amp;atcflSn=1",
+    "wlfareInfoReldNm": "230605 논산시 청년지원 기본 조례.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230605UUWBM1810430037948255&amp;atcflSn=1",
+    "wlfareInfoReldNm": "논산시 청년결혼축하금 지원신청서 양식.hwpx"
+   }
+  ]
+ }
+}

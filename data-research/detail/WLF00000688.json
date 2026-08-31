@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경기도 여성가족국 아동돌봄과",
+  "ctpvNm": "경기도",
+  "inqNum": "6802",
+  "intrsThemaNmArray": "안전·위기",
+  "lastModYmd": "20260710",
+  "lifeNmArray": "아동",
+  "servDgst": "결식 우려가 있는 18세 미만 아동 급식지원을 통한 건강한 성장 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000688&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000688",
+  "servNm": "결식아동 급식지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처), 현물지급, 기타",
+  "trgterIndvdlNmArray": "한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000688",
+  "servNm": "결식아동 급식지원",
+  "enfcBgngYmd": "20000101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 여성가족국 아동돌봄과",
+  "ctpvNm": "경기도",
+  "servDgst": "결식 우려가 있는 18세 미만 아동 급식지원을 통한 건강한 성장 도모",
+  "lifeNmArray": "아동",
+  "trgterIndvdlNmArray": "저소득, 한부모·조손",
+  "intrsThemaNmArray": "안전·위기",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현물지급, 전자바우처(바우처), 기타",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "결식우려가 있는 18세 미만 아동",
+  "slctCritCn": "국민기초생활보장법 수급자 가구의 아동, 차상위계층 아동, 한부모가족지원법 지원대상자 양육 아동, 긴급복지지원법 지원대상 가구 아동, 지역아동센터 등 아동복지프로그램 이용 아동 등",
+  "alwServCn": "아동 및 가정 상황에 따라 1~3식 지원 (지역아동센터 단체급식, 아동급식카드, 도시락 배달, 부식 배달 등)* 시군별 지원방법 상이",
+  "aplyMtdCn": "읍면동 행정복지센터에 신청하여 아동의 가정상황에 따라 지원여부 및 유형 결정",
+  "inqNum": "6806",
+  "lastModYmd": "20260710",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "읍면동 담당자 전화번호",
+    "wlfareInfoReldNm": "거주지 관할 읍면동 주민센터"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "시군구 홈페이지 참조",
+    "wlfareInfoReldNm": "거주지 관할 읍면동 주민센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "아동복지법 제35조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260604UUWBM1556280195223004&amp;atcflSn=1",
+    "wlfareInfoReldNm": "결식아동 급식지원 안내(2026년).hwpx"
+   }
+  ]
+ }
+}

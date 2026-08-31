@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "울산광역시 울주군 복지교육국 노인장애인과",
+  "ctpvNm": "울산광역시",
+  "inqNum": "6230",
+  "lastModYmd": "20260805",
+  "lifeNmArray": "노년",
+  "servDgst": "울주군에 거주하는 만 65세 이상 어르신들의 품위유지를 위한 목욕 및 이·미용비를 효도이용권 전자 바우처 형태로 지원하여 건강한 노후생활을 보장하고자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003970&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003970",
+  "servNm": "효도가게(노인 목욕비 및 이·미용비 지원) 사업",
+  "sggNm": "울주군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003970",
+  "servNm": "효도가게(노인 목욕비 및 이·미용비 지원) 사업",
+  "enfcBgngYmd": "20210101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "울산광역시 울주군 복지교육국 노인장애인과",
+  "ctpvNm": "울산광역시",
+  "sggNm": "울주군",
+  "servDgst": "울주군에 거주하는 만 65세 이상 어르신들의 품위유지를 위한 목욕 및 이·미용비를 효도이용권 전자 바우처 형태로 지원하여 건강한 노후생활을 보장하고자 함.",
+  "lifeNmArray": "노년",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "관내 주소를 두고 거주하는 65세이상 어르신(사회복지시설 또는 장기요양시설 입소자, 장기요양기관 방문목욕 대상자 제외)",
+  "slctCritCn": "지급분기 직전일 기준 만 65세이상 어르신",
+  "alwServCn": "효도이용권 바우처 카드 1인당 분기별 30,000원 자동충전하여 연간 120,000원 사용권 지급&lt;추가사항&gt;-2026년부터 사회보장협의 제외 대상임, -2026년 2회 추경 예산 적용함.",
+  "aplyMtdCn": "1. 지급장소: 주소지 읍면 행정복지센터2. 지급방법-본인: 신분증-가족대리(배우자 및 직계비속): 지급대상자, 대리인 각 신분증 3. 이용장소: 효도가게 협약업소(효도가게 표지부착)4. 이용방법: 가맹점에서 카드 결제(초과액은 본인 부담)",
+  "inqNum": "6234",
+  "lastModYmd": "20260805",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "052-204-0924",
+    "wlfareInfoReldNm": "울주군 노인장애인과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "울산광역시 울주군 노인 목욕비 및 이·미용비 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230522UUWBM0948270035548423&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(서식)효도이용권 바우처카드 발급 신청서.hwp"
+   }
+  ]
+ }
+}

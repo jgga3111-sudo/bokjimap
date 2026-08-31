@@ -1,0 +1,59 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 사회복지국 장애인복지과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "5500",
+  "lastModYmd": "20260716",
+  "servDgst": "복지카드 수령을 위해 주민센터를 재차 방문해야하는 장애인의 불편함을 해소",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001029&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001029",
+  "servNm": "장애인복지카드 등기배송서비스",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001029",
+  "servNm": "장애인복지카드 등기배송서비스",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 사회복지국 장애인복지과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "복지카드 수령을 위해 주민센터를 재차 방문해야하는 장애인의 불편함을 해소",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "장애인복지카드를 신청한 등록장애인",
+  "slctCritCn": "장애인복지카드를 신청한 등록장애인",
+  "alwServCn": "등기배송비 지원",
+  "aplyMtdCn": "동주민센터 신청후 수령",
+  "inqNum": "5502",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "주소지 읍면동사무소",
+    "wlfareInfoReldNm": "주소지 읍면동사무소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지카드 발급 및 관리업무 규정"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=9330GOWF14GOWF149330&amp;atcflSn=1",
+    "wlfareInfoReldNm": "장애인복지카드 등기배송.hwp"
+   }
+  ]
+ }
+}

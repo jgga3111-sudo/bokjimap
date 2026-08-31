@@ -1,0 +1,51 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "유초등교육과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "5364",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "영유아",
+  "servDgst": "사립유치원 재원 유아 교육비 지원을 통한 학부모의 교육비 부담 경감 및 유아의 균등한 교육기회 보장",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003871&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003871",
+  "servNm": "사립유치원 유아 교육비 지원",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "감면",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003871",
+  "servNm": "사립유치원 유아 교육비 지원",
+  "enfcBgngYmd": "20200301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "유초등교육과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "사립유치원 재원 유아 교육비 지원을 통한 학부모의 교육비 부담 경감 및 유아의 균등한 교육기회 보장",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "감면",
+  "sprtTrgtCn": "유아학비 지원 자격 대상이면서 사립유치원에 다니는 만3~5세 유아&#13;(유치원 조기입학을 희망하는 2018년 1~2월생으로 만3세반에 취원한 유아 포함)",
+  "slctCritCn": "유아학비 자격 대상(유치원에 다니는 만3~5세 유아), 단 지원기간은 3년을 초과할 수 없음&#13;",
+  "alwServCn": "- 유아 교육비 학부모부담금 월 5만원 지원(학부모부담금 경감)",
+  "inqNum": "5370",
+  "lastModYmd": "20260714",
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제32조(사립유치원에 대한 지원)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=5760GOWF16GOWF165760&amp;atcflSn=1",
+    "wlfareInfoReldNm": "1. 2022학년도 사립유치원 유아 교육비 지원 계획.pdf"
+   }
+  ]
+ }
+}

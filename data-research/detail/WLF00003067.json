@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경상남도 양산시 문화복지국 주민생활지원과",
+  "ctpvNm": "경상남도",
+  "inqNum": "18474",
+  "intrsThemaNmArray": "서민금융, 안전·위기",
+  "lastModYmd": "20250801",
+  "servDgst": "저소득주민의 생활안정 도모하고 자립자활 증진에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003067&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003067",
+  "servNm": "저소득주민 생활안정지원(긴급생계,긴급의료)",
+  "sggNm": "양산시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003067",
+  "servNm": "저소득주민 생활안정지원(긴급생계,긴급의료)",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 양산시 문화복지국 주민생활지원과",
+  "ctpvNm": "경상남도",
+  "sggNm": "양산시",
+  "servDgst": "저소득주민의 생활안정 도모하고 자립자활 증진에 기여",
+  "intrsThemaNmArray": "안전·위기, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "1) 지원대상&#13;  - 주소득자의 사망ㆍ질병ㆍ사고 등으로 갑자기 생계유지가 어려운 자  &#13;  - 천재지변, 화재 등으로 재산ㆍ소득 손실 발생하여 생계유지가 어려운 자&#13;  - 생계곤란으로 수도ㆍ가스ㆍ전기 공급이 중단되었거나, 중단 위기에 놓인 자&#13;  - 질환으로 의료비 납부에 어려움을 겪고있는 자&#13;  - 기타 긴급한 사유로 생계지원이 필요하다고 읍ㆍ면ㆍ동장이 판단하는 자 &#13;2) 선정기준&#13;  - 중위소득 80% 이하 저소득층",
+  "slctCritCn": "중위소득 80% 이하",
+  "alwServCn": "1) 지급금액  - 생계비 : 보건복지부 긴급생계비 지원금액의 50%  - 의료비 : 1,000천원 한도 내 지원",
+  "inqNum": "18486",
+  "lastModYmd": "20250801",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-392-2443",
+    "wlfareInfoReldNm": "양산시청 주민생활지원과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "양산시 저소득 주민의 생활안정 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240703UUWBM1057210092344000&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

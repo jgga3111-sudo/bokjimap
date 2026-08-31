@@ -1,0 +1,54 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 아동정책과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "5359",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20250619",
+  "lifeNmArray": "영유아",
+  "servDgst": "부모부담금(특별활동비) 지원으로 부모 양육부담 경감 및 안정적인 특별활동 프로그램 운영으로 보육의 품질 향상",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005628&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005628",
+  "servNm": "어린이집 특별활동비 지원",
+  "sggNm": "춘천시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005628",
+  "servNm": "어린이집 특별활동비 지원",
+  "enfcBgngYmd": "20230901",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 아동정책과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "춘천시",
+  "servDgst": "부모부담금(특별활동비) 지원으로 부모 양육부담 경감 및 안정적인 특별활동 프로그램 운영으로 보육의 품질 향상",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "관내 어린이집에 재원 중인 영유아(보육나이 2세이상)",
+  "slctCritCn": "-매월 1일 기준 관내 어린이집 재원중인 영유아(2세이상) ※단, 특별활동 미참여 아동 미지원",
+  "alwServCn": "연령별(보육나이 기준) 특별활동비 1인 월 2~5만원 지원- 2세 : 1인 월 최대 2만원- 3세이상 : 1인 월 최대 5만원※실소요액 내 지원",
+  "aplyMtdCn": "직접 지원(별도 신청사항 없음)",
+  "inqNum": "5364",
+  "lastModYmd": "20250619",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-250-4803",
+    "wlfareInfoReldNm": "춘천시청 아동정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "춘천시 영유아보육 조례 제28조(비용의 보조)"
+   }
+  ]
+ }
+}

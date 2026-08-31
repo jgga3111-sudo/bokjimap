@@ -1,0 +1,58 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "충청북도 보은군 보건소 건강증진과",
+  "ctpvNm": "충청북도",
+  "inqNum": "5448",
+  "lastModYmd": "20250611",
+  "lifeNmArray": "중장년, 노년",
+  "servDgst": "만65세이상 대상포진 무료접종으로 대상포진 예방",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004134&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004134",
+  "servNm": "대상포진 무료예방접종 사업 대상자 확대",
+  "sggNm": "보은군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004134",
+  "servNm": "대상포진 무료예방접종 사업 대상자 확대",
+  "enfcBgngYmd": "20220101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 보은군 보건소 건강증진과",
+  "ctpvNm": "충청북도",
+  "sggNm": "보은군",
+  "servDgst": "만65세이상 대상포진 무료접종으로 대상포진 예방",
+  "lifeNmArray": "중장년, 노년",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "보은군에 1년이상 거주 중인 만65세이상 어르신 대상포진 무료접종",
+  "slctCritCn": "보은군에 1년이상 거주 중인 만65세이상 어르신 대상포진 무료접종",
+  "alwServCn": "만65세이상 어르신 무료접종",
+  "inqNum": "5451",
+  "lastModYmd": "20250611",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-540-5616",
+    "wlfareInfoReldNm": "보은군 보건소 모자보건팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "보은군 대상포진 예방접종 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7063GOWF15GOWF157063&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대상포진입법예고문.hwp"
+   }
+  ]
+ }
+}

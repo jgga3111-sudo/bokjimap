@@ -1,0 +1,54 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "제주특별자치도 교통항공국 대중교통과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "26310",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260212",
+  "servDgst": "제주도 거주 주민 65세이상 어르신 및 국가유공자, 등록장애인, 어린이, 청소년 등 대중교통이용 시 버스요금 면제",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005261&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005261",
+  "servNm": "제주교통복지카드 운영",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처), 감면",
+  "trgterIndvdlNmArray": "장애인, 보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005261",
+  "servNm": "제주교통복지카드 운영",
+  "enfcBgngYmd": "20170809",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 교통항공국 대중교통과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "제주도 거주 주민 65세이상 어르신 및 국가유공자, 등록장애인, 어린이, 청소년 등 대중교통이용 시 버스요금 면제",
+  "trgterIndvdlNmArray": "보훈대상자, 장애인",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "감면, 전자바우처(바우처)",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "제주교통복지카드  - (농협) 제주도민 65세이상 어르신, 등록장애인, 국가유공자 본인   - (ON나라페이) 도내 거주 어린이, 청소년",
+  "slctCritCn": "제주교통복지카드  - (농협) 제주도민 65세이상 어르신, 등록장애인, 국가유공자 본인   - (ON나라페이) 도내 거주 어린이, 청소년",
+  "alwServCn": "해당없음",
+  "aplyMtdCn": "제주교통복지카드  - (농협) 농협은행 방문 신청   - (ON나라페이) 도청 및 교육청에서 학교로 직접 배부",
+  "inqNum": "26334",
+  "lastModYmd": "20260212",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-4327",
+    "wlfareInfoReldNm": "제주특별자치도 대중교통과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제주특별자치도 공영버스운송사업 지방직영기업 설치 및 운영 조례 제6조"
+   }
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 거제시 보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "inqNum": "5453",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "노년",
+  "servDgst": "시력 장애를 초래하는 노인성 질환인 백내장 수술비를 대상자에게 지원함으로써 시민의 안전한 일상생활 및 건강한 삶의 질 향상 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005922&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005922",
+  "servNm": "어르신 백내장 수술 의료비 지원 사업",
+  "sggNm": "거제시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005922",
+  "servNm": "어르신 백내장 수술 의료비 지원 사업",
+  "enfcBgngYmd": "20260101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 거제시 보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "sggNm": "거제시",
+  "servDgst": "시력 장애를 초래하는 노인성 질환인 백내장 수술비를 대상자에게 지원함으로써 시민의 안전한 일상생활 및 건강한 삶의 질 향상 도모",
+  "lifeNmArray": "노년",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준 주민등록상 1년 이상 거제시에 주소를 둔 65세 이상,해당연도 건강보험료 기준 중위소득 150%이하에 해당하는 자로 안과 전문의에게 백내장 수술이 필요하다고 진단 받은 자",
+  "slctCritCn": "신청일 기준 주민등록상 1년 이상 거제시에 주소를 둔 65세 이상,해당연도 건강보험료 기준 중위소득 150%이하에 해당하는 자로 안과 전문의에게 백내장 수술이 필요하다고 진단 받은 자",
+  "alwServCn": "백내장 진료비 및 수술비 본인부담금 지원(1안당 최대24만원 이내, 최대2안) - 의료기관에 지급",
+  "aplyMtdCn": "연중 수시 접수가능 보건소 담당자와 유선으로 상담 후, 서류 구비하여 보건소 방문접수",
+  "inqNum": "5493",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-639-6216",
+    "wlfareInfoReldNm": "거제시 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "국민건강증진법 제19조(건강증진사업 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260618UUWBM1542540197637975&amp;atcflSn=1",
+    "wlfareInfoReldNm": "거제시 어르신 무릎인공관절 및 백내장 수술 의료비 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "서울특별시 강남구 복지생활국 사회보장과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "7739",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260801",
+  "servDgst": "저소득주민의 최저생활 수준 충족을 위해 법정급여외 명절위문금 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002224&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002224",
+  "servNm": "저소득주민 명절위문금 지급",
+  "sggNm": "강남구",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002224",
+  "servNm": "저소득주민 명절위문금 지급",
+  "enfcBgngYmd": "20140101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 강남구 복지생활국 사회보장과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "강남구",
+  "servDgst": "저소득주민의 최저생활 수준 충족을 위해 법정급여외 명절위문금 지급",
+  "trgterIndvdlNmArray": "저소득, 한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "1) 지원대상&#13;    - 국민기초생활수급자 및 차상위계층&#13;    - `한부모가족지원법`상 한부모가족&#13;2) 선정기준&#13;    - 기초생활수급자 : 국민기초생활보장 제도의 가구범위로 동일 적용&#13;    - 차상위계층 선정기준 : 주거급여, 교육급여, 차상위자활, 차상위장애인, 차상위본인부담경감대상자, 차상위계층 확인, 한부모가족&#13;       ※ 차상위자활은 자활근로사업에 참여하는 가구에 한함.",
+  "slctCritCn": "국민기초수급자 및 차상위계층, 한부모가족",
+  "alwServCn": "1) 지급시기(설, 추석 2회 지급)&#13;2) 지급금액&#13;    - 의료,생계급여 수급자 : 가구당 6만원(시비 3만원, 구비3만원)&#13;    - 차상위계층 : 가구당 5만원&#13;      ※ 1가구 세대주 1인에 대해서만 지급",
+  "inqNum": "7760",
+  "lastModYmd": "20260801",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3423-5863",
+    "wlfareInfoReldNm": "강남구 사회보장과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 강남구 저소득주민의 생활안정지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260731UUWBM1641340203170883&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 저소득 주민 부가급여 지원 계획.hwpx"
+   }
+  ]
+ }
+}

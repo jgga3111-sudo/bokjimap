@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 모바일, 방문",
+  "bizChrDeptNm": "부산광역시 동래구 문화환경국 평생교육과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "4693",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청소년",
+  "servDgst": "학부모 교육비 부담 완화",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004150&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004150",
+  "servNm": "교복구입비 지원",
+  "sggNm": "동래구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004150",
+  "servNm": "교복구입비 지원",
+  "enfcBgngYmd": "20210308",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 동래구 문화환경국 평생교육과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "동래구",
+  "servDgst": "학부모 교육비 부담 완화",
+  "lifeNmArray": "청소년",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷, 모바일",
+  "sprtTrgtCn": "2026. 3. 1. 현재 동래구 주민등록자로 교복을 입는- 고등학교 및 타 시·도 소재 중학교 입학생- 학교 이외의 교육기관 및 대안교육기관 입학생(중,고등학교 과정)",
+  "slctCritCn": "2026. 3. 1. 현재 동래구 주민등록자로 교복을 입는- 고등학교 및 타 시·도 소재 중학교 입학생- 학교 이외의 교육기관 및 대안교육기관 입학생(중,고등학교 과정)",
+  "alwServCn": "교복구입비 지원금",
+  "aplyMtdCn": "1) 방문신청 : 주소지 동 행정복지센터 또는 구청 평생교육과2) 온라인 신청 : 동래희망교육지구 홈페이지",
+  "inqNum": "4695",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-550-4464",
+    "wlfareInfoReldNm": "동래구 평생교육과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.dongnae.go.kr/index.dongnae?menuCd=DOM_000000115000000000",
+    "wlfareInfoReldNm": "동래구 평생교육과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시동래구 교복 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250611UUWBM1106000141519851&amp;atcflSn=1",
+    "wlfareInfoReldNm": "부산광역시동래구 교복 지원 조례.hwp"
+   }
+  ]
+ }
+}

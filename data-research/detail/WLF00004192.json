@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "충청남도 인구전략국 인구정책과",
+  "ctpvNm": "충청남도",
+  "inqNum": "13439",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "lastModYmd": "20260725",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "저출산 극복 및 자녀양육에 대한 경제적 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004192&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004192",
+  "servNm": "충청남도 행복키움수당",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004192",
+  "servNm": "충청남도 행복키움수당",
+  "enfcBgngYmd": "20181120",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 인구전략국 인구정책과",
+  "ctpvNm": "충청남도",
+  "servDgst": "저출산 극복 및 자녀양육에 대한 경제적 지원",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "24개월 이상 ~ 36개월 미만 영유아",
+  "slctCritCn": "24개월 이상 ~ 36개월 미만 영유아",
+  "alwServCn": "월 10만원 현금 지급",
+  "aplyMtdCn": "읍면동 주민센터 신청",
+  "inqNum": "13451",
+  "lastModYmd": "20260725",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-635-4866",
+    "wlfareInfoReldNm": "충청남도 인구전략국 인구정책과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.chungnam.go.kr/",
+    "wlfareInfoReldNm": "충청남도 인구전략국 인구정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "충청남도 행복키움수당 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250819UUWBM1020440151107254&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 행복키움수당 사업안내.hwp"
+   }
+  ]
+ }
+}

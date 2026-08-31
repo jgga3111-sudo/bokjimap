@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "E-mail",
+  "bizChrDeptNm": "대전광역시 경제과학국 소상공정책과",
+  "ctpvNm": "대전광역시",
+  "inqNum": "4926",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20250801",
+  "lifeNmArray": "중장년, 노년, 청년",
+  "servDgst": "자영업자의 사회 안전망 확충 및 경영안정 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000877&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000877",
+  "servNm": "1인 영세 자영업자 고용보험료 지원",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000877",
+  "servNm": "1인 영세 자영업자 고용보험료 지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대전광역시 경제과학국 소상공정책과",
+  "ctpvNm": "대전광역시",
+  "servDgst": "자영업자의 사회 안전망 확충 및 경영안정 지원",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "E-mail",
+  "sprtTrgtCn": "사업자등록증상 사업장 소재지가 대전이며 연매출 3억원 이하인 1인 영세 자영업자로 고용보험 가입자",
+  "slctCritCn": "사업자등록증상 사업장 소재지가 대전이며 연매출 3억원 이하인 1인 영세 자영업자로 고용보험 가입자",
+  "alwServCn": "월 납부 고용보험료의 20~30% 지원",
+  "aplyMtdCn": "신청 접수(팩스, 이메일) → 대상자 확정(분기별) → 지원금 지급(분기별)* '대전비즈' 사이트를 통해 사업공고",
+  "inqNum": "4931",
+  "lastModYmd": "20250801",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "042-380-3063",
+    "wlfareInfoReldNm": "대전일자리경제진흥원"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대전광역시 소상공인 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240613UUWBM1814520089426705&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대전광역시 소상공인 지원에 관한 조례.pdf"
+   }
+  ]
+ }
+}

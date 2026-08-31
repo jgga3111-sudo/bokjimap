@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "전북특별자치도 남원시 기획조정실 기획예산과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "10368",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "청년",
+  "servDgst": "월세주택에 거주중인 청년을 대상으로 월세 최대 16만원씩 12개월 지원(자격유지시 최대 5년 지원)",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004961&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004961",
+  "servNm": "남원시 청년 주거 정착 지원사업",
+  "sggNm": "남원시",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004961",
+  "servNm": "남원시 청년 주거 정착 지원사업",
+  "enfcBgngYmd": "20220101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 남원시 기획조정실 기획예산과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "남원시",
+  "servDgst": "월세주택에 거주중인 청년을 대상으로 월세 최대 16만원씩 12개월 지원(자격유지시 최대 5년 지원)",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "반기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "19세~45세 이하의 남원시 월세 주택에 거주중인 청년",
+  "slctCritCn": "- 연령기준 : 19세 ~ 45세- 소득기준 : 기준중위소득 180%이하- 거주기준 : 주민등록상 주소지가 남원시 월세주택, 보증금 1억원 이하, 월세 60만원 이하의 주택 및 아파트- 무주택기준 : 가족관계증명서의 본인 및 배우자 무주택",
+  "alwServCn": "주거비(월세) 지원금 월 최대 16만원씩 12개월 지원",
+  "aplyMtdCn": "남원시청 홈페이지 온라인 신청",
+  "inqNum": "10375",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-620-6613",
+    "wlfareInfoReldNm": "남원시청 기획예산과 인구정책팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "남원시 청년 기본 조례 제20조(청년의 주거안정과 생활수준 보장 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240619UUWBM1112470090126401&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

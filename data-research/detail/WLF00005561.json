@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "전북특별자치도 전주시 인구청년정책국 인구정책과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "7954",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260715",
+  "lifeNmArray": "영유아",
+  "servDgst": "저출생 문제가 국가적 문제로 대두됨에 따라 이를 해결하기 위해 출생장려금을 지급하여 출산·양육친화적 환경 조성과 출산율 제고를 도모함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005561&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005561",
+  "servNm": "전주시 출생축하금 지원사업",
+  "sggNm": "전주시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005561",
+  "servNm": "전주시 출생축하금 지원사업",
+  "enfcBgngYmd": "20110101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 전주시 인구청년정책국 인구정책과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "전주시",
+  "servDgst": "저출생 문제가 국가적 문제로 대두됨에 따라 이를 해결하기 위해 출생장려금을 지급하여 출산·양육친화적 환경 조성과 출산율 제고를 도모함.",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "전주시에 출생신고한 출생아로 출생일 현재 출생아의 부 또는 모가 전주시 관내에 주민등록이 있어야 하고, 지원대상자인 출생아가 주민등록상 동일 세대원인 경우(출생일로부터 1년이내 신청가능)",
+  "slctCritCn": "전주시에 출생신고한 출생아로 출생일 현재 출생아의 부 또는 모가 전주시 관내에 주민등록이 있어야 하고, 지원대상자인 출생아가 주민등록상 동일 세대원인 경우출생일로부터 1년이내 신청 가능",
+  "alwServCn": "출생축하금은 일시지원셋째아이상 자녀양육비는 분할지원 임.",
+  "aplyMtdCn": "주민센터에서 출생신고를 하면서 출산원스톱지원서비스로 출산장려금도 함께 신청함. 혹은 온라인으로  출산원스톱지원서비스를 신청함.",
+  "inqNum": "7964",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-281-8608",
+    "wlfareInfoReldNm": "전주시 인구청년정책국 인구정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전주시 저출생 대책 및 출산장려 지원 조례 제6조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM0935340091167882&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출산 조례.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상북도 고령군 주민복지과",
+  "ctpvNm": "경상북도",
+  "inqNum": "4918",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260807",
+  "lifeNmArray": "청소년",
+  "servDgst": "(사업요약)  학업성적이 우수하고 품행이 바른 고등학교 및 대학생을 선발하여 장학금지급\n(선정기준)생,주거,의료,교육급여 수급자 및 기타 저소득층 자녀",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002989&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002989",
+  "servNm": "저소득주민 자녀장학금",
+  "sggNm": "고령군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002989",
+  "servNm": "저소득주민 자녀장학금",
+  "enfcBgngYmd": "20170102",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상북도 고령군 주민복지과",
+  "ctpvNm": "경상북도",
+  "sggNm": "고령군",
+  "servDgst": "(사업요약)  학업성적이 우수하고 품행이 바른 고등학교 및 대학생을 선발하여 장학금지급\n(선정기준)생,주거,의료,교육급여 수급자 및 기타 저소득층 자녀",
+  "lifeNmArray": "청소년",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "생계.주거.의료.교육급여 수급자 및 기타 저소득층 자녀",
+  "slctCritCn": "기초생활보장수급자 가구, 차상위계층",
+  "alwServCn": "고등학생(50만원) 및 대학생(100만원)에게 장학금 지급",
+  "aplyMtdCn": "읍면사무소 신청(9월)",
+  "inqNum": "4929",
+  "lastModYmd": "20260807",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-950-6168",
+    "wlfareInfoReldNm": "고령군청 주민복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "고령군 저소득주민자녀장학금지급조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=8815GOWF14GOWF148815&amp;atcflSn=1",
+    "wlfareInfoReldNm": "저소득주민자녀장학금 신청서.hwp"
+   }
+  ]
+ }
+}

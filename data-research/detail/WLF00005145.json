@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 전화, 인터넷",
+  "bizChrDeptNm": "부산광역시 청년산학국 청년정책과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "4733",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260704",
+  "lifeNmArray": "청년",
+  "servDgst": "청년의 경제적 자립 및 부채문제 해소 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005145&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005145",
+  "servNm": "부산청년 신용회복지원 사업",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005145",
+  "servNm": "부산청년 신용회복지원 사업",
+  "enfcBgngYmd": "20220602",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 청년산학국 청년정책과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "청년의 경제적 자립 및 부채문제 해소 지원",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 전화, 인터넷",
+  "sprtTrgtCn": "주민등록 상 부산 거주 중인 18~39세 이하 청년",
+  "slctCritCn": "1. 채무조정비용 지원-지원대상: 많은 부채로 정상적인 상환이 어려워 상환기간연장, 채무감면 등 상환조건을 변경하여 경제적으로 재기할 수 있도록 채무조정을 희망하는 청년-지원구분: 신용회복위원회를 통한 개인워크아웃, 사전채무조정, 신속채무조정 / 법원을 통한 개인회생-지원내용: 채무조정 비용 최대100만원 이내(전세사기 피해 청년 150만원 이내)2. 연체예방비용 지원-지원대상: 최근 3개월간 월 평균 소득이 50만원 이상인 자로, 연체 가능성이 있거나 최근 3개월이내 연체이력이 있는 청년-지원내용: 신청인 기준 1회 50만원씩 총 2회 지원",
+  "alwServCn": "1.2. 채무조정비용 지원 : 신청인 기준 1회 100만원 이내 상환 및 신청비용 지원3. 긴급생계비 지원 : 신청인 기준 1회 50만원씩 총 2회 지원",
+  "aplyMtdCn": "홈페이지(부산청년희망신용상담센터), 유선 및 방문접수",
+  "inqNum": "4747",
+  "lastModYmd": "20260704",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-860-6711",
+    "wlfareInfoReldNm": "부산신용보증재단"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://xn--660b26n03cj7dpsuwgp.kr/main/",
+    "wlfareInfoReldNm": "부산신용보증재단"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 청년 기본 조례 제17조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250630UUWBM1311390144106637&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 청년 신용회복지원 사업 추진계획.pdf"
+   }
+  ]
+ }
+}

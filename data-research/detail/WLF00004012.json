@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 우편",
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 장애인복지과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "19284",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260805",
+  "servDgst": "ㅇ 장애로 인하여 의료비 지출이 높은 중증장애인의 의료비를 지원함으로써 장애인과 그 가족의 정신적 고통과 경제적 부담을 경감\nㅇ 경제적 조건 없이 의료비를 지원하여 중증 장애인의 소외감 해소",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004012&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004012",
+  "servNm": "중증장애인 의료비 지원",
+  "sggNm": "서귀포시",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004012",
+  "servNm": "중증장애인 의료비 지원",
+  "enfcBgngYmd": "19930101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 장애인복지과",
+  "ctpvNm": "제주특별자치도",
+  "sggNm": "서귀포시",
+  "servDgst": "ㅇ 장애로 인하여 의료비 지출이 높은 중증장애인의 의료비를 지원함으로써 장애인과 그 가족의 정신적 고통과 경제적 부담을 경감\nㅇ 경제적 조건 없이 의료비를 지원하여 중증 장애인의 소외감 해소",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 우편",
+  "sprtTrgtCn": "국민건강보험대상자로 중증장애인 중 기존 지원대상자('19.7.1.이전(장애인등급제 폐지 이전) 1급 장애인)",
+  "slctCritCn": "ㅇ 기존 : '19.7.1이전 1급 장애인(장애인등급제 폐지 이전 1급 장애인)&#13;ㅇ 제외대상자&#13;- 공통 : 의료급여대상자 및 차상위 본인부담경감대상자 등 기타 타 법령으로 지원 받는 자&#13;- 기존 : 장애정도 재판정시 경증으로 결정된 자",
+  "alwServCn": "외래시 : 본인부담 의료비 중 타법령에 의해 지급되는 비용을 제외한 금액 전액 지원&#13;입원시 : 본인부담 의료비 중 타법령에 의해 지급되는 비용을 제외한 금액의 50% 지원&#13;- 지원불가항목 : 의료급여법상 비급여 항목, 약국에서 의약품 조제에 의한 본인부담금,&#13;                       외래진료시 병원에서의 의약품 조제에 의한 본인부담금, 예약진료비",
+  "aplyMtdCn": "장애인은 의료기관에서 외래 및 입원진료시 복지카드 제시 후 의료비 지원 신청→ 의료기관은 1급 장애인 여부 확인 후 진료 실시, 의료비 청구서와 진료내역서 첨부하여 행정시장에게 의료비 청구",
+  "inqNum": "19301",
+  "lastModYmd": "20260805",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-760-4961",
+    "wlfareInfoReldNm": "서귀포시 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제주특별자치도 장애인건강권 및 의료접근성 보장에 관한 조례 제6조(의료비 지원)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250812UUWBM1440300150404793&amp;atcflSn=1",
+    "wlfareInfoReldNm": "중증장애인의료비지원.pdf"
+   }
+  ]
+ }
+}

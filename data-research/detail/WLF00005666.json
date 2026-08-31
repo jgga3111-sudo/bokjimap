@@ -1,0 +1,72 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 장애인복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "5573",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "lastModYmd": "20260819",
+  "lifeNmArray": "중장년, 청년, 노년",
+  "servDgst": "지역내 비영리기관과의 협업을 통하여 춘천시 중증장애인에게 일자리를 제공함으로써 장애인의 자립생활 기반을 지원하고 사회참여에 기여하는 사업입니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005666&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005666",
+  "servNm": "중증장애인 지역연계형 일자리사업",
+  "sggNm": "춘천시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005666",
+  "servNm": "중증장애인 지역연계형 일자리사업",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 장애인복지과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "춘천시",
+  "servDgst": "지역내 비영리기관과의 협업을 통하여 춘천시 중증장애인에게 일자리를 제공함으로써 장애인의 자립생활 기반을 지원하고 사회참여에 기여하는 사업입니다.",
+  "lifeNmArray": "청년, 중장년, 노년",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "2024년 중증장애인 지역연계형 일자리 사업 지원자격 및 근로조건, 급여는 다음과 같습니다. 1. 지원자격   · 모집공고일 전까지 해당 관내(춘천시에) 주민등록상 거주하고 있는 만 18세 이상 「장애인복지법상」 미취업 중증장애인 2. 근로조건 및 급여    · 장애인 참여자: 1일 3시간 주15시간 근무, 월 815,280원 3. 구비서류   ① 장애인일자리사업 참여신청서(희망직무명 및 자필서명 필수) 1부    ② 개인정보 수집·이용 및 제3자 제공 안내(자필서명 필수) 1부    ③ 장애인증명서 1부.(주소지 행정복지센터에서 발급)   ④ 주민등록등본 1부.   ⑤ 건강보험자격득실확인서 1부.(고용보험 가입 여부/미취업 여부 확인 서류)   ※ 건강보험 적용 제외 대상자는 미취업사실확인서 제출(자필서명 필수) *수행기관은 매년 초 시에서 선정하며 달라질 수 있습니다.",
+  "slctCritCn": "관내(춘천시에) 주민등록상 거주하고 있는 만 18세 이상 「장애인복지법상」 미취업 중증장애인으로 수행기관 모집공고 시 지원하여 선발 후 참여가능합니다",
+  "alwServCn": "- 근로조건 및 급여    · 장애인 참여자: 1일 3시간 주15시간 근무, 월 815,280원",
+  "aplyMtdCn": "수행기관 모집기간 중 지원신청 -&gt; 선발 후 참여 가능",
+  "inqNum": "5580",
+  "lastModYmd": "20260819",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-250-4794",
+    "wlfareInfoReldNm": "강원특별자치도 춘천시 복지국 장애인복지과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.chuncheon.go.kr/new-welfare/disabled/job/business/",
+    "wlfareInfoReldNm": "강원특별자치도 춘천시 복지국 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법 제21조(직업)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240708UUWBM1640580093034538&amp;atcflSn=1",
+    "wlfareInfoReldNm": "참여신청서 등 신청서류(중증장애인 지역연계형 일자리 사업).hwpx"
+   }
+  ]
+ }
+}

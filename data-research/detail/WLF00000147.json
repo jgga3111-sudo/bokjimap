@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청남도 태안군 경제문화복지국 복지증진과",
+  "ctpvNm": "충청남도",
+  "inqNum": "8304",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "servDgst": "나라를 위해 헌신한 국가유공자의 생활안정",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000147&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000147",
+  "servNm": "무주택 보훈대상자 주거급여 지원",
+  "sggNm": "태안군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "보훈대상자, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000147",
+  "servNm": "무주택 보훈대상자 주거급여 지원",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청남도 태안군 경제문화복지국 복지증진과",
+  "ctpvNm": "충청남도",
+  "sggNm": "태안군",
+  "servDgst": "나라를 위해 헌신한 국가유공자의 생활안정",
+  "trgterIndvdlNmArray": "보훈대상자, 저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "태안군에 거주하는 만65세 이상 보훈대상자로서 태안군 복지급여대상자로 선정된 수급권자 또는 차상위계층(중위소득50%이하)의 무주택자(전월세 거주자)",
+  "slctCritCn": "중위소득 50%이하",
+  "alwServCn": "월 8만원 수당 지급",
+  "aplyMtdCn": "읍면사무소 방문신청 -&gt;군에서 수당 지급",
+  "inqNum": "8312",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "041-670-2594",
+    "wlfareInfoReldNm": "태안군청 복지증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "태안군 국가보훈대상자 예우 및 지원에 관한 조례 시행규칙"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3653GOWF15GOWF153653&amp;atcflSn=1",
+    "wlfareInfoReldNm": "저소득 보훈대상자 지원신청서.hwp"
+   }
+  ]
+ }
+}

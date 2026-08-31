@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 모바일",
+  "bizChrDeptNm": "대구광역시 달성군 기획전략국 홍보협력과",
+  "ctpvNm": "대구광역시",
+  "inqNum": "4599",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260808",
+  "lifeNmArray": "청소년, 아동, 영유아",
+  "servDgst": "가족 여행이 어려운 다둥이 가정에 캠핑카라반 이용요금을 지원하여 경제적 부담을 절감하고 가족 상호간 유대 및 삶의 질 향상을 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004784&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004784",
+  "servNm": "다둥이가정 숙박시설 지원사업",
+  "sggNm": "달성군",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004784",
+  "servNm": "다둥이가정 숙박시설 지원사업",
+  "enfcBgngYmd": "20210301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대구광역시 달성군 기획전략국 홍보협력과",
+  "ctpvNm": "대구광역시",
+  "sggNm": "달성군",
+  "servDgst": "가족 여행이 어려운 다둥이 가정에 캠핑카라반 이용요금을 지원하여 경제적 부담을 절감하고 가족 상호간 유대 및 삶의 질 향상을 도모",
+  "lifeNmArray": "영유아, 아동, 청소년",
+  "trgterIndvdlNmArray": "다자녀",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "인터넷, 모바일",
+  "sprtTrgtCn": "달성군에 주민등록을 둔 2자녀(최연소 자녀가 18세 이하) 이상 가정 ※ 부·모·자녀 중 2인 이상 달성군 주민등록 조건)",
+  "slctCritCn": "○ 최연소 자녀가 18세 이하인  - 세 자녀 이상 가정 최대5만원(3회)지원 - 두 자녀 이상 가정 최대5만원(2회)지원 ※ 조건 : 부·모·자녀 중 2인 이상 달성군 주민등록",
+  "alwServCn": "○ 최연소 자녀가 18세 이하인  - 세 자녀 이상 가정 최대5만원(3회)지원 - 두 자녀 이상 가정 최대3만원(2회)지원 ※ 조건 : 부·모·자녀 중 2인 이상 달성군 주민등록",
+  "aplyMtdCn": "신청방법 : 달성군시설관리공단 홈페이지에서 인터넷 예약 후, 현장에서 다둥이 가정 증빙서류* 제출하면 최대 5만원 할인된 금액으로 시설 이용",
+  "inqNum": "4603",
+  "lastModYmd": "20260808",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "053-668-8422",
+    "wlfareInfoReldNm": "달성군 기획전략국 기획예산과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대구광역시 달성군 인구정책 기본 조례 제6조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230718UUWBM0956280043335109&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 다둥이 가족 캠핑카라반 대여비 지원 사업 시행.hwp"
+   }
+  ]
+ }
+}

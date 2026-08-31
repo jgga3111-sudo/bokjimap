@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 복지여성보건국 사회복지정책과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "9319",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260704",
+  "servDgst": "국민기초생활보장 수급자에서 탈락한 저소득층의 최저생활보장으로 복지사각지대 해소",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004152&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004152",
+  "servNm": "전북형 기초생활보장사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004152",
+  "servNm": "전북형 기초생활보장사업",
+  "enfcBgngYmd": "20190701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 복지여성보건국 사회복지정책과",
+  "ctpvNm": "전북특별자치도",
+  "servDgst": "국민기초생활보장 수급자에서 탈락한 저소득층의 최저생활보장으로 복지사각지대 해소",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "부양의무자 기준 등으로 국민기초생활보장 수급자에서 탈락한 기준중위소득 50%이하 저소득층",
+  "slctCritCn": "- 거주기간 : 신청일 현재 세대주 주민등록 기간이 1개월 이상인 가구- 소득기준 : 가구의 소득평가액이 기준중위소득 50%이하- 재산기준 : 일반재산 155백만 원 이하(금융재산포함), 금융재산 34백만원 이하- 부양의무자 소득기준 : 연소득 1.3억 원(월 소득 1,84만 원) 이하",
+  "alwServCn": "생계급여, 해산장제급여",
+  "aplyMtdCn": "거주지 읍면동행정복지센터 신청",
+  "inqNum": "9341",
+  "lastModYmd": "20260704",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldNm": "복지로사이트"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004152",
+    "wlfareInfoReldNm": "복지로사이트"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전북특별자치도 저소득주민의 생활안정지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260605UUWBM1624180195487399&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 전북형 기초생활보장사업 안내 서식.hwp"
+   }
+  ]
+ }
+}

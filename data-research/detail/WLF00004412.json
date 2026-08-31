@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 사회복지국 장애인복지과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "6813",
+  "lastModYmd": "20260704",
+  "lifeNmArray": "청소년, 청년, 아동, 중장년",
+  "servDgst": "국고보조 장애인활동지원대상자 중 독거, 사지마비와상 등  활동지원 급여부족(서비스 시간)에 따른 추가활동 서비스 제공으로 중증장애인의 자립생활 및 사회참여 증진도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004412&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004412",
+  "servNm": "장애인활동지원(시비추가지원)",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004412",
+  "servNm": "장애인활동지원(시비추가지원)",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 사회복지국 장애인복지과",
+  "ctpvNm": "부산광역시",
+  "servDgst": "국고보조 장애인활동지원대상자 중 독거, 사지마비와상 등  활동지원 급여부족(서비스 시간)에 따른 추가활동 서비스 제공으로 중증장애인의 자립생활 및 사회참여 증진도모",
+  "lifeNmArray": "아동, 청소년, 청년, 중장년",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "장애인활동지원 국비지원대상자중 추가지원시간이 필요한자 중 선정- 독거, 사자마비 와상 장애인 등",
+  "slctCritCn": "사업계획 참고",
+  "alwServCn": "국비지원을 모두 사용한 자에게 추가지원(본인부담금 없음)- 활동보조 지원시간 : 월 20시간 ~ 월 450시간",
+  "aplyMtdCn": "신청기간 내, 본인 또는 대리인이 주소지 주민센터 방문신청구비서류 : 장애인활동지원 시추가지원 신청서 등",
+  "inqNum": "6818",
+  "lastModYmd": "20260704",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-888-3221",
+    "wlfareInfoReldNm": "부산광역시 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인복지법, 장애인활동지원에 관한 법률, 보건복지부 고시, 장애인활동지원 사업안내"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240524UUWBM1020330086467217&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 장애인활동지원급여 추가지원 사업계획(참고용).hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 복지여성보건국 장애인복지정책과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "4754",
+  "lastModYmd": "20260806",
+  "servDgst": "장애인 차량이 고속도로 톨게이트 이용시 하이패스 차로를 이용하여 안전운전 도모와 이동권 확보",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001581&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001581",
+  "servNm": "장애인 하이패스 단말기 지원사업",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001581",
+  "servNm": "장애인 하이패스 단말기 지원사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 복지여성보건국 장애인복지정책과",
+  "ctpvNm": "전북특별자치도",
+  "servDgst": "장애인 차량이 고속도로 톨게이트 이용시 하이패스 차로를 이용하여 안전운전 도모와 이동권 확보",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "전북특별자치도에 주소지가 등록되어 있는 장애인 차량",
+  "slctCritCn": "고속도로 통행료 50%할인대상과 동일",
+  "alwServCn": "장애인 하이패스 단말기 지원",
+  "aplyMtdCn": "- 한국도로공사 전북본부와 협약체결- 한국도로공사에서 접수기간 내에 전북 도내 영업소에서 신청",
+  "inqNum": "4758",
+  "lastModYmd": "20260806",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-280-2472",
+    "wlfareInfoReldNm": "전북특별자치도청 장애인복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인 노인 임산부 등의 편의증진 보장에 관한 법률 제 6조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260804UUWBM1805200203599824&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 장애인 하이패스단말기 지원사업 추진계획.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230228UUWBM1019300023707130&amp;atcflSn=1",
+    "wlfareInfoReldNm": "해당 없음.txt"
+   }
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "전북특별자치도 기획조정실 인구청년정책과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "4621",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260704",
+  "lifeNmArray": "청년",
+  "servDgst": "저소득층 청년의 취업 초기 고용안정을 통해 청년들의 지역정착 유도",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005105&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005105",
+  "servNm": "전북청년 지역정착 지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타, 지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005105",
+  "servNm": "전북청년 지역정착 지원사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "20271231",
+  "bizChrDeptNm": "전북특별자치도 기획조정실 인구청년정책과",
+  "ctpvNm": "전북특별자치도",
+  "servDgst": "저소득층 청년의 취업 초기 고용안정을 통해 청년들의 지역정착 유도",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐, 기타",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "월30만원씩 1년간, 최대 360만원 지급 (3,000명)",
+  "slctCritCn": "기준중위소득 : 150% 이하",
+  "alwServCn": "월 30만원 지원(포인트 9만원, 지역화폐 21만원)",
+  "aplyMtdCn": "홈페이지 회원 가입 후 직접 신청 - 홈페이지에 서류 업로드",
+  "inqNum": "4629",
+  "lastModYmd": "20260704",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-280-3884",
+    "wlfareInfoReldNm": "전북특별자치도 인구청년정책과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "ttd.ezewl.com",
+    "wlfareInfoReldNm": "전북특별자치도 인구청년정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전라북도 청년기본조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1509140036033184&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 전북청년 지역정착 지원사업 (지침 서식).hwp"
+   }
+  ]
+ }
+}

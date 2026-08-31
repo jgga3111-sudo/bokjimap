@@ -1,0 +1,70 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "전북특별자치도 익산시 보건소 보건지원과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "7758",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "servDgst": "저소득층 영아(0~24개월) 가정의 육아 필수재인 기저귀 및 조제분유 지원을 \n통해 경제적 부담 경감 및 아이 낳기 좋은 환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004034&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004034",
+  "servNm": "저소득층 기저귀 조제분유 확대 지원사업",
+  "sggNm": "익산시",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004034",
+  "servNm": "저소득층 기저귀 조제분유 확대 지원사업",
+  "enfcBgngYmd": "20210101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 익산시 보건소 보건지원과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "익산시",
+  "servDgst": "저소득층 영아(0~24개월) 가정의 육아 필수재인 기저귀 및 조제분유 지원을 \n통해 경제적 부담 경감 및 아이 낳기 좋은 환경 조성",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "trgterIndvdlNmArray": "다자녀",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "?2세 미만의 영아를 둔 기준중위소득 100% 이하 가구(정부지원 대상자 제외)",
+  "slctCritCn": "?2세 미만의 영아를 둔 기준중위소득 100% 이하 가구(정부지원 대상자 제외)",
+  "alwServCn": "- 기저귀 : 정액 월 90,000원- 조제분유 : 정액 월 110,000원- 최대 24개월까지 지원",
+  "aplyMtdCn": "- 신청방법 : 보건소, 읍면동 행복복지센터, 온라인(복지로)- 서비스 이용 : 기저귀·조제분유 구매 후 영수증 지참하여 익산시 보건소로 청구",
+  "inqNum": "7761",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-859-4855",
+    "wlfareInfoReldNm": "전북특별자치도 익산시 보건소 보건지원과 모자보건실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "저출산 고령사회 기본법 제8조~제10조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260611UUWBM1124150196479503&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 모자보건사업 계획.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230224UUWBM1504220023339740&amp;atcflSn=1",
+    "wlfareInfoReldNm": "사회보장급여(사회서비스이용권) 신청(변경)서.hwp"
+   }
+  ]
+ }
+}

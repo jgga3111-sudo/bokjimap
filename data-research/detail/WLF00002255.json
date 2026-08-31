@@ -1,0 +1,59 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "서울특별시 주택정책실 주택공급기획관 주택정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "8499",
+  "intrsThemaNmArray": "서민금융, 보호·돌봄, 입양·위탁",
+  "lastModYmd": "20260828",
+  "servDgst": "저소득층의 주거비 부담을 경감하여 주거안정을 도모하고, 주거급여 비수급 가구를 지원함으로써 복지사각지대 해소하기 위하여 주택임대료 보조(주택바우처) 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002255&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002255",
+  "servNm": "서울형 주택바우처(저소득층 주택임대료 보조)",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002255",
+  "servNm": "서울형 주택바우처(저소득층 주택임대료 보조)",
+  "enfcBgngYmd": "20020501",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 주택정책실 주택공급기획관 주택정책과",
+  "ctpvNm": "서울특별시",
+  "servDgst": "저소득층의 주거비 부담을 경감하여 주거안정을 도모하고, 주거급여 비수급 가구를 지원함으로써 복지사각지대 해소하기 위하여 주택임대료 보조(주택바우처) 지급",
+  "intrsThemaNmArray": "입양·위탁, 보호·돌봄, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "민간 월세로 거주하는 국민기초생활수급자가 아닌 저소득층에 월세 일부를 매월 지원합니다.",
+  "slctCritCn": "지원 대상 : 아래 기준을 모두 만족할 경우 지원 ① 민간 월세인 ‘주택’ 및 ‘고시원’ , '주거용 오피스텔'거주 가구    ② 임대보증금이 주택임대차보호법 시행령의 소액보증금 기준 (1억6천5백만원) 이하인 가구③ 소득기준 : 소득평가액이 기준중위소득60%이하인 가구④ 재산기준 : 재산가액이 1억6천만원 이하 (금융재산 6,500만원 이하)인 가구",
+  "alwServCn": "- 주택임대료 보조(주택바우처) 지급  · 1인가구(120천원) , 2인가구(130천원), 3인가구(140천원), 4인가구(150천원), 5인가구(160천원), 6인가구(170천원)   ※ 가구원 수 1인 추가 시 10,000원씩 증액 지원(최대 170천원)",
+  "aplyMtdCn": "1. 주소지 자치구 또는 동 주민센터 상담을 통해 신청 가능2. 조사체계  - 신청(상담) [동주민센터]→ 조사(주택 및 소득·재산 등) [자치구청] → 결정(적합 또는 부적합) [자치구청] → 지급[자치구청]",
+  "inqNum": "8522",
+  "lastModYmd": "20260828",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0221337992",
+    "wlfareInfoReldNm": "서울시 주거복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "주거기본법 제15조(주거비 보조), 서울특별시 사회복지기금 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3063GOWF16GOWF163063&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2022년 서울형 주택바우처 운영 계획(배포).hwp"
+   }
+  ]
+ }
+}

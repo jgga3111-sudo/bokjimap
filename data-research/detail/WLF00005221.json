@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 음성군 2030전략실",
+  "ctpvNm": "충청북도",
+  "inqNum": "90506",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "청년",
+  "servDgst": "청년 주거부담 경감으로 사회적 자립 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005221&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005221",
+  "servNm": "청년월세 지원사업",
+  "sggNm": "음성군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005221",
+  "servNm": "청년월세 지원사업",
+  "enfcBgngYmd": "20230831",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 음성군 2030전략실",
+  "ctpvNm": "충청북도",
+  "sggNm": "음성군",
+  "servDgst": "청년 주거부담 경감으로 사회적 자립 지원",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청연도 기준 음성군에 주민등록을 두고 있는 19세~39세 이하 부모님과 별도 거주 무주택 청년 - (소득) 청년 기준중위소득 150% 이하 ※ 소득이 없는 경우 부모님 기준중위소득으로 판단(건강보험료 소득판정기준)",
+  "slctCritCn": "청년 기준중위소득 150% 이하     ※ 소득이 없는 경우 부모님 기준중위소득으로 판단(건강보험료 소득판정기준)",
+  "alwServCn": "12개월(회)간 월 최대 15만원 임차료 지원 (생애 1회)      ※ 실제 월세 범위 내에서 최대 15만원까지 지급(임차보증금, 관리비 등 제외)",
+  "aplyMtdCn": "거주지 읍면 방문 신청",
+  "inqNum": "90522",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-871-5412",
+    "wlfareInfoReldNm": "음성군 2030전략실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "음성군 청년 기본 조례 15조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260720UUWBM0959110201636814&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년 음성군 청년월세 지원사업 추진계획.pdf"
+   }
+  ]
+ }
+}

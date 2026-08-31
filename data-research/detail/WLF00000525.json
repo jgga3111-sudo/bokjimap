@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 무주군 행정복지국 사회복지과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "5585",
+  "lastModYmd": "20260805",
+  "lifeNmArray": "노년",
+  "servDgst": "거동 불편 등으로 오랜 기간동안 청소 및 정리를 못하여 지저분해진 독거노인의 주거환경에 소독과 청소 서비스를 제공함으로써 쾌적한 주거환경을 조성하여 노인의 건강 및 복지 증진 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000525&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000525",
+  "servNm": "독거노인 홈클리닝 사업",
+  "sggNm": "무주군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000525",
+  "servNm": "독거노인 홈클리닝 사업",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 무주군 행정복지국 사회복지과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "무주군",
+  "servDgst": "거동 불편 등으로 오랜 기간동안 청소 및 정리를 못하여 지저분해진 독거노인의 주거환경에 소독과 청소 서비스를 제공함으로써 쾌적한 주거환경을 조성하여 노인의 건강 및 복지 증진 도모",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "관내 저소득층 독거노인 가구 및 부부가구",
+  "slctCritCn": "1순위 : 기초생활수급자 독거노인 및 부부가구2순위 : 차상위계층 독거노인 및 부부가구3순위: 중증질환자 및 장애인 고령가구 독거노인 등 실질적으로 소독 및 청소서비스 필요한 가구",
+  "alwServCn": "집 방역 소독 서비스 제공",
+  "aplyMtdCn": "읍면동 신청",
+  "inqNum": "5592",
+  "lastModYmd": "20260805",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-320-2626",
+    "wlfareInfoReldNm": "무주군청 사회복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "노인복지법, 무주군 노인복지 증진 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240610UUWBM2048110088858070&amp;atcflSn=1",
+    "wlfareInfoReldNm": "무주군 노인복지 증진 지원 조례.hwp"
+   }
+  ]
+ }
+}

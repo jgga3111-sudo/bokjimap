@@ -1,0 +1,54 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "강원특별자치도 원주시 복지국 보육아동과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "4865",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "영유아",
+  "servDgst": "-특별활동 프로그램 운영에 소요되는 필요경비 지원을 통해, 부모부담금 경감 및 균등한 학습기회 제공\n-안정적인 특별활동 프로그램 운영으로 보육의 품질 향상 및 양질의 보육서비스 기대",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006052&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006052",
+  "servNm": "어린이집 특별활동비 지원",
+  "sggNm": "원주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006052",
+  "servNm": "어린이집 특별활동비 지원",
+  "enfcBgngYmd": "20240101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 원주시 복지국 보육아동과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "원주시",
+  "servDgst": "-특별활동 프로그램 운영에 소요되는 필요경비 지원을 통해, 부모부담금 경감 및 균등한 학습기회 제공\n-안정적인 특별활동 프로그램 운영으로 보육의 품질 향상 및 양질의 보육서비스 기대",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "관내어린이립 재원 아동-유아반(3~5세) 1인당 월 3만원-영아반(2세) 1인당 월 2만원",
+  "slctCritCn": "*관내어린이립 재원 아동-유아반(3~5세) 1인당 월 3만원-영아반(2세) 1인당 월 2만원*매월 1일 기준 특별활동 참여중인 아동의 어린이집에 지원",
+  "alwServCn": "*관내어린이립 재원 아동-유아반(3~5세) 1인당 월 3만원-영아반(2세) 1인당 월 2만원*매월 1일 기준 특별활동 참여중인 아동의 어린이집에 지원(부모 직접신청 별도 없음/기준충족시 해당 어린이집 계좌로 직접지원하여 부모자부담비에서 제외처리)",
+  "aplyMtdCn": "직접 지원(별도 신청사항 없음)",
+  "inqNum": "4872",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-737-2583",
+    "wlfareInfoReldNm": "원주시청 보육아동과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "원주시 영유아보육조례 제25조9비용의 보조0"
+   }
+  ]
+ }
+}

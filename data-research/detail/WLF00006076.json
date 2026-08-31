@@ -1,0 +1,71 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "19662",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "청년",
+  "servDgst": "- 국토교통부 「청년월세 한시 특별지원」 사업 대상자인 청년기본법(19~34세)상 청년에서 제외되는 도 청년 기본조례상 청년(35~39세)에 의한 청년에 임차료를 제공하여 주거비 부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006076&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006076",
+  "servNm": "제주 청년 희망충전 월세 지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006076",
+  "servNm": "제주 청년 희망충전 월세 지원",
+  "enfcBgngYmd": "20250101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 건설주택국 주택토지과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "- 국토교통부 「청년월세 한시 특별지원」 사업 대상자인 청년기본법(19~34세)상 청년에서 제외되는 도 청년 기본조례상 청년(35~39세)에 의한 청년에 임차료를 제공하여 주거비 부담 경감",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "제주도에 주소를 두고 부모와 별도 거주하는 35~39세 이하의 무주택 청년 세대주에 월20만원씩 12개월간 지원",
+  "slctCritCn": "- (지원대상) 제주도에 주소를 두고 부모와 별도 거주하는 35~39세 이하의 무주택 청년 세대주- (소득요건) 기준 중위소득 60% 이하- (재산요건) 1억 2천 2백만원 이하",
+  "alwServCn": "임차료 月 최대 20만원, 최대 12개월(회)",
+  "aplyMtdCn": "거주지 관할 주민센터 방문 신청 또는 정부24 온라인 신청",
+  "inqNum": "19704",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-728-3074",
+    "wlfareInfoReldNm": "제주시청 주택과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-760-3013",
+    "wlfareInfoReldNm": "서귀포시청 건축과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-4252",
+    "wlfareInfoReldNm": "제주특별자치도 주택토지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "주거기본법 제15조(주거비 보조)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250627UUWBM1636380143971797&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(공고문) 제주 청년 희망충전 월세 지원사업.hwpx"
+   }
+  ]
+ }
+}

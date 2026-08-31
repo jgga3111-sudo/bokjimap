@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 전주시 전주시보건소 치매마음건강과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "4736",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "노년",
+  "servDgst": "- 치매노인의 노인장기요양서비스 사각지대 해소를 위한 치매환자 돌봄 서비스 제공 \n- 치매노인에 대한 적극적 대응을 통해 2차적 위험을 예방하고, 치매노인 및 그 보호자의 부담 경감\n- 경제활동을 영위하는 부양가족의 치매환자 돌봄 부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005053&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005053",
+  "servNm": "치매환자 돌봄재활 지원사업",
+  "sggNm": "전주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005053",
+  "servNm": "치매환자 돌봄재활 지원사업",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 전주시 전주시보건소 치매마음건강과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "전주시",
+  "servDgst": "- 치매노인의 노인장기요양서비스 사각지대 해소를 위한 치매환자 돌봄 서비스 제공 \n- 치매노인에 대한 적극적 대응을 통해 2차적 위험을 예방하고, 치매노인 및 그 보호자의 부담 경감\n- 경제활동을 영위하는 부양가족의 치매환자 돌봄 부담 경감",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "사업대상: 노인장기요양서비스 등급 대기자 및 인지지원 등급자로서             1. 전주시에 주소를 둔 치매안심센터 등록 치매환자              2. 건강보험료 부과액 기준 중위소득 140% 이하인 자",
+  "slctCritCn": "건강보험류 부과액 기준 중위소득 140% 이하",
+  "alwServCn": "*지원 내용: 노인장기요양기관(주간보호, 방문요양) 시설 이용금액 지원(본인부담금 제외)*지원 기간:  인지지원 등급자 평생 1회*서비스 제공일수-인지지원등급자: 주간보호와 방문요양서비스 지원*단가 및 지원금액(전주시보건소 홈페이지(health.jeonju.go.kr) 참조)",
+  "aplyMtdCn": "1. 상담(자격요건 확인 등)2. 서비스 이용 신청(치매환자임을 입증하는 서류 등 첨부)3. 대상자 선정 여부 결정(소득기준 등 검토)4. 결과 통지5.서비스 이용(본인부담금 납부 등)",
+  "inqNum": "4740",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-281-6248",
+    "wlfareInfoReldNm": "전주시치매안심센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "치매관리법 제3조제2항"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230516UUWBM1512370034874770&amp;atcflSn=1",
+    "wlfareInfoReldNm": "구비서류서식.hwp"
+   }
+  ]
+ }
+}

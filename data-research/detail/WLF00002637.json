@@ -1,0 +1,59 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "서울특별시 주택정책실 주택공급기획관 주택정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "28234",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "청년",
+  "servDgst": "서울시 내 주택에 임차하려는 청년에게 보증금을 위한 대출금 이자를 지원해줌으로서, 주거비를 감소시키는데 목적이 있음",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002637&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002637",
+  "servNm": "청년 임차보증금 이자지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타, 현금대여(융자)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002637",
+  "servNm": "청년 임차보증금 이자지원사업",
+  "enfcBgngYmd": "20170201",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 주택정책실 주택공급기획관 주택정책과",
+  "ctpvNm": "서울특별시",
+  "servDgst": "서울시 내 주택에 임차하려는 청년에게 보증금을 위한 대출금 이자를 지원해줌으로서, 주거비를 감소시키는데 목적이 있음",
+  "lifeNmArray": "청년",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금대여(융자), 기타",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "만 19~39세이며, 연소득 5천만원 이하인 무주택세대주(기혼의 경우 연소득 6천만원 이하)",
+  "slctCritCn": "□ 대상주택 등O 서울시 관내에 위치한 주택 또는 주거용 오피스텔로서, 해당 주택 등에 체결 및 체결예정인 임차보증금 3억원 이하, 월세 90만원 이하의 전세·월세계약O 건축물대장상 주택이 아닌 곳과 불법건축물, 다중 주택, 공공임대주택은 지원 불가 - 공공임대주택은 지자체, 공기업(LH공사, SH공사) 등 공공기관이 공급 및 지원하는 주택을 말함.서울시 역세권청년주택은 ‘민간임대주택’유형만 지원 가능",
+  "alwServCn": "- 최대 2억원 대출(임차보증금의 90% 범위내) - 대출금의 연 2% 금리지원",
+  "aplyMtdCn": "서울주거포털에 온라인신청(상시접수)",
+  "inqNum": "28303",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-120",
+    "wlfareInfoReldNm": "서울다산콜"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 청년주거 기본조례 제7조(청년주거사업)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7085GOWF15GOWF157085&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울특별시 청년주거 기본 조례(서울특별시조례)(제07046호)(20190328).pdf"
+   }
+  ]
+ }
+}

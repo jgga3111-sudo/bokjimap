@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 동해시 행정복지국 가족과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "4694",
+  "intrsThemaNmArray": "서민금융, 안전·위기, 입양·위탁",
+  "lastModYmd": "20260715",
+  "lifeNmArray": "영유아, 아동, 청소년",
+  "servDgst": "요보호아동을 보호.양육하기를 희망하는 가정에 위탁 양육함으로써 가정적인 분위기에서 건전한 사회인으로 자랄 수 있도록 하기 위함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003666&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003666",
+  "servNm": "가정위탁양육수당 지원",
+  "sggNm": "동해시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003666",
+  "servNm": "가정위탁양육수당 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 동해시 행정복지국 가족과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "동해시",
+  "servDgst": "요보호아동을 보호.양육하기를 희망하는 가정에 위탁 양육함으로써 가정적인 분위기에서 건전한 사회인으로 자랄 수 있도록 하기 위함",
+  "lifeNmArray": "영유아, 아동, 청소년",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "안전·위기, 입양·위탁, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "만18세 미만의 아동으로서- 보호자가 없거나 보호자로부터 이탈된 아동- 아동을 학대하는 경우 등 그 보호자가 아동을 양육하기에 적당하지 아니하거나 능력이 없는 경우의 아동* 요보호아동 발생시 만2세 미만 아동은 가정위탁으로 우선 배치",
+  "slctCritCn": "아동복지심의위원회를 통해 조부모 및 친인척, 일반 가정에서 위탁보호가 결정된 아동",
+  "alwServCn": "양육보조금 지원: 만7세 미만(83개월까지) - 1인당 월 30만원만7세부터 만13세 미만 (84개월∼155개월) - 1인당 월 40만원만13세 이상(156개월부터) - 1인당 월 50만원",
+  "aplyMtdCn": "관할 동 주민센터에 신청 → 환경조사 및 상담 → 가정위탁보호 결정·통보 →사례관리",
+  "inqNum": "4704",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-530-2178",
+    "wlfareInfoReldNm": "동해시청 가족과 아동보호팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "아동복지법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240611UUWBM1037360088913042&amp;atcflSn=1",
+    "wlfareInfoReldNm": "가정위탁.pdf"
+   }
+  ]
+ }
+}

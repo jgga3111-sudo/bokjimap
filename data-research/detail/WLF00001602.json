@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 김포시 복지교육국 노인장애인과",
+  "ctpvNm": "경기도",
+  "inqNum": "9071",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "노년",
+  "servDgst": "노인들의 삶의 질 향상을 위해 기초생활 수급 독거노인에게 이미용비로 월 17,0000원 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001602&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001602",
+  "servNm": "독거노인 후생복지",
+  "sggNm": "김포시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001602",
+  "servNm": "독거노인 후생복지",
+  "enfcBgngYmd": "19980101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 김포시 복지교육국 노인장애인과",
+  "ctpvNm": "경기도",
+  "sggNm": "김포시",
+  "servDgst": "노인들의 삶의 질 향상을 위해 기초생활 수급 독거노인에게 이미용비로 월 17,0000원 지급",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "독거노인 후생복지비  - 지원대상 : 국민기초생활보장 수급자 중 만65세 이상 독거노인   - 선정기준 : 국민기초생활보장 제도의 동일 적용",
+  "slctCritCn": "국민기초생활보장 수급자 중 만65세 이상 독거노인",
+  "alwServCn": "후생복지비 :   지급금액    - 월 17,000원(이발료 및 목욕료 지원)    - 지급기간 : 연중",
+  "aplyMtdCn": "후생복지비&#13;  - 신청방법 : 읍/면/동주민센터로 신청 또는 기존 수급자의 경우 별도의 신청 생략&#13;  - 지급시기 및 지급방법&#13;     지급개시일 : 수급자책정일이나 연령도래한 생일달부터 지급 &#13;     지급방법 : 수급자 계좌에 시/군/구청장이 직접 입금(압류방지통장 지원불가)&#13;",
+  "inqNum": "9074",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-980-2249",
+    "wlfareInfoReldNm": "김포시 노인장애인과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "김포시 노인복지 증진 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=2569GOWF15GOWF152569&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(20190923시행)김포시 노인복지 증진 기본 조례.pdf"
+   }
+  ]
+ }
+}

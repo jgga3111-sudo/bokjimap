@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전북특별자치도 익산시 건설국 주택과",
+  "ctpvNm": "전북특별자치도",
+  "inqNum": "12494",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "청년",
+  "servDgst": "무주택 청년 신혼부부의 초기 정착에 따른 주거비용 부담을 해소하여 장기적 주거여건 형성 및 인구유출 방지",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001853&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001853",
+  "servNm": "익산시 신혼부부 청년 주택 전세보증금 대출이자 지원사업",
+  "sggNm": "익산시",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "감면, 현금대여(융자)",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001853",
+  "servNm": "익산시 신혼부부 청년 주택 전세보증금 대출이자 지원사업",
+  "enfcBgngYmd": "20210416",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전북특별자치도 익산시 건설국 주택과",
+  "ctpvNm": "전북특별자치도",
+  "sggNm": "익산시",
+  "servDgst": "무주택 청년 신혼부부의 초기 정착에 따른 주거비용 부담을 해소하여 장기적 주거여건 형성 및 인구유출 방지",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금대여(융자), 감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "익산시 거주(예정) 무주택 세대주 청년·신혼부부  ▸청    년: 신청일 기준 만 19세 ~ 39세 이하  ▸신혼부부: 신청일 기준 3개월 이내 혼인 예정 및 혼인 후 7년 이내 신혼부부",
+  "slctCritCn": "(소득) 본인연소득 5천만원 이하, 부모연소득 8천만원 이하, 부부합산 연소득 8천만원 이하(주택) 전용면적 85㎡이하, 임차보증금 3억원 이하 주택",
+  "alwServCn": "이자지원: 3.0% 이내(연간 최대 청년 300만원, 신혼부부 600만원 이내)대출한도: 청년 1억원, 신혼부부 2억원(임차보증금의 90% 범위)대출기간: 2년 만기 일시상환방식지원기간: 1회당 2년 이내 (혼인 연차별 지원기간 차등, 자녀수 증가에 따라 최장10년)   * 미혼자, 혼인 예정인 자, 혼인 신고 2년 이내인 자: 2회 연장 가능(최장 6년)   * 혼인기간 3~4년 : 1회 연장 가능(최장 4년)   * 혼인기간 5~7년 : 1회 지원 가능(최장 2년)   * 대상자가 지원 기간 중 자녀를 출산(임신･입양 포함)한 경우 2회 추가 연장 가능(자녀 1인당 1회, 1회당 2년 이내)",
+  "aplyMtdCn": "(신청방법) 방문접수(신청장소) 익산시청 주택과(신청시기) 사업공고일 ~ 예산소진시까지",
+  "inqNum": "12507",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "063-859-5558",
+    "wlfareInfoReldNm": "익산시청 주택과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "익산시 청년희망도시 구축을 위한 조례 제11조(청년의 생활수준 보장 및 부채경감 지원 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230523UUWBM0926150035732057&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(신청서)2023년 (신혼부부 청년) 주택 전세보증금 대출이자 지원사업.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230523UUWBM0916530035729870&amp;atcflSn=1",
+    "wlfareInfoReldNm": "「2023년 (신혼부부 청년) 주택 전세보증금 대출이자 지원사업」공고문.hwp"
+   }
+  ]
+ }
+}

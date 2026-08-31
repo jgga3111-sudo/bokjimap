@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "경기도 의왕시 복지문화국 복지정책과",
+  "ctpvNm": "경기도",
+  "inqNum": "47609",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260813",
+  "servDgst": "우리민족의 고유 명절인 설,추석을 맞이하여 저소득층에게 위로금을 지원하여 훈훈한 명절분위기 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000833&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000833",
+  "servNm": "기초생활수급자 명절 위로금 지원",
+  "sggNm": "의왕시",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000833",
+  "servNm": "기초생활수급자 명절 위로금 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 의왕시 복지문화국 복지정책과",
+  "ctpvNm": "경기도",
+  "sggNm": "의왕시",
+  "servDgst": "우리민족의 고유 명절인 설,추석을 맞이하여 저소득층에게 위로금을 지원하여 훈훈한 명절분위기 조성",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "sprtTrgtCn": "1) 지원대상 : 기초생활보장수급자 가구(생계, 의료급여 수급가구)    ※  장기입원자 제외    2) 선정기준 : 국민기초생활보장 제도의 가구범위로 동일 적용",
+  "slctCritCn": "기초생활보장수급자 가구(생계,의료급여 수급가구)",
+  "alwServCn": "1) 지급금액 : 가구당 30천원 2) 지급일: 설, 추석",
+  "inqNum": "47791",
+  "lastModYmd": "20260813",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-345-2442",
+    "wlfareInfoReldNm": "의왕시청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경기도 저소득주민의 생활안정지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6601GOWF14GOWF146601&amp;atcflSn=1",
+    "wlfareInfoReldNm": "경기도 저소득주민의 생활안정지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

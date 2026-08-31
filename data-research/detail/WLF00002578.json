@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 전화",
+  "bizChrDeptNm": "대구광역시 중구 행정복지국 생활지원과",
+  "ctpvNm": "대구광역시",
+  "inqNum": "8393",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "노년, 중장년",
+  "servDgst": "1. 목욕서비스의 사각지대에 놓인 거동불편 대상자들에게 목욕서비스를 제공하여 삶의 보람과 재기의 의욕을 갖게하고 사회 활동력을 높임.\n2. 이동목욕 대상자을에게 의료지원, 심리지원 등의 부가적인 서비스를 제공함으로써 건전한 사회복귀 및 완전재활을 도모함.\n3. 가족의 보호부담이 가중되고 있는 어르신들에게 목욕서비스를 제공함으로써 보호자의 가정환경개선 유도 및 가정의 화목을 이끔",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002578&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002578",
+  "servNm": "이동목욕서비스지원사업",
+  "sggNm": "중구",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002578",
+  "servNm": "이동목욕서비스지원사업",
+  "enfcBgngYmd": "20110801",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대구광역시 중구 행정복지국 생활지원과",
+  "ctpvNm": "대구광역시",
+  "sggNm": "중구",
+  "servDgst": "1. 목욕서비스의 사각지대에 놓인 거동불편 대상자들에게 목욕서비스를 제공하여 삶의 보람과 재기의 의욕을 갖게하고 사회 활동력을 높임.\n2. 이동목욕 대상자을에게 의료지원, 심리지원 등의 부가적인 서비스를 제공함으로써 건전한 사회복귀 및 완전재활을 도모함.\n3. 가족의 보호부담이 가중되고 있는 어르신들에게 목욕서비스를 제공함으로써 보호자의 가정환경개선 유도 및 가정의 화목을 이끔",
+  "lifeNmArray": "중장년, 노년",
+  "trgterIndvdlNmArray": "장애인",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "프로그램/서비스(서비스)",
+  "aplyMtdNm": "방문, 전화",
+  "sprtTrgtCn": "1) 지원대상 : 재가중증장애인 및 거동불편 독거노인(거동불편 독거노인은 필요할 경우에 한함) 2) 선정기준   - 동별 재가중증장애인 및 거동불편 독거노인 추천   - 확인 절차를 통해 목욕서비스 지원 대상여부 확인 후 선정   - 비정기적인 지원이 필요한 경우 지역사회(이웃주민, 유관기관 등)의 추천을 받아  수시 선정",
+  "slctCritCn": "거동불편 장애인 및 필요할 경우 거동불편 독거노인",
+  "alwServCn": "1) 이동목욕차량을 이용한 목욕서비스 제공&#13; &#13;2) 자원봉사자 활용을 통해 이·미용 서비스 제공 &#13; &#13;3) 보건·간호서비스(필요시, 보건소와 연계) 제공",
+  "aplyMtdCn": "주민센터 신청-&gt; 남산기독종합사회복지관 대상자으로 추천 및 서비스의뢰-&gt; 대상자 결정-&gt; 서비스",
+  "inqNum": "8403",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "053-661-2664",
+    "wlfareInfoReldNm": "대구광역시 중구청 생활보장과 장애인복지팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "특수시책"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM1537360035074818&amp;atcflSn=1",
+    "wlfareInfoReldNm": "해밀이동목욕사업 대상자 추천서.pdf"
+   }
+  ]
+ }
+}

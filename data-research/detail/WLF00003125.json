@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 양주시 복지교육국 가족아동과",
+  "ctpvNm": "경기도",
+  "inqNum": "9921",
+  "intrsThemaNmArray": "서민금융, 임신·출산, 입양·위탁",
+  "lastModYmd": "20260813",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "servDgst": "신생아의 탄생을 축하하고 출산가정의 경제적 부담을 경감하여 임신과 출산에 유리한 환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003125&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003125",
+  "servNm": "양주시 출산축하금 지원사업",
+  "sggNm": "양주시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003125",
+  "servNm": "양주시 출산축하금 지원사업",
+  "enfcBgngYmd": "20070101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 양주시 복지교육국 가족아동과",
+  "ctpvNm": "경기도",
+  "sggNm": "양주시",
+  "servDgst": "신생아의 탄생을 축하하고 출산가정의 경제적 부담을 경감하여 임신과 출산에 유리한 환경 조성",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 입양·위탁, 서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신생아 출생일 기준 전후 90일 이상 양주시에 주소를 두고 출생신고한 자",
+  "slctCritCn": "신생아 출생일 기준 양주시에 90일 이전부터 주민등록을 두고 실제 거주하며 출생신고를 한 경우(거주기간이 90일 미만인 경우 90일이 경과한 날까지 주민등록을 두고 거주한 경우 지원)",
+  "alwServCn": "- 2024. 1월생 ~ : 첫째~셋째(미지원), 넷째(1,000천원*2회) / 다섯째(1,750천원*4회)",
+  "aplyMtdCn": "출생신고 후 180일 이내 출생신고지 읍면동 행정복지센터에서 신청",
+  "inqNum": "9936",
+  "lastModYmd": "20260813",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8082-5940",
+    "wlfareInfoReldNm": "양주시 가족아동과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "양주시 출산축하금 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6735GOWF14GOWF146735&amp;atcflSn=1",
+    "wlfareInfoReldNm": "양주시 출산축하금 지원에 관한 조례.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230525UUWBM1316060036210897&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출산서비스 통합처리 신청서-복사-복사.pdf"
+   }
+  ]
+ }
+}

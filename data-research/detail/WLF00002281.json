@@ -1,0 +1,60 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "전남광주통합특별시 보성군 사회복지과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "5170",
+  "lastModYmd": "20260814",
+  "lifeNmArray": "노년",
+  "servDgst": "65세 이상 차상위계층 국민건강 및 장기요양보험료 지원을 통하여 복지대상자의 건강 유지 및 생계안정",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002281&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002281",
+  "servNm": "차상위계층 노인 국민건강 장기요양보험료 지원",
+  "sggNm": "보성군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002281",
+  "servNm": "차상위계층 노인 국민건강 장기요양보험료 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 보성군 사회복지과",
+  "ctpvNm": "전남광주통합특별시",
+  "sggNm": "보성군",
+  "servDgst": "65세 이상 차상위계층 국민건강 및 장기요양보험료 지원을 통하여 복지대상자의 건강 유지 및 생계안정",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "차상위계층 국민건강보험료 및 장기요양보험료 지원대상은 국민건강보험공단 보성군 지역 가입자이며 건강보험료 부과금액 기준 월 10,000원 미만 세대로서만  65세 이상의 세대",
+  "slctCritCn": "건강보험료 부과금액 기준 월 10,000원 미만 세대로서만  65세 이상의 세대&#13;* 국민건강보험공단 고흥보성지사에서 보성군청으로 공문으로 명단 통보",
+  "alwServCn": "국민건강보험공단 이사장이 건강보험대상자 부과자료를 통보하면 군수는 보험료 총금액을 국민건강보험공단에서 청구한 계좌로 지금",
+  "inqNum": "5175",
+  "lastModYmd": "20260814",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-850-5075",
+    "wlfareInfoReldNm": "보성군청 사회복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "차상위계층노인국민건강보험료지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=0766GOWF15GOWF150766&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2000000840.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 속초시 경제관광국 지역경제과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "21277",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260822",
+  "lifeNmArray": "청년",
+  "servDgst": "부동산 시장의 영향 및 경제적 어려움 등으로 이사가 잦아 주거 불안정을 겪는 청년들의 이사비용을 지원하여 청년들의 실질적 주거 안정 및 삶의 질 향상에 기여하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005427&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005427",
+  "servNm": "청년 이사비용 지원사업",
+  "sggNm": "속초시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급, 지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005427",
+  "servNm": "청년 이사비용 지원사업",
+  "enfcBgngYmd": "20240601",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 속초시 경제관광국 지역경제과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "속초시",
+  "servDgst": "부동산 시장의 영향 및 경제적 어려움 등으로 이사가 잦아 주거 불안정을 겪는 청년들의 이사비용을 지원하여 청년들의 실질적 주거 안정 및 삶의 질 향상에 기여하고자 함",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급, 지역화폐",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "(기준)▶ 18세 ~ 45세 이하 무주택 청년가구 (신청일 기준)(전입기준) ▶2025. 1. 1. 이후 타지역에서 속초시로 전입한 자(전입신고 必)(주택기준) ▶전·월세 임차보증금 1억원 이하이고 월세 100만원 이하 주택 등에 거주              ▶실거주용 주택 및 비주택(고시원, 오피스텔) 모두 지원              ▶전세거주자 중 월세액 없어도 신청가능, 월세 거주자 중 보증금 없어도  신청 가능(소득기준) ▶가구당 기준중위소득 150% 이하",
+  "slctCritCn": "가구당 기준중위소득 150% 이하",
+  "alwServCn": "이사비용 및 중개수수료 총 합산 금액 50만원 내 실비지급",
+  "aplyMtdCn": "시청 지역경제과 방문",
+  "inqNum": "21311",
+  "lastModYmd": "20260822",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-639-1542",
+    "wlfareInfoReldNm": "속초시청 경제관광국 지역경제과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "속초시 청년 기본 조례 제14조"
+   }
+  ]
+ }
+}

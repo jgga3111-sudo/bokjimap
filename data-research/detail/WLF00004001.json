@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "10344",
+  "intrsThemaNmArray": "안전·위기, 신체건강",
+  "lastModYmd": "20260711",
+  "lifeNmArray": "노년",
+  "servDgst": "가정 형편이 어렵거나 기타 부득이한 사유로 점심을 거르시는 거동불편 어르신에게 식사 배달 사업을 통해 노인 급식 수준 향상",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004001&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004001",
+  "servNm": "저소득 재가노인 식사배달",
+  "sprtCycNm": "주",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004001",
+  "servNm": "저소득 재가노인 식사배달",
+  "enfcBgngYmd": "20000406",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 복지국 노인복지과",
+  "ctpvNm": "경기도",
+  "servDgst": "가정 형편이 어렵거나 기타 부득이한 사유로 점심을 거르시는 거동불편 어르신에게 식사 배달 사업을 통해 노인 급식 수준 향상",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "intrsThemaNmArray": "신체건강, 안전·위기",
+  "sprtCycNm": "주",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "지원대상 : 60세이상 결식우려 저소득(기초생활수급자, 차상위계층 등) 재가노인",
+  "slctCritCn": "60세 이상 저소득층(기초생활수급, 차상위계층 등) 노인으로 거동이 불편하여 경로식당 방문이 어려운 노인",
+  "alwServCn": "1인 1식 4,500원 단가 식사제공(도시락, 밑반찬)",
+  "aplyMtdCn": "관할시군에서 요청시 예산반영",
+  "inqNum": "10355",
+  "lastModYmd": "20260711",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-8008-2529",
+    "wlfareInfoReldNm": "경기도 노인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "노인복지법 제4조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250627UUWBM1556020143960835&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 저소득 재가노인 식사배달 사업안내.pdf"
+   }
+  ]
+ }
+}

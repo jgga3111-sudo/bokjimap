@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 옥천군 보건소",
+  "ctpvNm": "충청북도",
+  "inqNum": "8440",
+  "lastModYmd": "20260820",
+  "lifeNmArray": "노년",
+  "servDgst": "대상포진 발병률을 감사시키고 어르신의 건강생활을 유지토록 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000516&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000516",
+  "servNm": "50세 이상 대상포진 무료예방접종 지원사업",
+  "sggNm": "옥천군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000516",
+  "servNm": "50세 이상 대상포진 무료예방접종 지원사업",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 옥천군 보건소",
+  "ctpvNm": "충청북도",
+  "sggNm": "옥천군",
+  "servDgst": "대상포진 발병률을 감사시키고 어르신의 건강생활을 유지토록 함",
+  "lifeNmArray": "노년",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "쿠폰발급일 기준 옥천군에 1년 이상 주민등록을 두고 거주하는 만50세 이상 대상포진 예방접종 이력이 없는 주민",
+  "slctCritCn": "1.접종의뢰서 발행일 현재 1년 이전부터 계속하여 옥천군에 주민등록을 두고 거주하는 50세 이상주민2.과거 대상포진 접종력이 없는 주민",
+  "alwServCn": "대상포진 1회 무료 예방접종",
+  "aplyMtdCn": "보건소 방문 대상자 확인 후 확인증(쿠폰) 발급지정병의원 방문, 쿠폰 제출 후 무료 예방 접종",
+  "inqNum": "8449",
+  "lastModYmd": "20260820",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-730-2164",
+    "wlfareInfoReldNm": "옥천군보건소 예방접종실"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "옥천군 대상포진 무료접종지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20231010UUWBM1441220052383734&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 만63세 이상 대상포진 무료예방접종 지원사업 계획(안) (최종).hwp"
+   }
+  ]
+ }
+}

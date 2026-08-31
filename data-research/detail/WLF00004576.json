@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 밀양시 보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "inqNum": "10016",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "임신 · 출산, 청년",
+  "servDgst": "교통비 지원으로 임산부에 대한 배려와 이용편의를 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004576&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004576",
+  "servNm": "임산부 교통비 지원",
+  "sggNm": "밀양시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004576",
+  "servNm": "임산부 교통비 지원",
+  "enfcBgngYmd": "20180523",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 밀양시 보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "sggNm": "밀양시",
+  "servDgst": "교통비 지원으로 임산부에 대한 배려와 이용편의를 도모",
+  "lifeNmArray": "청년, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "밀양시에 주소지를 둔 보건소 등록 임산부",
+  "slctCritCn": "밀양시 관내 거주자로 보건소 등록 임산부",
+  "alwServCn": "임산부 등록시 10만원 상당 교통카드 지급분만 후 6개월 이내 신청시 10만원 상당 교통카드 지급",
+  "aplyMtdCn": "신분증, 임신확인서(또는 산모수첩) 지참하여 임산부 교통카드 신청서 작성",
+  "inqNum": "10021",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-359-7050",
+    "wlfareInfoReldNm": "밀양시 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "밀양시 출산장려시책 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250611UUWBM0935490141495774&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2025년 밀양시 모자보건사업 계획서(결재).hwpx"
+   }
+  ]
+ }
+}

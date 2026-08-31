@@ -1,0 +1,118 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "인천광역시 여성가족국 영유아정책과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "11260",
+  "intrsThemaNmArray": "임신·출산, 서민금융, 신체건강",
+  "lastModYmd": "20260731",
+  "lifeNmArray": "중장년, 영유아, 임신 · 출산, 청소년, 청년",
+  "servDgst": "'23년 인천 잠정 합계출산율 0.69명(전국 0.72명)으로 심각한 저출산 문제 극복을 위해 출산가정에 산후조리비 지원으로 산모와 신생아의 건강증진 도모 및 친출산 환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006046&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006046",
+  "servNm": "맘편한 산후조리비 지원",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "지역화폐",
+  "trgterIndvdlNmArray": "한부모·조손, 다문화·탈북민, 저소득, 장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00006046",
+  "servNm": "맘편한 산후조리비 지원",
+  "enfcBgngYmd": "20250203",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 여성가족국 영유아정책과",
+  "ctpvNm": "인천광역시",
+  "servDgst": "'23년 인천 잠정 합계출산율 0.69명(전국 0.72명)으로 심각한 저출산 문제 극복을 위해 출산가정에 산후조리비 지원으로 산모와 신생아의 건강증진 도모 및 친출산 환경 조성",
+  "lifeNmArray": "영유아, 청소년, 청년, 중장년, 임신 · 출산",
+  "trgterIndvdlNmArray": "다문화·탈북민, 장애인, 저소득, 한부모·조손",
+  "intrsThemaNmArray": "신체건강, 임신·출산, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "인천시에 1년 이상 거주한 취약계층 산모를 지원합니다.*취약계층 : 수급자, 차상위계층, 한부모가족, 희귀질환 산모, 북한이탈주민 보호대상 및 그배우자, 장애인 및 그 배우자, 기준중위소득 65%이하 다문화가족, 기준중위소득 60%이하 가정, 청소년 부모, 다태아 이상 출산 산모",
+  "slctCritCn": "출생일 기준 1년 전부터 인천시에 주민등록을 두고 거주하는 취약계층 산모 대상 지원",
+  "alwServCn": "산후조리비에 사용할 수 있는 인천e음(지역화폐) 150만원을 지원합니다.",
+  "aplyMtdCn": "정부24 '맘편한 산후조리비 지원' 신청* 외국인산모 및 청소년 산모 등 정부24 신청불가 시 방문신청",
+  "inqNum": "11283",
+  "lastModYmd": "20260731",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-718-2262",
+    "wlfareInfoReldNm": "검단구 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-880-5472",
+    "wlfareInfoReldNm": "미추홀구보건소 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "023-749-8152",
+    "wlfareInfoReldNm": "연수구보건소 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-453-5117",
+    "wlfareInfoReldNm": "남동구 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-509-8203",
+    "wlfareInfoReldNm": "부평구 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-430-7774",
+    "wlfareInfoReldNm": "계양구보건소 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-718-0434",
+    "wlfareInfoReldNm": "서해구 보건행정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-120",
+    "wlfareInfoReldNm": "인천시청 미추홀콜센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-930-4068",
+    "wlfareInfoReldNm": "강화군 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-899-3145",
+    "wlfareInfoReldNm": "옹진군보건소 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-770-7613",
+    "wlfareInfoReldNm": "제물포구 건강증진과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-760-6102",
+    "wlfareInfoReldNm": "영종구 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 공공산후조리원 설치ㆍ운영 및 산후조리 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260716UUWBM1104440201432609&amp;atcflSn=1",
+    "wlfareInfoReldNm": "★2026년 맘편한 산후조리비 지원사업 업무 매뉴얼(1차 수정-2)_행정체제개편.hwpx"
+   }
+  ]
+ }
+}

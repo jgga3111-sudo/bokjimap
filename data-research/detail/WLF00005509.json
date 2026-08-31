@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 시흥시 보건소 보건정책과",
+  "ctpvNm": "경기도",
+  "inqNum": "4465",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "산모 및 신생아의 건강보호와 출산 가정의 경제적 부담 완화 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005509&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005509",
+  "servNm": "시흥시 산후조리비 지원",
+  "sggNm": "시흥시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005509",
+  "servNm": "시흥시 산후조리비 지원",
+  "enfcBgngYmd": "20240101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 시흥시 보건소 보건정책과",
+  "ctpvNm": "경기도",
+  "sggNm": "시흥시",
+  "servDgst": "산모 및 신생아의 건강보호와 출산 가정의 경제적 부담 완화 도모",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "지역화폐",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "지원대상 : 신생아 출생일 기준 부 또는 모가 시흥시에 주민등록을 두고 실제 거주하며 출생등록한 출산가정              외국인 부부의 경우 산모가 F-5(영주) 비자인 경우 지원",
+  "slctCritCn": "신생아 출생일 기준 부 또는 모가 시흥시에 주민등록을 두고 실제 거주하며 출생등록한 출산가정외국인 부부의 경우 산모가 F-5(영주) 비자인 경우",
+  "alwServCn": "2024년 출생아:  1인당40만원 지역화폐 지원(쌍태아의 경우 80만원 지원)2025년 출생아:  1인당50만원 지역화폐 지원(쌍태아의 경우 100만원 지원)",
+  "aplyMtdCn": "출생일 기준 1년이내(출생일 포함) 주소지 관할 동 행정복지센터에 신청",
+  "inqNum": "4473",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-310-5850,5878",
+    "wlfareInfoReldNm": "시흥시 보건소 보건정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "시흥시 산후조리비 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240611UUWBM1630520089003907&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[별지 제1호서식]출산서비스 통합처리 신청서.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240611UUWBM1637010089006636&amp;atcflSn=1",
+    "wlfareInfoReldNm": "시흥시 산후조리비 지원 조례(경기도 시흥시조례).hwp"
+   }
+  ]
+ }
+}

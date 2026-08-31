@@ -1,0 +1,283 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 방문",
+  "bizChrDeptNm": "전남광주통합특별시 농축산식품국 친환경농업과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "6969",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "중장년, 영유아, 임신 · 출산, 청소년, 청년",
+  "servDgst": "* 미래 세대의 건강을 위해 임산부에게 친환경농산물을 공급하여 우리 농산물의 지속적인 소비를 촉진하고 생산농가 활성화 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005767&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005767",
+  "servNm": "전라남도 임산부 친환경농산물 지원사업",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005767",
+  "servNm": "전라남도 임산부 친환경농산물 지원사업",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 농축산식품국 친환경농업과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "* 미래 세대의 건강을 위해 임산부에게 친환경농산물을 공급하여 우리 농산물의 지속적인 소비를 촉진하고 생산농가 활성화 기여",
+  "lifeNmArray": "영유아, 청소년, 청년, 중장년, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "* 전라남도 거주자 중 최근 1년 이내('24. 1. 1. 이후) 출산한 산모와 신청일 현재 임신부",
+  "slctCritCn": "* 전라남도 거주자 중 최근 1년 이내('24. 1. 1. 이후) 출산한 산모와 신청일 현재 임신부",
+  "alwServCn": "* 연간 48만원 상당의 친환경 농산물 제공(자부담 96천원)* 상품 주문 시 50% 이상은 친환경농산물 구매 필수* 대상자 확정 후 안내되는 고유번호로 www.ecoemall.com에 로그인, 임산부가 원하는 품목을 직접 선택하여 주문, 택배 배송",
+  "aplyMtdCn": "* (온라인) 통합쇼핑몰(www.ecoemall.com)* (오프라인) 임신 또는 출산확인서, 출생증명서 등 임신과 출산 여부를 확인할 수 있는 서류를 지참하여 주민등록 주소지 읍면동 주민센터",
+  "inqNum": "7007",
+  "lastModYmd": "20260714",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-240-8376",
+    "wlfareInfoReldNm": "신안군 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-240-8376",
+    "wlfareInfoReldNm": "신안군 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-430-3112",
+    "wlfareInfoReldNm": "강진군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-430-3112",
+    "wlfareInfoReldNm": "강진군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-860-5962",
+    "wlfareInfoReldNm": "장흥군 농산유통과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-860-5962",
+    "wlfareInfoReldNm": "장흥군 농산유통과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-379-3673",
+    "wlfareInfoReldNm": "화순군 농업정책과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-379-3673",
+    "wlfareInfoReldNm": "화순군 농업정책과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-850-5393",
+    "wlfareInfoReldNm": "보성군 농축산과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-850-5393",
+    "wlfareInfoReldNm": "보성군 농축산과장"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-830-5375",
+    "wlfareInfoReldNm": "고흥군 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-830-5375",
+    "wlfareInfoReldNm": "고흥군 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-780-2374",
+    "wlfareInfoReldNm": "구례군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-780-2374",
+    "wlfareInfoReldNm": "구례군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-360-8323",
+    "wlfareInfoReldNm": "곡성군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-360-8323",
+    "wlfareInfoReldNm": "곡성군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-380-2718",
+    "wlfareInfoReldNm": "담양군 농업유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-380-2718",
+    "wlfareInfoReldNm": "담양군 농업유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-797-3374",
+    "wlfareInfoReldNm": "광양시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-797-3374",
+    "wlfareInfoReldNm": "광양시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-339-7415",
+    "wlfareInfoReldNm": "나주시 농식품산업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-339-7415",
+    "wlfareInfoReldNm": "나주시 농식품산업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-540-3511",
+    "wlfareInfoReldNm": "진도군 농업기술센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-540-3511",
+    "wlfareInfoReldNm": "진도군 농업기술센터"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-749-8712",
+    "wlfareInfoReldNm": "순천시 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-749-8712",
+    "wlfareInfoReldNm": "순천시 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-659-4415",
+    "wlfareInfoReldNm": "여수시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-659-4415",
+    "wlfareInfoReldNm": "여수시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-270-3381",
+    "wlfareInfoReldNm": "목포시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-270-3381",
+    "wlfareInfoReldNm": "목포시 농업정책과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-286-6324",
+    "wlfareInfoReldNm": "전남광주통합특별시 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-286-6324",
+    "wlfareInfoReldNm": "전라남도 친환경농업과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5721",
+    "wlfareInfoReldNm": "완도군 농업축산과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-550-5721",
+    "wlfareInfoReldNm": "완도군 농업축산과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-390-8413",
+    "wlfareInfoReldNm": "장성군 농업축산과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-390-8413",
+    "wlfareInfoReldNm": "장성군 농업축산과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5839",
+    "wlfareInfoReldNm": "영광군 농업유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-350-5839",
+    "wlfareInfoReldNm": "영광군 농업유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-320-1862",
+    "wlfareInfoReldNm": "함평군 농업정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-320-1862",
+    "wlfareInfoReldNm": "함평군 농업정책실"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-4073",
+    "wlfareInfoReldNm": "무안군 식량원예과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-450-4073",
+    "wlfareInfoReldNm": "무안군 식량원예과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-470-2051",
+    "wlfareInfoReldNm": "영암군 농축산유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-470-2051",
+    "wlfareInfoReldNm": "영암군 농축산유통과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-530-5902",
+    "wlfareInfoReldNm": "해남군 농정과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "061-530-5902",
+    "wlfareInfoReldNm": "해남군 농정과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전라남도 친환경농산물 꾸러미 지원 조례"
+   },
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "전라남도 친환경농산물 꾸러미 지원 조례"
+   }
+  ]
+ }
+}

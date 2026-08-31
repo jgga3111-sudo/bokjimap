@@ -7,19 +7,19 @@ echo ============================================
 echo  복지맵 - 오늘치 상세 수집
 echo ============================================
 echo.
-echo  공공데이터포털 개발계정 한도: 하루 1,000콜
-echo  이 스크립트는 900건만 받습니다(재시도 여유분 100).
+echo  공공데이터포털 한도는 API마다 따로입니다(docs/01 7절)
+echo  중앙부처 100 + 지자체 1,000 = 하루 1,100콜까지 받습니다.
 echo  한도는 자정(KST)에 초기화됩니다.
 echo.
 echo  이미 받은 것은 건너뛰므로 여러 번 돌려도 안전합니다.
 echo.
 
-node --env-file=.env.local scripts/fetch-detail.mjs 900
+node --env-file=.env.local scripts/fetch-detail.mjs 1200
 if errorlevel 1 goto :failed
 
 echo.
 echo --- 수집한 것을 사이트 데이터로 변환 ---
-node scripts/build-data.mjs 600
+node scripts/build-data.mjs 900
 if errorlevel 1 goto :failed
 
 echo.

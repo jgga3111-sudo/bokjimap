@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "모바일앱",
+  "bizChrDeptNm": "강원특별자치도 양구군 보건소 건강증진과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "7589",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260630",
+  "servDgst": "양구군민을 대상으로 비대면 모바일 걷기 앱 &lt;워크온&gt;을 통한 군민 주도 걷기 실천율 향상 및 신체활동 증대",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005429&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005429",
+  "servNm": "모바일 걷기 앱 워크온",
+  "sggNm": "양구군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "지역화폐, 현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005429",
+  "servNm": "모바일 걷기 앱 워크온",
+  "enfcBgngYmd": "20220301",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 양구군 보건소 건강증진과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "양구군",
+  "servDgst": "양구군민을 대상으로 비대면 모바일 걷기 앱 &lt;워크온&gt;을 통한 군민 주도 걷기 실천율 향상 및 신체활동 증대",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현물지급, 지역화폐",
+  "aplyMtdNm": "모바일앱",
+  "sprtTrgtCn": "양구지역주민(스마트폰 소지)",
+  "slctCritCn": "양구지역주민 (모바일 걷기 앱  걷기 목표 달성자 충족시)",
+  "alwServCn": "예산의 범위 내에서 걷기 목표 달성자에 한해 지역화폐 및 양구사랑상품권을 지원합니다.- 월 기준 걷기 목표 달성자 선착순 300명 정도 : 양구 사랑 상품권 또는 지역화폐 5,000원 지원(총 1500,000원까지 지원)",
+  "aplyMtdCn": "모바일 걷기 앱 워크온에서 목표 달성시 쿠폰받기가 나오면 쿠폰받기를 눌러서 신청합니다.데이터 취합 후 담당자 확인후 상품권을 지급합니다.",
+  "inqNum": "7595",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-480-2843",
+    "wlfareInfoReldNm": "양구군 보건소 건강증진과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "지역보건법 제11조(보건소의 기능 및 업무) 제 1항 제5호 가목 / 국민건강증진법 제16조의 3(신체활동 장려사업 제1항 및 제19조9건강증진 사업 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240215UUWBM2054370070699246&amp;atcflSn=1",
+    "wlfareInfoReldNm": "자역보건법 제11조.pdf"
+   }
+  ]
+ }
+}

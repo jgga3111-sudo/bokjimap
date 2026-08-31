@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "서울특별시 관악구 복지가족국 복지정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "4463",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20250705",
+  "servDgst": "국가유공자 유족 위로",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002652&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002652",
+  "servNm": "보훈대상자 사망위로금",
+  "sggNm": "관악구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002652",
+  "servNm": "보훈대상자 사망위로금",
+  "enfcBgngYmd": "20130701",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 관악구 복지가족국 복지정책과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "관악구",
+  "servDgst": "국가유공자 유족 위로",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "자격기준 : 국가유공자 및 선순위유족지급조건 : 사망일 현재 관악구에 주민등록을 두고 1년 이상 거주한 유공자(선순위유족) 사망시 지급신청기간 : 사망일로부터 1년이내 신청",
+  "slctCritCn": "관악구 거주기간 1년이상, 사망 후 1년이내 신청",
+  "alwServCn": "20만원 지급(1회)",
+  "aplyMtdCn": "신청기간 : 사망일로부터 1년 이내공통서류 : 신청서(동주민센터 제공) / 사망자의 국가유공자증(유족증) 사본 / 사망자의 사망진단서(또는 사망 말소자 등본) / 유족 통장사본 / 유족 신분증추가서류 : 대리인 신청 시 : 대리인 신분증, 위임장처리절차 : 동주민센터에서 신청서류 안내 및 신청접수 -&gt; 구청에서 신청 15일이내 신청자(사망자 가족) 통장으로 사망위로금 입금",
+  "inqNum": "4471",
+  "lastModYmd": "20250705",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-879-5854",
+    "wlfareInfoReldNm": "관악구청 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 관악구 국가보훈대상자 예우 및 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=6935GOWF14GOWF146935&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울특별시 관악구 국가보훈대상자 예우 및 지원에 관한 조례.hwp"
+   }
+  ]
+ }
+}

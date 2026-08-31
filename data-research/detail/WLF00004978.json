@@ -1,0 +1,83 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "제주특별자치도 도민안전건강실 건강관리과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "4679",
+  "lastModYmd": "20260806",
+  "lifeNmArray": "노년",
+  "servDgst": "만 50세이상 취약계층에 대한 대상포진 예방접종 지원으로 노년기 건강증진 도모 및 의료비 부담 경감  (의료급여수급권자)",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004978&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004978",
+  "servNm": "노인 대상포진 예방접종 지원",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004978",
+  "servNm": "노인 대상포진 예방접종 지원",
+  "enfcBgngYmd": "20190801",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 도민안전건강실 건강관리과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "만 50세이상 취약계층에 대한 대상포진 예방접종 지원으로 노년기 건강증진 도모 및 의료비 부담 경감  (의료급여수급권자)",
+  "lifeNmArray": "노년",
+  "trgterIndvdlNmArray": "저소득",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "sprtTrgtCn": "만65세 이상 의료급여수급권자(주민등록상 도내 거주자)",
+  "slctCritCn": "※ 1종 의료급여수급권자 : 국민기초생활보장수급권자(희귀난치성질환등록자, 중증질환등록자, 시설수급권자), 의사상자, 국가유공자, 5.18민주화운동관련자, 북한이탈주민, 노숙자, 중요무형문화재보유자, 독립유공자, 국내에 입양된 만18세미만의 아동, 이재민)※ 2종 의료급여수급권자 : 국민기초생활보장수급권자 중 의료급여 1종 수급권자 기준에        해당하지 않은 사람",
+  "alwServCn": "취약계층인 만65세이상 의료급여수급권자에 대한 대상포진 예방접종 지원",
+  "inqNum": "4685",
+  "lastModYmd": "20260806",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647606274",
+    "wlfareInfoReldNm": "서귀포시서부보건소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647606762",
+    "wlfareInfoReldNm": "서귀포시동부보건소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647606085",
+    "wlfareInfoReldNm": "서귀포시서귀포보건소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647284207",
+    "wlfareInfoReldNm": "제주시동부보건소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647284122",
+    "wlfareInfoReldNm": "제주시서부보건소"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0647288748",
+    "wlfareInfoReldNm": "제주시제주보건소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제주특별자치도 대상포진 예방접종 지원 조례안"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4098GOWF16GOWF164098&amp;atcflSn=1",
+    "wlfareInfoReldNm": "제주특별자치도 대상포진 예방접종 지원 조례(제주특별자치도조례)(제2428호)(20191231).hwp"
+   }
+  ]
+ }
+}

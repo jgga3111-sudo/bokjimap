@@ -1,0 +1,77 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 안산시 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "inqNum": "6409",
+  "intrsThemaNmArray": "보호·돌봄, 입양·위탁",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "아동, 중장년, 청소년, 청년",
+  "servDgst": "일상생활이 어려운 중증장애인에게 활동지원급여를 추가 지원하여 중증장애인의 자립 및 삶의 질 향상을 도모하고자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004314&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004314",
+  "servNm": "장애인활동지원사업 시추가 지원",
+  "sggNm": "안산시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004314",
+  "servNm": "장애인활동지원사업 시추가 지원",
+  "enfcBgngYmd": "20170101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 안산시 복지국 장애인복지과",
+  "ctpvNm": "경기도",
+  "sggNm": "안산시",
+  "servDgst": "일상생활이 어려운 중증장애인에게 활동지원급여를 추가 지원하여 중증장애인의 자립 및 삶의 질 향상을 도모하고자 함.",
+  "lifeNmArray": "아동, 청소년, 청년, 중장년",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "입양·위탁, 보호·돌봄",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "장애인활동지원 종합조사 기능제한점수 330점(인정조사 1등급) 이상 중증장애인에게 국도비 사업만으로 부족한 활동지원급여를 시자체 추가로 보조합니다.",
+  "slctCritCn": "활동지원 기능제한점수 330점(인정조사 1등급) 이상 중증장애인 중-국도비 추가지원 대상자 - 월 10시간 추가지원-국도비 추가급여 제외자 중 360점 이상 대상자 - 월 50시간 추가지원-국도비 추가급여 제외자 중 360점 미만 대상자 - 월 20시간 추가지원-독거·취약가구로서 활동지원 기능제한점수 413점 이상 와상, 감각마비 장애인-독거·취약가구로서 활동지원 기능제한점수 360점 이상 호흡기 착용 와상, 감각마비 장애인",
+  "alwServCn": "활동지원 기능제한점수 330점(인정조사 1등급) 이상 중증장애인 중-국도비 추가지원 대상자 - 월 10시간 추가지원-국도비 추가급여 제외자 중 360점 이상 대상자 - 월 50시간 추가지원-국도비 추가급여 제외자 중 360점 미만 대상자 - 월 20시간 추가지원-독거·취약가구로서 활동지원 기능제한점수 413점 이상 와상, 감각마비 장애인-독거·취약가구로서 활동지원 기능제한점수 360점 이상 호흡기 착용 와상, 감각마비 장애인",
+  "aplyMtdCn": "동주민센터신청-&gt;시청 사업부서 대상자 확인 및 결정-&gt;장애인활동지원 제공기관 선택 이용",
+  "inqNum": "6413",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "129",
+    "wlfareInfoReldNm": "보건복지부 콜센터"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "www.129.go.kr",
+    "wlfareInfoReldNm": "보건복지부 콜센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애인활동 지원에 관한 법률"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230602UUWBM1406300037614472&amp;atcflSn=1",
+    "wlfareInfoReldNm": "중증장애인활동지원서비스 시추가 지원 신청서.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260720UUWBM1721160201749225&amp;atcflSn=1",
+    "wlfareInfoReldNm": "중증장애인 사회활동지원(시추가사업) 대상자 안내.pdf"
+   }
+  ]
+ }
+}

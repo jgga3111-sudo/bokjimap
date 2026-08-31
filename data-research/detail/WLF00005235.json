@@ -1,0 +1,56 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "부산광역시 부산진구 복지교육국 아동청소년과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "5194",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260723",
+  "lifeNmArray": "영유아",
+  "servDgst": "어린이집을 이용하는 영유아 가정의 보호자가 부담해야 할 실비성격의 입학준비금 지원을 통한 경제적 부담 경감 및 지속적인 양육지원 체계 마련",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005235&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005235",
+  "servNm": "어린이집 신입생 입학준비금 지원",
+  "sggNm": "부산진구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005235",
+  "servNm": "어린이집 신입생 입학준비금 지원",
+  "enfcBgngYmd": "20230101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "부산광역시 부산진구 복지교육국 아동청소년과",
+  "ctpvNm": "부산광역시",
+  "sggNm": "부산진구",
+  "servDgst": "어린이집을 이용하는 영유아 가정의 보호자가 부담해야 할 실비성격의 입학준비금 지원을 통한 경제적 부담 경감 및 지속적인 양육지원 체계 마련",
+  "lifeNmArray": "영유아",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신청일 기준 부모 또는 보호자와 함께 부산진구에 주소를 두고 2023. 1. 1. 이후 어린이집에 입학하는 영유아(어린이집 최초 입학 아동이며 입학일 이후 6개월이 지나지 않은 아동)",
+  "slctCritCn": "신청일 기준 부모 또는 보호자와 함께 부산진구에 주소를 두고 2023. 1. 1. 이후 어린이집에 입학하는 영유아(어린이집 최초 입학 아동이며 입학일 이후 6개월이 지나지 않은 아동)",
+  "alwServCn": "100천원 최초 1회 지급",
+  "aplyMtdCn": "신청장소    ❍ 어린이집: 관내 어린이집 입학 영유아   ❍ 거주지 동 주민센터: 관외 어린이집 입학 영유아",
+  "inqNum": "5199",
+  "lastModYmd": "20260723",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "051-605-4377",
+    "wlfareInfoReldNm": "부산진구청 아동청소년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 부산진구 영유아 보육 지원 조례 제24조(비용의 보조 및 반환)"
+   }
+  ]
+ }
+}

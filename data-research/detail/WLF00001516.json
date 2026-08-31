@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "인천광역시 계양구 주민복지국 여성보육과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "5511",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260418",
+  "lifeNmArray": "중장년",
+  "servDgst": "남성의 육아휴직률을 높이고 육아와 가사를 분담함으로써 지역사회 출산율 제고에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001516&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001516",
+  "servNm": "아빠 육아휴직 장려금 지원",
+  "sggNm": "계양구",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001516",
+  "servNm": "아빠 육아휴직 장려금 지원",
+  "enfcBgngYmd": "20190101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 계양구 주민복지국 여성보육과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "계양구",
+  "servDgst": "남성의 육아휴직률을 높이고 육아와 가사를 분담함으로써 지역사회 출산율 제고에 기여",
+  "lifeNmArray": "중장년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "다음의 요건을 모두 총족한 남성 육아휴직자- 장려금 신청일 기준 계양구에 1년이상 거주- 장려금 신청일 기준 육아휴직 대상 아동이 계양구에 주민등록- 고용보험법 제70조 규정에 의한 지급 요건을 충족  ※ 「고용보험법 시행령」 제95조 및 제95조의3에 따라 육아휴직급여가 통상임금의 80%로 전환되는 7개월차부터 신청 가능",
+  "slctCritCn": "다음의 요건을 모두 총족한 남성 육아휴직자- 장려금 신청일 기준 계양구에 1년이상 거주- 장려금 신청일 기준 육아휴직 대상 아동이 계양구에 주민등록- 고용보험법 제70조 규정에 의한 지급 요건을 충족  ※ 「고용보험법 시행령」 제95조 및 제95조의3에 따라 육아휴직급여가 통상임금의 80%로 전환되는 7개월차부터 신청 가능",
+  "alwServCn": "매월 50만원을 최대 6개월 간 지원- 휴직기간이 1개월 미만인 경우는 일할계산하여 지급- 지원기간 중 타 시군구로 전출이력이 있거나 전출시에는 지원종료- 동일한 자녀로 중복신청불가",
+  "aplyMtdCn": "구비서류 : 고용센터에서 발급받은 육아휴직급여지급결정통지서 1부.&#13;신청장소 : 계양구청 여성보육과",
+  "inqNum": "5518",
+  "lastModYmd": "20260418",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-450-5984",
+    "wlfareInfoReldNm": "계양구청 여성보육과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 계양구 아빠 육아휴직 장려금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230525UUWBM0843350036143189&amp;atcflSn=1",
+    "wlfareInfoReldNm": "아빠 육아휴직 장려금 지원 신청서(2023).hwp"
+   }
+  ]
+ }
+}

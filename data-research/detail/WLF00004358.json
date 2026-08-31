@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "서울특별시 마포구 보건소 건강동행과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "4797",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "중장년, 청소년, 임신 · 출산, 청년",
+  "servDgst": "태아의 신경관결손과 임산부의 철분결핍성 빈혈로 발생할 수 있는 유산, 사산, 조산, 산모사망을 예방하기 위해 엽산제와 철분제를 지원하여 안전한 분만 유도 및 임산부와 태아의 건강증진 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004358&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004358",
+  "servNm": "철분제,엽산제 구매(임산부 및 영유아관리)",
+  "sggNm": "마포구",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004358",
+  "servNm": "철분제,엽산제 구매(임산부 및 영유아관리)",
+  "enfcBgngYmd": "20160101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 마포구 보건소 건강동행과",
+  "ctpvNm": "서울특별시",
+  "sggNm": "마포구",
+  "servDgst": "태아의 신경관결손과 임산부의 철분결핍성 빈혈로 발생할 수 있는 유산, 사산, 조산, 산모사망을 예방하기 위해 엽산제와 철분제를 지원하여 안전한 분만 유도 및 임산부와 태아의 건강증진 도모",
+  "lifeNmArray": "청소년, 청년, 중장년, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "엽산제:임신12주이내 임산부철분제:임신16주~분만전까지",
+  "slctCritCn": "임산부",
+  "alwServCn": "엽산제, 철분제 제공",
+  "aplyMtdCn": "마포구 보건소에 임산부 등록 후 지원맘편한임신 통합제공서비스 통한 온라인 및 방문접수",
+  "inqNum": "4803",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-3153-9090",
+    "wlfareInfoReldNm": "마포구보건소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "모자보건법 3조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=3032GOWF15GOWF153032&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2020년 모자보건사업 추진 계획.hwp"
+   }
+  ]
+ }
+}

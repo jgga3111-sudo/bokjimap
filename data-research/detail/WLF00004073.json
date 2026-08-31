@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경상남도 교육청년국 교육인재과",
+  "ctpvNm": "경상남도",
+  "inqNum": "9235",
+  "intrsThemaNmArray": "교육, 입양·위탁",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "청소년, 청년",
+  "servDgst": "서민자녀들의 학력 향상과 동등한 교육기회 제공을 위한 교육경비 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004073&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004073",
+  "servNm": "경상남도 교육지원 바우처사업",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득, 장애인, 한부모·조손",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004073",
+  "servNm": "경상남도 교육지원 바우처사업",
+  "enfcBgngYmd": "20150101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 교육청년국 교육인재과",
+  "ctpvNm": "경상남도",
+  "servDgst": "서민자녀들의 학력 향상과 동등한 교육기회 제공을 위한 교육경비 지원",
+  "lifeNmArray": "청소년, 청년",
+  "trgterIndvdlNmArray": "장애인, 저소득, 한부모·조손",
+  "intrsThemaNmArray": "교육, 입양·위탁",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "경남도내 거주하는 기준 중위소득 70%이하 가구의 초중고 학생 (4인기준 4,546,317원)",
+  "slctCritCn": "기준 중위소득 70%이내",
+  "alwServCn": "초중고 1인당 연간 10만원 포인트가 적립된 교육지원카드 지급&#13;(지원내용) 도서구입, 온라인 강의 수강 등 자율 사용",
+  "aplyMtdCn": "보호자의 주민등록상 주소지 관할 읍면동 행정복지센터 또는 온라인 신청(교육지원카드 홈페이지)&#13;소득,재산 조사 후 대상자로 선정되면 교육지원카드 지급",
+  "inqNum": "9253",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-211-2464",
+    "wlfareInfoReldNm": "경상남도 교육인재과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경상남도 서민자녀 교육지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260604UUWBM1531440195213978&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년도 경상남도 교육지원 바우처사업 신청 안내문.pdf"
+   }
+  ]
+ }
+}

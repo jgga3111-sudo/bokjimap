@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 여성가족과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "15893",
+  "intrsThemaNmArray": "서민금융, 교육",
+  "lastModYmd": "20260808",
+  "lifeNmArray": "청년, 청소년",
+  "servDgst": "저소득 한부모가족 자녀의 대학 입학에 따른 경제적 부담을 덜어주기 위하여 입학지원금 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002495&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002495",
+  "servNm": "저소득 한부모가족 자립지원(대학신입생등록금)",
+  "sggNm": "서귀포시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002495",
+  "servNm": "저소득 한부모가족 자립지원(대학신입생등록금)",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 서귀포시 복지위생국 여성가족과",
+  "ctpvNm": "제주특별자치도",
+  "sggNm": "서귀포시",
+  "servDgst": "저소득 한부모가족 자녀의 대학 입학에 따른 경제적 부담을 덜어주기 위하여 입학지원금 지원",
+  "lifeNmArray": "청소년, 청년",
+  "trgterIndvdlNmArray": "한부모·조손",
+  "intrsThemaNmArray": "교육, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "급여신청일이 당해년도 3월 31일 이전 한부모가정 자녀 중 고등교육법 제2조에 의한 대학 및 평생교육법 제31조의 학위인정대학의 신입생(학점은행제 제외)",
+  "slctCritCn": "한부모가족지원법 상 한부모가족",
+  "alwServCn": "한부모가족 대학교 신입생 입학지원금 1인 1,000천원",
+  "aplyMtdCn": "지원시기 : 2023년 2월 ~ 3월중지급방법 : 대학등록금 납부 영수증 또는 재학증명서 등 증빙서류 확인 후 지급",
+  "inqNum": "15898",
+  "lastModYmd": "20260808",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-760-2473",
+    "wlfareInfoReldNm": "서귀포시 여성가족과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "2026 저소득 한부모가족지원 자체사업 지원 기준"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260807UUWBM1127170204015348&amp;atcflSn=1",
+    "wlfareInfoReldNm": "★2026년 가족친화 시책사업 운영지침.hwp"
+   }
+  ]
+ }
+}

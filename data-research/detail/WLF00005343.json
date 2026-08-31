@@ -1,0 +1,56 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "인천광역시 옹진군 행정복지국 사회복지과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "6965",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "servDgst": "장애인활동지원 제공이 불가한 도서벽지 지역에 가족지원을 위해 장애인 가족 중 활동지원사 교육 비 등 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005343&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005343",
+  "servNm": "장애인 활동지원사 양성 지원 사업",
+  "sggNm": "옹진군",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005343",
+  "servNm": "장애인 활동지원사 양성 지원 사업",
+  "enfcBgngYmd": "20221001",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 옹진군 행정복지국 사회복지과",
+  "ctpvNm": "인천광역시",
+  "sggNm": "옹진군",
+  "servDgst": "장애인활동지원 제공이 불가한 도서벽지 지역에 가족지원을 위해 장애인 가족 중 활동지원사 교육 비 등 지원",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "동거 장애인 가족 중 활동지원사 교육 수료 희망 대상자",
+  "slctCritCn": "동거 장애인 가족 중 활동지원사 교육 수료 희망 대상자",
+  "alwServCn": "교육비(15만원) 및 실비",
+  "aplyMtdCn": "신청서등본(장애인 동거 확인)활동지원사 자격증(발급 후 신청)통장사본",
+  "inqNum": "6990",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-899-2340",
+    "wlfareInfoReldNm": "인천광역시 옹진군 행정복지국 사회복지과 여성장애인팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "옹진군 장애인활동지원사 양성 지원 조례"
+   }
+  ]
+ }
+}

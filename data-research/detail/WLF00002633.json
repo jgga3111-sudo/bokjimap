@@ -1,0 +1,59 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "대전광역시 복지국 보훈정책추진단",
+  "ctpvNm": "대전광역시",
+  "inqNum": "10457",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260828",
+  "servDgst": "6,25 또는 월남전 참전유공자가 사망하였을 경우 그 배우자에게 월 8만원 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002633&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002633",
+  "servNm": "참전유공자 배우자수당",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00002633",
+  "servNm": "참전유공자 배우자수당",
+  "enfcBgngYmd": "20260101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "대전광역시 복지국 보훈정책추진단",
+  "ctpvNm": "대전광역시",
+  "servDgst": "6,25 또는 월남전 참전유공자가 사망하였을 경우 그 배우자에게 월 8만원 지급",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "국가보훈부에 참전유공자로 등록된 6.25전쟁 또는 월남전 참전용사가 사망하였을 경우 그 배우자",
+  "slctCritCn": "국가보훈부에 참전유공자로 등록된 분",
+  "alwServCn": "월 8만원 수당 지급",
+  "aplyMtdCn": "주소지 동 주민센터 신청",
+  "inqNum": "10478",
+  "lastModYmd": "20260828",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "042-270-0892",
+    "wlfareInfoReldNm": "대전광역시 보훈정책추진단"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대전광역시 참전유공자 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230601UUWBM1604480037426041&amp;atcflSn=1",
+    "wlfareInfoReldNm": "대전광역시 참전유공자 지원 조례.hwp"
+   }
+  ]
+ }
+}

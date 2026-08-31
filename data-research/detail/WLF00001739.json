@@ -1,0 +1,64 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷, 팩스, 우편",
+  "bizChrDeptNm": "경기도 경제투자실 소상공인과",
+  "ctpvNm": "경기도",
+  "inqNum": "5487",
+  "lastModYmd": "20260715",
+  "servDgst": "근로자가 없는 1인 영세 소상공인의 사회안전망 편입 도모 및 안정적인 경영기반 마련 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001739&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001739",
+  "servNm": "1인 소상공인 고용보험료 지원",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001739",
+  "servNm": "1인 소상공인 고용보험료 지원",
+  "enfcBgngYmd": "20200101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 경제투자실 소상공인과",
+  "ctpvNm": "경기도",
+  "servDgst": "근로자가 없는 1인 영세 소상공인의 사회안전망 편입 도모 및 안정적인 경영기반 마련 지원",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문, 우편, 인터넷, 팩스",
+  "sprtTrgtCn": "자영업자 고용보험에 가입한 도내 1인 소상공인",
+  "slctCritCn": "자영업자 고용보험에 가입한 도내 1인 소상공인",
+  "alwServCn": "월납입 고용보험료의 30~40% 지원",
+  "aplyMtdCn": "경기도시장상권진흥원 홈페이지 온라인 접수 또는 우편 및 방문, 팩스로 신청서 및 첨부서류 제출",
+  "inqNum": "5503",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "1600-8001",
+    "wlfareInfoReldNm": "경기도시장상권진흥원"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://gmr.or.kr/",
+    "wlfareInfoReldNm": "경기도시장상권진흥원"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경기도 소상공인 고용보험료 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260713UUWBM1749210200981066&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2026년_경기도_1인_소상공인_고용보험료_지원사업_모집공고_및_신청서식.hwp"
+   }
+  ]
+ }
+}

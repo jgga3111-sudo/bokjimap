@@ -1,0 +1,78 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 정선군 행정국 복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "4492",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260812",
+  "servDgst": "취약계층(기초수급자, 중증장애인, 한부모가족, 다자녀, 국가보훈대상자)가구의 상하수도 요금을 감면 지원 함으로써 생활안정을 도모하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003729&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003729",
+  "servNm": "취약계층 상수도 사용료 지원",
+  "sggNm": "정선군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "감면",
+  "trgterIndvdlNmArray": "한부모·조손, 장애인, 저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003729",
+  "servNm": "취약계층 상수도 사용료 지원",
+  "enfcBgngYmd": "20130101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 정선군 행정국 복지과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "정선군",
+  "servDgst": "취약계층(기초수급자, 중증장애인, 한부모가족, 다자녀, 국가보훈대상자)가구의 상하수도 요금을 감면 지원 함으로써 생활안정을 도모하고자 함",
+  "trgterIndvdlNmArray": "장애인, 저소득, 한부모·조손",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "감면",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 신청대상 -「국민기초생활 보장법」에 따른 수급자- 세대주 또는 배우자가 「장애인연금법」제2조제1호 및「장애인연금법 시행령」제2조에 따른 중증 장애인- 「한부모가족지원법」에 따른 수급자- 「정선군 국가보훈대상자 예우 및 지원에 관한 조례」 제2조에 따른 국가보훈대상자 - 다자녀가구2) 선정기준 : 가정용 수도 사용자",
+  "slctCritCn": "기초수급자, 중증장애인, 한부모가정, 「정선군 국가보훈대상자 예우 및 지원에 관한 조례」 제2조에 따른 국가보훈대상자, 다자녀",
+  "alwServCn": "월 사용량이 10㎥ 이상인 경우는 10㎥을 경감, 10㎥ 미만인 경우에는 구경별 기본요금만 부과",
+  "aplyMtdCn": "1) 신청방법 : 읍/면행정복지센터 방문 신청2) 감면시기 : 감면 신청후 부서에서 감면 결정한 달부터 지급",
+  "inqNum": "4496",
+  "lastModYmd": "20260812",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-560-2308",
+    "wlfareInfoReldNm": "정선군청 복지과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-560-2977",
+    "wlfareInfoReldNm": "강원특별자치도 정선군 가족행복과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "0335602528",
+    "wlfareInfoReldNm": "정선군 상하수도사업소"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "정선군 수도급수 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM0915540034983535&amp;atcflSn=1",
+    "wlfareInfoReldNm": "별지 제1호 서식  수도사용료 감면 신청서.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230517UUWBM0921210034984483&amp;atcflSn=1",
+    "wlfareInfoReldNm": "별지 제1호 서식  수도사용료 감면 신청서.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경상북도 문경시 보건소 건강관리과",
+  "ctpvNm": "경상북도",
+  "inqNum": "7552",
+  "intrsThemaNmArray": "서민금융, 임신·출산, 입양·위탁",
+  "lastModYmd": "20260807",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "출산가정에 경제적부담을 줄이고 아이 낳고 키우기 좋은 도시 문경의 이미지를 제고함으로서 지역의 인구감소에 적극대처하고 행복한 결혼과 출산의 사회적 분위기 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004630&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004630",
+  "servNm": "출산장려금 지원",
+  "sggNm": "문경시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004630",
+  "servNm": "출산장려금 지원",
+  "enfcBgngYmd": "20200101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상북도 문경시 보건소 건강관리과",
+  "ctpvNm": "경상북도",
+  "sggNm": "문경시",
+  "servDgst": "출산가정에 경제적부담을 줄이고 아이 낳고 키우기 좋은 도시 문경의 이미지를 제고함으로서 지역의 인구감소에 적극대처하고 행복한 결혼과 출산의 사회적 분위기 조성",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 입양·위탁, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "○ 대 상 자 : 2026. 1. 1. 출생아부터     - 12개월 미만 영아를 입양한 경우     - 타 시ㆍ군에서 생후 12개월 미만의 출생아와 부모가 함께 전입한 경우○ 지원조건 : 시에 주민등록을 두고 거주하는 부 또는 모",
+  "slctCritCn": "○ 대 상 자 : 2026. 1. 1. 출생아부터     - 12개월 미만 영아를 입양한 경우     - 타 시ㆍ군에서 생후 12개월 미만의 출생아와 부모가 함께 전입한 경우○ 지원조건 : 시에 주민등록을 두고 거주하는 부 또는 모",
+  "alwServCn": "○ 출산장려금 지급 : 500만원(출생순서와 관계없이 동일하게 지원)    - 20만원씩 15개월, 출산축하금 100만원, 돌축하금 100만원",
+  "aplyMtdCn": "읍면동 행정복지센터 → 출산 서비스 통합 처리 신청 → 보건소 검토 후 지급",
+  "inqNum": "7555",
+  "lastModYmd": "20260807",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-550-8185",
+    "wlfareInfoReldNm": "문경시 보건소 건강관리과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "문경시 출산장려에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230518UUWBM1034340035183021&amp;atcflSn=1",
+    "wlfareInfoReldNm": "문경시 출산장려에 관한 조례.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230518UUWBM1031490035182373&amp;atcflSn=1",
+    "wlfareInfoReldNm": "출산서비스 통합처리 신청서.hwpx"
+   }
+  ]
+ }
+}

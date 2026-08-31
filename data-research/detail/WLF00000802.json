@@ -1,0 +1,64 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "전남광주통합특별시 여성가족국 여성가족과",
+  "ctpvNm": "전남광주통합특별시",
+  "inqNum": "6908",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260715",
+  "servDgst": "❍ 추진목적 : 성매매피해자 여성 및 성매매피해자지원시설 퇴소자에 대한\n                자립지원으로 성매매 재유입 방지를 위한 자립기반 마련\n ❍ 추진근거 : 성매매방지 및 피해자보호 등에 관한 법률\n ❍ 지원대상 : 성매매피해자지원시설 퇴소자 및 탈성매매 여성\n ❍ 지원내용 \n   ① 자립정착금 : 1인 1회 5,000천원 / 지원시설 1년 이상 입소후 퇴소자 지급\n   ② 자립지원금 : 1인 1회 20,000천원 / 성매매피해 구조자로 자립의지가 강한자",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000802&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000802",
+  "servNm": "성매매피해자자립지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000802",
+  "servNm": "성매매피해자자립지원",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "전남광주통합특별시 여성가족국 여성가족과",
+  "ctpvNm": "전남광주통합특별시",
+  "servDgst": "❍ 추진목적 : 성매매피해자 여성 및 성매매피해자지원시설 퇴소자에 대한\n                자립지원으로 성매매 재유입 방지를 위한 자립기반 마련\n ❍ 추진근거 : 성매매방지 및 피해자보호 등에 관한 법률\n ❍ 지원대상 : 성매매피해자지원시설 퇴소자 및 탈성매매 여성\n ❍ 지원내용 \n   ① 자립정착금 : 1인 1회 5,000천원 / 지원시설 1년 이상 입소후 퇴소자 지급\n   ② 자립지원금 : 1인 1회 20,000천원 / 성매매피해 구조자로 자립의지가 강한자",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "❍ 추진목적 : 성매매피해자 여성 및 성매매피해자지원시설 퇴소자에 대한                   자립지원으로 성매매 재유입 방지를 위한 자립기반 마련 ❍ 추진근거 : 성매매방지 및 피해자보호 등에 관한 법률 ❍ 지원대상 : 성매매피해자지원시설 퇴소자 및 탈성매매 여성 ❍ 지원내용    ① 자립정착금 : 1인 1회 5,000천원 / 지원시설 1년 이상 입소후 퇴소자 지급   ② 자립지원금 : 1인 1회 20,000천원 / 성매매피해 구조자로 자립의지가 강한자",
+  "slctCritCn": "❍ 추진목적 : 성매매피해자 여성 및 성매매피해자지원시설 퇴소자에 대한                자립지원으로 성매매 재유입 방지를 위한 자립기반 마련 ❍ 추진근거 : 성매매방지 및 피해자보호 등에 관한 법률 ❍ 지원대상 : 성매매피해자지원시설 퇴소자 및 탈성매매 여성 ❍ 지원내용    ① 자립정착금 : 1인 1회 5,000천원 / 지원시설 1년 이상 입소후 퇴소자 지급   ② 자립지원금 : 1인 1회 20,000천원 / 성매매피해 구조자로 자립의지가 강한자",
+  "alwServCn": "1. 시설퇴소자 : 세대당 5백만원 2. 집결지여성 : 1인당 2천만원(생계비 1천만원, 주거비 700만원, 직업훈련비 300만원)",
+  "aplyMtdCn": "자치구에서 관련 계획 해당 시설 통보시 신청(시설퇴소자자립정착금), 수행기관인 언니네상담소에 신청(집결지여성)",
+  "inqNum": "6912",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-613-2291",
+    "wlfareInfoReldNm": "전남광주통합특별시 여성가족과"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "062-608-2672",
+    "wlfareInfoReldNm": "전남광주통합특별시 동구청 여성아동과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "광주광역시 여성폭력방지 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240628UUWBM1032330091653739&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

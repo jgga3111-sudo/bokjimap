@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "제주특별자치도 복지가족국 복지정책과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "7693",
+  "intrsThemaNmArray": "임신·출산",
+  "lastModYmd": "20260811",
+  "lifeNmArray": "임신 · 출산",
+  "servDgst": "산모 대상 산후조리 한약지원을 통하여 산모의 건강회복 및 ‘아이 낳기 좋은 제주’ 출산친화적 환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001674&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001674",
+  "servNm": "출산여성 한약 지원",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00001674",
+  "servNm": "출산여성 한약 지원",
+  "enfcBgngYmd": "20120329",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "제주특별자치도 복지가족국 복지정책과",
+  "ctpvNm": "제주특별자치도",
+  "servDgst": "산모 대상 산후조리 한약지원을 통하여 산모의 건강회복 및 ‘아이 낳기 좋은 제주’ 출산친화적 환경 조성",
+  "lifeNmArray": "임신 · 출산",
+  "intrsThemaNmArray": "임신·출산",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "지원대상  - 출산(예정)일 현재 제주특별자치도에 주민등록이 되어 있는 출산여성  - 다문화 가정인 경우 국적취득전이라도 배우자가 제주특별자치도에 주민등록이 되어 있는 경우  - 재외국민인 경우 재외국민등록 또는 재외국민 국내거소신고지가 제주특별자치도인 출산여성    (우리국적을 상실한 외국 시민권자 제외)   ☞ 출산여성 산후조리용 한약 복용 희망자에 한함.",
+  "slctCritCn": "1. 지원대상   -출산(예정)일 현재 제주특별자치도에 주민등록이 되어 있는 여성   -다문화 가정의 경우 출산여성이 국적취득 전이라도 배우자(男)가 제주특별자치도에 주민등록 되어 있는 경우'   -재외국민의 경우 재외국민등록 또는 재외국민 국내거소 신고자가 제주특별자치도인 여성(우리국적을 상실한 외국 시민권자 제외)2. 증서 교부기간: 임신30주부터 출산일로부터 4개월까지",
+  "alwServCn": "- 출생신고를 하는 해당 읍·면·동에서 교부하는 할인지원 증서를 해당 한의원에 제출하는 경우 한약제를 15만원 할인된 금액으로 제공함.    ☞ (재원분담) 道 100천원 지원, 한의사회 50천원 지원 - 증서 교부기간: 임신 30주 ~ 출산일로부터 4개월까지 - 증서 유효기간: 교부일로부터 3개월",
+  "aplyMtdCn": "읍면동주민센터에서 출산여성 한약지원중서를 교부받은 후 참여한의원에 제출하면, 한약제 10만원 할인 금액으로 구입",
+  "inqNum": "7702",
+  "lastModYmd": "20260811",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-751-3545",
+    "wlfareInfoReldNm": "제주특별자치도한의사회"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "출산영향평가 및 출산장려지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7245GOWF15GOWF157245&amp;atcflSn=1",
+    "wlfareInfoReldNm": "제주특별자치도 출산영향평가 및 출산장려지원 조례(제주특별자치도조례)(제2726호)(20201231).pdf"
+   }
+  ]
+ }
+}

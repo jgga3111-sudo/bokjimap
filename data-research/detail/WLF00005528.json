@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "인천광역시 청년정책담당관",
+  "ctpvNm": "인천광역시",
+  "inqNum": "10757",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260715",
+  "lifeNmArray": "청년",
+  "servDgst": "인천형 청년 근로장려 인센티브 지원의 일환으로 인천 중소제조기업 재직청년들의 장기근속 유도 및 삶의 질 향상을 위해 복지포인트를 지급하는 사업입니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005528&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005528",
+  "servNm": "인천 재직청년 복지포인트",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "기타, 지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005528",
+  "servNm": "인천 재직청년 복지포인트",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "인천광역시 청년정책담당관",
+  "ctpvNm": "인천광역시",
+  "servDgst": "인천형 청년 근로장려 인센티브 지원의 일환으로 인천 중소제조기업 재직청년들의 장기근속 유도 및 삶의 질 향상을 위해 복지포인트를 지급하는 사업입니다.",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐, 기타",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "인천 소재 중소제조기업에 3개월 이상 재직 중이고 기준 중위소득 1인가구 120%이하의 소득(건강보험료 101,750원 이하)인 인천 청년(18~39세)을 지원합니다.(기타 현금성·자산형성 지원 사업과 중복지원 하지 않습니다.)",
+  "slctCritCn": "(선정기준 상세내용)  - 인천 소재 중소·제조업에 신청일 현재 3개월 이상 재직 중인 청년근로자 - 기준중위소득 1인가구 120% 이하(3개월 평균 건강보험료 101,750원 이하)인 자(‘25년 기준, 월 287만원)",
+  "alwServCn": "연 최대 120만원 지원(인천e음 소비쿠폰 30만원 + 온라인복지몰포인트 90만원)",
+  "aplyMtdCn": "인천청년포털(인천유스톡톡, youth.incheon.go.kr)에서 가입하고 신청합니다.",
+  "inqNum": "10781",
+  "lastModYmd": "20260715",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-440-4179",
+    "wlfareInfoReldNm": "인천광역시 청년정책담당관"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "인천유스톡톡",
+    "wlfareInfoReldNm": "인천광역시 청년정책담당관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「인천광역시 청년정책 및 지원에 관한 기본 조례」제12조9(청년의 고용확대 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240613UUWBM1057210089330861&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2024년 인천 재직청년 복지포인트 참여신청서.pdf"
+   }
+  ]
+ }
+}

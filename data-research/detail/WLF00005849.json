@@ -1,0 +1,52 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "서울특별시 여성가족실 가족담당관",
+  "ctpvNm": "서울특별시",
+  "inqNum": "51036",
+  "lastModYmd": "20250603",
+  "servDgst": "서울시 거주 중위소득 180%이하 임산부 맞벌이 다자녀 가정에게 가사서비스를 지원하여 일생활균형 지원 및 아이키우기 좋은환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005849&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005849",
+  "servNm": "서울형 가사서비스 지원사업",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "trgterIndvdlNmArray": "다자녀",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00005849",
+  "servNm": "서울형 가사서비스 지원사업",
+  "enfcBgngYmd": "20230621",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "서울특별시 여성가족실 가족담당관",
+  "ctpvNm": "서울특별시",
+  "servDgst": "서울시 거주 중위소득 180%이하 임산부 맞벌이 다자녀 가정에게 가사서비스를 지원하여 일생활균형 지원 및 아이키우기 좋은환경 조성",
+  "trgterIndvdlNmArray": "다자녀",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "aplyMtdNm": "인터넷",
+  "sprtTrgtCn": "(임산부) 임신3개월~출산 후 1년이내(맞벌이) 12세이하 자녀를 양육하고 있는 맞벌이 부부(다자녀) 18세이하 자녀를 2명이상 양육하는 다자녀가정(단 자녀중 1명은 반드시 12세 이하여야 함)",
+  "slctCritCn": "ㅇ 임산부 가정 - 중위소득 180% 이하 임산부(임신∼출산후 1년이내) 가정 ㅇ 맞벌이 가정- 중위소득 180% 이하(부부합산 주 12세이하 자녀를 양육하는 가정ㅇ 다자녀 가정- 중위소득 180% 이하 다자녀 가정(18세이하 자녀 2명 이상, 단 자녀중 1명은 12세이하 반드시 있어야함)",
+  "alwServCn": "선정된 가정에서 제공업체를 선택하여 맞춤형 가사서비스를 제공받을 수 있습니다.",
+  "aplyMtdCn": "서울맘케어(www.seoulmomcare)로 온라인 신청하며자격기준이 확정되면 바우처에 70만원이 지급되어 선정된 제공업체에서 서비스를 이용받을 수 있음",
+  "inqNum": "51048",
+  "lastModYmd": "20250603",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2133-6547",
+    "wlfareInfoReldNm": "서울특별시 가족담당관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 출산 및 양육지원에 관한조례"
+   }
+  ]
+ }
+}

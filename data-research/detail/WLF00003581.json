@@ -1,0 +1,65 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 장애인복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "15678",
+  "intrsThemaNmArray": "서민금융, 보호·돌봄, 입양·위탁, 주거",
+  "lastModYmd": "20250619",
+  "lifeNmArray": "아동, 청소년",
+  "servDgst": "장애아동 재활치료 바우처사업(국고보조사업)에서 소득기준초과로 제외된 장애아동의 재활치료비용을 지원함으로써 장애아동의 재활을 지원하고 장애아동 가정의 경제적 부담을 경감하고자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003581&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003581",
+  "servNm": "발달재활서비스지원 (시자체사업)",
+  "sggNm": "춘천시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003581",
+  "servNm": "발달재활서비스지원 (시자체사업)",
+  "enfcBgngYmd": "20120101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "강원특별자치도 춘천시 복지국 장애인복지과",
+  "ctpvNm": "강원특별자치도",
+  "sggNm": "춘천시",
+  "servDgst": "장애아동 재활치료 바우처사업(국고보조사업)에서 소득기준초과로 제외된 장애아동의 재활치료비용을 지원함으로써 장애아동의 재활을 지원하고 장애아동 가정의 경제적 부담을 경감하고자 함.",
+  "lifeNmArray": "아동, 청소년",
+  "trgterIndvdlNmArray": "장애인",
+  "intrsThemaNmArray": "주거, 입양·위탁, 보호·돌봄, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "1) 장애인복지법 상 등록장애인으로 18세 미만 장애아동※ 단, 영유아(9세 미만)의 경우 뇌병변, 지적, 자폐성, 청각, 언어, 시각장애가 예견되어 재활치료가 필요하다고 인정한 경우 발달재활서비스 의뢰서 제출로 신청가능2) 기준중위소득 180%초과",
+  "slctCritCn": "기준중위소득 180%초과",
+  "alwServCn": "- 언어치료, 청능치료, 미술치료, 음악치료, 행동치료, 놀이치료, 심리치료, 운동치료 등 - 1인당 월 14만원",
+  "aplyMtdCn": "주소지 행정복지센터 신청구비서류: 신청서 및 소득증빙서류, 영유아(장애미등록)일 경우 발달재활서비스 의뢰서 및 검사자료",
+  "inqNum": "15690",
+  "lastModYmd": "20250619",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-250-4326",
+    "wlfareInfoReldNm": "춘천시청 장애인복지과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "장애아동복지지원법"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230224UUWBM1504220023339740&amp;atcflSn=1",
+    "wlfareInfoReldNm": "사회보장급여(사회서비스이용권) 신청(변경)서.hwp"
+   }
+  ]
+ }
+}

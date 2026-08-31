@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 우편",
+  "bizChrDeptNm": "경상남도 김해시 김해시보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "inqNum": "39432",
+  "intrsThemaNmArray": "서민금융, 입양·위탁",
+  "lastModYmd": "20260813",
+  "lifeNmArray": "중장년",
+  "servDgst": "○ 저출산, 고령화시대를 맞이하여 지자체에서도 다양하고 적극적인 지원 방안을 모색해야 할 필요가 있음\n○ 본인부담금 걱정으로 건강관리사 이용이 어려운 출산가정에 실비지원으로 경제적 부담 경감\n○ 건강관리사 이용 확대로 취약계층 일자리 확대 효과",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004375&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004375",
+  "servNm": "산모신생아건강관리지원사업 본인부담금지원",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004375",
+  "servNm": "산모신생아건강관리지원사업 본인부담금지원",
+  "enfcBgngYmd": "20180101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 김해시 김해시보건소 건강증진과",
+  "ctpvNm": "경상남도",
+  "servDgst": "○ 저출산, 고령화시대를 맞이하여 지자체에서도 다양하고 적극적인 지원 방안을 모색해야 할 필요가 있음\n○ 본인부담금 걱정으로 건강관리사 이용이 어려운 출산가정에 실비지원으로 경제적 부담 경감\n○ 건강관리사 이용 확대로 취약계층 일자리 확대 효과",
+  "lifeNmArray": "중장년",
+  "intrsThemaNmArray": "입양·위탁, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 우편",
+  "sprtTrgtCn": "김해시에 주민등록 또는 외국인등록을 둔 출산가정 중 산모신생아건강관리지원 정부바우처사업 이용자 중 기준중위소득 180% 이하 출산가정",
+  "slctCritCn": "김해시에 주민등록 또는 외국인등록을 둔 출산가정 중 산모신생아건강관리지원 정부바우처사업 이용자 중 기준중위소득 180% 이하 출산가정",
+  "alwServCn": "산모신생아건강관리지원 정부바우처사업 이용 본인부담금 90% 지원(단,최대15일까지)",
+  "aplyMtdCn": "산모신생아건강관리지원사업 바우처생성 후서비스 시행 →서비스 종료 후 대상자가 입금내역서 첨부하여 보건소 청구→담당자 김해시 출생신고여부 및 서비스이용여부 확인후 계좌로 입금",
+  "inqNum": "39485",
+  "lastModYmd": "20260813",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-330-4533",
+    "wlfareInfoReldNm": "경상남도 김해시보건소 건강증진과 모자보건팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "사회서비스 이용 및 이용권 관리에 관한 법률"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230607UUWBM1141240038075101&amp;atcflSn=1",
+    "wlfareInfoReldNm": "2023년 산모신생아 본인부담금 환급신청 안내문.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 청주시 신성장전략국 재생성장과",
+  "ctpvNm": "충청북도",
+  "inqNum": "5525",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20240628",
+  "servDgst": "장기간 방치되고 있는 빈집 정비로 쾌적한 주거 환경 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000321&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000321",
+  "servNm": "주거환경개선사업(빈집 철거비용 보조)",
+  "sggNm": "청주시",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000321",
+  "servNm": "주거환경개선사업(빈집 철거비용 보조)",
+  "enfcBgngYmd": "20100101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "충청북도 청주시 신성장전략국 재생성장과",
+  "ctpvNm": "충청북도",
+  "sggNm": "청주시",
+  "servDgst": "장기간 방치되고 있는 빈집 정비로 쾌적한 주거 환경 조성",
+  "intrsThemaNmArray": "서민금융",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "빈집(1년이상 사용하지 않고 방치된 집) 소유주",
+  "slctCritCn": "건축물대장 등재여부, 슬레이트철거 포함 여부, 정비구역 등 개발계획지 여부, 노후정도, 주택면적 등 종합검토",
+  "alwServCn": "- 철거비 및 폐기물 처리비 지원 : 100만원&#13;",
+  "aplyMtdCn": "1) 신청방법 : 읍/면/동 주민센터에 신청&#13; &#13;2) 지급시기 및 지급방법&#13;  - 지  급  일 : 철거 완료 후 보조금 지급&#13;  - 지급방법 : 철거 비용에 관한 증빙자료(세금계산서, 폐기물처리확인서, 철거 전후사진 등) 제출 시 본인 계좌이체&#13;",
+  "inqNum": "5533",
+  "lastModYmd": "20240628",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-201-2618",
+    "wlfareInfoReldNm": "청주시청 재생성장과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "청주시 빈집 정비 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240627UUWBM1541410091554293&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   }
+  ]
+ }
+}

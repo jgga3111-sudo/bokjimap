@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경기도 하남시 보건소 미사보건센터",
+  "ctpvNm": "경기도",
+  "inqNum": "9166",
+  "intrsThemaNmArray": "서민금융, 입양·위탁, 임신·출산",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "임신 · 출산, 영유아",
+  "servDgst": "하남시에 거주하는 임산부와 영아의 건강을 유지·증진 및 출산율 저하에 따른 사회문제에 적극적으로 대처하고 출산장려 분위기를 조성하기 위함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000862&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000862",
+  "servNm": "하남시 출산장려금 지원",
+  "sggNm": "하남시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00000862",
+  "servNm": "하남시 출산장려금 지원",
+  "enfcBgngYmd": "20090101",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 하남시 보건소 미사보건센터",
+  "ctpvNm": "경기도",
+  "sggNm": "하남시",
+  "servDgst": "하남시에 거주하는 임산부와 영아의 건강을 유지·증진 및 출산율 저하에 따른 사회문제에 적극적으로 대처하고 출산장려 분위기를 조성하기 위함",
+  "lifeNmArray": "영유아, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 입양·위탁, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문, 인터넷",
+  "sprtTrgtCn": "지원대상: 출생아의 '부 또는 모'가 관내에 6개월 이상 주민등록을 두고 하남시에 출생신고를 한 경우(단, 거주기간이 6개월 미만인 경우에는 전입일로부터 6개월 이상 거주한 경우 지원가능)",
+  "slctCritCn": "출산일 기준 부 또는 모가 관내에 6개월 이상 주민등록을 두고 출생신고를 한 경우&#13;단 거주기간이 6개월 미만인 경우에는 출생일로부터 6개월 이상 거주한 경우",
+  "alwServCn": "첫째 자녀 50만원둘째 자녀 100만원셋째 자녀 200만원넷째 자녀 1,000만원(4년간 균등분할지급)다섯째 자녀 이상 2,000만원(4년간 균등분할지급)",
+  "aplyMtdCn": "신청장소: 대상자의 관할 동 행정복지센터에 신청신청기간: 출생일로부터 1년이내에 신청구비서류: 대상자 신분증, 대상자 통장사본",
+  "inqNum": "9172",
+  "lastModYmd": "20260630",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-790-6552",
+    "wlfareInfoReldNm": "하남시 미사보건센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "하남시 출산장려금 지원에 관한 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230901UUWBM1434520048419586&amp;atcflSn=1",
+    "wlfareInfoReldNm": "하남시 출산장려금 지원에 관한 조례(경기도 하남시조례)(제2123호)(20230101).hwp"
+   }
+  ]
+ }
+}

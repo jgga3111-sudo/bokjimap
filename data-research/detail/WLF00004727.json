@@ -1,0 +1,68 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경기도 이천시 보건소 건강증진과",
+  "ctpvNm": "경기도",
+  "inqNum": "8348",
+  "intrsThemaNmArray": "서민금융, 임신·출산",
+  "lastModYmd": "20260716",
+  "lifeNmArray": "중장년, 청년, 청소년, 임신 · 출산",
+  "servDgst": "산모·신생아 건강관리 서비스 비용 중 본인부담금을 일부 지원하여 출산가정의 경제적 부담을 경감\n산모·신생아 본인부담금 지원에 관한 거주 요건 완화 (출생일 기준으로 1년 전 → 출생일 기준으로 6개월 전)",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004727&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004727",
+  "servNm": "산모신생아 건강관리 서비스 본인부담금 지원",
+  "sggNm": "이천시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00004727",
+  "servNm": "산모신생아 건강관리 서비스 본인부담금 지원",
+  "enfcBgngYmd": "20210927",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경기도 이천시 보건소 건강증진과",
+  "ctpvNm": "경기도",
+  "sggNm": "이천시",
+  "servDgst": "산모·신생아 건강관리 서비스 비용 중 본인부담금을 일부 지원하여 출산가정의 경제적 부담을 경감\n산모·신생아 본인부담금 지원에 관한 거주 요건 완화 (출생일 기준으로 1년 전 → 출생일 기준으로 6개월 전)",
+  "lifeNmArray": "청소년, 청년, 중장년, 임신 · 출산",
+  "intrsThemaNmArray": "임신·출산, 서민금융",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "신생아의 출생일을 기준으로 6개월 전부터 신청일 현재까지 계속하여 이천시에 주민등록을 두고 실제 거주하고 있는 산모",
+  "slctCritCn": "1. 신생아의 출생일을 기준으로 6개월 전부터 신청일 현재까지 계속하여 이천시에 주민등록을 두고 실제 거주하고 있는 산모(결혼이민자 포함)1-1. \"결혼이민자\"란 「재한외국인 처우 기본법」 제 2조제3호에 따른 재한외국인을 말한다.",
+  "alwServCn": "산모·신생아 건강관리 서비스 비용 중 본인부담금의 90% 지원(서비스 기간 '단축형' 및 '표준형' 한함. /  연장형 = 표준형의 90%)* 아래 급여표 : 2026년 기준",
+  "aplyMtdCn": "방문 신청 (제출서류 지참 후 보건소 방문)",
+  "inqNum": "8360",
+  "lastModYmd": "20260716",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-6190-7203",
+    "wlfareInfoReldNm": "이천시보건소 모자건강팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「이천시 산모·신생아 건강관리 지원에 대한 조례」(공포 '20.12.29.)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230522UUWBM1644140035654360&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서식(납부영수증).hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250529UUWBM1323360139899520&amp;atcflSn=1",
+    "wlfareInfoReldNm": "산모신생아 건강관리 본인부담금 거주요건  완화 계획(안).pdf"
+   }
+  ]
+ }
+}

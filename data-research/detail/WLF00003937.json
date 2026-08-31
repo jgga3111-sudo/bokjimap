@@ -1,0 +1,63 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 함안군 혁신전략담당관",
+  "ctpvNm": "경상남도",
+  "inqNum": "4417",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년",
+  "servDgst": "관내 청년 근로자의 초기 자산 형성을 지원하여 경제적 자립 기반을 마련하고 청년의 장기 재직과 지역 정착을 유도",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003937&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003937",
+  "servNm": "함안정착 청년통장사업",
+  "sggNm": "함안군",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "resultCode": "0",
+  "resultMessage": "SUCCESS",
+  "servId": "WLF00003937",
+  "servNm": "함안정착 청년통장사업",
+  "enfcBgngYmd": "20200813",
+  "enfcEndYmd": "99991231",
+  "bizChrDeptNm": "경상남도 함안군 혁신전략담당관",
+  "ctpvNm": "경상남도",
+  "sggNm": "함안군",
+  "servDgst": "관내 청년 근로자의 초기 자산 형성을 지원하여 경제적 자립 기반을 마련하고 청년의 장기 재직과 지역 정착을 유도",
+  "lifeNmArray": "청년",
+  "intrsThemaNmArray": "일자리, 서민금융",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "aplyMtdNm": "방문",
+  "sprtTrgtCn": "o (연     령) 2026. 1. 1. 기준 19세 이상 49세 이하(1976. 1. 2. ~ 2007. 1. 1. 출생)o (거 주 지) 2026. 1. 1. 이후 주민등록상 함안군으로 전입한 자   ※ 단, 함안군으로 전입하기 전에 주민등록상 타 시·군에 1년 이상 거주하여야 함.o (근로요건) 신청일 현재 함안군 소재 중소기업에서 계속 근로 중인 청년",
+  "slctCritCn": "o (연     령) 2026. 1. 1. 기준 19세 이상 49세 이하(1976. 1. 2. ~ 2007. 1. 1. 출생)o (거 주 지) 2026. 1. 1. 이후 주민등록상 함안군으로 전입한 자   ※ 단, 함안군으로 전입하기 전에 주민등록상 타 시·군에 1년 이상 거주하여야 함.o (근로요건) 신청일 현재 함안군 소재 중소기업에서 계속 근로 중인 청년o 신청제외 대상에 해당하지 않는 자o ① 가구소득이 낮은 자 ② 군 주민등록 거주기간이 긴 자 ③ 현 사업장 근로기간이 긴 자 ④ 연장자 순으로 선정",
+  "alwServCn": "❍ 사업내용    - 저축기간: 3년(36개월)   - 저 축 액: 매월 50만원(본인 저축액 20만원 + 군 지원금 30만원)   - 만기저축액: 1,800만원 + 이자     ※ 본인 저축액 납입여부 등에 따라 만기저축액은 달라질 수 있음",
+  "aplyMtdCn": "방문접수",
+  "inqNum": "4421",
+  "lastModYmd": "20260703",
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-580-2544",
+    "wlfareInfoReldNm": "함안군청 혁신전략담당관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「함안군 청년 기본 조례」제17조(청년의 고용확대 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260616UUWBM2039410197309251&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[공고문] 2026년 함안정착 청년통장 지원사업 참여자 모집 재공고.hwpx"
+   }
+  ]
+ }
+}
