@@ -24,8 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/region", "weekly", 0.8, SERVICES_UPDATED],
       ["/target", "weekly", 0.8, SERVICES_UPDATED],
       ["/life", "weekly", 0.8, SERVICES_UPDATED],
-      /* /about·/privacy·/terms·/faq 등은 아직 페이지가 없다. 사이트맵에 404를
-         올리면 크롤러 신뢰를 잃는다. 만든 뒤 추가한다(푸터도 같은 기준). */
+      ["/faq", "monthly", 0.7, SITE.policyEffectiveDate],
+      ["/about", "monthly", 0.6, SITE.policyEffectiveDate],
+      ["/source", "monthly", 0.6, SERVICES_UPDATED],
+      ["/contact", "yearly", 0.4, SITE.policyEffectiveDate],
+      ["/terms", "yearly", 0.3, SITE.policyEffectiveDate],
+      ["/privacy", "yearly", 0.3, SITE.policyEffectiveDate],
     ] as const
   ).map(([path, changeFrequency, priority, lastModified]) => ({
     url: `${SITE.url}${path}`,

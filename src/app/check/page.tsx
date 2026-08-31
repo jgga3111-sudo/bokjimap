@@ -48,7 +48,7 @@ export default function CheckPage() {
 
       {/* 계산기 밑에 표를 함께 둔다. 계산기는 클라이언트에서 그려지지만 이 표는
           서버 렌더라 검색엔진이 읽는다 — 페이지가 빈 껍데기가 되지 않게. */}
-      <section>
+      <section id="median-table" className="scroll-mt-20">
         <h2 className="text-lg font-bold">
           {BASE_YEAR}년 기준 중위소득 표
         </h2>

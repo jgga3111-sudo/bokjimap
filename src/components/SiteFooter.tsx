@@ -1,19 +1,22 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
+import MailLink from "./MailLink";
 
 /**
- * 푸터 — 러닝온과 같은 4분류 구조(서비스 / 가이드 / 지원 / 정책).
+ * 푸터 — 4분류(복지 찾기 / 자가진단 / 도움말 / 사이트).
  *
- * 아직 없는 페이지는 링크하지 않는다. 404를 푸터에 깔면 크롤러가 사이트 전체를
- * 낮게 본다. 페이지를 만들 때 이 목록에 추가한다.
+ * 아직 없는 페이지는 링크하지 않는다(`ready: false`). 404를 푸터에 깔면
+ * 크롤러가 사이트 전체를 낮게 본다. 페이지를 만들 때 true로 바꾼다.
+ *
+ * 칸마다 항목이 한둘뿐이면 분류가 잘못된 것이다. 없는 페이지를 걸러낸 뒤에도
+ * 균형이 맞는지 보고 묶는다.
  */
 type Item = { href: string; label: string; ready: boolean };
 
 const COLUMNS: { title: string; items: Item[] }[] = [
   {
-    title: "서비스",
+    title: "복지 찾기",
     items: [
-      { href: "/check", label: "자격 자가진단", ready: true },
       { href: "/service", label: "많이 찾는 지원", ready: true },
       { href: "/region", label: "지역별 찾기", ready: true },
       { href: "/target", label: "대상별 찾기", ready: true },
@@ -22,29 +25,28 @@ const COLUMNS: { title: string; items: Item[] }[] = [
     ],
   },
   {
-    title: "가이드",
+    title: "자가진단",
     items: [
-      { href: "/guide", label: "복지 가이드", ready: false },
+      { href: "/check", label: "자격 자가진단", ready: true },
+      { href: "/check#median-table", label: "기준 중위소득 표", ready: true },
       { href: "/guide/apply", label: "신청 방법 총정리", ready: false },
       { href: "/guide/documents", label: "필요 서류 안내", ready: false },
-      { href: "/check", label: "기준 중위소득 표", ready: true },
     ],
   },
   {
-    title: "지원",
+    title: "도움말",
     items: [
-      { href: "/faq", label: "자주 묻는 질문", ready: false },
-      { href: "/contact", label: "문의하기", ready: false },
-      { href: "/report", label: "오류 신고·수정 요청", ready: false },
+      { href: "/faq", label: "자주 묻는 질문", ready: true },
+      { href: "/contact", label: "문의·오류 신고", ready: true },
     ],
   },
   {
-    title: "정책",
+    title: "사이트",
     items: [
-      { href: "/about", label: "사이트 소개", ready: false },
-      { href: "/source", label: "데이터 출처", ready: false },
-      { href: "/terms", label: "이용약관", ready: false },
-      { href: "/privacy", label: "개인정보처리방침", ready: false },
+      { href: "/about", label: "사이트 소개", ready: true },
+      { href: "/source", label: "데이터 출처", ready: true },
+      { href: "/terms", label: "이용약관", ready: true },
+      { href: "/privacy", label: "개인정보처리방침", ready: true },
     ],
   },
 ];
@@ -84,7 +86,11 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-10 space-y-1 border-t border-line pt-6 text-xs text-muted">
+        <div className="mt-10 space-y-2 border-t border-line pt-6 text-xs text-muted">
+          <p>
+            운영자 {SITE.operator} · 문의{" "}
+            <MailLink className="underline hover:text-brand" />
+          </p>
           <p>
             복지MAP은 공공데이터포털의 복지서비스 정보를 정리해 보여주는 민간
             사이트입니다. 정부·지자체 공식 기관이 아닙니다.

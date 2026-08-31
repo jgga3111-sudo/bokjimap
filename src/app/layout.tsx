@@ -34,10 +34,31 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+/**
+ * 사이트 수준 구조화 데이터.
+ *
+ * WebSite로 사이트 정체를 알리고, publisher를 Organization이 아니라 Person으로
+ * 둔다 — 개인이 운영하는 사이트를 기관인 것처럼 표시하면 안 된다. 정부 기관과
+ * 혼동될 여지를 만들지 않는 게 이 주제에서는 특히 중요하다.
+ */
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  inLanguage: "ko-KR",
+  publisher: { "@type": "Person", name: SITE.operator },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         <SiteHeader />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
           {children}

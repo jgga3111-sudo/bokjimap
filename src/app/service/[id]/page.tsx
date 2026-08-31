@@ -7,6 +7,7 @@ import { isIndexable, type WelfareService } from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
+import { SITE } from "@/lib/site";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -139,8 +140,28 @@ export default async function ServiceDetail({
     .slice(0, 5)
     .map((x) => x.o);
 
+  /* 검색 결과에 "홈 › 복지 서비스 › 사업명" 경로가 표시되게 한다. */
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: SITE.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "복지 서비스",
+        item: `${SITE.url}/service`,
+      },
+      { "@type": "ListItem", position: 3, name: s.name ?? id },
+    ],
+  };
+
   return (
     <article className="space-y-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
