@@ -87,10 +87,10 @@ export default function CheckPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-xs text-muted">
-          7인 가구는 고시에 표로 실리지 않고 &ldquo;6인 가구 금액에서 1인
-          늘어날 때마다 999,233원씩 증가&rdquo;로 규정돼 있어 그 규칙으로
-          계산한 값입니다.
+        <p className="mt-2 text-xs leading-relaxed text-muted">
+          고시는 7인 가구까지 표로 정합니다. 8인 이상은 &ldquo;7인 가구 기준
+          중위소득에서 6인 가구 기준 중위소득의 차액(959,198원)을 1인 늘어날
+          때마다 더해&rdquo; 계산합니다.
         </p>
       </section>
 
