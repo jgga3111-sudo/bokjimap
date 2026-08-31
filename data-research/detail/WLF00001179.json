@@ -1,0 +1,86 @@
+{
+ "provider": "central",
+ "list": {
+  "inqNum": "68144",
+  "intrsThemaArray": "신체건강",
+  "jurMnofNm": "보건복지부",
+  "jurOrgNm": "노인건강과",
+  "lifeArray": "중장년,노년",
+  "onapPsbltYn": "N",
+  "rprsCtadr": "02-711-6599",
+  "servDgst": "무릎관절수술 지원을 통해 노인 건강을 보장하고 의료비 부담을 경감합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001179&amp;wlfareInfoReldBztpCd=01",
+  "servId": "WLF00001179",
+  "servNm": "노인 무릎인공관절 수술 지원 사업",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현물지급",
+  "svcfrstRegTs": "20210903",
+  "trgterIndvdlArray": "저소득,한부모·조손",
+  "provider": "central"
+ },
+ "detail": {
+  "applmetList": [
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "거주지 읍/면/동 주민센터, 보건소에서 ‘서비스 신청’",
+    "servSeDetailNm": "신청기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 보건소에서 조사 및 심사",
+    "servSeDetailNm": "조사기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 노인의료나눔재단에서 보장 결정",
+    "servSeDetailNm": "결정기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 노인의료나눔재단에서 대상자에게 서비스 제공",
+    "servSeDetailNm": "지급기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 보건복지부에서 서비스 제공 이후 대상자의 상황 관리",
+    "servSeDetailNm": "사후관리기관목록"
+   }
+  ],
+  "inqplCtadrList": [
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "02-585-6595",
+    "servSeDetailNm": "노인의료나눔재단"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "www.ok6595.or.kr",
+    "servSeDetailNm": "노인의료나눔재단"
+   }
+  ],
+  "basfrmList": [
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260407TTWAT1831440010207644&amp;atcflSn=1",
+    "servSeDetailNm": "2026_노인보건복지사업안내(1권).pdf"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260407TTWAT1831530010207646&amp;atcflSn=1",
+    "servSeDetailNm": "2026_노인보건복지사업안내(2권).pdf"
+   }
+  ],
+  "baslawList": [
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "노인복지법"
+   },
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "노인복지법 시행령"
+   }
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상북도 영주시 문화복지국 복지정책과",
+  "ctpvNm": "경상북도",
+  "inqNum": "49164",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "servDgst": "실질적으로 생계유지가 어려우나 수급자 범위를 벗어나 국가의 지원을 받지 못하는 차상위계층을 발굴,선정하여 최소한의 생계비를 지원함으로써 사회안정망을 보완하고자 함.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002247&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002247",
+  "servNm": "차상위계층 특별생계비",
+  "sggNm": "영주시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-639-6312",
+    "wlfareInfoReldNm": "영주시 복지정책과 기초생활보장팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "영주시 주민생활지원 지원에 관한 조례 제4조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=9175GOWF14GOWF149175&amp;atcflSn=1",
+    "wlfareInfoReldNm": "20200910151658.pdf"
+   }
+  ]
+ }
+}

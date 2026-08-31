@@ -1,0 +1,41 @@
+{
+ "provider": "local",
+ "list": {
+  "bizChrDeptNm": "강원특별자치도 동해시 행정복지국 복지과",
+  "ctpvNm": "강원특별자치도",
+  "inqNum": "42959",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260710",
+  "servDgst": "〇 동해시 차상위계층 난방비 지원 조례 「국민기초생활 보장법」 제2조 제10호에 따른 차상위계층에 동절기 난방비를 지원\n\n〇 난방비 지원을 통해 경제적 부담을 경감하고 저속득층의 생활안정을 도모하고자 함",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000657&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00000657",
+  "servNm": "차상위계층 난방비 지원",
+  "sggNm": "동해시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "033-530-2130",
+    "wlfareInfoReldNm": "동해시청 복지과 희망복지팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "동해시 차상위계층 난방비 지원조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260709UUWBM1029540200454063&amp;atcflSn=1",
+    "wlfareInfoReldNm": "동해시 차상위 계층 난방비 지원 조례.hwp"
+   }
+  ]
+ }
+}

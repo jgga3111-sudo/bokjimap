@@ -1,0 +1,53 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 방문",
+  "bizChrDeptNm": "인천광역시 청년정책담당관",
+  "ctpvNm": "인천광역시",
+  "inqNum": "130391",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260715",
+  "lifeNmArray": "청년",
+  "servDgst": "경제적으로 어려움을 겪고 있는 인천 청년(35~39세) 주거비 부담 완화\n * 국가사업(청년월세 한시 특별지원(19~34세))과 동일한 사업기준 적용, 대상연령만 확대",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004717&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004717",
+  "servNm": "인천형 청년월세 지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "홈페이지 참고",
+    "wlfareInfoReldNm": "인천 10개 군구 담당자"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://youth.incheon.go.kr/dwelling/monthly.jsp",
+    "wlfareInfoReldNm": "인천 10개 군구 담당자"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 청년정책 및 지원에 관한 기본조례 제13조(청년의 주거안정 등)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240222UUWBM1843270071790031&amp;atcflSn=1",
+    "wlfareInfoReldNm": "(최종본) 240222_청년월세 특별지원 사업 매뉴얼_서식.pdf"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240507UUWBM1710480083556392&amp;atcflSn=1",
+    "wlfareInfoReldNm": "청년월세 지원사업(복지로).hwpx"
+   }
+  ]
+ }
+}

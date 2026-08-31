@@ -1,0 +1,41 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상남도 도시주택국 주택과",
+  "ctpvNm": "경상남도",
+  "inqNum": "29625",
+  "intrsThemaNmArray": "보호·돌봄, 입양·위탁",
+  "lastModYmd": "20260827",
+  "servDgst": "장기공공임대주택(영구임대, 국민임대, 행복주택, 통합공공임대주택)에 입주하는 저소득계층에 임대보증금(최대2천만원)을 무이자로 최초 2년(추가 2회 연장 가능, 최대6년) 지원하여 주거 안정 도모와 자립기반 마련 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003862&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00003862",
+  "servNm": "저소득계층 임대보증금 지원 사업",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금대여(융자)",
+  "trgterIndvdlNmArray": "저소득",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-211-4384",
+    "wlfareInfoReldNm": "경상남도 주택과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "경상남도 저소득계층 임대보증금 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=8764GOWF14GOWF148764&amp;atcflSn=1",
+    "wlfareInfoReldNm": "경상남도 저소득계층 임대보증금 지원 조례.hwp"
+   }
+  ]
+ }
+}

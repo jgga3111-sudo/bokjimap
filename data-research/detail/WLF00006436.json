@@ -1,0 +1,35 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "경상남도 김해시 인구청년정책관",
+  "ctpvNm": "경상남도",
+  "inqNum": "28127",
+  "intrsThemaNmArray": "서민금융, 일자리",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년",
+  "servDgst": "청년의 운전면허 취득에 대한 경제적 부담 경감을 통해 청년들의 원활한 취업 및 사회진출을 촉진",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006436&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006436",
+  "servNm": "2026년 청년 운전면허 취득비용 지원사업",
+  "sggNm": "김해시",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "055-330-2903",
+    "wlfareInfoReldNm": "김해시 인구청년정책관 청년정책팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "「김해시 청년 기본 조례」제15조(청년정책 사업지원)"
+   }
+  ]
+ }
+}

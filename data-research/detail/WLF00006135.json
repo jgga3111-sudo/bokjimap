@@ -1,0 +1,47 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "경기도 수원시 문화청년체육국 청년청소년과",
+  "ctpvNm": "경기도",
+  "inqNum": "30104",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260730",
+  "lifeNmArray": "청년",
+  "servDgst": "경제적 어려움을 겪고 있는 청년들에게 월 임차료를 지원하여 주거비 부담을 완화하고 생활안정 도모에 기여",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006135&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006135",
+  "servNm": "청년 월세 지원",
+  "sggNm": "수원시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "031-5191-3958",
+    "wlfareInfoReldNm": "수원시 청년청소년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "수원시 청년 기본 조례 제25조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250710UUWBM1403410145697498&amp;atcflSn=1",
+    "wlfareInfoReldNm": "수원시 청년 기본 조례.hwpx"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250710UUWBM1358300145696372&amp;atcflSn=1",
+    "wlfareInfoReldNm": "[붙임1] 공고문(최종).hwp"
+   }
+  ]
+ }
+}

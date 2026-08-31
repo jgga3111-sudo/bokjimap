@@ -2,25 +2,40 @@ import Link from "next/link";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES } from "@/lib/axes";
 import { services } from "@/data/services";
+import ServiceList from "@/components/ServiceList";
+import { BASE_YEAR } from "@/lib/midIncome";
+
+/** 조회수 상위 — 데이터가 이미 조회수 내림차순이라 앞에서 자르면 된다. */
+const popular = services.slice(0, 8);
 
 function SectionHeader({
   icon,
   title,
+  sub,
   href,
 }: {
   icon: string;
   title: string;
-  href: string;
+  sub?: string;
+  href?: string;
 }) {
   return (
-    <div className="mb-3 flex items-center justify-between">
-      <h2 className="flex items-center gap-2 font-bold">
-        <span aria-hidden>{icon}</span>
-        {title}
-      </h2>
-      <Link href={href} className="text-sm text-muted hover:text-brand">
-        전체 보기 →
-      </Link>
+    <div className="mb-3 flex items-end justify-between gap-3">
+      <div>
+        <h2 className="flex items-center gap-2 text-lg font-bold">
+          <span aria-hidden>{icon}</span>
+          {title}
+        </h2>
+        {sub && <p className="mt-0.5 text-xs text-muted">{sub}</p>}
+      </div>
+      {href && (
+        <Link
+          href={href}
+          className="shrink-0 text-sm text-muted hover:text-brand"
+        >
+          전체 보기 →
+        </Link>
+      )}
     </div>
   );
 }
@@ -38,7 +53,7 @@ function Chips({
         <li key={i.slug}>
           <Link
             href={`${base}/${i.slug}`}
-            className="inline-block rounded-full border border-line px-3 py-1.5 text-sm hover:border-brand hover:text-brand"
+            className="inline-block rounded-full border border-line bg-white px-3.5 py-2 text-sm hover:border-brand hover:text-brand"
           >
             {i.label}
           </Link>
@@ -49,53 +64,86 @@ function Chips({
 }
 
 export default function Home() {
-  const count = services.length;
-
   return (
-    <div className="space-y-10">
-      <section className="rounded-2xl bg-brand-soft p-6">
-        <h1 className="text-2xl font-bold sm:text-3xl">
-          내 지역 복지·지원금 찾기
-        </h1>
-        <p className="mt-2 text-sm text-slate-700 sm:text-base">
-          중앙부처와 전국 시·군·구가 따로 공고하는 복지 서비스를 한곳에 모읍니다.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-brand">
-            {count.toLocaleString()}건 수록
-          </span>
-          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-muted">
-            {SIDO_LIST.length}개 시·도
-          </span>
+    <div className="space-y-12">
+      {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
+      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-white px-4 pt-10 pb-8">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-2xl leading-tight font-extrabold sm:text-4xl">
+            내가 받을 수 있는
+            <br />
+            <span className="text-brand">복지 지원금</span>을 한눈에
+          </h1>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+            중앙부처와 전국 시·군·구가 따로 공고하는 복지 서비스를 한곳에
+            모았습니다. 사람들이 가장 많이 찾는 것부터 정리했습니다.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            <Link
+              href="/check"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
+            >
+              <span aria-hidden>🧮</span>
+              내가 대상자인지 1분 확인
+            </Link>
+            <Link
+              href="/service"
+              className="inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3.5 font-bold text-ink transition hover:border-brand hover:text-brand"
+            >
+              <span aria-hidden>📋</span>
+              많이 찾는 지원 보기
+            </Link>
+          </div>
+
+          <dl className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <div className="flex items-baseline gap-1.5">
+              <dt className="text-muted">수록</dt>
+              <dd className="font-bold text-ink">
+                {services.length.toLocaleString()}건
+              </dd>
+            </div>
+            <div className="flex items-baseline gap-1.5">
+              <dt className="text-muted">지역</dt>
+              <dd className="font-bold text-ink">{SIDO_LIST.length}개 시·도</dd>
+            </div>
+            <div className="flex items-baseline gap-1.5">
+              <dt className="text-muted">기준연도</dt>
+              <dd className="font-bold text-ink">{BASE_YEAR}년</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      {count === 0 && (
-        /* 빈 목록을 그럴듯하게 감추지 않는다. 예시 데이터를 넣으면 나중에
-           진짜 데이터인 척 남는다. */
-        <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-          <p className="font-bold">데이터 준비 중</p>
-          <p className="mt-1">
-            수집한 5,219건을 사이트에 반영하는 작업이 진행 중입니다. 현재 표시
-            가능한 서비스는 0건입니다.
-          </p>
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="min-w-0">
+            <h2 className="text-lg font-bold">
+              소득이 중위소득 몇 %인지부터 확인하세요
+            </h2>
+            <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
+              복지 지원의 자격은 대부분 &ldquo;기준 중위소득 몇 % 이하&rdquo;로
+              정해집니다. <strong>월 소득·연봉·건강보험료</strong> 중 아는 것
+              하나만 넣으면 어느 구간인지 바로 나옵니다.
+            </p>
+          </div>
+          <Link
+            href="/check"
+            className="shrink-0 rounded-xl bg-brand px-5 py-3 font-bold text-white transition hover:brightness-110"
+          >
+            자가진단 하기 →
+          </Link>
         </div>
-      )}
+      </section>
 
       <section>
-        <SectionHeader icon="📍" title="지역으로 찾기" href="/region" />
-        <ul className="grid grid-cols-3 gap-2 sm:grid-cols-6">
-          {SIDO_LIST.map((sido) => (
-            <li key={sido.slug}>
-              <Link
-                href={`/region/${sido.slug}`}
-                className="block rounded-lg border border-line px-2 py-2.5 text-center text-sm hover:border-brand hover:text-brand"
-              >
-                {sido.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <SectionHeader
+          icon="🔥"
+          title="사람들이 가장 많이 찾는 지원"
+          sub="복지로 누적 조회수 순"
+          href="/service"
+        />
+        <ServiceList services={popular} ranked />
       </section>
 
       <section>
@@ -106,6 +154,22 @@ export default function Home() {
       <section>
         <SectionHeader icon="🌱" title="생애주기로 찾기" href="/life" />
         <Chips base="/life" items={LIFE_STAGES} />
+      </section>
+
+      <section>
+        <SectionHeader icon="📍" title="지역으로 찾기" href="/region" />
+        <ul className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+          {SIDO_LIST.map((sido) => (
+            <li key={sido.slug}>
+              <Link
+                href={`/region/${sido.slug}`}
+                className="block rounded-lg border border-line bg-white px-2 py-2.5 text-center text-sm hover:border-brand hover:text-brand"
+              >
+                {sido.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );

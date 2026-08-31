@@ -1,0 +1,42 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "충청북도 영동군 행정복지국 가족행복과",
+  "ctpvNm": "충청북도",
+  "inqNum": "49846",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260805",
+  "lifeNmArray": "청소년, 아동",
+  "servDgst": "보건위생에 필수적인 물품을 일반 여성청소년에게 지원하여 청소년의 건강한 생활 보장\n？ 지원대상 : 영동군에 주민등록을 둔  11세~18세 모든 여성청소년\n                (2008년 ~ 2015년사이에 출생자)\n？ 지원내용 : 월14,000원 위생용품(생리대) 구매 비용 지급",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004986&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00004986",
+  "servNm": "여성청소년 위생용품 지원",
+  "sggNm": "영동군",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "043-740-3782",
+    "wlfareInfoReldNm": "영동군 가족행복과 청소년드림팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "영동군 여성청소년위생용품 지원 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=4734GOWF16GOWF164734&amp;atcflSn=1",
+    "wlfareInfoReldNm": "여성청소년 위생용품 지원 조례.hwp"
+   }
+  ]
+ }
+}

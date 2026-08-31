@@ -1,0 +1,34 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷, 방문",
+  "bizChrDeptNm": "인천광역시 여성가족국 영유아정책과",
+  "ctpvNm": "인천광역시",
+  "inqNum": "33315",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "영유아",
+  "servDgst": "영유아기 지원 정책 마련으로 초기 양육에 따른 경제적 부담 경감 및 출산장려 분위기 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005538&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005538",
+  "servNm": "천사지원금 지급",
+  "sprtCycNm": "년",
+  "srvPvsnNm": "지역화폐",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "032-120",
+    "wlfareInfoReldNm": "인천시청 미추홀콜센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "인천광역시 저출산 대책 및 지원에 관한 조례 제13조의3(천사지원금)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "제주특별자치도 교통항공국 대중교통과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "26310",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260212",
+  "servDgst": "제주도 거주 주민 65세이상 어르신 및 국가유공자, 등록장애인, 어린이, 청소년 등 대중교통이용 시 버스요금 면제",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005261&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005261",
+  "servNm": "제주교통복지카드 운영",
+  "sprtCycNm": "수시",
+  "srvPvsnNm": "전자바우처(바우처), 감면",
+  "trgterIndvdlNmArray": "장애인, 보훈대상자",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-710-4327",
+    "wlfareInfoReldNm": "제주특별자치도 대중교통과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "제주특별자치도 공영버스운송사업 지방직영기업 설치 및 운영 조례 제6조"
+   }
+  ]
+ }
+}

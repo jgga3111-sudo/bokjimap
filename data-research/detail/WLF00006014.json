@@ -1,0 +1,42 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 인터넷",
+  "bizChrDeptNm": "서울특별시 강남구 안전교통국 교통행정과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "31315",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260804",
+  "lifeNmArray": "노년, 청소년, 아동, 청년",
+  "servDgst": "교통약자인 어르신·어린이·청소년을 대상으로 교통비 부담을 완화하여 교통복지를 실현하고, 버스 이용률 증가로 교통체증 감소 및 대중교통 이용 활성화\n(19~24세 청년은 2025년 10월부터 교통비 지원사업 시행)",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006014&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00006014",
+  "servNm": "강남구 교통비 지원사업",
+  "sggNm": "강남구",
+  "sprtCycNm": "분기",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "1644-9160",
+    "wlfareInfoReldNm": "강남구 교통비 지원사업 고객센터"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://greenbus.gangnam.go.kr/",
+    "wlfareInfoReldNm": "강남구 교통비 지원사업 고객센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "대중교통의 육성 및 이용촉진에 관한 법률 제3조(국가 등의 책무)"
+   }
+  ]
+ }
+}

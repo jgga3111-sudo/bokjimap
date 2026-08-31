@@ -1,0 +1,40 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "서울특별시 주택정책실 주택공급기획관 주택정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "28234",
+  "lastModYmd": "20260714",
+  "lifeNmArray": "청년",
+  "servDgst": "서울시 내 주택에 임차하려는 청년에게 보증금을 위한 대출금 이자를 지원해줌으로서, 주거비를 감소시키는데 목적이 있음",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002637&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002637",
+  "servNm": "청년 임차보증금 이자지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "기타, 현금대여(융자)",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-120",
+    "wlfareInfoReldNm": "서울다산콜"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 청년주거 기본조례 제7조(청년주거사업)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7085GOWF15GOWF157085&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울특별시 청년주거 기본 조례(서울특별시조례)(제07046호)(20190328).pdf"
+   }
+  ]
+ }
+}

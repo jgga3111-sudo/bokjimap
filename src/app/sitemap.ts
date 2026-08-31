@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = (
     [
       ["", "daily", 1, now],
+      ["/check", "monthly", 0.9, SERVICES_UPDATED],
       ["/service", "daily", 0.9, SERVICES_UPDATED],
       ["/region", "weekly", 0.8, SERVICES_UPDATED],
       ["/target", "weekly", 0.8, SERVICES_UPDATED],
@@ -38,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter(isIndexable)
     .map((s) => ({
       url: `${SITE.url}/service/${s.id}`,
-      lastModified: s.verifiedAt ?? SERVICES_UPDATED,
+      lastModified: s.updatedAt ?? SERVICES_UPDATED,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));

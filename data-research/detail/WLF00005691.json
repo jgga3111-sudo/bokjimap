@@ -1,0 +1,42 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "경상북도 구미시 미래교육돌봄국 인구청년과",
+  "ctpvNm": "경상북도",
+  "inqNum": "156478",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260630",
+  "lifeNmArray": "청년",
+  "servDgst": "청년들의 주거비 부담 완화를 통해 안정적인 지역 정착과 주거환경 확보를 유도하여 안정적으로 사회에 진입할 수 있도록 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005691&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005691",
+  "servNm": "청년월세 지원사업",
+  "sggNm": "구미시",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "054-480-2524",
+    "wlfareInfoReldNm": "경상북도 구미시 미래교육돌봄국 인구청년과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "주거기본법 제15조, 청년기본법 제20조, 구미시 청년기본조례 제20조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240625UUWBM1647260091263086&amp;atcflSn=1",
+    "wlfareInfoReldNm": "주거기본법 청년기본법 구미시 청년기본조례.hwpx"
+   }
+  ]
+ }
+}

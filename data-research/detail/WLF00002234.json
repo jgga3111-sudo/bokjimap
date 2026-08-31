@@ -1,0 +1,40 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "서울특별시 복지정책실 복지기획관 복지정책과",
+  "ctpvNm": "서울특별시",
+  "inqNum": "40208",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260820",
+  "servDgst": "생활수준은 최저생계비 이하이나 국민기초생활보장제도 법정기준이 맞지 않아 보호를 받지 못하는 비수급 빈곤층의 최소한의 생계보장 및 복지 사각지대 해소 도모",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002234&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00002234",
+  "servNm": "서울형 기초보장제도 운영",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2133-7338",
+    "wlfareInfoReldNm": "서울특별시 복지정책실 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 주민생활안정 지원에 관한 조례, 시행규칙"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250429UUWBM1554170135438616&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울형 기초보장제도 급여 신청서.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "provider": "central",
+ "list": {
+  "inqNum": "1879582",
+  "intrsThemaArray": "교육",
+  "jurMnofNm": "교육부",
+  "jurOrgNm": "영유아재정과",
+  "lifeArray": "영유아",
+  "onapPsbltYn": "Y",
+  "rprsCtadr": "1544-0079",
+  "servDgst": "국공사립유치원에 재원하는 유아를 대상으로 보호자의 소득수준에 관계없이 전 계층에 유아학비를 지원하여 실질적 교육기회 보장을 지원합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000969&amp;wlfareInfoReldBztpCd=01",
+  "servId": "WLF00000969",
+  "servNm": "유아학비 지원(3~5세 누리과정 지원)",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "전자바우처(바우처)",
+  "svcfrstRegTs": "20210903",
+  "provider": "central"
+ },
+ "detail": {
+  "applmetList": [
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "거주지 읍/면/동 주민센터, 주민센터 또는 복지로 웹사이트(PC/모바일앱)에서 ‘서비스 신청’",
+    "servSeDetailNm": "신청기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "거주지 읍/면/동 주민센터, 복지로(http://www.bokjiro.go.kr) 사이트 또는 복지로 웹사이트(PC/모바일앱)에서 ‘서비스 신청’",
+    "servSeDetailNm": "신청기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 읍면동에서 조사 및 심사",
+    "servSeDetailNm": "조사기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 복지로(http://www.bokjiro.go.kr) 사이트에서 조사 및 심사",
+    "servSeDetailNm": "조사기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 주민센터에서 보장 결정",
+    "servSeDetailNm": "결정기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 복지로(http://www.bokjiro.go.kr) 사이트에서 보장 결정",
+    "servSeDetailNm": "결정기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 교육청에 이의 신청 접수",
+    "servSeDetailNm": "이의신청접수기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 국공사립유치원 에 이의 신청 접수",
+    "servSeDetailNm": "이의신청접수기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 교육청에서 대상자에게 서비스 제공",
+    "servSeDetailNm": "지급기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 교육청에서 서비스 제공 이후 대상자의 상황 관리",
+    "servSeDetailNm": "사후관리기관목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 국공사립유치원 에서 서비스 제공 이후 대상자의 상황 관리",
+    "servSeDetailNm": "사후관리기관목록"
+   }
+  ],
+  "inqplCtadrList": [
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "1544-0079",
+    "servSeDetailNm": "한국교육학술정보원 (0079에듀콜)"
+   },
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "02-6222-6060",
+    "servSeDetailNm": "교육부"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "http://www.moe.go.kr",
+    "servSeDetailNm": "교육부"
+   },
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "http://www.bokjiro.go.kr",
+    "servSeDetailNm": "복지로"
+   },
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "http://www.childschool.go.kr",
+    "servSeDetailNm": "e-유치원"
+   }
+  ],
+  "basfrmList": [
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260223UUWBM0851160176888078&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 1의4] 사회보장급여(사회서비스이용권) 신청(변경)서(사회보장급여 관련 공통서식에 관한 고시).pdf"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260129UUWBM1426020173479961&amp;atcflSn=1",
+    "servSeDetailNm": "(붙임1) 2026학년도 유아학비 지원 계획.hwpx"
+   }
+  ],
+  "baslawList": [
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "유아교육법"
+   },
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "유아교육법 시행령"
+   },
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "유아교육법 시행규칙"
+   }
+  ]
+ }
+}

@@ -4,11 +4,14 @@ import Link from "next/link";
  * 헤더 — 러닝온과 같은 구조(sticky + 로고 + 이모지 아이콘 내비).
  * 러닝온 헤더 클래스: "sticky top-0 z-30 border-b bg-background/90 backdrop-blur"
  */
-const NAV = [
+type Nav = { href: string; label: string; icon: string; accent?: boolean };
+
+const NAV: Nav[] = [
+  { href: "/check", label: "자가진단", icon: "🧮", accent: true },
+  { href: "/service", label: "인기순", icon: "🔥" },
   { href: "/region", label: "지역별", icon: "📍" },
   { href: "/target", label: "대상별", icon: "👥" },
   { href: "/life", label: "생애주기", icon: "🌱" },
-  { href: "/service", label: "전체보기", icon: "📋" },
 ];
 
 export default function SiteHeader() {
@@ -27,7 +30,11 @@ export default function SiteHeader() {
               <li key={n.href}>
                 <Link
                   href={n.href}
-                  className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-sm hover:border-brand hover:text-brand"
+                  className={`inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm transition ${
+                    n.accent
+                      ? "border-brand bg-brand-soft font-semibold text-brand"
+                      : "border-line hover:border-brand hover:text-brand"
+                  }`}
                 >
                   <span aria-hidden>{n.icon}</span>
                   {n.label}

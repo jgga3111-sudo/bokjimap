@@ -88,3 +88,73 @@
 # .env.local (커밋 금지)
 DATA_GO_KR_SERVICE_KEY=...
 ```
+
+---
+
+## 4. 상세 API — 2026-08-31 실측
+
+| 구분 | 엔드포인트 |
+|---|---|
+| 중앙부처 상세 | `.../NationalWelfareInformationsV001/NationalWelfaredetailedV001` |
+| 지자체 상세 | `.../LocalGovernmentWelfareInformations/LcgvWelfaredetailed` |
+
+파라미터: `callTp=D&servId=WLF00001234`
+
+### 본문 필드가 API별로 다르다
+
+| 뜻 | 중앙부처 | 지자체 |
+|---|---|---|
+| 사업 개요 | `wlfareInfoOutlCn` | (없음) |
+| 지원 대상 | `tgtrDtlCn` | `sprtTrgtCn` |
+| 선정 기준 | `slctCritCn` | `slctCritCn` |
+| 지원 내용 | `alwServCn` | `alwServCn` |
+| 신청 방법 | `applmetList[]` | `aplyMtdCn` |
+| 기준연도 | `crtrYr` | (없음) |
+
+공통 반복 블록: `inqplCtadrList`(문의처) `inqplHmpgReldList`(홈페이지)
+`baslawList`(근거법령) `basfrmList`(서식·안내 PDF)
+
+### 두 가지 함정 (둘 다 직접 밟았다)
+
+**① 429는 초당 제한이 아니라 일일 한도 소진 신호일 수 있다**
+
+동시 4개·무지연으로 900건을 요청했더니 168건 성공, 732건이 HTTP 429였다.
+그 429들이 그냥 실패로 끝난 게 아니라 **일일 1,000콜 한도를 그대로 소진**했다.
+단건 재호출로 본문을 확인해 확정:
+
+```xml
+<errMsg>LIMITED_NUMBER_OF_SERVICE_REQUESTS_EXCEEDS_ERROR</errMsg>
+<returnReasonCode>22</returnReasonCode>
+```
+
+→ `fetch-detail.mjs`는 동시 2 + 250ms 지연 + 지수 백오프로 낮췄고,
+본문에서 `LIMITED_NUMBER...`를 만나면 즉시 중단한다.
+
+**② 응답이 `<wantedDtl>`로 감싸여 있다**
+
+`<(\w+)>([\s\S]*?)</\1>` 를 문서 전체에 돌리면 첫 매치가 `wantedDtl` 하나로
+문서를 통째로 삼켜 **본문 필드가 전부 사라진다.** 리스트 블록만 남아서
+파일이 그럴듯해 보이는 게 더 나쁘다. 173건을 그렇게 날리고 한도까지 썼다.
+
+→ 래퍼를 먼저 벗긴다. 그리고 **원본 XML을 항상 함께 저장한다**
+(`data-research/detail-raw/`). 파싱이 틀려도 한도를 다시 쓰지 않기 위해서다.
+
+---
+
+## 5. 수요 분포 — 무엇부터 받을 것인가
+
+목록 API의 `inqNum`은 복지로 누적 조회수다. 5,219건의 조회수 합(1억 693만)에서
+
+| 상위 | 조회수 비중 | 그 지점의 inqNum |
+|---|---|---|
+| 100건 | **77.1%** | 73,935 |
+| 300건 | 83.8% | 18,407 |
+| **500건** | **86.5%** | 11,181 |
+| 1,000건 | 90.2% | 5,861 |
+| 2,000건 | 94.1% | 3,225 |
+
+**수요의 9할이 상위 1,000건 안에 있다.** 5,219건 전량을 6일에 걸쳐 받을
+이유가 없다. 조회수 순으로 받고, 조회수 순으로 수록한다.
+
+중앙부처 조회수 상위: 청년내일저축계좌(1,285만) · 청년월세 지원(1,255만) ·
+장애인연금(553만) · 주거급여(455만) · 에너지바우처(412만)

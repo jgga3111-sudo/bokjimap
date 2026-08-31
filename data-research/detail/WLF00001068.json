@@ -1,0 +1,110 @@
+{
+ "provider": "central",
+ "list": {
+  "inqNum": "952340",
+  "intrsThemaArray": "생활지원,보육,교육",
+  "jurMnofNm": "성평등가족부",
+  "jurOrgNm": "가족지원과",
+  "onapPsbltYn": "Y",
+  "rprsCtadr": "1577-4206",
+  "servDgst": "저소득 한부모가족 및 조손가족이 가족의 기능을 유지하고 안정된 생활을 할 수 있도록 아동 양육비를 지원합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001068&amp;wlfareInfoReldBztpCd=01",
+  "servId": "WLF00001068",
+  "servNm": "한부모가족 아동양육비 지원",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "svcfrstRegTs": "20210903",
+  "trgterIndvdlArray": "한부모·조손",
+  "provider": "central"
+ },
+ "detail": {
+  "applmetList": [
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "거주지 읍/면/동 주민센터, 읍면동 또는 복지로 웹사이트(PC/모바일앱)에서 ‘서비스 신청’",
+    "servSeDetailNm": "신청기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 시군구에서 조사 및 심사",
+    "servSeDetailNm": "조사기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 시군구에서 보장 결정",
+    "servSeDetailNm": "결정기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 시군구에 이의 신청 접수",
+    "servSeDetailNm": "이의신청접수기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
+    "servSeDetailNm": "지급기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리",
+    "servSeDetailNm": "사후관리기관목록"
+   }
+  ],
+  "inqplCtadrList": [
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "1577-4206",
+    "servSeDetailNm": "가족상담전화"
+   },
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "02-2100-6000",
+    "servSeDetailNm": "성평등가족부"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "http://www.mogef.go.kr",
+    "servSeDetailNm": "성평등가족부"
+   }
+  ],
+  "basfrmList": [
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230206UUWBM1104080019961534&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 1의3] 금융정보 등(금융ㆍ신용ㆍ보험정보) 제공 동의서.hwpx"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=1035GOWF16GOWF161035&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 1의2] 소득·재산 신고서(신규¸ 변경)(사회보장급여 관련 공통서식에 관한 고시).hwp"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230104UUWBM1008450015644756&amp;atcflSn=1",
+    "servSeDetailNm": "사회보장급여 신청(변경)서.hwpx"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260326UUWBM1105100182286160&amp;atcflSn=1",
+    "servSeDetailNm": "2026년 한부모가족지원사업 안내 지침.pdf"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230206UUWBM1105510019961941&amp;atcflSn=1",
+    "servSeDetailNm": "(서식) 청소년 한부모 자립지원 제공 신청서.hwp"
+   }
+  ],
+  "baslawList": [
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "한부모가족지원법 시행령"
+   },
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "한부모가족지원법"
+   }
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "부산광역시 청년산학국 청년정책과",
+  "ctpvNm": "부산광역시",
+  "inqNum": "36716",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260703",
+  "lifeNmArray": "청년",
+  "servDgst": "청년의 근로의욕 고취 및 자산형성 지원",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005143&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005143",
+  "servNm": "부산청년 자산형성지원 사업",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "1833-3044",
+    "wlfareInfoReldNm": "(재)부산경제진흥원-부기통장 콜센터"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "http://www.boogi2.kr/",
+    "wlfareInfoReldNm": "(재)부산경제진흥원-부기통장 콜센터"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "부산광역시 청년 기본 조례"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250530UUWBM1511530140123224&amp;atcflSn=1",
+    "wlfareInfoReldNm": "240731 2024년 부산청년 기쁨두배통장 참가자 모집 공고문.hwp"
+   }
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "인터넷",
+  "bizChrDeptNm": "서울특별시 여성가족정책실 아이돌봄담당관",
+  "ctpvNm": "서울특별시",
+  "inqNum": "44950",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260312",
+  "lifeNmArray": "영유아",
+  "servDgst": "양육공백 가정에 실질적인 양육 조력자를 지원하여 부모 부담을 완화하고 아이키우기 좋은 환경 마련",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005097",
+  "servNm": "서울형 아이돌봄비 지원사업",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2133-6547",
+    "wlfareInfoReldNm": "서울특별시 여성가족실 가족담당관"
+   },
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "02-2133-6556",
+    "wlfareInfoReldNm": "서울특별시 여성가족실 가족담당관"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "서울특별시 온마을 아이돌봄 지원에 관한 조례」제6조(돌봄 지원사업)"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1037430035960709&amp;atcflSn=1",
+    "wlfareInfoReldNm": "서울특별시 온마을아이돌봄 지원에 관한 조례(서울특별시조례)(제8499호)(20230101).hwp"
+   }
+  ]
+ }
+}

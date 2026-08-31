@@ -1,0 +1,47 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문",
+  "bizChrDeptNm": "제주특별자치도 제주시 제주보건소 건강증진과",
+  "ctpvNm": "제주특별자치도",
+  "inqNum": "54603",
+  "lastModYmd": "20260819",
+  "lifeNmArray": "노년",
+  "servDgst": "평균수명 연장에 따른 노화에 의한 안질환 유병률 증가로 만 65세 이상 취약계층 노인의 백내장 수술비 지원을 통한 적기치료 유도 및 의료비 부담 경감",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001903&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00001903",
+  "servNm": "백내장 수술비 지원",
+  "sggNm": "제주시",
+  "sprtCycNm": "1회성",
+  "srvPvsnNm": "기타",
+  "trgterIndvdlNmArray": "저소득, 장애인",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "064-728-8466",
+    "wlfareInfoReldNm": "제주특별자치도 제주시 제주보건소 건강증진과 방문간호팀"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "노인복지법 제4조"
+   }
+  ],
+  "basfrmList": [
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240725UUWBM1730090095408244&amp;atcflSn=1",
+    "wlfareInfoReldNm": "첨부파일없음.hwp"
+   },
+   {
+    "wlfareInfoDtlCd": "040",
+    "wlfareInfoReldCn": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250528UUWBM1124370139707619&amp;atcflSn=1",
+    "wlfareInfoReldNm": "백내장 수술 지원 신청서.hwpx"
+   }
+  ]
+ }
+}

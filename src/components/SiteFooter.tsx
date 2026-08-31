@@ -13,7 +13,8 @@ const COLUMNS: { title: string; items: Item[] }[] = [
   {
     title: "서비스",
     items: [
-      { href: "/service", label: "전체 복지 서비스", ready: true },
+      { href: "/check", label: "자격 자가진단", ready: true },
+      { href: "/service", label: "많이 찾는 지원", ready: true },
       { href: "/region", label: "지역별 찾기", ready: true },
       { href: "/target", label: "대상별 찾기", ready: true },
       { href: "/life", label: "생애주기별 찾기", ready: true },
@@ -26,7 +27,7 @@ const COLUMNS: { title: string; items: Item[] }[] = [
       { href: "/guide", label: "복지 가이드", ready: false },
       { href: "/guide/apply", label: "신청 방법 총정리", ready: false },
       { href: "/guide/documents", label: "필요 서류 안내", ready: false },
-      { href: "/calculator", label: "지원금 계산기", ready: false },
+      { href: "/check", label: "기준 중위소득 표", ready: true },
     ],
   },
   {

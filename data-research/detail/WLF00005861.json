@@ -1,0 +1,41 @@
+{
+ "provider": "local",
+ "list": {
+  "aplyMtdNm": "방문, 우편, E-mail, 팩스",
+  "bizChrDeptNm": "울산광역시 복지보훈여성국 복지정책과",
+  "ctpvNm": "울산광역시",
+  "inqNum": "27398",
+  "intrsThemaNmArray": "서민금융",
+  "lastModYmd": "20260806",
+  "lifeNmArray": "영유아",
+  "servDgst": "부모급여를 받는 0~1세 영아와 보육을 받는 3~5세 유아 사이의 양육 공백을 해소하여 아이 낳고 기르기 좋은 울산의 아동 양육 환경을 조성",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005861&amp;wlfareInfoReldBztpCd=02",
+  "servId": "WLF00005861",
+  "servNm": "울부심 생활+ 조부모 손주 돌봄 수당",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "provider": "local"
+ },
+ "detail": {
+  "inqplCtadrList": [
+   {
+    "wlfareInfoDtlCd": "010",
+    "wlfareInfoReldCn": "052-229-3442",
+    "wlfareInfoReldNm": "울산광역시 복지정책과"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "wlfareInfoDtlCd": "020",
+    "wlfareInfoReldCn": "https://www.ulsan.go.kr/",
+    "wlfareInfoReldNm": "울산광역시 복지정책과"
+   }
+  ],
+  "baslawList": [
+   {
+    "wlfareInfoDtlCd": "030",
+    "wlfareInfoReldNm": "울산광역시 온종일 아동돌봄 통합 지원 조례 제8조"
+   }
+  ]
+ }
+}

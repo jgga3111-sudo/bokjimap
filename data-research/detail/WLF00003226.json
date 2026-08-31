@@ -1,0 +1,96 @@
+{
+ "provider": "central",
+ "list": {
+  "inqNum": "76563",
+  "intrsThemaArray": "생활지원,임신·출산",
+  "jurMnofNm": "고용노동부",
+  "jurOrgNm": "고용문화개선정책과",
+  "lifeArray": "임신 · 출산",
+  "onapPsbltYn": "N",
+  "rprsCtadr": "1350",
+  "servDgst": "출산전후 휴가급여, 육아휴직급여, 난임치료휴가급여 등의 지급을 통해 일과 가정의 양립을 지원하고 모성보호를 도모합니다.",
+  "servDtlLink": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003226&amp;wlfareInfoReldBztpCd=01",
+  "servId": "WLF00003226",
+  "servNm": "모성보호육아지원(출산전후휴가(유산ㆍ사산휴가 포함) 급여, 육아휴직등 급여)",
+  "sprtCycNm": "월",
+  "srvPvsnNm": "현금지급",
+  "svcfrstRegTs": "20210903",
+  "provider": "central"
+ },
+ "detail": {
+  "applmetList": [
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "거주지 읍/면/동 주민센터, 고용센터에서 처리에서 ‘서비스 신청’",
+    "servSeDetailNm": "신청기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 고용센터에서 처리에서 조사 및 심사",
+    "servSeDetailNm": "조사기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 고용센터에서 처리에서 보장 결정",
+    "servSeDetailNm": "결정기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 고용센터에서 처리에서 대상자에게 서비스 제공",
+    "servSeDetailNm": "지급기관연락처목록"
+   },
+   {
+    "servSeCode": "070",
+    "servSeDetailLink": "담당 시/군/구청 또는 고용센터에서 처리에서 서비스 제공 이후 대상자의 상황 관리",
+    "servSeDetailNm": "사후관리기관목록"
+   }
+  ],
+  "inqplCtadrList": [
+   {
+    "servSeCode": "010",
+    "servSeDetailLink": "1350",
+    "servSeDetailNm": "고용노동부 고객상담센터"
+   }
+  ],
+  "inqplHmpgReldList": [
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.work24.go.kr",
+    "servSeDetailNm": "고용24"
+   },
+   {
+    "servSeCode": "020",
+    "servSeDetailLink": "http://www.moel.go.kr/",
+    "servSeDetailNm": "고용노동부"
+   }
+  ],
+  "basfrmList": [
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20250318UUWBM1551180129422532&amp;atcflSn=1",
+    "servSeDetailNm": "출산전후휴가 급여등 신청서 (출산전후휴가¸ 유산ㆍ사산휴가¸ 배우자 출산휴가¸ 난임치료휴가).hwp"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=6238GOWF15GOWF156238&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 제105호의2서식] 출산전후휴가 급여등(출산전후휴가¸유산ㆍ사산휴가¸배우자 출산휴가)대위 신청서(고용보험법 시행규칙).hwp"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=6236GOWF15GOWF156236&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 제105호의3서식] 예술인 출산전후급여등 신청서(고용보험법 시행규칙).hwp"
+   },
+   {
+    "servSeCode": "040",
+    "servSeDetailLink": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=1343GOWF16GOWF161343&amp;atcflSn=1",
+    "servSeDetailNm": "[별지 제100호서식] (육아휴직¸ 육아기 근로시간 단축) 급여 신청서(고용보험법 시행규칙) (2).hwp"
+   }
+  ],
+  "baslawList": [
+   {
+    "servSeCode": "030",
+    "servSeDetailNm": "고용보험법"
+   }
+  ]
+ }
+}
