@@ -53,6 +53,8 @@ const countHub = (pick) => {
 const regions = countHub((s) => (s.sidoName ? [s.sidoName] : []));
 const targets = countHub((s) => s.targets);
 const lifeStages = countHub((s) => s.lifeStages);
+/* 주제는 데이터에 슬러그가 아니라 원문 값("생활지원")으로 들어 있다. */
+const themes = countHub((s) => s.themes);
 
 /* 정적 페이지는 sitemap.ts에 손으로 적혀 있으므로 거기서 세어 온다. */
 const sitemapSrc = read("src/app/sitemap.ts");
@@ -69,12 +71,18 @@ console.log(line);
 console.log(`  정적 페이지        ${String(staticPaths.length).padStart(5)}개`);
 console.log(`    ${staticPaths.map((p) => p || "/").join(" ")}`);
 console.log(`  서비스 상세        ${String(indexable.length).padStart(5)}개  (본문 ${MIN_BODY_LENGTH}자 이상)`);
-console.log(`  지역 허브          ${String(regions).padStart(5)}개  (각 ${MIN_SERVICES}건 이상)`);
+console.log(`  주제 허브          ${String(themes).padStart(5)}개  (각 ${MIN_SERVICES}건 이상)`);
+console.log(`  지역 허브          ${String(regions).padStart(5)}개`);
 console.log(`  대상 허브          ${String(targets).padStart(5)}개`);
 console.log(`  생애주기 허브      ${String(lifeStages).padStart(5)}개`);
 console.log(
   `  ${"합계".padEnd(17)}${String(
-    staticPaths.length + indexable.length + regions + targets + lifeStages,
+    staticPaths.length +
+      indexable.length +
+      themes +
+      regions +
+      targets +
+      lifeStages,
   ).padStart(5)}개`,
 );
 

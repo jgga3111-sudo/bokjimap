@@ -18,10 +18,13 @@ const COLUMNS: { title: string; items: Item[] }[] = [
     title: "복지 찾기",
     items: [
       { href: "/service", label: "많이 찾는 지원", ready: true },
+      { href: "/theme", label: "주제별 찾기", ready: true },
       { href: "/region", label: "지역별 찾기", ready: true },
       { href: "/target", label: "대상별 찾기", ready: true },
       { href: "/life", label: "생애주기별 찾기", ready: true },
-      { href: "/deadline", label: "마감 임박", ready: false },
+      /* 마감 임박 페이지는 만들지 않는다. 원본 enfcEndYmd 570건 중
+         554건이 9999-12-31(종료일 없음)이고, 올해 안에 실제로 마감하는
+         사업은 6건뿐이다. 데이터가 없는 기능이다. */
     ],
   },
   {

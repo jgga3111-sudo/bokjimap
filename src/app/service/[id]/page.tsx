@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Badge from "@/components/Badge";
 import { services } from "@/data/services";
 import { isIndexable, type WelfareService } from "@/types/welfare";
-import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes } from "@/lib/display";
+import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE } from "@/lib/site";
@@ -78,6 +78,49 @@ function Row({ label, value }: { label: string; value: React.ReactNode }) {
       <dt className="w-20 shrink-0 text-sm text-muted">{label}</dt>
       <dd className="min-w-0 text-sm font-medium text-ink">{value}</dd>
     </div>
+  );
+}
+
+/**
+ * "쉽게 말하면" — 지급 형태와 주기를 사람 말로 풀어 준다.
+ *
+ * 원본 지원내용은 행정 문서 문장 그대로다. 예를 들어 주거급여의 지원내용은
+ * "기준임대료를 상한으로 실제 임차료(월 임차료+보증금 환산액)을 지원합니다"로
+ * 시작한다. 정확하지만, 이걸 읽고 "그래서 돈이 나온다는 건가 요금이 깎인다는
+ * 건가"를 아는 사람은 많지 않다.
+ *
+ * 그렇다고 우리가 사업 내용을 요약해 다시 쓰면 틀릴 위험이 크다. 그래서
+ * **구조화된 값(지급형태·주기)만 가지고** 확실한 것만 적는다. 사업마다 다른
+ * 내용은 아래 원문 그대로 두고, 여기서는 "어떤 형태로 받는가"만 말한다.
+ *
+ * 가장 중요한 건 융자다 — 배지에 "융자"라고만 적혀 있으면 받는 돈으로
+ * 오해하기 쉬운데, 수록분에 30건이 있다.
+ */
+function PlainWords({ s }: { s: WelfareService }) {
+  const notes = [
+    ...visiblePayTypes(s.payTypes).map(payTypeHelp),
+    cycleHelp(s.cycle),
+  ].filter((v): v is string => Boolean(v));
+
+  if (notes.length === 0) return null;
+
+  return (
+    <section className="rounded-xl border border-line bg-slate-50/70 px-4 py-3.5">
+      <h2 className="flex items-center gap-1.5 text-sm font-bold text-ink">
+        <span aria-hidden>💬</span>쉽게 말하면
+      </h2>
+      <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-700">
+        {notes.map((n) => (
+          <li key={n} className="flex gap-2">
+            <span
+              aria-hidden
+              className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400"
+            />
+            <span className="min-w-0">{n}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
@@ -237,14 +280,13 @@ export default async function ServiceDetail({
           />
           <Row label="담당" value={s.department} />
           <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
-          <Row
-            label="지원 기간"
-            value={
-              s.applyStart && `${s.applyStart} ~ ${s.applyEnd ?? "미정"}`
-            }
-          />
+          {/* 원본은 "사업 시행 기간"이지 접수 기간이 아니다. 종료일이
+              없는 사업에는 9999-12-31이 들어와 그대로 화면에 나갔었다. */}
+          <Row label="시행" value={periodLabel(s.applyStart, s.applyEnd)} />
         </dl>
       </section>
+
+      <PlainWords s={s} />
 
       <IncomeBanner s={s} />
 

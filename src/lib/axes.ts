@@ -139,3 +139,111 @@ export const parseLifeStages = (raw: string | null | undefined) =>
  * 찍어내면 저품질 페이지 양산으로 오히려 손해다."
  */
 export const MIN_SERVICES = 3;
+
+/**
+ * 관심주제 — **중앙부처 사업에 붙는 축.**
+ *
+ * 이 축을 뒤늦게 살린 이유가 있다. 대상·생애주기는 지자체 사업에만 달려
+ * 있어서, 조회수 상위를 거의 다 차지하는 **중앙부처 사업 330건이 "인기순"과
+ * 지역 페이지의 전국 칸 말고는 들어갈 길이 없었다.** 데이터에는 관심주제가
+ * 처음부터 있었는데 화면에서 한 번도 쓰지 않았다.
+ *
+ * 값은 수집한 900건에서 실제로 집계된 15종 그대로다(2026-09-01).
+ * 임의로 더하거나 이름을 바꾸지 않는다 — 데이터와 어긋나면 그 페이지는
+ * 영원히 0건이 된다.
+ */
+export const THEMES: readonly Axis[] = [
+  {
+    slug: "living",
+    value: "생활지원",
+    label: "생활지원",
+    blurb: "생계비·양육비·각종 수당 등 생활을 떠받치는 지원입니다.",
+  },
+  {
+    slug: "physical-health",
+    value: "신체건강",
+    label: "신체건강",
+    blurb: "의료비·검진·재활 등 몸 건강을 위한 지원입니다.",
+  },
+  {
+    slug: "education",
+    value: "교육",
+    label: "교육",
+    blurb: "학비·장학금·학습 지원 등 배움을 위한 지원입니다.",
+  },
+  {
+    slug: "finance",
+    value: "서민금융",
+    label: "서민금융",
+    blurb: "저리 대출·채무조정·자산형성 등 돈 문제를 다루는 지원입니다.",
+  },
+  {
+    slug: "mental-health",
+    value: "정신건강",
+    label: "정신건강",
+    blurb: "상담·치료·중독 회복 등 마음 건강을 위한 지원입니다.",
+  },
+  {
+    slug: "care",
+    value: "보호·돌봄",
+    label: "보호·돌봄",
+    blurb: "돌봄 서비스·시설 보호 등 곁에서 돌보는 지원입니다.",
+  },
+  {
+    slug: "job",
+    value: "일자리",
+    label: "일자리",
+    blurb: "취업 훈련·구직 수당·고용 유지 등 일자리 지원입니다.",
+  },
+  {
+    slug: "housing",
+    value: "주거",
+    label: "주거",
+    blurb: "월세·전세자금·주택 개보수 등 사는 곳에 대한 지원입니다.",
+  },
+  {
+    slug: "safety",
+    value: "안전·위기",
+    label: "안전·위기",
+    blurb: "갑작스러운 위기 상황에 긴급하게 받을 수 있는 지원입니다.",
+  },
+  {
+    slug: "childcare",
+    value: "보육",
+    label: "보육",
+    blurb: "어린이집·아이돌봄 등 아이를 맡기고 키우는 데 대한 지원입니다.",
+  },
+  {
+    slug: "pregnancy-birth",
+    value: "임신·출산",
+    label: "임신·출산",
+    blurb: "임신 검진부터 출산·산후조리까지의 지원입니다.",
+  },
+  {
+    slug: "culture",
+    value: "문화·여가",
+    label: "문화·여가",
+    blurb: "공연·여행·체육 등 문화생활을 위한 지원입니다.",
+  },
+  {
+    slug: "adoption",
+    value: "입양·위탁",
+    label: "입양·위탁",
+    blurb: "입양 가정과 가정위탁을 위한 지원입니다.",
+  },
+  {
+    slug: "legal",
+    value: "법률",
+    label: "법률",
+    blurb: "무료 법률 상담·소송 구조 등 법적 도움을 주는 지원입니다.",
+  },
+  {
+    slug: "energy",
+    value: "에너지",
+    label: "에너지",
+    blurb: "전기·가스·난방비 등 에너지 비용에 대한 지원입니다.",
+  },
+] as const;
+
+const THEME_BY_SLUG = new Map(THEMES.map((t) => [t.slug, t]));
+export const themeBySlug = (s: string) => THEME_BY_SLUG.get(s);

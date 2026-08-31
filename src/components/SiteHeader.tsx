@@ -17,6 +17,7 @@ type Nav = { href: string; label: string; accent?: boolean };
 const NAV: Nav[] = [
   { href: "/check", label: "자가진단", accent: true },
   { href: "/service", label: "인기순" },
+  { href: "/theme", label: "주제별" },
   { href: "/region", label: "지역별" },
   { href: "/target", label: "대상별" },
   { href: "/life", label: "생애주기" },

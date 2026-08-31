@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SIDO_LIST } from "@/lib/regions";
-import { TARGETS, LIFE_STAGES } from "@/lib/axes";
+import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
@@ -142,6 +142,9 @@ export default function Home() {
       <section className="rounded-2xl border border-line bg-slate-50/60 p-5 sm:p-6">
         <h2 className="mb-4 text-lg font-bold">조건으로 찾아보기</h2>
         <div className="space-y-5">
+          {/* 주제를 맨 위에 둔다. 중앙부처 사업(조회수 상위 대부분)이
+              걸리는 유일한 축이라 여기가 가장 많이 눌린다. */}
+          <BrowseRow label="주제" base="/theme" items={THEMES} />
           <BrowseRow label="대상" base="/target" items={TARGETS} />
           <BrowseRow label="생애주기" base="/life" items={LIFE_STAGES} />
           <BrowseRow

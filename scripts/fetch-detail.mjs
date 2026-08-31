@@ -40,7 +40,6 @@ if (!KEY) {
 }
 
 const LIMIT = Number(process.argv[2] ?? 900);
-const OUT = "data-research/detail";
 const RAW = "data-research/detail-raw";
 const CONCURRENCY = 2;
 const DELAY_MS = 250;
@@ -106,7 +105,6 @@ const ranked = [
   ...raw.local.map((r) => ({ ...r, provider: "local" })),
 ].sort((a, b) => Number(b.inqNum) - Number(a.inqNum));
 
-await mkdir(OUT, { recursive: true });
 await mkdir(RAW, { recursive: true });
 
 /* 본문이 실제로 들어 있는 것만 "받았다"고 본다. 예전 파서 버그로 리스트만
@@ -149,14 +147,6 @@ async function worker() {
     try {
       const xml = await fetchOne(r.provider, r.servId);
       await writeFile(`${RAW}/${r.servId}.xml`, xml);
-      await writeFile(
-        `${OUT}/${r.servId}.json`,
-        JSON.stringify(
-          { provider: r.provider, list: r, detail: parseDetail(xml) },
-          null,
-          1,
-        ),
-      );
       ok[r.provider]++;
       const total = ok.central + ok.local;
       if (total % 50 === 0) console.log(`  ${total}/${todo.length} ...`);

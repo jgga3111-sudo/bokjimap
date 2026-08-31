@@ -17,11 +17,20 @@ export const metadata: Metadata = {
 };
 
 export default function SearchPage() {
-  /* useSearchParams를 쓰는 컴포넌트는 Suspense로 감싸야 한다. */
+  /*
+    useSearchParams를 쓰는 컴포넌트는 Suspense로 감싸야 한다.
+
+    fallback에도 h1을 둔다. 결과는 브라우저에서 그려지므로 서버가 보내는
+    첫 화면은 이 fallback인데, 여기에 제목이 없으면 화면 낭독기를 쓰는
+    사람은 **어느 페이지에 왔는지 알 수 없는 상태로** 로딩을 기다리게 된다.
+  */
   return (
     <Suspense
       fallback={
-        <p className="py-16 text-center text-sm text-muted">불러오는 중…</p>
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-xl font-bold sm:text-2xl">복지 서비스 검색</h1>
+          <p className="py-12 text-center text-sm text-muted">불러오는 중…</p>
+        </div>
       }
     >
       <SearchResults />

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE, today } from "@/lib/site";
 import { SIDO_LIST } from "@/lib/regions";
-import { TARGETS, LIFE_STAGES, MIN_SERVICES } from "@/lib/axes";
+import { TARGETS, LIFE_STAGES, THEMES, MIN_SERVICES } from "@/lib/axes";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable } from "@/types/welfare";
 
@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/check", "monthly", 0.9, SERVICES_UPDATED],
       ["/service", "daily", 0.9, SERVICES_UPDATED],
       ["/faq", "monthly", 0.8, SITE.policyEffectiveDate],
+      ["/theme", "weekly", 0.8, SERVICES_UPDATED],
       ["/region", "weekly", 0.8, SERVICES_UPDATED],
       ["/target", "weekly", 0.8, SERVICES_UPDATED],
       ["/life", "weekly", 0.8, SERVICES_UPDATED],
@@ -80,6 +81,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
     ...hub("/region", SIDO_LIST, (s) =>
       atLeast(services.filter((v) => v.sidoName === s.fullName)),
+    ),
+    ...hub("/theme", THEMES, (t) =>
+      atLeast(services.filter((v) => v.themes.includes(t.value))),
     ),
     ...hub("/target", TARGETS, (t) =>
       atLeast(services.filter((v) => v.targets.includes(t.slug))),

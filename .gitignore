@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 상세 API 응답 캐시 중 파싱본 — 아무도 안 읽는다(build-data는 detail-raw만 본다)
+data-research/detail/
