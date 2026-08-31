@@ -18,7 +18,7 @@ function SectionHeader({
         <span aria-hidden>{icon}</span>
         {title}
       </h2>
-      <Link href={href} className="text-sm text-[--color-muted] hover:text-[--color-brand]">
+      <Link href={href} className="text-sm text-muted hover:text-brand">
         전체 보기 →
       </Link>
     </div>
@@ -38,7 +38,7 @@ function Chips({
         <li key={i.slug}>
           <Link
             href={`${base}/${i.slug}`}
-            className="inline-block rounded-full border border-[--color-line] px-3 py-1.5 text-sm hover:border-[--color-brand] hover:text-[--color-brand]"
+            className="inline-block rounded-full border border-line px-3 py-1.5 text-sm hover:border-brand hover:text-brand"
           >
             {i.label}
           </Link>
@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <div className="space-y-10">
-      <section className="rounded-2xl bg-[--color-brand-soft] p-6">
+      <section className="rounded-2xl bg-brand-soft p-6">
         <h1 className="text-2xl font-bold sm:text-3xl">
           내 지역 복지·지원금 찾기
         </h1>
@@ -61,10 +61,10 @@ export default function Home() {
           중앙부처와 전국 시·군·구가 따로 공고하는 복지 서비스를 한곳에 모읍니다.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-[--color-brand]">
+          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-brand">
             {count.toLocaleString()}건 수록
           </span>
-          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-[--color-muted]">
+          <span className="rounded-full bg-white px-3 py-1.5 text-sm font-medium text-muted">
             {SIDO_LIST.length}개 시·도
           </span>
         </div>
@@ -89,7 +89,7 @@ export default function Home() {
             <li key={sido.slug}>
               <Link
                 href={`/region/${sido.slug}`}
-                className="block rounded-lg border border-[--color-line] px-2 py-2.5 text-center text-sm hover:border-[--color-brand] hover:text-[--color-brand]"
+                className="block rounded-lg border border-line px-2 py-2.5 text-center text-sm hover:border-brand hover:text-brand"
               >
                 {sido.name}
               </Link>

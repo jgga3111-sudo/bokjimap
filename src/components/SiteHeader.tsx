@@ -13,11 +13,11 @@ const NAV = [
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-30 border-b border-[--color-line] bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur">
       <div className="mx-auto max-w-5xl px-4">
         <div className="flex h-14 items-center">
           <Link href="/" className="text-xl font-bold">
-            복지<span className="text-[--color-brand]">MAP</span>
+            복지<span className="text-brand">MAP</span>
           </Link>
         </div>
         {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다. */}
@@ -27,7 +27,7 @@ export default function SiteHeader() {
               <li key={n.href}>
                 <Link
                   href={n.href}
-                  className="inline-flex items-center gap-1 rounded-full border border-[--color-line] px-3 py-1.5 text-sm hover:border-[--color-brand] hover:text-[--color-brand]"
+                  className="inline-flex items-center gap-1 rounded-full border border-line px-3 py-1.5 text-sm hover:border-brand hover:text-brand"
                 >
                   <span aria-hidden>{n.icon}</span>
                   {n.label}

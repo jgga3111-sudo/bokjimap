@@ -17,15 +17,15 @@ export default function AxisGrid({
         <li key={a.slug}>
           <Link
             href={`${base}/${a.slug}`}
-            className="block rounded-xl border border-[--color-line] p-4 transition hover:border-[--color-brand]"
+            className="block rounded-xl border border-line p-4 transition hover:border-brand"
           >
             <p className="flex items-baseline gap-2">
               <span className="font-bold">{a.label}</span>
-              <span className="text-xs text-[--color-muted]">
+              <span className="text-xs text-muted">
                 {countOf(a)}건
               </span>
             </p>
-            <p className="mt-1 text-sm text-[--color-muted]">{a.blurb}</p>
+            <p className="mt-1 text-sm text-muted">{a.blurb}</p>
           </Link>
         </li>
       ))}

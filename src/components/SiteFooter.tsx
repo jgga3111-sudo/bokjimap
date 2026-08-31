@@ -50,13 +50,13 @@ const COLUMNS: { title: string; items: Item[] }[] = [
 
 export default function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-[--color-line] bg-slate-50/60">
+    <footer className="mt-16 border-t border-line bg-slate-50/60">
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="mb-8">
           <p className="text-xl font-bold">
-            복지<span className="text-[--color-brand]">MAP</span>
+            복지<span className="text-brand">MAP</span>
           </p>
-          <p className="mt-2 text-sm text-[--color-muted]">
+          <p className="mt-2 text-sm text-muted">
             {SITE.description}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function SiteFooter() {
                     <li key={i.href}>
                       <Link
                         href={i.href}
-                        className="text-[--color-muted] hover:text-[--color-brand]"
+                        className="text-muted hover:text-brand"
                       >
                         {i.label}
                       </Link>
@@ -83,7 +83,7 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-10 space-y-1 border-t border-[--color-line] pt-6 text-xs text-[--color-muted]">
+        <div className="mt-10 space-y-1 border-t border-line pt-6 text-xs text-muted">
           <p>
             복지MAP은 공공데이터포털의 복지서비스 정보를 정리해 보여주는 민간
             사이트입니다. 정부·지자체 공식 기관이 아닙니다.

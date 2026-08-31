@@ -27,8 +27,8 @@ export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
     <div className="space-y-6">
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
-        <p className="text-sm text-[--color-muted]">{t.blurb}</p>
-        <p className="text-sm text-[--color-muted]">{list.length}건</p>
+        <p className="text-sm text-muted">{t.blurb}</p>
+        <p className="text-sm text-muted">{list.length}건</p>
       </header>
       <ServiceList services={list} />
     </div>
