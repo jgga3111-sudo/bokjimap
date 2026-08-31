@@ -1,30 +1,28 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { TARGETS, targetBySlug } from "@/lib/axes";
+import { LIFE_STAGES, lifeStageBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 
 export function generateStaticParams() {
-  return TARGETS.map((t) => ({ slug: t.slug }));
+  return LIFE_STAGES.map((t) => ({ slug: t.slug }));
 }
 
 export async function generateMetadata({
   params,
-}: PageProps<"/target/[slug]">): Promise<Metadata> {
+}: PageProps<"/life/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const t = targetBySlug(slug);
+  const t = lifeStageBySlug(slug);
   if (!t) return {};
   return { title: `${t.label} 복지·지원금`, description: t.blurb };
 }
 
-export default async function TargetPage({
-  params,
-}: PageProps<"/target/[slug]">) {
+export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
   const { slug } = await params;
-  const t = targetBySlug(slug);
+  const t = lifeStageBySlug(slug);
   if (!t) notFound();
 
-  const list = services.filter((s) => s.targets.includes(t.slug));
+  const list = services.filter((s) => s.lifeStages.includes(t.slug));
   return (
     <div className="space-y-6">
       <header className="space-y-1">

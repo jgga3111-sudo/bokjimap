@@ -27,7 +27,7 @@ export default async function RegionPage({
   const sido = sidoBySlug(slug);
   if (!sido) notFound();
 
-  const list = services.filter((s) => s.sidoName === sido.name);
+  const list = services.filter((s) => s.sidoName === sido.fullName);
 
   return (
     <div className="space-y-6">

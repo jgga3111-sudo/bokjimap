@@ -33,8 +33,11 @@ export type WelfareService = {
   /** 소관 부처·조직 */
   department: string | null;
 
-  /** 대상 축 슬러그. 분류에 실패하면 빈 배열 — "기타"로 몰아넣지 않는다. */
+  /** 대상 축 슬러그(axes.ts TARGETS). 매칭 실패한 값은 버린다 — "기타"로 몰지 않는다. */
   targets: string[];
+
+  /** 생애주기 축 슬러그(axes.ts LIFE_STAGES). */
+  lifeStages: string[];
 
   /** 원문 표현 그대로 옮긴다. 반올림·요약 금지(CLAUDE.md 3절). */
   summary: string | null;

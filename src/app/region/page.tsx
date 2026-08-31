@@ -14,7 +14,7 @@ export default function RegionIndex() {
       <h1 className="text-2xl font-bold">지역별 복지·지원금</h1>
       <ul className="grid grid-cols-3 gap-2 sm:grid-cols-6">
         {SIDO_LIST.map((sido) => {
-          const count = services.filter((s) => s.sidoName === sido.name).length;
+          const count = services.filter((s) => s.sidoName === sido.fullName).length;
           return (
             <li key={sido.slug}>
               <Link
