@@ -13,9 +13,19 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   alternates: { canonical: "/" },
-  /* Bing 웹마스터도구 소유 확인. GSC 계정을 연동(Import)하면 구글 계정 권한을
-     넘겨야 해서 메타태그 방식으로 했다. */
+  /*
+    검색엔진 소유 확인 — 둘 다 메타태그 방식이다.
+
+    구글은 URL 접두어 속성(https://bokjimap.co.kr)으로 등록했다. 도메인 속성은
+    가비아에 DNS TXT를 넣어야 하는데, www와 vercel.app을 이미 apex로 308
+    보내고 있어서 접두어 하나로 충분하다. 계정은 jgga1234567 쪽이다.
+
+    빙은 GSC 계정을 연동(Import)하면 구글 계정 권한을 넘겨야 해서 메타태그로 했다.
+
+    ⚠ 이 값을 지우면 소유 확인이 풀린다. 도메인이나 계정을 바꿀 때만 건드린다.
+  */
   verification: {
+    google: "xE6nEUGW4MWq9peHNikUemhdKxL1EAfsw5eFvEuDiBU",
     other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
   },
   openGraph: {
