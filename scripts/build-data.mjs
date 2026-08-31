@@ -10,7 +10,7 @@
  * 정렬 기준은 **복지로 조회수(inqNum)** 다. 사람들이 실제로 많이 찾아본 순서로
  * 수록한다(docs/02 — 얇은 페이지 대량 생성은 색인에서 손해).
  */
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 
 const LIMIT = Number(process.argv[2] ?? 600);
 const DETAIL_RAW = "data-research/detail-raw";

@@ -46,6 +46,34 @@ export default function CheckPage() {
 
       <IncomeCheck servicesByPercent={SERVICES_BY_PERCENT} />
 
+      {/*
+        계산기 바로 밑에 붙인다. 지식iN을 뒤져 보니(2026-08-31) 사람들이 실제로
+        틀리는 지점은 계산식이 아니라 **무엇을 넣어야 하는지**였다. 맞벌이인데
+        본인 보험료만 넣거나, 장기요양보험료까지 더해 넣는 경우가 압도적으로
+        많다. 둘 다 결과를 실제보다 나쁘게 만들어 "나는 대상이 아니구나"로
+        끝나게 한다. FAQ 페이지까지 찾아가는 사람은 드무니 여기 세 줄로 둔다.
+      */}
+      <aside className="rounded-xl border border-line bg-white px-4 py-4 text-sm leading-relaxed text-slate-700">
+        <p className="font-bold text-ink">건강보험료로 넣으신다면</p>
+        <ul className="mt-2 space-y-1.5">
+          <li>
+            맞벌이라면 <strong>부부의 보험료를 합쳐서</strong> 넣고, 가구원 수는
+            2인으로 두세요. 본인 것만 넣어 &ldquo;기준 이하&rdquo;로 보였다가
+            신청 후 탈락하는 경우가 가장 흔합니다.
+          </li>
+          <li>
+            <strong>장기요양보험료는 빼고</strong> 건강보험료만 넣으세요.
+            명세서에 나란히 찍혀 있어 함께 더하기 쉬운데, 그러면 소득이 실제보다
+            높게 나옵니다.
+          </li>
+        </ul>
+        <p className="mt-2.5 text-xs">
+          <Link href="/faq#income" className="text-brand underline">
+            건강보험료로 소득을 확인하는 방법 자세히 보기 →
+          </Link>
+        </p>
+      </aside>
+
       {/* 계산기 밑에 표를 함께 둔다. 계산기는 클라이언트에서 그려지지만 이 표는
           서버 렌더라 검색엔진이 읽는다 — 페이지가 빈 껍데기가 되지 않게. */}
       <section id="median-table" className="scroll-mt-20">

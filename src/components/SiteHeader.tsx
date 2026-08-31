@@ -2,52 +2,58 @@ import Link from "next/link";
 import SearchBox from "./SearchBox";
 
 /**
- * 헤더 — sticky + 로고 + 검색 + 이모지 아이콘 내비.
+ * 헤더 — 두 줄. 위는 로고와 검색, 아래는 분류.
  *
- * 검색을 헤더에 둔 이유: 600건에서 이름으로 찾을 방법이 그 전까지 없었다.
- * 넓은 화면에서는 로고 옆에, 좁은 화면에서는 로고 아래 한 줄을 차지한다.
+ * 처음엔 좁은 화면에서 세 줄이었다(로고 / 검색 / 분류). sticky 헤더라 그
+ * 세 줄이 스크롤 내내 화면 위를 차지했고, 본문이 보이는 높이가 그만큼 줄었다.
+ * 로고를 줄이고 검색을 같은 줄로 올려 한 줄을 없앴다.
+ *
+ * 분류 칩의 이모지도 뺐다. 다섯 개가 나란히 있으면 각각을 구분해 주는 게
+ * 아니라 그냥 알록달록해 보인다. 강조가 필요한 건 자가진단 하나뿐이고,
+ * 그건 색으로 충분히 구별된다.
  */
-type Nav = { href: string; label: string; icon: string; accent?: boolean };
+type Nav = { href: string; label: string; accent?: boolean };
 
 const NAV: Nav[] = [
-  { href: "/check", label: "자가진단", icon: "🧮", accent: true },
-  { href: "/service", label: "인기순", icon: "🔥" },
-  { href: "/region", label: "지역별", icon: "📍" },
-  { href: "/target", label: "대상별", icon: "👥" },
-  { href: "/life", label: "생애주기", icon: "🌱" },
+  { href: "/check", label: "자가진단", accent: true },
+  { href: "/service", label: "인기순" },
+  { href: "/region", label: "지역별" },
+  { href: "/target", label: "대상별" },
+  { href: "/life", label: "생애주기" },
 ];
 
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur">
       <div className="mx-auto max-w-5xl px-4">
-        <div className="flex h-14 items-center gap-4">
-          <Link href="/" className="shrink-0 text-xl font-bold">
+        <div className="flex h-14 items-center gap-3">
+          <Link
+            href="/"
+            className="shrink-0 text-lg font-bold sm:text-xl"
+            aria-label="복지맵 홈"
+          >
             복지<span className="text-brand">MAP</span>
           </Link>
-          <div className="ml-auto hidden w-full max-w-xs sm:block">
-            <SearchBox placeholder="지원금 이름으로 검색" />
+          {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 제한한다. 좁은 화면에서는
+              남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다. */}
+          <div className="min-w-0 flex-1 sm:ml-auto sm:max-w-xs sm:flex-none">
+            <SearchBox placeholder="지원금 이름 검색" />
           </div>
-        </div>
-
-        <div className="pb-2 sm:hidden">
-          <SearchBox placeholder="지원금 이름으로 검색" />
         </div>
 
         {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다. */}
         <nav className="-mx-4 overflow-x-auto px-4 pb-2">
-          <ul className="flex gap-2 whitespace-nowrap">
+          <ul className="flex gap-1.5 whitespace-nowrap">
             {NAV.map((n) => (
               <li key={n.href}>
                 <Link
                   href={n.href}
-                  className={`inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm transition ${
+                  className={`inline-block rounded-full border px-3 py-1.5 text-sm transition ${
                     n.accent
                       ? "border-brand bg-brand-soft font-semibold text-brand"
-                      : "border-line hover:border-brand hover:text-brand"
+                      : "border-line text-slate-600 hover:border-brand hover:text-brand"
                   }`}
                 >
-                  <span aria-hidden>{n.icon}</span>
                   {n.label}
                 </Link>
               </li>

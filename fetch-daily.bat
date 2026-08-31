@@ -28,6 +28,11 @@ node scripts/audit-data.mjs
 if errorlevel 1 goto :failed
 
 echo.
+echo --- 서치콘솔에 제출될 페이지 ---
+node scripts/audit-sitemap.mjs
+if errorlevel 1 goto :failed
+
+echo.
 echo ============================================
 echo  끝났습니다.
 echo  배포는 클로드에게 "수집 끝났어"라고 말씀하세요.

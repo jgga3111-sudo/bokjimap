@@ -6,69 +6,68 @@ import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import SearchBox from "@/components/SearchBox";
 
-/** 조회수 상위 — 데이터가 이미 조회수 내림차순이라 앞에서 자르면 된다. */
+/**
+ * 첫 화면.
+ *
+ * 처음에는 블록이 여섯 개였다 — 히어로(제목+검색+버튼 둘+수치 셋),
+ * 자가진단 배너, 인기 지원, 대상, 생애주기, 지역. 자가진단으로 가는 길이
+ * 히어로 버튼과 바로 아래 배너에 두 번 있었고, 찾아보는 방법 세 가지가
+ * 각각 제목을 달고 따로 서 있어 목차만 다섯 개처럼 보였다.
+ *
+ * 네 블록으로 줄였다.
+ *   ① 히어로 — 무엇을 하는 곳인지 + 검색. **버튼 없음.**
+ *   ② 자가진단 — 이 사이트의 핵심 기능. 여기에만 버튼을 둔다.
+ *   ③ 많이 찾는 지원 — 바로 볼 것.
+ *   ④ 찾아보기 — 대상·생애주기·지역을 한 상자에 묶는다.
+ *
+ * 처음 온 사람이 위에서 아래로 읽으면 "무엇 → 나는 대상인가 → 무엇이 있나
+ * → 더 찾아보기" 순서가 된다.
+ */
 const popular = services.slice(0, 8);
 
-function SectionHeader({
-  icon,
-  title,
-  sub,
-  href,
-}: {
-  icon: string;
-  title: string;
-  sub?: string;
-  href?: string;
-}) {
-  return (
-    <div className="mb-3 flex items-end justify-between gap-3">
-      <div>
-        <h2 className="flex items-center gap-2 text-lg font-bold">
-          <span aria-hidden>{icon}</span>
-          {title}
-        </h2>
-        {sub && <p className="mt-0.5 text-xs text-muted">{sub}</p>}
-      </div>
-      {href && (
-        <Link
-          href={href}
-          className="shrink-0 text-sm text-muted hover:text-brand"
-        >
-          전체 보기 →
-        </Link>
-      )}
-    </div>
-  );
-}
-
-function Chips({
+/** 찾아보기 상자 안의 한 줄. */
+function BrowseRow({
+  label,
   base,
   items,
+  cols,
 }: {
+  label: string;
   base: string;
   items: readonly { slug: string; label: string }[];
+  cols?: string;
 }) {
   return (
-    <ul className="flex flex-wrap gap-2">
-      {items.map((i) => (
-        <li key={i.slug}>
-          <Link
-            href={`${base}/${i.slug}`}
-            className="inline-block rounded-full border border-line bg-white px-3.5 py-2 text-sm hover:border-brand hover:text-brand"
-          >
-            {i.label}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <div className="mb-2 flex items-baseline justify-between gap-3">
+        <h3 className="text-sm font-bold text-ink">{label}</h3>
+        <Link href={base} className="shrink-0 text-xs text-muted hover:text-brand">
+          전체 보기 →
+        </Link>
+      </div>
+      <ul className={cols ?? "flex flex-wrap gap-1.5"}>
+        {items.map((i) => (
+          <li key={i.slug}>
+            <Link
+              href={`${base}/${i.slug}`}
+              className={`block rounded-lg border border-line bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-brand hover:text-brand ${
+                cols ? "text-center" : ""
+              }`}
+            >
+              {i.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-10">
       {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
-      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-white px-4 pt-10 pb-8">
+      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-white px-4 pt-10 pb-9">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-2xl leading-tight font-extrabold sm:text-4xl">
             내가 받을 수 있는
@@ -89,47 +88,19 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            <Link
-              href="/check"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
-            >
-              <span aria-hidden>🧮</span>
-              내가 대상자인지 1분 확인
-            </Link>
-            <Link
-              href="/service"
-              className="inline-flex items-center gap-2 rounded-xl border border-line bg-white px-5 py-3.5 font-bold text-ink transition hover:border-brand hover:text-brand"
-            >
-              <span aria-hidden>📋</span>
-              많이 찾는 지원 보기
-            </Link>
-          </div>
-
-          <dl className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <div className="flex items-baseline gap-1.5">
-              <dt className="text-muted">수록</dt>
-              <dd className="font-bold text-ink">
-                {services.length.toLocaleString()}건
-              </dd>
-            </div>
-            <div className="flex items-baseline gap-1.5">
-              <dt className="text-muted">지역</dt>
-              <dd className="font-bold text-ink">{SIDO_LIST.length}개 시·도</dd>
-            </div>
-            <div className="flex items-baseline gap-1.5">
-              <dt className="text-muted">기준연도</dt>
-              <dd className="font-bold text-ink">{BASE_YEAR}년</dd>
-            </div>
-          </dl>
+          <p className="mt-4 text-xs text-muted">
+            수록 {services.length.toLocaleString()}건 · 전국{" "}
+            {SIDO_LIST.length}개 시·도 · {BASE_YEAR}년 기준
+          </p>
         </div>
       </section>
 
-      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+      {/* 자가진단 — 이 사이트에만 있는 것. 첫 화면에서 버튼은 여기 하나뿐이다. */}
+      <section className="rounded-2xl border border-brand/20 bg-brand-soft/40 p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
             <h2 className="text-lg font-bold">
-              소득이 중위소득 몇 %인지부터 확인하세요
+              내가 대상자인지 1분이면 압니다
             </h2>
             <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
               복지 지원의 자격은 대부분 &ldquo;기준 중위소득 몇 % 이하&rdquo;로
@@ -139,7 +110,7 @@ export default function Home() {
           </div>
           <Link
             href="/check"
-            className="shrink-0 rounded-xl bg-brand px-5 py-3 font-bold text-white transition hover:brightness-110"
+            className="shrink-0 rounded-xl bg-brand px-5 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
           >
             자가진단 하기 →
           </Link>
@@ -147,39 +118,35 @@ export default function Home() {
       </section>
 
       <section>
-        <SectionHeader
-          icon="🔥"
-          title="사람들이 가장 많이 찾는 지원"
-          sub="복지로 누적 조회수 순"
-          href="/service"
-        />
+        <div className="mb-3 flex items-end justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-bold">사람들이 가장 많이 찾는 지원</h2>
+            <p className="mt-0.5 text-xs text-muted">복지로 누적 조회수 순</p>
+          </div>
+          <Link
+            href="/service"
+            className="shrink-0 text-sm text-muted hover:text-brand"
+          >
+            전체 보기 →
+          </Link>
+        </div>
         <ServiceList services={popular} ranked />
       </section>
 
-      <section>
-        <SectionHeader icon="👥" title="대상으로 찾기" href="/target" />
-        <Chips base="/target" items={TARGETS} />
-      </section>
-
-      <section>
-        <SectionHeader icon="🌱" title="생애주기로 찾기" href="/life" />
-        <Chips base="/life" items={LIFE_STAGES} />
-      </section>
-
-      <section>
-        <SectionHeader icon="📍" title="지역으로 찾기" href="/region" />
-        <ul className="grid grid-cols-3 gap-2 sm:grid-cols-6">
-          {SIDO_LIST.map((sido) => (
-            <li key={sido.slug}>
-              <Link
-                href={`/region/${sido.slug}`}
-                className="block rounded-lg border border-line bg-white px-2 py-2.5 text-center text-sm hover:border-brand hover:text-brand"
-              >
-                {sido.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* 찾아보는 방법 셋을 한 상자에 묶는다. 각각 제목을 달아 따로 세우면
+          첫 화면이 목차처럼 보인다. */}
+      <section className="rounded-2xl border border-line bg-slate-50/60 p-5 sm:p-6">
+        <h2 className="mb-4 text-lg font-bold">조건으로 찾아보기</h2>
+        <div className="space-y-5">
+          <BrowseRow label="대상" base="/target" items={TARGETS} />
+          <BrowseRow label="생애주기" base="/life" items={LIFE_STAGES} />
+          <BrowseRow
+            label="지역"
+            base="/region"
+            items={SIDO_LIST.map((s) => ({ slug: s.slug, label: s.name }))}
+            cols="grid grid-cols-3 gap-1.5 sm:grid-cols-6"
+          />
+        </div>
       </section>
     </div>
   );

@@ -8,6 +8,7 @@ import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes } from "@/
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE } from "@/lib/site";
+import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -160,7 +161,7 @@ export default async function ServiceDetail({
     <article className="space-y-8">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumb) }}
       />
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
@@ -292,27 +293,41 @@ export default async function ServiceDetail({
       {(s.contacts.length > 0 || s.homepages.length > 0) && (
         <Section id="contact" icon="☎️" title="문의처">
           <ul className="space-y-1.5 text-sm">
-            {s.contacts.map((c, i) => (
-              <li key={`c${i}`} className="text-slate-700">
-                {c.name && <span className="text-muted">{c.name} </span>}
-                <a href={`tel:${c.url}`} className="font-medium text-brand">
-                  {c.url}
-                </a>
-              </li>
-            ))}
-            {s.homepages.map((h, i) => (
-              <li key={`h${i}`} className="text-slate-700">
-                {h.name && <span className="text-muted">{h.name} </span>}
-                <a
-                  href={h.url!.startsWith("http") ? h.url! : `https://${h.url}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-brand break-all underline"
-                >
-                  {h.url}
-                </a>
-              </li>
-            ))}
+            {s.contacts.map((c, i) => {
+              /* 문의처 칸에 "평일 09~18시" 같은 안내문이 들어오는 경우가 있다.
+                 그런 값을 전화 링크로 만들면 눌러도 아무 일이 없는 죽은 링크가
+                 되므로, 번호로 읽히는 것만 링크로 건다. */
+              const tel = telHref(c.url);
+              return (
+                <li key={`c${i}`} className="text-slate-700">
+                  {c.name && <span className="text-muted">{c.name} </span>}
+                  {tel ? (
+                    <a href={tel} className="font-medium text-brand">
+                      {c.url}
+                    </a>
+                  ) : (
+                    <span className="font-medium">{c.url}</span>
+                  )}
+                </li>
+              );
+            })}
+            {s.homepages.map((h, i) => {
+              const url = safeUrl(h.url);
+              if (!url) return null;
+              return (
+                <li key={`h${i}`} className="text-slate-700">
+                  {h.name && <span className="text-muted">{h.name} </span>}
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-brand break-all underline"
+                  >
+                    {h.url}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </Section>
       )}
@@ -320,18 +335,22 @@ export default async function ServiceDetail({
       {s.forms.length > 0 && (
         <Section id="forms" icon="📄" title="서식·안내 자료">
           <ul className="space-y-1.5 text-sm">
-            {s.forms.map((f, i) => (
-              <li key={i}>
-                <a
-                  href={f.url!}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-brand underline"
-                >
-                  {f.name || "첨부파일"}
-                </a>
-              </li>
-            ))}
+            {s.forms.map((f, i) => {
+              const url = safeUrl(f.url);
+              if (!url) return null;
+              return (
+                <li key={i}>
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand underline"
+                  >
+                    {f.name || "첨부파일"}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </Section>
       )}
@@ -353,9 +372,9 @@ export default async function ServiceDetail({
           {s.updatedAt && ` 원본 최종수정일 ${s.updatedAt}.`} 신청 자격·금액·기간은
           변경될 수 있으니 <strong>반드시 아래 공식 안내로 최종 확인</strong>하세요.
         </p>
-        {s.officialUrl && (
+        {safeUrl(s.officialUrl) && (
           <a
-            href={s.officialUrl}
+            href={safeUrl(s.officialUrl)!}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-lg border border-line bg-white px-4 py-2 font-medium text-brand"
