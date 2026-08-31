@@ -193,6 +193,48 @@ writeFileSync(
     `;\n\n/** 데이터 파일을 마지막으로 갱신한 날. sitemap의 lastmod에 쓴다. */\nexport const SERVICES_UPDATED = "${today}";\n`,
 );
 
+/*
+  검색 색인을 **별도 파일로** 뽑는다.
+
+  처음엔 search.ts에서 services를 import해 색인을 만들었다. 그랬더니 검색창이
+  클라이언트 컴포넌트라 **services.ts 전체가 브라우저 번들에 실렸다** —
+  요약문·복지로 링크·문의처까지 전부. 청크 하나가 528KB가 됐다.
+  번들러는 "이 배열에서 필드 몇 개만 쓴다"를 알 수 없으니 원본을 통째로 넣는다.
+
+  그래서 필요한 것만 담은 파일을 여기서 만든다. 배열의 배열로 쓰는 이유는
+  객체로 하면 키 이름이 600번 반복되기 때문이다(44.9KB → 32.9KB).
+*/
+const index = services.map((s) => [
+  s.id.replace("WLF", ""),
+  s.name ?? "",
+  s.provider === "central"
+    ? "전국"
+    : [s.sidoName, s.sigunguName].filter(Boolean).join(" "),
+  s.department ?? "",
+  s.views,
+]);
+
+writeFileSync(
+  "src/data/searchIndex.ts",
+  `/**
+ * 검색 색인 — **자동 생성 파일. 직접 고치지 말 것.**
+ *
+ *   node scripts/build-data.mjs
+ *
+ * [id(WLF 접두사 제거), 서비스명, 지역, 담당부처, 복지로 조회수]
+ *
+ * services.ts를 클라이언트 컴포넌트에서 import하면 전체 데이터가 번들에
+ * 실린다. 검색에 필요한 필드만 여기 담아 그걸 막는다.
+ */
+export type SearchRow = [string, string, string, string, number];
+
+export const SEARCH_INDEX: SearchRow[] = ${JSON.stringify(index)};
+`,
+);
+console.log(
+  `검색 색인 ${index.length}건 / ${(JSON.stringify(index).length / 1024).toFixed(1)}KB`,
+);
+
 const bodyLen = services.map(
   (s) =>
     [s.outline, s.summary, s.eligibility, s.selectionCriteria, s.supportContent, s.applyMethod]

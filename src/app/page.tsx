@@ -4,6 +4,7 @@ import { TARGETS, LIFE_STAGES } from "@/lib/axes";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
+import SearchBox from "@/components/SearchBox";
 
 /** 조회수 상위 — 데이터가 이미 조회수 내림차순이라 앞에서 자르면 된다. */
 const popular = services.slice(0, 8);
@@ -79,7 +80,16 @@ export default function Home() {
             모았습니다. 사람들이 가장 많이 찾는 것부터 정리했습니다.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          {/* 히어로에도 검색을 둔다. 헤더 것보다 크게 — 처음 들어온 사람이
+              "이름은 아는데 어디서 찾지"에서 막히지 않게. */}
+          <div className="mt-6 max-w-lg">
+            <SearchBox
+              placeholder="예: 청년월세, 기초연금, 에너지바우처"
+              size="lg"
+            />
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-2">
             <Link
               href="/check"
               className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
