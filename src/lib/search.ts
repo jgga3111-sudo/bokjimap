@@ -50,15 +50,19 @@ const norm = (s: string) => s.toLowerCase().replace(/[\s·・.,()]/g, "");
 export type Hit = { id: string; name: string; place: string; dept: string };
 
 /**
- * 검색.
+ * 검색 — 걸리는 것을 **전부** 점수순으로 준다.
  *
  * 점수 규칙 — 이름이 질의로 **시작**하면 가장 높고, 이름에 들어 있으면 그다음,
  * 지역·부처에만 있으면 낮다. "청년"을 쳤을 때 "청년내일저축계좌"가
  * "서울시 청년정책과 소관 ○○"보다 위에 와야 하기 때문이다.
  *
  * 여러 낱말을 넣으면 **모두** 걸리는 것만 남긴다("서울 청년" → 둘 다 포함).
+ *
+ * 자르지 않고 다 주는 이유 — 검색창 드롭다운은 8건만 보여주지만 "청년"에는
+ * 실제로 60건이 걸린다. 나머지 52건으로 갈 길이 없으면 그 데이터는 없는 것과
+ * 같다. 전체 결과 페이지(/search)가 이걸 그대로 받아 쓴다.
  */
-export function search(query: string, limit = 8): Hit[] {
+export function searchAll(query: string): Hit[] {
   const raw = query.trim();
   if (raw.length === 0) return [];
 
@@ -104,7 +108,6 @@ export function search(query: string, limit = 8): Hit[] {
 
   return scored
     .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
     .map(({ row }) => ({
       id: idOf(row),
       name: row[1],
@@ -112,3 +115,7 @@ export function search(query: string, limit = 8): Hit[] {
       dept: row[3],
     }));
 }
+
+/** 검색창 드롭다운처럼 앞부분만 필요할 때. */
+export const search = (query: string, limit = 8): Hit[] =>
+  searchAll(query).slice(0, limit);

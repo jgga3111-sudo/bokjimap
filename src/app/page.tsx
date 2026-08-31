@@ -5,6 +5,7 @@ import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import SearchBox from "@/components/SearchBox";
+import RecentViews from "@/components/RecentViews";
 
 /**
  * 첫 화면.
@@ -116,6 +117,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* 본 게 있을 때만 나타난다. 처음 온 사람에게는 아예 안 보인다. */}
+      <RecentViews />
 
       <section>
         <div className="mb-3 flex items-end justify-between gap-3">

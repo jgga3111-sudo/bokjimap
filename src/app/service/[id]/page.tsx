@@ -9,6 +9,7 @@ import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
+import TrackView from "@/components/TrackView";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -163,6 +164,9 @@ export default async function ServiceDetail({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumb) }}
       />
+      {/* 본 것을 브라우저에 적어 둔다(화면에는 아무것도 안 그린다).
+          첫 화면의 "최근 본 지원"이 이걸 읽는다. */}
+      <TrackView id={s.id} name={s.name ?? id} place={placeLabel(s)} />
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈

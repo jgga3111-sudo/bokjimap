@@ -34,3 +34,20 @@ body {
   /* 한글은 단어 중간에서 끊기면 읽기 나쁘다 */
   word-break: keep-all;
 }
+
+/*
+  검색창의 브라우저 기본 지우기 버튼을 없앤다.
+
+  `type="search"`를 쓰면 크롬이 ✕를 하나 그려 넣는다. 우리도 ✕ 버튼을 직접
+  두고 있어서 검색창 오른쪽에 ✕가 **두 개** 나란히 떴다. 둘은 생김새도 동작도
+  달라(기본 버튼은 값이 있을 때만, 우리 것은 지운 뒤 커서를 남긴다) 그냥
+  고장 난 것처럼 보인다.
+
+  우리 버튼을 지우고 기본 것을 쓰지 않는 이유 — 기본 버튼은 사파리에서
+  안 나오고, 화면 낭독기에 이름이 붙지 않는다.
+*/
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
