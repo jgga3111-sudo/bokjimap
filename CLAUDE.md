@@ -125,17 +125,31 @@ Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
 
 ---
 
-## 6. 배포 (아직 미설정)
+## 6. 배포
 
-Vercel Fair Use Guidelines(2026-07-29) 원문에 따르면 **Hobby 플랜은 비상업적
-개인 용도 한정**이고, 상업적 사용 예시에 *"The inclusion of advertisements,
-including but not limited to online advertising platforms like Google AdSense"*
-가 명시돼 있다. 애드센스를 달 계획이면 Hobby는 규정 위반이다.
+**Vercel Pro 사용 (2026-08-31 사용자 확정).**
 
-선택지: Vercel Pro($20/월, 팀 단위라 두 사이트 커버) / Cloudflare Pages(무료,
-상업적 이용 허용, `@opennextjs/cloudflare` 어댑터 필요) / 현행 유지(위험 감수).
+사유: Vercel Fair Use Guidelines(2026-07-29)상 **Hobby 플랜은 비상업적 개인
+용도 한정**이고, 상업적 사용 예시에 *"The inclusion of advertisements, including
+but not limited to online advertising platforms like Google AdSense"*가 명시돼
+있다. 애드센스를 달 사이트는 Hobby로 운영할 수 없다.
 
-**결정 전까지 배포 규칙을 이 문서에 쓰지 않는다.** 정해지면 여기에 추가한다.
+Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복지맵이 함께 커버된다.
+프로젝트마다 따로 결제하지 않는다.
+
+### 배포 규칙
+- 배포는 `git push origin main`으로만 한다. Vercel CLI로 직접 배포하지 않는다.
+- **커밋 작성자는 반드시 `fccls <jgga3111@gmail.com>`.** 다른 이메일로 커밋하면
+  Vercel이 Blocked 처리해 배포가 멈춘다(러닝온에서 세 커밋이 막힌 전례).
+  이 저장소는 `git config --local`로 고정해 두었다. 전역 설정은 건드리지 않는다.
+- push 후 "배포 완료"라고 말하기 전에 **실제 사이트에서 반영 여부를 확인**한다.
+  커스텀 도메인 연결 후에는 `curl -sL`로 커스텀 도메인을 대상으로 확인한다
+  (리다이렉트를 안 따라가면 껍데기만 보고 오판한다).
+
+### 미완료
+- [ ] Vercel Pro 업그레이드 (사용자가 대시보드에서 직접 결제)
+- [ ] Vercel 프로젝트 생성 및 GitHub 연결
+- [ ] `bokjimap.co.kr` 도메인 연결 (가비아 네임서버 설정이 먼저 필요)
 
 ---
 

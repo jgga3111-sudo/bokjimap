@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  본문 글꼴은 웹폰트를 받지 않고 OS 기본 한글 글꼴을 쓴다. 복지 정보를 찾는
+  사람은 연령대가 넓고 모바일 데이터 환경도 제각각이라, 글꼴 다운로드로 첫
+  화면을 늦추지 않는 편이 낫다.
 
+  다크 모드는 아직 넣지 않는다. 색을 두 벌 유지하려면 모든 화면에서 대비를
+  검증해야 하는데, 지금은 검증할 화면 자체가 없다. 나중에 한 번에 넣는다.
+*/
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans:
+    "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
+    system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  /* 한글은 라틴 문자보다 자간이 빽빽해 보여 살짝 벌린다 */
+  letter-spacing: -0.01em;
+  word-break: keep-all;
 }
