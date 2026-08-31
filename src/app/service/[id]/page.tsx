@@ -116,14 +116,28 @@ export default async function ServiceDetail({
     ...s.lifeStages.map((t) => lifeStageBySlug(t)),
   ].filter(Boolean);
 
+  /*
+    관련 서비스를 "대상이 겹치면 조회수 순"으로만 뽑으면, 600개 페이지가 전부
+    같은 상위 5건(청년내일저축계좌·청년월세…)을 가리킨다. 내부 링크가 한곳으로
+    몰려 나머지 페이지로 가는 길이 생기지 않는다.
+    같은 지역을 가장 무겁게 치고, 그다음 대상·생애주기가 겹치는 정도로 매긴다.
+  */
   const related = services
-    .filter(
-      (o) =>
-        o.id !== s.id &&
-        (o.targets.some((t) => s.targets.includes(t)) ||
-          o.lifeStages.some((t) => s.lifeStages.includes(t))),
-    )
-    .slice(0, 5);
+    .filter((o) => o.id !== s.id)
+    .map((o) => {
+      const sameRegion = o.sidoName && o.sidoName === s.sidoName ? 3 : 0;
+      const sharedTargets = o.targets.filter((t) =>
+        s.targets.includes(t),
+      ).length;
+      const sharedStages = o.lifeStages.filter((t) =>
+        s.lifeStages.includes(t),
+      ).length;
+      return { o, score: sameRegion + sharedTargets + sharedStages };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.o.views - a.o.views)
+    .slice(0, 5)
+    .map((x) => x.o);
 
   return (
     <article className="space-y-8">

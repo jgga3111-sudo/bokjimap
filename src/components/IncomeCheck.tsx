@@ -85,6 +85,12 @@ export default function IncomeCheck({
             (주민등록등본상 함께 사는 가족)
           </span>
         </label>
+        {/*
+          8인 이상을 "7+" 한 칸으로 뭉뚱그리면 안 된다. 8인 가구를 7인으로
+          계산하면 기준 중위소득이 99만원 낮게 잡히고, 그만큼 내 비율이 높게
+          나와 **대상인데 아니라고 판정된다.** medianIncome()은 고시 규칙으로
+          8인 이상을 정확히 계산하므로, 8인부터는 증감 버튼으로 그대로 넘긴다.
+        */}
         <div className="mt-2 flex flex-wrap gap-1.5">
           {[1, 2, 3, 4, 5, 6, 7].map((n) => (
             <button
@@ -98,10 +104,46 @@ export default function IncomeCheck({
                   : "border-line bg-white text-slate-600 hover:border-brand hover:text-brand"
               }`}
             >
-              {n === 7 ? "7+" : n}인
+              {n}인
             </button>
           ))}
+          <button
+            type="button"
+            onClick={() => setHousehold((h) => Math.max(8, h + 1))}
+            aria-pressed={household >= 8}
+            className={`h-10 rounded-lg border px-3 text-sm font-medium transition ${
+              household >= 8
+                ? "border-brand bg-brand text-white"
+                : "border-line bg-white text-slate-600 hover:border-brand hover:text-brand"
+            }`}
+          >
+            8인 이상
+          </button>
         </div>
+
+        {household >= 8 && (
+          <div className="mt-2 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setHousehold((h) => Math.max(1, h - 1))}
+              aria-label="가구원 수 줄이기"
+              className="h-9 w-9 rounded-lg border border-line text-lg leading-none text-slate-600 hover:border-brand hover:text-brand"
+            >
+              −
+            </button>
+            <span className="min-w-14 text-center text-sm font-bold">
+              {household}인
+            </span>
+            <button
+              type="button"
+              onClick={() => setHousehold((h) => Math.min(20, h + 1))}
+              aria-label="가구원 수 늘리기"
+              className="h-9 w-9 rounded-lg border border-line text-lg leading-none text-slate-600 hover:border-brand hover:text-brand"
+            >
+              +
+            </button>
+          </div>
+        )}
 
         <p className="mt-3 rounded-lg bg-brand-soft px-3 py-2 text-sm text-slate-700">
           {household}인 가구 {BASE_YEAR}년 기준 중위소득{" "}

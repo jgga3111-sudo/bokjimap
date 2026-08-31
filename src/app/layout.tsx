@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
+  alternates: { canonical: "/" },
+  /* Bing 웹마스터도구 소유 확인. GSC 계정을 연동(Import)하면 구글 계정 권한을
+     넘겨야 해서 메타태그 방식으로 했다. */
+  verification: {
+    other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
@@ -18,10 +24,14 @@ export const metadata: Metadata = {
     url: SITE.url,
   },
   /*
-    서비스 데이터가 아직 0건이다. 빈 사이트가 색인되면 "가치 없는 콘텐츠"로
-    남아 애드센스 심사에도 불리하다. 데이터를 채운 뒤 이 줄을 지운다.
+    상세 본문(지원대상·선정기준·지원내용)을 아직 못 받았다. 요약문만 있는
+    600개 페이지가 색인되면 러닝온 /courses의 재현이 되고, 애드센스 심사에도
+    그대로 남는다(docs/02). 상세를 채운 뒤 이 줄을 지운다.
+
+    nofollow는 뺐다 — 내부 링크는 따라가게 두어야 색인 해제 시점에 구조가
+    이미 파악돼 있다.
   */
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

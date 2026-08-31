@@ -14,7 +14,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const t = targetBySlug(slug);
   if (!t) return {};
-  return { title: `${t.label} 복지·지원금`, description: t.blurb };
+  return {
+    title: `${t.label} 복지·지원금`,
+    description: t.blurb,
+    alternates: { canonical: `/target/${t.slug}` },
+  };
 }
 
 export default async function TargetPage({

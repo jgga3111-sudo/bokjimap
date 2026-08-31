@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE, today } from "@/lib/site";
 import { SIDO_LIST } from "@/lib/regions";
-import { TARGETS, LIFE_STAGES } from "@/lib/axes";
+import { TARGETS, LIFE_STAGES, MIN_SERVICES } from "@/lib/axes";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable } from "@/types/welfare";
 
@@ -44,7 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  /* 허브는 실제로 항목이 있는 것만 올린다. 빈 페이지는 저품질 신호다. */
+  /* 허브는 항목이 MIN_SERVICES개 이상인 것만 올린다. 한두 줄짜리 목록
+     페이지를 수백 개 찍어내면 저품질 페이지 양산이 된다(docs/02). */
   const hub = <T extends { slug: string }>(
     base: string,
     items: readonly T[],
@@ -57,17 +58,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }));
 
+  const atLeast = (list: unknown[]) => list.length >= MIN_SERVICES;
+
   return [
     ...staticPages,
     ...servicePages,
     ...hub("/region", SIDO_LIST, (s) =>
-      services.some((v) => v.sidoName === s.fullName),
+      atLeast(services.filter((v) => v.sidoName === s.fullName)),
     ),
     ...hub("/target", TARGETS, (t) =>
-      services.some((v) => v.targets.includes(t.slug)),
+      atLeast(services.filter((v) => v.targets.includes(t.slug))),
     ),
     ...hub("/life", LIFE_STAGES, (t) =>
-      services.some((v) => v.lifeStages.includes(t.slug)),
+      atLeast(services.filter((v) => v.lifeStages.includes(t.slug))),
     ),
   ];
 }
