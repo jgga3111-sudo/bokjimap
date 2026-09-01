@@ -16,7 +16,7 @@ export const SITE = {
   contactHost: "gmail.com",
 
   /** 약관·방침의 시행일. 내용을 고치면 이 날짜도 같이 올린다. */
-  policyEffectiveDate: "2026-08-31",
+  policyEffectiveDate: "2026-09-01",
 } as const;
 
 export const CONTACT_EMAIL = `${SITE.contactUser}@${SITE.contactHost}`;

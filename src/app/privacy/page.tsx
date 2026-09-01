@@ -20,9 +20,10 @@ export default function PrivacyPage() {
     >
       <DocNote tone="brand" title="한 줄 요약">
         복지맵은 회원가입이 없고, 이름·연락처 같은 개인정보를 직접 수집하지
-        않습니다. 자가진단에 입력한 소득과 가구원 수는{" "}
-        <strong>서버로 전송되지 않고 브라우저에서만 계산</strong>되며 저장되지도
-        않습니다.
+        않습니다. 자가진단에 입력한{" "}
+        <strong>소득 금액은 어디에도 저장하지 않습니다.</strong> 계산 결과와
+        최근 본 지원만 <strong>이용자 본인의 브라우저에</strong> 남으며,
+        운영자의 서버로는 전송되지 않습니다.
       </DocNote>
 
       <DocSection no={1} title="수집하지 않는 개인정보">
@@ -32,15 +33,40 @@ export default function PrivacyPage() {
         </p>
       </DocSection>
 
-      <DocSection no={2} title="자가진단에 입력한 정보">
+      <DocSection no={2} title="브라우저에 저장되는 정보">
         <p>
           <Link href="/check" className="text-brand underline">
             자격 자가진단
           </Link>
           에 입력하는 가구원 수와 소득(또는 건강보험료)은{" "}
-          <strong>이용자의 브라우저 안에서만 계산</strong>됩니다. 이 값은
-          운영자의 서버로 전송되지 않고, 저장되거나 제3자에게 제공되지 않으며,
-          페이지를 벗어나면 사라집니다.
+          <strong>이용자의 브라우저 안에서만 계산</strong>됩니다. 입력한 값은
+          운영자의 서버로 전송되지 않습니다.
+        </p>
+        <p>
+          이용 편의를 위해 다음 두 가지가 이용자 본인의 브라우저 저장소
+          (localStorage)에 남습니다. 이 값들은{" "}
+          <strong>이용자의 기기를 벗어나지 않으며</strong>, 운영자에게
+          전송되지도, 운영자가 열람하지도 않습니다.
+        </p>
+        <DocList
+          items={[
+            <>
+              <strong>자가진단 결과</strong> — 가구원 수, 기준 중위소득 대비
+              비율(%), 저장한 날짜. 다른 사업 페이지에서 &ldquo;이 사업 기준에
+              해당하는지&rdquo;를 바로 견주어 보는 데 씁니다.{" "}
+              <strong>입력한 소득 금액 자체는 저장하지 않습니다.</strong>
+            </>,
+            <>
+              <strong>최근 본 지원</strong> — 최근에 연 서비스 6건의 이름과
+              지역. 첫 화면에서 다시 찾아가기 위한 것입니다.
+            </>,
+          ]}
+        />
+        <p>
+          두 가지 모두 이용자가 직접 지울 수 있습니다. 자가진단 결과는 사업
+          페이지의 <strong>&ldquo;내 결과 지우기&rdquo;</strong>, 최근 본 지원은
+          첫 화면의 <strong>&ldquo;지우기&rdquo;</strong>를 누르면 즉시
+          삭제됩니다. 브라우저의 사이트 데이터 삭제로도 없어집니다.
         </p>
       </DocSection>
 
@@ -64,8 +90,12 @@ export default function PrivacyPage() {
 
       <DocSection no={4} title="쿠키">
         <p>
-          <strong>{SITE.policyEffectiveDate} 현재 사이트는 이용자 분석 도구나
-          광고를 사용하지 않으며, 별도의 쿠키를 심지 않습니다.</strong>
+          <strong>
+            {SITE.policyEffectiveDate} 현재 사이트는 이용자 분석 도구나 광고를
+            사용하지 않으며, 쿠키를 심지 않습니다.
+          </strong>{" "}
+          제2조의 브라우저 저장소는 쿠키와 달리 서버로 전송되지 않으며, 이용자를
+          추적하는 데 쓰이지 않습니다.
         </p>
         <p>
           다만 운영 비용 충당을 위해 향후 Google AdSense 광고를 도입할 예정이며,
@@ -122,9 +152,7 @@ export default function PrivacyPage() {
       </DocSection>
 
       <DocSection no={6} title="처리 위탁">
-        <p>
-          사이트 운영을 위해 다음 업무를 위탁하고 있습니다.
-        </p>
+        <p>사이트 운영을 위해 다음 업무를 위탁하고 있습니다.</p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-sm">
             <thead>
@@ -142,9 +170,7 @@ export default function PrivacyPage() {
               </tr>
               <tr className="border-b border-line">
                 <td className="px-3 py-2.5">가비아</td>
-                <td className="px-3 py-2.5 text-slate-600">
-                  도메인 등록·관리
-                </td>
+                <td className="px-3 py-2.5 text-slate-600">도메인 등록·관리</td>
               </tr>
             </tbody>
           </table>
