@@ -7,7 +7,7 @@ import { BASE_YEAR, HEALTH_INSURANCE } from "@/lib/midIncome";
 export const metadata: Metadata = {
   title: "데이터 출처",
   description:
-    "복지맵이 쓰는 데이터의 출처와 이용 조건, 갱신 주기, 그리고 한계를 밝힙니다. 복지서비스 정보는 공공데이터포털, 기준 중위소득은 보건복지부 고시를 씁니다.",
+    "복지클릭이 쓰는 데이터의 출처와 이용 조건, 갱신 주기, 그리고 한계를 밝힙니다. 복지서비스 정보는 공공데이터포털, 기준 중위소득은 보건복지부 고시를 씁니다.",
   alternates: { canonical: "/source" },
 };
 
@@ -60,7 +60,7 @@ export default function SourcePage() {
   return (
     <DocPage
       title="데이터 출처"
-      lead="복지맵의 모든 수치는 정부가 공개한 자료에서 왔습니다. 어디서 무엇을 가져왔는지, 그 데이터가 무엇을 못 하는지까지 적습니다."
+      lead="복지클릭의 모든 수치는 정부가 공개한 자료에서 왔습니다. 어디서 무엇을 가져왔는지, 그 데이터가 무엇을 못 하는지까지 적습니다."
       updated={`복지 서비스 데이터 최종 수집일 ${SERVICES_UPDATED}`}
     >
       <DocSection title="출처 목록">
@@ -167,7 +167,7 @@ export default function SourcePage() {
         </p>
         <p>
           그 자료를 모으고 분류하고 배치한 결과물, 그리고 이 사이트의 문장과
-          디자인은 복지맵에 있습니다. 자세한 내용은{" "}
+          디자인은 복지클릭에 있습니다. 자세한 내용은{" "}
           <Link href="/terms" className="text-brand underline">
             이용약관
           </Link>

@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "개인정보처리방침",
   description:
-    "복지맵은 회원가입을 받지 않고 이용자의 개인정보를 직접 수집하지 않습니다. 접속 기록과 쿠키가 어떻게 처리되는지 밝힙니다.",
+    "복지클릭은 회원가입을 받지 않고 이용자의 개인정보를 직접 수집하지 않습니다. 접속 기록과 쿠키가 어떻게 처리되는지 밝힙니다.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
       updated={`시행일 ${SITE.policyEffectiveDate}`}
     >
       <DocNote tone="brand" title="한 줄 요약">
-        복지맵은 회원가입이 없고, 이름·연락처 같은 개인정보를 직접 수집하지
+        복지클릭은 회원가입이 없고, 이름·연락처 같은 개인정보를 직접 수집하지
         않습니다. 자가진단에 입력한{" "}
         <strong>소득 금액은 어디에도 저장하지 않습니다.</strong> 계산 결과와
         최근 본 지원만 <strong>이용자 본인의 브라우저에</strong> 남으며,

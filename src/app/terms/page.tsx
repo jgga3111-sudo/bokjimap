@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "이용약관",
   description:
-    "복지맵 서비스 이용약관입니다. 제공하는 정보의 성격과 한계, 저작권, 책임의 범위를 정합니다.",
+    "복지클릭 서비스 이용약관입니다. 제공하는 정보의 성격과 한계, 저작권, 책임의 범위를 정합니다.",
   alternates: { canonical: "/terms" },
 };
 

@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "문의·오류 신고",
   description:
-    "복지맵의 잘못된 정보를 신고하거나 문의하는 방법입니다. 개별 복지 자격 상담은 보건복지상담센터 129를 이용해 주세요.",
+    "복지클릭의 잘못된 정보를 신고하거나 문의하는 방법입니다. 개별 복지 자격 상담은 보건복지상담센터 129를 이용해 주세요.",
   alternates: { canonical: "/contact" },
 };
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
       <DocSection title="이렇게 적어 주시면 빠릅니다">
         <div className="rounded-xl border border-line bg-slate-50 p-4 font-mono text-xs leading-relaxed whitespace-pre-line text-slate-700">
-          {`페이지 주소: https://bokjimap.co.kr/service/WLF00000060
+          {`페이지 주소: https://bokjiclick.co.kr/service/WLF00000060
 어느 부분: "지원 내용" 항목의 금액
 어떻게 다른가: 월 10만원으로 적혀 있으나 2026년부터 12만원으로 인상됨
 근거(있으면): 보건복지부 2026년 사업안내 32쪽`}

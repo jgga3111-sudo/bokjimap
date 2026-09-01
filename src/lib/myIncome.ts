@@ -20,7 +20,7 @@ export type MyIncome = {
   savedOn: string;
 };
 
-const KEY = "bokjimap:income";
+const KEY = "bokjiclick:income";
 
 let cache: MyIncome | null | undefined;
 const listeners = new Set<() => void>();

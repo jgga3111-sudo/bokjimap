@@ -60,7 +60,7 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="mb-8">
           <p className="text-xl font-bold">
-            복지<span className="text-brand">MAP</span>
+            복지<span className="text-brand">클릭</span>
           </p>
           <p className="mt-2 text-sm text-muted">{SITE.description}</p>
         </div>
@@ -93,7 +93,7 @@ export default function SiteFooter() {
             <MailLink className="underline hover:text-brand" />
           </p>
           <p>
-            복지MAP은 공공데이터포털의 복지서비스 정보를 정리해 보여주는 민간
+            복지클릭은 공공데이터포털의 복지서비스 정보를 정리해 보여주는 민간
             사이트입니다. 정부·지자체 공식 기관이 아닙니다.
           </p>
           <p>
@@ -101,7 +101,7 @@ export default function SiteFooter() {
             확인하세요.
           </p>
           {/*
-            저작권 표시를 정확히 적는다. 그냥 "© 복지맵"이라고만 두면 정부
+            저작권 표시를 정확히 적는다. 그냥 "© 복지클릭"이라고만 두면 정부
             원자료까지 우리 것이라고 주장하는 것처럼 읽힌다. 실제로는 자료를
             모으고 분류하고 배치한 결과물과 사이트의 문장·디자인만 우리 것이다
             (데이터 출처 페이지에 같은 취지로 적어 두었다).

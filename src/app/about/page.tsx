@@ -10,7 +10,7 @@ import { BASE_YEAR } from "@/lib/midIncome";
 export const metadata: Metadata = {
   title: "사이트 소개",
   description:
-    "복지맵은 중앙부처와 전국 시·군·구에 흩어진 복지 서비스를 공공데이터로 모아 정리하는 사이트입니다. 무엇을 하고 무엇을 하지 않는지 밝힙니다.",
+    "복지클릭은 중앙부처와 전국 시·군·구에 흩어진 복지 서비스를 공공데이터로 모아 정리하는 사이트입니다. 무엇을 하고 무엇을 하지 않는지 밝힙니다.",
   alternates: { canonical: "/about" },
 };
 
@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <DocPage
       title="사이트 소개"
-      lead="복지 정보는 정부 부처와 243개 지방자치단체에 따로따로 있습니다. 복지맵은 그걸 한곳에 모아, 내가 받을 수 있는 것부터 보이게 만듭니다."
+      lead="복지 정보는 정부 부처와 243개 지방자치단체에 따로따로 있습니다. 복지클릭은 그걸 한곳에 모아, 내가 받을 수 있는 것부터 보이게 만듭니다."
     >
       <DocSection title="왜 만들었나">
         <p>
@@ -31,7 +31,7 @@ export default function AboutPage() {
         </p>
         <p>
           정작 공공데이터포털에는 중앙부처와 지자체의 복지 서비스가 모두 공개돼
-          있습니다. 흩어져 있을 뿐 없는 정보가 아닙니다. 복지맵은 그 데이터를
+          있습니다. 흩어져 있을 뿐 없는 정보가 아닙니다. 복지클릭은 그 데이터를
           받아 사람이 읽을 수 있는 형태로 정리합니다.
         </p>
       </DocSection>
@@ -67,7 +67,7 @@ export default function AboutPage() {
       </DocSection>
 
       <DocSection title="무엇을 하지 않나">
-        <DocNote tone="amber" title="복지맵은 정부·지자체 공식 기관이 아닙니다">
+        <DocNote tone="amber" title="복지클릭은 정부·지자체 공식 기관이 아닙니다">
           공공데이터를 정리해 보여주는 민간 사이트입니다. 신청 접수나 심사와는
           아무 관계가 없습니다.
         </DocNote>

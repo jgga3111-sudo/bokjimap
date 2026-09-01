@@ -13,7 +13,7 @@
 
 export type RecentItem = { id: string; name: string; place: string };
 
-const KEY = "bokjimap:recent";
+const KEY = "bokjiclick:recent";
 const MAX = 6;
 
 /* 빈 값은 **같은 배열**을 돌려줘야 한다. useSyncExternalStore는 스냅샷이

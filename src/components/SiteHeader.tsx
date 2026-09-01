@@ -31,9 +31,9 @@ export default function SiteHeader() {
           <Link
             href="/"
             className="shrink-0 text-lg font-bold sm:text-xl"
-            aria-label="복지맵 홈"
+            aria-label="복지클릭 홈"
           >
-            복지<span className="text-brand">MAP</span>
+            복지<span className="text-brand">클릭</span>
           </Link>
           {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 제한한다. 좁은 화면에서는
               남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다. */}

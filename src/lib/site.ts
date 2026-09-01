@@ -1,12 +1,12 @@
 /** 사이트 전역 상수. 도메인이 바뀌면 여기만 고친다. */
 export const SITE = {
-  name: "복지맵",
-  url: "https://bokjimap.co.kr",
+  name: "복지클릭",
+  url: "https://bokjiclick.co.kr",
   description:
     "전국 시·군·구 복지 서비스와 지원금을 지역별·대상별로 찾아보는 곳",
 
   /** 이용약관·개인정보처리방침에 쓰는 운영 주체 표기 */
-  operator: "복지맵 운영자 (개인)",
+  operator: "복지클릭 운영자 (개인)",
 
   /**
    * 문의·오류 신고 주소. 화면에는 `MailLink`로 조합해 띄운다

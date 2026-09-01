@@ -14,20 +14,26 @@ export const metadata: Metadata = {
   description: SITE.description,
   alternates: { canonical: "/" },
   /*
-    검색엔진 소유 확인 — 둘 다 메타태그 방식이다.
+    검색엔진 소유 확인 — 지금은 비어 있다.
 
-    구글은 URL 접두어 속성(https://bokjimap.co.kr)으로 등록했다. 도메인 속성은
-    가비아에 DNS TXT를 넣어야 하는데, www와 vercel.app을 이미 apex로 308
-    보내고 있어서 접두어 하나로 충분하다. 계정은 jgga1234567 쪽이다.
+    2026-09-01, 도메인을 bokjimap.co.kr → bokjiclick.co.kr로 바꾸면서 뺐다.
+    소유 확인 토큰은 **속성 하나에 하나씩** 발급된다. 옛 도메인용 값을 그대로
+    두면 확인이 되지도 않으면서 코드에는 남아, 다음에 보는 사람이 "확인이 돼
+    있다"고 잘못 읽는다. 지워 놓는 편이 정직하다.
 
-    빙은 GSC 계정을 연동(Import)하면 구글 계정 권한을 넘겨야 해서 메타태그로 했다.
+    다시 넣으려면:
+      1. 서치콘솔에서 URL 접두어 속성 https://bokjiclick.co.kr 추가
+         → HTML 태그 방식 선택 → content 값을 받는다. 계정은 jgga1234567.
+      2. 빙 웹마스터도구도 같은 방식으로 msvalidate.01 값을 받는다.
+         (GSC 연동(Import)은 구글 계정 권한을 넘겨야 해서 안 쓴다.)
+      3. 아래 주석을 풀고 두 값을 넣어 배포한 뒤, 각 도구에서 '확인'을 누른다.
+      4. 옛 속성(bokjimap.co.kr)은 지운다 — 그 도메인은 이제 우리 것이 아니다.
 
-    ⚠ 이 값을 지우면 소유 확인이 풀린다. 도메인이나 계정을 바꿀 때만 건드린다.
+    verification: {
+      google: "여기에 새 값",
+      other: { "msvalidate.01": "여기에 새 값" },
+    },
   */
-  verification: {
-    google: "xE6nEUGW4MWq9peHNikUemhdKxL1EAfsw5eFvEuDiBU",
-    other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
-  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
