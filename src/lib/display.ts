@@ -182,3 +182,23 @@ export function visiblePayTypes(types: readonly string[]): string[] {
   const meaningful = types.filter((t) => t !== "기타");
   return meaningful.length > 0 ? meaningful : [...types];
 }
+
+/**
+ * 조사 `으로`/`로`를 붙인다.
+ *
+ * 축 이름을 문장에 넣으면서 필요해졌다 — "현금으로 받는"은 맞지만
+ * "바우처으로 받는"은 틀린다. 받침이 없으면 `로`, 받침이 `ㄹ`이어도 `로`,
+ * 나머지는 `으로`다.
+ *
+ * 한글이 아닌 글자로 끝나면(영문·숫자) 판정할 수 없으므로 `로`로 둔다.
+ * 축 이름은 전부 한글이라 지금은 걸리지 않지만, 나중에 값이 늘 때
+ * 화면이 깨지지 않게 하는 쪽으로 떨어뜨린다.
+ */
+export function ro(word: string): string {
+  const last = word.at(-1);
+  if (!last) return word;
+  const code = last.charCodeAt(0) - 0xac00;
+  if (code < 0 || code > 11171) return `${word}로`;
+  const jong = code % 28;
+  return jong === 0 || jong === 8 ? `${word}로` : `${word}으로`;
+}

@@ -18,9 +18,13 @@ const NAV: Nav[] = [
   { href: "/check", label: "자가진단", accent: true },
   { href: "/service", label: "인기순" },
   { href: "/theme", label: "주제별" },
+  /* 혜택별은 주제별 바로 뒤에 둔다. "무엇이 급한가" 다음에 오는 질문이
+     "그래서 무엇을 받는가"라서, 지역·대상보다 이쪽이 먼저 눌린다. */
+  { href: "/benefit", label: "혜택별" },
   { href: "/region", label: "지역별" },
   { href: "/target", label: "대상별" },
   { href: "/life", label: "생애주기" },
+  { href: "/guide", label: "신청 안내" },
 ];
 
 export default function SiteHeader() {

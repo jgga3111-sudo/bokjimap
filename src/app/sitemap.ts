@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE, today } from "@/lib/site";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES, MIN_SERVICES } from "@/lib/axes";
+import { BENEFITS, servicesOf } from "@/lib/benefits";
+import { GUIDES } from "@/lib/guides";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable } from "@/types/welfare";
 
@@ -40,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/region", "weekly", 0.8, SERVICES_UPDATED],
       ["/target", "weekly", 0.8, SERVICES_UPDATED],
       ["/life", "weekly", 0.8, SERVICES_UPDATED],
+      ["/benefit", "weekly", 0.8, SERVICES_UPDATED],
+      ["/guide", "monthly", 0.8, SERVICES_UPDATED],
       ["/about", "monthly", 0.5, SITE.policyEffectiveDate],
       ["/source", "monthly", 0.5, SERVICES_UPDATED],
     ] as const
@@ -76,8 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const atLeast = (list: unknown[]) => list.length >= MIN_SERVICES;
 
+  /* 안내 글은 우리가 직접 쓴 것이라 lastmod가 데이터 갱신일과 무관하다.
+     글마다 실제로 손본 날을 쓴다. */
+  const guidePages: MetadataRoute.Sitemap = GUIDES.map((g) => ({
+    url: `${SITE.url}/guide/${g.slug}`,
+    lastModified: g.updated,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
+    ...guidePages,
     ...servicePages,
     ...hub("/region", SIDO_LIST, (s) =>
       atLeast(services.filter((v) => v.sidoName === s.fullName)),
@@ -91,5 +105,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hub("/life", LIFE_STAGES, (t) =>
       atLeast(services.filter((v) => v.lifeStages.includes(t.slug))),
     ),
+    ...hub("/benefit", BENEFITS, (b) => atLeast(servicesOf(services, b))),
   ];
 }

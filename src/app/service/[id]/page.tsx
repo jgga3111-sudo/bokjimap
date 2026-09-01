@@ -413,6 +413,36 @@ export default async function ServiceDetail({
         </Section>
       )}
 
+      {/*
+        안내 글로 가는 길. 상세 페이지는 사람이 "이걸 신청해야겠다"고 마음먹는
+        지점이라, 신청 방법·서류 안내가 필요해지는 순간이 정확히 여기다.
+        (덤으로, 글이 색인되려면 안쪽에서 걸리는 링크가 있어야 한다. 푸터
+        링크 하나로는 부족하다.)
+      */}
+      <aside className="rounded-xl border border-line bg-white px-4 py-3.5 text-sm leading-relaxed">
+        <p className="font-bold text-ink">복지 신청이 처음이라면</p>
+        <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-slate-600">
+          <li>
+            <Link href="/guide/apply" className="hover:text-brand hover:underline">
+              신청 방법 총정리 →
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guide/documents"
+              className="hover:text-brand hover:underline"
+            >
+              필요 서류 안내 →
+            </Link>
+          </li>
+          <li>
+            <Link href="/guide/terms" className="hover:text-brand hover:underline">
+              용어 풀이 →
+            </Link>
+          </li>
+        </ul>
+      </aside>
+
       <footer className="space-y-3 rounded-xl border border-line bg-slate-50 p-4 text-xs leading-relaxed text-slate-600">
         <p>
           이 내용은 공공데이터포털 &lsquo;복지서비스&rsquo; 데이터를 정리한

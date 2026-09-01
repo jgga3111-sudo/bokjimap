@@ -3,10 +3,15 @@ import { SITE } from "@/lib/site";
 import MailLink from "./MailLink";
 
 /**
- * 푸터 — 4분류(복지 찾기 / 자가진단 / 도움말 / 사이트).
+ * 푸터 — 4분류(복지 찾기 / 신청 안내 / 도움말 / 사이트).
  *
  * 아직 없는 페이지는 링크하지 않는다(`ready: false`). 404를 푸터에 깔면
  * 크롤러가 사이트 전체를 낮게 본다. 페이지를 만들 때 true로 바꾼다.
+ *
+ * 2026-09-01, 둘째 칸을 "자가진단"에서 "신청 안내"로 바꿨다. 안내 글 네 편이
+ * 생기면서 자가진단 칸에 계획만 있고 없던 두 줄이 실제 페이지가 됐다.
+ * 자가진단 링크는 도움말 칸으로 옮겼다 — 헤더에 이미 강조 칩으로 있어서
+ * 푸터에서까지 칸 하나를 차지할 이유가 없다.
  *
  * 칸마다 항목이 한둘뿐이면 분류가 잘못된 것이다. 없는 페이지를 걸러낸 뒤에도
  * 균형이 맞는지 보고 묶는다.
@@ -22,23 +27,26 @@ const COLUMNS: { title: string; items: Item[] }[] = [
       { href: "/region", label: "지역별 찾기", ready: true },
       { href: "/target", label: "대상별 찾기", ready: true },
       { href: "/life", label: "생애주기별 찾기", ready: true },
+      { href: "/benefit", label: "혜택 종류별 찾기", ready: true },
       /* 마감 임박 페이지는 만들지 않는다. 원본 enfcEndYmd 570건 중
          554건이 9999-12-31(종료일 없음)이고, 올해 안에 실제로 마감하는
          사업은 6건뿐이다. 데이터가 없는 기능이다. */
     ],
   },
   {
-    title: "자가진단",
+    title: "신청 안내",
     items: [
-      { href: "/check", label: "자격 자가진단", ready: true },
-      { href: "/check#median-table", label: "기준 중위소득 표", ready: true },
-      { href: "/guide/apply", label: "신청 방법 총정리", ready: false },
-      { href: "/guide/documents", label: "필요 서류 안내", ready: false },
+      { href: "/guide/apply", label: "신청 방법 총정리", ready: true },
+      { href: "/guide/documents", label: "필요 서류 안내", ready: true },
+      { href: "/guide/online", label: "온라인 신청 가능 지원", ready: true },
+      { href: "/guide/terms", label: "복지 용어 풀이", ready: true },
     ],
   },
   {
     title: "도움말",
     items: [
+      { href: "/check", label: "자격 자가진단", ready: true },
+      { href: "/check#median-table", label: "기준 중위소득 표", ready: true },
       { href: "/faq", label: "자주 묻는 질문", ready: true },
       { href: "/contact", label: "문의·오류 신고", ready: true },
     ],

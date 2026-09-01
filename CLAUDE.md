@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# CLAUDE.md — 복지맵(bokjimap) 프로젝트 가이드
+# CLAUDE.md — 복지클릭(bokjiclick) 프로젝트 가이드
 
 Claude Code가 이 프로젝트에서 작업할 때 세션 시작 시 자동으로 읽는 지침이다.
 Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
@@ -12,13 +12,14 @@ Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
 이 컴퓨터에는 **같은 사람이 만든 Next.js 사이트가 두 개** 있다. 스택이 거의
 같아서 경로·설정·계정을 헷갈리기 쉽다. 아래 표를 먼저 확인하고 작업한다.
 
-| 항목 | 러닝온 (건드리지 말 것) | 복지맵 (이 프로젝트) |
+| 항목 | 러닝온 (건드리지 말 것) | 복지클릭 (이 프로젝트) |
 |------|------------------------|---------------------|
 | 폴더 | `C:\Users\jgga_\클로드코드\marathon-hub` | `C:\Users\jgga_\클로드코드\welfare-hub` |
-| 도메인 | `runningon.co.kr` | `bokjimap.co.kr` |
+| 도메인 | `runningon.co.kr` | `bokjiclick.co.kr` |
 | GitHub | `jgga3111-sudo/runningon` | `jgga3111-sudo/bokjimap` |
 | dev 포트 | 3000 | **3001** |
 | 주제 | 마라톤·러닝 대회 | 복지·지원금 정보 |
+| 계정 | — | 깃·버셀 `jgga3111`, 서치콘솔·빙·사이트 연락처 `jgga1234567` |
 | 인스타 | `@runningon_office` | 아직 없음 |
 | Supabase | 사용 중 | **사용 안 함** |
 | 쿠팡 파트너스 | 사용 중(러닝화) | 아직 없음 |
@@ -37,12 +38,19 @@ Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
 
 ## 1. 프로젝트 개요
 
-- **이름:** 복지맵 (bokjimap) — 전국 복지·지원금 정보 사이트
-- **목표 주소:** https://bokjimap.co.kr (2026-08-31 도메인 구매 완료, 미연결)
+- **이름:** 복지클릭 (bokjiclick) — 전국 복지·지원금 정보 사이트
+- **주소:** https://bokjiclick.co.kr (2026-09-01 연결 완료)
+
+  ⚠ 처음 이름은 **복지맵**이었다. 배포 직후 `bokjimap.com`이 같은 주제로
+  이미 운영 중(2026-02 개설, 애드센스 게재)인 것을 발견해 이름을 바꿨다.
+  가비아 **도메인 이름 변경**으로 추가 비용 없이 옮겼다(등록 후 7일 이내만
+  가능한 기능이라 운이 좋았다). 교훈은 docs/03-경쟁.md 6절에 적어 두었다.
+  코드·문서에 `bokjimap`이 남아 있으면 잔재이니 고친다.
 - **기술 스택:** Next.js 16.3.3 (App Router, Turbopack) · React 19.2.8 ·
   TypeScript · Tailwind CSS 4
-- **저장소:** GitHub `jgga3111-sudo/bokjimap` (main 브랜치)
-- **호스팅:** 미정 (6절 참조)
+- **저장소:** GitHub `jgga3111-sudo/bokjimap` (main 브랜치 — 저장소 이름은
+  도메인을 바꾼 뒤에도 그대로 두었다. 리네임하면 Vercel 연결이 끊긴다)
+- **호스팅:** Vercel (프로젝트 `bokjimap`)
 
 ### 명령어
 
@@ -146,10 +154,15 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
   커스텀 도메인 연결 후에는 `curl -sL`로 커스텀 도메인을 대상으로 확인한다
   (리다이렉트를 안 따라가면 껍데기만 보고 오판한다).
 
-### 미완료
-- [ ] Vercel Pro 업그레이드 (사용자가 대시보드에서 직접 결제)
-- [ ] Vercel 프로젝트 생성 및 GitHub 연결
-- [ ] `bokjimap.co.kr` 도메인 연결 (가비아 네임서버 설정이 먼저 필요)
+### 완료 (2026-09-01)
+- [x] Vercel 프로젝트 생성 및 GitHub 연결
+- [x] `bokjiclick.co.kr` 연결 — apex가 Production, `www`는 apex로 308
+- [x] 구글 서치콘솔·빙 웹마스터 등록 및 사이트맵 제출
+
+### 남은 일
+- [ ] 중앙부처 잔여 361건 수집 (`fetch-daily.bat`, 하루 100건 한도)
+- [ ] 수집 완료 후 `MIN_BODY_LENGTH` 기준선 재확인 (types/welfare.ts 주석 참고)
+- [ ] 애드센스 신청 — **서치콘솔에 실제 색인 페이지가 잡힌 뒤에** 한다
 
 ---
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
+import { BENEFITS } from "@/lib/benefits";
+import { GUIDES } from "@/lib/guides";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
@@ -19,10 +21,15 @@ import RecentViews from "@/components/RecentViews";
  *        (검색은 헤더 것 하나만 쓴다. 아래 히어로 주석 참고.)
  *   ② 자가진단 — 이 사이트의 핵심 기능. 여기에만 버튼을 둔다.
  *   ③ 많이 찾는 지원 — 바로 볼 것.
- *   ④ 찾아보기 — 대상·생애주기·지역을 한 상자에 묶는다.
+ *   ④ 찾아보기 — 주제·혜택·대상·생애주기·지역을 한 상자에 묶는다.
+ *   ⑤ 안내 글 — 신청에서 막힐 때 읽을 것.
  *
  * 처음 온 사람이 위에서 아래로 읽으면 "무엇 → 나는 대상인가 → 무엇이 있나
- * → 더 찾아보기" 순서가 된다.
+ * → 더 찾아보기 → 어떻게 신청하나" 순서가 된다.
+ *
+ * ⑤를 나중에 더했다. 안내 글을 푸터에만 걸어 두면 아무도 읽지 않는다. 그리고
+ * 목록만 깔린 첫 화면은 "공공데이터를 옮겨 놓은 곳"으로 읽힌다 — 실제로 경쟁
+ * 사이트를 열어 보고 나서 판단한 것이다(docs/03).
  */
 const popular = services.slice(0, 8);
 
@@ -148,6 +155,14 @@ export default function Home() {
           {/* 주제를 맨 위에 둔다. 중앙부처 사업(조회수 상위 대부분)이
               걸리는 유일한 축이라 여기가 가장 많이 눌린다. */}
           <BrowseRow label="주제" base="/theme" items={THEMES} cols={GRID} />
+          {/* 혜택 종류 — "무엇을 받는가". 주제(무엇이 급한가) 다음에 오는
+              질문이라 바로 아래 둔다. */}
+          <BrowseRow
+            label="혜택 종류"
+            base="/benefit"
+            items={BENEFITS}
+            cols={GRID}
+          />
           <BrowseRow label="대상" base="/target" items={TARGETS} cols={GRID} />
           <BrowseRow
             label="생애주기"
@@ -162,6 +177,45 @@ export default function Home() {
             cols="grid grid-cols-3 gap-1.5 sm:grid-cols-6"
           />
         </div>
+      </section>
+
+      {/*
+        안내 글. 목록만 있는 사이트는 "공공데이터를 옮겨 놓은 곳"으로 읽힌다.
+        첫 화면에서 한 번은 보이게 둔다 — 푸터에만 있으면 아무도 안 읽는다.
+      */}
+      <section>
+        <div className="mb-3 flex items-end justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-bold">신청에서 막힌다면</h2>
+            <p className="mt-0.5 text-xs text-muted">
+              수록 {services.length.toLocaleString()}건을 직접 집계해
+              정리했습니다
+            </p>
+          </div>
+          <Link
+            href="/guide"
+            className="shrink-0 text-sm text-muted hover:text-brand"
+          >
+            전체 보기 →
+          </Link>
+        </div>
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {GUIDES.map((g) => (
+            <li key={g.slug}>
+              <Link
+                href={`/guide/${g.slug}`}
+                className="group block h-full rounded-xl border border-line bg-white p-4 transition hover:border-brand"
+              >
+                <p className="font-semibold text-ink group-hover:text-brand">
+                  {g.title}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-muted">
+                  {g.summary}
+                </p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );
