@@ -22,12 +22,20 @@ export const metadata: Metadata = {
     "확인이 돼 있다"고 잘못 읽는다.
 
     그리고 새 속성으로 다시 받아 넣었다 — URL 접두어 https://bokjiclick.co.kr,
-    계정 jgga1234567. 빙(msvalidate.01)은 아직 없다.
+    계정 jgga1234567.
+
+    빙은 값이 옛것과 같다. **빙의 msvalidate.01은 사이트가 아니라 계정에
+    하나씩** 붙기 때문이다(구글은 속성마다 다르다). 그래서 도메인을 바꿔도
+    같은 값을 그대로 쓴다. 사이트를 추가할 때 빙이 보여주는 값을 그대로
+    확인했고 실제로 같았다.
+
+    빙은 GSC 연동(Import)을 권하지만 쓰지 않는다 — 구글 계정 권한을 넘겨야 한다.
 
     ⚠ 이 값을 지우면 소유 확인이 풀린다. 도메인이나 계정을 바꿀 때만 건드린다.
   */
   verification: {
     google: "i_oYjG7mn5uP-1z-c8o51cLjfsP4oDPo49Lz04kKyBo",
+    other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
   },
   openGraph: {
     type: "website",
