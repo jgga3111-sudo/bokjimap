@@ -42,25 +42,36 @@ export default function SiteHeader() {
           </div>
         </div>
 
-        {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다. */}
-        <nav className="-mx-4 overflow-x-auto px-4 pb-2">
-          <ul className="flex gap-1.5 whitespace-nowrap">
-            {NAV.map((n) => (
-              <li key={n.href}>
-                <Link
-                  href={n.href}
-                  className={`inline-block rounded-full border px-3 py-1.5 text-sm transition ${
-                    n.accent
-                      ? "border-brand bg-brand-soft font-semibold text-brand"
-                      : "border-line text-slate-600 hover:border-brand hover:text-brand"
-                  }`}
-                >
-                  {n.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다.
+
+            오른쪽 끝을 흰색으로 흐린다. 칩 여섯 개가 375px에서 넘치는데
+            마지막 것이 화면 경계에 딱 잘려 있으면 잘린 건지 거기까지인 건지
+            알 수 없다. 흐림이 "옆으로 더 있다"를 말해 준다.
+            pointer-events-none이라 칩을 가리지 않는다. */}
+        <div className="relative">
+          <nav className="-mx-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <ul className="flex gap-1.5 whitespace-nowrap">
+              {NAV.map((n) => (
+                <li key={n.href}>
+                  <Link
+                    href={n.href}
+                    className={`inline-block rounded-full border px-3 py-1.5 text-sm transition ${
+                      n.accent
+                        ? "border-brand bg-brand-soft font-semibold text-brand"
+                        : "border-line text-slate-600 hover:border-brand hover:text-brand"
+                    }`}
+                  >
+                    {n.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent"
+          />
+        </div>
       </div>
     </header>
   );

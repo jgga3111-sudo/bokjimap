@@ -5,14 +5,14 @@
  * 목록에 없는 값이 오면 회색 기본 배지로 떨어뜨린다 — 화면이 깨지지 않게.
  */
 
-export type Tone = "blue" | "emerald" | "amber" | "violet" | "rose" | "slate";
+/*
+  배지 색은 두 개뿐이다. 늘리고 싶으면 먼저 "이 색이 없으면 못 읽는가"를
+  물어볼 것 — 색이 셋을 넘는 순간 목록 화면이 알록달록해진다.
+*/
+export type Tone = "blue" | "slate";
 
 const TONE_CLASS: Record<Tone, string> = {
   blue: "bg-blue-50 text-blue-700 ring-blue-600/15",
-  emerald: "bg-emerald-50 text-emerald-700 ring-emerald-600/15",
-  amber: "bg-amber-50 text-amber-800 ring-amber-600/15",
-  violet: "bg-violet-50 text-violet-700 ring-violet-600/15",
-  rose: "bg-rose-50 text-rose-700 ring-rose-600/15",
   slate: "bg-slate-100 text-slate-600 ring-slate-500/15",
 };
 
@@ -21,24 +21,39 @@ export const toneClass = (t: Tone) => TONE_CLASS[t];
 /**
  * 지급 형태(srvPvsnNm) 12종. 괄호 안 표기는 화면에서 걷어낸다
  * — "전자바우처(바우처)" → "바우처".
+ *
+ * 색은 **두 가지만** 쓴다.
+ *
+ * 처음엔 형태마다 색을 달리하고(파랑·보라·초록·호박) 이모지도 붙였다
+ * (💰🎫✂️📦🤝🏠🙋). 카드 한 장에 배지가 5~6개인데 그게 다 다른 색이면
+ * 어느 것이 중요한지 알려주는 게 아니라 그냥 알록달록해진다. 목록 화면에는
+ * 카드가 여덟 장 깔리니 화면 하나에 색 딱지가 마흔 개가 됐다.
+ *
+ * 정부24 서비스 상세를 같은 사업(청년월세)으로 열어 보면 배지가 하나다
+ * — "중앙부처". 색은 파랑 하나에 나머지는 회색이다.
+ *
+ * 그래서 읽는 사람이 실제로 가르고 싶어 하는 한 가지만 색으로 남겼다:
+ * **돈(또는 돈에 준하는 것)이 나오는가.** 나머지는 전부 회색이다.
+ * 융자는 갚아야 하는 돈이라 성격이 다르지만, 그건 색이 아니라
+ * "쉽게 말하면"의 문장이 설명한다(PAY_TYPE_HELP).
  */
-const PAY_TYPE: Record<string, { label: string; tone: Tone; icon: string }> = {
-  현금지급: { label: "현금", tone: "blue", icon: "💰" },
-  "현금대여(융자)": { label: "융자", tone: "blue", icon: "🏦" },
-  "전자바우처(바우처)": { label: "바우처", tone: "violet", icon: "🎫" },
-  실물바우처: { label: "실물바우처", tone: "violet", icon: "🎫" },
-  지역화폐: { label: "지역화폐", tone: "violet", icon: "🎫" },
-  감면: { label: "요금감면", tone: "emerald", icon: "✂️" },
-  현물지급: { label: "현물", tone: "amber", icon: "📦" },
-  현물대여: { label: "현물대여", tone: "amber", icon: "📦" },
-  "프로그램/서비스(서비스)": { label: "서비스", tone: "slate", icon: "🤝" },
-  시설입소: { label: "시설입소", tone: "slate", icon: "🏠" },
-  자원봉사: { label: "자원봉사", tone: "slate", icon: "🙋" },
-  기타: { label: "기타", tone: "slate", icon: "•" },
+const PAY_TYPE: Record<string, { label: string; tone: Tone }> = {
+  현금지급: { label: "현금", tone: "blue" },
+  "현금대여(융자)": { label: "융자", tone: "blue" },
+  "전자바우처(바우처)": { label: "바우처", tone: "blue" },
+  실물바우처: { label: "실물바우처", tone: "blue" },
+  지역화폐: { label: "지역화폐", tone: "blue" },
+  감면: { label: "요금감면", tone: "blue" },
+  현물지급: { label: "현물", tone: "slate" },
+  현물대여: { label: "현물대여", tone: "slate" },
+  "프로그램/서비스(서비스)": { label: "서비스", tone: "slate" },
+  시설입소: { label: "시설입소", tone: "slate" },
+  자원봉사: { label: "자원봉사", tone: "slate" },
+  기타: { label: "기타", tone: "slate" },
 };
 
 export const payType = (v: string) =>
-  PAY_TYPE[v] ?? { label: v, tone: "slate" as Tone, icon: "•" };
+  PAY_TYPE[v] ?? { label: v, tone: "slate" as Tone };
 
 /**
  * 지급 형태를 사람 말로 풀어 준다.

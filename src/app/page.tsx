@@ -4,7 +4,6 @@ import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
-import SearchBox from "@/components/SearchBox";
 import RecentViews from "@/components/RecentViews";
 
 /**
@@ -16,7 +15,8 @@ import RecentViews from "@/components/RecentViews";
  * 각각 제목을 달고 따로 서 있어 목차만 다섯 개처럼 보였다.
  *
  * 네 블록으로 줄였다.
- *   ① 히어로 — 무엇을 하는 곳인지 + 검색. **버튼 없음.**
+ *   ① 히어로 — 무엇을 하는 곳인지. **버튼도 검색창도 없다.**
+ *        (검색은 헤더 것 하나만 쓴다. 아래 히어로 주석 참고.)
  *   ② 자가진단 — 이 사이트의 핵심 기능. 여기에만 버튼을 둔다.
  *   ③ 많이 찾는 지원 — 바로 볼 것.
  *   ④ 찾아보기 — 대상·생애주기·지역을 한 상자에 묶는다.
@@ -25,6 +25,9 @@ import RecentViews from "@/components/RecentViews";
  * → 더 찾아보기" 순서가 된다.
  */
 const popular = services.slice(0, 8);
+
+/** 칸이 제각각인 줄바꿈 대신 격자로 세운다. */
+const GRID = "grid grid-cols-2 gap-1.5 sm:grid-cols-4";
 
 /** 찾아보기 상자 안의 한 줄. */
 function BrowseRow({
@@ -42,7 +45,10 @@ function BrowseRow({
     <div>
       <div className="mb-2 flex items-baseline justify-between gap-3">
         <h3 className="text-sm font-bold text-ink">{label}</h3>
-        <Link href={base} className="shrink-0 text-xs text-muted hover:text-brand">
+        <Link
+          href={base}
+          className="shrink-0 text-xs text-muted hover:text-brand"
+        >
           전체 보기 →
         </Link>
       </div>
@@ -80,18 +86,15 @@ export default function Home() {
             모았습니다. 사람들이 가장 많이 찾는 것부터 정리했습니다.
           </p>
 
-          {/* 히어로에도 검색을 둔다. 헤더 것보다 크게 — 처음 들어온 사람이
-              "이름은 아는데 어디서 찾지"에서 막히지 않게. */}
-          <div className="mt-6 max-w-lg">
-            <SearchBox
-              placeholder="예: 청년월세, 기초연금, 에너지바우처"
-              size="lg"
-            />
-          </div>
-
-          <p className="mt-4 text-xs text-muted">
-            수록 {services.length.toLocaleString()}건 · 전국{" "}
-            {SIDO_LIST.length}개 시·도 · {BASE_YEAR}년 기준
+          {/*
+            히어로에도 큰 검색창을 뒀었다. 375px 화면을 찍어 보니 헤더 검색과
+            히어로 검색이 **한 화면에 나란히** 보였다 — 같은 모양의 둥근 상자
+            두 개. 헤더 것은 sticky라 어느 페이지에서든 따라오고, 히어로 것은
+            조금만 내리면 사라진다. 남길 것을 고르면 헤더다.
+          */}
+          <p className="mt-5 text-xs text-muted">
+            수록 {services.length.toLocaleString()}건 · 전국 {SIDO_LIST.length}
+            개 시·도 · {BASE_YEAR}년 기준
           </p>
         </div>
       </section>
@@ -144,9 +147,14 @@ export default function Home() {
         <div className="space-y-5">
           {/* 주제를 맨 위에 둔다. 중앙부처 사업(조회수 상위 대부분)이
               걸리는 유일한 축이라 여기가 가장 많이 눌린다. */}
-          <BrowseRow label="주제" base="/theme" items={THEMES} />
-          <BrowseRow label="대상" base="/target" items={TARGETS} />
-          <BrowseRow label="생애주기" base="/life" items={LIFE_STAGES} />
+          <BrowseRow label="주제" base="/theme" items={THEMES} cols={GRID} />
+          <BrowseRow label="대상" base="/target" items={TARGETS} cols={GRID} />
+          <BrowseRow
+            label="생애주기"
+            base="/life"
+            items={LIFE_STAGES}
+            cols={GRID}
+          />
           <BrowseRow
             label="지역"
             base="/region"

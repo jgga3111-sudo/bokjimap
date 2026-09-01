@@ -48,21 +48,31 @@ function Prose({ text }: { text: string }) {
   );
 }
 
+/**
+ * 본문 한 절.
+ *
+ * 제목 앞에 이모지를 달았었다 — 👥 지원 대상, ✅ 선정 기준, 🎁 지원 내용,
+ * 📝 신청 방법, ☎️ 문의처, 📄 서식, ⚖️ 근거 법령. 일곱 개가 전부 다른 그림에
+ * 다른 색이라, 절을 구분해 주는 게 아니라 페이지를 알록달록하게 만들었다.
+ * 정부24 서비스 상세는 같은 자리에 **한 세트로 그린 파란 선 아이콘**을 쓴다.
+ * 우리는 아이콘 세트를 직접 그릴 형편이 아니니 아예 없앴다.
+ *
+ * 대신 제목 왼쪽에 브랜드색 세로 바를 둔다. 그림 일곱 종이 하던 일
+ * — "여기서 새 절이 시작한다" — 을 색 하나로 한다.
+ */
 function Section({
   id,
-  icon,
   title,
   children,
 }: {
   id: string;
-  icon: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <section id={id} className="scroll-mt-20">
       <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
-        <span aria-hidden>{icon}</span>
+        <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         {title}
       </h2>
       {children}
@@ -106,9 +116,7 @@ function PlainWords({ s }: { s: WelfareService }) {
 
   return (
     <section className="rounded-xl border border-line bg-slate-50/70 px-4 py-3.5">
-      <h2 className="flex items-center gap-1.5 text-sm font-bold text-ink">
-        <span aria-hidden>💬</span>쉽게 말하면
-      </h2>
+      <h2 className="text-sm font-bold text-ink">쉽게 말하면</h2>
       <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-700">
         {notes.map((n) => (
           <li key={n} className="flex gap-2">
@@ -222,21 +230,15 @@ export default async function ServiceDetail({
       </nav>
 
       <header>
+        {/* 배지는 카드와 같은 규칙 — 지급 형태와 온라인신청까지만.
+            주기는 바로 아래 "한눈에 보기" 표에 있으므로 여기서 뺀다. */}
         <div className="flex flex-wrap items-center gap-1.5">
-          {visiblePayTypes(s.payTypes).map((p) => {
-            const t = payType(p);
-            return (
-              <Badge key={p} tone={t.tone} icon={t.icon}>
-                {t.label}
-              </Badge>
-            );
-          })}
-          {s.cycle && <Badge tone="slate">{cycleLabel(s.cycle)}</Badge>}
-          {s.onlineApply && (
-            <Badge tone="emerald" icon="🌐">
-              온라인신청 가능
+          {visiblePayTypes(s.payTypes).map((p) => (
+            <Badge key={p} tone={payType(p).tone}>
+              {payType(p).label}
             </Badge>
-          )}
+          ))}
+          {s.onlineApply && <Badge>온라인신청 가능</Badge>}
         </div>
 
         <h1 className="mt-3 text-2xl leading-snug font-extrabold sm:text-3xl">
@@ -265,7 +267,8 @@ export default async function ServiceDetail({
       {/* 한눈에 보기 — 본문을 읽기 전에 형태부터 파악되게. */}
       <section>
         <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
-          <span aria-hidden>📌</span>한눈에 보기
+          <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
+          한눈에 보기
         </h2>
         <dl className="rounded-xl border border-line px-4 py-1">
           <Row
@@ -300,25 +303,25 @@ export default async function ServiceDetail({
       )}
 
       {s.eligibility && (
-        <Section id="target" icon="👥" title="지원 대상">
+        <Section id="target" title="지원 대상">
           <Prose text={s.eligibility} />
         </Section>
       )}
 
       {s.selectionCriteria && (
-        <Section id="criteria" icon="✅" title="선정 기준">
+        <Section id="criteria" title="선정 기준">
           <Prose text={s.selectionCriteria} />
         </Section>
       )}
 
       {s.supportContent && (
-        <Section id="benefit" icon="🎁" title="지원 내용">
+        <Section id="benefit" title="지원 내용">
           <Prose text={s.supportContent} />
         </Section>
       )}
 
       {(s.applyMethod || s.applySteps.length > 0) && (
-        <Section id="apply" icon="📝" title="신청 방법">
+        <Section id="apply" title="신청 방법">
           {s.applyMethod && <Prose text={s.applyMethod} />}
           {s.applySteps.length > 0 && (
             <ol className="mt-3 space-y-2">
@@ -336,7 +339,7 @@ export default async function ServiceDetail({
       )}
 
       {(s.contacts.length > 0 || s.homepages.length > 0) && (
-        <Section id="contact" icon="☎️" title="문의처">
+        <Section id="contact" title="문의처">
           <ul className="space-y-1.5 text-sm">
             {s.contacts.map((c, i) => {
               /* 문의처 칸에 "평일 09~18시" 같은 안내문이 들어오는 경우가 있다.
@@ -378,7 +381,7 @@ export default async function ServiceDetail({
       )}
 
       {s.forms.length > 0 && (
-        <Section id="forms" icon="📄" title="서식·안내 자료">
+        <Section id="forms" title="서식·안내 자료">
           <ul className="space-y-1.5 text-sm">
             {s.forms.map((f, i) => {
               const url = safeUrl(f.url);
@@ -401,7 +404,7 @@ export default async function ServiceDetail({
       )}
 
       {s.lawBasis.length > 0 && (
-        <Section id="law" icon="⚖️" title="근거 법령">
+        <Section id="law" title="근거 법령">
           <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
             {s.lawBasis.map((l, i) => (
               <li key={i}>{l}</li>
