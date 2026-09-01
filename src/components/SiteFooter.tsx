@@ -62,9 +62,7 @@ export default function SiteFooter() {
           <p className="text-xl font-bold">
             복지<span className="text-brand">MAP</span>
           </p>
-          <p className="mt-2 text-sm text-muted">
-            {SITE.description}
-          </p>
+          <p className="mt-2 text-sm text-muted">{SITE.description}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
@@ -101,6 +99,16 @@ export default function SiteFooter() {
           <p>
             신청 자격·금액·기간은 각 서비스의 공식 안내로 반드시 최종
             확인하세요.
+          </p>
+          {/*
+            저작권 표시를 정확히 적는다. 그냥 "© 복지맵"이라고만 두면 정부
+            원자료까지 우리 것이라고 주장하는 것처럼 읽힌다. 실제로는 자료를
+            모으고 분류하고 배치한 결과물과 사이트의 문장·디자인만 우리 것이다
+            (데이터 출처 페이지에 같은 취지로 적어 두었다).
+          */}
+          <p className="pt-1">
+            © {SITE.foundedYear} {SITE.name}. 정부 원자료의 저작권은 각
+            제공기관에 있습니다.
           </p>
         </div>
       </div>

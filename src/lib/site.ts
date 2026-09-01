@@ -15,6 +15,9 @@ export const SITE = {
   contactUser: "jgga1234567",
   contactHost: "gmail.com",
 
+  /** 저작권 표시에 쓰는 개설 연도. */
+  foundedYear: 2026,
+
   /** 약관·방침의 시행일. 내용을 고치면 이 날짜도 같이 올린다. */
   policyEffectiveDate: "2026-09-01",
 } as const;
@@ -28,7 +31,5 @@ export const CONTACT_EMAIL = `${SITE.contactUser}@${SITE.contactHost}`;
  * 어긋나 마감일 계산이 틀린다. 날짜를 다루는 모든 곳에서 이 함수를 쓴다.
  */
 export function today(): string {
-  return new Date(Date.now() + 9 * 60 * 60 * 1000)
-    .toISOString()
-    .slice(0, 10);
+  return new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10);
 }
