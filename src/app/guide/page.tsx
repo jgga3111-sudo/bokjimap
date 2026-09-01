@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
+import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "복지 신청 안내 — 신청 방법·서류·용어",
-  description:
-    "복지 지원금을 어디서 신청하는지, 어떤 서류가 필요한지, 공고문의 낯선 말이 무슨 뜻인지 — 수록 900건을 직접 집계해 정리한 안내 글입니다.",
+  description: `복지 지원금을 어디서 신청하는지, 어떤 서류가 필요한지, 공고문의 낯선 말이 무슨 뜻인지 — 수록 ${services.length.toLocaleString()}건을 직접 집계해 정리한 안내 글 ${GUIDES.length}편입니다.`,
   alternates: { canonical: "/guide" },
 };
 
@@ -17,7 +17,8 @@ export default function GuideIndex() {
         <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
           받을 수 있는 지원을 찾았는데 정작 신청에서 막히는 경우가 많습니다.
           어디서 신청하는지, 무엇을 챙겨 가는지, 공고문의 저 말이 무슨 뜻인지
-          — 수록한 900건을 직접 집계해 정리했습니다.
+          — 수록한 {services.length.toLocaleString()}건을 직접 집계해
+          정리했습니다.
         </p>
       </header>
 

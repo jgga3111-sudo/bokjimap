@@ -9,13 +9,6 @@ import { won } from "@/lib/display";
 
 const G = guideBySlug("income-line")!;
 
-export const metadata: Metadata = {
-  title: `${G.title} — 복지 자격선 191건 실측`,
-  description:
-    "선정기준에 '기준 중위소득 몇 %'가 적힌 191건을 세어 봤습니다. 가장 많은 기준선은 기초생활 구간이 아니라 150%였고, 절반 이상이 100% 이상 구간이었습니다.",
-  alternates: { canonical: "/guide/income-line" },
-};
-
 /*
   이 글의 근거는 통째로 데이터에서 나온다. 하나도 손으로 적지 않는다.
 
@@ -44,6 +37,18 @@ const atOrBelow50 = withPercent.filter((s) => s.medianPercent! <= 50).length;
 const busiest = [...buckets].sort((a, b) => b.list.length - a.list.length)[0];
 const pct = (n: number) => Math.round((n / withPercent.length) * 100);
 
+/*
+  metadata가 계산 아래에 있는 이유: 제목과 설명에도 실제 집계값을 쓴다.
+  본문만 계산으로 짜 놓고 metadata에는 "191건"을 박아 두었다가, 재수집으로
+  214건이 된 뒤에도 검색결과에는 191건이라고 나가고 있었다(2026-09-02).
+  눈에 안 보이는 자리일수록 상수로 두면 틀린 채로 오래 간다.
+*/
+export const metadata: Metadata = {
+  title: `${G.title} — 복지 자격선 ${withPercent.length}건 실측`,
+  description: `선정기준에 '기준 중위소득 몇 %'가 적힌 ${withPercent.length}건을 세어 봤습니다. 가장 많은 기준선은 기초생활 구간이 아니라 ${busiest.percent}%였고, ${pct(atOrAbove100)}%가 100% 이상 구간이었습니다.`,
+  alternates: { canonical: "/guide/income-line" },
+};
+
 /** 4인 가구를 예로 든다 — 표에서 가장 자주 인용되는 기준이다. */
 const HH = 4;
 
@@ -55,7 +60,7 @@ export default function IncomeLineGuide() {
         lead="“내 소득이면 어차피 안 되겠지” 하고 알아보지도 않는 경우가 많습니다. 실제 기준선이 어디에 몰려 있는지 세어 봤습니다."
         updated={`최종 수정 ${G.updated} · 선정기준에 비율이 명시된 ${withPercent.length}건 기준`}
       >
-        <DocSection title="가장 많은 기준선은 150%였습니다">
+        <DocSection title={`가장 많은 기준선은 ${busiest.percent}%였습니다`}>
           <p>
             수록한 {services.length.toLocaleString()}건 가운데 선정기준 원문에{" "}
             &ldquo;기준 중위소득 ○○% 이하&rdquo;가 적혀 있는 것은{" "}

@@ -41,6 +41,18 @@ const localCrisis = services
 const top = family[0];
 const rest = family.slice(1).reduce((a, s) => a + s.views, 0);
 
+/*
+  "긴급복지 계열은 모두 중위소득 75%"라고 적어 두었는데, 재수집 뒤 여덟 갈래
+  중 한 건(사회복지시설이용지원)의 선정기준에서 비율이 읽히지 않게 됐다
+  (2026-09-02). 원문에 비율 표현이 없으면 medianPercent는 null이고, 그건
+  "기준이 다르다"가 아니라 "우리가 못 읽었다"는 뜻이다. 그래서 **비율이
+  적힌 것만** 세어 말하고, 값이 갈리면 문장 자체를 바꾼다.
+*/
+const famWithPct = family.filter((s) => s.medianPercent != null);
+const famPercents = [
+  ...new Set(famWithPct.map((s) => s.medianPercent!)),
+].sort((a, b) => a - b);
+
 export default function EmergencyGuide() {
   return (
     <>
@@ -125,9 +137,20 @@ export default function EmergencyGuide() {
             상황들입니다.
           </p>
           <DocNote tone="brand">
-            소득 기준도 있습니다. 우리 데이터에서 긴급복지 계열은 모두{" "}
-            <strong>기준 중위소득 75%</strong>로 잡혀 있습니다. 내가 어느
-            구간인지는{" "}
+            소득 기준도 있습니다. {family.length}갈래 가운데 선정기준에
+            비율이 적혀 있는 것은 {famWithPct.length}건인데,{" "}
+            {famPercents.length === 1 ? (
+              <>
+                모두 <strong>기준 중위소득 {famPercents[0]}%</strong>입니다.
+              </>
+            ) : (
+              <>
+                기준선이{" "}
+                <strong>중위소득 {famPercents.join("%·")}%</strong>로
+                갈립니다.
+              </>
+            )}{" "}
+            내가 어느 구간인지는{" "}
             <Link href="/check" className="text-brand underline">
               자가진단
             </Link>

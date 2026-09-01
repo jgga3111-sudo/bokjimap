@@ -9,8 +9,7 @@ const G = guideBySlug("apply")!;
 
 export const metadata: Metadata = {
   title: `${G.title} — 복지로·정부24·주민센터 비교`,
-  description:
-    "복지 지원금 신청 창구는 복지로·정부24·주민센터 세 곳입니다. 무엇이 다른지, 온라인으로 되는 사업이 실제로 얼마나 되는지 수록 900건을 집계해 정리했습니다.",
+  description: `복지 지원금 신청 창구는 복지로·정부24·주민센터 세 곳입니다. 무엇이 다른지, 온라인으로 되는 사업이 실제로 얼마나 되는지 수록 ${services.length.toLocaleString()}건을 집계해 정리했습니다.`,
   alternates: { canonical: "/guide/apply" },
 };
 

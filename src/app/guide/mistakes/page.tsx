@@ -9,8 +9,7 @@ const G = guideBySlug("mistakes")!;
 
 export const metadata: Metadata = {
   title: `${G.title} — 복지 신청 흔한 실수`,
-  description:
-    "융자를 받는 돈으로 알거나, 한 번 주는 것을 매달로 알거나, 요금감면을 안 물어봐서 놓치거나 — 수록 900건에서 실제로 잘 틀리는 지점만 골라 정리했습니다.",
+  description: `융자를 받는 돈으로 알거나, 한 번 주는 것을 매달로 알거나, 요금감면을 안 물어봐서 놓치거나 — 수록 ${services.length.toLocaleString()}건에서 실제로 잘 틀리는 지점만 골라 정리했습니다.`,
   alternates: { canonical: "/guide/mistakes" },
 };
 
