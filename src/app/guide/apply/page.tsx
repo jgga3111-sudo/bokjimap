@@ -251,7 +251,8 @@ export default function ApplyGuide() {
           <ul className="space-y-2">
             <li>
               <strong>보건복지상담센터 129</strong> — 전국 어디서나 국번 없이
-              129. 복지 제도 전반을 상담합니다.
+              129, 무료입니다. 일반 상담은 <strong>평일 09:00~18:00</strong>,
+              긴급지원 상담은 24시간 받습니다.
             </li>
             <li>
               <strong>주소지 행정복지센터(주민센터)</strong> — 복지 담당

@@ -38,8 +38,9 @@ const COLUMNS: { title: string; items: Item[] }[] = [
     items: [
       { href: "/guide/apply", label: "신청 방법 총정리", ready: true },
       { href: "/guide/documents", label: "필요 서류 안내", ready: true },
-      { href: "/guide/online", label: "온라인 신청 가능 지원", ready: true },
-      { href: "/guide/terms", label: "복지 용어 풀이", ready: true },
+      { href: "/guide/emergency", label: "갑자기 막혔을 때", ready: true },
+      { href: "/guide/mistakes", label: "자주 놓치는 것", ready: true },
+      { href: "/guide", label: "안내 글 전체", ready: true },
     ],
   },
   {

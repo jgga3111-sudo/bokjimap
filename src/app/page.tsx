@@ -199,8 +199,9 @@ export default function Home() {
             전체 보기 →
           </Link>
         </div>
+        {/* 여덟 편을 다 깔면 첫 화면이 글 목록 페이지가 된다. 넷만. */}
         <ul className="grid gap-3 sm:grid-cols-2">
-          {GUIDES.map((g) => (
+          {GUIDES.slice(0, 4).map((g) => (
             <li key={g.slug}>
               <Link
                 href={`/guide/${g.slug}`}
