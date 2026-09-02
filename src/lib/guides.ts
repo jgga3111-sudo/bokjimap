@@ -86,6 +86,20 @@ export const GUIDES: readonly Guide[] = [
       "소득인정액·차상위·바우처·융자처럼 공고문에 그냥 적혀 있어 넘어가기 쉬운 말을 풀었습니다.",
     updated: "2026-09-01",
   },
+  {
+    slug: "popular",
+    title: "사람들이 실제로 찾는 복지는 몇 개 안 됩니다",
+    summary:
+      "복지로 누적 조회수를 그대로 세어 봤습니다. 관심은 맨 위 몇 개에 극단적으로 몰려 있고, 나머지는 있는지도 잘 알려지지 않았습니다.",
+    updated: "2026-09-02",
+  },
+  {
+    slug: "life-stage",
+    title: "나이가 바뀌면 받을 수 있는 것도 바뀝니다",
+    summary:
+      "임신·출산부터 노년까지 일곱 단계에 각각 어떤 지원이 걸려 있는지, 수록한 사업을 단계별로 집계했습니다.",
+    updated: "2026-09-02",
+  },
 ] as const;
 
 const BY_SLUG = new Map(GUIDES.map((g) => [g.slug, g]));
