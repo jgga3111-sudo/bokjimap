@@ -14,6 +14,28 @@ import MyEligibility from "@/components/MyEligibility";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
+/**
+ * 같은 이름의 사업이 여럿 있다 — 55건이 25개 이름을 나눠 쓴다.
+ * "청년월세 지원사업"은 국토교통부 것 하나에 구미시·음성군 것이 따로 있다.
+ * 셋 다 <title>이 글자 하나까지 같으면 구글은 하나만 남기고 나머지를
+ * "중복 페이지"로 접는다 — 러닝온에서 본 "크롤링됨 – 색인 안 됨"의 한 갈래다.
+ *
+ * 그래서 **이름이 겹칠 때만** 앞에 지역을 붙인다. 겹치지 않는 845건은
+ * 그대로 둔다. 지역을 붙이면 25개 그룹이 전부 갈린다(2026-09-02 확인).
+ * 상세 화면에는 이미 제목 바로 아래에 같은 지역 표기가 있으므로
+ * 화면과 제목이 어긋나지도 않는다.
+ */
+const dupName = new Set(
+  Object.entries(
+    services.reduce<Record<string, number>>((acc, s) => {
+      acc[s.name] = (acc[s.name] ?? 0) + 1;
+      return acc;
+    }, {}),
+  )
+    .filter(([, n]) => n > 1)
+    .map(([name]) => name),
+);
+
 export function generateStaticParams() {
   return services.map((s) => ({ id: s.id }));
 }
@@ -27,7 +49,9 @@ export async function generateMetadata({
 
   const where = placeLabel(s);
   return {
-    title: `${s.name} — 지원대상·지원내용·신청방법`,
+    title: `${
+      dupName.has(s.name) ? `${where} ${s.name}` : s.name
+    } — 지원대상·지원내용·신청방법`,
     description:
       s.summary ??
       s.outline ??
