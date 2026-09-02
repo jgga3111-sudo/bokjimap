@@ -56,6 +56,22 @@ const lifeStages = countHub((s) => s.lifeStages);
 /* 주제는 데이터에 슬러그가 아니라 원문 값("생활지원")으로 들어 있다. */
 const themes = countHub((s) => s.themes);
 
+/* 안내 글은 하한이 없다 — sitemap.ts는 GUIDES를 전부 올린다. */
+const guides = [...read("src/lib/guides.ts").matchAll(/slug:\s*"([^"]+)"/g)].length;
+
+/* 혜택 종류 허브. 지급형태(payTypes) 원문 값으로 매칭한다(benefits.ts hasBenefit).
+   여기 값을 베껴 적지 않고 benefits.ts에서 읽는다 — 축이 늘면 같이 늘어야 한다. */
+const benefits = [
+  ...read("src/lib/benefits.ts").matchAll(
+    /slug:\s*"([^"]+)",[\s\S]{0,200}?values:\s*\[([^\]]*)\]/g,
+  ),
+]
+  .map(([, , vals]) => [...vals.matchAll(/"([^"]+)"/g)].map((m) => m[1]))
+  .filter((values) =>
+    services.filter((s) => s.payTypes.some((p) => values.includes(p))).length >=
+    MIN_SERVICES,
+  ).length;
+
 /* 정적 페이지는 sitemap.ts에 손으로 적혀 있으므로 거기서 세어 온다. */
 const sitemapSrc = read("src/app/sitemap.ts");
 const staticBlock = sitemapSrc.slice(
@@ -70,19 +86,23 @@ console.log("사이트맵에 제출될 것");
 console.log(line);
 console.log(`  정적 페이지        ${String(staticPaths.length).padStart(5)}개`);
 console.log(`    ${staticPaths.map((p) => p || "/").join(" ")}`);
+console.log(`  안내 글            ${String(guides).padStart(5)}개  (하한 없음 — 전부 올린다)`);
 console.log(`  서비스 상세        ${String(indexable.length).padStart(5)}개  (본문 ${MIN_BODY_LENGTH}자 이상)`);
 console.log(`  주제 허브          ${String(themes).padStart(5)}개  (각 ${MIN_SERVICES}건 이상)`);
 console.log(`  지역 허브          ${String(regions).padStart(5)}개`);
 console.log(`  대상 허브          ${String(targets).padStart(5)}개`);
 console.log(`  생애주기 허브      ${String(lifeStages).padStart(5)}개`);
+console.log(`  혜택종류 허브      ${String(benefits).padStart(5)}개`);
 console.log(
   `  ${"합계".padEnd(17)}${String(
     staticPaths.length +
+      guides +
       indexable.length +
       themes +
       regions +
       targets +
-      lifeStages,
+      lifeStages +
+      benefits,
   ).padStart(5)}개`,
 );
 
