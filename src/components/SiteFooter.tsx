@@ -28,6 +28,7 @@ const COLUMNS: { title: string; items: Item[] }[] = [
       { href: "/target", label: "대상별 찾기", ready: true },
       { href: "/life", label: "생애주기별 찾기", ready: true },
       { href: "/benefit", label: "혜택 종류별 찾기", ready: true },
+      { href: "/income", label: "소득기준별 찾기", ready: true },
       /* 마감 임박 페이지는 만들지 않는다. 원본 enfcEndYmd 570건 중
          554건이 9999-12-31(종료일 없음)이고, 올해 안에 실제로 마감하는
          사업은 6건뿐이다. 데이터가 없는 기능이다. */

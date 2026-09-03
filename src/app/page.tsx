@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS } from "@/lib/benefits";
+import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
@@ -161,6 +162,18 @@ export default function Home() {
             label="혜택 종류"
             base="/benefit"
             items={BENEFITS}
+            cols={GRID}
+          />
+          {/* 소득기준 — 자가진단이 내놓는 답과 같은 구분이다. 위 배너에서
+              "중위소득 70%"를 받은 사람이 갈 곳이 여기다. 열여덟 개를 다
+              깔면 줄이 길어지니 급여 이름이 붙는 구간만 건다. */}
+          <BrowseRow
+            label="소득기준"
+            base="/income"
+            items={INCOME_BANDS.filter((b) => b.label).map((b) => ({
+              slug: String(b.percent),
+              label: `중위 ${b.percent}%`,
+            }))}
             cols={GRID}
           />
           <BrowseRow label="대상" base="/target" items={TARGETS} cols={GRID} />

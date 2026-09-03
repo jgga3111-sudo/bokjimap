@@ -4,6 +4,7 @@ import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES, MIN_SERVICES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { GUIDES } from "@/lib/guides";
+import { INCOME_BANDS } from "@/lib/income";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable } from "@/types/welfare";
 
@@ -43,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/target", "weekly", 0.8, SERVICES_UPDATED],
       ["/life", "weekly", 0.8, SERVICES_UPDATED],
       ["/benefit", "weekly", 0.8, SERVICES_UPDATED],
+      ["/income", "weekly", 0.8, SERVICES_UPDATED],
       ["/guide", "monthly", 0.8, SERVICES_UPDATED],
       ["/about", "monthly", 0.5, SITE.policyEffectiveDate],
       ["/source", "monthly", 0.5, SERVICES_UPDATED],
@@ -80,6 +82,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const atLeast = (list: unknown[]) => list.length >= MIN_SERVICES;
 
+  /* 소득기준 허브. hub()를 못 쓴다 — 슬러그가 문자열이 아니라 숫자이고,
+     건수 하한은 INCOME_BANDS를 만들 때 이미 걸렀다(lib/income.ts). */
+  const incomePages: MetadataRoute.Sitemap = INCOME_BANDS.map((b) => ({
+    url: `${SITE.url}/income/${b.percent}`,
+    lastModified: SERVICES_UPDATED,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   /* 안내 글은 우리가 직접 쓴 것이라 lastmod가 데이터 갱신일과 무관하다.
      글마다 실제로 손본 날을 쓴다. */
   const guidePages: MetadataRoute.Sitemap = GUIDES.map((g) => ({
@@ -106,5 +117,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       atLeast(services.filter((v) => v.lifeStages.includes(t.slug))),
     ),
     ...hub("/benefit", BENEFITS, (b) => atLeast(servicesOf(services, b))),
+    ...incomePages,
   ];
 }

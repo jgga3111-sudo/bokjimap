@@ -84,6 +84,61 @@ function Prose({ text }: { text: string }) {
  * 대신 제목 왼쪽에 브랜드색 세로 바를 둔다. 그림 일곱 종이 하던 일
  * — "여기서 새 절이 시작한다" — 을 색 하나로 한다.
  */
+/**
+ * 페이지 안 목차.
+ *
+ * 왜 필요한가. 조회수 상위 상세는 375px 화면에서 **5,400px**이 넘는다.
+ * 사람들이 가장 알고 싶은 "얼마 주나"(지원 내용)가 2,900px 지점에 있어서,
+ * 엄지로 열 번 넘게 밀어야 닿는다.
+ *
+ * 새로 만들 것은 거의 없었다 — 절마다 id가 이미 붙어 있었다(`#target`
+ * `#criteria` `#benefit` `#apply` `#contact` `#forms` `#law`, 900건 전부).
+ * 쓰는 데가 없어서 놀고 있었을 뿐이다.
+ *
+ * **있는 절만 건다.** 상세를 아직 못 받은 항목은 절이 두어 개뿐인데 거기에
+ * 목차를 얹으면 목차가 본문보다 길어진다. 그래서 셋 미만이면 그리지 않는다.
+ */
+const TOC = [
+  { id: "target", title: "지원 대상", has: (s: WelfareService) => !!s.eligibility },
+  { id: "criteria", title: "선정 기준", has: (s: WelfareService) => !!s.selectionCriteria },
+  { id: "benefit", title: "지원 내용", has: (s: WelfareService) => !!s.supportContent },
+  {
+    id: "apply",
+    title: "신청 방법",
+    has: (s: WelfareService) => !!s.applyMethod || s.applySteps.length > 0,
+  },
+  {
+    id: "contact",
+    title: "문의처",
+    has: (s: WelfareService) => s.contacts.length > 0 || s.homepages.length > 0,
+  },
+  { id: "forms", title: "서식", has: (s: WelfareService) => s.forms.length > 0 },
+  { id: "law", title: "근거 법령", has: (s: WelfareService) => s.lawBasis.length > 0 },
+] as const;
+
+function PageToc({ s }: { s: WelfareService }) {
+  const items = TOC.filter((t) => t.has(s));
+  if (items.length < 3) return null;
+
+  return (
+    <nav aria-label="이 페이지 안에서" className="rounded-xl border border-line bg-slate-50/70 px-4 py-3">
+      <h2 className="text-xs font-bold text-muted">이 페이지에서</h2>
+      <ul className="mt-2 flex flex-wrap gap-1.5">
+        {items.map((t) => (
+          <li key={t.id}>
+            <a
+              href={`#${t.id}`}
+              className="inline-block rounded-full border border-line bg-white px-3 py-1.5 text-sm text-slate-700 transition hover:border-brand hover:text-brand"
+            >
+              {t.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 function Section({
   id,
   title,
@@ -93,8 +148,12 @@ function Section({
   title: string;
   children: React.ReactNode;
 }) {
+  /* scroll-mt는 sticky 헤더보다 커야 한다. 헤더가 99px(로고·검색 56 +
+     분류 칩 43)인데 scroll-mt-20(80px)이어서, 목차로 뛰면 제목이 헤더 밑에
+     19px 잠겼다. 앵커는 900건에 다 깔려 있었지만 목차가 없어 아무도 누르지
+     않았고, 그래서 여태 안 드러났다. 28 = 112px. */
   return (
-    <section id={id} className="scroll-mt-20">
+    <section id={id} className="scroll-mt-28">
       <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         {title}
@@ -287,6 +346,10 @@ export default async function ServiceDetail({
           </p>
         )}
       </header>
+
+      {/* 목차는 "한눈에 보기" 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
+          밀려서, 정작 스크롤을 아끼려고 만든 것이 스크롤해야 보인다. */}
+      <PageToc s={s} />
 
       {/* 한눈에 보기 — 본문을 읽기 전에 형태부터 파악되게. */}
       <section>

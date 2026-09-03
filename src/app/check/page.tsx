@@ -22,11 +22,12 @@ const HOUSEHOLDS = [1, 2, 3, 4, 5, 6, 7];
  */
 const SERVICES_BY_PERCENT: ServicesByPercent = {};
 for (const c of CUTOFFS) {
-  const hits = services
-    .filter((s) => s.medianPercent === c.percent)
-    .slice(0, 4)
-    .map((s) => ({ id: s.id, name: s.name! }));
-  if (hits.length) SERVICES_BY_PERCENT[c.percent] = hits;
+  const hits = services.filter((s) => s.medianPercent === c.percent);
+  if (hits.length)
+    SERVICES_BY_PERCENT[c.percent] = {
+      total: hits.length,
+      items: hits.slice(0, 4).map((s) => ({ id: s.id, name: s.name! })),
+    };
 }
 
 export default function CheckPage() {

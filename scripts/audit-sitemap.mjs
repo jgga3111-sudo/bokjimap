@@ -56,6 +56,15 @@ const lifeStages = countHub((s) => s.lifeStages);
 /* 주제는 데이터에 슬러그가 아니라 원문 값("생활지원")으로 들어 있다. */
 const themes = countHub((s) => s.themes);
 
+/* 소득기준 허브 — 선정기준에 명시된 medianPercent별로 MIN_SERVICES 이상. */
+const incomeBands = (() => {
+  const t = new Map();
+  for (const s of services)
+    if (s.medianPercent != null)
+      t.set(s.medianPercent, (t.get(s.medianPercent) ?? 0) + 1);
+  return [...t.values()].filter((n) => n >= MIN_SERVICES).length;
+})();
+
 /* 안내 글은 하한이 없다 — sitemap.ts는 GUIDES를 전부 올린다. */
 const guides = [...read("src/lib/guides.ts").matchAll(/slug:\s*"([^"]+)"/g)].length;
 
@@ -93,6 +102,7 @@ console.log(`  지역 허브          ${String(regions).padStart(5)}개`);
 console.log(`  대상 허브          ${String(targets).padStart(5)}개`);
 console.log(`  생애주기 허브      ${String(lifeStages).padStart(5)}개`);
 console.log(`  혜택종류 허브      ${String(benefits).padStart(5)}개`);
+console.log(`  소득기준 허브      ${String(incomeBands).padStart(5)}개`);
 console.log(
   `  ${"합계".padEnd(17)}${String(
     staticPaths.length +
@@ -102,7 +112,8 @@ console.log(
       regions +
       targets +
       lifeStages +
-      benefits,
+      benefits +
+      incomeBands,
   ).padStart(5)}개`,
 );
 

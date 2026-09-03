@@ -46,10 +46,16 @@ const TONE_BG: Record<string, string> = {
  * (소득평가액 + 재산의 소득환산액)이다. 재산·부채·근로소득공제를 반영하지
  * 않은 이 계산은 1차 가늠일 뿐이다. "대상입니다"라고 단정하지 않는다.
  */
-/** 기준선(퍼센트) → 그 기준을 쓴다고 원문에 적힌 서비스들. 서버에서 넘어온다. */
+/**
+ * 기준선(퍼센트) → 그 기준을 쓴다고 원문에 적힌 서비스들. 서버에서 넘어온다.
+ *
+ * `total`을 따로 받는 이유: 여기 그리는 것은 앞의 몇 건뿐인데, 화면에는
+ * 그게 전부인 것처럼 보인다. 실제로 어떤 구간은 서른 건이 넘는다.
+ * 총 건수를 알아야 `/income/[percent]`로 보내는 링크를 걸 수 있다.
+ */
 export type ServicesByPercent = Record<
   number,
-  { id: string; name: string }[] | undefined
+  { total: number; items: { id: string; name: string }[] } | undefined
 >;
 
 export default function IncomeCheck({
@@ -273,7 +279,8 @@ export default function IncomeCheck({
               {CUTOFFS.map((c) => {
                 const limit = thresholdOf(household, c.percent);
                 const hit = pct !== null && pct <= c.percent;
-                const matches = servicesByPercent[c.percent] ?? [];
+                const band = servicesByPercent[c.percent];
+                const matches = band?.items ?? [];
                 return (
                   <li
                     key={c.percent}
@@ -305,7 +312,7 @@ export default function IncomeCheck({
                           원문에 "중위소득 N%"가 적혀 있는 것만 링크한다. */}
                       {matches.length > 0 && (
                         <ul className="mt-1.5 flex flex-wrap gap-x-2 gap-y-1">
-                          {matches.slice(0, 4).map((m) => (
+                          {matches.map((m) => (
                             <li key={m.id}>
                               <Link
                                 href={`/service/${m.id}`}
@@ -315,6 +322,18 @@ export default function IncomeCheck({
                               </Link>
                             </li>
                           ))}
+                          {/* 여기 걸린 것은 앞의 몇 건뿐이다. 나머지가 어디
+                              있는지 말해 주지 않으면 이게 전부로 읽힌다. */}
+                          {band && band.total > matches.length && (
+                            <li>
+                              <Link
+                                href={`/income/${c.percent}`}
+                                className="text-xs font-medium text-brand underline"
+                              >
+                                이 구간 {band.total}건 전체 →
+                              </Link>
+                            </li>
+                          )}
                         </ul>
                       )}
                     </div>

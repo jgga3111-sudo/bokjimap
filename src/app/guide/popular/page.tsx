@@ -4,7 +4,6 @@ import { DocPage, DocSection, DocNote } from "@/components/Doc";
 import GuideNav from "@/components/GuideNav";
 import ServiceList from "@/components/ServiceList";
 import { guideBySlug } from "@/lib/guides";
-import { views } from "@/lib/display";
 import { services } from "@/data/services";
 
 const G = guideBySlug("popular")!;
