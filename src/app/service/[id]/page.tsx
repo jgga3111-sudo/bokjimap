@@ -48,14 +48,19 @@ export async function generateMetadata({
   if (!s) return {};
 
   const where = placeLabel(s);
+  const label = dupName.has(s.name) ? `${where} ${s.name}` : s.name;
+
+  /* 설명 앞에 사업명을 세우는 이유. 요약문은 정부 API에서 오는데, 서로
+     다른 사업이 글자까지 같은 문장을 쓰는 경우가 있다 — 뇌 MRI 검사비
+     지원과 임플란트·틀니 지원이 똑같이 "저소득 주민의 경제적 부담을
+     경감시키고…"로 시작한다. 본문은 전혀 다른데 설명만 보면 같은
+     페이지고, 그러면 구글이 하나로 접는다. 사업명이 그 둘을 가른다. */
+  const gist = s.summary ?? s.outline;
   return {
-    title: `${
-      dupName.has(s.name) ? `${where} ${s.name}` : s.name
-    } — 지원대상·지원내용·신청방법`,
-    description:
-      s.summary ??
-      s.outline ??
-      `${where} ${s.name}의 지원 대상과 신청 방법을 정리했습니다.`,
+    title: `${label} — 지원대상·지원내용·신청방법`,
+    description: gist
+      ? `${label} — ${gist}`
+      : `${label}의 지원 대상과 신청 방법을 정리했습니다.`,
     alternates: { canonical: `/service/${s.id}` },
     /* 본문이 얇은 항목은 색인에서 뺀다. 러닝온에서 얇은 페이지 510개가
        "발견됨 – 색인 안 됨"에 빠진 것을 실측했다(docs/02). */

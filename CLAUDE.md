@@ -219,4 +219,8 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
 
 1. `npx tsc --noEmit` + `npx eslint src --max-warnings=0` + `npm run build`
 2. 데이터 정합성 스크립트 (id 중복, 날짜 논리, 필수 필드 누락)
-3. 실제 화면 확인 (모바일 가로 스크롤 포함)
+3. `node scripts/audit-sitemap.mjs` — **몇 개가 나갈 것인가**(소스의 규칙)
+4. `node scripts/audit-indexability.mjs` — **그게 색인될 수 있는가**(빌드 결과물)
+   · 사이트맵에 있는데 noindex, 자기를 안 가리키는 canonical, **제목·설명 중복**
+   · 3번은 소스를, 4번은 렌더된 HTML을 본다. 규칙이 맞아도 HTML이 틀릴 수 있다.
+5. 실제 화면 확인 (모바일 가로 스크롤 포함)
