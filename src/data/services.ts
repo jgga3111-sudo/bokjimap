@@ -9,7 +9,7 @@ import type { WelfareService } from "@/types/welfare";
  * 전체 5,219건 중 상위 500건이 전체 조회수의 86.5%를 차지한다 — 사람들이
  * 실제로 찾는 것부터 채운다(docs/02).
  *
- * 생성 시각: 2026-09-03 · 상세 본문 확보 870/900건
+ * 생성 시각: 2026-09-04 · 상세 본문 확보 900/900건
  */
 export const services: readonly WelfareService[] = [
  {
@@ -45888,21 +45888,43 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "저신용·저소득 영세자영업자 및 청년·금융취약계층의 금융애로를 해소하여 향후 제도권 금융으로 안착할 수 있도록 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "저신용·저소득 영세자영업자 및 청년·금융취약계층의 금융애로를 해소하여 향후 제도권 금융으로 안착할 수 있도록 지원합니다.",
+  "eligibility": "차상위계층 이하 또는 개인신용평점 하위 20% 이하 또는 근로장려금 신청대상자로 제도권 금융기관 이용이 어려운 자영업자, 금융취약계층, 청년(만 19세이상~만 34세 이하)을 대상으로 지원합니다.\n청년 : 만 34세 이하의 청년 또는 사회초년생(중소기업 1년 이하 재직자) 또는 개인사업자(창업 1년 이내인 자)이하\n대출신청일 현재 국민기초생활보장법 제2조에 따른 수급권자 및 차상위 계층에 해당하는 자\n조세특혜제한법 제100조의 3에 따른 근로장려금 신청자격 요건에 해당하는 자\n신용평점 하위 20% 이하로 저소득, 저신용 계층에 해당하는 자\n지원제외대상\n한국신용정보원의「신용정보관리규약」에 따른 연체, 대위변제·대지급, 부도정보, 금융질서문란정보, 공공정보를 보유한 자\n「채무자 회생 및 파산에 관한 법률」에 의해 회생절차, 파산절차 및 개인회생절차 개시의 신청이 있거나 그 절차가 진행중인 자",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "제도권 금융기관을 이용하기 어려운 저신용·저소득 영세자영업자 및 청년·금융취약계층에게 서민금융진흥원의 사업수행기관(미소 사업수행기관 38개)을 통한 자금 공급",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 전국 미소금융 사업수행기관 38개에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 조사 및 심사",
+   "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 보장 결정",
+   "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "서민금융콜센터",
+    "url": "1397"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "서민금융진흥원",
+    "url": "www.kinfa.or.kr"
+   },
+   {
+    "name": "서민금융 잇다",
+    "url": "https://loan.kinfa.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "서민의 금융생활 지원에 관한 법률"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006269&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -46526,21 +46548,61 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "북한이탈주민의 장기근속을 유도하기 위하여 취업장려금과 새출발장려금을 지급합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "북한이탈주민의 장기근속을 유도하기 위하여 취업장려금과 새출발장려금을 지급합니다.",
+  "eligibility": "(취업장려금) 거주지보호기간(5년) 내 북한이탈주민\n(새출발장려금) 취업장려금을 1년6개월 이하로 수급한 자로서 거주지보호기간(5년) 경과 후 취업한 북한이탈주민  * 2024.1.1 이후 신규취업자만 해당",
+  "selectionCriteria": "취업지원 유형별 선정기준은 다음과 같습니다.\n(취업장려금) 거주지보호기간 동일한 업체에서 6개월 이상 계속하여 취업을 유지한 북한이탈주민에게 최장 3년 범위 내에서 지급 - 다만, 거주지보호기간 내에 취업하였으나 해당 취업기간 중 거주지보호기간이 종료된 경우에는 종료한 날로부터 최장 1년의 범위 내에서 동일 기업에 취업을 유지하는 경우에 한하여 취업장려금을 지급\n(새출발장려금) 취업장려금 대상자 중 취업장려금을 1년 6개월이하로 수급받은 자로서 거주지보호기간 경과 후 동일한 업체에서 6개월 이상 계속하여 취업을 유지한 북한이탈주민에게 지급\n \n2024년 1월1일 이후 신규취업자만 해당",
+  "supportContent": "(취업장려금) 북한이탈주민의 장기근속을 유도하기 위해 6개월 이상 동일한 업체에 근무한 북한이탈주민에게 최대 3년 지급 - 수도권 1년차 500만원, 2년차 600만원, 3년차 700만원, 지방 1년차 600만원, 2년차 700만원, 3년차 800만원\n(새출발장려금) 취업장려금을 일부만 지원받고 거주지보호기간이 경과한 북한이탈주민이 거주지보호기간 경과 후 6개월 간 동일업체에서 근무한 경우 - 200만원씩 최대 3회(1년6개월) 600만원 지급",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 북한이탈주민정착지원 사무소(하나원)에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 북한이탈주민정착지원 사무소(하나원)에서 조사 및 심사",
+   "담당 시/군/구청 또는 북한이탈주민정착지원 사무소(하나원)에서 보장 결정",
+   "담당 시/군/구청 또는 북한이탈주민정착지원 사무소(하나원)에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 북한이탈주민정착지원 사무소(하나원)에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "북한이탈주민 종합상담 콜센터",
+    "url": "1577-6635"
+   },
+   {
+    "name": "통일부 북한이탈주민정착지원사무소 교육기획과",
+    "url": "031-670-9300(내선1,2번)"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "북한이탈주민 포털",
+    "url": "https://hanaportal.unikorea.go.kr"
+   },
+   {
+    "name": "남북하나재단",
+    "url": "http://www.koreahana.or.kr"
+   },
+   {
+    "name": "통일부",
+    "url": "www.unikorea.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "북한이탈주민의 보호 및 정착지원에 관한 법률",
+   "북한이탈주민의 보호 및 정착지원에 관한 법률 시행령"
+  ],
+  "forms": [
+   {
+    "name": "북한이탈주민 정착금 및 주거지원금 지급에 관한 예규(통일부예규)(제81호)(20240101).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20240416UUWBM1048590080667750&atcflSn=1"
+   },
+   {
+    "name": "[별지 제6호의3서식] (직업훈련¸ 자격취득¸ 취업)장려금 지급 신청서.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=5579GOWF15GOWF155579&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003168&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -46980,21 +47042,53 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "금융기관에 대부업무를 위탁하고 저신용자 등은 보훈(지)청에서 직접 대부를 지원하여, 장기복무 제대군인의 생활안정 도모합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "금융기관에 대부업무를 위탁하고 저신용자 등은 보훈(지)청에서 직접 대부를 지원하여, 장기복무 제대군인의 생활안정 도모합니다.",
+  "eligibility": "군에서 10년 이상 복무하고 전역한 제대군인에게 지원합니다.\n주택구입(신축) 주택임차 대부의 경우 대부신청일 기준 무주택자에게 지원합니다.* 주택을 구입(신축)한 경우에는 부부공동명의로 소유권 등기를 한 경우에도 제대 군인 본인의 지분(50% 이상)을 담보로 대부를 지원합니다.\n아파트 분양의 경우, 아파트 분양 대상 결정자 중 희망자에게 대출을 지원합니다.\n농업에 종사하거나 종사하고자 하는 사람으로서 농토 구입 예정이신 분께 농토구입비에 대한 대출을 지원합니다.(단, 본인 및 직계 존·비속이 직접 경작하는 경우에 한함)\n소규모 사업을 운영하고 있거나 신규로 운영하고자 하는 본인과 배우자(법인사업 등 일부업종 제외)에게 사업비 대출을 지원합니다.\n신규 또는 기존의 개인택시 사업자에게 차량 구입비, 차고 시설비 등의 소요자금에 대한 대출을 지원합니다.\n재해 복구비, 의료비, 경조비 및 전세보증금 인상 등으로 긴급 가계자금이 필요한 경우에 대출을 지원합니다.\n본인 또는 자녀가 국내의 전문대학 이상(대학원 포함)에 입학 또는 재학 중일 때에 학자금 대출을 지원합니다.(가구당 인원 제한없이 지원가능)",
+  "selectionCriteria": "금융기관 대출이 불가능한 신용관리대상자의 경우에는 주소지 관할 보훈지청에서 직접 대출을 지원합니다.\n예산 범위 내에서 대부가 실시되며, 한도액은 예산 상황에 따라 축소될 수 있습니다.\n대부제외자는 다음과 같습니다. \n대출을 받고 2년이 경과되지 않은 경우(생활안정대출, 학자금대출 제외)\n당해연도 각종 대출 지원 또는 지원예정인 경우(단, 동일 대출이 아닌 다른 종류의 대출은 지원 가능)\n주택 구입(신축), 아파트 분양, 주택 임차, 농토 구입, 사업비 대출 중 2건 이상을 상환하고 있는 경우\n생활안정대출을 3건 이상 상환하고 있는 경우(생활안정대출은 1년에 1건만 지원함)\n학자금대출의 경우 타 기관으로부터 동일학기 학자금을 지원 받았거나 받을 경우",
+  "supportContent": "금융기관 위탁대부 지원자 중 6개월 이상 원리금 체납한 경우에는 채권을 보훈부에서 양수하여 관리합니다. \n직접 또는 위탁으로 대출하는 경우 용도에 따라 다음과 같은 한도액과 연이율로 지원합니다. \n주택 구입(신축), 아파트 분양(대부한도액) 3,000~6,000만원 / (연이율) 3.0% / (상환기간) 20년균등\n주택임차(대부한도액) 2,000~4,500만원 / (연이율) 3.5% / (상환기간) 7년균등\n농토구입\n(대부한도액) 3,000만원 / (연이율) 3.0% / (상환기간) 3년거치 10년상환\n사업자금(대부한도액) 2,000만원 / (연이율) 4.0% / (상환기간) 7년균등\n학자금(대부한도액) 학기당 500만원 / (연이율) 4.0% / (상환기간) 5년균등\n생활안정자금(대부한도액) 300만원 / (연이율) 2.5% / (상환기간) 3년균등",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 위탁금융기관,보훈(지)청에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 위탁금융기관,보훈(지)청에서 조사 및 심사",
+   "담당 시/군/구청 또는 위탁금융기관,보훈(지)청에서 보장 결정",
+   "담당 시/군/구청 또는 위탁금융기관,보훈(지)청에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 위탁금융기관,보훈(지)청에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보훈상담센터",
+    "url": "1577-0606"
+   },
+   {
+    "name": "제대군인지원센터",
+    "url": "1666-9279"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "국가보훈부",
+    "url": "http://www.mpva.go.kr/"
+   },
+   {
+    "name": "제대군인지원센터",
+    "url": "http://www.vnet.go.kr/"
+   }
+  ],
+  "lawBasis": [
+   "제대군인지원에 관한 법률 시행령",
+   "제대군인지원에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년도 보훈업무 시행지침Ⅰ.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260325UUWBM0952490182072759&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003193&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -47020,21 +47114,69 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "행정안전부가 관장하고 민영보험사가 판매 및 운영하는 정책보험으로 보험료의 일부를 국가가 보조하여 국민은 저렴한 보험료로 예기치 못한 풍수해 피해를 보상받도록 합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "행정안전부가 관장하고 민영보험사가 판매 및 운영하는 정책보험으로 보험료의 일부를 국가가 보조하여 국민은 저렴한 보험료로 예기치 못한 풍수해 피해를 보상받도록 합니다.",
+  "eligibility": "주택 소유자·세입자, 온실 소유자, 소상공인의 상가 및 공장(소유자 및 세입자) 대상 풍수해·지진재해보험 보험료를 지원합니다.\n(지원대상 목적물) 주택(동산 포함), 온실(비닐하우스 포함), 소상공인의 상가 및 공장\n(대상재해) 태풍, 홍수, 호우, 강풍, 풍랑, 해일, 대설, 지진(지진해일 포함)",
+  "selectionCriteria": "지원대상의 내용을 참고해 주시기 바랍니다.",
+  "supportContent": "풍수해보험 가입자가 부담하여야 하는 보험료의 일부를 국가 및 지자체에서 지원합니다. (총 보험료의 55~100%)\n일반(주택, 온실, 소상공인) : 55.0 ~ 71.2%\n한부모 가족, 차상위계층 : 77.5~78.4%\n기초생활수급자 : 86.5~87%\n풍수해·지진재해 피해 이력이 있거나 재해취약지역 내 주택에 거주 중인 경제취약계층 : 100%",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 풍수해·지진재해보험2(경제취약계층 또는 세입자동산 가입자) 상품은 가까운 행정복지센터 내 풍수해·지진재해보험 담당자를 통해 가입에서 ‘서비스 신청’",
+   "거주지 읍/면/동 주민센터, 민간보험사: DB손해보험, 현대해상, 삼성화재, KB손해보험, 농협손해보험, 한화손해보험(한화 손보는 전북지역 온실 상품 한정), 메리츠화재해상보험에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 민간보험사: DB손해보험, 현대해상, 삼성화재, KB손해보험, NH손해보험, 한화손해보험, 메리츠화재해상보험에서 조사 및 심사",
+   "담당 시/군/구청 또는 민간보험사: DB손해보험, 현대해상, 삼성화재, KB손해보험, 농협손해보험, 한화손해보험, 메리츠화재해상보험에서 보장 결정",
+   "담당 시/군/구청 또는 행정안전부, 지방자치단체에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 관할 자치단체에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
+  "contacts": [
+   {
+    "name": "재난보험과",
+    "url": "044-205-5359"
+   },
+   {
+    "name": "DB손해보험(풍수해보험)",
+    "url": "044-205-5990"
+   },
+   {
+    "name": "현대해상(풍수해보험)",
+    "url": "044-205-5991"
+   },
+   {
+    "name": "삼성화재(풍수해보험)",
+    "url": "044-205-5992"
+   },
+   {
+    "name": "KB손해보험(풍수해보험)",
+    "url": "044-205-5993"
+   },
+   {
+    "name": "NH농협손해보험(풍수해보험)",
+    "url": "044-205-5994"
+   },
+   {
+    "name": "한화손해보험(풍수해보험)",
+    "url": "044-205-5995"
+   },
+   {
+    "name": "메리츠화재해상보험(풍수해보험)",
+    "url": "044-205-5996"
+   }
+  ],
   "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "lawBasis": [
+   "풍수해보험법",
+   "재난 및 안전관리 기본법"
+  ],
+  "forms": [
+   {
+    "name": "풍수해·지진재해보험 단체가입 동의서(2025. 1. 1. 시행).hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20250221UUWBM1033120124884634&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000053&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -47327,21 +47469,44 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "장애인직업재활시설 최저임금적용제외 장애인에게 직업재활과 훈련기회를 제공하여 최저임금 이상 양질의 일자리로 전환을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "장애인직업재활시설 최저임금적용제외 장애인에게 직업재활과 훈련기회를 제공하여 최저임금 이상 양질의 일자리로 전환을 지원합니다.",
+  "eligibility": "「장애인고용촉진 및 직업재활법」 상 장애인으로, 장애인직업재활시설 소속 최저임금 적용제외 근로장애인을 대상으로 합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "참여자의 역량강화 및 취업연계를 위하여 ① 전환준비 ② 전환지원 ③ 고용안정 3단계로 지원합니다.\n고용전환촉진수당(장애인) : 전환준비단계 동안 참여자의 훈련 동기부여 등을 위한 참여수당 지급(월 30만원 한도)\n전환성공수당(장애인) : 전환성공시 3개월간 최대 100만원* 지급* (1개월) 20만원 &rarr; (2개월) 30만원 &rarr; (3개월) 50만원\n사업주지원금 : 전환지원사업 참여자를 채용한 사업주에게 고용유지 관리 등을 위한 지원금 지원(월 90만원 한도, 최대 3년간)\n전환성공지원금(시설): 전환성공 참여자의 근속기간에 따라 3개월간 최대 60만원* 지급* (1개월) 10만원 &rarr; (2개월) 20만원 &rarr; (3개월) 30만원",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 한국장애인고용공단 에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 조사 및 심사",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 보장 결정",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 한국장애인고용공단 에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "한국장애인고용공단",
+    "url": "1588-1519"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "한국장애인고용공단",
+    "url": "http://www.kead.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "장애인고용촉진 및 직업재활법"
+  ],
+  "forms": [
+   {
+    "name": "참여신청서.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230324UUWBM1609560028181051&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001187&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -47419,21 +47584,51 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "농산물 수입개방 확대로 인한 농업인의 경제적 부담을 경감하기 위해 연금 보험료 일부를 지원하여 안정적인 노후생활을 도모하고, 노후소득을 보장합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "농산물 수입개방 확대로 인한 농업인의 경제적 부담을 경감하기 위해 연금 보험료 일부를 지원하여 안정적인 노후생활을 도모하고, 노후소득을 보장합니다.",
+  "eligibility": "국민연금 지역가입자 및 지역 임의계속 가입자 중 농업인에게 지원합니다.",
+  "selectionCriteria": "국민연금 지역가입자(당연/특례) 중 농업인은 다음과 같습니다. \n지역가입자에서 임의계속가입자로 된 농업인\n「국민연금법」시행령 제57조 제1항에서 정하고 있는 농업인\n「농업·농촌 및 식품산업 기본법」제3조제2호 규정에 해당하는 자",
+  "supportContent": "본인이 부담할 연금보험료의 50%를 초과하지 않는 범위 내에서 월 최대 50,350원을 지원합니다. \n기준소득월액 106만원 이하의 경우 월 연금보험료의 50%\n기준소득월액 106만원 초과의 경우 50,350원(정액)",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 국민연금공단에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 국민연금공단에서 조사 및 심사",
+   "담당 시/군/구청 또는 국민연금공단에서 보장 결정",
+   "담당 시/군/구청 또는 국민연금공단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 국민연금공단에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "국민연금공단",
+    "url": "1355"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "국민연금공단",
+    "url": "http://www.nps.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "농어촌구조개선특별회계법",
+   "농어업인 삶의 질 향상 및 농어촌지역 개발촉진에 관한 특별법",
+   "국민연금법",
+   "농어촌주민의 보건복지증진을 위한 특별법"
+  ],
+  "forms": [
+   {
+    "name": "2026년도 농업인 건강연금보험료 지원사업 사업시행지침.hwpx",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260507UUWBM1006360189838105&atcflSn=1"
+   },
+   {
+    "name": "2026년도 농업인 건강연금보험료 지원사업 사업시행지침.hwpx",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260507UUWBM0957560189834723&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001097&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -47457,21 +47652,44 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "해외에서의 사건, 사고로부터 재외국민을 긴급히 보호할 필요가 있는 경우, 영사조력 과정의 비용을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "해외에서의 사건, 사고로부터 재외국민을 긴급히 보호할 필요가 있는 경우, 영사조력 과정의 비용을 지원합니다.",
+  "eligibility": "사건·사고에 처하여 긴급히 보호할 필요성이 있다고 인정되는 재외국민으로서, 긴급의료 및 국내 송환 등에 드는 비용을 스스로 부담할 능력이 없다고 여겨지는 자를 대상으로 지원합니다.\n재외국민이란? 외국에 거주, 체류 또는 방문하는 대한민국 국민",
+  "selectionCriteria": "재외국민이 사건사고에 처하여 스스로 또는 연고자의 지원을 받거나 주재국 정부의 지원을 받는 등 다른 방법으로 해결할 수 없는 경우 지원합니다.\n해외에서 무자력자·무연고자인 재외국민(긴급환자 등)을 긴급히 보호할 필요가 있는 경우\n사건·사고에 처한 재외국민이 본인의 무자력(無資力) 등으로 인하여 비용을 부담하기 어렵다고 판단되는 경우",
+  "supportContent": "본 사업은 해외에서 체류중인 우리 국민 중 무자력자를 대상으로 하며, 국내 금융정보 조회 등을 위해 통상 4주가 소요됩니다.\n긴급의료비(장제비 포함) 및 국내귀국을 위한 제반 비용(항공료 등)을 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 외교부 영사안전국 재외국민보호과에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 외교부 영사안전국 재외국민보호과에서 조사 및 심사",
+   "담당 시/군/구청 또는 외교부 영사안전국 재외국민보호과에서 보장 결정",
+   "담당 시/군/구청 또는 외교부 영사안전국 재외국민보호과에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 외교부 영사안전국 재외국민보호과에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
+  "contacts": [
+   {
+    "name": "외교부 영사안전국 재외국민보호과",
+    "url": "02-2100-8209"
+   }
+  ],
   "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "lawBasis": [
+   "재외국민보호를 위한 영사조력법",
+   "재외국민보호를 위한 영사조력법"
+  ],
+  "forms": [
+   {
+    "name": "긴급지원비 운용지침(외교부예규)(제216호)(20221124).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230314UUWBM1454250026378312&atcflSn=1"
+   },
+   {
+    "name": "[별지 제1호서식] 긴급지원비 신청서(재외국민보호를 위한 영사조력법 시행규칙).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=1584GOWF16GOWF161584&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004669&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -48197,21 +48415,39 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "사회적으로 배려가 필요한 계층(저소득층, 장애인, 유공자, 다자녀 가구 등)의 난방비 부담을 경감하고자 난방비 요금을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "사회적으로 배려가 필요한 계층(저소득층, 장애인, 유공자, 다자녀 가구 등)의 난방비 부담을 경감하고자 난방비 요금을 지원합니다.",
+  "eligibility": "지원대상은 기초생활수급자, 차상위계층, 장애인, 국가유공자, 5·18민주유공자(1급~3급), 독립유공자, 3자녀 이상가구를 대상으로 지원합니다.",
+  "selectionCriteria": "한국지역난방공사에서 지역난방을 공급하는 아파트, 건물 등에 거주하면서 \n아래 지원자격에 해당하는 고객을 대상으로 난방비를 지원하고 있습니다. \n \n기초생활수급자(생계, 의료) : 국민기초생활보장법에 정한 수급자(생계급여, 의료급여) \n기초생활수급자(주거, 교육) : 국민기초생활보장법에 정한 수급자(주거급여, 교육급여) \n차상위계층 : 자활사업참여자, 차상위장애수당자, 한부모가족지원가정, 본임부담경감대상자, 차상위계층확인(구 차상위우선돌봄) \n장애의 정도가 심한 장애인 : 장애인복지법에 의한 장애의 정도가 심한 장애인 \n국가유공자 : 국가유공자 등 예우 및 지원에 관한 법률에 의한 1~3급 상이자 \n5.18민주유공자 : 5.18민주유공자 예우에 관한 법률에 의한 1~3급 상이자 \n독립유공자 : 독립유공자 예우에 관한 법률에 의한 독립유공자 또는 독립유공자의 권리를 이전받은 유족 1인 \n3자녀 이상 가구 : 세대주와의 관계가 \"자(子)\" 도는 \"손(孫)\" 3명 이상인 가구(주민등록등본기준, 위탁아동 포함)",
+  "supportContent": "지원대상별 지원금액\n기초생활수급자(생계, 의료) : 10,000원/월\n기초생활수급자(주거, 교육), 차상위계층, 장애의 정도가 심한 장애인, 국가유공자, 5.18민주유공자, 독립유공자 : 5,000원/월\n3자녀 이상 가구 : 4,000원/월\n지원방법\n전년도 4월~올해 3월에 대한 ① 공사 지역난방 공급 아파트(건물) 거주 및 ② 자격 보유여부를 확인하여, 매년 8~10월 사이에 신청시 등록한 계좌로 최대 12개월분을 입금",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 한국지역난방공사에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 한국지역난방공사에서 조사 및 심사",
+   "담당 시/군/구청 또는 한국지역난방공사에서 보장 결정",
+   "담당 시/군/구청 또는 한국지역난방공사에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 한국지역난방공사에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "한국지역난방공사 따소미고객상담센터",
+    "url": "1688-2488"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "한국지역난방공사",
+    "url": "https://www.kdhc.co.kr"
+   }
+  ],
+  "lawBasis": [
+   "집단에너지사업법"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006226&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -48403,21 +48639,39 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "학대피해 노인에게 일시보호, 법률지원, 전문 상담 등의 서비스를 제공합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "학대피해 노인에게 일시보호, 법률지원, 전문 상담 등의 서비스를 제공합니다.",
+  "eligibility": "학대피해노인 및 가족, 학대행위자를 대상으로 합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해 주시기 바랍니다.",
+  "supportContent": "노인학대 신고·접수 및 학대받는 노인 일시보호, 법률지원, 전문상담 등 서비스를 제공합니다.\n노인인식 개선 및 권익보호 등을 위한 노인학대 예방 홍보 및 교육을 실시합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 노인보호전문기관에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 노인보호전문기관에서 조사 및 심사",
+   "담당 시/군/구청 또는 노인보호전문기관에서 보장 결정",
+   "담당 시/군/구청 또는 노인보호전문기관에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 노인보호전문기관에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
+  "contacts": [
+   {
+    "name": "노인보호전문기관",
+    "url": "1577-1389"
+   }
+  ],
   "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "lawBasis": [
+   "노인복지법"
+  ],
+  "forms": [
+   {
+    "name": "2026 노인보건복지사업안내(1권).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260416UUWBM1551520186714717&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003252&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -48444,21 +48698,54 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "위기아동 가정보호 및 전문가정위탁 시 양육의 전문성을 갖춘 보호가정에서 전문적인 보호가 이루어질 수 있도록 비용을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "위기아동 가정보호 및 전문가정위탁 시 양육의 전문성을 갖춘 보호가정에서 전문적인 보호가 이루어질 수 있도록 비용을 지원합니다.",
+  "eligibility": "위기아동 가정보호 참여 가정 및 전문위탁아동을 보호 중인 전문위탁가정을 대상으로 지원합니다.\n(위기아동 가정보호) 즉각분리 또는 응급조치에 따라 원가정에서 분리된 만 6세 미만 학대피해아동\n(전문가정위탁) 보호대상아동 중 2세 이하 영아, 학대피해아동, 장애아동, 경계선지능아동 등 전문적 보호 필요 아동",
+  "selectionCriteria": "위탁가정 요건(전문위탁부모 자격)은 다음과 같습니다.\n일반가정위탁(공통 기준) 각 기준을 충족\n가정위탁보호자 경험이 3년 이상이거나, 다음의 어느 하나에 해당하는 자격을 충족\n -「사회복지사업법 시행령」 제2조제1항에 따른 사회복지사\n -「영유아보육법」 제21조제2항에 따른 보육교사\n -「유아교육법」 제22조제2항에 따른 교사\n -「초･중등교육법」 제21조제2항에 따른 교사\n -「의료법」 제2조제1항에 따른 의료인\n -「청소년 기본법」 제22조제1항에 따른 청소년상담사 -「고등교육법」 제2조에 따른 학교 또는 「평생교육법」 제32조제1항･제33조제3항에 따라 교육부장관의 인가를 받아 전문대학･대학졸업자와 동등한 학력･학위가 인정되는 평생교육시설 에서 심리 관련 학과를 졸업한 사람으로서 해당 분야의 경력이 3년 이상인 사람",
+  "supportContent": "위기아동 가정보호 또는 전문가정위탁 책정된 아동 1인당 월 100만원을 지급합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "담당 시/군/구청 또는 시군구에서 조사 및 심사",
+   "담당 시/군/구청 또는 가정위탁지원센터에서 조사 및 심사",
+   "담당 시/군/구청 또는 시군구에서 보장 결정",
+   "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리",
+   "담당 시/군/구청 또는 가정위탁지원센터에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "아동권리보장원",
+    "url": "02-6454-8500"
+   },
+   {
+    "name": "가정위탁지원센터",
+    "url": "1577-1406"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "아동권리보장원",
+    "url": "www.ncrc.or.kr"
+   },
+   {
+    "name": "가정위탁지원센터",
+    "url": "www.fostercare.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "아동복지법",
+   "아동복지법 시행령"
+  ],
+  "forms": [
+   {
+    "name": "2026년 아동분야 사업안내(1권).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260428UUWBM1628340188591410&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005032&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -48918,21 +49205,44 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "장애 아동을 입양한 가정에 양육보조금을 지원하여 장애아동의 국내입양 활성화 및 건전육성을 도모합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "장애 아동을 입양한 가정에 양육보조금을 지원하여 장애아동의 국내입양 활성화 및 건전육성을 도모합니다.",
+  "eligibility": "「입양특례법」상 허가를 받은 입양기관에 의해 법의 요건과 절차를 갖추어 장애아동을 국내 입양한 가정을 지원합니다.",
+  "selectionCriteria": "지원대상 장애아동은 다음과 같습니다.\n- 입양 당시 「장애인복지법」 제32조 제1항에 따라 장애인 등록을 한 아동\n- 분만 시 조산/체중미달/분만장애 또는 유전 등으로 입양 당시 질환을 앓고 있는 아동\n* 조산/체중미달/분만장애 및 유전 등으로 질환을 앓고 있던 아동이 지원을 받다가 완치된 경우 지급을 중단\n- 입양 후 선천적 요인으로 인한 장애가 발견되어 장애인 등록을 하거나 질환이 발생한 아동 * 질환이 있는 아동의 지원대상 유무 판정 기준 : 진단별 특성에 적합한 대학 병원급 전문의의 소견서(또는 진단서)를 첨부 받아, 담당의사와 협의 하에 결정\n상기 요건에 해당하는 경우에 만18세까지 지원하며, 중지일이 속하는 달의 급여는 전액 지급합니다.\n「초·중등교육법」제2조에 따른 학교에 재학 중인(휴학생은 제외) 경우에는 졸업시까지 지원합니다.(재학증명서 첨부)",
+  "supportContent": "장애의 정도가 심한 장애 입양아동 : 월 721,000원의 양육보조금을 지원합니다.\n장애의 정도가 심하지 않은 장애 입양아동 등 그외 지원대상 : 월 634,000원의 양육보조금을 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 시군구에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 시군구에서 조사 및 심사",
+   "담당 시/군/구청 또는 시군구에서 보장 결정",
+   "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 관할 시군구에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보건복지상담센터",
+    "url": "129"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "보건복지상담센터",
+    "url": "http://www.129.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "국내입양에 관한 특별법"
+  ],
+  "forms": [
+   {
+    "name": "2025 입양실무매뉴얼.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260326UUWBM1748290182388502&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001021&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -49126,21 +49436,44 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "입양가정에 입양비용을 지원하여 국내 입양의 활성화를 도모합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "입양가정에 입양비용을 지원하여 국내 입양의 활성화를 도모합니다.",
+  "eligibility": "「입양특례법」상 허가를 받은 입양기관에 의해, 요건과 절차를 갖춰 국내 입양한 가정을 지원합니다.",
+  "selectionCriteria": "(입양절차비용) 「입양특례법」상의 입양기관을 통하여 아동을 입양한 국내 입양가정\n(입양철회비용) 「입양특례법」상의 입양기관에 아동 입양의뢰 후 입양동의를 철회 한 가정",
+  "supportContent": "입양절차비용 지원내용은 다음과 같습니다.\n(지원내용) 입양절차에 소요되는 인건비, 아동양육비(위탁모비용포함), 입양절차 절차에 소요되는 비용, 입양기관의 운영비 및 홍보비, 사후관리비 등 입양절차에 실제로 드는 비용(복지부 허가기관 270만원, 지자체 허가기관 100만원 정액 지원)\n(지원방법) 입양절차가 완료되면 입양기관(지부)은 입양기관이 속한 시군구청에 입양비용 지급신청서(서식 3호)를 작성하여 입양절차비용 일괄 청구\n(청구시기) 1개월, 2개월, 3개월 단위로 하되 입양기관과 해당 시군구가 협의하여 선택\n(지급방법) 입양알선비용은 해당 시군구청에서 입양기관 계좌로 지급※ 입양기관은 입양부모에게 일체의 입양수수료를 받을 수 없으며 후원금 등을 강요할 수 없음\n입양철회비용 지원내용은 다음과 같습니다.\n(지원내용) 입양대상아동 인수부터 철회 시까지 아동을 보호하는 동안 소요된 비용\n* 철회 비용 산정 기준\n- 아동 보호 기간 2주 미만 : 15만원\n- 아동 보호 기간 2주 이상 ~ 4주 미만 : 30만원\n- 아동 보호 기간 4주 이상 ~6주 미만 : 45만원\n- 아동 보호 기간 6주 이상 ~8주 미만 : 60만원- 아동 보호 기간 8주 이상 : 73만원\n(지원방법) 입양절차가 완료되면 입양기관(지부)은 입양기관이 속한 시군구청에 입양비용 지급신청서(서식 4호)를 작성하여 입양철회비용 일괄 청구\n(청구시기) 1개월, 2개월, 3개월 단위로 하되 입양기관과 해당 시군구가 협의하여 선택\n(지급방법) 입양철회비용은 해당 시군구청에서 입양기관 계좌로 지급",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 시군구에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 시군구에서 조사 및 심사",
+   "담당 시/군/구청 또는 시군구에서 보장 결정",
+   "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보건복지상담센터",
+    "url": "129"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "보건복지상담센터",
+    "url": "http://www.129.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "국내입양에 관한 특별법"
+  ],
+  "forms": [
+   {
+    "name": "2025 입양실무매뉴얼.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260326UUWBM1748290182388502&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001116&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -49704,21 +50037,48 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "중독관리통합지원센터를 통해 알코올 사용장애가 있는 노숙인 등의 자활을 위한 상담, 치료, 재활 지원 서비스를 제공합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "중독관리통합지원센터를 통해 알코올 사용장애가 있는 노숙인 등의 자활을 위한 상담, 치료, 재활 지원 서비스를 제공합니다.",
+  "eligibility": "중독관리통합지원센터 운영비를 지원합니다.\n상담, 치료, 재활서비스를 필요로 하는 노숙인, 주취범죄자 등 서비스 대상자를 발굴하고 사례관리서비스를 제공합니다.\n지원대상기관 : 노숙자쉼터 등 노숙인 관련 시설, 보호관찰소, 사회복지관, 경찰서, 소방서, 가정폭력상담소, 여성의 전화 등\n연계대상기관 : 정신의료기관, 사회복귀시설, 기타 정신보건시설",
+  "selectionCriteria": "지방자치단체에서 제출한 사업계획서를 검토한 후 지원대상 센터를 선정하여 운영비를 지원합니다.",
+  "supportContent": "중독관리통합지원센터 운영에 필요한 운영비를 지원합니다.\n중독관리통합지원센터를 통해 다음의 서비스를 제공합니다. \n상담, 치료, 재활서비스를 필요로 하는 노숙인 및 주취 범죄자를 발굴하여 서비스 제공\n대상자의 증상, 동기수준에 맞추어 집단상담과 교육 프로그램 제공\n지역사회 내 중독관리 서비스를 지원, 연계할 연계망 구축\n유관기관 역량 강화를 위한 교육 및 교육프로그램 운영",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "담당 시/군/구청 또는 중독관리통합지원센터에서 조사 및 심사",
+   "담당 시/군/구청 또는 중독관리통합지원센터에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 중독관리통합지원센터에 이의 신청 접수",
+   "담당 시/군/구청 또는 중독관리통합지원센터에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 중독관리통합지원센터에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보건복지상담센터",
+    "url": "129"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "공공보건포털 e보건소",
+    "url": "https://www.e-health.go.kr"
+   },
+   {
+    "name": "보건복지상담센터",
+    "url": "http://www.129.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년 정신건강사업 안내(수정) (1).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260417UUWBM0953380186835203&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001160&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -50119,21 +50479,46 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "여성어업인에게 주로 발생하는 직업질환 유발요인에 대한 특수건강검진을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "여성어업인에게 주로 발생하는 직업질환 유발요인에 대한 특수건강검진을 지원합니다.",
+  "eligibility": "51세 이상 여성어업인을 대상으로 합니다. (여성농업인 특수건강검진 대상자는 제외)\n어업경영체에 등록된 여성어업인\n｢어업인 확인서 발급규정｣에 따른 &rsquo;어업인 확인서&lsquo;를 발급받은 자\n어업을 행하고 있는 증빙이 필요합니다.\n지방자치단체에 검진 신청 후 대상자 선정결과를 통보받아야 합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "여성어업인 특화건강검진 시 건강검진비용을 보조합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 각 시도에서 ‘서비스 신청’",
+   "거주지 읍/면/동 주민센터, 각 시군구에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 해양수산부에서 조사 및 심사",
+   "담당 시/군/구청 또는 해양수산부에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 해양수산부에 이의 신청 접수",
+   "담당 시/군/구청 또는 해양수산부에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 해양수산부에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
+  "contacts": [
+   {
+    "name": "해양수산부콜센터",
+    "url": "110"
+   }
+  ],
   "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "lawBasis": [
+   "농어업인 삶의 질 향상 및 농어촌지역 개발촉진에 관한 특별법",
+   "여성농어업인 육성법"
+  ],
+  "forms": [
+   {
+    "name": "2026년도 여성어업인 특화건강검진 사업시행지침 자료.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260507UUWBM0933510189825717&atcflSn=1"
+   },
+   {
+    "name": "23년 여성어업인 특화건강검진 검진신청서.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230224UUWBM1738530023389308&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005026&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -50375,21 +50760,56 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "심리, 정서, 신체적으로 위기상태에 있는 성폭력 피해자에게 상담, 의료, 법률, 보호, 숙식제공 등의 서비스를 제공하여 피해 회복을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "심리, 정서, 신체적으로 위기상태에 있는 성폭력 피해자에게 상담, 의료, 법률, 보호, 숙식제공 등의 서비스를 제공하여 피해 회복을 지원합니다.",
+  "eligibility": "성폭력 피해자를 대상으로 지원합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "성폭력 피해 회복을 위해 다음과 같은 상담·의료·법률·치료회복프로그램을 지원합니다. \n성폭력상담소에서 상담 지원\n보호시설에서 피해자 보호, 숙식 제공 등 회복과 자립 지원\n해바라기센터에서 피해자에 대한 수사·상담·심리치료·의료·법률 등의 서비스 지원\n피해자 간병비 지원 및 아동 피해자에 대한 돌봄 비용을 지원합니다.\n피해 아동 및 장애인 등에 대한 치료동행서비스를 지원합니다.\n성폭력 피해로 인한 의료비 지원, 무료법률지원, 치료회복프로그램을 운영합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 성폭력상담소 ,보호시설 ,통합지원센터 ,여성긴급전화 1366센터 등 피해자지원기관에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 지자체 성폭력 피해 담당부서에서 조사 및 심사",
+   "담당 시/군/구청 또는 지자체 성폭력 피해 담당부서에서 보장 결정",
+   "담당 시/군/구청 또는 지자체 성폭력 피해 담당부서에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 성폭력 상담소, 보호시설, 통합지원센터, 여성긴급전화 1366센터 등 피해자지원기관에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "여성긴급전화",
+    "url": "1366"
+   },
+   {
+    "name": "성평등가족부",
+    "url": "02-2100-6000"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "여성긴급전화",
+    "url": "www.women1366.kr"
+   },
+   {
+    "name": "성평등가족부",
+    "url": "www.mogef.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "성폭력방지 및 피해자보호 등에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년 여성아동권익증진사업 운영지침(최종인쇄본).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260504TTWAT1454080010725441&atcflSn=1"
+   },
+   {
+    "name": "2026년 여성아동권익증진사업 운영지침(서식 및 참고).hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260429UUWBM1004590188694400&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001166&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -50417,21 +50837,36 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "농업 후계인력과 농업인 자녀 등에게 장학금을 지원하여 우수 농업 후계인력을 양성하고, 농업인의 교육비 부담을 경감합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "농업 후계인력과 농업인 자녀 등에게 장학금을 지원하여 우수 농업 후계인력을 양성하고, 농업인의 교육비 부담을 경감합니다.",
+  "eligibility": "졸업 후 농림축산식품분야에 취창업하고자 하는 대학생을 대상으로 지원합니다.\n대학교 3학년 이상(전문대는 1학년 2학기 이상) 재학생\n사업시행년도 기준 만 40세 미만\n직전학기 이수학점 12학점 이상, 백분위 기준 성적 70점 이상",
+  "selectionCriteria": "지원대상의 내용을 참고해 주시기 바랍니다.",
+  "supportContent": "청년창업농장학금을 지원합니다.\n지원금액 : 해당학기 등록금 전액 + 학업장려금 250만원\n최대지원횟수: 4회(전문대는 3회, 전공심화과정 진학 시 4회)",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 농어촌희망재단에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 농어촌희망재단에서 조사 및 심사",
+   "담당 시/군/구청 또는 농어촌희망재단에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 농어촌희망재단에 이의 신청 접수",
+   "담당 시/군/구청 또는 농어촌희망재단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 농림축산식품부에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
+  "contacts": [
+   {
+    "name": "농어촌희망재단",
+    "url": "02-509-2249"
+   }
+  ],
   "homepages": [],
-  "lawBasis": [],
+  "lawBasis": [
+   "농업·농촌 및 식품산업 기본법",
+   "농어업인 삶의 질 향상 및 농어촌지역 개발촉진에 관한 특별법"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000812&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -50936,21 +51371,52 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "특수교육대상자를 위한 교수-학습 지원 콘텐츠 개발 및 사이트를 운영하여 정보격차 해소를 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "특수교육대상자를 위한 교수-학습 지원 콘텐츠 개발 및 사이트를 운영하여 정보격차 해소를 지원합니다.",
+  "eligibility": "「장애인 등에 대한 특수교육법」에 따른 특수교육대상자의 특수학교 및 특수학급 교사, 일반학교 교사 등을 지원합니다.",
+  "selectionCriteria": "다음에 해당하는 사람 중 특수교육이 필요한 사람으로 진단ㆍ평가된 사람을 특수교육 대상자로 선정합니다.\n① 시각장애\n② 청각장애\n③ 지체장애\n④ 지적장애\n⑤ 자폐성장애\n⑥ 정서행동장애\n⑦ 의사소통장애\n⑧ 학습장애\n⑨ 건강장애\n⑩ 발달지체\n⑪ ①~⑨ 장애가 두 가지 이상 중복된 장애* 참고 법령 : 「장애인 등에 대한 특수교육법 시행령 제10조(특수교육대상자의 선정 기준)」",
+  "supportContent": "특수교육 교수-학습 콘텐츠를 개발하여 사이트 운영합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "담당 시/군/구청 또는 학교에서 조사 및 심사",
+   "담당 시/군/구청 또는 학교에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 학교에 이의 신청 접수",
+   "담당 시/군/구청 또는 해당 없음에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 국립특수교육원에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "에듀에이블",
+    "url": "041-537-1485"
+   },
+   {
+    "name": "국립특수교육원",
+    "url": "041-537-1485"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "에듀에이블",
+    "url": "http://eduable.net"
+   },
+   {
+    "name": "국립특수교육원",
+    "url": "http://www.nise.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "장애인 등에 대한 특수교육법"
+  ],
+  "forms": [
+   {
+    "name": "제6차 특수교육발전 5개년 계획.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230221UUWBM1742100022722883&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001075&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -51036,21 +51502,39 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "사망한 독립유공자 기일에 독립유공자의 수권유족에게 제수비를 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "사망한 독립유공자 기일에 독립유공자의 수권유족에게 제수비를 지원합니다.",
+  "eligibility": "독립유공자 유족으로 등록된 수권유족(권한을 부여받도록 특별히 지정한 유족)에게 지급합니다.\n제사 주관자가 따로 있는 경우에는 수권자와 협의를 거친 후 제사 주관자에게 지급합니다.\n국적상실자는 지급 대상에서 제외됩니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "사망한 독립유공자 기일에 제수비 35만원을 지급합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 보훈(지)청에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 지방보훈관서에서 조사 및 심사",
+   "담당 시/군/구청 또는 지방보훈관서에서 보장 결정",
+   "담당 시/군/구청 또는 지방보훈관서에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 지방보훈관서에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "국가보훈부 상담센터",
+    "url": "1577-0606"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "국가보훈부 상담센터",
+    "url": "www.mpva.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "독립유공자예우에 관한 법률"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000038&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -51508,21 +51992,57 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "북한이탈주민이 안정적인 정착기반을 마련하고 교육적 어려움을 해소할 수 있도록 교육비를 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "북한이탈주민이 안정적인 정착기반을 마련하고 교육적 어려움을 해소할 수 있도록 교육비를 지원합니다.",
+  "eligibility": "북한이탈주민과 북한이탈주민의 자녀의 교육비를 지원합니다.",
+  "selectionCriteria": "중·고등학교, 대학등의 지원기준은 다음과 같습니다.\n「초ㆍ중등교육법」 제2조 각 호의 학교의 수업료 등 : 면제 - 북한이탈주민 자녀의 경우 「초ㆍ중등교육법」 제10조의2제3항에 따른 사립학교는 제외\n대학등의 입학금, 수업료등 : 국공립은 면제, 사립은 반액 보조\n가. 대학등의 범위 - 「고등교육법」 제2조 각 호의 학교  -「평생교육법」에 따라 학력과 학위가 인정되는 평생교육시설  -「학점인정 등에 관한 법률」에 따라 평가인정을 받은 학습과정을 운영하는 교육훈련기관  -「국민 평생 직업능력 개발법」에 따라 학위과정을 운영하는 기능대학 포함\n나. 북한이탈주민 자녀의 경우 「고등교육법」 제2조 각 호의 학교만 해당\n지원제한(사립대학에 한함) 기준은 아래와 같습니다. \n국내에서 4년제 대학 이상을 졸업한 자\n직전 학기 평균성적이 100점 만점 중 연속 2회 70점(C학점) 미만인 사람은 당해학기 보조 제한\n※ 지원 제외 기간도 지원 기간(6년의 범위에서 8학기)에 포함 ※ 제적/자퇴 이후(동 대학에) 재입학하거나, 타 대학에 신입학 또는 편입학한 경우에도 이전 학교 학업성적을 기준으로 적용",
+  "supportContent": "중·고등학교는 학교 자체에서 입학금, 수업료, 학교운영지원비 및 기숙사 사용료를 면제합니다.\n국·공립대 해당 대학에서 입학금, 수업료 및 기성회비를 면제합니다.\n사립대 해당 학교가 보조금지급신청서(입학금, 수업료 및 기성회비)를 남북하나재단에 제출하면, 하나재단에서 50% 지급 보조합니다.\n대학 등에서 최초(처음)로 입학 또는 편입학 날로부터 6년의 범위에서 8학기 지원합니다.\n * 의학, 약학, 치의학, 수의학, 한의학 계통은 8년의 범위에서 12학기 지원\n * 타 대학으로 신입학 또는 편입학한 경우, 이전 학교에서 지원받은 학기는 차감하므로 6년의 범위내에서 8학기를 초과한 학기에 대한 등록금은 본인이 부담\n \n ※ 중·고등학교, 국립·사립대학 등의 입학금은 1회에 한하여 면제·보조 ※ 학기제로 운영되지 않는 대학 등에 입학한 경우 20학점을 1학기로 산정",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 남북하나재단에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 남북하나재단에서 조사 및 심사",
+   "담당 시/군/구청 또는 남북하나재단에서 보장 결정",
+   "담당 시/군/구청 또는 남북하나재단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 남북하나재단에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "북한이탈주민 종합상담 콜센터",
+    "url": "1577-6635"
+   },
+   {
+    "name": "남북하나재단",
+    "url": "02-3215-5793"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "남북하나재단",
+    "url": "https://www.koreahana.or.kr"
+   },
+   {
+    "name": "통일부",
+    "url": "www.unikorea.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "북한이탈주민의 보호 및 정착지원에 관한 법률",
+   "북한이탈주민의 보호 및 정착지원에 관한 법률 시행령"
+  ],
+  "forms": [
+   {
+    "name": "[별지 제9호서식] 교육지원 신청서.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=5478GOWF15GOWF155478&atcflSn=1"
+   },
+   {
+    "name": "[별지 제11호서식] 교육지원 보조금 지급신청서.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=5479GOWF15GOWF155479&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000063&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -51602,21 +52122,48 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "미혼·이혼 한부모가 출산 전후 정서적으로 불안정한 상태로 입양에  동의하는 것을 방지하고 입양과 양육에 대하여 충분히 고려할 기회를 제공합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "미혼·이혼 한부모가 출산 전후 정서적으로 불안정한 상태로 입양에  동의하는 것을 방지하고 입양과 양육에 대하여 충분히 고려할 기회를 제공합니다.",
+  "eligibility": "출산(예정) 후의 미혼·이혼 한부모로써 다음 요건을 충족한 사람을 대상으로 합니다.\n출산(예정) 여부 : 출산(예정)일 전 40일 또는 후 7일 이내에 있는 자\n혼인 여부 : 혼인관계증명서 상 혼인관계에 있지 아니한 자\n단, 지원기간동안 입양(동의) 사실이 없어야 합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "미혼·이혼 한부모가 선택하는 서비스 이용 비용을 지원합니다.\n(가정 내 보호지원)\n- 산후지원인력이 가정방문서비스를 지원 : 1주, 500,000원(지원단가)\n- 가족, 친구 등 지인의 도움을 받기 원할 경우 : 1주, 350,000원(지원단가)* 아동 생필품비 포함\n(미혼모가족복지시설 내 입소자 지원)- 미혼모자가족시설 입소 시, 산후지원인력 인건비 지원(1주), 400,000원(지원단가)\n(산후조리원 보호지원)\n- 1주 산후조리원 이용료 지원 최대 1,400,000원\n- 1주 이용료가 1,400천원 미만인 산후조리원의 경우, 아동 생필품비 및 생모 식료품비 등을 포함한 실비 지원 * 산후조리원 이용 종료 후 시군구로 지급 신청(신청서에 아동 생필품비 및 생모 실표품비가 포함된 사용금액 명시)",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 관할 시·군·구에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 관할 시·군·구에서 조사 및 심사",
+   "담당 시/군/구청 또는 관할 시·군·구에서 보장 결정",
+   "담당 시/군/구청 또는 관할 시·군·구에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 관할 시군구에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보건복지상담센터",
+    "url": "129"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "보건복지상담센터",
+    "url": "http://www.129.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "국내입양에 관한 특별법"
+  ],
+  "forms": [
+   {
+    "name": "2025 입양실무매뉴얼.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260401TTWAT1600080009987731&atcflSn=1"
+   },
+   {
+    "name": "2025년 아동수당 사업안내.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20250305UUWBM1524510126965633&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000807&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -52016,21 +52563,62 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "북한이탈주민의 안정적 국내 정착을 지원하기 위해 본인 부담 의료비를 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "북한이탈주민의 안정적 국내 정착을 지원하기 위해 본인 부담 의료비를 지원합니다.",
+  "eligibility": "아래 기준을 모두 충족하는 북한이탈주민을 지원합니다.\n① 치료종료일(외래 및 퇴원) 기준 2026년 질병 치료\n② 기준중위소득 100% 이하\n③ 민간보험으로 치료비를 전액 보장받지 못하는 경우\n※ 단, 질환별 지원대상 세부기준 상이할 수 있음 ※ 2025년 운영기준 개시 이전 신청자의 경우 2023년 운영기준 적용하여 심사 및 지원결정하며, 2024년 운영기준 개시 이후 추가지원 가능한 부분에 대해서는 소급적용 가능",
+  "selectionCriteria": "소득기준 및 질환별 지원기준을 충족하는 북한이탈주민을 지원합니다.\n기초생활수급자 및 차상위계층은 질환별 지원기준만 확인하여 선정합니다.(타법 의료급여 선정기준에 의한 대상자 포함)\n그 외의 자는 성인 가구원 수에 따른 월 건강보험료 본인부담금으로 소득기준 확인 후 질환별 지원기준 확인하여 선정합니다.- 가구원 수가 5인 이상인 경우 5인 보험료에 준함\n소득기준은 다음과 같습니다.\n(기초생활수급자 또는 차상위계층) 지방자치단체 등에서 저소득층으로 확인된 가구이므로 가구구성에 따른 소득기준을 적용하지 않음\n(건강보험 가입자) 성인 가구원 수에 따른 월 건강보험료로 소득기준을 판정하며, 신청일 기준 모든 가구원의 최근 3개월 평균 건강보험료 본인부담금 합산금액이 2026년 기준중위소득 100% 기준 이하여야 함\n질환별 지원기준은 다음과 같습니다.\n(일반질환)\n \n기준중위소득 100% 이하이고 민간보험으로 치료비를 보장받지 못하는 북한이탈주민\n입원, 본인부담금 10만원 이상 발생하는 경우\n(만성·중증·희귀·난치성질환)\n \n기준중위소득 100% 이하이고 민간보험으로 치료비를 보장받지 못하는 북한이탈주민\n외래·입원, 본인부담금 월 10만원 이상 발생하는 경우 (공공의료 협약병원 지원 대상자는 본인부담금 기준 무관)\n(정신질환)\n \n기준중위소득 100% 이하인 북한이탈주민 또는 북한이탈주민의 가족구성원으로 전문상담사의 지원연계를 받은 자\n본인부담금 10만원 이상 발생하는 경우\n민간보험으로 치료비를 보장받지 못하는 북한이탈주민\n(장기이식)\n \n기준중위소득 100% 이하이고 민간보험으로 치료비를 보장받지 못하는 북한이탈주민\n장기이식 대상자 또는 기증자\n(치과 틀니 및 임플란트)\n \n(틀니) 북한이탈주민(소득기준 및 민간보험 가입여부 무관)\n(임플란트) 기준중위소득 100% 이하이고 민간보험으로 치료비를 보장받지 못하는 북한이탈주민",
+  "supportContent": "질환에 따라 아래의 의료비를 지원합니다.\n(일반질환)\n \n연 2회, 본인부담금의 100%(지원제외항목 제외)\n연 최대 300만원 이내 지원* 본인부담금은 진료비계산서·영수증상 납부한 금액을 기준으로 하며, 민간보험에서 일부 보장받은 경우 납부한 금액에서 민간보험 보장액을 제외한 금액이 10만원 이상일 때 지원가능\n(만성·중증·희귀·난치성질환)\n \n신청횟수 무관, 본인부담금의 100%(지원제외항목 제외)<>\n연 최대 800만원 이내 지원\n(정신질환)\n \n(진단검사) 1인 연 1회 지원\n(의료비) 신청횟수 무관, 본인부담금의 100%(지원제외항목 제외)\n연 최대 800만원 이내 지원\n(장기이식)\n \n(이식 대상자) 생애 1회, 본인부담금의 100%(지원제외항목 제외), 최대 1,000만원 이내 지원\n(기증자) 만성·중증·희귀·난치성질환 지원기준을 적용하여 최대 800만원 이내에서 지원(단, 이식검사료 제외)\n(치과 틀니 및 임플란트)\n \n(틀니) 상악 및 하악 각각 생애 1회 지원가능\n - 상악 및 하악 전체틀니 생애 1회, 최대 100만원 이내 지원\n - 상악 또는 하악 틀니 생애 1회, 최대 50만원 이내 지원\n(임플란트) 생애 누적 최대 200만원 이내 지원(신청횟수 및 개수 무관)",
   "applyMethod": null,
-  "applySteps": [],
-  "medianPercent": null,
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 남북하나재단에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 남북하나재단에서 조사 및 심사",
+   "담당 시/군/구청 또는 남북하나재단에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 남북하나재단에 이의 신청 접수",
+   "담당 시/군/구청 또는 남북하나재단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 남북하나재단에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
+  "medianPercent": 100,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "북한이탈주민지원재단",
+    "url": "02-3215-5815"
+   },
+   {
+    "name": "북한이탈주민 종합상담 콜센터",
+    "url": "1577-6635"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "통일부",
+    "url": "https://www.unikorea.go.kr"
+   },
+   {
+    "name": "북한이탈주민 포털",
+    "url": "https://hanaportal.unikorea.go.kr"
+   },
+   {
+    "name": "남북하나재단",
+    "url": "https://www.koreahana.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "북한이탈주민의 보호 및 정착지원에 관한 법률 시행령",
+   "북한이탈주민의 보호 및 정착지원에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년도 의료지원 사업 운영기준(2026.2).hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260402UUWBM1631150183566383&atcflSn=1"
+   },
+   {
+    "name": "[붙임2]신청서 및 개인정보동의서.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260331UUWBM2103230183280278&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003206&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -52825,21 +53413,48 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "저소득 무주택 한부모가족의 주거로 인한 심리적·경제적 부담을 덜고 저렴한 월세로 자립을 준비할 수 있도록 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "저소득 무주택 한부모가족의 주거로 인한 심리적·경제적 부담을 덜고 저렴한 월세로 자립을 준비할 수 있도록 지원합니다.",
+  "eligibility": "자립의지가 있는 저소득(중위소득 100%이하) 무주택 한부모가족",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "입주 기간 : 최장 6년 이내로 하되, 2년마다 입주자격 재심사 후 연장여부 결정\n※ 연장 시 입주자선정심사위원회의 심의가 필요하며, 입주기간의 성과･자립계획 등을 종합적으로 심사하여 연장 결정※ 거주기간 6년이 도래하였으나 퇴거가 어려운 사정이 있으며 입주대기자가 없는 경우, 입주자선정심사위원회에서 입주대기자 발생 전까지 입주기간 특별연장 가능\n입주 방식\n - 공동생활지원형 매입임대주택 주거지원의 취지(공동생활가정 구성 및 생활 지원)에 따라 임대주택 1호당 2가구 이상 입주 가능 - 주택 규모, 가족 구성, 가구원 수 및 자녀 연령 등 여건상 필요시 1호당 1가구 입주 가능\n임대보증금 및 관리비 : 주거비용 중 임대보증금 정부 지원",
   "applyMethod": null,
-  "applySteps": [],
-  "medianPercent": null,
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 운영기관에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 운영기관에서 조사 및 심사",
+   "담당 시/군/구청 또는 운영기관에서 보장 결정",
+   "담당 시/군/구청 또는 운영기관에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 운영기관에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
+  "medianPercent": 100,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "전국 건강가족센터",
+    "url": "1577-9337"
+   },
+   {
+    "name": "LH공사(마이홈포털)",
+    "url": "1600-1004"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "한국건강가정진흥원",
+    "url": "www.kihf.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "한부모가족지원법"
+  ],
+  "forms": [
+   {
+    "name": "2026년 한부모가족지원사업 안내 지침.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260326UUWBM1105100182286160&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006284&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -52927,21 +53542,44 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "장애아동을 입양한 국내입양가정에 의료비를 지원하여 장애아동의 국내입양 활성화 및 건전육성을 도모합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "장애아동을 입양한 국내입양가정에 의료비를 지원하여 장애아동의 국내입양 활성화 및 건전육성을 도모합니다.",
+  "eligibility": "장애아동 양육보조금 지급대상자로 결정된 아동에게 지원합니다.",
+  "selectionCriteria": "지원대상 장애아동은 다음과 같습니다.\n- 입양 당시 「장애인복지법」 제32조 제1항에 따라 장애인 등록을 한 아동\n- 분만 시 조산/체중미달/분만장애 또는 유전 등으로 입양 당시 질환을 앓고 있는 아동\n* 조산/체중미달/분만장애 및 유전 등으로 질환을 앓고 있던 아동이 지원을 받다가 완치된 경우 지급을 중단\n- 입양 후 선천적 요인으로 인한 장애가 발견되어 장애인 등록을 하거나 질환이 발생한 아동 * 질환이 있는 아동의 지원대상 유무 판정 기준 : 진단별 특성에 적합한 대학 병원급 전문의의 소견서(또는 진단서)를 첨부 받아, 담당의사와 협의 하에 결정\n상기 요건에 해당하는 경우에 만18세까지 지원하며, 중지일이 속하는 달의 급여는 전액 지급합니다.\n「초·중등교육법」제2조에 따른 학교에 재학 중인(휴학생은 제외) 경우에는 졸업시까지 지원합니다.(재학증명서 첨부)",
+  "supportContent": "연간 260만원 한도내에서 본인이 부담한 진료 상담 재활 및 치료(심리치료 포함)에 소요되는 비용(급여 및 비급여부분 포함)을 지원합니다.\n* 본인부담금(시행령 제7조 제2항 제2호)\n-「의료급여법」제7조제1항 및 제12조에 따른 의료급여 또는 요양비에 대한 본인 부담금\n-「국민건강보험법」제41조제1항 및 제49조에 따른 요양급여 또는 요양비에 대한 본인부담금-「사회복지사업법」·「장애인복지법」·「정신보건법」 등 다른 법령에 따라 제공되는 진료·상담·재활 및 치료에 드는 비용 중 본인부담금\n장애인보조기구에 대한 의료비 청구도 포함하여 지원합니다.(&rsquo;13.1.1부터 적용)\n- 다만, 장애인 보조기구에 대한 의료비 지원액은 연간 의료비 지원 한도액의 50% 이내로 함- 장애인보조기구는 장애인 보조기구 품목지정 등에 관한 규정(별표1, 2) 준용",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 시군구에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 시군구에서 조사 및 심사",
+   "담당 시/군/구청 또는 시군구에서 보장 결정",
+   "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 관할 시군구에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보건복지상담센터",
+    "url": "129"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "보건복지상담센터",
+    "url": "http://www.129.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "국내입양에 관한 특별법"
+  ],
+  "forms": [
+   {
+    "name": "2025 입양실무매뉴얼.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260326UUWBM1748290182388502&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001121&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -53246,21 +53884,45 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "자연재해로 인명, 재산상 피해를 입은 국가유공자 등 보훈가족을 위로하고 재해복구의지를 고취시키기 위하여 재해위로금을 지급합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "자연재해로 인명, 재산상 피해를 입은 국가유공자 등 보훈가족을 위로하고 재해복구의지를 고취시키기 위하여 재해위로금을 지급합니다.",
+  "eligibility": "자연재해로 인명, 재산상 피해를 입은 다음의 대상자에게 재해위로금을 지급합니다.\n- 「독립유공자예우에 관한 법률」제4조에 따른 독립유공자 또는 동법 제5조의 유가족 중 선순위자 1명\n- 「국가유공자 등 예우 및 지원에 관한 법률」제4조 적용대상자 또는 동법 제5조의 유가족 중 선순위자 1명\n- 「참전유공자 예우 및 단체설립에관한 법률」제3조 적용대상자\n- 「5.18민주유공자예우에 관한 법률」제4조 적용대상자 또는 동법 제5조의 유가족 중 선순위자 1명\n- 「특수임무유공자 예우 및 단체설립에 관한 법률」제3조 적용대상자 또는 동법 제4조의 유가족 중 선순위자 1명\n- 「보훈보상대상자 지원에 관한 법률」제2조 적용대상자 또는 동법 제3조의 유가족 중 선순위자 1명",
+  "selectionCriteria": "다음의 재해로 인한 인명 또는 재산상의 피해에 대해 지원합니다.\n- 태풍·홍수·호우·강품·풍랑·해일·대설·낙뢰·가뭄·지진 그 밖의 이에 준하는 자연재해로 인하여 입은 인명 또는 재산상의 피해\n- 직접 거주하고 있는 주택의 화재로 인하여 입은 인명 또는 재산상의 피해\n- 「재난 및 안전관리 기본법」 제60조에 따라 선포된 특별재난지역의 피해\n* 감염병으로 특별재난지역이 선포된 경우 특별재난지역 외의 지역 및 선포 이전의 동일한 사망피해에 대해서도 재해위로금 지급\n농작물, 과수, 수산물 등의 경작이나 양식 실패 등 재해와 직접 관련이 없는 피해, 고의로 인해 발생되거나 확대된 피해와 본채가 아닌 별채 또는 창고 등 부속건물, 빈집, 무허가 등 불법건축물, 건축중인 주택은 재해위로금을 지원하지 않습니다.",
+  "supportContent": "피해 종류 및 정도에 따라 30만원~500만원을 지원합니다. \n(인명피해) 사망(실종)은 500만원, 2주 이상 입원치료가 필요한 부상은 30만원 지급\n(주택피해) 전파의 경우 500만원, 반파는 250만원, 침수는 50만원을 지급\n(공동주택피해) 2,000만원 초과 피해시 100만원, 1,000만원 초과 2,000만원 이하의 피해시 50만원 지급\n(기타 재산피해) 대규모 피해(피해액 1,000만원 초과)시 50만원, 소규모 피해(피해액 50만원 초과 1,000만원 이하)시 30만원 지급\n(공동이용시설피해) 대규모 피해(피해액 1,000만원 초과)시, 500만원, 소규모 피해(피해액 500만원 초과) 250만원 지급",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 국가보훈부(각 지방 보훈관서)에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 보훈지(방)청에서 조사 및 심사",
+   "담당 시/군/구청 또는 보훈지(방)청에서 보장 결정",
+   "담당 시/군/구청 또는 보훈지(방)청에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 관할 보훈관서에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보훈상담센터",
+    "url": "1577-0606"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "국가보훈부",
+    "url": "http://www.mpva.go.kr/"
+   }
+  ],
+  "lawBasis": [
+   "보훈기금법",
+   "보훈기금법 시행령"
+  ],
+  "forms": [
+   {
+    "name": "재해위로금 지급규정 전문(국가보훈처 훈령 제1454호).hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20230329UUWBM1008390028682421&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003214&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -54117,21 +54779,54 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "장기복무 제대군인에 대한 교육비 지원으로 생활안정을 도모합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "장기복무 제대군인에 대한 교육비 지원으로 생활안정을 도모합니다.",
+  "eligibility": "(본인교육지원) 10년 이상 군복무한 장기복무 제대군인 등록자로서 전역 후 3년 이내에 대학에 입학한 경우 지원합니다.\n(자녀교육지원) 10년 이상 군복무자로서 국가보훈부의 생활수준 조사결과, 지원대상으로 결정된 제대 군인의 고등학교에 재학하는 자녀가 있는 경우 지원합니다.",
+  "selectionCriteria": "「고등교육법」 제2조에 따른 대학(산업대학, 교육대학, 전문대학, 원격대학 및 기술대학을 포함) 및 이에 준하는 학교에 재학하는 경우에 선정합니다.\n장기복무 제대군인이 생활수준 조사결과 기준에 해당하고 그 자녀가 고등학교 또는 이에 준하는 학교에 재학하는 경우에 선정합니다.",
+  "supportContent": "본인이 대학에 입학하거나 재학 중인 경우 입학금 및 수업료의 50%를 지원합니다.\n고등학생 자녀의 입학금 및 수업료의 전액을 지원합니다. \n입학금, 수업료를 감면받거나 보조받을 수 있는 장기복무 제대군인 또는 그 자녀가 다른 법령에 따라 입학금·수업료를 감면받거나 보조받는 경우에는 총액을 넘지 않는 범위 내에서 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 보훈(지)청에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 보훈(지)청에서 조사 및 심사",
+   "담당 시/군/구청 또는 보훈(지)청에서 보장 결정",
+   "담당 시/군/구청 또는 보훈(지)청에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 보훈(지)청에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보훈상담센터",
+    "url": "1577-0606"
+   },
+   {
+    "name": "제대군인지원센터",
+    "url": "1666-9279"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "국가보훈부",
+    "url": "http://www.mpva.go.kr/"
+   },
+   {
+    "name": "제대군인지원센터",
+    "url": "http://www.vnet.go.kr/"
+   }
+  ],
+  "lawBasis": [
+   "제대군인지원에 관한 법률",
+   "교육지원 업무처리 규정",
+   "제대군인지원에 관한 법률 시행령"
+  ],
+  "forms": [
+   {
+    "name": "2026년도 보훈업무 시행지침Ⅰ.hwp",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260325UUWBM0952490182072759&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001073&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -54318,21 +55013,51 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "애국지사 및 국가유공상이자 등의 교통권 보장과 이동편의 제공을 위하여 버스 등 수송시설의 무임 또는 할인 이용을 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "애국지사 및 국가유공상이자 등의 교통권 보장과 이동편의 제공을 위하여 버스 등 수송시설의 무임 또는 할인 이용을 지원합니다.",
+  "eligibility": "애국지사, 전공상군경(1급~7급), 4.19혁명부상자(1~7급), 공상공무원(1~7급), 6.18자유상이자(1~7급), 5.18민주부상자(1급~14급), 지원공상자(1~7급), 재해부상자(1~7급)를 대상으로 지원합니다.",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "민영버스, 내항여객선, 고속철도의 무료 또는 감면 이용을 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 지방보훈(지)청에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 지방보훈(지)청에서 조사 및 심사",
+   "담당 시/군/구청 또는 민영버스, 내항여객선, 고속철도에서 보장 결정",
+   "이의가 있을 경우, 담당 시/군/구청 또는 국가보훈부에 이의 신청 접수"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "보훈상담센터",
+    "url": "1577-0606"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "보훈상담센터",
+    "url": "www.mpva.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "보훈보상대상자 지원에 관한 법률",
+   "특수임무유공자 예우 및 단체설립에 관한 법률",
+   "국가유공자 등 예우 및 지원에 관한 법률 시행령",
+   "5ㆍ18민주유공자예우에 관한 법률 시행령",
+   "국가유공자 등 예우 및 지원에 관한 법률",
+   "독립유공자예우에 관한 법률 시행령",
+   "독립유공자예우에 관한 법률",
+   "특수임무유공자 예우 및 단체설립에 관한 법률 시행령",
+   "5ㆍ18민주유공자예우 및 단체설립에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년 보훈업무 시행지침(수송시설 이용지원).pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260428UUWBM1347080188530712&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000101&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -54716,21 +55441,38 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "취업 사각지대에 놓인 특정 유형의 중증장애인 및 장년장애인, 발달장애인에게 사업체 인턴 실시 후 정규직 취업 연계를 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "취업 사각지대에 놓인 특정 유형의 중증장애인 및 장년장애인, 발달장애인에게 사업체 인턴 실시 후 정규직 취업 연계를 지원합니다.",
+  "eligibility": "인턴참여 신청 자격은 다음과 같습니다.\n(중증장애인) 뇌병변, 정신, 신장, 언어, 호흡기, 뇌전증, 시각, 척수손상 또는 근육병증으로 운동기능 장애가 있는 지체장애\n(장년장애인) 만 50세 이상 장년층 장애인\n(발달장애인) 지적, 자폐성장애",
+  "selectionCriteria": "지원대상을 참고해주시기 바랍니다.",
+  "supportContent": "장애인 인턴제를 참여하는 사업체를 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "담당 시/군/구청 또는 한국장애인고용공단에서 조사 및 심사",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 보장 결정",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 한국장애인고용공단에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "한국장애인고용공단",
+    "url": "1588-1519"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "한국장애인고용공단",
+    "url": "https://www.kead.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "장애인고용촉진 및 직업재활법"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004654&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -54954,21 +55696,47 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "국립특수학교(급)의 특수교육 지원인력 배치, 돌봄교실 운영 및 특수교육대상자의 방과후학교 경비를 지원하여 장애학생의 학습권을 보장합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "국립특수학교(급)의 특수교육 지원인력 배치, 돌봄교실 운영 및 특수교육대상자의 방과후학교 경비를 지원하여 장애학생의 학습권을 보장합니다.",
+  "eligibility": "국립특수학교(급) 및 학교 배치 특수교육 대상자를 지원합니다.\n국립특수학교(급)에 재학중인 장애학생\n국립특수학교 6개교, 국립대학 부설 학교 40학급\n특수교육지원인력, 사회복무요원 등",
+  "selectionCriteria": "(특수교육지원인력 지원) 특수교육 대상 학생 중에서 중증장애 학생을 우선 지원합니다.\n(방과후교육비, 종일반) 특수교육대상학생 희망자 전원을 대상으로 지원합니다.",
+  "supportContent": "특수교육대상 학생에게 교내 교수-학습 활동 및 이동 보조, 방과후교육 등을 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 국립특수학교 및 국립대학 부설학교에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 국립특수학교 및 국립대학 부설학교에서 조사 및 심사",
+   "담당 시/군/구청 또는 국립특수학교 및 국립대학 부설학교에서 보장 결정",
+   "담당 시/군/구청 또는 국립특수학교 및 국립대학 부설학교에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 국립특수학교 및 부설학교에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
-  "forms": [],
+  "contacts": [
+   {
+    "name": "교육부 특수교육정책과",
+    "url": "044-203-6569"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "교육부 특수교육정책과",
+    "url": "http://www.moe.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "교육기본법",
+   "장애인 등에 대한 특수교육법",
+   "유아교육법",
+   "초ㆍ중등교육법"
+  ],
+  "forms": [
+   {
+    "name": "(누리집 탑재용) 2026년도 특수교육 운영계획.pdf",
+    "url": "https://bokjiro.go.kr/ssis-tbu/CmmFileUtil/getDownload.do?atcflId=20260413UUWBM1414190185860189&atcflSn=1"
+   }
+  ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001173&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -55663,21 +56431,39 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "농어촌출신 대학생에게 등록금 전액을 무이자로 대출해줌으로써 농어업인 자녀에게 균등한 교육기회를 제공합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "농어촌출신 대학생에게 등록금 전액을 무이자로 대출해줌으로써 농어업인 자녀에게 균등한 교육기회를 제공합니다.",
+  "eligibility": "농어촌 지역에 주소를 두고 6개월(180일) 이상 거주하거나 농어업에 종사하고 있는 보호자의 자녀 또는 배우자인 대학생 및 대학원생\n농어업에 종사하는 대학생 및 대학원생 본인 농식품인재 대상 학과(농업계대학 농림축산식품계열 학과)에 재학, 복학, 입학(신입, 편입학, 재입학) 예정인 대학생 및 대학원생 본인",
+  "selectionCriteria": "성적 및 이수학점 기준은 다음과 같습니다. \n신입생군(신입생, 편입생, 재입학생) : 해당 대학의 &ldquo;입학 허가&rdquo;는 성적기준을 통과한 것으로 인정하여 성적 및 이수학점 기준 적용 제외\n재학생 : 직전학기 소속대학 최저이수학점 또는 12학점 이상 이수, 70점 이상(100점 만점) 성적 기준을 통과한 자\n졸업학년 학부생의 경우 이수학점 기준 적용 제외, 장애인의 경우 성적 및 이수학점 기준 적용 제외\n대학 학칙에 의거하여 한 학기 성적 산출이 가능한 정규학기(계절학기 포함 가능) 기준이며, 학점은행제(시간제, 전일제) 등 정규학기 외 취득한 학점은 인정하지 않습니다.",
+  "supportContent": "해당 학기 대학이 통보한 등록금(입학금, 수업료 등) 전액을 무이자 대출을 받을 수 있도록 지원합니다.",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 한국장학재단에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 한국장학재단에서 조사 및 심사",
+   "담당 시/군/구청 또는 한국장학재단에서 보장 결정",
+   "담당 시/군/구청 또는 한국장학재단에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 농림축산식품부에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "한국장학재단 고객센터",
+    "url": "1599-2000"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "한국장학재단 고객센터",
+    "url": "www.kosaf.go.kr"
+   }
+  ],
+  "lawBasis": [
+   "농업·농촌 및 식품산업 기본법"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001096&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -56013,21 +56799,39 @@ export const services: readonly WelfareService[] = [
   "applyMethods": [],
   "onlineApply": false,
   "summary": "신용카드 발급이 어려워 할부·포인트 등 이용혜택에서 소외된 저신용자 분들의 금융상품 선택권을 확대하고 건전한 소비로 이어질 수 있도록 지원합니다.",
-  "outline": null,
-  "eligibility": null,
-  "selectionCriteria": null,
-  "supportContent": null,
+  "outline": "신용카드 발급이 어려워 할부·포인트 등 이용혜택에서 소외된 저신용자 분들의 금융상품 선택권을 확대하고 건전한 소비로 이어질 수 있도록 지원합니다.",
+  "eligibility": "개인신용평점 하위 20%이하 중 개인신용카드를 미 보유 중이며, 연 가처분 소득이 연 600만원 이상인 자를 대상으로 지원합니다. * '26년 4월부터 KCB 700점 또는 NICE 749점 이하\n햇살론 카드 필수교육(3과목) 이수 필수\n개인회생, 개인워크아웃, 새출발기금, 서금원 자체 채무조정 성실상환자의 경우 6개월 이상 성실 상환 시 공공정보 등재 시에도 신청가능",
+  "selectionCriteria": "지원대상의 내용을 참고해주시기 바랍니다.",
+  "supportContent": "보증한도 : 신규발급 시 최대 200만원, 성실이용 시 최대 300만원\n * 카드 이용한도는 보증한도에서 20만원 차감하여 부여 * 개인별 신용도를 고려하여 이용한도 부여\n보증기간 : 최대 5년(카드 이용기간과 동일)\n취급기관 : 롯데, 현대, 국민 삼성, 신한, 우리, 하나카드",
   "applyMethod": null,
-  "applySteps": [],
+  "applySteps": [
+   "거주지 읍/면/동 주민센터, 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 ‘서비스 신청’",
+   "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 조사 및 심사",
+   "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 보장 결정",
+   "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 대상자에게 서비스 제공",
+   "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 서비스 제공 이후 대상자의 상황 관리"
+  ],
   "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
-  "contacts": [],
-  "homepages": [],
-  "lawBasis": [],
+  "contacts": [
+   {
+    "name": "서민금융진흥원",
+    "url": "1397"
+   }
+  ],
+  "homepages": [
+   {
+    "name": "서민금융진흥원",
+    "url": "https://www.kinfa.or.kr"
+   }
+  ],
+  "lawBasis": [
+   "서민의 금융생활 지원에 관한 법률"
+  ],
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006275&wlfareInfoReldBztpCd=01",
-  "baseYear": null,
+  "baseYear": "2026",
   "updatedAt": null
  },
  {
@@ -56413,4 +57217,4 @@ export const services: readonly WelfareService[] = [
 ];
 
 /** 데이터 파일을 마지막으로 갱신한 날. sitemap의 lastmod에 쓴다. */
-export const SERVICES_UPDATED = "2026-09-03";
+export const SERVICES_UPDATED = "2026-09-04";
