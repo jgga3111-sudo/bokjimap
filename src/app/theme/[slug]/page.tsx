@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { THEMES, themeBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
-import ServiceList from "@/components/ServiceList";
+import HubList from "@/components/HubList";
+import { toRow, facetsFor } from "@/lib/hubRows";
 
 export function generateStaticParams() {
   return THEMES.map((t) => ({ slug: t.slug }));
@@ -32,16 +33,19 @@ export default async function ThemePage({ params }: PageProps<"/theme/[slug]">) 
   if (!t) notFound();
 
   /* 데이터에는 슬러그가 아니라 원문 값("생활지원")이 들어 있다. */
-  const list = services.filter((s) => s.themes.includes(t.value));
+  const rows = services.filter((s) => s.themes.includes(t.value)).map(toRow);
+  /* 자기 축(주제)은 빼고 셋만 건다. 다섯을 다 걸면 필터 상자가 화면 한 장을
+     차지해 정작 목록이 안 보인다. */
+  const groups = facetsFor(rows, ["region", "benefit", "life"]);
 
   return (
     <div className="space-y-6">
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>
-        <p className="text-sm text-muted">{list.length}건 · 조회수 높은 순</p>
+        <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
-      <ServiceList services={list} />
+      <HubList rows={rows} groups={groups} />
     </div>
   );
 }

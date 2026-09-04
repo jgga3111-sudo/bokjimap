@@ -44,6 +44,20 @@ const badCanonical = [];
 const byTitle = new Map();
 const byDescription = new Map();
 
+/**
+ * 어느 목록에서도 링크되지 않는 상세 — **고아.**
+ *
+ * 사이트맵에만 있고 사이트 안에서는 갈 길이 없는 페이지다. 구글은 사이트맵으로
+ * 발견은 하지만 "어디서도 안 걸리는 페이지"로 보고 뒤로 미룬다. 사람은 아예
+ * 도달할 수 없다.
+ *
+ * 이 검사를 넣은 계기(2026-09-04): `/benefit/[slug]`가 상위 60건에서 잘려
+ * 「국민내일배움카드제」가 사이트 어디에도 링크되지 않고 있었다. 목록 상한은
+ * 무게를 줄이려고 걸었는데, 그 대가가 눈에 안 보였던 것이다. 상한을 다시
+ * 만질 때마다 이 줄이 알려 준다.
+ */
+const linkedFrom = new Set();
+
 for (const url of urls) {
   const file = htmlPath(url);
   if (!existsSync(file)) {
@@ -51,6 +65,12 @@ for (const url of urls) {
     continue;
   }
   const html = readFileSync(file, "utf8");
+
+  /* 상세가 아닌 페이지(목록·허브)가 거는 상세 링크를 모은다. 상세끼리
+     거는 링크는 세지 않는다 — 상세 A에서만 걸리는 상세 B도 고아다. */
+  if (!/^\/service\/WLF/.test(url.replace(ORIGIN, ""))) {
+    for (const m of html.matchAll(/\/service\/(WLF\d+)/g)) linkedFrom.add(m[1]);
+  }
 
   if (/noindex/i.test(html)) noindexed.push(url);
 
@@ -78,8 +98,14 @@ console.log(line);
 console.log(`색인 가능성 점검 — 사이트맵 ${urls.length}개`);
 console.log(line);
 
+/* 사이트맵에 든 상세 중, 어떤 목록에서도 링크되지 않은 것. */
+const orphans = urls
+  .map((u) => u.replace(ORIGIN, "").match(/^\/service\/(WLF\d+)$/)?.[1])
+  .filter((id) => id && !linkedFrom.has(id));
+
 const problems = [
   ["HTML이 없다 (사이트맵에만 있는 URL)", missing.map(short)],
+  ["어느 목록에서도 링크되지 않는다 (고아)", orphans],
   ["사이트맵에 있는데 noindex다", noindexed.map(short)],
   ["canonical이 자기를 안 가리킨다", badCanonical.map(short)],
   [

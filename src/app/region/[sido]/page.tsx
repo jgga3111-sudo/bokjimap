@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { SIDO_LIST, sidoBySlug } from "@/lib/regions";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
+import HubList from "@/components/HubList";
+import { toRow, facetsFor } from "@/lib/hubRows";
 
 export function generateStaticParams() {
   return SIDO_LIST.map((s) => ({ sido: s.slug }));
@@ -46,7 +48,10 @@ export default async function RegionPage({
   const sido = sidoBySlug(slug);
   if (!sido) notFound();
 
-  const local = localOf(sido.fullName);
+  /* 지자체 사업은 경기도가 100건으로 가장 많다. 지역 축은 이미 이 페이지가
+     정해 놓았으므로 필터에서 빼고, 나머지 셋으로 좁히게 한다. */
+  const rows = localOf(sido.fullName).map(toRow);
+  const groups = facetsFor(rows, ["benefit", "theme", "life"]);
 
   return (
     <div className="space-y-8">
@@ -55,7 +60,7 @@ export default async function RegionPage({
           {sido.name} 복지·지원금
         </h1>
         <p className="mt-2 text-sm text-muted">
-          {sido.fullName} · 지자체 사업 {local.length}건
+          {sido.fullName} · 지자체 사업 {rows.length}건
         </p>
       </header>
 
@@ -63,8 +68,8 @@ export default async function RegionPage({
         <h2 className="mb-3 text-lg font-bold">
           {sido.name}이 직접 하는 사업
         </h2>
-        {local.length > 0 ? (
-          <ServiceList services={local} />
+        {rows.length > 0 ? (
+          <HubList rows={rows} groups={groups} />
         ) : (
           /* 없는 것을 없다고 쓴다. 세종시가 여기 해당한다 — 공공데이터포털
              복지서비스 4,758건에 세종시 자체 사업이 한 건도 없다. */

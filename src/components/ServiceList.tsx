@@ -1,5 +1,4 @@
-import ServiceCard from "./ServiceCard";
-import type { WelfareService } from "@/types/welfare";
+import ServiceCard, { type CardService } from "./ServiceCard";
 
 /**
  * 서비스 목록. 여러 허브 화면(지역·대상·생애주기·전체)이 공유한다.
@@ -10,7 +9,7 @@ export default function ServiceList({
   services,
   ranked = false,
 }: {
-  services: readonly WelfareService[];
+  services: readonly CardService[];
   ranked?: boolean;
 }) {
   if (services.length === 0) {

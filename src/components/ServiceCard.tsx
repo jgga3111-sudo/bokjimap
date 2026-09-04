@@ -11,6 +11,32 @@ import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import type { WelfareService } from "@/types/welfare";
 
 /**
+ * 카드가 실제로 읽는 필드만 추린 형태.
+ *
+ * `WelfareService` 전체를 받으면 이 카드를 **클라이언트에서 그릴 수 없다.**
+ * 필터가 붙은 허브 목록(`HubList`)은 브라우저에서 항목을 골라 다시 그리는데,
+ * 그러려면 항목이 RSC 페이로드를 타고 브라우저까지 와야 한다. 한 건에
+ * 지원내용·선정기준·신청절차·서식까지 다 실리면 481건짜리 목록에서만
+ * 1MB가 넘는다. 여기 적힌 열세 개면 카드를 그리는 데 충분하다.
+ */
+export type CardService = Pick<
+  WelfareService,
+  | "id"
+  | "name"
+  | "summary"
+  | "views"
+  | "department"
+  | "provider"
+  | "sidoName"
+  | "sigunguName"
+  | "targets"
+  | "lifeStages"
+  | "cycle"
+  | "payTypes"
+  | "onlineApply"
+>;
+
+/**
  * 서비스 카드.
  *
  * 처음에는 한 장에 딱지가 5~6개였다 — 지급형태 배지 두 개(각각 다른 색에
@@ -35,7 +61,7 @@ export default function ServiceCard({
   service: s,
   rank,
 }: {
-  service: WelfareService;
+  service: CardService;
   rank?: number;
 }) {
   const tags = [

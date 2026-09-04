@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { LIFE_STAGES, lifeStageBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
-import ServiceList from "@/components/ServiceList";
+import HubList from "@/components/HubList";
+import { toRow, facetsFor } from "@/lib/hubRows";
 
 export function generateStaticParams() {
   return LIFE_STAGES.map((t) => ({ slug: t.slug }));
@@ -32,15 +33,16 @@ export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
   const t = lifeStageBySlug(slug);
   if (!t) notFound();
 
-  const list = services.filter((s) => s.lifeStages.includes(t.slug));
+  const rows = services.filter((s) => s.lifeStages.includes(t.slug)).map(toRow);
+  const groups = facetsFor(rows, ["region", "benefit", "theme"]);
   return (
     <div className="space-y-6">
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 시기 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>
-        <p className="text-sm text-muted">{list.length}건</p>
+        <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
-      <ServiceList services={list} />
+      <HubList rows={rows} groups={groups} />
     </div>
   );
 }

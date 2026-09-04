@@ -4,7 +4,8 @@ import Link from "next/link";
 import { INCOME_BANDS, incomeBandOf, servicesAt } from "@/lib/income";
 import { BASE_YEAR, thresholdOf } from "@/lib/midIncome";
 import { won } from "@/lib/display";
-import ServiceList from "@/components/ServiceList";
+import HubList from "@/components/HubList";
+import { toRow, facetsFor } from "@/lib/hubRows";
 
 export function generateStaticParams() {
   return INCOME_BANDS.map((b) => ({ percent: String(b.percent) }));
@@ -39,7 +40,8 @@ export default async function IncomeBandPage({
   const band = incomeBandOf(percent);
   if (!band) notFound();
 
-  const list = servicesAt(band.percent);
+  const rows = servicesAt(band.percent).map(toRow);
+  const groups = facetsFor(rows, ["region", "benefit", "life"]);
 
   return (
     <div className="space-y-6">
@@ -98,7 +100,7 @@ export default async function IncomeBandPage({
         에서 월 소득·연봉·건강보험료 중 하나만 넣으면 바로 나옵니다.
       </div>
 
-      <ServiceList services={list} />
+      <HubList rows={rows} groups={groups} />
 
       <p className="text-sm leading-relaxed text-muted">
         여기 있는 것은 <strong>소득 기준 한 가지</strong>로만 묶은 목록입니다.

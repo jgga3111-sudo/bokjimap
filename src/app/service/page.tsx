@@ -55,16 +55,26 @@ export default function ServiceIndex() {
       <ServiceList services={list} ranked />
 
       {services.length > PAGE_SIZE && (
-        <p className="text-center text-sm text-muted">
-          상위 {PAGE_SIZE}건을 보여주고 있습니다. 나머지는{" "}
+        <p className="text-center text-sm leading-relaxed text-muted">
+          여기는 <strong>조회수 상위 {PAGE_SIZE}건</strong>입니다. 나머지{" "}
+          {(services.length - PAGE_SIZE).toLocaleString()}건은 축 페이지에 모두
+          있습니다 —{" "}
+          <Link href="/theme" className="text-brand underline">
+            주제별
+          </Link>
+          {" · "}
+          <Link href="/benefit" className="text-brand underline">
+            혜택별
+          </Link>
+          {" · "}
           <Link href="/target" className="text-brand underline">
             대상별
           </Link>
           {" · "}
           <Link href="/region" className="text-brand underline">
             지역별
-          </Link>{" "}
-          찾기에서 볼 수 있습니다.
+          </Link>
+          . 각 목록에서 조건으로 좁히거나 전체를 이름으로 훑어볼 수 있습니다.
         </p>
       )}
     </div>

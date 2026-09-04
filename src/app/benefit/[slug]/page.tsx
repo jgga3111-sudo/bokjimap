@@ -3,21 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BENEFITS, benefitBySlug, servicesOf } from "@/lib/benefits";
 import { services } from "@/data/services";
-import ServiceList from "@/components/ServiceList";
+import HubList from "@/components/HubList";
+import { toRow, facetsFor } from "@/lib/hubRows";
 import { MIN_SERVICES } from "@/lib/axes";
 import { ro } from "@/lib/display";
-
-/**
- * 한 화면에 거는 개수. `/service`와 같은 규칙이다.
- *
- * 처음엔 전부 깔았다가 `/benefit/cash`의 HTML이 **1.3MB**가 됐다(481장).
- * 지금까지 가장 큰 목록이던 `/theme/living`이 137건이니 3배가 넘는다.
- * 모바일에서 그만큼을 받아 그리는 동안 읽는 사람이 얻는 건 없다.
- *
- * 자르되 **잘랐다고 화면에 적는다.** 조용히 60건만 보여주면 나머지가
- * 없는 줄 안다.
- */
-const PAGE_SIZE = 60;
 
 export function generateStaticParams() {
   return BENEFITS.map((b) => ({ slug: b.slug }));
@@ -46,8 +35,17 @@ export default async function BenefitPage({
   const b = benefitBySlug(slug);
   if (!b) notFound();
 
-  const all = servicesOf(services, b);
-  const list = all.slice(0, PAGE_SIZE);
+  /*
+    예전엔 여기서 60건에 잘랐다. 전부 그리면 `/benefit/cash`가 481장이라
+    HTML이 1.3MB가 됐기 때문인데, 그 대가로 **나머지 421건은 이 사이트에서
+    갈 길이 없었다.** 상위 60건 밑에 "주제별·지역별로 좁혀 보세요"라고 적어
+    뒀지만 그건 다른 목록이지 이 목록의 나머지가 아니다.
+
+    `HubList`가 둘 다 푼다 — 카드는 24장만 그려 가볍게 두고, 전체는 맨 아래
+    이름 목록에 링크로 남긴다. 자를 이유가 없어졌다.
+  */
+  const rows = servicesOf(services, b).map(toRow);
+  const groups = facetsFor(rows, ["region", "theme", "life"]);
 
   return (
     <div className="space-y-6">
@@ -66,7 +64,7 @@ export default async function BenefitPage({
       <header className="space-y-2">
         <h1 className="text-2xl font-bold">{ro(b.label)} 받는 복지·지원금</h1>
         <p className="text-sm text-muted">{b.blurb}</p>
-        <p className="text-sm text-muted">{all.length}건 · 조회수 높은 순</p>
+        <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
 
       {/* 목록 위에 한 문단. 축 페이지가 목록만 있는 껍데기가 되지 않게 하고,
@@ -75,22 +73,7 @@ export default async function BenefitPage({
         {b.note}
       </p>
 
-      <ServiceList services={list} />
-
-      {all.length > PAGE_SIZE && (
-        <p className="text-center text-sm text-muted">
-          {all.length.toLocaleString()}건 중 조회수 상위 {PAGE_SIZE}건입니다.
-          나머지는{" "}
-          <Link href="/theme" className="text-brand underline">
-            주제별
-          </Link>
-          {" · "}
-          <Link href="/region" className="text-brand underline">
-            지역별
-          </Link>{" "}
-          찾기에서 좁혀 보세요.
-        </p>
-      )}
+      <HubList rows={rows} groups={groups} />
     </div>
   );
 }
