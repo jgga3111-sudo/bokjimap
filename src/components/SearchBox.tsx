@@ -3,16 +3,19 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { searchAll, INDEX } from "@/lib/search";
+import { searchAll } from "@/lib/search";
 
 /**
  * 사이트 내 검색창.
  *
- * 600건을 브라우저에서 즉시 거르므로 검색 버튼이 없다. 치는 대로 결과가 뜬다.
- * 키보드로만도 쓸 수 있어야 한다 — ↑↓로 이동, Enter로 이동, Esc로 닫기.
+ * 브라우저에 내려둔 이름 색인을 즉시 거르므로 검색 버튼이 없다. 치는 대로
+ * 결과가 뜬다. 키보드로만도 쓸 수 있어야 한다 — ↑↓ 이동, Enter 이동, Esc 닫기.
  *
  * 한글은 조합 중(예: "청녀"+ㄴ)에 onChange가 여러 번 불린다. 그래도 매번
- * 거르는 편이 자연스럽다 — 600건이라 체감되는 지연이 없다.
+ * 거르는 편이 자연스럽다 — 900건이라 체감되는 지연이 없다.
+ *
+ * **여기는 이름만 본다.** 본문(지원내용·지원대상)까지 찾는 것은 `/search`가
+ * 서버에서 한다. 그래서 이 드롭다운의 밑줄은 언제나 그리로 가는 길이다.
  *
  * 드롭다운은 8건까지만 보여준다. 그런데 "청년"에는 60건이 걸린다. 예전에는
  * 나머지 52건으로 갈 길이 아예 없었다 — Enter를 쳐도 1등 항목으로 넘어갈 뿐.
@@ -146,16 +149,29 @@ export default function SearchBox({
       {open && query.trim().length > 0 && (
         <div className="absolute top-full right-0 left-0 z-40 mt-1 overflow-hidden rounded-xl border border-line bg-white shadow-lg">
           {hits.length === 0 ? (
-            /* 없으면 없다고 쓴다. 비슷한 걸 억지로 보여주면 있는 줄 안다. */
-            <p className="px-4 py-5 text-center text-sm text-muted">
-              <strong className="text-ink">{query}</strong> 에 해당하는 서비스가
-              없습니다.
-              <br />
-              <span className="text-xs">
-                수록된 {INDEX.length}건 중에서 찾습니다. 조회수 높은 순으로
-                채우고 있어 아직 없을 수 있습니다.
+            /*
+              여기는 **막다른 골목이면 안 된다.**
+
+              이 드롭다운은 이름만 본다. 그래서 "백신"·"도배"처럼 이름에 없는
+              낱말은 여기서 0건이 나오는데, `/search`는 본문까지 뒤지므로
+              실제로는 걸린다(백신 5건·도배 6건). 0건이라고 적고 끝내면
+              **있는 걸 없다고 말하는 화면**이 된다.
+
+              그러니 0건일 때야말로 본문 검색으로 보내야 한다.
+            */
+            <Link
+              href={`/search?q=${encodeURIComponent(query.trim())}`}
+              onClick={leave}
+              className="block px-4 py-5 text-center hover:bg-brand-soft/40"
+            >
+              <span className="block text-sm text-muted">
+                이름에 <strong className="text-ink">{query}</strong> 이(가) 들어간
+                서비스가 없습니다.
               </span>
-            </p>
+              <span className="mt-1.5 block text-sm font-medium text-brand">
+                지원내용·지원대상까지 찾아보기 →
+              </span>
+            </Link>
           ) : (
             <>
               <ul id={listId} role="listbox" className="divide-y divide-line">
@@ -177,17 +193,20 @@ export default function SearchBox({
                   </li>
                 ))}
               </ul>
-              {/* 8건 아래에 몇 건이 더 있는지 알려 준다. 이게 없으면
-                  "청년"의 나머지 52건은 존재하지 않는 것이나 같다. */}
-              {all.length > VISIBLE && (
-                <Link
-                  href={`/search?q=${encodeURIComponent(query.trim())}`}
-                  onClick={leave}
-                  className="block border-t border-line bg-slate-50 px-4 py-2.5 text-center text-sm font-medium text-brand hover:bg-brand-soft"
-                >
-                  전체 {all.length.toLocaleString()}건 보기 →
-                </Link>
-              )}
+              {/*
+                항상 건다. 예전에는 8건이 넘을 때만 보여줬는데, 여기 목록은
+                **이름만 본 결과**라 8건 이하일 때도 본문에는 더 있다.
+                「치과」는 이름으로 3건이지만 본문까지 보면 7건이다.
+              */}
+              <Link
+                href={`/search?q=${encodeURIComponent(query.trim())}`}
+                onClick={leave}
+                className="block border-t border-line bg-slate-50 px-4 py-2.5 text-center text-sm font-medium text-brand hover:bg-brand-soft"
+              >
+                {all.length > VISIBLE
+                  ? `이름에 걸린 ${all.length.toLocaleString()}건 모두 + 본문까지 →`
+                  : "지원내용·지원대상까지 찾아보기 →"}
+              </Link>
             </>
           )}
         </div>

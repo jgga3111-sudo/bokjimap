@@ -1,9 +1,16 @@
 import { SEARCH_INDEX, type SearchRow } from "@/data/searchIndex";
+import { toChoseong, isChoseongQuery, norm } from "@/lib/searchText";
 
 /**
- * 사이트 내 검색.
+ * 헤더 검색창이 쓰는 **가벼운 이름 색인.**
  *
- * 600건뿐이라 서버를 두지 않고 색인을 통째로 브라우저에 내려 즉시 거른다.
+ * 색인을 통째로 브라우저에 내려 치는 즉시 거른다. 대신 담긴 필드가
+ * [id, 이름, 지역, 부처]뿐이라 **본문은 못 본다** — "백신"·"도배"처럼
+ * 이름에 없는 낱말은 여기서 0건이 나온다.
+ *
+ * 본문까지 찾는 일은 `lib/searchFull.ts`(서버)가 맡는다. 드롭다운에서
+ * Enter를 치면 `/search`로 넘어가 거기서 다시 걸린다. 색인에 본문을 실으면
+ * 169~738KB가 늘어나는데, 서버로 넘기면 번들이 0바이트도 안 는다.
  *
  * ⚠ 색인은 반드시 `@/data/searchIndex`에서 가져온다. 여기서 `@/data/services`를
  * import해 색인을 만들면, 이 파일이 클라이언트 컴포넌트에 딸려 들어가면서
@@ -16,36 +23,6 @@ export type Row = SearchRow;
 export const INDEX = SEARCH_INDEX;
 
 export const idOf = (row: Row) => `WLF${row[0]}`;
-
-/* ── 한글 초성 검색 ───────────────────────────────────────────────
-   "ㅊㄴㅇㅅ"로 "청년월세"를 찾을 수 있게 한다. 한국어 사이트에서 이용자가
-   기대하는 동작이고, 오타·띄어쓰기 실수를 많이 흡수한다.
-
-   한글 음절은 유니코드 0xAC00~0xD7A3에 초성 19 × 중성 21 × 종성 28 순서로
-   배열돼 있다. 그래서 (코드 − 0xAC00) / 588 이 초성 인덱스다.
-   ──────────────────────────────────────────────────────────────── */
-const CHO = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ";
-const HANGUL_START = 0xac00;
-const HANGUL_END = 0xd7a3;
-
-function toChoseong(text: string): string {
-  let out = "";
-  for (const ch of text) {
-    const code = ch.codePointAt(0)!;
-    if (code >= HANGUL_START && code <= HANGUL_END) {
-      out += CHO[Math.floor((code - HANGUL_START) / 588)];
-    } else {
-      out += ch;
-    }
-  }
-  return out;
-}
-
-/** 질의가 초성만으로 이뤄졌는가. 그럴 때만 초성 대조로 전환한다. */
-const isChoseongQuery = (q: string) => /^[ㄱ-ㅎ]+$/.test(q.replace(/\s/g, ""));
-
-/** 비교용 정규화 — 공백과 가운뎃점을 지운다. "청년 월세" = "청년월세" */
-const norm = (s: string) => s.toLowerCase().replace(/[\s·・.,()]/g, "");
 
 export type Hit = { id: string; name: string; place: string; dept: string };
 
