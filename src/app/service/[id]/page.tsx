@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Badge from "@/components/Badge";
-import { services } from "@/data/services";
+import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable, type WelfareService } from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
@@ -536,11 +536,16 @@ export default async function ServiceDetail({
       </aside>
 
       <footer className="space-y-3 rounded-xl border border-line bg-slate-50 p-4 text-xs leading-relaxed text-slate-600">
+        {/* 날짜를 두 개 쓴다. "우리가 받아둔 날"과 "기관이 고친 날"은 다른
+            값이라 한 칸에 넣으면 안 된다. 원본 최종수정일은 330건이 비어
+            있는데, 그때 날짜가 통째로 사라지면 읽는 사람은 이게 오늘 받은
+            건지 반년 된 건지 알 수 없다. 수집일은 항상 적는다(3절). */}
         <p>
-          이 내용은 공공데이터포털 &lsquo;복지서비스&rsquo; 데이터를 정리한
-          것입니다.
-          {s.updatedAt && ` 원본 최종수정일 ${s.updatedAt}.`} 신청 자격·금액·기간은
-          변경될 수 있으니 <strong>반드시 아래 공식 안내로 최종 확인</strong>하세요.
+          이 내용은 공공데이터포털 &lsquo;복지서비스&rsquo; 데이터를{" "}
+          <strong>{SERVICES_UPDATED}에 받아</strong> 정리한 것입니다.
+          {s.updatedAt && ` 원본 최종수정일은 ${s.updatedAt}입니다.`} 신청
+          자격·금액·기간은 그 뒤로 바뀌었을 수 있으니{" "}
+          <strong>반드시 아래 공식 안내로 최종 확인</strong>하세요.
         </p>
         {safeUrl(s.officialUrl) && (
           <a
