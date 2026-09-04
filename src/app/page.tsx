@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
-import { BENEFITS } from "@/lib/benefits";
+import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
 import { services } from "@/data/services";
@@ -34,20 +34,47 @@ import RecentViews from "@/components/RecentViews";
  */
 const popular = services.slice(0, 8);
 
+/* 건수는 렌더 때마다 900건을 다시 훑지 않도록 모듈 로드 때 한 번만 센다.
+   축이 여섯이라 그냥 두면 첫 화면 한 장에 filter가 예순 번 넘게 돈다. */
+const countBy = (pick: (s: (typeof services)[number]) => readonly string[]) => {
+  const m = new Map<string, number>();
+  for (const s of services) for (const v of pick(s)) m.set(v, (m.get(v) ?? 0) + 1);
+  return m;
+};
+const THEME_COUNT = countBy((s) => s.themes);
+const TARGET_COUNT = countBy((s) => s.targets);
+const LIFE_COUNT = countBy((s) => s.lifeStages);
+const BENEFIT_COUNT = new Map(
+  BENEFITS.map((b) => [b.slug, servicesOf(services, b).length] as const),
+);
+const SIDO_COUNT = countBy((s) => (s.sidoName ? [s.sidoName] : []));
+
 /** 칸이 제각각인 줄바꿈 대신 격자로 세운다. */
 const GRID = "grid grid-cols-2 gap-1.5 sm:grid-cols-4";
 
-/** 찾아보기 상자 안의 한 줄. */
-function BrowseRow({
+/**
+ * 찾아보기 상자 안의 한 줄.
+ *
+ * 라벨 옆에 건수를 붙인다. 축 인덱스(`/theme`·`/target`·`/income`)에는
+ * 진작 있었는데 첫 화면에만 없었다 — 여기가 제일 먼저 눌리는 자리인데
+ * "주거"를 누르면 27건인지 270건인지 모르고 들어가게 된다. 경쟁 사이트가
+ * 축마다 건수를 달아 두는 것도 같은 이유다(docs/03).
+ *
+ * 0건이면 회색으로 남기되 지우지는 않는다. 세종시처럼 **원본에 사업이 없는
+ * 것**과 우리가 못 받은 것은 다른데, 숨기면 그 구분이 사라진다.
+ */
+function BrowseRow<T extends { slug: string; label: string }>({
   label,
   base,
   items,
   cols,
+  countOf,
 }: {
   label: string;
   base: string;
-  items: readonly { slug: string; label: string }[];
+  items: readonly T[];
   cols?: string;
+  countOf: (i: T) => number;
 }) {
   return (
     <div>
@@ -70,6 +97,9 @@ function BrowseRow({
               }`}
             >
               {i.label}
+              <span className="ml-1 text-xs text-slate-400">
+                {countOf(i).toLocaleString()}
+              </span>
             </Link>
           </li>
         ))}
@@ -155,7 +185,13 @@ export default function Home() {
         <div className="space-y-5">
           {/* 주제를 맨 위에 둔다. 중앙부처 사업(조회수 상위 대부분)이
               걸리는 유일한 축이라 여기가 가장 많이 눌린다. */}
-          <BrowseRow label="주제" base="/theme" items={THEMES} cols={GRID} />
+          <BrowseRow
+            label="주제"
+            base="/theme"
+            items={THEMES}
+            cols={GRID}
+            countOf={(t) => THEME_COUNT.get(t.value) ?? 0}
+          />
           {/* 혜택 종류 — "무엇을 받는가". 주제(무엇이 급한가) 다음에 오는
               질문이라 바로 아래 둔다. */}
           <BrowseRow
@@ -163,6 +199,7 @@ export default function Home() {
             base="/benefit"
             items={BENEFITS}
             cols={GRID}
+            countOf={(b) => BENEFIT_COUNT.get(b.slug) ?? 0}
           />
           {/* 소득기준 — 자가진단이 내놓는 답과 같은 구분이다. 위 배너에서
               "중위소득 70%"를 받은 사람이 갈 곳이 여기다. 열여덟 개를 다
@@ -173,21 +210,35 @@ export default function Home() {
             items={INCOME_BANDS.filter((b) => b.label).map((b) => ({
               slug: String(b.percent),
               label: `중위 ${b.percent}%`,
+              count: b.count,
             }))}
             cols={GRID}
+            countOf={(b) => b.count}
           />
-          <BrowseRow label="대상" base="/target" items={TARGETS} cols={GRID} />
+          <BrowseRow
+            label="대상"
+            base="/target"
+            items={TARGETS}
+            cols={GRID}
+            countOf={(t) => TARGET_COUNT.get(t.slug) ?? 0}
+          />
           <BrowseRow
             label="생애주기"
             base="/life"
             items={LIFE_STAGES}
             cols={GRID}
+            countOf={(t) => LIFE_COUNT.get(t.slug) ?? 0}
           />
           <BrowseRow
             label="지역"
             base="/region"
-            items={SIDO_LIST.map((s) => ({ slug: s.slug, label: s.name }))}
+            items={SIDO_LIST.map((s) => ({
+              slug: s.slug,
+              label: s.name,
+              count: SIDO_COUNT.get(s.fullName) ?? 0,
+            }))}
             cols="grid grid-cols-3 gap-1.5 sm:grid-cols-6"
+            countOf={(s) => s.count}
           />
         </div>
       </section>
