@@ -3,6 +3,7 @@ import Link from "next/link";
 import { searchFull } from "@/lib/searchFull";
 import { services } from "@/data/services";
 import SearchBox from "@/components/SearchBox";
+import { POPULAR } from "@/lib/popular";
 
 export const metadata: Metadata = {
   title: "복지 서비스 검색",
@@ -65,7 +66,9 @@ export default async function SearchPage({
 
       {/* 결과를 보다가 바로 다시 칠 수 있어야 한다. 헤더 검색창까지
           올라가게 만들면 화면이 길 때 번거롭다. */}
-      <SearchBox placeholder="다시 검색" size="lg" />
+      {/* 결과가 0건일 때 이 검색창을 누르면 "많이 찾는 것"이 뜬다. 헛친
+          사람에게 다시 칠 말을 주는 자리다(lib/popular.ts). */}
+      <SearchBox placeholder="다시 검색" size="lg" popular={POPULAR} />
 
       {q === "" ? (
         <p className="rounded-xl border border-line bg-slate-50 px-4 py-10 text-center text-sm text-muted">

@@ -29,10 +29,13 @@ export default function SearchBox({
   placeholder = "복지 서비스 검색",
   autoFocus = false,
   size = "md",
+  popular = [],
 }: {
   placeholder?: string;
   autoFocus?: boolean;
   size?: "md" | "lg";
+  /** 아직 아무것도 안 쳤을 때 보여줄 것. 서버에서 내려준다(lib/popular.ts). */
+  popular?: readonly { id: string; name: string }[];
 }) {
   const router = useRouter();
   const listId = useId();
@@ -145,6 +148,37 @@ export default function SearchBox({
           </button>
         )}
       </div>
+
+      {/*
+        아무것도 안 쳤을 때. 예전에는 여기가 그냥 비어 있었다 — 검색창을
+        눌러도 아무 일이 없으니, 무엇을 칠 수 있는 곳인지 알 방법이 없었다.
+
+        많이 찾는 것 다섯 개를 건다. 검색어로 넣지 않고 **바로 그 지원으로**
+        보낸다 — 이름을 정확히 아는 항목을 굳이 검색 결과 한 번 더 거쳐
+        가게 할 이유가 없다.
+      */}
+      {open && query.trim().length === 0 && popular.length > 0 && (
+        <div className="absolute top-full right-0 left-0 z-40 mt-1 overflow-hidden rounded-xl border border-line bg-white shadow-lg">
+          <p className="px-4 pt-3 text-xs font-bold text-muted">많이 찾는 것</p>
+          <ul className="flex flex-wrap gap-1.5 px-4 pt-2 pb-3">
+            {popular.map((p) => (
+              <li key={p.id}>
+                <Link
+                  href={`/service/${p.id}`}
+                  onClick={() => setOpen(false)}
+                  className="inline-block rounded-full border border-line px-2.5 py-1 text-xs text-slate-600 transition hover:border-brand hover:text-brand"
+                >
+                  {p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="border-t border-line bg-slate-50 px-4 py-2.5 text-xs leading-relaxed text-muted">
+            이름뿐 아니라 <strong className="text-slate-600">지원내용·지원대상</strong>{" "}
+            안의 낱말로도 찾습니다 — &ldquo;백신&rdquo;, &ldquo;월세&rdquo;처럼.
+          </p>
+        </div>
+      )}
 
       {open && query.trim().length > 0 && (
         <div className="absolute top-full right-0 left-0 z-40 mt-1 overflow-hidden rounded-xl border border-line bg-white shadow-lg">
