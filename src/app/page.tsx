@@ -52,6 +52,34 @@ const SIDO_COUNT = countBy((s) => (s.sidoName ? [s.sidoName] : []));
 /** 히어로 수치용. 시·군·구가 자기 예산으로 하는 사업 수. */
 const LOCAL_COUNT = services.filter((s) => s.provider === "local").length;
 
+/**
+ * 첫 화면 앞에 세우는 여덟 칸.
+ *
+ * 축(주제·혜택·대상·생애주기·지역·소득)을 **가로질러** 골랐다. 읽는 사람은
+ * 자기가 어느 축에 속하는지 모른다 — "나는 청년이다", "현금으로 받고 싶다"로
+ * 생각한다. 그래서 생애주기·대상·혜택·지역이 한 격자에 섞여 있다.
+ *
+ * 고른 기준은 **건수**다. 각 축에서 가장 큰 것부터 담되, 같은 말을 두 번
+ * 담지 않았다(예: 영유아 171은 임신·출산 109와 겹쳐 읽히므로 하나만).
+ * 지역은 시·도가 16개라 격자에 못 넣고 목록 페이지로 보낸다.
+ *
+ * 건수는 전부 렌더 시점 집계값이다. 손으로 적으면 수집이 늘 때 조용히 틀린
+ * 말이 된다 — guides.ts에서 191건으로 겪었다.
+ */
+const QUICK = [
+  { href: "/benefit/cash", label: "현금으로 받는 것", count: BENEFIT_COUNT.get("cash") ?? 0 },
+  { href: "/life/youth", label: "청년", count: LIFE_COUNT.get("youth") ?? 0 },
+  { href: "/target/low-income", label: "저소득", count: TARGET_COUNT.get("low-income") ?? 0 },
+  { href: "/life/senior", label: "노년", count: LIFE_COUNT.get("senior") ?? 0 },
+  { href: "/target/disability", label: "장애인", count: TARGET_COUNT.get("disability") ?? 0 },
+  { href: "/target/single-parent", label: "한부모·조손", count: TARGET_COUNT.get("single-parent") ?? 0 },
+  { href: "/life/pregnancy", label: "임신·출산", count: LIFE_COUNT.get("pregnancy") ?? 0 },
+  /* 마지막 칸만 목록 페이지로 보낸다. 시·도가 16개라 격자에 못 담는다.
+     건수는 시·군·구가 자기 예산으로 하는 사업 수 — 지역으로 들어가면
+     만나게 되는 몫이라 이 숫자가 맞다. */
+  { href: "/region", label: "우리 지역", count: LOCAL_COUNT },
+] as const;
+
 /** 칸이 제각각인 줄바꿈 대신 격자로 세운다. */
 const GRID = "grid grid-cols-2 gap-1.5 sm:grid-cols-4";
 
@@ -213,11 +241,56 @@ export default function Home() {
         <ServiceList services={popular} ranked />
       </section>
 
-      {/* 찾아보는 방법 셋을 한 상자에 묶는다. 각각 제목을 달아 따로 세우면
-          첫 화면이 목차처럼 보인다. */}
+      {/*
+        ── 61개를 8개로 (2026-09-05) ─────────────────────────────────
+        이 상자는 축 여섯을 다섯 줄로 펼쳐 놓고 있었다. 첫 화면에서 누를 수
+        있는 링크가 86개였고 그중 61개가 여기였다. 문제는 개수가 아니라
+        **여섯이 전부 같은 900건을 다르게 자르는 자**라는 것이다. 처음 온
+        사람은 목록을 보기도 전에 "어느 자로 자를까"부터 골라야 했다.
+
+        당근은 큰 갈래를 아이콘 넷으로만 두고 나머지는 전부 햄버거 안에
+        넣는다. 오늘의집은 아이콘을 열 개나 쓰지만 그 열 개는 **서로 다른
+        일**이다(쇼핑·집들이·이사청소…). 같은 것을 여섯 가지로 자르는 걸
+        앞에 늘어놓는 것과는 다르다(2026-09-05 실측).
+
+        그래서 **사람이 자기를 설명하는 말** 여덟 개만 앞에 세운다. 축이
+        무엇인지 몰라도 "나는 청년이다", "현금으로 받고 싶다"는 고를 수 있다.
+        축을 가로질러 고른 것이라 생애주기·대상·혜택·지역이 한 격자에 섞여
+        있다 — 읽는 사람에게는 그게 자연스럽다.
+
+        나머지 53개는 **지우지 않고 접었다.** 접혀 있어도 HTML에는 있으므로
+        크롤러는 그대로 읽는다(HubList에서 쓰는 것과 같은 수법).
+      */}
       <section className="rounded-2xl border border-line bg-slate-50/60 p-5 sm:p-6">
-        <h2 className="mb-4 text-lg font-bold">조건으로 찾아보기</h2>
-        <div className="space-y-5">
+        <h2 className="text-lg font-bold">어떤 분이신가요</h2>
+        <p className="mt-0.5 mb-4 text-xs text-muted">
+          해당하는 것을 고르면 그에 걸린 지원만 모아 보여드립니다
+        </p>
+
+        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {QUICK.map((q) => (
+            <li key={q.href}>
+              <Link
+                href={q.href}
+                className="flex h-full flex-col justify-between rounded-xl border border-line bg-white px-3.5 py-3 transition hover:border-brand hover:shadow-sm"
+              >
+                <span className="text-sm font-bold text-ink">{q.label}</span>
+                <span className="mt-1.5 text-xs text-muted">
+                  {q.count.toLocaleString()}건
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <details className="mt-4 border-t border-line pt-4">
+          <summary className="cursor-pointer text-sm font-medium text-slate-600 hover:text-brand">
+            전체 분류 보기
+            <span className="ml-1.5 text-xs font-normal text-muted">
+              주제 · 혜택 종류 · 소득기준 · 대상 · 생애주기 · 지역
+            </span>
+          </summary>
+          <div className="space-y-5 pt-4">
           {/* 주제를 맨 위에 둔다. 중앙부처 사업(조회수 상위 대부분)이
               걸리는 유일한 축이라 여기가 가장 많이 눌린다. */}
           <BrowseRow
@@ -275,7 +348,8 @@ export default function Home() {
             cols="grid grid-cols-3 gap-1.5 sm:grid-cols-6"
             countOf={(s) => s.count}
           />
-        </div>
+          </div>
+        </details>
       </section>
 
       {/*
