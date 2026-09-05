@@ -49,6 +49,9 @@ const BENEFIT_COUNT = new Map(
 );
 const SIDO_COUNT = countBy((s) => (s.sidoName ? [s.sidoName] : []));
 
+/** 히어로 수치용. 시·군·구가 자기 예산으로 하는 사업 수. */
+const LOCAL_COUNT = services.filter((s) => s.provider === "local").length;
+
 /** 칸이 제각각인 줄바꿈 대신 격자로 세운다. */
 const GRID = "grid grid-cols-2 gap-1.5 sm:grid-cols-4";
 
@@ -130,10 +133,42 @@ export default function Home() {
             두 개. 헤더 것은 sticky라 어느 페이지에서든 따라오고, 히어로 것은
             조금만 내리면 사라진다. 남길 것을 고르면 헤더다.
           */}
-          <p className="mt-5 text-xs text-muted">
-            수록 {services.length.toLocaleString()}건 · 전국 {SIDO_LIST.length}
-            개 시·도 · {BASE_YEAR}년 기준
-          </p>
+          {/*
+            수치 세 개.
+
+            한 줄짜리 회색 글씨였다 — "수록 900건 · 전국 17개 시·도 · 2026년
+            기준". 히어로에서 **유일하게 사실을 말하는 줄**인데 각주처럼
+            작게 붙어 있어 아무도 읽지 않는 크기였다.
+
+            이 사이트가 AI 양산 블로그와 다른 점이 바로 여기다(CLAUDE.md 3절).
+            몇 건을 다루는지, 어느 해 기준인지가 곧 신뢰의 근거다. 숫자를
+            키우고 무엇을 센 값인지 아래에 붙인다.
+
+            숫자는 전부 렌더 시점 집계값이다. 손으로 적은 상수를 두면 수집이
+            늘 때 조용히 틀린 말이 된다(guides.ts에서 실제로 겪었다).
+
+            가운데 칸은 원래 시·도 개수(16)였다. 데이터상 맞는 값이다 —
+            API가 광주와 전남을 「전남광주통합특별시」 하나로 준다(regions.ts).
+            그런데 화면에 "16개 시·도"만 있으면 17개로 아는 사람에게는 빠진
+            것처럼 읽힌다. 설명 없이 해명할 수 없는 숫자를 첫 화면에 두느니,
+            **지자체 사업 건수**를 쓴다. 이쪽이 이 사이트의 차이이기도 하다 —
+            중앙부처 것만 옮겨 놓은 곳과 달리 시·군·구 공고가 570건 들어 있다.
+          */}
+          <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+            {[
+              { n: services.length.toLocaleString(), unit: "건", k: "수록 지원사업" },
+              { n: LOCAL_COUNT.toLocaleString(), unit: "건", k: "시·군·구 사업" },
+              { n: BASE_YEAR.toString(), unit: "년", k: "기준연도" },
+            ].map((s) => (
+              <div key={s.k}>
+                <dd className="text-lg font-extrabold text-ink sm:text-xl">
+                  {s.n}
+                  <span className="ml-0.5 text-sm font-bold">{s.unit}</span>
+                </dd>
+                <dt className="mt-0.5 text-xs text-muted">{s.k}</dt>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
