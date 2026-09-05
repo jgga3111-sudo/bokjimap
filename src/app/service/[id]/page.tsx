@@ -125,6 +125,23 @@ function PageToc({ s }: { s: WelfareService }) {
   const items = TOC.filter((t) => t.has(s));
   if (items.length < 3) return null;
 
+  /*
+    마지막 칸은 본문 절이 아니라 **공식 안내로 내려가는 길**이다.
+
+    이 사이트의 역할은 안내와 링크까지다(CLAUDE.md 3절). 그런데 그 링크가
+    페이지 맨 끝 회색 각주 안에 작은 글씨로 있었다. 조회수 상위 상세는
+    375px에서 5,400px이 넘으니, 정작 마지막에 해야 할 일이 가장 닿기 어려운
+    자리에 있었던 셈이다.
+
+    바깥으로 바로 내보내지 않고 **각주 자리로 스크롤시킨다.** 우리가 받아둔
+    날짜와 "그 뒤로 바뀌었을 수 있다"는 경고를 읽고 나서 누르는 것과, 그냥
+    누르는 것은 다르다. 위에 외부 링크를 하나 더 다는 것보다 이쪽이 맞다.
+
+    `has`는 넣지 않는다 — 세 절 미만이면 목차를 안 그린다는 규칙(위 주석)을
+    이 칸이 채워서 깨뜨리면 안 되기 때문에, 절 개수를 센 **뒤에** 붙인다.
+  */
+  const official = safeUrl(s.officialUrl);
+
   return (
     <nav aria-label="이 페이지 안에서" className="rounded-xl border border-line bg-slate-50/70 px-4 py-3">
       <h2 className="text-xs font-bold text-muted">이 페이지에서</h2>
@@ -139,6 +156,16 @@ function PageToc({ s }: { s: WelfareService }) {
             </a>
           </li>
         ))}
+        {official && (
+          <li>
+            <a
+              href="#official"
+              className="inline-block rounded-full border border-brand bg-brand-soft px-3 py-1.5 text-sm font-medium text-brand transition hover:bg-brand hover:text-white"
+            >
+              공식 안내 ↓
+            </a>
+          </li>
+        )}
       </ul>
     </nav>
   );
@@ -535,7 +562,10 @@ export default async function ServiceDetail({
         </ul>
       </aside>
 
-      <footer className="space-y-3 rounded-xl border border-line bg-slate-50 p-4 text-xs leading-relaxed text-slate-600">
+      <footer
+        id="official"
+        className="scroll-mt-28 space-y-3 rounded-xl border border-line bg-slate-50 p-4 text-xs leading-relaxed text-slate-600"
+      >
         {/* 날짜를 두 개 쓴다. "우리가 받아둔 날"과 "기관이 고친 날"은 다른
             값이라 한 칸에 넣으면 안 된다. 원본 최종수정일은 330건이 비어
             있는데, 그때 날짜가 통째로 사라지면 읽는 사람은 이게 오늘 받은
@@ -547,14 +577,23 @@ export default async function ServiceDetail({
           자격·금액·기간은 그 뒤로 바뀌었을 수 있으니{" "}
           <strong>반드시 아래 공식 안내로 최종 확인</strong>하세요.
         </p>
+        {/*
+          이 페이지에서 마지막에 해야 할 일이다. 그런데 여태 각주와 같은
+          크기·같은 회색으로 놓여 있어서, 읽고 나서 어디로 가야 하는지가
+          보이지 않았다. 화면에서 유일한 채운 단추로 만든다 — 목차의
+          「공식 안내 ↓」가 데려오는 자리도 여기다.
+
+          모바일에서는 폭을 꽉 채운다. 375px에서 글자 크기 그대로 두면
+          엄지로 누르기에 작다.
+        */}
         {safeUrl(s.officialUrl) && (
           <a
             href={safeUrl(s.officialUrl)!}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-lg border border-line bg-white px-4 py-2 font-medium text-brand"
+            className="block rounded-lg bg-brand px-4 py-3 text-center text-sm font-bold text-white transition hover:brightness-110 sm:inline-block sm:px-5"
           >
-            복지로에서 공식 안내 보기 →
+            복지로에서 공식 안내 보기 ↗
           </a>
         )}
       </footer>
