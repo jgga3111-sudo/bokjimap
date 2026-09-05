@@ -252,6 +252,28 @@ export default function HubList({
           </ul>
         </details>
       )}
+
+      {/*
+        맨 위로.
+
+        "더 보기"를 몇 번 누르면 481장이 깔린다 — 375px에서 2만 픽셀이 넘고,
+        조건을 다시 고르려면 그 길을 전부 거슬러 올라가야 한다. 필터 상자는
+        페이지 맨 위에 있는데 돌아갈 길이 없었다.
+
+        떠 있는 단추(fixed) 대신 앵커를 쓴다. 목록 위에 늘 떠 있으면 카드
+        하나를 계속 가리고, 자바스크립트도 붙는다. 여기까지 내려온 사람은
+        어차피 바닥에 닿아 있다.
+      */}
+      {filtered.length > PAGE && (
+        <p className="pt-1 text-center">
+          <a
+            href="#top"
+            className="inline-block rounded-lg border border-line bg-white px-4 py-2 text-xs text-muted transition hover:border-brand hover:text-brand"
+          >
+            ↑ 맨 위로 — 조건 다시 고르기
+          </a>
+        </p>
+      )}
     </div>
   );
 }

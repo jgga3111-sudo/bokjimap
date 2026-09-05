@@ -90,7 +90,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: jsonLd(siteJsonLd) }}
         />
         <SiteHeader />
-        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+        {/* id="top" — 긴 목록 밑에서 "맨 위로"가 돌아올 자리. 자바스크립트
+            없이 앵커 하나로 끝난다(HubList 맨 아래 참고). */}
+        <main
+          id="top"
+          className="mx-auto w-full max-w-5xl flex-1 scroll-mt-28 px-4 py-8"
+        >
           {children}
         </main>
         <SiteFooter />
