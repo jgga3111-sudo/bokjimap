@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SearchBox from "./SearchBox";
+import { POPULAR } from "@/lib/popular";
 
 /**
  * 헤더 — 두 줄. 위는 로고와 검색, 아래는 분류.
@@ -14,16 +15,32 @@ import SearchBox from "./SearchBox";
  */
 type Nav = { href: string; label: string; accent?: boolean };
 
+/**
+ * 칩을 여덟에서 넷으로 줄였다 (2026-09-05).
+ *
+ * 여덟이던 것: 자가진단 · 인기순 · 주제별 · 혜택별 · 지역별 · 대상별 ·
+ * 생애주기 · 신청 안내. 375px 화면에서 다섯 번째부터 잘려 나갔고, 무엇보다
+ * **여섯 개(주제·혜택·지역·대상·생애주기·소득)가 전부 같은 900건을 다르게
+ * 자르는 자**였다. 처음 온 사람은 목록을 보기도 전에 "어느 자로 자를까"를
+ * 먼저 골라야 했다.
+ *
+ * 당근은 상단에 메뉴 칩이 아예 없다 — 로고와 햄버거뿐이고, 큰 갈래는 아이콘
+ * 넷으로 본문에 둔다. 해피나눔은 우리보다 7배 많은 6,793건을 다루면서 첫
+ * 화면에서 고르게 하는 건 셀렉트 셋뿐이다(2026-09-05 실측).
+ *
+ * 뺀 넷(주제·혜택·대상·생애주기)은 **지우지 않았다.** 첫 화면의 「전체 분류
+ * 보기」 안과 푸터에 그대로 있다. 링크가 살아 있어야 색인도 유지된다.
+ *
+ * 남긴 기준은 "다른 데서 대신할 수 없는가"다.
+ *   자가진단 — 이 사이트에만 있는 것
+ *   인기순   — 아무 조건 없이 그냥 보고 싶을 때
+ *   지역별   — 축 여섯 중 유일하게 "나는 어디 산다"로 바로 답이 되는 것
+ *   신청 안내 — 목록이 아니라 읽을거리라 성격이 다르다
+ */
 const NAV: Nav[] = [
   { href: "/check", label: "자가진단", accent: true },
   { href: "/service", label: "인기순" },
-  { href: "/theme", label: "주제별" },
-  /* 혜택별은 주제별 바로 뒤에 둔다. "무엇이 급한가" 다음에 오는 질문이
-     "그래서 무엇을 받는가"라서, 지역·대상보다 이쪽이 먼저 눌린다. */
-  { href: "/benefit", label: "혜택별" },
   { href: "/region", label: "지역별" },
-  { href: "/target", label: "대상별" },
-  { href: "/life", label: "생애주기" },
   { href: "/guide", label: "신청 안내" },
 ];
 
@@ -42,7 +59,7 @@ export default function SiteHeader() {
           {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 제한한다. 좁은 화면에서는
               남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다. */}
           <div className="min-w-0 flex-1 sm:ml-auto sm:max-w-xs sm:flex-none">
-            <SearchBox placeholder="지원금 이름 검색" />
+            <SearchBox placeholder="지원금 이름 검색" popular={POPULAR} />
           </div>
         </div>
 
