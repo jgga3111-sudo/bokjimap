@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Badge from "@/components/Badge";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { isIndexable, type WelfareService } from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
@@ -207,42 +206,114 @@ function Row({ label, value }: { label: string; value: React.ReactNode }) {
 }
 
 /**
- * "쉽게 말하면" — 지급 형태와 주기를 사람 말로 풀어 준다.
+ * 핵심 세 칸 — **무엇으로 / 얼마 간격으로 / 인터넷으로 되나.**
  *
- * 원본 지원내용은 행정 문서 문장 그대로다. 예를 들어 주거급여의 지원내용은
- * "기준임대료를 상한으로 실제 임차료(월 임차료+보증금 환산액)을 지원합니다"로
- * 시작한다. 정확하지만, 이걸 읽고 "그래서 돈이 나온다는 건가 요금이 깎인다는
- * 건가"를 아는 사람은 많지 않다.
+ * ── 왜 만들었나 ────────────────────────────────────────────────
+ * 원본 지원내용은 행정 문서 문장 그대로다. 주거급여의 지원내용은 "기준임대료를
+ * 상한으로 실제 임차료(월 임차료+보증금 환산액)을 지원합니다"로 시작한다.
+ * 정확하지만, 이걸 읽고 "그래서 돈이 나온다는 건가 요금이 깎인다는 건가"를
+ * 아는 사람은 많지 않다.
  *
- * 그렇다고 우리가 사업 내용을 요약해 다시 쓰면 틀릴 위험이 크다. 그래서
- * **구조화된 값(지급형태·주기)만 가지고** 확실한 것만 적는다. 사업마다 다른
- * 내용은 아래 원문 그대로 두고, 여기서는 "어떤 형태로 받는가"만 말한다.
+ * 그런데 그 답은 이미 데이터에 있었다. `/guide/mistakes`가 수록분을 집계해
+ * **가장 많이 틀리는 지점**으로 꼽은 것이 정확히 이 둘이다 — "돈이 아닌데
+ * 돈으로 알거나, 한 번인데 매달로 알거나". 알고 있으면서 표 안쪽 작은
+ * 글씨로만 알려주고 있었다.
  *
- * 가장 중요한 건 융자다 — 배지에 "융자"라고만 적혀 있으면 받는 돈으로
- * 오해하기 쉬운데, 수록분에 30건이 있다.
+ * ── 새로 더하는 게 아니라 모으는 것이다 ──────────────────────────
+ * 같은 값이 네 군데에 흩어져 있었다.
+ *   ① 제목 위 배지(현금 / 온라인신청 가능)
+ *   ② 「한눈에 보기」 표의 지원 형태·지원 주기 줄
+ *   ③ 「쉽게 말하면」의 풀이 문장
+ * 셋을 여기 하나로 합친다. 배지는 목록에서 여러 건을 훑을 때 쓰는 장치지,
+ * 한 건을 읽는 화면에서 같은 말을 더 작게 반복할 이유가 없다.
+ *
+ * ── 지어내지 않는다 ────────────────────────────────────────────
+ * 세 값 모두 원본이 준 구조화된 값이다. 우리가 사업 내용을 요약해 다시 쓰지
+ * 않는다(CLAUDE.md 3절). 풀이 문장도 값에서 유도한 것이지 사업별 설명이
+ * 아니다 — 가장 중요한 건 융자다. "융자"라고만 적혀 있으면 받는 돈으로
+ * 오해하기 쉬운데 수록분에 30건이 있다.
+ *
+ * ── 빈칸이 안 생기는지 재고 만들었다 (2026-09-05) ───────────────
+ *   지급형태 900/900 · 지급주기 900/900 · 온라인신청 330/900
+ * 앞의 둘은 늘 있으므로 고정, 온라인신청은 **값이 있을 때만** 세 번째 칸을
+ * 만든다. 값이 없는 570건(지자체)에서는 두 칸으로 그린다.
+ *
+ * `false`(276건)도 그린다. "인터넷으로는 안 된다"는 것도 알아야 헛되이
+ * 찾아 헤매지 않는다. 어디서 접수하는지는 원문에 있을 때만 아래 「신청 방법」
+ * 절이 말한다 — 여기서 짐작해 채우지 않는다.
  */
-function PlainWords({ s }: { s: WelfareService }) {
-  const notes = [
-    ...visiblePayTypes(s.payTypes).map(payTypeHelp),
-    cycleHelp(s.cycle),
-  ].filter((v): v is string => Boolean(v));
+function KeyFacts({ s }: { s: WelfareService }) {
+  const pays = visiblePayTypes(s.payTypes);
+  if (pays.length === 0 && !s.cycle) return null;
 
-  if (notes.length === 0) return null;
+  const cells: { k: string; v: string; help: string | null }[] = [];
+
+  if (pays.length > 0) {
+    cells.push({
+      k: "받는 방법",
+      v: pays.map((p) => payType(p).label).join(" · "),
+      /* 형태가 둘 이상인 건이 50건 있다. 풀이를 전부 이으면 칸이 길어져
+         옆 칸과 높이가 어긋나므로 두 문장까지만 싣는다. */
+      help:
+        pays
+          .map(payTypeHelp)
+          .filter((v): v is string => Boolean(v))
+          .slice(0, 2)
+          .join(" ") || null,
+    });
+  }
+
+  if (s.cycle) {
+    cells.push({
+      k: "받는 주기",
+      v: cycleLabel(s.cycle) ?? s.cycle,
+      help: cycleHelp(s.cycle),
+    });
+  }
+
+  if (s.onlineApply !== null) {
+    cells.push({
+      k: "온라인 신청",
+      v: s.onlineApply ? "가능" : "안 됨",
+      help: s.onlineApply
+        ? "인터넷으로 신청할 수 있습니다."
+        : "인터넷 신청은 받지 않습니다.",
+    });
+  }
+
+  /* 칸 수만큼만 열을 만든다.
+
+     처음엔 `sm:grid-cols-3`으로 고정했다가 지자체 사업에서 깨졌다 —
+     온라인신청 값이 없어 칸이 둘인데 열은 셋이라, 넓은 화면에서 **빈
+     세 번째 열이 회색 덩어리로** 남았다. 칸 사이 선을 `gap-px`와 배경색으로
+     내고 있어서 빈 열이 곧 색면이 된다. 수록 900건 중 570건이 이 경우다. */
+  const cols =
+    cells.length >= 3
+      ? "sm:grid-cols-3"
+      : cells.length === 2
+        ? "sm:grid-cols-2"
+        : "";
 
   return (
-    <section className="rounded-xl border border-line bg-slate-50/70 px-4 py-3.5">
-      <h2 className="text-sm font-bold text-ink">쉽게 말하면</h2>
-      <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-700">
-        {notes.map((n) => (
-          <li key={n} className="flex gap-2">
-            <span
-              aria-hidden
-              className="mt-2 h-1 w-1 shrink-0 rounded-full bg-slate-400"
-            />
-            <span className="min-w-0">{n}</span>
-          </li>
-        ))}
-      </ul>
+    <section
+      aria-label="핵심 정보"
+      /* 칸 사이 선을 gap-px + 배경색으로 낸다. 칸마다 border를 주면 맞닿는
+         자리가 2px로 겹쳐 두꺼워진다. */
+      className={`mt-4 grid gap-px overflow-hidden rounded-xl border border-line bg-line ${cols}`}
+    >
+      {cells.map((c) => (
+        <div key={c.k} className="bg-white px-4 py-3">
+          <p className="text-xs font-bold text-muted">{c.k}</p>
+          <p className="mt-0.5 text-lg leading-tight font-extrabold text-ink">
+            {c.v}
+          </p>
+          {c.help && (
+            <p className="mt-1.5 text-xs leading-relaxed text-slate-500">
+              {c.help}
+            </p>
+          )}
+        </div>
+      ))}
     </section>
   );
 }
@@ -345,18 +416,10 @@ export default async function ServiceDetail({
       </nav>
 
       <header>
-        {/* 배지는 카드와 같은 규칙 — 지급 형태와 온라인신청까지만.
-            주기는 바로 아래 "한눈에 보기" 표에 있으므로 여기서 뺀다. */}
-        <div className="flex flex-wrap items-center gap-1.5">
-          {visiblePayTypes(s.payTypes).map((p) => (
-            <Badge key={p} tone={payType(p).tone}>
-              {payType(p).label}
-            </Badge>
-          ))}
-          {s.onlineApply && <Badge>온라인신청 가능</Badge>}
-        </div>
-
-        <h1 className="mt-3 text-2xl leading-snug font-extrabold sm:text-3xl">
+        {/* 제목 위에 지급형태 배지를 달았었다. 바로 아래 「핵심 세 칸」이
+            같은 값을 더 크게, 뜻까지 붙여 말하므로 뺐다. 배지는 목록에서
+            여러 건을 훑을 때 쓰는 장치다(KeyFacts 주석 참고). */}
+        <h1 className="text-2xl leading-snug font-extrabold sm:text-3xl">
           {s.name}
         </h1>
 
@@ -371,6 +434,11 @@ export default async function ServiceDetail({
             </>
           )}
         </p>
+
+        {/* 원문보다 먼저 온다. 원문은 행정 문장이라 읽어야 알 수 있는데,
+            "현금인가 바우처인가 · 한 번인가 매달인가"는 읽기 전에 알아야
+            나머지를 읽을지 말지 정할 수 있다. */}
+        <KeyFacts s={s} />
 
         {(s.summary ?? s.outline) && (
           <p className="mt-4 rounded-xl bg-slate-50 p-4 text-sm leading-relaxed text-slate-700">
@@ -390,11 +458,8 @@ export default async function ServiceDetail({
           한눈에 보기
         </h2>
         <dl className="rounded-xl border border-line px-4 py-1">
-          <Row
-            label="지원 형태"
-            value={visiblePayTypes(s.payTypes).map((p) => payType(p).label).join(" · ")}
-          />
-          <Row label="지원 주기" value={cycleLabel(s.cycle)} />
+          {/* 지원 형태·지원 주기 줄은 여기 있었다. 제목 밑 「핵심 세 칸」으로
+              옮겼다 — 같은 값을 한 화면에 두 번 적을 이유가 없다. */}
           <Row label="신청 방법" value={s.applyMethods.join(" · ")} />
           <Row
             label="대상"
@@ -407,8 +472,6 @@ export default async function ServiceDetail({
           <Row label="시행" value={periodLabel(s.applyStart, s.applyEnd)} />
         </dl>
       </section>
-
-      <PlainWords s={s} />
 
       <IncomeBanner s={s} />
 
