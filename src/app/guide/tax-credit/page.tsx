@@ -8,9 +8,11 @@ import { services } from "@/data/services";
 const G = guideBySlug("tax-credit")!;
 
 export const metadata: Metadata = {
-  title: `${G.title} — 정기신청·반기신청·기한 후 신청의 차이`,
+  /* G.title이 이미 줄표를 품고 있어 그대로 이으면 줄표가 둘이 된다.
+     탭과 검색결과에 들어가는 글자라 여기서만 따로 적는다. */
+  title: "근로장려금 지급일과 신청 기간 — 정기신청·반기신청·기한 후 신청의 차이",
   description:
-    "근로장려금은 한 해에 신청 창구가 넷입니다. 정기신청 5월, 반기신청 3월·9월, 기한 후 신청 6~12월. 무엇이 다르고 언제 얼마가 들어오는지 국세청 안내로 정리했습니다.",
+    "5월 정기신청은 9월 말까지, 9월 반기신청(상반기분)은 12월 30일에 들어옵니다. 기한 후 신청은 신청일로부터 4개월 이내이고 95%만 나옵니다. 국세청 안내로 정리했습니다.",
   alternates: { canonical: "/guide/tax-credit" },
 };
 
@@ -83,6 +85,30 @@ export default function TaxCreditGuide() {
         lead="이름은 하나인데 신청하는 문이 넷입니다. 어느 문으로 들어가느냐에 따라 받는 시점도, 금액도 달라집니다."
         updated={`최종 수정 ${G.updated} · 날짜와 금액은 국세청 안내 화면에서 2026-09-06 확인`}
       >
+        {/*
+          "근로장려금 지급일"로 찾아온 사람이 원하는 건 설명이 아니라 **날짜**다.
+          그 답이 「네 개의 문」 표 안에 흩어져 있어서, 스크롤을 내려 네 상자를
+          훑어야 겨우 모인다. 맨 위에 날짜만 모아 먼저 답한다.
+
+          숫자를 손으로 다시 적지 않는다 — 아래 표와 같은 `DOORS`에서 뽑는다.
+          한쪽만 고쳐 두 곳이 어긋나는 일을 만들지 않기 위해서다.
+        */}
+        <DocSection title="지급일만 먼저">
+          <ul className="space-y-2">
+            {DOORS.map((d) => (
+              <li key={d.key} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                <span className="w-40 shrink-0 font-bold text-ink">{d.key}</span>
+                <span className="text-slate-600">{d.when} 신청 →</span>
+                <span className="font-bold text-brand">{d.pay}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-muted">
+            국세청 안내 화면에서 2026-09-06 확인. 아래에 각각 무엇이 다른지
+            적어 두었습니다.
+          </p>
+        </DocSection>
+
         <DocSection title="왜 헷갈리나 — 복지로에는 안 적혀 있습니다">
           <p>
             근로장려금은 이 사이트에 수록된{" "}
@@ -133,7 +159,7 @@ export default function TaxCreditGuide() {
                   {[
                     ["언제 신청", d.when],
                     ["누가", d.who],
-                    ["언제 들어오나", d.pay],
+                    ["지급일", d.pay],
                   ].map(([k, v]) => (
                     <div key={k} className="flex gap-3 px-4 py-2.5">
                       <dt className="w-24 shrink-0 text-muted">{k}</dt>
