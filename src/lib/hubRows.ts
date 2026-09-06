@@ -35,7 +35,10 @@ const SUMMARY_MAX = 140;
  *
  * [0] id · [1] 이름 · [2] 요약 · [3] 담당부처 · [4] provider
  * [5] 시도 · [6] 시군구 · [7] 주기 · [8] 지급형태 · [9] 온라인신청
- * [10] 조회수 · [11] 대상 · [12] 생애주기 · [13] 필터값
+ * [10] 조회수 · [11] 대상 · [12] 생애주기 · [13] 필터값 · [14] 소득기준(%)
+ *
+ * [14]는 카드의 "내 소득 기준 해당" 표시에만 쓴다. 값이 없는 사업이
+ * 900건 중 681건이라 대부분 0으로 나가고, 숫자 하나라 무게는 없다시피 하다.
  */
 export type HubRow = [
   string, // id
@@ -52,6 +55,7 @@ export type HubRow = [
   string, // targets, 쉼표로 이음
   string, // lifeStages, 쉼표로 이음
   string, // 필터값 — "group:value" 를 쉼표로 이음
+  number, // medianPercent — 없으면 0
 ];
 
 const cut = (t: string | null) =>
@@ -93,6 +97,7 @@ export const toRow = (s: WelfareService): HubRow => [
   s.targets.join(","),
   s.lifeStages.join(","),
   facetsOf(s).join(","),
+  s.medianPercent ?? 0,
 ];
 
 /** 압축 행을 카드가 읽는 형태로 되돌린다. 브라우저에서 부른다. */
@@ -110,6 +115,7 @@ export const toCard = (r: HubRow): CardService => ({
   views: r[10],
   targets: r[11] ? r[11].split(",") : [],
   lifeStages: r[12] ? r[12].split(",") : [],
+  medianPercent: r[14] || null,
 });
 
 export type FacetOption = { value: string; label: string; count: number };

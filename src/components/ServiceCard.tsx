@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Badge from "./Badge";
+import IncomeMatch from "./IncomeMatch";
 import {
   payType,
   cycleLabel,
@@ -34,6 +35,7 @@ export type CardService = Pick<
   | "cycle"
   | "payTypes"
   | "onlineApply"
+  | "medianPercent"
 >;
 
 /**
@@ -81,8 +83,25 @@ export default function ServiceCard({
       href={`/service/${s.id}`}
       className="group flex h-full flex-col rounded-xl border border-line bg-white p-4 transition hover:border-brand hover:shadow-[0_2px_12px_rgba(11,87,208,0.08)]"
     >
-      {(pay || s.onlineApply) && (
-        <div className="mb-2 flex flex-wrap items-center gap-1.5">
+      {/*
+        세 번째 딱지를 허용한 예외.
+
+        위의 "색은 두 개까지" 규칙은 **모두에게 늘 보이는** 딱지를 두고 한
+        말이다. 이건 자가진단을 마친 사람에게만, 그것도 기준이 맞는 카드에만
+        나타난다. 자가진단을 안 했으면 화면은 예전 그대로다.
+
+        순서를 맨 앞에 둔 이유. 자가진단까지 한 사람에게 카드에서 가장 먼저
+        알고 싶은 것은 지급 형태가 아니라 "내가 되는가"다.
+
+        `empty:hidden`은 대비책이다. 지금은 `payTypes`가 900건 전부 차 있고
+        `visiblePayTypes`가 빈 배열을 돌려주지 않아 배지 하나는 늘 붙는다.
+        다만 소득 기준만 있고 나머지가 비는 카드가 생기면, 자가진단을 안 한
+        사람에게는 세 자식이 전부 null이 되어 빈 상자가 `mb-2`만큼 자리를
+        차지한다. 그때 여백이 어긋나지 않도록 미리 감춰 둔다.
+      */}
+      {(pay || s.onlineApply || s.medianPercent !== null) && (
+        <div className="mb-2 flex flex-wrap items-center gap-1.5 empty:hidden">
+          <IncomeMatch percent={s.medianPercent} />
           {pay && <Badge tone={payType(pay).tone}>{payType(pay).label}</Badge>}
           {s.onlineApply && <Badge>온라인신청</Badge>}
         </div>

@@ -8,6 +8,7 @@ import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
+import ThisMonth from "@/components/ThisMonth";
 
 /**
  * 첫 화면.
@@ -221,6 +222,10 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* 이번 달에 마감이 걸린 것. 브라우저에서 달을 읽어 그리므로 정적
+          HTML에는 없다 — 빌드 날짜가 박히면 달이 넘어갈 때 거짓말이 된다. */}
+      <ThisMonth />
 
       {/* 본 게 있을 때만 나타난다. 처음 온 사람에게는 아예 안 보인다. */}
       <RecentViews />
