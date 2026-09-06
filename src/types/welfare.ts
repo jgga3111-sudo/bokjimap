@@ -81,13 +81,50 @@ export type WelfareService = {
   updatedAt: string | null;
 };
 
-/** 상세 본문을 이루는 조각들. 길이 판정과 화면 렌더 양쪽에서 쓴다. */
+/**
+ * 「선정 기준」칸이 사실상 비어 있는가.
+ *
+ * 원본 API가 선정기준 자리에 **"지원대상의 내용을 참고해주시기 바랍니다."**만
+ * 넣어 보내는 사업이 149건 있다(2026-09-06 실측). 표현이 조금씩 달라
+ * "지원대상을 참고해주시기 바랍니다" · "자세한 내용은 지원대상의 내용을…" ·
+ * "지원대상, 신청방법의 내용을…" 같은 변형이 섞여 있다.
+ *
+ * 이 149건이 가져가는 복지로 조회수가 **전체의 30.8%**다. 사람들이 가장 많이
+ * 여는 페이지의 한 칸이, 아무 말도 하지 않는 문장 하나로 채워져 있었다.
+ * 게다가 149장에 글자까지 같은 문장이 실리면 구글에는 중복 신호가 된다 —
+ * 제목·설명 중복을 막으려고 `audit-indexability`까지 두고 있으면서
+ * 본문에서 같은 일을 하고 있었던 셈이다.
+ *
+ * 판정은 **짧고 + 지원대상을 가리키고 + 참고하라고 끝나는 것**으로 한정한다.
+ * 길이 상한(40자)이 핵심이다. 한부모가족 사업처럼
+ * "…참고해주시기 바라며 소득인정액은 소득평가액과…"로 이어져 **실제 내용이
+ * 붙어 있는 108자짜리**가 있는데, 그건 지우면 안 되는 본문이다.
+ */
+export function isCriteriaBoilerplate(text: string | null): boolean {
+  if (!text) return false;
+  const t = text.replace(/\s+/g, "");
+  return (
+    t.length <= 40 &&
+    t.includes("지원대상") &&
+    t.includes("참고") &&
+    /바랍니다\.?$/.test(t)
+  );
+}
+
+/**
+ * 상세 본문을 이루는 조각들. 길이 판정과 화면 렌더 양쪽에서 쓴다.
+ *
+ * 상투 문구 선정기준은 **길이에서 뺀다.** 화면에 그리지 않기로 한 글자를
+ * "본문이 이만큼 있다"고 세면, 색인 기준선(`MIN_BODY_LENGTH`)이 실제보다
+ * 후해진다. 빼고 다시 세면 색인 대상이 713건에서 707건이 된다 — 6건이
+ * 빠지고, 그 6건이 가져가던 조회수는 전체의 0.13%다.
+ */
 export function bodyText(s: WelfareService): string {
   return [
     s.outline,
     s.summary,
     s.eligibility,
-    s.selectionCriteria,
+    isCriteriaBoilerplate(s.selectionCriteria) ? null : s.selectionCriteria,
     s.supportContent,
     s.applyMethod,
   ]

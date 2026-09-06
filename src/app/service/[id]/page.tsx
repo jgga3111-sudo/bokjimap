@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services, SERVICES_UPDATED } from "@/data/services";
-import { isIndexable, type WelfareService } from "@/types/welfare";
+import {
+  isIndexable,
+  isCriteriaBoilerplate,
+  type WelfareService,
+} from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
@@ -10,6 +14,8 @@ import { SITE } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
+import PastPeriodNotice from "@/components/PastPeriodNotice";
+import { statedApplyPeriod } from "@/lib/applyPeriod";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -104,7 +110,14 @@ function Prose({ text }: { text: string }) {
  */
 const TOC = [
   { id: "target", title: "지원 대상", has: (s: WelfareService) => !!s.eligibility },
-  { id: "criteria", title: "선정 기준", has: (s: WelfareService) => !!s.selectionCriteria },
+  {
+    id: "criteria",
+    title: "선정 기준",
+    /* 상투 문구뿐인 149건에서는 절을 안 그리므로 목차에도 걸지 않는다.
+       걸어 두면 눌러서 도착한 자리에 아무것도 없다. */
+    has: (s: WelfareService) =>
+      !!s.selectionCriteria && !isCriteriaBoilerplate(s.selectionCriteria),
+  },
   { id: "benefit", title: "지원 내용", has: (s: WelfareService) => !!s.supportContent },
   {
     id: "apply",
@@ -355,6 +368,11 @@ export default async function ServiceDetail({
     ...s.lifeStages.map((t) => lifeStageBySlug(t)),
   ].filter(Boolean);
 
+  /* 본문 문장에 적힌 신청 기간. 여기서는 뽑기만 하고, 지났는지는 브라우저가
+     판정한다 — 빌드한 날을 정적 HTML에 굳히지 않으려는 것이다. 900건 중
+     9건이 걸린다(2026-09-06). */
+  const period = statedApplyPeriod(s);
+
   /*
     관련 서비스를 "대상이 겹치면 조회수 순"으로만 뽑으면, 600개 페이지가 전부
     같은 상위 5건(청년내일저축계좌·청년월세…)을 가리킨다. 내부 링크가 한곳으로
@@ -445,6 +463,11 @@ export default async function ServiceDetail({
             {s.summary ?? s.outline}
           </p>
         )}
+
+        {/* 요약문 바로 밑이다. 신청 기간은 대개 그 문장 안에 적혀 있어서,
+            읽은 자리에서 바로 "그건 이미 지났다"가 붙어야 뜻이 통한다.
+            지났는지 아닌지는 브라우저가 정한다 — 컴포넌트 주석 참고. */}
+        {period && <PastPeriodNotice end={period.end} text={period.text} />}
       </header>
 
       {/* 목차는 "한눈에 보기" 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
@@ -487,10 +510,25 @@ export default async function ServiceDetail({
       {s.eligibility && (
         <Section id="target" title="지원 대상">
           <Prose text={s.eligibility} />
+          {/*
+            원본이 선정기준 자리에 "지원대상의 내용을 참고해주시기 바랍니다."만
+            보낸 149건. 그 문장을 절 하나로 세워 두면, 목차를 눌러 도착한 자리에
+            아무 말도 없다. 절을 없애고 **여기 한 줄로 사실만 적는다.**
+
+            "선정 기준을 따로 두지 않는 사업"이라고 쓰지 않는다 — 그건 우리가
+            제도를 해석한 것이다(CLAUDE.md 3절). 원문이 그렇게 적혀 있다는
+            사실까지만 말한다.
+          */}
+          {isCriteriaBoilerplate(s.selectionCriteria) && (
+            <p className="mt-2 text-xs text-muted">
+              원문에는 선정 기준이 따로 적혀 있지 않고, 위 지원 대상을
+              참고하라고만 되어 있습니다.
+            </p>
+          )}
         </Section>
       )}
 
-      {s.selectionCriteria && (
+      {s.selectionCriteria && !isCriteriaBoilerplate(s.selectionCriteria) && (
         <Section id="criteria" title="선정 기준">
           <Prose text={s.selectionCriteria} />
         </Section>

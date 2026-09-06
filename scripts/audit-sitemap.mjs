@@ -36,8 +36,33 @@ const num = (file, name) => {
 const MIN_BODY_LENGTH = num("src/types/welfare.ts", "MIN_BODY_LENGTH");
 const MIN_SERVICES = num("src/lib/axes.ts", "MIN_SERVICES");
 
+/**
+ * 상투 문구 선정기준 — `types/welfare.ts`의 `isCriteriaBoilerplate`와 **같은
+ * 규칙**이어야 한다. 화면에 안 그리기로 한 글자를 길이에 세면 색인 기준선이
+ * 실제보다 후해진다. 2026-09-06에 이 사본을 안 고쳐서, 소스 규칙은 713건이라
+ * 하고 실제 빌드 결과는 707건이라 하는 상태가 잠깐 있었다 — 이 파일 머리에
+ * 적어 둔 경고가 그대로 실현된 것이다.
+ */
+const isCriteriaBoilerplate = (text) => {
+  if (!text) return false;
+  const t = text.replace(/\s+/g, "");
+  return (
+    t.length <= 40 &&
+    t.includes("지원대상") &&
+    t.includes("참고") &&
+    /바랍니다\.?$/.test(t)
+  );
+};
+
 const bodyLen = (s) =>
-  [s.outline, s.summary, s.eligibility, s.selectionCriteria, s.supportContent, s.applyMethod]
+  [
+    s.outline,
+    s.summary,
+    s.eligibility,
+    isCriteriaBoilerplate(s.selectionCriteria) ? null : s.selectionCriteria,
+    s.supportContent,
+    s.applyMethod,
+  ]
     .filter(Boolean)
     .join("").length;
 
