@@ -26,7 +26,38 @@ const securityHeaders = [
      X-Frame-Options는 구형 브라우저용, CSP frame-ancestors가 현행 표준이라
      둘 다 건다. */
   { key: "X-Frame-Options", value: "DENY" },
-  { key: "Content-Security-Policy", value: "frame-ancestors 'none'" },
+
+  /*
+    CSP.
+
+    `script-src`는 여전히 넣지 않는다(위 머리말 참고). 대신 **스크립트와
+    무관하면서 애드센스를 건드리지 않는** 세 가지를 더 건다. 2026-09-06에
+    셋 다 지금 코드에서 쓰이지 않는 것을 확인하고 넣었다 —
+    `<form>` 0건, `<iframe>·<object>·<embed>` 0건, `<base>` 0건.
+
+      base-uri 'self'
+        `<base href="https://남의사이트/">` 한 줄이 주입되면 페이지의 모든
+        상대 링크가 그쪽으로 간다. 우리 상세 페이지는 링크가 수십 개고
+        본문이 전부 외부 데이터라, 이게 막히지 않으면 링크를 통째로
+        빼앗기는 경로가 열린다.
+
+      form-action 'self'
+        주입된 폼이 남의 서버로 값을 보내는 것을 막는다. 지금 이 사이트에
+        폼은 하나도 없으니 잃을 것이 없다.
+
+      object-src 'none'
+        플래시·PDF 플러그인 삽입 경로를 닫는다. 역시 쓰는 데가 없다.
+
+    광고는 iframe **안**에서 뜨는데, CSP는 다른 출처의 iframe 내부로
+    상속되지 않는다. 그래서 이 셋은 애드센스에 영향을 주지 않는다.
+    `frame-src`를 건드리지 않은 것도 같은 이유다 — 그건 광고 iframe을
+    직접 막는 자리라 손대면 광고가 사라진다.
+  */
+  {
+    key: "Content-Security-Policy",
+    value:
+      "frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
+  },
 
   /* 외부로 나갈 때 전체 URL 대신 출처만 보낸다. 우리 URL에는 개인정보가
      없지만, 자가진단 결과가 나중에 쿼리스트링에 실리더라도 새 나가지 않게

@@ -110,9 +110,28 @@ export default function SearchBox({
           big ? "h-13 py-3" : "h-10"
         }`}
       >
-        <span aria-hidden className="shrink-0 text-muted">
-          🔍
-        </span>
+        {/*
+          이모지 🔍였다. 바꾼 이유는 취향이 아니라 **기기마다 다른 그림이
+          나오기 때문**이다 — 윈도우는 파란 테두리에 손잡이가 오른쪽 아래,
+          맥은 회색, 안드로이드는 또 다르다. 헤더에 늘 떠 있는 요소가
+          보는 사람마다 달라 보이면 사이트가 만들다 만 것처럼 읽힌다.
+
+          선으로 그린 아이콘은 어디서나 같고, `currentColor`를 쓰므로
+          글자색을 따라간다. 이 프로젝트가 배지 이모지와 절 제목 이모지를
+          걷어낸 것과 같은 이유다(Badge.tsx·display.ts 주석).
+        */}
+        <svg
+          aria-hidden
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          className="size-[18px] shrink-0 text-slate-400"
+        >
+          <circle cx="9" cy="9" r="6" />
+          <path d="m13.5 13.5 4 4" />
+        </svg>
         <input
           type="search"
           value={query}

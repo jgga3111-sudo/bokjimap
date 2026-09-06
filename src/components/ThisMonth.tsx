@@ -60,8 +60,23 @@ export default function ThisMonth() {
           떨어져 어디에 걸린 말인지 알 수 없다. 제목과 링크를 한 줄에 묶고,
           제도 이름은 아래로 내린다. */}
       <div className="flex items-baseline justify-between gap-3">
-        <span className="text-sm font-extrabold text-amber-900">
-          📅 {month}월에 챙길 것
+        {/* 📅였다. 첫 화면에 남은 마지막 이모지였고, 기기마다 다른 그림이
+            나온다(SearchBox 주석과 같은 이유). 선 아이콘은 글자색을 따라가서
+            이 상자의 호박색에 그대로 맞는다. */}
+        <span className="inline-flex items-center gap-1.5 text-sm font-extrabold text-amber-900">
+          <svg
+            aria-hidden
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.6}
+            strokeLinecap="round"
+            className="size-4 shrink-0"
+          >
+            <rect x="2" y="3.5" width="12" height="10.5" rx="2" />
+            <path d="M5.5 1.75v3M10.5 1.75v3M2 7.25h12" />
+          </svg>
+          {month}월에 챙길 것
         </span>
         <span className="shrink-0 text-xs font-bold text-amber-800 group-hover:underline">
           신청 달력 →

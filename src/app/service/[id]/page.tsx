@@ -441,6 +441,23 @@ export default async function ServiceDetail({
           {s.name}
         </h1>
 
+        {/*
+          확인일을 여기 붙였다 (2026-09-06).
+
+          같은 값이 맨 아래 「공식 안내」 상자에 문장으로 이미 있다. 그런데
+          이 페이지는 **검색으로 바로 들어오는 자리**다. 375px에서 상위
+          상세는 5,400px이 넘어서, 맨 아래까지 내려간 사람만 이 정보가
+          언제 것인지 알 수 있었다.
+
+          복지 정보에서 "언제 확인한 것인가"는 곁다리가 아니라 값의 일부다.
+          금액과 요건이 해마다 바뀌기 때문에, 날짜 없는 복지 글은 맞는지
+          틀린지 판단할 수가 없다. AI 양산 블로그가 못 하는 것이 정확히
+          이것이라 여기가 우리가 갈라지는 자리다(CLAUDE.md 3절).
+
+          크게 만들지 않는다. 조회수와 같은 크기·같은 회색으로 두고, 누르면
+          아래 상자로 데려간다 — 거기에 원본 최종수정일과 공식 링크가 있다.
+          날짜만 덩그러니 두면 "그래서 어쩌라고"가 되므로 갈 곳을 준다.
+        */}
         <p className="mt-2 text-sm text-muted">
           {[placeLabel(s), s.department].filter(Boolean).join(" · ")}
           {s.views > 0 && (
@@ -451,6 +468,13 @@ export default async function ServiceDetail({
               </span>
             </>
           )}
+          {" · "}
+          <a
+            href="#official"
+            className="text-slate-400 underline decoration-slate-300 underline-offset-2 hover:text-brand"
+          >
+            {SERVICES_UPDATED} 확인
+          </a>
         </p>
 
         {/* 원문보다 먼저 온다. 원문은 행정 문장이라 읽어야 알 수 있는데,

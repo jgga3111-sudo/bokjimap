@@ -4,7 +4,7 @@ import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
-import { services } from "@/data/services";
+import { services, SERVICES_UPDATED } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
@@ -198,6 +198,29 @@ export default function Home() {
               </div>
             ))}
           </dl>
+
+          {/*
+            숫자 바로 밑에 **어디서 받은 값인지**를 붙인다.
+
+            윗 주석에서 "몇 건을 다루는지, 어느 해 기준인지가 곧 신뢰의
+            근거"라고 해 놓고, 정작 그 숫자가 어디서 왔는지는 첫 화면에서
+            말하지 않고 있었다. 푸터까지 내려가야 나온다 — 처음 온 사람이
+            "이 사이트를 믿어도 되나"를 정하는 자리는 첫 화면이다.
+
+            복지 정보를 찾는 사람은 정부 사이트인지 아닌지를 먼저 가린다.
+            출처를 대는 것과 정부인 척하지 않는 것은 같은 일의 양면이라,
+            여기서 출처를 대면 푸터의 "공식 기관이 아닙니다"가 변명이 아니라
+            일관된 태도로 읽힌다.
+
+            크게 만들지 않는다. 수치가 주인공이고 이건 각주다.
+          */}
+          <p className="mt-4 text-xs leading-relaxed text-muted">
+            공공데이터포털 복지서비스 데이터를 {SERVICES_UPDATED}에 받아
+            정리했습니다.{" "}
+            <Link href="/source" className="underline hover:text-brand">
+              출처 자세히
+            </Link>
+          </p>
         </div>
       </section>
 
