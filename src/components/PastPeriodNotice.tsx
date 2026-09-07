@@ -44,11 +44,24 @@ const noToday = () => null;
 export default function PastPeriodNotice({
   end,
   text,
+  variant = "period",
 }: {
-  /** 본문에 적힌 신청 기간의 끝날. `YYYY-MM-DD` */
+  /** 본문에 적힌 끝날. `YYYY-MM-DD` */
   end: string;
   /** 본문 원문 조각. 우리가 고쳐 쓰지 않고 그대로 보여준다. */
   text: string;
+  /**
+   * 무엇이 지났는가.
+   *
+   * · `period` — 신청 기간(`statedApplyPeriod`). 해마다 다시 공고가 난다.
+   * · `plan`   — 예정 시점(`statedPlan`). 원문이 아직 안 고쳐진 경우다.
+   *
+   * 문장을 갈라 놓은 이유. 신청 기간이 지난 것과 "6월 예정"이 9월까지
+   * 남아 있는 것은 **읽는 사람이 해야 할 일이 다르다.** 앞은 내년 공고를
+   * 기다리는 일이고, 뒤는 지금 시작됐는지 확인하는 일이다. 한 문장으로
+   * 뭉뚱그리면 둘 다 어긋난다.
+   */
+  variant?: "period" | "plan";
 }) {
   const today = useSyncExternalStore(noop, localToday, noToday);
 
@@ -57,8 +70,19 @@ export default function PastPeriodNotice({
 
   return (
     <p className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
-      <strong>본문에 적힌 신청 기간({text})은 이미 지났습니다.</strong>{" "}
-      해마다 다시 공고가 나오는 사업일 수 있으니, 올해 일정은{" "}
+      {variant === "period" ? (
+        <>
+          <strong>본문에 적힌 신청 기간({text})은 이미 지났습니다.</strong>{" "}
+          해마다 다시 공고가 나오는 사업일 수 있으니, 올해 일정은{" "}
+        </>
+      ) : (
+        /* "아직 시작 안 됐습니다"라고 쓰지 않는다. 우리가 아는 것은 원문에
+           적힌 시점이 지났다는 사실뿐이고, 실제로 시작됐는지는 모른다. */
+        <>
+          <strong>본문에 적힌 시점({text})은 이미 지났습니다.</strong>{" "}
+          원문이 아직 고쳐지지 않은 것으로 보입니다. 지금 어떻게 되었는지는{" "}
+        </>
+      )}
       <a href="#official" className="font-bold underline">
         아래 공식 안내
       </a>
