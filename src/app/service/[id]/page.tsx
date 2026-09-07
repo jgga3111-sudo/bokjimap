@@ -16,7 +16,7 @@ import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
-import { statedApplyPeriod } from "@/lib/applyPeriod";
+import { statedApplyPeriod, statedPlan } from "@/lib/applyPeriod";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -382,6 +382,12 @@ export default async function ServiceDetail({
      9건이 걸린다(2026-09-06). */
   const period = statedApplyPeriod(s);
 
+  /* 본문에 적힌 **예정 시점**. 신청 기간(범위)과 달리 단일 시점이라 따로
+     뽑는다. 900건 중 2건이 걸린다(2026-09-07). 지났는지는 역시 브라우저가
+     판정한다 — 참전명예수당의 "2026년 10월"은 아직 안 지났고, 11월이 되면
+     배포 없이도 저절로 뜬다. */
+  const plan = statedPlan(s);
+
   /*
     관련 서비스를 "대상이 겹치면 조회수 순"으로만 뽑으면, 600개 페이지가 전부
     같은 상위 5건(청년내일저축계좌·청년월세…)을 가리킨다. 내부 링크가 한곳으로
@@ -429,7 +435,11 @@ export default async function ServiceDetail({
       />
       {/* 본 것을 브라우저에 적어 둔다(화면에는 아무것도 안 그린다).
           첫 화면의 "최근 본 지원"이 이걸 읽는다. */}
-      <TrackView id={s.id} name={s.name ?? id} place={placeLabel(s)} />
+      <TrackView
+        id={s.id}
+        name={nameWithAlias(s.id, s.name ?? id)}
+        place={placeLabel(s)}
+      />
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -439,7 +449,11 @@ export default async function ServiceDetail({
           복지 서비스
         </Link>
         {" › "}
-        <span className="text-slate-600">{s.name}</span>
+        {/* 이동경로도 별칭이 붙은 이름을 쓴다. 바로 아래 JSON-LD
+            BreadcrumbList가 이미 그 이름을 내보내고 있어서, 여기만 원문
+            이름으로 두면 **구조화 데이터와 화면이 어긋난다.** 구글은 그
+            불일치를 싫어한다. 붙는 것은 900건 중 둘뿐이다. */}
+        <span className="text-slate-600">{nameWithAlias(s.id, s.name)}</span>
       </nav>
 
       <header>
@@ -484,6 +498,26 @@ export default async function ServiceDetail({
           >
             {SERVICES_UPDATED} 확인
           </a>
+          {/*
+            원문 최종수정일을 확인일 **바로 옆**에 둔다. 여태 맨 아래
+            「공식 안내」 상자에만 있었다.
+
+            왜 옮겼나. 이 줄만 보면 "2026-09-04 확인"이라 최신처럼 읽히는데,
+            그건 **우리가 받아 온 날**이지 원문이 고쳐진 날이 아니다. 실제로
+            수록 900건 중 40건은 원문이 2025년 이전이고, 가장 오래된 것은
+            2022-06이다(2026-09-07 실측). 4년 된 공고를 "9월에 확인함"으로만
+            적어 두면 우리가 날짜로 거짓말을 하는 셈이 된다.
+
+            "오래됐습니다" 같은 판정은 붙이지 않는다. 며칠이 지나야 낡은
+            것인지는 제도마다 다르고, 그 판단은 이 사이트가 하지 않는다
+            (CLAUDE.md 3절). 두 날짜를 나란히 보여주고 읽는 사람이 정한다.
+
+            중앙부처 330건은 이 값이 아예 없어(API가 안 준다) 이 조각이
+            붙지 않는다. 없는 것을 "정보 없음"으로 채우지 않는다.
+          */}
+          {s.updatedAt && (
+            <span className="text-slate-400"> · 원문 {s.updatedAt}</span>
+          )}
         </p>
 
         {/* 원문보다 먼저 온다. 원문은 행정 문장이라 읽어야 알 수 있는데,
@@ -501,6 +535,9 @@ export default async function ServiceDetail({
             읽은 자리에서 바로 "그건 이미 지났다"가 붙어야 뜻이 통한다.
             지났는지 아닌지는 브라우저가 정한다 — 컴포넌트 주석 참고. */}
         {period && <PastPeriodNotice end={period.end} text={period.text} />}
+        {plan && (
+          <PastPeriodNotice end={plan.end} text={plan.text} variant="plan" />
+        )}
       </header>
 
       {/* 목차는 "한눈에 보기" 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
