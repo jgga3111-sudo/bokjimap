@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage } from "@/components/Doc";
-import { BASE_YEAR, medianIncome, thresholdOf } from "@/lib/midIncome";
+import {
+  BASE_YEAR,
+  HEALTH_INSURANCE,
+  medianIncome,
+  thresholdOf,
+} from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import { SITE } from "@/lib/site";
 import { jsonLd as toJsonLd } from "@/lib/safe";
@@ -12,6 +17,13 @@ export const metadata: Metadata = {
     "기준 중위소득이 무엇인지, 맞벌이 부부는 건강보험료를 합쳐서 보는지, 가구원 수는 누구까지 세는지, 세대분리를 하면 유리한지 — 복지 신청 전에 가장 많이 막히는 것들을 정리했습니다.",
   alternates: { canonical: "/faq" },
 };
+
+/* 요율을 글자로 박지 않는다. 2026-09-07에 이 글에만 "7.19%"·"3.595%"가
+   숫자로 적혀 있었다. 값은 맞았지만, 내년에 `midIncome.ts`의 상수를 고치면
+   자가진단과 출처 페이지만 따라오고 **이 글은 옛 요율을 계속 말하게 된다.**
+   보험료율은 매년 8~9월 건정심에서 바뀐다. 상수 하나에서 끌어 쓴다. */
+const HEALTH_RATE = (HEALTH_INSURANCE.rate * 100).toFixed(2);
+const HEALTH_HALF = (HEALTH_INSURANCE.employeeRate * 100).toFixed(3);
 
 /**
  * 질문은 **사람들이 실제로 묻는 것**만 넣는다.
@@ -176,9 +188,9 @@ const GROUPS: Group[] = [
           <>
             <p>
               직장가입자의 건강보험료는 보수월액에 정해진 요율을 곱해서 나오기
-              때문에, 거꾸로 계산하면 소득이 나옵니다. {BASE_YEAR}년 요율은
-              7.19%이고 회사와 절반씩 부담하므로, 본인부담 보험료를 3.595%로
-              나누면 보수월액이 됩니다.
+              때문에, 거꾸로 계산하면 소득이 나옵니다. {BASE_YEAR}년 요율은{" "}
+              {HEALTH_RATE}%이고 회사와 절반씩 부담하므로, 본인부담 보험료를{" "}
+              {HEALTH_HALF}%로 나누면 보수월액이 됩니다.
             </p>
             <p>
               <strong>지역가입자는 이 방식이 통하지 않습니다.</strong>{" "}
@@ -188,7 +200,7 @@ const GROUPS: Group[] = [
             </p>
           </>
         ),
-        plain: `직장가입자의 건강보험료는 보수월액에 요율을 곱해 나오므로 거꾸로 계산할 수 있습니다. ${BASE_YEAR}년 요율 7.19%를 회사와 절반씩 부담하므로, 본인부담 보험료를 3.595%로 나누면 보수월액이 됩니다. 지역가입자는 재산 점수가 함께 반영돼 이 방식으로 계산할 수 없습니다.`,
+        plain: `직장가입자의 건강보험료는 보수월액에 요율을 곱해 나오므로 거꾸로 계산할 수 있습니다. ${BASE_YEAR}년 요율 ${HEALTH_RATE}%를 회사와 절반씩 부담하므로, 본인부담 보험료를 ${HEALTH_HALF}%로 나누면 보수월액이 됩니다. 지역가입자는 재산 점수가 함께 반영돼 이 방식으로 계산할 수 없습니다.`,
       },
       {
         q: "맞벌이 부부는 건강보험료를 합쳐서 보나요?",
