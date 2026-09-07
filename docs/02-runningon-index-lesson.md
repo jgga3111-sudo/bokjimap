@@ -210,16 +210,37 @@ ID만 다르고 내용이 비슷하니 크롤링 대기열에서 안 나온다.
 
 목록을 다시 뽑는 법 (조회수 순 · 본문 300자 이상):
 
+> **길이를 세는 규칙이 `src/types/welfare.ts`의 `bodyText`와 같아야 한다.**
+> 상투 문구 선정기준("지원대상의 내용을 참고해주시기 바랍니다.")은 화면에
+> 그리지 않으므로 **길이에서 뺀다.** 안 빼면 713건이 나오는데 실제 색인
+> 대상은 707건이라, 그 차이 6건은 **noindex이고 사이트맵에도 없는 페이지**다.
+> 2026-09-07에 옛 명령으로 뽑았다가 그중 한 건(WLF00005448)에 구글 색인
+> 요청을 넣어 「색인 생성 요청이 거부됨」을 받았다. 뽑은 뒤에는 라이브
+> 사이트맵과 대조해서 전부 들어 있는지 확인한다.
+
 ```
 node -e '
 const {readFileSync}=require("fs");
 const src=readFileSync("src/data/services.ts","utf8");
 const S=JSON.parse(src.slice(src.indexOf("= [")+2, src.lastIndexOf("]")+1));
-const len=s=>[s.outline,s.summary,s.eligibility,s.selectionCriteria,
+const boiler=t=>{if(!t)return false;const x=t.replace(/\s+/g,"");
+  return x.length<=40&&x.includes("지원대상")&&x.includes("참고")&&/바랍니다\.?$/.test(x);};
+const len=s=>[s.outline,s.summary,s.eligibility,
+  boiler(s.selectionCriteria)?null:s.selectionCriteria,
   s.supportContent,s.applyMethod].filter(Boolean).join("").length;
-S.filter(s=>len(s)>=300).sort((a,b)=>b.views-a.views).slice(0,40)
+const R=S.filter(s=>len(s)>=300).sort((a,b)=>b.views-a.views);
+console.error("색인 대상 "+R.length+"건 — 사이트맵 상세 707과 맞아야 한다");
+R.slice(0,40)
  .forEach(s=>console.log("https://bokjiclick.co.kr/service/"+s.id, s.name));
 '
+```
+
+빙에 낼 구간을 뽑을 때는 `slice(0,40)`을 `slice(500,600)`처럼 바꾼다.
+뽑은 뒤 대조:
+
+```
+curl -s https://bokjiclick.co.kr/sitemap.xml > /tmp/sm.xml
+while read -r u _; do grep -q "<loc>$u</loc>" /tmp/sm.xml || echo "사이트맵에 없음: $u"; done < 목록.txt
 ```
 
 ## 4. 하지 말 것
