@@ -37,6 +37,13 @@ export function toChoseong(text: string): string {
 export const isChoseongQuery = (q: string) =>
   /^[ㄱ-ㅎ]+$/.test(q.replace(/\s/g, ""));
 
-/** 비교용 정규화 — 공백과 가운뎃점을 지운다. "청년 월세" = "청년월세" */
+/**
+ * 비교용 정규화 — 공백·가운뎃점·붙임표를 지운다. "청년 월세" = "청년월세"
+ *
+ * 붙임표(`-`)를 넣은 이유. 국토교통부는 「K-패스」로 쓰는데 사람들은 「K패스」로
+ * 친다(데이터랩 2026-09-07 실측: `K패스` 월평균 12.7). 붙임표 하나 때문에
+ * 서로 다른 낱말이 되면, 공식 표기를 그대로 실은 쪽이 오히려 안 잡힌다.
+ * 지우는 쪽은 대조를 넓히기만 하므로 이미 걸리던 것이 빠지지 않는다.
+ */
 export const norm = (s: string) =>
-  s.toLowerCase().replace(/[\s·・.,()]/g, "");
+  s.toLowerCase().replace(/[\s·・.,()-]/g, "");
