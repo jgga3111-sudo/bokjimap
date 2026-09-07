@@ -1,6 +1,7 @@
 import { services } from "@/data/services";
 import { placeLabel } from "@/lib/display";
 import { toChoseong, isChoseongQuery, norm } from "@/lib/searchText";
+import { nameWithAlias, searchableNames } from "@/lib/aliases";
 
 /**
  * 전문(全文) 검색 — **서버에서만 쓴다.**
@@ -83,7 +84,12 @@ export function searchFull(query: string): FullHit[] {
   for (const s of services) {
     const body = bodyOf(s);
     const place = placeLabel(s);
-    const name = useCho ? norm(toChoseong(s.name)) : norm(s.name);
+    /* 별칭은 이름과 같은 등급으로 친다 — `lib/search.ts`와 규칙을 맞춘다.
+       한쪽만 고치면 헤더 드롭다운과 결과 페이지가 다른 답을 내놓는다.
+       별칭이 없으면(899건) 이름 하나짜리 배열이라 하는 일이 없다. */
+    const forms = searchableNames(s.id, s.name).map((n) =>
+      useCho ? norm(toChoseong(n)) : norm(n),
+    );
     const meta = useCho
       ? norm(toChoseong(place + s.department))
       : norm(place + s.department);
@@ -96,8 +102,15 @@ export function searchFull(query: string): FullHit[] {
     let matchedAll = true;
 
     for (const t of tokens) {
-      if (name.startsWith(t)) score += 100;
-      else if (name.includes(t)) score += 50;
+      let best = 0;
+      for (const n of forms) {
+        if (n.startsWith(t)) {
+          best = 100;
+          break;
+        }
+        if (n.includes(t)) best = 50;
+      }
+      if (best > 0) score += best;
       else if (meta.includes(t)) score += 10;
       else if (text.includes(t)) {
         score += 5;
@@ -117,7 +130,7 @@ export function searchFull(query: string): FullHit[] {
     .sort((a, b) => b.score - a.score)
     .map(({ s, hitAt }) => ({
       id: s.id,
-      name: s.name,
+      name: nameWithAlias(s.id, s.name),
       place: placeLabel(s),
       dept: s.department ?? "",
       snippet: hitAt ? snippetOf(bodyOf(s), hitAt) : null,

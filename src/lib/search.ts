@@ -1,5 +1,6 @@
 import { SEARCH_INDEX, type SearchRow } from "@/data/searchIndex";
 import { toChoseong, isChoseongQuery, norm } from "@/lib/searchText";
+import { ALIASES_BY_ROW_ID, nameWithAlias } from "@/lib/aliases";
 
 /**
  * 헤더 검색창이 쓰는 **가벼운 이름 색인.**
@@ -50,7 +51,18 @@ export function searchAll(query: string): Hit[] {
   const scored: { row: Row; score: number }[] = [];
 
   for (const row of INDEX) {
-    const name = useCho ? norm(toChoseong(row[1])) : norm(row[1]);
+    /*
+      별칭은 **이름과 같은 등급**으로 친다. 우리가 지어 붙인 별명이 아니라
+      원문이 사업명 옆에 괄호로 함께 적어 놓은 이름이기 때문이다
+      (`lib/aliases.ts`의 규칙). 이게 없으면 "문화누리카드"를 친 사람에게
+      조회수 294,386짜리 페이지가 **0건**으로 나온다 — 이름만 보는 색인이라
+      본문에 열 번 나와도 여기서는 못 찾는다.
+
+      899건은 별칭이 없어 배열을 새로 만들지 않는다.
+    */
+    const alias = ALIASES_BY_ROW_ID.get(row[0]);
+    const names = alias ? [row[1], ...alias] : [row[1]];
+    const forms = names.map((n) => (useCho ? norm(toChoseong(n)) : norm(n)));
     const rest = useCho
       ? norm(toChoseong(row[2] + row[3]))
       : norm(row[2] + row[3]);
@@ -59,8 +71,15 @@ export function searchAll(query: string): Hit[] {
     let matchedAll = true;
 
     for (const t of tokens) {
-      if (name.startsWith(t)) score += 100;
-      else if (name.includes(t)) score += 50;
+      let best = 0;
+      for (const n of forms) {
+        if (n.startsWith(t)) {
+          best = 100;
+          break;
+        }
+        if (n.includes(t)) best = 50;
+      }
+      if (best > 0) score += best;
       else if (rest.includes(t)) score += 10;
       else {
         matchedAll = false;
@@ -87,7 +106,9 @@ export function searchAll(query: string): Hit[] {
     .sort((a, b) => b.score - a.score)
     .map(({ row }) => ({
       id: idOf(row),
-      name: row[1],
+      /* 별칭으로 찾아온 사람에게 공식명만 보여주면 다른 걸 찾은 줄 안다.
+         찾은 말이 결과에도 보이도록 원문 표기대로 함께 적는다. */
+      name: nameWithAlias(idOf(row), row[1]),
       place: row[2],
       dept: row[3],
     }));

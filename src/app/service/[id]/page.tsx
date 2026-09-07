@@ -9,6 +9,7 @@ import {
 } from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
+import { nameWithAlias } from "@/lib/aliases";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
@@ -53,7 +54,15 @@ export async function generateMetadata({
   if (!s) return {};
 
   const where = placeLabel(s);
-  const label = dupName.has(s.name) ? `${where} ${s.name}` : s.name;
+  /*
+    통칭이 있으면 제목에 함께 세운다. 「통합문화이용권」은 조회수 294,386인데
+    사람들이 치는 말은 "문화누리카드"였다 — 네이버 데이터랩으로 재 보니
+    **320배**다(2026-09-07). 본문에는 열 번 나오는 말이 제목·설명·h1에는
+    한 번도 없어서, 검색이 가장 크게 보는 자리가 통째로 비어 있었다.
+    괄호 표기는 우리가 정한 게 아니라 원문이 쓰는 표기다(lib/aliases.ts).
+  */
+  const named = nameWithAlias(s.id, s.name);
+  const label = dupName.has(s.name) ? `${where} ${named}` : named;
 
   /* 설명 앞에 사업명을 세우는 이유. 요약문은 정부 API에서 오는데, 서로
      다른 사업이 글자까지 같은 문장을 쓰는 경우가 있다 — 뇌 MRI 검사비
@@ -408,7 +417,7 @@ export default async function ServiceDetail({
         name: "복지 서비스",
         item: `${SITE.url}/service`,
       },
-      { "@type": "ListItem", position: 3, name: s.name ?? id },
+      { "@type": "ListItem", position: 3, name: nameWithAlias(s.id, s.name ?? id) },
     ],
   };
 
@@ -438,7 +447,7 @@ export default async function ServiceDetail({
             같은 값을 더 크게, 뜻까지 붙여 말하므로 뺐다. 배지는 목록에서
             여러 건을 훑을 때 쓰는 장치다(KeyFacts 주석 참고). */}
         <h1 className="text-2xl leading-snug font-extrabold sm:text-3xl">
-          {s.name}
+          {nameWithAlias(s.id, s.name)}
         </h1>
 
         {/*

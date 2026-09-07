@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Badge from "./Badge";
 import IncomeMatch from "./IncomeMatch";
+import { nameWithAlias } from "@/lib/aliases";
 import {
   payType,
   cycleLabel,
@@ -113,7 +114,9 @@ export default function ServiceCard({
             {rank}
           </span>
         )}
-        {s.name}
+        {/* 통칭이 있으면 함께 적는다. 검색 결과·상세는 통칭을 달고 있는데
+            목록 카드만 공식명이면 같은 사업이 두 이름으로 보인다. */}
+        {nameWithAlias(s.id, s.name)}
       </h3>
 
       <p className="mt-1 text-xs text-muted">
