@@ -48,11 +48,23 @@ const SOURCES: Source[] = [
   },
   {
     what: `${BASE_YEAR}년 건강보험료율 ${(HEALTH_INSURANCE.rate * 100).toFixed(2)}%`,
-    from: "보험료율 인상 안내",
-    org: "국민건강보험공단",
-    url: "https://www.nhis.or.kr",
+    from: "제15차 건강보험정책심의위원회 의결 보도자료 (2025-08-28)",
+    org: "보건복지부",
+    url: "https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1487279",
     license: "공공누리 제1유형",
-    cycle: "연 1회",
+    cycle: "연 1회(매년 8~9월 의결, 이듬해 1월분 보험료부터 적용)",
+  },
+  {
+    /* 요율을 정하는 것은 보도자료가 아니라 시행령이다. 둘이 어긋나면 이쪽이
+       맞다. "1만분의 N"은 조문 표기 그대로다 — 우리가 %로 고쳐 쓰지 않는다. */
+    what: `건강보험료율의 법적 근거 (1만분의 ${Math.round(
+      HEALTH_INSURANCE.rate * 10000,
+    )})`,
+    from: "「국민건강보험법 시행령」 제44조제1항",
+    org: "법제처 국가법령정보센터",
+    url: encodeURI("https://www.law.go.kr/법령/국민건강보험법 시행령"),
+    license: "공공누리 제1유형",
+    cycle: "요율이 바뀔 때마다 개정",
   },
 ];
 
