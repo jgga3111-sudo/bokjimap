@@ -4,7 +4,7 @@ import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
 import GuideNav from "@/components/GuideNav";
 import { guideBySlug } from "@/lib/guides";
 import { services } from "@/data/services";
-import { views as fmtViews, cycleLabel, visiblePayTypes, payType } from "@/lib/display";
+import { views as fmtViews, cycleLabel, visiblePayTypes, payType, won } from "@/lib/display";
 
 const G = guideBySlug("emergency")!;
 
@@ -16,15 +16,40 @@ export const metadata: Metadata = {
 };
 
 /*
-  금액을 본문에 적지 않는다.
+  금액을 **손으로 적지 않는다. 대신 원문에서 뽑아 그린다.**
 
-  긴급복지 생계지원의 가구원별 금액은 원문에 정확히 나와 있지만, 여기 옮겨
-  적으면 고시가 바뀌는 순간 이 글만 옛 숫자로 남는다. 지원금 글에서 그건
-  단순한 오타가 아니라 사람을 헛걸음시키는 오류다(CLAUDE.md 3절).
+  ── 원래 결정과 왜 바꿨나 (2026-09-08) ─────────────────────────
+  처음에는 금액을 아예 싣지 않기로 했다. 이유는 이랬다 — "여기 옮겨 적으면
+  고시가 바뀌는 순간 이 글만 옛 숫자로 남는다. 지원금 글에서 그건 단순한
+  오타가 아니라 사람을 헛걸음시키는 오류다."
 
-  대신 사업 목록을 데이터에서 뽑아 상세 페이지로 보낸다. 상세는 원문을
-  그대로 싣고 기준연도까지 표시하므로 항상 맞는 숫자가 거기 있다.
+  그 걱정은 **손으로 적을 때만** 맞다. 아래는 수록 원문(`supportContent`)을
+  빌드 때 파싱해서 그리므로, 재수집으로 금액이 바뀌면 이 글도 같이 바뀐다.
+  상세 페이지와 **같은 한 곳**을 보기 때문에 둘이 어긋날 수가 없다.
+
+  바꾼 계기: 이 글에 금액이 한 번도 안 나와서, 읽는 사람이 규모를 못 잡고
+  있었다. 토스 미니앱 인기 100선에서 이 제도가 6위인데 부제가 "가구당 최대
+  183만원 까지"였다 — 사람들이 먼저 알고 싶어 하는 것이 금액이라는 뜻이다.
+
+  ⚠ 파싱이 실패하면 **아무것도 그리지 않는다.** 틀린 표를 그리느니 없는 게
+  낫다. 기준연도도 원문에서 같이 가져와 표 옆에 붙인다.
 */
+const LIVELIHOOD = services.find((s) => s.id === "WLF00003180");
+
+/** `1인 가구 : 783,000원/월` 꼴을 뽑는다. 원문이 "가구"와 "가족"을 섞어 쓴다. */
+const LIVELIHOOD_AMOUNTS = (LIVELIHOOD?.supportContent ?? "")
+  .split("\n")
+  .map((line) => line.match(/^\s*(\d+)인\s*(?:가구|가족)\s*:\s*([\d,]+)\s*원/))
+  .filter((m): m is RegExpMatchArray => m !== null)
+  .map((m) => ({ size: Number(m[1]), amount: Number(m[2].replace(/,/g, "")) }));
+
+/** `7인 이상 : 1인 증가 시마다 301,700/월씩 추가` — 여기만 "원"이 빠져 있다. */
+const LIVELIHOOD_EXTRA = (() => {
+  const m = (LIVELIHOOD?.supportContent ?? "").match(
+    /(\d+)인\s*이상\s*:\s*1인\s*증가\s*시마다\s*([\d,]+)/,
+  );
+  return m ? { from: Number(m[1]), each: Number(m[2].replace(/,/g, "")) } : null;
+})();
 const family = services
   .filter((s) => s.name.startsWith("긴급복지"))
   .sort((a, b) => b.views - a.views);
@@ -105,10 +130,70 @@ export default function EmergencyGuide() {
             })}
           </ul>
           <p className="text-xs text-muted">
-            금액과 한도는 해마다 고시로 바뀌므로 이 글에 적지 않았습니다. 각
-            사업을 누르면 원문 그대로의 금액과 기준연도가 나옵니다.
+            각 사업을 누르면 원문 그대로의 금액과 기준연도가 나옵니다.
           </p>
         </DocSection>
+
+        {/*
+          금액 표. 위 주석대로 **원문에서 뽑아 그린다** — 파싱이 실패하면
+          이 절 자체가 사라진다. 상세 페이지와 같은 한 곳을 보므로 둘이
+          어긋날 수 없다.
+        */}
+        {LIVELIHOOD && LIVELIHOOD_AMOUNTS.length > 0 && (
+          <DocSection title="생계지원은 얼마인가">
+            <p>
+              여덟 갈래 중 가장 많이 찾는 <strong>{LIVELIHOOD.name}</strong>은
+              가구원 수에 따라 <strong>정액</strong>으로 나옵니다. 소득에 따라
+              달라지는 것이 아니라 인원수로 정해집니다.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[18rem] border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-line bg-slate-50">
+                    <th className="px-3 py-2 text-left font-bold text-ink">
+                      가구원 수
+                    </th>
+                    <th className="px-3 py-2 text-right font-bold text-ink">
+                      월 지원액
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {LIVELIHOOD_AMOUNTS.map((r) => (
+                    <tr
+                      key={r.size}
+                      className="border-b border-line last:border-0"
+                    >
+                      <td className="px-3 py-2 text-slate-700">{r.size}인</td>
+                      <td className="px-3 py-2 text-right font-bold tabular-nums text-ink">
+                        {won(r.amount)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {LIVELIHOOD_EXTRA && (
+              <p className="text-sm">
+                {LIVELIHOOD_EXTRA.from}인 이상은 1인 늘 때마다{" "}
+                <strong>{won(LIVELIHOOD_EXTRA.each)}</strong>씩 더해집니다.
+              </p>
+            )}
+            <p className="text-xs leading-relaxed text-muted">
+              이 표는 저희가 적어 넣은 것이 아니라{" "}
+              <Link
+                href={`/service/${LIVELIHOOD.id}`}
+                className="underline hover:text-brand"
+              >
+                원문
+              </Link>
+              에서 그대로 뽑아 그린 것입니다
+              {LIVELIHOOD.baseYear && ` (기준연도 ${LIVELIHOOD.baseYear}년)`}.
+              원문이 고쳐지면 이 표도 같이 바뀝니다. 나머지 일곱 갈래는 금액
+              구조가 저마다 달라 각 상세에서 확인해 주세요.
+            </p>
+          </DocSection>
+        )}
 
         <DocSection title="위기사유는 법으로 정해져 있습니다">
           <p>
