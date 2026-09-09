@@ -146,8 +146,19 @@ console.log();
 console.log(line);
 console.log("일부러 제출하지 않는 것");
 console.log(line);
+/*
+  아래 두 줄의 3과 2는 **손으로 센 수**다. 이 스크립트는 데이터만 읽고
+  `src/app`을 훑지 않아서, 새 페이지를 만들면 여기가 조용히 옛 수로 남는다.
+  2026-09-09에 실제로 그랬다 — `/find`를 내고도 이 표는 두 줄뿐이라
+  "807인데 왜 목록에 없지"를 설명해 주지 못했다.
+  **사이트맵에 안 넣는 페이지를 새로 만들면 여기도 같이 고친다.**
+
+  두 줄은 성격이 다르다. 약관·방침·문의는 **색인은 되는데 제출만 안 하는 것**
+  (sitemap.ts 머리말)이고, /search·/find는 **아예 noindex**다.
+*/
 console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문이 ${MIN_BODY_LENGTH}자 미만 — 상세에서도 noindex`);
 console.log(`  약관·방침·문의     ${String(3).padStart(5)}개  정형 문서라 색인 가치 없음 (푸터 링크로는 접근 가능)`);
+console.log(`  결과 화면          ${String(2).padStart(5)}개  /search·/find — 조건마다 URL이 생겨 noindex로 나간다`);
 
 /* 본문 길이 분포 — MIN_BODY_LENGTH를 어디로 잡을지 정하는 근거. */
 const lens = services.map(bodyLen).sort((a, b) => a - b);
