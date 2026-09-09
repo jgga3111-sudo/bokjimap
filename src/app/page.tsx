@@ -10,6 +10,7 @@ import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
 import ThisMonth from "@/components/ThisMonth";
 import AxisIcon from "@/components/AxisIcon";
+import AxisFinder from "@/components/AxisFinder";
 
 /**
  * 첫 화면.
@@ -320,7 +321,28 @@ export default function Home() {
           ))}
         </ul>
 
-        <details className="mt-4 border-t border-line pt-4">
+        {/*
+          겹쳐서 좁히기. 위 여덟 칸은 **한 축을 한 번에** 고르는 지름길이고,
+          여기는 **여러 축을 겹치는** 자리다 — "청년이면서 저소득".
+
+          우리는 축이 경쟁 사이트보다 많은데 겹칠 수가 없었다(docs/03 §7의
+          탐색축 비교). 만들기 전에 조합이 성립하는지 재 봤다 — 생애주기 7 ×
+          대상 6 = 42개 중 **39개가 3건 이상**, 0건은 2개뿐이다(2026-09-09).
+
+          결과 화면(`/find`)은 **noindex**다. 조합마다 URL이 생기므로 색인시키면
+          "발견됨 – 색인 안 됨" 528건에 스스로 더 얹게 된다(6절).
+        */}
+        <div className="mt-5 border-t border-line pt-5">
+          <h3 className="text-sm font-bold text-ink">
+            조건을 겹쳐서 좁히기
+          </h3>
+          <p className="mt-0.5 mb-3 text-xs text-muted">
+            생애주기·대상·지역을 함께 골라 한 번에 찾습니다
+          </p>
+          <AxisFinder />
+        </div>
+
+        <details className="mt-5 border-t border-line pt-4">
           <summary className="cursor-pointer text-sm font-medium text-slate-600 hover:text-brand">
             전체 분류 보기
             <span className="ml-1.5 text-xs font-normal text-muted">
