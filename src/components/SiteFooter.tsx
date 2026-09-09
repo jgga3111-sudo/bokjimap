@@ -66,7 +66,7 @@ const COLUMNS: { title: string; items: Item[] }[] = [
 
 export default function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-line bg-slate-50/60">
+    <footer className="mt-16 border-t border-line bg-sunken/60">
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="mb-8">
           <p className="text-xl font-bold">

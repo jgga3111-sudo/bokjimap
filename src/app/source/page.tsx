@@ -79,7 +79,7 @@ export default function SourcePage() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
             <thead>
-              <tr className="border-y border-line bg-slate-50 text-left">
+              <tr className="border-y border-line bg-sunken text-left">
                 <th className="px-3 py-2 font-semibold">항목</th>
                 <th className="px-3 py-2 font-semibold">출처</th>
                 <th className="px-3 py-2 font-semibold">제공기관</th>

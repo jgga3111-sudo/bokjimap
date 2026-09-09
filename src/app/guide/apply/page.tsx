@@ -81,7 +81,7 @@ export default function ApplyGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
               <thead>
-                <tr className="border-y border-line bg-slate-50 text-left">
+                <tr className="border-y border-line bg-sunken text-left">
                   <th className="px-3 py-2 font-semibold">창구</th>
                   <th className="px-3 py-2 font-semibold">성격</th>
                   <th className="px-3 py-2 font-semibold">언제 쓰나</th>
@@ -116,7 +116,7 @@ export default function ApplyGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
               <thead>
-                <tr className="border-y border-line bg-slate-50 text-left">
+                <tr className="border-y border-line bg-sunken text-left">
                   <th className="px-3 py-2 font-semibold">구분</th>
                   <th className="px-3 py-2 font-semibold">수록</th>
                   <th className="px-3 py-2 font-semibold">온라인 신청</th>
@@ -225,7 +225,7 @@ export default function ApplyGuide() {
             그중 한 단계일 뿐이고 뒤에 조사와 결정이 남아 있습니다. 대체로 이런
             흐름입니다.
           </p>
-          <p className="rounded-lg bg-slate-50 px-4 py-3 text-sm leading-loose text-slate-700">
+          <p className="rounded-lg bg-sunken px-4 py-3 text-sm leading-loose text-slate-700">
             신청 접수 → 소득·재산 조사 → 자격 심사 → 결정 통지 → 지급
           </p>
           <p>

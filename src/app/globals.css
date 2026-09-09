@@ -1,13 +1,30 @@
 @import "tailwindcss";
 
 /*
-  디자인 토큰은 러닝온(runningon.co.kr)에서 실측한 값을 맞췄다. 두 사이트가
-  형제로 보이게 하려는 것이다. 실측값:
-    본문색 rgb(23,24,26) / 주색 rgb(11,87,208) / 하늘 rgb(14,165,233)
-    초록 rgb(16,185,129) / 호박 rgb(245,158,11) / 회색 rgb(107,114,128)
-    라운드 6·8·12·16·20px + pill
+  ── 원래 결정과 왜 바꿨나 (2026-09-09) ─────────────────────────
+  처음에는 디자인 토큰을 러닝온(runningon.co.kr)에서 실측해 그대로 맞췄다.
+  두 사이트가 **형제로 보이게** 하려는 것이었다. 실측값은 이랬다:
+    본문색 rgb(23,24,26) / 주색 rgb(11,87,208) / 회색 rgb(107,114,128)
+    선 rgb(229,231,235) / 배경 순백
 
-  글꼴만 다르다. 러닝온은 GmarketSans를 자체 호스팅(/fonts/*.woff2)하는데,
+  그런데 그 배경 때문에 화면이 밋밋했다. **카드가 흰색인데 지면도 흰색**이라
+  807쪽 전부에서 카드가 테두리 선 하나로만 구분됐다. 경쟁 사이트(해피나눔)를
+  실측해 보니 지면이 rgb(250,250,249)로 살짝 어둡고, 그래서 같은 흰 카드가
+  저절로 떠 보였다. 카드 모양(라운드 12·그림자 없음)은 우리와 똑같았다 —
+  **차이는 카드가 아니라 지면에 있었다.**
+
+  그래서 면을 세 층으로 나눴다. 위로 뜬 것(카드) · 지면 · 눌린 것(인용·표머리).
+    card   #ffffff   ← bg-white 그대로
+    ground #faf9f7   ← body 배경
+    sunken #f0ede7   ← 옛 bg-slate-50 자리
+  색 온도도 파랑 쪽에서 중립으로 살짝 옮겼다(ink·muted·line). 지면이 따뜻한데
+  글자만 차가우면 화면이 붕 뜬다.
+
+  **주색 파랑은 그대로 둔다.** 러닝온과 완전히 갈라서는 것이 아니라 지면만
+  손본 것이다. 다시 형제로 맞추려면 ground를 #fff, sunken을 #f8fafc로
+  되돌리면 된다 — 그 두 줄이 전부다.
+
+  글꼴은 예전과 같다. 러닝온은 GmarketSans를 자체 호스팅(/fonts/*.woff2)하는데
   이 프로젝트로 파일을 복사하는 건 CLAUDE.md 0절에서 금지했다. 우선 OS 기본
   한글 글꼴로 두고, GmarketSans를 쓰려면 원본을 새로 받아 넣는다.
 */
@@ -16,20 +33,24 @@
     "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
     system-ui, sans-serif;
 
-  --color-ink: #17181a;
+  --color-ink: #1a1a18;
   --color-brand: #0b57d0;
   --color-brand-soft: #e8f0fe;
   --color-sky: #0ea5e9;
   --color-emerald: #10b981;
   --color-amber: #f59e0b;
-  --color-muted: #6b7280;
-  --color-line: #e5e7eb;
+  --color-muted: #5f5e5a;
+  --color-line: #e6e2da;
+
+  /* 면의 세 층. `bg-white`(카드)는 토큰이 아니라 흰색 그대로 쓴다. */
+  --color-ground: #faf9f7;
+  --color-sunken: #f0ede7;
 }
 
 body {
   font-family: var(--font-sans);
   color: var(--color-ink);
-  background: #fff;
+  background: var(--color-ground);
   letter-spacing: -0.01em;
   /* 한글은 단어 중간에서 끊기면 읽기 나쁘다 */
   word-break: keep-all;

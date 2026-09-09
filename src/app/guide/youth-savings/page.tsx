@@ -56,7 +56,7 @@ export default function YouthSavingsGuide() {
             )}{" "}
             의 지원 내용은 한 문장입니다.
           </p>
-          <blockquote className="rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+          <blockquote className="rounded-xl bg-sunken px-4 py-3 text-sm leading-relaxed text-slate-700">
             은행이자에 더해 납입액의 <strong>일정비율</strong>로 정부기여금 지원
             및 이자소득 비과세 혜택 제공
           </blockquote>
@@ -88,7 +88,7 @@ export default function YouthSavingsGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[26rem] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-line bg-slate-50">
+                <tr className="border-b border-line bg-sunken">
                   <th className="px-3 py-2 text-left font-bold text-ink">출처</th>
                   <th className="px-3 py-2 text-left font-bold text-ink">
                     일반형 소득기준

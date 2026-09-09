@@ -192,7 +192,7 @@ export default function SearchBox({
               </li>
             ))}
           </ul>
-          <p className="border-t border-line bg-slate-50 px-4 py-2.5 text-xs leading-relaxed text-muted">
+          <p className="border-t border-line bg-sunken px-4 py-2.5 text-xs leading-relaxed text-muted">
             이름뿐 아니라 <strong className="text-slate-600">지원내용·지원대상</strong>{" "}
             안의 낱말로도 찾습니다 — &ldquo;백신&rdquo;, &ldquo;월세&rdquo;처럼.
           </p>
@@ -254,7 +254,7 @@ export default function SearchBox({
               <Link
                 href={`/search?q=${encodeURIComponent(query.trim())}`}
                 onClick={leave}
-                className="block border-t border-line bg-slate-50 px-4 py-2.5 text-center text-sm font-medium text-brand hover:bg-brand-soft"
+                className="block border-t border-line bg-sunken px-4 py-2.5 text-center text-sm font-medium text-brand hover:bg-brand-soft"
               >
                 {all.length > VISIBLE
                   ? `이름에 걸린 ${all.length.toLocaleString()}건 모두 + 본문까지 →`

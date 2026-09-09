@@ -109,7 +109,7 @@ export default function CalendarGuide() {
                   id={`m${m}`}
                   className="scroll-mt-24 overflow-hidden rounded-xl border border-line bg-white"
                 >
-                  <h3 className="border-b border-line bg-slate-50 px-4 py-2.5 text-sm font-extrabold text-ink">
+                  <h3 className="border-b border-line bg-sunken px-4 py-2.5 text-sm font-extrabold text-ink">
                     {m}월
                     <span className="ml-2 text-xs font-normal text-muted">
                       {rows.length}건

@@ -556,7 +556,7 @@ export default function FaqPage() {
           ))}
         </div>
 
-        <div className="rounded-xl border border-line bg-slate-50 px-4 py-4 text-sm leading-relaxed text-slate-600">
+        <div className="rounded-xl border border-line bg-sunken px-4 py-4 text-sm leading-relaxed text-slate-600">
           <p className="font-bold text-ink">더 정확한 상담이 필요하시면</p>
           <p className="mt-1">
             보건복지상담센터 <strong>129</strong>(국번없이) 또는 주소지 읍·면·동

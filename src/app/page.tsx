@@ -9,6 +9,7 @@ import ServiceList from "@/components/ServiceList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
 import ThisMonth from "@/components/ThisMonth";
+import AxisIcon from "@/components/AxisIcon";
 
 /**
  * 첫 화면.
@@ -144,7 +145,9 @@ export default function Home() {
   return (
     <div className="space-y-10">
       {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
-      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-white px-4 pt-10 pb-9">
+      {/* 끝 색이 `white`였다. 지면이 오프화이트가 되면서 그러데이션이 지면에
+          닿는 자리에 흰 띠가 한 줄 남는다 — `ground`로 맞춘다(globals.css). */}
+      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-ground px-4 pt-10 pb-9">
         <div className="mx-auto max-w-3xl">
           <h1 className="text-2xl leading-tight font-extrabold sm:text-4xl">
             내가 받을 수 있는
@@ -289,12 +292,15 @@ export default function Home() {
         나머지 53개는 **지우지 않고 접었다.** 접혀 있어도 HTML에는 있으므로
         크롤러는 그대로 읽는다(HubList에서 쓰는 것과 같은 수법).
       */}
-      <section className="rounded-2xl border border-line bg-slate-50/60 p-5 sm:p-6">
+      <section className="rounded-2xl border border-line bg-sunken/60 p-5 sm:p-6">
         <h2 className="text-lg font-bold">어떤 분이신가요</h2>
         <p className="mt-0.5 mb-4 text-xs text-muted">
           해당하는 것을 고르면 그에 걸린 지원만 모아 보여드립니다
         </p>
 
+        {/* 아이콘 슬러그는 주소 끝 조각에서 가져온다 — `/life/youth` → youth.
+            따로 적어 두면 주소와 아이콘이 따로 놀 수 있다. `/region`처럼
+            조각이 하나인 것도 그대로 맞는다. */}
         <ul className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {QUICK.map((q) => (
             <li key={q.href}>
@@ -302,6 +308,9 @@ export default function Home() {
                 href={q.href}
                 className="flex h-full flex-col justify-between rounded-xl border border-line bg-white px-3.5 py-3 transition hover:border-brand hover:shadow-sm"
               >
+                <span className="mb-2 flex h-8 w-8 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                  <AxisIcon slug={q.href.split("/").pop() ?? ""} />
+                </span>
                 <span className="text-sm font-bold text-ink">{q.label}</span>
                 <span className="mt-1.5 text-xs text-muted">
                   {q.count.toLocaleString()}건

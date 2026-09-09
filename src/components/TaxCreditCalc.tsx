@@ -139,7 +139,7 @@ export default function TaxCreditCalc() {
       </fieldset>
 
       {result === null ? (
-        <p className="mt-5 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        <p className="mt-5 rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">
           총급여액 등과 자녀 수를 넣으면 계산됩니다.
         </p>
       ) : asset === "over24" ? (

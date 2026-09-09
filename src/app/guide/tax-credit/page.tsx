@@ -152,7 +152,7 @@ export default function TaxCreditGuide() {
                 key={d.key}
                 className="overflow-hidden rounded-xl border border-line bg-white"
               >
-                <p className="border-b border-line bg-slate-50 px-4 py-2.5 text-sm font-extrabold text-ink">
+                <p className="border-b border-line bg-sunken px-4 py-2.5 text-sm font-extrabold text-ink">
                   {d.key}
                 </p>
                 <dl className="divide-y divide-line text-sm">

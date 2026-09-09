@@ -45,7 +45,7 @@ function Card({ p }: { p: (typeof PAY_DATES)[number] }) {
       </p>
       {/* 근거는 요약하지 않고 조문을 그대로 싣는다. 금액·기준·날짜를 우리
           말로 바꾸지 않는 것이 이 사이트의 규칙이다(CLAUDE.md 3절). */}
-      <p className="mt-1.5 rounded-lg bg-slate-50 px-3 py-2 text-xs leading-relaxed text-slate-600">
+      <p className="mt-1.5 rounded-lg bg-sunken px-3 py-2 text-xs leading-relaxed text-slate-600">
         “{p.quote}”
       </p>
       {p.note && (
@@ -102,7 +102,7 @@ export default function PayDatesGuide() {
               key={g.day}
               className="overflow-hidden rounded-xl border border-line bg-white"
             >
-              <h3 className="border-b border-line bg-slate-50 px-4 py-2.5 text-sm font-extrabold text-ink">
+              <h3 className="border-b border-line bg-sunken px-4 py-2.5 text-sm font-extrabold text-ink">
                 매월 {g.day}일
                 <span className="ml-2 text-xs font-normal text-muted">
                   {g.items.length}개

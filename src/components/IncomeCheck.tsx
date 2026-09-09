@@ -343,7 +343,7 @@ export default function IncomeCheck({
             </ul>
 
             {matched.length === 0 && (
-              <p className="mt-4 rounded-lg bg-slate-50 px-3 py-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-4 rounded-lg bg-sunken px-3 py-3 text-sm leading-relaxed text-slate-600">
                 소득 기준으로는 위 구간에 해당하지 않습니다. 다만 소득과 무관한
                 지원(장애·보훈·다자녀·출산 등)이 많으니{" "}
                 <Link href="/target" className="font-medium text-brand underline">

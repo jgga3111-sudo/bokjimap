@@ -164,7 +164,7 @@ function PageToc({ s }: { s: WelfareService }) {
   const official = safeUrl(s.officialUrl);
 
   return (
-    <nav aria-label="이 페이지 안에서" className="rounded-xl border border-line bg-slate-50/70 px-4 py-3">
+    <nav aria-label="이 페이지 안에서" className="rounded-xl border border-line bg-sunken/70 px-4 py-3">
       <h2 className="text-xs font-bold text-muted">이 페이지에서</h2>
       <ul className="mt-2 flex flex-wrap gap-1.5">
         {items.map((t) => (
@@ -526,7 +526,7 @@ export default async function ServiceDetail({
         <KeyFacts s={s} />
 
         {(s.summary ?? s.outline) && (
-          <p className="mt-4 rounded-xl bg-slate-50 p-4 text-sm leading-relaxed text-slate-700">
+          <p className="mt-4 rounded-xl bg-sunken p-4 text-sm leading-relaxed text-slate-700">
             {s.summary ?? s.outline}
           </p>
         )}
@@ -735,7 +735,7 @@ export default async function ServiceDetail({
 
       <footer
         id="official"
-        className="scroll-mt-28 space-y-3 rounded-xl border border-line bg-slate-50 p-4 text-xs leading-relaxed text-slate-600"
+        className="scroll-mt-28 space-y-3 rounded-xl border border-line bg-sunken p-4 text-xs leading-relaxed text-slate-600"
       >
         {/* 날짜를 두 개 쓴다. "우리가 받아둔 날"과 "기관이 고친 날"은 다른
             값이라 한 칸에 넣으면 안 된다. 원본 최종수정일은 330건이 비어

@@ -93,7 +93,7 @@ export default function EmergencyGuide() {
             <strong>{family.length}갈래</strong>입니다. 그런데 조회수는 한 곳에
             심하게 쏠려 있습니다.
           </p>
-          <p className="rounded-lg bg-slate-50 px-4 py-3 leading-relaxed">
+          <p className="rounded-lg bg-sunken px-4 py-3 leading-relaxed">
             <strong>{top.name}</strong> {fmtViews(top.views)}회
             <span className="mx-2 text-muted">vs</span>
             나머지 {family.length - 1}갈래 합계 {fmtViews(rest)}회
@@ -149,7 +149,7 @@ export default function EmergencyGuide() {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[18rem] border-collapse text-sm">
                 <thead>
-                  <tr className="border-b border-line bg-slate-50">
+                  <tr className="border-b border-line bg-sunken">
                     <th className="px-3 py-2 text-left font-bold text-ink">
                       가구원 수
                     </th>

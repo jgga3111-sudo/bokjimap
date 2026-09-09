@@ -123,7 +123,7 @@ export default function IncomeLineGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
               <thead>
-                <tr className="border-y border-line bg-slate-50 text-left">
+                <tr className="border-y border-line bg-sunken text-left">
                   <th className="px-3 py-2 font-semibold">기준선</th>
                   <th className="px-3 py-2 font-semibold">
                     4인 가구 월 소득인정액

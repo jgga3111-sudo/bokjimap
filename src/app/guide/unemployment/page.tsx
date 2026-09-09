@@ -54,7 +54,7 @@ const LAW_ENF =
 /** 조문 원문 상자. 요약하지 않는다 — 지급일 글과 같은 규칙이다. */
 function Quote({ children, cite }: { children: string; cite: string }) {
   return (
-    <figure className="rounded-xl border border-line bg-slate-50 px-4 py-3">
+    <figure className="rounded-xl border border-line bg-sunken px-4 py-3">
       <blockquote className="text-xs leading-relaxed text-slate-600">
         “{children}”
       </blockquote>
@@ -157,7 +157,7 @@ export default function UnemploymentGuide() {
                 구직급여의 소정급여일수 — 고용보험법 별표 1
               </caption>
               <thead>
-                <tr className="bg-slate-50 text-left">
+                <tr className="bg-sunken text-left">
                   <th scope="col" className="px-3 py-2 font-bold text-ink">
                     이직일 현재 연령
                   </th>

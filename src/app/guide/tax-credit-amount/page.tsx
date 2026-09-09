@@ -55,7 +55,7 @@ export default function TaxCreditAmountGuide() {
             )}{" "}
             의 지원 내용에 가구 유형 셋의 전 구간 산식이 그대로 적혀 있습니다.
           </p>
-          <blockquote className="rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+          <blockquote className="rounded-xl bg-sunken px-4 py-3 text-sm leading-relaxed text-slate-700">
             단독가구
             <br />- (총급여액 등 400만원 미만) 총급여액 등 x 400분의 165
             <br />- (400만원~900만원 미만) 165만원 정액
@@ -82,7 +82,7 @@ export default function TaxCreditAmountGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[30rem] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-line bg-slate-50">
+                <tr className="border-b border-line bg-sunken">
                   <th className="px-3 py-2 text-left font-bold text-ink">가구</th>
                   <th className="px-3 py-2 text-right font-bold text-ink">
                     최대액
@@ -125,7 +125,7 @@ export default function TaxCreditAmountGuide() {
           <p>
             소득만 보는 게 아닙니다. 원문은 재산 쪽을 이렇게 적고 있습니다.
           </p>
-          <blockquote className="rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+          <blockquote className="rounded-xl bg-sunken px-4 py-3 text-sm leading-relaxed text-slate-700">
             전년도 6월 1일 현재 가구원 모두가 소유하고 있는 재산 합계액이 2.4억원
             미만이면 신청할 수 있습니다.
             <br />

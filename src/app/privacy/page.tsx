@@ -156,7 +156,7 @@ export default function PrivacyPage() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-sm">
             <thead>
-              <tr className="border-y border-line bg-slate-50 text-left">
+              <tr className="border-y border-line bg-sunken text-left">
                 <th className="px-3 py-2 font-semibold">수탁자</th>
                 <th className="px-3 py-2 font-semibold">위탁 업무</th>
               </tr>

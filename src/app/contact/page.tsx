@@ -51,7 +51,7 @@ export default function ContactPage() {
       </DocSection>
 
       <DocSection title="이렇게 적어 주시면 빠릅니다">
-        <div className="rounded-xl border border-line bg-slate-50 p-4 font-mono text-xs leading-relaxed whitespace-pre-line text-slate-700">
+        <div className="rounded-xl border border-line bg-sunken p-4 font-mono text-xs leading-relaxed whitespace-pre-line text-slate-700">
           {`페이지 주소: https://bokjiclick.co.kr/service/WLF00000060
 어느 부분: "지원 내용" 항목의 금액
 어떻게 다른가: 월 10만원으로 적혀 있으나 2026년부터 12만원으로 인상됨
@@ -74,7 +74,7 @@ export default function ContactPage() {
         <div className="overflow-x-auto">
           <table className="w-full min-w-[460px] border-collapse text-sm">
             <thead>
-              <tr className="border-y border-line bg-slate-50 text-left">
+              <tr className="border-y border-line bg-sunken text-left">
                 <th className="px-3 py-2 font-semibold">문의처</th>
                 <th className="px-3 py-2 font-semibold">연락</th>
                 <th className="px-3 py-2 font-semibold">무엇을</th>

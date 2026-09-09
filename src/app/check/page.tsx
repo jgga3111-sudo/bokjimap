@@ -88,7 +88,7 @@ export default function CheckPage() {
         <div className="mt-3 overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse text-sm">
             <thead>
-              <tr className="border-y border-line bg-slate-50 text-left">
+              <tr className="border-y border-line bg-sunken text-left">
                 <th className="px-3 py-2 font-semibold">가구원 수</th>
                 <th className="px-3 py-2 font-semibold">기준 중위소득</th>
                 <th className="px-3 py-2 font-semibold">생계급여 32%</th>

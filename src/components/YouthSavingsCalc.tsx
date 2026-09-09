@@ -88,7 +88,7 @@ export default function YouthSavingsCalc() {
           그보다 큰 금액은 계산하지 않았습니다.
         </p>
       ) : result === null ? (
-        <p className="mt-5 rounded-xl bg-slate-50 px-4 py-3 text-sm text-slate-600">
+        <p className="mt-5 rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">
           매월 납입액을 넣으면 계산됩니다.
         </p>
       ) : (

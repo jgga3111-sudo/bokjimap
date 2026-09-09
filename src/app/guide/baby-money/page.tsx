@@ -74,7 +74,7 @@ const COLS: Col[] = [
 /** 원문을 그대로 인용할 때 쓰는 상자. 우리가 고쳐 쓰지 않는다는 표시다. */
 function Quote({ s }: { s: { name: string; supportContent: string | null } }) {
   return (
-    <blockquote className="rounded-lg border-l-4 border-line bg-slate-50 py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
+    <blockquote className="rounded-lg border-l-4 border-line bg-sunken py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
       {(s.supportContent ?? "").trim()}
     </blockquote>
   );
@@ -221,7 +221,7 @@ export default function BabyMoneyGuide() {
             <strong>&ldquo;행복출산 원스톱 서비스&rdquo;</strong>를 신청 통로로
             안내하고 있어, 그 표현을 그대로 옮깁니다.
           </p>
-          <blockquote className="rounded-lg border-l-4 border-line bg-slate-50 py-3 pr-3 pl-4 text-sm leading-relaxed text-slate-700">
+          <blockquote className="rounded-lg border-l-4 border-line bg-sunken py-3 pr-3 pl-4 text-sm leading-relaxed text-slate-700">
             &ldquo;출생신고 시 관할 행정복지센터에서 행복출산원스톱서비스 신청
             혹은 정부24(인터넷신청) 가능&rdquo;
             <span className="mt-1.5 block text-xs text-muted">

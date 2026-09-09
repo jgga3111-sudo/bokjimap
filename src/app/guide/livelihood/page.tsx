@@ -149,7 +149,7 @@ export default function LivelihoodGuide() {
               <p className="text-xs font-semibold text-muted">
                 생계급여 — 지원내용 원문
               </p>
-              <blockquote className="rounded-lg border-l-4 border-line bg-slate-50 py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
+              <blockquote className="rounded-lg border-l-4 border-line bg-sunken py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
                 {(basic.supportContent ?? "").trim()}
               </blockquote>
             </>
@@ -165,7 +165,7 @@ export default function LivelihoodGuide() {
               <p className="text-xs font-semibold text-muted">
                 긴급복지 생계지원 — 지원내용 원문
               </p>
-              <blockquote className="rounded-lg border-l-4 border-line bg-slate-50 py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
+              <blockquote className="rounded-lg border-l-4 border-line bg-sunken py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
                 {(urgent.supportContent ?? "").trim()}
               </blockquote>
             </>
@@ -184,7 +184,7 @@ export default function LivelihoodGuide() {
             사유를 번호로 열거하고 있어 그대로 옮깁니다.
           </p>
           {urgent && (
-            <blockquote className="rounded-lg border-l-4 border-line bg-slate-50 py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
+            <blockquote className="rounded-lg border-l-4 border-line bg-sunken py-3 pr-3 pl-4 text-sm leading-relaxed whitespace-pre-line text-slate-700">
               {(urgent.selectionCriteria ?? "").trim()}
             </blockquote>
           )}

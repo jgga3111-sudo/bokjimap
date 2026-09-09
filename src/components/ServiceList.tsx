@@ -14,7 +14,7 @@ export default function ServiceList({
 }) {
   if (services.length === 0) {
     return (
-      <p className="rounded-xl border border-line bg-slate-50 px-4 py-10 text-center text-sm text-muted">
+      <p className="rounded-xl border border-line bg-sunken px-4 py-10 text-center text-sm text-muted">
         해당하는 서비스가 없습니다.
       </p>
     );

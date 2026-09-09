@@ -117,7 +117,7 @@ export default function HubList({
         <details
           open={openFilter}
           onToggle={(e) => setOpenFilter(e.currentTarget.open)}
-          className="rounded-xl border border-line bg-slate-50/70"
+          className="rounded-xl border border-line bg-sunken/70"
         >
           <summary className="cursor-pointer px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-brand">
             조건으로 좁히기
@@ -205,7 +205,7 @@ export default function HubList({
 
       {filtered.length === 0 ? (
         /* 없으면 없다고 쓴다. 조건을 지우는 길만 남겨 둔다. */
-        <p className="rounded-xl border border-line bg-slate-50 px-4 py-10 text-center text-sm text-muted">
+        <p className="rounded-xl border border-line bg-sunken px-4 py-10 text-center text-sm text-muted">
           고른 조건에 해당하는 서비스가 없습니다.
         </p>
       ) : (

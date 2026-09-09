@@ -69,7 +69,7 @@ export default async function BenefitPage({
 
       {/* 목록 위에 한 문단. 축 페이지가 목록만 있는 껍데기가 되지 않게 하고,
           그 형태를 받을 때 실제로 놓치는 것을 먼저 알린다. */}
-      <p className="rounded-xl border border-line bg-slate-50/70 px-4 py-3.5 text-sm leading-relaxed text-slate-700">
+      <p className="rounded-xl border border-line bg-sunken/70 px-4 py-3.5 text-sm leading-relaxed text-slate-700">
         {b.note}
       </p>
 

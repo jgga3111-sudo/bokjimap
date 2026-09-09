@@ -71,7 +71,7 @@ export default async function SearchPage({
       <SearchBox placeholder="다시 검색" size="lg" popular={POPULAR} />
 
       {q === "" ? (
-        <p className="rounded-xl border border-line bg-slate-50 px-4 py-10 text-center text-sm text-muted">
+        <p className="rounded-xl border border-line bg-sunken px-4 py-10 text-center text-sm text-muted">
           찾으시는 지원금 이름을 넣어 보세요.
           <br />
           <span className="text-xs">
@@ -80,7 +80,7 @@ export default async function SearchPage({
         </p>
       ) : hits.length === 0 ? (
         /* 없으면 없다고 쓴다. 비슷한 걸 억지로 보여주면 있는 줄 안다. */
-        <div className="rounded-xl border border-line bg-slate-50 px-4 py-10 text-center">
+        <div className="rounded-xl border border-line bg-sunken px-4 py-10 text-center">
           <p className="text-sm text-ink">
             <strong>{q}</strong> 에 해당하는 서비스가 없습니다.
           </p>

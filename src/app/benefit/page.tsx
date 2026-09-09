@@ -31,7 +31,7 @@ export default function BenefitIndex() {
 
       {/* 이 축이 무엇을 못 담는지 밝혀 둔다. 목록에 없는 사업을 찾다가
           "빠졌다"고 오해하지 않도록. */}
-      <p className="rounded-xl border border-line bg-slate-50 px-4 py-3 text-xs leading-relaxed text-muted">
+      <p className="rounded-xl border border-line bg-sunken px-4 py-3 text-xs leading-relaxed text-muted">
         원본 자료가 지급 형태를 <strong>&ldquo;기타&rdquo;</strong>로만 적어 둔
         사업은 위 여섯 갈래 어디에도 넣지 않았습니다. 무엇을 주는지 원문이
         말해 주지 않아 짐작으로 분류할 수 없기 때문입니다. 이런 사업은{" "}

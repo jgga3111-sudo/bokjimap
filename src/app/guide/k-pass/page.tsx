@@ -67,7 +67,7 @@ export default function KpassGuide() {
           <p>
             복지로가 주는 공공데이터에서 이 사업의 지원 내용은 이렇게 끝납니다.
           </p>
-          <blockquote className="rounded-xl bg-slate-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+          <blockquote className="rounded-xl bg-sunken px-4 py-3 text-sm leading-relaxed text-slate-700">
             월 {MIN_RIDES}회 이상 대중교통 이용금액의 20%~53.3% 환급
             <br />
             기준금액(3~10만원)을 초과하는 지출 금액 전액 환급
@@ -125,7 +125,7 @@ export default function KpassGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[22rem] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-line bg-slate-50">
+                <tr className="border-b border-line bg-sunken">
                   <th className="px-3 py-2 text-left font-bold text-ink">유형</th>
                   <th className="px-3 py-2 text-right font-bold text-ink">
                     환급 비율
@@ -168,7 +168,7 @@ export default function KpassGuide() {
           <div className="overflow-x-auto">
             <table className="w-full min-w-[34rem] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-line bg-slate-50">
+                <tr className="border-b border-line bg-sunken">
                   <th className="px-3 py-2 text-left font-bold text-ink">지역</th>
                   {(["general", "mid", "high"] as const).map((g) => (
                     <th
