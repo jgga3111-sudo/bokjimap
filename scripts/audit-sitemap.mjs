@@ -158,7 +158,7 @@ console.log(line);
 */
 console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문이 ${MIN_BODY_LENGTH}자 미만 — 상세에서도 noindex`);
 console.log(`  약관·방침·문의     ${String(3).padStart(5)}개  정형 문서라 색인 가치 없음 (푸터 링크로는 접근 가능)`);
-console.log(`  결과 화면          ${String(2).padStart(5)}개  /search·/find — 조건마다 URL이 생겨 noindex로 나간다`);
+console.log(`  결과 화면          ${String(3).padStart(5)}개  /search·/find·/ask — 조건마다 URL이 생겨 noindex로 나간다`);
 
 /* 본문 길이 분포 — MIN_BODY_LENGTH를 어디로 잡을지 정하는 근거. */
 const lens = services.map(bodyLen).sort((a, b) => a - b);

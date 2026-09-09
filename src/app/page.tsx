@@ -11,6 +11,7 @@ import RecentViews from "@/components/RecentViews";
 import ThisMonth from "@/components/ThisMonth";
 import AxisIcon from "@/components/AxisIcon";
 import AxisFinder from "@/components/AxisFinder";
+import AskBox from "@/components/AskBox";
 
 /**
  * 첫 화면.
@@ -34,6 +35,19 @@ import AxisFinder from "@/components/AxisFinder";
  * ⑤를 나중에 더했다. 안내 글을 푸터에만 걸어 두면 아무도 읽지 않는다. 그리고
  * 목록만 깔린 첫 화면은 "공공데이터를 옮겨 놓은 곳"으로 읽힌다 — 실제로 경쟁
  * 사이트를 열어 보고 나서 판단한 것이다(docs/03).
+ *
+ * ── 2026-09-09: ①과 ② 사이에 「말로 물어보기」를 넣었다 ─────────
+ * 히어로를 반으로 줄이고 그 자리를 물어보는 상자에 내줬다. 순서가 하나
+ * 늘어난다 — "무엇 → **말로 물어보기** → 나는 대상인가 → …".
+ *
+ * 왜 앞자리인가. 찾는 길이 셋 있었는데(헤더 검색·여덟 칸·`/find`) 셋 다
+ * **먼저 축이나 사업 이름을 알아야** 쓸 수 있었다. 처음 온 사람이 품고 오는
+ * 것은 축이 아니라 문장이라, 아무것도 모르는 사람이 첫 화면에서 쓸 수 있는
+ * 길이 하나도 없었던 셈이다. 그래서 제일 앞에 둔다.
+ *
+ * 히어로를 줄인 몫은 **문단 하나(설명문)**와 **크기**다. 수치 셋과 출처 줄은
+ * 남긴다 — 아래 주석대로 히어로에서 유일하게 사실을 말하는 줄이고, 처음 온
+ * 사람이 "믿어도 되나"를 정하는 자리다. 작아졌을 뿐 없어지지 않았다.
  */
 const popular = services.slice(0, 8);
 
@@ -148,17 +162,21 @@ export default function Home() {
       {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
       {/* 끝 색이 `white`였다. 지면이 오프화이트가 되면서 그러데이션이 지면에
           닿는 자리에 흰 띠가 한 줄 남는다 — `ground`로 맞춘다(globals.css). */}
-      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-ground px-4 pt-10 pb-9">
+      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-ground px-4 pt-6 pb-6">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-2xl leading-tight font-extrabold sm:text-4xl">
-            내가 받을 수 있는
-            <br />
-            <span className="text-brand">복지 지원금</span>을 한눈에
+          {/*
+            2026-09-09에 **반으로 줄였다.** 줄인 것은 셋이다 —
+            두 줄짜리 제목을 한 줄로, 4xl을 3xl로, 그리고 아래에 있던
+            설명 문단(두세 줄)을 통째로 뺐다. 위아래 여백도 줄였다.
+
+            설명 문단을 뺀 이유. "중앙부처와 전국 시·군·구가 따로 공고하는
+            복지 서비스를 한곳에 모았습니다"는 **바로 밑 수치 셋이 이미 더
+            정확하게 하고 있는 말**이다(수록 900건 · 시·군·구 570건). 같은
+            말을 산문으로 한 번 더 하느라 첫 화면 한 뼘을 쓰고 있었다.
+          */}
+          <h1 className="text-2xl leading-tight font-extrabold sm:text-3xl">
+            내가 받을 수 있는 <span className="text-brand">복지 지원금</span>
           </h1>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-            중앙부처와 전국 시·군·구가 따로 공고하는 복지 서비스를 한곳에
-            모았습니다. 사람들이 가장 많이 찾는 것부터 정리했습니다.
-          </p>
 
           {/*
             히어로에도 큰 검색창을 뒀었다. 375px 화면을 찍어 보니 헤더 검색과
@@ -186,17 +204,23 @@ export default function Home() {
             것처럼 읽힌다. 설명 없이 해명할 수 없는 숫자를 첫 화면에 두느니,
             **지자체 사업 건수**를 쓴다. 이쪽이 이 사이트의 차이이기도 하다 —
             중앙부처 것만 옮겨 놓은 곳과 달리 시·군·구 공고가 570건 들어 있다.
+
+            **2026-09-09에 한 치수 줄였다(작게 만든 것을 되돌린 게 아니다).**
+            히어로 자리를 「말로 물어보기」에 내주면서 전체를 줄였는데, 이
+            줄만은 지우거나 각주로 되돌리지 않았다. 위에 적은 이유 그대로,
+            히어로에서 사실을 말하는 줄은 여기뿐이기 때문이다. 세 칸도
+            출처 줄도 그대로 있고 글자만 한 치수 작다.
           */}
-          <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+          <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             {[
               { n: services.length.toLocaleString(), unit: "건", k: "수록 지원사업" },
               { n: LOCAL_COUNT.toLocaleString(), unit: "건", k: "시·군·구 사업" },
               { n: BASE_YEAR.toString(), unit: "년", k: "기준연도" },
             ].map((s) => (
               <div key={s.k}>
-                <dd className="text-lg font-extrabold text-ink sm:text-xl">
+                <dd className="text-base font-extrabold text-ink sm:text-lg">
                   {s.n}
-                  <span className="ml-0.5 text-sm font-bold">{s.unit}</span>
+                  <span className="ml-0.5 text-xs font-bold">{s.unit}</span>
                 </dd>
                 <dt className="mt-0.5 text-xs text-muted">{s.k}</dt>
               </div>
@@ -218,7 +242,7 @@ export default function Home() {
 
             크게 만들지 않는다. 수치가 주인공이고 이건 각주다.
           */}
-          <p className="mt-4 text-xs leading-relaxed text-muted">
+          <p className="mt-3 text-xs leading-relaxed text-muted">
             공공데이터포털 복지서비스 데이터를 {SERVICES_UPDATED}에 받아
             정리했습니다.{" "}
             <Link href="/source" className="underline hover:text-brand">
@@ -228,7 +252,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 자가진단 — 이 사이트에만 있는 것. 첫 화면에서 버튼은 여기 하나뿐이다. */}
+      {/*
+        ── 말로 물어보기 (2026-09-09) ────────────────────────────────
+        첫 화면에서 찾는 길이 셋이었는데(헤더 검색·아래 여덟 칸·`/find`)
+        **셋 다 먼저 무언가를 알아야** 쓸 수 있었다. 검색은 사업 이름을,
+        나머지 둘은 "생애주기"·"대상"이 무엇인지를. 그런데 처음 온 사람이
+        품고 오는 것은 축이 아니라 문장이다 — "서울 사는 30대인데 월세
+        지원 있나요". 그 문장을 그대로 받는 자리가 없었다.
+
+        **히어로 안에 넣지 않고 바로 밑에 따로 세운 이유.** 히어로에 큰
+        검색창을 뒀다가 걷어낸 적이 있다(위 주석) — 375px에서 헤더 검색과
+        나란히 보여 같은 모양의 둥근 상자가 둘이었다. 그 실수를 되풀이하지
+        않으려면 **모양도 자리도 달라야** 한다. 그래서 제목이 붙은 상자로
+        만들고 히어로 밖에 뒀다. 하는 일도 다르다 — 헤더는 이름을 아는
+        사람이 쓰고 여기는 이름을 모르는 사람이 쓴다.
+
+        상자는 평범한 `<form method="get">`이라 자바스크립트가 0바이트다.
+        답하는 쪽(`/ask`)은 서버에서 900건을 훑는다.
+      */}
+      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
+        <h2 className="text-lg font-bold">받고 싶은 지원을 말로 물어보세요</h2>
+        <p className="mt-0.5 mb-4 text-sm leading-relaxed text-slate-600">
+          나이·지역·상황을 문장으로 적어 주시면, 조건으로 바꿔 수록{" "}
+          {services.length.toLocaleString()}건에서 찾아 드립니다.
+        </p>
+        <AskBox />
+      </section>
+
+      {/* 자가진단 — 이 사이트에만 있는 것.
+          "첫 화면에서 버튼은 여기 하나뿐"이라고 적어 뒀었는데, 09-09에
+          바로 위 「말로 물어보기」에 「찾아보기」가 생겨 둘이 됐다. 그래도
+          **색이 칠해진 큰 단추는 여전히 여기 하나뿐**이다 — 위엣것은 입력창에
+          딸린 회색 단추라 무게가 다르다. 이 자리를 계속 제일 무겁게 둔다. */}
       <section className="rounded-2xl border border-brand/20 bg-brand-soft/40 p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
