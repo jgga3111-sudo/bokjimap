@@ -5,7 +5,7 @@ import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
 import { services, SERVICES_UPDATED } from "@/data/services";
-import ServiceList from "@/components/ServiceList";
+import PopularList from "@/components/PopularList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
 import ThisMonth from "@/components/ThisMonth";
@@ -325,7 +325,10 @@ export default function Home() {
             전체 보기 →
           </Link>
         </div>
-        <ServiceList services={popular} ranked />
+        {/* 2026-09-10: 카드 여덟 장(375px에서 1,700px 가까이)을 한 줄짜리
+            순위표로 바꿨다. 이 자리는 훑는 곳이라 요약 두 줄이 필요 없다 —
+            이유는 PopularList 머리말. 허브 목록은 카드 그대로다. */}
+        <PopularList services={popular} />
       </section>
 
       {/*
