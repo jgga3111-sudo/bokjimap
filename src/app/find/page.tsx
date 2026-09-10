@@ -87,7 +87,13 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
             엉뚱한 슬러그가 들어왔을 때 그걸 다시 칩으로 되살리지 않으려는
             것이다. 화면에 적용된 것과 상자에 켜진 것이 늘 같아야 한다. */}
         <div className="mt-3">
+          {/* key가 있어야 위 규칙이 **뒤로 가기에도** 지켜진다(2026-09-11).
+              상자는 처음 받은 값으로만 상태를 잡는데, 사이트 안에서 이동하면
+              같은 상자가 그대로 쓰여 옛 선택이 남았다 — 청년·저소득(67건)에서
+              뒤로 가면 결과는 청년 305건인데 「저소득」이 켜진 채였다.
+              적용된 조건을 key로 주면 조건이 바뀔 때마다 새로 그린다. */}
           <AxisFinder
+            key={`${life?.slug ?? ""}|${target?.slug ?? ""}|${sido?.slug ?? ""}`}
             initialLife={life?.slug ?? ""}
             initialTarget={target?.slug ?? ""}
             initialRegion={sido?.slug ?? ""}
