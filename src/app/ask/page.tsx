@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     색인시킬 축 페이지는 따로 있고, 아래에서 그리로 내보낸다.
   */
   robots: { index: false, follow: true },
+  /* 루트의 `canonical: "/"`가 물려 오지 않게(`/search` 머리말 참고). */
+  alternates: { canonical: "/ask" },
 };
 
 /** 축마다 색인되는 페이지가 따로 있다. 칩을 거기로 건다. */
@@ -33,6 +35,13 @@ const AXIS_NAME: Record<Chip["axis"], string> = {
   benefit: "혜택",
   region: "지역",
 };
+
+/** 은/는. 한글이 아닌 글자로 끝나면 받침을 모르니 둘 다 적는다. */
+function topicParticle(word: string): string {
+  const c = word.charCodeAt(word.length - 1);
+  if (c < 0xac00 || c > 0xd7a3) return "은(는)";
+  return (c - 0xac00) % 28 ? "은" : "는";
+}
 
 /** 결과 한 묶음. 위아래 두 묶음이 같은 모양이어야 해서 떼어 놓았다. */
 function HitList({ hits }: { hits: AskHit[] }) {
@@ -204,7 +213,9 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
                   「전기요금」은 900건에는 있는데 저소득·요금감면 24건
                   안에는 없었다. 세는 범위를 그대로 적는다(3절). */}
               {answer.missedWords.map((w) => `“${w}”`).join(" · ")}
-              {answer.missedWords.length === 1 ? "는" : "은"}{" "}
+              {/* 은/는은 **마지막 낱말의 받침**으로 고른다. 예전엔 낱말
+                  개수로 골라 “주차장”는 · “틀니”은이 나갔다(2026-09-10). */}
+              {topicParticle(answer.missedWords[answer.missedWords.length - 1])}{" "}
               {answer.poolTotal < services.length
                 ? `위 조건에 맞는 ${answer.poolTotal.toLocaleString()}건 안에서는 찾지 못했습니다.`
                 : `수록 ${services.length.toLocaleString()}건의 이름과 본문 어디에도 없어 쓰지 못했습니다.`}

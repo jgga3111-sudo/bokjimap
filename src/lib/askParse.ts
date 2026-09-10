@@ -289,7 +289,8 @@ export function parseAsk(question: string): AskRead {
      "35살"을 이유로 다른 칸을 켜 주면 스스로 고른 것을 뒤집는 셈이다. */
   let ageUsed: number | null = null;
   if (!chips.some((c) => c.axis === "life")) {
-    const m = raw.match(/(\d{1,3})\s*(?:살|세)(?![0-9])/);
+    /* 뒤에 「대」가 붙으면 나이가 아니다 — "3세대 가구"를 3살로 읽었다. */
+    const m = raw.match(/(\d{1,3})\s*(?:살|세)(?![0-9대])/);
     const age = m ? Number(m[1]) : null;
     const band = age != null ? bandOf(age) : null;
     if (age != null && band) {
@@ -325,13 +326,21 @@ export function parseAsk(question: string): AskRead {
       break;
     }
     if (dead || t.length < 2 || STOP.has(t) || NUMERIC.test(t)) continue;
-    const n = norm(t);
+    let n = norm(t);
     /* 이미 조건이 된 말은 빼야 한다. "청년"이 칩이 됐는데 낱말로도 남으면
-       청년 305건 안에서 다시 "청년"을 찾게 되어 순위가 흔들린다. */
-    if (consumed.some((c) => c.includes(n) || n.includes(c))) continue;
+       청년 305건 안에서 다시 "청년"을 찾게 되어 순위가 흔들린다.
+
+       **다만 붙여 쓴 낱말은 조건 부분만 뗀다(2026-09-10).** 예전엔 조건을
+       품은 낱말을 통째로 버려서 "노인틀니"가 노년 칩만 남기고 「틀니」를
+       잃었다 — 띄어 쓴 "노인 틀니"는 틀니 사업 7건이 맨 위에 나오는데
+       붙여 쓰면 한 건도 안 나왔다. 뗀 나머지가 두 글자 이상일 때만 남긴다
+       ("서울시" → 「시」는 버린다). */
+    if (consumed.some((c) => c.includes(n))) continue;
+    for (const c of consumed) if (n.includes(c)) n = n.replace(c, "");
+    if (n.length < 2 || STOP.has(n)) continue;
     if (seen.has(n)) continue;
     seen.add(n);
-    words.push(t);
+    words.push(n === norm(t) ? t : n);
   }
 
   return { chips, words, ageUsed, incomeSeen };

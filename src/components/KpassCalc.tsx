@@ -35,7 +35,8 @@ import { won } from "@/lib/display";
 
 /** 만원 단위로 받아 원으로 편다. 사람들은 "8만원"이라고 생각하지 8,0000이라 치지 않는다. */
 const toWon = (manwon: string): number | null => {
-  const t = manwon.trim();
+  /* 쉼표·빈칸·「만원」을 걷는다 — TaxCreditCalc의 `num`과 같은 이유. */
+  const t = manwon.replace(/[,\s]/g, "").replace(/만원?$/, "");
   if (t === "") return null;
   const v = Number(t);
   if (!Number.isFinite(v) || v < 0) return null;

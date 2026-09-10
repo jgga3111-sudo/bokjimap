@@ -23,7 +23,8 @@ export default function YouthSavingsCalc() {
   const tier = YS_TIERS.find((t) => t.id === tierId)!;
 
   const monthly = useMemo(() => {
-    const t = manwonRaw.trim();
+    /* 쉼표·빈칸·「만원」을 걷는다 — TaxCreditCalc의 `num`과 같은 이유. */
+    const t = manwonRaw.replace(/[,\s]/g, "").replace(/만원?$/, "");
     if (t === "") return null;
     const v = Number(t);
     if (!Number.isFinite(v) || v <= 0) return null;

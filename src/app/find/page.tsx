@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     색인시킬 축 페이지는 이미 따로 있다(`/life/*`·`/target/*`·`/region/*`).
   */
   robots: { index: false, follow: true },
+  /* 루트의 `canonical: "/"`가 물려 오지 않게(`/search` 머리말 참고). */
+  alternates: { canonical: "/find" },
 };
 
 /** 한 값만 받는다. 같은 이름이 여러 번 오면 첫 것만 쓴다. */

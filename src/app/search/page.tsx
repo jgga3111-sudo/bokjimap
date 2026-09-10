@@ -17,6 +17,10 @@ export const metadata: Metadata = {
     follow는 남긴다 — 결과에서 상세로 가는 링크는 따라가도 된다.
   */
   robots: { index: false, follow: true },
+  /* 자기 주소를 원본으로 적는다. 안 적으면 루트 layout의 `canonical: "/"`가
+     물려 내려와 "원본은 첫 화면"이라고 말하게 된다 — noindex와 엇갈린
+     신호다(2026-09-10, `/find`·`/ask`도 같이 고쳤다). */
+  alternates: { canonical: "/search" },
 };
 
 /**

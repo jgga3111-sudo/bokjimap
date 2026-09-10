@@ -70,9 +70,16 @@ export default function IncomeCheck({
   const monthly = useMemo(() => {
     const n = Number(raw.replaceAll(",", ""));
     if (!raw.trim() || !Number.isFinite(n) || n <= 0) return null;
-    if (mode === "monthly") return Math.round(n * 10_000);
-    if (mode === "annual") return Math.round((n * 10_000) / 12);
-    return incomeFromHealthPremium(n);
+    const won =
+      mode === "monthly"
+        ? Math.round(n * 10_000)
+        : mode === "annual"
+          ? Math.round((n * 10_000) / 12)
+          : incomeFromHealthPremium(n);
+    /* 월 10억원을 넘으면 오타로 본다. 상한이 없어 아홉 자리를 치면
+       "중위소득 97,493,…%"가 그대로 나갔다 — KpassCalc 머리말이 인용하는
+       그 사례가 정작 여기서는 안 막혀 있었다(2026-09-10). */
+    return won > 1_000_000_000 ? null : won;
   }, [raw, mode]);
 
   const median = medianIncome(household);
@@ -129,7 +136,10 @@ export default function IncomeCheck({
           ))}
           <button
             type="button"
-            onClick={() => setHousehold((h) => Math.max(8, h + 1))}
+            /* 누를 때마다 하나씩 늘던 것을 8에 세웠다. `Math.max(8, h + 1)`은
+               21, 22…까지 올라가 저장 검사(20 이하)에 조용히 걸렸다.
+               8 넘게는 아래 +·− 단추로 고른다. */
+            onClick={() => setHousehold((h) => (h >= 8 ? h : 8))}
             aria-pressed={household >= 8}
             className={`h-10 rounded-lg border px-3 text-sm font-medium transition ${
               household >= 8
@@ -195,9 +205,11 @@ export default function IncomeCheck({
         <div className="mt-3 flex items-center gap-2 rounded-lg border border-line px-3 focus-within:border-brand">
           <input
             type="text"
-            inputMode="numeric"
+            inputMode="decimal"
             value={raw}
-            onChange={(e) => setRaw(e.target.value.replace(/[^\d,]/g, ""))}
+            /* 점을 남긴다. 예전 필터(`[^\d,]`)가 점을 지워 "187.5"만원이
+               "1875"가 되고 중위소득이 열 배로 나왔다(2026-09-10). */
+            onChange={(e) => setRaw(e.target.value.replace(/[^\d.,]/g, ""))}
             placeholder={
               mode === "premium"
                 ? "예: 120000"

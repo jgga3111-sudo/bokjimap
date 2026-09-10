@@ -14,7 +14,7 @@
 export type MyIncome = {
   /** 가구원 수 */
   household: number;
-  /** 기준 중위소득 대비 비율(%). 소수점은 버린다. */
+  /** 기준 중위소득 대비 비율(%). 자가진단 화면과 같은 소수 첫째 자리. */
   percent: number;
   /** 저장한 날(YYYY-MM-DD). 오래된 결과에 "다시 계산" 안내를 띄우는 데 쓴다. */
   savedOn: string;
@@ -81,7 +81,11 @@ export function getServerSnapshot(): MyIncome | null {
 export function save(household: number, percent: number): void {
   const next: MyIncome = {
     household,
-    percent: Math.floor(percent),
+    /* 버리지 않는다(2026-09-10). 예전엔 `Math.floor`였는데, 자가진단이
+       50.7%로 보여 준 사람을 50으로 저장해 **50% 이하 사업에 "충족"을
+       띄웠다** — 화면끼리 말이 달랐고, 틀리는 방향이 늘 "받는다" 쪽이었다.
+       자가진단과 같은 소수 첫째 자리로 둔다. */
+    percent: Math.round(percent * 10) / 10,
     savedOn: new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10),
   };
   if (!valid(next)) return;

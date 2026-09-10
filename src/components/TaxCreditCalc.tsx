@@ -24,7 +24,9 @@ import { won } from "@/lib/display";
 
 /** 만원 단위 입력. 음수·비수치·터무니없는 값은 null로 돌려 계산을 멈춘다. */
 const num = (raw: string, max: number): number | null => {
-  const t = raw.trim();
+  /* 쉼표·빈칸·「만원」을 먼저 걷는다. "1,500"을 NaN으로 읽어 값을 넣었는데
+     "넣으면 계산됩니다"가 떴다(2026-09-10). IncomeCheck만 쉼표를 걷고 있었다. */
+  const t = raw.replace(/[,\s]/g, "").replace(/만원?$/, "");
   if (t === "") return null;
   const v = Number(t);
   if (!Number.isFinite(v) || v < 0 || v > max) return null;
@@ -43,7 +45,10 @@ export default function TaxCreditCalc() {
      끝나므로 그 위는 전부 0이고, 자릿수 오타를 막는 구실도 한다 — 자가진단에서
      아홉 자리가 들어와 "중위소득 95471336%"가 나왔던 자리와 같다. */
   const gross = num(grossRaw, 10000);
-  const kids = num(kidsRaw, 20);
+  /* 자녀 수는 정수만 받는다. "1.5"를 조용히 1로 셈하면 넣은 값과 다른
+     계산이 나간다 — 빈칸으로 두고 넣으라고 하는 쪽이 낫다. */
+  const kidsNum = num(kidsRaw, 20);
+  const kids = kidsNum !== null && Number.isInteger(kidsNum) ? kidsNum : null;
 
   const result = useMemo(
     () =>
