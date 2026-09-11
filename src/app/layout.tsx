@@ -45,12 +45,21 @@ export const metadata: Metadata = {
     google: "i_oYjG7mn5uP-1z-c8o51cLjfsP4oDPo49Lz04kKyBo",
     other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
   },
+  /*
+    og:url을 여기 두지 않는다 (2026-09-11). 처음엔 `url: SITE.url`이 있었는데
+    하위 페이지가 그대로 물려받아 **807쪽 전부 og:url이 홈**으로 찍혔다.
+    카톡·페이스북은 og:url로 "같은 글"을 묶으므로 상세를 공유해도 홈 하나로
+    합산되고 클릭이 홈으로 갈 수 있다. 빼 두면 태그가 안 나가고 공유 도구는
+    실제 주소를 쓴다. 페이지마다 자기 주소를 적는 것보다 이쪽이 틀릴 수 없다.
+  */
   openGraph: {
     type: "website",
     locale: "ko_KR",
     siteName: SITE.name,
-    url: SITE.url,
   },
+  /* 구글 디스커버 자격 요건 하나 — 큰 미리보기 이미지 허용. 우리 OG 카드가
+     1200×630이라 조건에 맞는다. 색인·순위와는 무관하다(09-11). */
+  robots: { googleBot: { "max-image-preview": "large" } },
   /*
     2026-09-01, 사이트 전체 noindex를 풀었다.
 

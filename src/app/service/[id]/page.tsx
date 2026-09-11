@@ -11,7 +11,7 @@ import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLab
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { nameWithAlias } from "@/lib/aliases";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
-import { SITE } from "@/lib/site";
+import { SITE, ROBOTS_INDEX } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
@@ -79,7 +79,7 @@ export async function generateMetadata({
     alternates: { canonical: `/service/${s.id}` },
     /* 본문이 얇은 항목은 색인에서 뺀다. 러닝온에서 얇은 페이지 510개가
        "발견됨 – 색인 안 됨"에 빠진 것을 실측했다(docs/02). */
-    robots: isIndexable(s) ? undefined : { index: false, follow: true },
+    robots: isIndexable(s) ? ROBOTS_INDEX : { index: false, follow: true },
   };
 }
 
@@ -294,13 +294,18 @@ function KeyFacts({ s }: { s: WelfareService }) {
     });
   }
 
+  /* 원문 필드는 `onapPsbltYn` — **복지로(bokjiro.go.kr) 온라인 신청 연동
+     여부**다. 처음엔 N을 "인터넷 신청은 받지 않습니다"로 그렸는데, K-패스처럼
+     복지로 연동은 없어도 자기 사이트(korea-pass.kr)에서 신청받는 사업이 있어
+     원문보다 세게 말한 셈이었다(09-11 경쟁 비교에서 발견, 3절 위반). 필드가
+     말하는 만큼만 적는다 — `/guide/tax-credit`의 "복지로에서는 안 됨"과 같은 수준. */
   if (s.onlineApply !== null) {
     cells.push({
-      k: "온라인 신청",
-      v: s.onlineApply ? "가능" : "안 됨",
+      k: "복지로 온라인 신청",
+      v: s.onlineApply ? "가능" : "연동 없음",
       help: s.onlineApply
-        ? "인터넷으로 신청할 수 있습니다."
-        : "인터넷 신청은 받지 않습니다.",
+        ? "복지로(bokjiro.go.kr)에서 온라인으로 신청할 수 있습니다."
+        : "복지로 온라인 신청 대상이 아닙니다. 다른 온라인 창구가 있을 수 있으니 아래 문의처·공식 안내에서 확인하세요.",
     });
   }
 

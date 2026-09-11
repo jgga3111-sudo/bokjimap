@@ -78,6 +78,14 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains",
   },
+
+  /* 다른 사이트가 우리 페이지를 팝업으로 열어 창 사이를 건드리지 못하게
+     한다. `same-origin`이 아니라 `-allow-popups`로 둔 이유 — 광고 클릭으로
+     새 창이 열리는 것은 그대로 되어야 한다(09-11 보안 점검). */
+  {
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin-allow-popups",
+  },
 ];
 
 const nextConfig: NextConfig = {

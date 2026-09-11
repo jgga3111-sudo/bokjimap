@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ROBOTS_INDEX } from "@/lib/site";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SIDO_LIST, sidoBySlug } from "@/lib/regions";
@@ -37,7 +38,7 @@ export async function generateMetadata({
     alternates: { canonical: `/region/${sido.slug}` },
     /* 지자체 사업이 없는 지역은 이 페이지만의 내용이 없다. 남는 건 다른 지역
        페이지와 똑같은 중앙부처 목록뿐이라 색인에서 뺀다(docs/02). */
-    robots: count === 0 ? { index: false, follow: true } : undefined,
+    robots: count === 0 ? { index: false, follow: true } : ROBOTS_INDEX,
   };
 }
 

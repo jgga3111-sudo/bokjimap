@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ROBOTS_INDEX } from "@/lib/site";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BENEFITS, benefitBySlug, servicesOf } from "@/lib/benefits";
@@ -24,7 +25,7 @@ export async function generateMetadata({
     title: `${ro(b.label)} 받는 복지·지원금`,
     description: `${b.blurb} 수록 ${count}건을 복지로 누적 조회수 순으로 정리했습니다.`,
     alternates: { canonical: `/benefit/${b.slug}` },
-    robots: count < MIN_SERVICES ? { index: false, follow: true } : undefined,
+    robots: count < MIN_SERVICES ? { index: false, follow: true } : ROBOTS_INDEX,
   };
 }
 

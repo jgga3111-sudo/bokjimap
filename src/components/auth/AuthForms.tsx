@@ -123,7 +123,7 @@ export function SignupForm() {
             <strong>[필수] 개인정보 수집·이용 동의</strong> — 이메일·비밀번호
             (암호화 저장)·저장한 관심 지원을, 로그인과 기기 간 동기화를 위해
             수집합니다. <strong>탈퇴하면 바로 지웁니다.</strong>{" "}
-            <Link href="/privacy" className="text-brand underline" target="_blank">
+            <Link href="/privacy" className="text-brand underline" target="_blank" rel="noopener">
               자세히
             </Link>
           </span>

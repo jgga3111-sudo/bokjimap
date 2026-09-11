@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ROBOTS_INDEX } from "@/lib/site";
 import type { Metadata } from "next";
 import { THEMES, themeBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
@@ -23,7 +24,7 @@ export async function generateMetadata({
     alternates: { canonical: `/theme/${t.slug}` },
     /* 항목이 없는 축은 색인에서 뺀다. 지금은 15종 모두 값이 있지만,
        수록 범위가 바뀌면 0건짜리가 생길 수 있다. */
-    robots: count === 0 ? { index: false, follow: true } : undefined,
+    robots: count === 0 ? { index: false, follow: true } : ROBOTS_INDEX,
   };
 }
 

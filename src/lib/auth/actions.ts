@@ -221,6 +221,12 @@ export async function updatePassword(_: AuthState, form: FormData): Promise<Auth
     };
   }
   const { error } = await sb.auth.updateUser({ password });
+  if (!error) {
+    /* 비밀번호를 바꾼 사람은 대개 "다른 기기에 남은 로그인"을 끊고 싶어서
+       바꾼다(휴대폰 분실 등). 지금 기기는 남기고 나머지만 끊는다(09-11 보안
+       점검). 실패해도 비밀번호는 이미 바뀌었으니 조용히 넘어간다. */
+    await sb.auth.signOut({ scope: "others" }).catch(() => {});
+  }
   if (error) {
     if (error.code === "same_password") {
       return { message: "지금 쓰는 비밀번호와 같습니다. 다른 것으로 정해 주세요." };

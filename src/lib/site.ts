@@ -25,6 +25,16 @@ export const SITE = {
 export const CONTACT_EMAIL = `${SITE.contactUser}@${SITE.contactHost}`;
 
 /**
+ * 색인되는 페이지의 robots 값 (2026-09-11).
+ *
+ * `generateMetadata`에서 `robots: 조건 ? {index:false} : undefined`로 쓰면 Next가
+ * `undefined`도 "이 페이지가 robots를 정했다"로 보고 layout의 값을 **안 물려준다** —
+ * 그래서 상세·허브에서 `max-image-preview:large`가 빠졌다(빌드 HTML로 확인).
+ * undefined 대신 이 값을 넘긴다. layout.tsx의 robots와 같은 내용이어야 한다.
+ */
+export const ROBOTS_INDEX = { googleBot: { "max-image-preview": "large" as const } };
+
+/**
  * KST 기준 오늘 날짜(YYYY-MM-DD).
  *
  * 배포 서버는 UTC로 돌아간다. 그냥 `new Date()`를 쓰면 국내 이용자와 하루가

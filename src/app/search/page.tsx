@@ -39,7 +39,9 @@ export default async function SearchPage({
   searchParams,
 }: PageProps<"/search">) {
   const raw = (await searchParams).q;
-  const q = (Array.isArray(raw) ? raw[0] : (raw ?? "")).trim();
+  /* /ask와 같은 120자 상한. 낱말 수백 개짜리 검색어를 반복 보내면 900건 ×
+     낱말 수만큼 서버가 돈다(09-11 보안 점검). */
+  const q = (Array.isArray(raw) ? raw[0] : (raw ?? "")).trim().slice(0, 120);
   const hits = q ? searchFull(q) : [];
 
   /* 자르는 이유. "지원"처럼 흔한 낱말은 수백 건이 걸리는데, 그걸 다 깔아도
