@@ -4,6 +4,8 @@ import { TARGETS, targetBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
+import NarrowChips from "@/components/NarrowChips";
+import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
 
 export function generateStaticParams() {
   return TARGETS.map((t) => ({ slug: t.slug }));
@@ -15,9 +17,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const t = targetBySlug(slug);
   if (!t) return {};
+  /* 건수와 상위 혜택은 데이터에서 센다(hubMeta.ts, 2026-09-11). */
+  const list = services.filter((s) => s.targets.includes(t.slug));
+  const top = topBenefits(list);
+  const tail = top.length ? ` — ${joinCounts(top)}` : "";
   return {
-    title: `${t.label} 복지·지원금`,
-    description: t.blurb,
+    title: withTail(`${t.label} 복지·지원금 ${list.length}건`, top),
+    description: `${t.blurb} ${t.label} 대상으로 분류된 ${list.length}건${tail}.`,
     alternates: { canonical: `/target/${t.slug}` },
   };
 }
@@ -38,6 +44,7 @@ export default async function TargetPage({
         <p className="text-sm text-muted">{t.blurb}</p>
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
+      <NarrowChips base={{ target: t.slug }} />
       <HubList rows={rows} groups={groups} />
     </div>
   );

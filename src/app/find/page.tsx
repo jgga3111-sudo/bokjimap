@@ -5,6 +5,7 @@ import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { sidoBySlug } from "@/lib/regions";
 import ServiceList from "@/components/ServiceList";
 import AxisFinder from "@/components/AxisFinder";
+import { RememberFind } from "@/components/LastFind";
 
 export const metadata: Metadata = {
   title: "조건으로 복지·지원금 찾기",
@@ -64,6 +65,17 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
+      {/* 첫 화면 「지난번 조건」용으로 **걸러 낸** 조건과 건수만 브라우저에
+          적는다(2026-09-11, lib/lastFind.ts). 화면에는 아무것도 없다.
+          조건이 없는 맨 화면은 기억할 게 없으니 그리지 않는다. */}
+      {picked.length > 0 && (
+        <RememberFind
+          life={life?.slug ?? ""}
+          target={target?.slug ?? ""}
+          region={sido?.slug ?? ""}
+          count={hits.length}
+        />
+      )}
       <header>
         <h1 className="text-xl font-bold sm:text-2xl">
           {picked.length > 0 ? (

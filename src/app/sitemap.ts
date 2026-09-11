@@ -48,6 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ["/guide", "monthly", 0.8, SERVICES_UPDATED],
       ["/about", "monthly", 0.5, SITE.policyEffectiveDate],
       ["/source", "monthly", 0.5, SERVICES_UPDATED],
+      /* 검수 기준(2026-09-11). 정형 문서가 아니라 이 사이트를 믿을 만한지
+         말하는 글이라 올린다. 날짜는 실제로 쓴 날 — 글을 고치면 같이 고친다. */
+      ["/standards", "monthly", 0.6, "2026-09-11"],
     ] as const
   ).map(([path, changeFrequency, priority, lastModified]) => ({
     url: `${SITE.url}${path}`,

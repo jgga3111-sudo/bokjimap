@@ -58,6 +58,7 @@ const COLUMNS: { title: string; items: Item[] }[] = [
     items: [
       { href: "/about", label: "사이트 소개", ready: true },
       { href: "/source", label: "데이터 출처", ready: true },
+      { href: "/standards", label: "정보 수집·검수 기준", ready: true },
       { href: "/terms", label: "이용약관", ready: true },
       { href: "/privacy", label: "개인정보처리방침", ready: true },
     ],

@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             복지클릭은 회원가입이 없고, 이름·연락처 같은 개인정보를 직접 수집하지
             않습니다. 자가진단에 입력한{" "}
             <strong>소득 금액은 어디에도 저장하지 않습니다.</strong> 계산 결과와
-            최근 본 지원만 <strong>이용자 본인의 브라우저에</strong> 남으며,
+            최근 본 지원·관심 지원 같은 이용 기록만 <strong>이용자 본인의 브라우저에</strong> 남으며,
             운영자의 서버로는 전송되지 않습니다.
           </>
         )}
@@ -129,7 +129,7 @@ export default function PrivacyPage() {
           운영자의 서버로 전송되지 않습니다.
         </p>
         <p>
-          이용 편의를 위해 다음 {AUTH_ON ? "네" : "세"} 가지가 이용자 본인의
+          이용 편의를 위해 다음 {AUTH_ON ? "다섯" : "네"} 가지가 이용자 본인의
           브라우저 저장소(localStorage)에 남습니다.{" "}
           {AUTH_ON ? (
             <>
@@ -160,6 +160,11 @@ export default function PrivacyPage() {
               <strong>관심 지원</strong> — 이용자가 ☆로 저장한 서비스의 이름과
               지역. 나중에 다시 보기 위한 것입니다.
             </>,
+            <>
+              <strong>지난번 조건</strong> — 「조건으로 찾기」에서 마지막으로 고른
+              생애주기·대상·지역과 그때 나온 건수 한 건. 첫 화면에서 같은 조건을
+              다시 열기 위한 것입니다.
+            </>,
             ...(AUTH_ON
               ? [
                   <>
@@ -172,10 +177,11 @@ export default function PrivacyPage() {
           ]}
         />
         <p>
-          {AUTH_ON ? "네" : "세"} 가지 모두 이용자가 직접 지울 수 있습니다. 자가진단 결과는 사업
+          {AUTH_ON ? "다섯" : "네"} 가지 모두 이용자가 직접 지울 수 있습니다. 자가진단 결과는 사업
           페이지의 <strong>&ldquo;내 결과 지우기&rdquo;</strong>, 최근 본 지원은
           첫 화면의 <strong>&ldquo;지우기&rdquo;</strong>, 관심 지원은 목록의{" "}
-          <strong>&ldquo;빼기&rdquo;</strong>를 누르면 즉시 삭제됩니다.
+          <strong>&ldquo;빼기&rdquo;</strong>, 지난번 조건은 첫 화면의{" "}
+          <strong>&ldquo;지우기&rdquo;</strong>를 누르면 즉시 삭제됩니다.
           브라우저의 사이트 데이터 삭제로도 없어집니다.
         </p>
       </DocSection>

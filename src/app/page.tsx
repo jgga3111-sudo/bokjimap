@@ -1,4 +1,6 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { SITE } from "@/lib/site";
 import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
@@ -13,6 +15,7 @@ import ThisMonth from "@/components/ThisMonth";
 import AxisIcon from "@/components/AxisIcon";
 import AxisFinder from "@/components/AxisFinder";
 import AskBox from "@/components/AskBox";
+import LastFind from "@/components/LastFind";
 
 /**
  * 첫 화면.
@@ -157,6 +160,21 @@ function BrowseRow<T extends { slug: string; label: string }>({
   );
 }
 
+/*
+  첫 화면 제목·설명 (2026-09-11). layout의 기본값(「복지클릭 — 전국 복지·지원금
+  정보」 19자, 설명 37자)이 그대로 나가 검색 결과 자리를 반쯤 비워 두고 있었다.
+  숫자는 렌더 시점 집계값이다 — 히어로 수치와 같은 규칙. canonical은 layout의
+  "/"를 그대로 쓴다.
+*/
+const CENTRAL = services.filter((s) => s.provider === "central").length;
+const LOCAL = services.length - CENTRAL;
+export const metadata: Metadata = {
+  title: {
+    absolute: `${SITE.name} — 전국 복지·지원금 ${services.length.toLocaleString()}건, 조건으로 찾고 자가진단까지`,
+  },
+  description: `중앙부처 ${CENTRAL.toLocaleString()}건과 시·군·구 ${LOCAL.toLocaleString()}건의 복지·지원금을 생애주기·대상·지역으로 찾거나 문장으로 물어볼 수 있습니다. 기준 중위소득 자가진단과 지급일·계산기 안내도 함께 둡니다.`,
+};
+
 export default function Home() {
   return (
     <div className="space-y-10">
@@ -248,6 +266,9 @@ export default function Home() {
             정리했습니다.{" "}
             <Link href="/source" className="underline hover:text-brand">
               출처 자세히
+            </Link>{" · "}
+            <Link href="/standards" className="underline hover:text-brand">
+              검수 기준
             </Link>
           </p>
         </div>
@@ -402,6 +423,9 @@ export default function Home() {
           <p className="mt-0.5 mb-3 text-xs text-muted">
             생애주기·대상·지역을 함께 골라 한 번에 찾습니다
           </p>
+          {/* 지난번에 /find에서 본 조건 한 줄(lib/lastFind.ts). 값이 없으면
+              아무것도 안 그린다. */}
+          <LastFind />
           <AxisFinder />
         </div>
 

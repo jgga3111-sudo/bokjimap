@@ -6,6 +6,8 @@ import { BENEFITS, benefitBySlug, servicesOf } from "@/lib/benefits";
 import { services } from "@/data/services";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
+import { FindLink } from "@/components/NarrowChips";
+import { topLifeStages, joinCounts, withTail } from "@/lib/hubMeta";
 import { MIN_SERVICES } from "@/lib/axes";
 import { ro } from "@/lib/display";
 
@@ -20,10 +22,15 @@ export async function generateMetadata({
   const b = benefitBySlug(slug);
   if (!b) return {};
 
-  const count = servicesOf(services, b).length;
+  const list = servicesOf(services, b);
+  const count = list.length;
+  /* 혜택 허브에 상위 혜택을 달면 제자리 말이라 생애주기로 곁말을 단다.
+     값은 데이터에서 센다(hubMeta.ts, 2026-09-11). */
+  const top = topLifeStages(list);
+  const tail = top.length ? ` 생애주기로는 ${joinCounts(top)}입니다.` : "";
   return {
-    title: `${ro(b.label)} 받는 복지·지원금`,
-    description: `${b.blurb} 수록 ${count}건을 복지로 누적 조회수 순으로 정리했습니다.`,
+    title: withTail(`${ro(b.label)} 받는 복지·지원금 ${count}건`, top),
+    description: `${b.blurb} 수록 ${count}건을 복지로 누적 조회수 순으로 정리했습니다.${tail}`,
     alternates: { canonical: `/benefit/${b.slug}` },
     robots: count < MIN_SERVICES ? { index: false, follow: true } : ROBOTS_INDEX,
   };
@@ -67,6 +74,8 @@ export default async function BenefitPage({
         <p className="text-sm text-muted">{b.blurb}</p>
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
+
+      <FindLink axisLabel="혜택" />
 
       {/* 목록 위에 한 문단. 축 페이지가 목록만 있는 껍데기가 되지 않게 하고,
           그 형태를 받을 때 실제로 놓치는 것을 먼저 알린다. */}

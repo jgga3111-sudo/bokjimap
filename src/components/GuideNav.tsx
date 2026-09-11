@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
+import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
+import { SITE } from "@/lib/site";
+import { jsonLd } from "@/lib/safe";
 
 /**
  * 글 끝에 붙는 다른 글 목록.
@@ -22,8 +25,38 @@ export default function GuideNav({ current }: { current: string }) {
   const i = GUIDES.findIndex((g) => g.slug === current);
   const ordered = i < 0 ? GUIDES : [...GUIDES.slice(i + 1), ...GUIDES.slice(0, i)];
   const rest = ordered.slice(0, SHOWN);
+
+  /*
+    Article 구조화 데이터 (2026-09-11). 안내 글에는 사이트 공통 WebSite밖에
+    없어서 구글이 글의 작성일·수정일·쓴 사람을 못 읽었다. 글마다 붙이는 대신
+    모든 글 끝에 이미 있는 이 부품에서 내보낸다 — 새 글을 내도 빠뜨릴 수가
+    없다. 작성자·발행자는 layout의 WebSite와 같은 Person이다(정부 기관처럼
+    보이지 않게). 날짜는 guides.ts의 updated와 git 첫 커밋일만 쓴다.
+    jsonLd()가 부등호·앰퍼샌드를 이스케이프한다(safe.ts).
+  */
+  const g = i < 0 ? null : GUIDES[i];
+  const published = g ? GUIDE_PUBLISHED[g.slug] : undefined;
+  const article = g && {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: g.title,
+    description: g.summary,
+    inLanguage: "ko",
+    ...(published ? { datePublished: published } : {}),
+    dateModified: g.updated,
+    mainEntityOfPage: `${SITE.url}/guide/${g.slug}`,
+    author: { "@type": "Person", name: SITE.operator },
+    publisher: { "@type": "Person", name: SITE.operator },
+  };
+
   return (
     <nav className="mt-14 border-t border-line pt-8">
+      {article && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(article) }}
+        />
+      )}
       <div className="flex items-baseline justify-between gap-3">
         <h2 className="text-sm font-bold text-ink">다른 안내 글</h2>
         <Link href="/guide" className="shrink-0 text-xs text-muted hover:text-brand">

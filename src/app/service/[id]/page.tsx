@@ -8,7 +8,6 @@ import {
   type WelfareService,
 } from "@/types/welfare";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
-import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import { nameWithAlias } from "@/lib/aliases";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { SITE, ROBOTS_INDEX } from "@/lib/site";
@@ -17,7 +16,11 @@ import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import SaveButton from "@/components/SaveButton";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
-import { statedApplyPeriod, statedPlan } from "@/lib/applyPeriod";
+import {
+  statedApplyPeriod,
+  statedPlan,
+  type StatedPeriod,
+} from "@/lib/applyPeriod";
 
 const byId = new Map(services.map((s) => [s.id, s]));
 
@@ -118,6 +121,24 @@ function Prose({ text }: { text: string }) {
  * **있는 절만 건다.** 상세를 아직 못 받은 항목은 절이 두어 개뿐인데 거기에
  * 목차를 얹으면 목차가 본문보다 길어진다. 그래서 셋 미만이면 그리지 않는다.
  */
+/**
+ * 「신청 방법」 절의 제목. (2026-09-11)
+ *
+ * 중앙부처 330건은 `applyMethod`(신청 방법 서술)가 전부 비어 있고 대신
+ * `applySteps`만 온다 — 원문 필드는 `applmetList`인데, 내용이 "담당
+ * 시/군/구청에서 조사 및 심사 → 보장 결정 → 서비스 제공"처럼 **기관 쪽의
+ * 처리 단계**다. 신청하는 사람이 따라 할 절차가 아니다. 그걸 「신청 방법」
+ * 밑에 1·2·3으로 세워 두니, 읽는 사람은 "1단계 상황 관리"부터 자기가 해야
+ * 하는 일로 읽는다(09-11 경쟁 비교에서 걸림). 있는 그대로 「처리 절차(원문)」
+ * 라고 부른다. 지자체 527건은 서술이 있으므로 「신청 방법」 그대로다.
+ *
+ * 절 제목과 목차 칩이 같은 함수를 봐야 한다 — 한쪽만 고치면 목차에는
+ * 「신청 방법」이라 적혀 있는데 눌러 간 자리는 「처리 절차」가 된다.
+ */
+function applyTitle(s: WelfareService): string {
+  return s.applyMethod ? "신청 방법" : "처리 절차(원문)";
+}
+
 const TOC = [
   { id: "target", title: "지원 대상", has: (s: WelfareService) => !!s.eligibility },
   {
@@ -131,6 +152,8 @@ const TOC = [
   { id: "benefit", title: "지원 내용", has: (s: WelfareService) => !!s.supportContent },
   {
     id: "apply",
+    /* 제목은 사업마다 다르다(`applyTitle`). 여기 값은 자리표시일 뿐이고
+       PageToc가 그릴 때 바꿔 단다. */
     title: "신청 방법",
     has: (s: WelfareService) => !!s.applyMethod || s.applySteps.length > 0,
   },
@@ -174,7 +197,7 @@ function PageToc({ s }: { s: WelfareService }) {
               href={`#${t.id}`}
               className="inline-block rounded-full border border-line bg-white px-3 py-1.5 text-sm text-slate-700 transition hover:border-brand hover:text-brand"
             >
-              {t.title}
+              {t.id === "apply" ? applyTitle(s) : t.title}
             </a>
           </li>
         ))}
@@ -347,27 +370,169 @@ function KeyFacts({ s }: { s: WelfareService }) {
 }
 
 /**
- * 선정기준에서 읽어낸 중위소득 기준을 자가진단으로 잇는다.
- * 문장에 명시가 없으면 이 배너 자체를 띄우지 않는다 — 짐작으로 기준을
- * 만들어 붙이면 "대상이라고 해서 갔는데 아니었다"가 된다.
+ * 원문 지원 대상의 **첫 문장(들)**을 120자 안에서 끊는다. (2026-09-11)
+ *
+ * 「신청 전 체크」의 자격 조건 줄에 쓴다. 우리가 요약해 다시 쓰지 않는다
+ * (CLAUDE.md 3절) — 원문을 앞에서부터 문장 단위로 잘라 붙이고, 끊겼으면
+ * "…"과 함께 전문(#target)으로 보낸다.
+ *
+ * 문장 경계는 **줄바꿈**과 **「…다.」「…음.」 같은 한국어 종결 뒤 마침표**만
+ * 본다. 마침표 하나로 자르면 "2026. 1. 1. 이후 출생"(영유아보육료)의 날짜가
+ * 세 토막 난다. lookbehind는 tsconfig target(ES2017)에서 못 쓰므로 종결
+ * 뒤에 줄바꿈을 끼워 넣고 줄로 가른다.
+ *
+ * `※`로 시작하는 토막은 조건이 아니라 조건에 붙는 단서다(K-패스: "※ 외국인
+ * 등록번호가 있는 외국인에 한해…"). 첫 문장을 이미 잡았으면 거기서 멈춘다.
+ * 원문이 `※`로 **시작**하면(청년월세 지원사업) 그건 첫 줄이므로 그대로 싣는다.
+ *
+ * 첫 토막부터 120자를 넘는 원문이 있다 — 홍천군 운전면허 학원비처럼 줄바꿈
+ * 없이 「- 」로 항목을 잇는 것. 그때는 마지막 띄어쓰기에서 자른다. 낱말
+ * 가운데를 자르면 "18세 이상 20세 이"처럼 뜻이 바뀌어 보인다.
  */
-function IncomeBanner({ s }: { s: WelfareService }) {
-  if (s.medianPercent === null) return null;
+const LEAD_MAX = 120;
+
+function leadSentence(text: string): { lead: string; cut: boolean } {
+  const parts = text
+    .replace(/([다음됨함임요])\.\s+/g, "$1.\n")
+    .split(/\n+/)
+    .map((p) => p.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  let lead = "";
+  let used = 0;
+  for (const p of parts) {
+    if (lead && /^[※*]/.test(p)) break;
+    const next = lead ? `${lead} ${p}` : p;
+    if (next.length > LEAD_MAX) break;
+    lead = next;
+    used += 1;
+  }
+
+  if (lead) return { lead, cut: used < parts.length };
+
+  const head = parts[0] ?? "";
+  const space = head.lastIndexOf(" ", LEAD_MAX);
+  const at = space > LEAD_MAX / 2 ? space : LEAD_MAX;
+  return { lead: head.slice(0, at).trim(), cut: true };
+}
+
+/**
+ * 신청 전 체크 — 본문을 읽기 전에 "나한테 해당되나·어디서·언제"부터. (2026-09-11)
+ *
+ * ── 왜 바꿨나 ──────────────────────────────────────────────────
+ * 여기는 「한눈에 보기」였다 — 대상 태그 · 신청 방법 · 담당 · 기준연도 · 시행.
+ * 09-11 경쟁 비교에서 저쪽 상세는 첫 화면에 **자격·지역·기간·접수 방식**을
+ * 한 표로 세워 두는데, 우리 표는 분류값(청년 · 저소득)과 행정 정보만 있어서
+ * 정작 "내가 되나"에 답하는 줄이 없었다. 자격 문장은 2,000px 아래 「지원
+ * 대상」 절에 있었다.
+ *
+ * ── 줄마다 값이 있을 때만 그린다 ───────────────────────────────
+ * `Row`가 값 없는 줄을 안 그린다. **"없음"이라고 적지 않는다** — 원문에
+ * 없다는 것과 제도에 없다는 것은 다른 말이다(CLAUDE.md 3절).
+ *   · 자격 조건  900/900 — 원문 첫 문장, 끊기면 "…"과 전문 링크
+ *   · 지역       900/900 — 중앙부처는 「전국」(placeLabel)
+ *   · 신청 기간  9/900  — 본문 문장에서 뽑은 범위(`statedApplyPeriod`)만.
+ *                 `applyStart/End`는 **사업 시행 기간**이지 접수 기간이 아니라
+ *                 (display.ts `periodLabel` 주석) 신청 기간 줄에 넣지 않는다.
+ *   · 시행 기간  15/900 — 끝날이 실제 날짜일 때만. 554건의 9999-12-31과
+ *                 330건의 없음은 "N년부터 (종료일 정해지지 않음)"이 되는데,
+ *                 신청 전에 알아야 할 말이 아니라서 뺐다. 이 15건은
+ *                 `grep -o 'applyEnd": *[^,}]*' src/data/services.ts`로 센다.
+ *   · 접수 방식  505/900 — 지자체 `applyMethods`(방문·인터넷…). 중앙부처는
+ *                 이 필드가 아예 없다. `applySteps`에서 만들어 내지 않는다 —
+ *                 그건 기관의 처리 단계다(`applyTitle` 주석).
+ *   · 소득 기준선 — `medianPercent`가 있을 때만. 자가진단 비교(`MyEligibility`)
+ *                 는 여기 한 곳에서만 그린다. 원래 표 밑에 따로 있던
+ *                 「소득 기준」 배너를 이 줄로 합쳤다 — 같은 값을 한 화면에
+ *                 두 번 적을 이유가 없다(KeyFacts와 같은 이유).
+ *   · 담당       900/900 — 지자체는 시·군·구의 과 이름이라 「부처」라고 부르지 않는다 · 기준연도 330/900(중앙부처만) — 사실이라 그대로.
+ *
+ * 지났는지 판정은 여기서 하지 않는다. 신청 기간 줄은 원문 조각을 그대로
+ * 보여줄 뿐이고, "지났다"는 띠는 요약문 밑 `PastPeriodNotice`가 브라우저에서
+ * 판정해 단다(applyPeriod.ts 머리말).
+ */
+function PreCheck({
+  s,
+  period,
+}: {
+  s: WelfareService;
+  period: StatedPeriod | null;
+}) {
+  const lead = s.eligibility ? leadSentence(s.eligibility) : null;
+
+  const endYear = s.applyEnd ? Number(s.applyEnd.slice(0, 4)) : NaN;
+  const enforced =
+    Number.isFinite(endYear) && endYear < 2100
+      ? periodLabel(s.applyStart, s.applyEnd)
+      : null;
+
   return (
-    <div className="rounded-xl border border-brand/20 bg-brand-soft p-4">
-      <p className="text-sm font-bold text-ink">
-        소득 기준: 기준 중위소득 {s.medianPercent}% 이하
+    <section id="precheck" className="scroll-mt-28">
+      <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
+        <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
+        신청 전 체크
+      </h2>
+      <dl className="rounded-xl border border-line bg-white px-4 py-1">
+        <Row
+          label="자격 조건"
+          value={
+            lead && (
+              <>
+                <span className="font-normal text-slate-700">
+                  {lead.lead}
+                  {/* 문장이 마침표로 끝났으면 말줄임표를 또 붙이지 않는다 —
+                      "지원합니다.…"가 된다(09-11 화면 확인). 뒤에 더 있다는 건
+                      옆의 「전문 보기」가 말한다. */}
+                  {lead.cut && !/[.。]$/.test(lead.lead) && "…"}
+                </span>{" "}
+                <a
+                  href="#target"
+                  className="whitespace-nowrap text-xs font-medium text-brand hover:underline"
+                >
+                  전문 보기 ↓
+                </a>
+              </>
+            )
+          }
+        />
+        <Row label="지역" value={placeLabel(s)} />
+        <Row label="신청 기간" value={period?.text} />
+        <Row label="시행 기간" value={enforced} />
+        <Row label="접수 방식" value={s.applyMethods.join(" · ")} />
+        <Row
+          label="소득 기준선"
+          value={
+            s.medianPercent !== null && (
+              <>
+                기준 중위소득 {s.medianPercent}% 이하
+                <span className="mt-0.5 block text-xs font-normal text-slate-600">
+                  {BASE_YEAR}년 기준 1인 가구{" "}
+                  <strong>{won(thresholdOf(1, s.medianPercent))}</strong>, 4인
+                  가구 <strong>{won(thresholdOf(4, s.medianPercent))}</strong>{" "}
+                  이하입니다.
+                </span>
+                {/* 자가진단을 이미 한 사람에게는 비교 결과를, 안 한 사람에게는
+                    계산하러 가는 버튼을 보여준다. 어느 쪽을 그릴지는 브라우저에
+                    저장된 결과가 있느냐에 달렸으므로 MyEligibility가 둘 다 맡는다.
+                    소득 한 가지만 본 결과라는 단서도 그 안에 있다. */}
+                <MyEligibility percent={s.medianPercent} />
+              </>
+            )
+          }
+        />
+        <Row label="담당" value={s.department} />
+        <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
+      </dl>
+      {/* 빠진 줄이 "해당 없음"으로 읽히지 않게. 접수 방식이 안 보이는 중앙부처
+          330건이 특히 그렇다 — 필드가 없는 것이지 창구가 없는 게 아니다. */}
+      <p className="mt-2 text-xs leading-relaxed text-muted">
+        원문만으로 확정하기 어려운 항목은 아래{" "}
+        <a href="#official" className="underline hover:text-brand">
+          공식 안내
+        </a>
+        에서 확인하세요.
       </p>
-      <p className="mt-1.5 text-sm text-slate-700">
-        {BASE_YEAR}년 기준 1인 가구{" "}
-        <strong>{won(thresholdOf(1, s.medianPercent))}</strong>, 4인 가구{" "}
-        <strong>{won(thresholdOf(4, s.medianPercent))}</strong> 이하입니다.
-      </p>
-      {/* 자가진단을 이미 한 사람에게는 비교 결과를, 안 한 사람에게는
-          계산하러 가는 버튼을 보여준다. 어느 쪽을 그릴지는 브라우저에
-          저장된 결과가 있느냐에 달렸으므로 MyEligibility가 둘 다 맡는다. */}
-      <MyEligibility percent={s.medianPercent} />
-    </div>
+    </section>
   );
 }
 
@@ -377,11 +542,6 @@ export default async function ServiceDetail({
   const { id } = await params;
   const s = byId.get(id);
   if (!s) notFound();
-
-  const tags = [
-    ...s.targets.map((t) => targetBySlug(t)),
-    ...s.lifeStages.map((t) => lifeStageBySlug(t)),
-  ].filter(Boolean);
 
   /* 본문 문장에 적힌 신청 기간. 여기서는 뽑기만 하고, 지났는지는 브라우저가
      판정한다 — 빌드한 날을 정적 HTML에 굳히지 않으려는 것이다. 900건 중
@@ -556,33 +716,12 @@ export default async function ServiceDetail({
         )}
       </header>
 
-      {/* 목차는 "한눈에 보기" 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
+      {/* 목차는 「신청 전 체크」 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
           밀려서, 정작 스크롤을 아끼려고 만든 것이 스크롤해야 보인다. */}
       <PageToc s={s} />
 
-      {/* 한눈에 보기 — 본문을 읽기 전에 형태부터 파악되게. */}
-      <section>
-        <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
-          <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
-          한눈에 보기
-        </h2>
-        <dl className="rounded-xl border border-line px-4 py-1">
-          {/* 지원 형태·지원 주기 줄은 여기 있었다. 제목 밑 「핵심 세 칸」으로
-              옮겼다 — 같은 값을 한 화면에 두 번 적을 이유가 없다. */}
-          <Row label="신청 방법" value={s.applyMethods.join(" · ")} />
-          <Row
-            label="대상"
-            value={tags.map((t) => t!.label).join(" · ")}
-          />
-          <Row label="담당" value={s.department} />
-          <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
-          {/* 원본은 "사업 시행 기간"이지 접수 기간이 아니다. 종료일이
-              없는 사업에는 9999-12-31이 들어와 그대로 화면에 나갔었다. */}
-          <Row label="시행" value={periodLabel(s.applyStart, s.applyEnd)} />
-        </dl>
-      </section>
-
-      <IncomeBanner s={s} />
+      {/* 신청 전 체크 — 옛 「한눈에 보기」와 「소득 기준」 배너를 합친 자리(PreCheck 주석). */}
+      <PreCheck s={s} period={period} />
 
       {/* 상세 본문을 아직 못 받은 항목. 없는 걸 없다고 쓰고 원문으로 보낸다 —
           그럴듯한 문장으로 빈자리를 메우면 그게 곧 저품질 페이지가 된다. */}
@@ -627,7 +766,21 @@ export default async function ServiceDetail({
       )}
 
       {(s.applyMethod || s.applySteps.length > 0) && (
-        <Section id="apply" title="신청 방법">
+        <Section id="apply" title={applyTitle(s)}>
+          {/* 중앙부처는 신청 방법 서술이 없고 기관 쪽 처리 단계만 온다(applyTitle
+              주석). 그 단계를 신청 절차로 읽지 않게, 창구를 어디서 확인하는지
+              먼저 적는다(2026-09-11). "창구가 없다"고 쓰지 않는다 — 원문에
+              안 적혀 있을 뿐이다(CLAUDE.md 3절). */}
+          {!s.applyMethod && (
+            <p className="mb-3 text-sm leading-relaxed text-slate-700">
+              신청 창구는 원문에 따로 적혀 있지 않습니다. 아래는 담당 기관이
+              신청을 받은 뒤 처리하는 순서입니다. 어디서 신청하는지는{" "}
+              <a href="#official" className="text-brand underline">
+                문의처·공식 안내
+              </a>
+              에서 확인하세요.
+            </p>
+          )}
           {s.applyMethod && <Prose text={s.applyMethod} />}
           {s.applySteps.length > 0 && (
             <ol className="mt-3 space-y-2">

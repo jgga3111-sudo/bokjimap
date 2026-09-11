@@ -7,6 +7,8 @@ import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
+import NarrowChips from "@/components/NarrowChips";
+import { topBenefits, joinCounts } from "@/lib/hubMeta";
 
 export function generateStaticParams() {
   return SIDO_LIST.map((s) => ({ sido: s.slug }));
@@ -31,10 +33,18 @@ export async function generateMetadata({
   const sido = sidoBySlug(slug);
   if (!sido) return {};
 
-  const count = localOf(sido.fullName).length;
+  const local = localOf(sido.fullName);
+  const count = local.length;
+  /* 건수와 상위 혜택은 데이터에서 센다(hubMeta.ts, 2026-09-11). 자체 사업이
+     없는 곳(세종)은 제목에 0건을 세우지 않는다 — 어차피 noindex다. */
+  const top = topBenefits(local);
+  const tail = top.length ? ` 지자체 사업은 ${joinCounts(top)} 순으로 많습니다.` : "";
   return {
-    title: `${sido.name} 복지·지원금`,
-    description: `${sido.fullName}의 지자체 복지 사업 ${count}건과 전국 어디서나 신청할 수 있는 중앙부처 사업을 함께 정리했습니다.`,
+    title:
+      count > 0
+        ? `${sido.name} 복지·지원금 — 지자체 ${count}건·전국 공통 ${NATIONWIDE.length}건`
+        : `${sido.name} 복지·지원금`,
+    description: `${sido.fullName}의 지자체 복지 사업 ${count}건과 전국 어디서나 신청할 수 있는 중앙부처 사업 ${NATIONWIDE.length}건을 함께 정리했습니다.${tail}`,
     alternates: { canonical: `/region/${sido.slug}` },
     /* 지자체 사업이 없는 지역은 이 페이지만의 내용이 없다. 남는 건 다른 지역
        페이지와 똑같은 중앙부처 목록뿐이라 색인에서 뺀다(docs/02). */
@@ -64,6 +74,8 @@ export default async function RegionPage({
           {sido.fullName} · 지자체 사업 {rows.length}건
         </p>
       </header>
+
+      <NarrowChips base={{ region: sido.slug }} />
 
       <section>
         <h2 className="mb-3 text-lg font-bold">
