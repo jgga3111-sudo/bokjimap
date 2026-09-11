@@ -39,11 +39,19 @@ export const metadata: Metadata = {
 
     빙은 GSC 연동(Import)을 권하지만 쓰지 않는다 — 구글 계정 권한을 넘겨야 한다.
 
+    네이버(2026-09-11) — 사용자가 서치어드바이저에서 HTML 태그 방식 토큰을
+    받아 줬다. 서치어드바이저는 앱 브라우저·크롬 둘 다 안전 제한으로 열리지
+    않아 등록·소유확인·사이트맵 제출은 사용자가 콘솔에서 한다. 이 값은 태그로
+    공개되는 확인용 문자열이라 비밀이 아니다.
+
     ⚠ 이 값을 지우면 소유 확인이 풀린다. 도메인이나 계정을 바꿀 때만 건드린다.
   */
   verification: {
     google: "i_oYjG7mn5uP-1z-c8o51cLjfsP4oDPo49Lz04kKyBo",
-    other: { "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5" },
+    other: {
+      "msvalidate.01": "C5361F9F63266AE3AB236F6A6E92DED5",
+      "naver-site-verification": "4553b02df3173313ca061cbdfc83b18a6c4eb6ac",
+    },
   },
   /*
     og:url을 여기 두지 않는다 (2026-09-11). 처음엔 `url: SITE.url`이 있었는데
