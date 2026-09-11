@@ -865,7 +865,9 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
 - [ ] **네이버 서치어드바이저 — 09-11 사용자가 진행하기로 했다. 토큰 넣음.**
       · 사용자가 HTML 태그 토큰을 줬다 → `layout.tsx` `verification.other`에
         `naver-site-verification` 한 줄. **`e91b613` 라이브 확인** — 홈·안내 글·상세 세 곳에 태그,
-        사이트맵 808, robots.txt가 Yeti를 안 막음. 남은 것은 콘솔의 「소유확인」·사이트맵 제출(사용자).
+        사이트맵 808, robots.txt가 Yeti를 안 막음.
+      · **09-11 사용자가 콘솔에서 「소유확인」을 끝냈다.** 사이트맵 제출
+        (`https://bokjiclick.co.kr/sitemap.xml`)·주요 페이지 수집 요청은 사용자 콘솔 몫이다.
       · ⚠ **`searchadvisor.naver.com`은 앱 브라우저와 Claude in Chrome 둘 다
         「safety restrictions」로 열리지 않는다**(09-11). 그래서 사이트 등록·
         「소유확인」 단추·사이트맵 제출·수집 요청은 **사용자가 콘솔에서** 한다.
