@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SearchBox from "./SearchBox";
+import AccountLink from "./AccountLink";
 import { POPULAR } from "@/lib/popular";
 
 /**
@@ -61,6 +62,8 @@ export default function SiteHeader() {
           <div className="min-w-0 flex-1 sm:ml-auto sm:max-w-xs sm:flex-none">
             <SearchBox placeholder="지원금 이름 검색" popular={POPULAR} />
           </div>
+          {/* 계정 기능이 꺼져 있으면 아무것도 안 그린다(AccountLink). */}
+          <AccountLink />
         </div>
 
         {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다.

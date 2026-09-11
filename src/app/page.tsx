@@ -8,6 +8,7 @@ import { services, SERVICES_UPDATED } from "@/data/services";
 import PopularList from "@/components/PopularList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
+import SavedHome from "@/components/SavedHome";
 import ThisMonth from "@/components/ThisMonth";
 import AxisIcon from "@/components/AxisIcon";
 import AxisFinder from "@/components/AxisFinder";
@@ -308,6 +309,10 @@ export default function Home() {
       {/* 이번 달에 마감이 걸린 것. 브라우저에서 달을 읽어 그리므로 정적
           HTML에는 없다 — 빌드 날짜가 박히면 달이 넘어갈 때 거짓말이 된다. */}
       <ThisMonth />
+
+      {/* 골라 둔 게 있을 때만 나타난다(2026-09-11). 최근 본 것보다 위에
+          둔다 — 저절로 쌓인 것보다 **이용자가 직접 고른 것**이 더 무겁다. */}
+      <SavedHome />
 
       {/* 본 게 있을 때만 나타난다. 처음 온 사람에게는 아예 안 보인다. */}
       <RecentViews />

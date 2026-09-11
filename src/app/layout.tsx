@@ -4,6 +4,7 @@ import { SITE } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SavedSync from "@/components/SavedSync";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -123,6 +124,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        {/* 로그인했을 때만 관심 지원을 계정과 맞춘다. 화면에는 안 그린다. */}
+        <SavedSync />
       </body>
     </html>
   );

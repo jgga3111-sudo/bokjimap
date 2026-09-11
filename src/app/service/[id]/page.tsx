@@ -15,6 +15,7 @@ import { SITE } from "@/lib/site";
 import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
+import SaveButton from "@/components/SaveButton";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
 import { statedApplyPeriod, statedPlan } from "@/lib/applyPeriod";
 
@@ -463,6 +464,16 @@ export default async function ServiceDetail({
         <h1 className="text-2xl leading-snug font-extrabold sm:text-3xl">
           {nameWithAlias(s.id, s.name)}
         </h1>
+        {/* ☆ 저장 (2026-09-11). 제목과 한 줄에 두면 긴 사업명이 좁은
+            화면에서 단추에 밀려 세 줄이 된다 — 제목 아래 따로 둔다.
+            저장하는 이름·지역은 「최근 본 지원」(TrackView)과 같은 값이다. */}
+        <div className="mt-3">
+          <SaveButton
+            id={s.id}
+            name={nameWithAlias(s.id, s.name ?? id)}
+            place={placeLabel(s)}
+          />
+        </div>
 
         {/*
           확인일을 여기 붙였다 (2026-09-06).

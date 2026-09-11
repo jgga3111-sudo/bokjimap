@@ -22,8 +22,26 @@ Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
 | 계정 | — | 깃·버셀 `jgga3111`, 서치콘솔·빙·사이트 연락처 `jgga1234567` |
 | 애드센스 | 승인됨 (`runningon93`) | **같은 계정에 사이트로 추가** — 1인 1계정이라 새로 못 만든다 |
 | 인스타 | `@runningon_office` | 아직 없음 |
-| Supabase | 사용 중 | **사용 안 함** |
+| Supabase | 사용 중 | **계정 기능에만 쓴다(09-11 결정, 아직 꺼 둠)** — 러닝온과 **다른 프로젝트** |
 | 쿠팡 파트너스 | 사용 중(러닝화) | 아직 없음 |
+
+### 사이트는 **셋**이다 — 복지클릭 · 러닝온 · 데이원코리아 (2026-09-11 사용자 당부)
+
+같은 사람이 운영하는 사이트가 **셋**이고, 외부 서비스 화면에서 서로 붙어
+보인다. 셋을 늘 **다른 사이트로 인식한다.** 지금 보는 화면이 셋 중 어느
+것인지 **이름·도메인으로 먼저 확인하고** 손댄다.
+
+| 사이트 | 도메인 | 겹쳐 보이는 자리 | 구분하는 법 |
+|---|---|---|---|
+| **복지클릭**(이 프로젝트) | `bokjiclick.co.kr` | — | Supabase 프로젝트 `bokjiclick`(`mngvwlhvnocpnrusmqho`) · Resend 키 `bokjiclick` · 보내는 사람 「복지클릭」 |
+| 러닝온 | `runningon.co.kr` | 애드센스 계정 · 가비아 DNS 목록 · **Supabase SMTP 화면**(Gmail 「러닝온」) | 폴더 `marathon-hub` · 포트 3000 · Supabase는 다른 계정 |
+| 데이원코리아 | `dayonekorea.co.kr` | **Resend 계정(`jgga1234567`)** · 가비아 DNS 목록 | Resend 키 `dayonekorea` · 보내는 사람 「Day One Korea」 |
+
+- **남의 사이트 설정은 읽기만 한다.** 러닝온·데이원코리아의 도메인·키·DNS·
+  메일 기록은 복지클릭 작업 중에 바꾸지 않는다(09-11 가비아에서도 복지클릭
+  줄의 「설정」만 눌렀다).
+- 09-11에 실제로 헷갈릴 뻔한 자리 둘 — 사용자가 **러닝온 Supabase의 SMTP**를
+  보고 복지클릭 것으로 읽었고, Resend에는 **데이원코리아 도메인이 먼저** 있었다.
 
 ### 계정 셋은 **역할로** 기억한다 (2026-09-09 사용자 확정)
 
@@ -33,13 +51,20 @@ Next.js 16 학습데이터 불일치 경고는 `AGENTS.md`(위 import) 참조.
 
 | 하는 일 | 계정 | 어디서 쓰나 |
 |---|---|---|
-| **코드를 올린다** | `jgga3111@gmail.com` | 깃 커밋 작성자 · GitHub · Vercel |
+| **코드를 올린다** | `jgga3111@gmail.com` | 깃 커밋 작성자 · GitHub · Vercel · Supabase(09-11 추가) |
 | **검색엔진에 말한다** | `jgga1234567@gmail.com` | 구글 서치콘솔 · 빙 웹마스터 · 사이트 연락처 |
 | **광고비를 받는다** | `runningon93@gmail.com` | 애드센스 `pub-3333691556845206` |
 
 - **애드센스만 러닝온과 같은 계정이다.** 1인 1계정이라 새로 못 만들어서,
   러닝온으로 이미 승인받은 그 계정에 복지클릭을 **사이트로 추가**했다.
   나머지 둘은 복지클릭 전용이다.
+- **Resend(인증 메일 발송)도 예외다 — `jgga1234567` 계정을 쓴다**(2026-09-11
+  사용자 결정). 역할로는 「코드를 올린다」(jgga3111)에 들어갈 자리인데, 이미
+  그 계정에 **`dayonekorea.co.kr`**(다른 사이트, 복지클릭·러닝온 아님)이 인증돼
+  있었고 사용자가 그 계정에 복지클릭을 **더하기로** 정했다. Resend 화면에서
+  도메인이 둘 보이는 것은 정상이다 — **dayonekorea 쪽 도메인·키·메일 기록은
+  건드리지 않는다.** API 키는 도메인별로 권한을 좁혀(`Sending access` +
+  `bokjiclick.co.kr`만) 만든다.
 - 구글 화면은 주소에 **`?authuser=<이메일>`**을 붙인다. 크롬 기본 계정이
   `jgga3111`이라 그냥 열면 서치콘솔에서 "이 속성에 액세스할 수 없습니다"가
   뜬다. **계정 번호(`/u/N/`)는 로그인 순서 따라 바뀌니 외우지 않는다.**
@@ -938,6 +963,217 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
         (`isComposing`을 안 봄) 크롬에서 두 번 처리될 수 있다. 같은 주소로
         두 번 가는 것이라 보이는 피해는 거의 없고, 이 브라우저로는 한글
         입력기를 흉내 낼 수 없어 **재현 없이 고치지 않았다.**
+- [x] **관심 지원 저장을 만들었다 — ☆ (2026-09-11).** `lib/saved.ts`.
+      상세 제목 아래 ☆ 단추, 첫 화면 「관심 지원」 칸(있을 때만), `/saved`
+      전체 목록(noindex). **로그인 없이도 쓴다**(사용자 결정) — 이 브라우저
+      저장소에만 두고, 로그인하면 계정과 맞춘다(아래 항목).
+      · 최근 본 지원(`recent.ts`)과 따로 둔 이유 — 저절로 쌓이는 것과
+        **고른 것**은 다르다. 최근 것은 여섯에서 밀려나지만 고른 것은
+        지울 때까지 남아야 한다.
+      · 개인정보처리방침 2조의 「브라우저에 남는 것」이 둘 → 셋이 됐다.
+- [ ] **이메일 가입·인증·중복 방지 — 코드는 다 짰고 스위치는 꺼 둠 (2026-09-11).**
+      사용자 결정: 누구나 저장 + 가입하면 계정으로 · **Supabase 새 프로젝트** ·
+      이메일+비밀번호, 가입 시 인증 메일 · 메일은 **Resend**.
+
+      ── 설계에서 지킨 것 ──────────────────────────────────────────
+      · **스위치 하나(`NEXT_PUBLIC_AUTH_ON`)** 로 가입 화면·헤더 링크·방침의
+        회원 조항이 **같이** 켜진다. 방침이 "회원가입을 받지 않는다"고 말하는
+        동안 가입을 받는 순간이 생기면 안 된다. 꺼져 있으면 계정 화면은
+        404이고 사이트는 전과 같다.
+      · **브라우저는 Supabase에 직접 붙지 않는다.** 전부 서버 액션
+        (`lib/auth/actions.ts`)을 거친다 → 키가 번들에 안 실리고, CSP를 안
+        열어도 되고, 토큰 쿠키를 `httpOnly`로 둔다.
+      · **정적 페이지 807개를 지켰다.** 헤더가 서버에서 로그인을 확인하면
+        전 페이지가 동적이 된다. 헤더는 값 없는 표식 쿠키(`bc_member=1`)만
+        보고, `/account`가 서버에서 다시 확인한다. proxy도 `/account`·
+        `/reset` 두 곳에만 건다.
+      · **중복 가입 막기** — Supabase는 이미 인증된 주소로 가입하면 오류
+        대신 신원(identities) 0개짜리 가짜 계정을 준다(남의 가입 여부를
+        못 캐게). 그걸로 가려 "이미 가입된 이메일"을 띄운다. 비밀번호 찾기·
+        인증 메일 재발송은 반대로 **가입 여부를 말하지 않는다.**
+      · **동기화 순서** — 페이지를 열면 계정 목록을 먼저 받아 브라우저를
+        맞추고(처음 만난 브라우저면 먼저 합침), 그 뒤 ☆ 변경을 계정에 민다.
+        순서가 뒤집히면 다른 기기에서 뺀 것이 되살아난다(`SavedSync`).
+        **로그아웃·탈퇴하면 이 브라우저의 목록도 지운다** — 공용 PC.
+      · 탈퇴는 즉시 삭제(비밀 키로 계정 삭제 → 관심 지원은 cascade).
+        만 14세 미만은 받지 않는다(법정대리인 동의 절차가 없으므로).
+
+      ── 09-11 코드 리뷰로 고친 여섯 (켜기 전에 잡았다) ──────────────
+      · **열린 리다이렉트** — `safeNext`가 앞 두 글자만 봐서
+        `/login?next=/%09/evil.com`이 통과했다(탭이 풀려 `/\t/evil.com` →
+        브라우저가 탭을 지워 `//evil.com`). 제어문자·`\` 거절 + URL로 풀어
+        출처 대조. 공격 주소 11가지로 시험해 전부 막히는 것을 확인.
+      · **읽기 실패를 빈 목록으로 읽었다** → 장애 한 번에 브라우저 ☆가 지워지고
+        「합쳤다」 표시까지 남았다. 실패는 null, null이면 아무것도 안 바꾼다.
+      · **첫 동기화 중에 누른 ☆가 사라졌다** · **다른 기기에서 뺀 것이
+        되살아났다** — 목록을 통째로 덮어쓰던 방식을 버리고 **넣기/빼기
+        차이만** 보낸다(`pushSavedOps`). 받은 목록 위에 못 보낸 차이를 얹는다.
+      · **로그아웃이 모든 기기에 걸렸다**(Supabase 기본값 global) → 다른 기기에
+        앞사람 목록이 남아 다음 사람 계정에 합쳐질 수 있었다. `scope: "local"`
+        + 로그인이 풀린 게 **분명할 때만** 브라우저 목록을 지운다(네트워크
+        오류를 로그아웃으로 읽지 않게 `whoAmI`가 셋으로 가른다).
+      · **처음 합칠 때 순서가 섞였다**(한꺼번에 넣은 줄의 시각이 같음) →
+        한 줄씩 1초 간격으로 시각을 매긴다. 계정당 200건 상한도 서버에서 건다.
+      · 곁다리로 둘 더 — 탈퇴 확인란 오타에도 목록이 지워지던 것, `/saved`
+        안내문이 계정이 켜져도 "이 브라우저에만"이라고 하던 것.
+      · ⚠ **편집 도구에 `\u0000` 같은 이스케이프를 적으면 진짜 제어문자로
+        들어간다.** 그래서 `config.ts`가 한때 **바이너리 파일**로 읽혔다(grep
+        「Binary file matches」). 동작은 맞았지만 git diff가 안 보인다.
+        이스케이프가 든 줄은 **node 스크립트로 파일에 쓰고**, 쓴 뒤 제어문자
+        개수가 0인지 센다.
+
+      ── 켜기 전 준비 (**사용자가 할 일** — 계정·키는 내가 만들지 않는다) ─
+      1. ~~Supabase 새 프로젝트~~ — **09-11 만들었다.**
+         · 프로젝트 `bokjiclick` · ref `mngvwlhvnocpnrusmqho` ·
+           주소 `https://mngvwlhvnocpnrusmqho.supabase.co` ·
+           지역 **Northeast Asia (Seoul) `ap-northeast-2`** · 무료(NANO).
+         · 조직 **`jgga3111-sudo's Org`** — 사용자가 GitHub `jgga3111-sudo`로
+           로그인해 둔 곳이다. 이 조직에는 프로젝트가 **이것 하나뿐**이고,
+           러닝온 Supabase는 다른 계정에 있어 섞이지 않는다. 0절 계정 표의
+           「코드를 올린다」 줄에 Supabase를 더했다.
+         · 만들 때 고른 것: Data API 켬 · **새 테이블 자동 공개 끔**(Supabase
+           권장 — 그래서 SQL에 `grant`를 직접 적었다) · **자동 RLS 켬**.
+           DB 비밀번호는 「Generate a password」로 만들었고 **우리는 쓰지 않는다**
+           (앱은 API 키로 붙는다). 필요하면 대시보드에서 재설정한다.
+         · ⚠ 만들기 단추를 「Supabase Select 2026」 광고 상자가 덮고 있어
+           첫 클릭이 광고에 먹혔다. **덮개를 닫고 누른다.**
+         · ⚠ **Site URL이 기본값 `http://localhost:3000`이었다**(09-11 확인).
+           3000은 **러닝온 개발 포트**라, 그대로 두면 인증 메일 링크가 엉뚱한
+           곳으로 간다. 4번에서 반드시 바꾼다. Confirm email·새 가입 허용은
+           기본으로 켜져 있었고 익명 로그인은 꺼져 있었다(그대로 둔다).
+      2. ~~SQL Editor에서 `supabase/migrations/0001_saved_services.sql` 실행.~~
+         — **09-11 끝.** 실행 뒤 `pg_class`·`pg_policies`·`role_table_grants`로
+         RLS 켜짐 · 정책 셋 · cascade 외래키를 값으로 확인했다.
+         · ⚠ **자동 공개를 껐는데도 authenticated에 truncate·trigger·references가
+           붙어 있었다.** truncate는 RLS를 안 거친다. 파일을 `revoke all … from
+           anon, authenticated` 뒤 grant로 고쳐 다시 돌렸고, 지금은
+           authenticated = DELETE·INSERT·SELECT, anon = 없음이다.
+           (service_role에 남은 셋은 그대로 둔다 — 우리는 이 표를 비밀 키로
+           만지지 않고, 탈퇴 cascade는 표 주인 권한으로 돈다.)
+         · 「Potential issue detected — destructive operations」 경고는
+           `drop policy if exists`·`revoke` 때문에 뜬다. 새 표라 지울 것이 없다.
+         (코드 리뷰에서 권한·RLS에 구멍이 없음을 확인했다 — 로그인한 사람만
+         자기 줄을 읽기·넣기·지우기, 로그인 안 한 사람은 아무것도 못 한다.)
+      3. ~~Authentication → Email: **Confirm email 켬**, 비밀번호 최소 8자.~~
+         — **09-11 끝.** 최소 길이 6 → **8**, Password requirements를 기본(조건
+         없음) → **Letters and digits**로 바꿨다. 가입 화면의 `checkPassword`
+         (8자 이상·영문과 숫자)와 같은 규칙을 서버에도 건 것이다 — 화면만 막으면
+         API를 직접 부르는 사람은 6자짜리로 가입할 수 있다. Confirm email 켜짐 ·
+         익명 로그인 꺼짐은 기본값 그대로 확인했다.
+      4. ~~URL Configuration: Site URL `https://bokjiclick.co.kr`, Redirect URLs
+         `https://bokjiclick.co.kr/**`·`http://localhost:3001/**`.~~ — **09-11 끝.**
+         저장 알림("Successfully updated site URL" · "Successfully added 2 URLs")과
+         목록 합계 2를 값으로 확인했다.
+         · ⚠ **Browser 창이 접힌 채 새 화면을 열면 대시보드가 아예 안 그려진다**
+           (본문 글자 0, 앱이 붙지 않음). 이미 떠 있던 화면은 접혀도 값을 읽고
+           바꿀 수 있었다 — 그래서 URL 설정은 됐고 SQL 편집기는 못 열었다.
+           새 화면으로 옮길 때는 창을 펼쳐 둔다.
+      5. **09-11 끝** — SMTP 저장 뒤 「Confirm sign up」·「Reset password」 두 개를
+         `supabase/email-templates.md`의 한국어 제목·본문으로 바꿨다(저장 알림
+         "Successfully updated email template" 두 번, 다시 열어 token_hash 링크 확인).
+         제목 칸 이름은 `MAILER_SUBJECTS_CONFIRMATION`·`MAILER_SUBJECTS_RECOVERY`,
+         본문은 Monaco 편집기다.
+         ⚠ **7번(SMTP) 뒤에 한다.** 09-11에 열어 보니 템플릿 화면이 「Set up
+         custom SMTP to edit templates」로 잠겨 있었다 — 기본 메일 서버로는
+         제목·본문을 못 고친다. 붙일 한국어 제목·본문은
+         **`supabase/email-templates.md`**에 있다.
+         메일 템플릿 두 개의 링크를 **token_hash 모양**으로 바꾼다 —
+         Confirm signup: `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email`
+         Reset password: `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/reset`
+         기본 템플릿(`?code=`)은 **가입한 그 브라우저에서만** 통해서, 휴대폰으로
+         가입하고 PC 메일로 열면 실패한다(`auth/confirm/route.ts` 머리말).
+      6. Resend 가입 → 도메인 `bokjiclick.co.kr` 추가 → **가비아 DNS에 Resend가
+         보여 주는 레코드 추가** → Verified → API 키 발급.
+         · **09-11 도메인 추가함** — 계정 `jgga1234567`(0절 예외), 지역
+           **Tokyo `ap-northeast-1`**, 도메인 id `5781fb03-7e18-4d47-853a-a55a0e187aaa`.
+           방침 6조의 국외 이전 국가를 「미국」→「일본(발송 서버, 도쿄)·미국(본사)」로
+           고쳤다(지역을 고르면 방침도 같이 본다).
+         · 가비아에 넣을 레코드 — 이름은 **호스트 부분만** 적는다(가비아가
+           `.bokjiclick.co.kr`을 붙인다). 09-11 조회로 이 이름들에 기존 레코드 없음.
+
+           | 타입 | 호스트 | 값 |
+           |---|---|---|
+           | TXT | `resend._domainkey` | `p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCok3QUX5Nz33HJO0A4VpQu4ZLKVWzrFuPxj21gLYLKQeZ63QyWkzQAS6CTtlBOQyxsCVkhPQ0NiVSeY2bR/w/NlfOYlKrVCvg9Uu9F5DAIlM/kjEMGWUsme61lslYrFSsC1EPN8CW3biW+gv5dtXT7RuijFNVU5aM9mFLDEWmNUQIDAQAB` |
+           | CNAME | `rsend` | `rsend-apne1.forge.rmta.net` |
+           | CNAME | `send` | `send.forge.rmta.net` |
+           | TXT | `_dmarc` | `v=DMARC1; p=none;` (선택) |
+
+           **09-11 12:55 가비아에 넣었다**(레코드 2 → 6개). 가비아 네임서버와
+           8.8.8.8 둘 다 네 개를 바로 돌려줬고, DKIM 218자 전부 일치. 기존
+           A `@`·CNAME `www`(Vercel)는 그대로다. CNAME 값은 기존 www처럼 끝에
+           점을 붙였다(`…rmta.net.`).
+           **Resend 인증 완료(09-11)** — 「Verify DNS Records」 뒤 `send`가 먼저
+           verified, DKIM·`rsend`는 1분쯤 pending이다가 verified. 도메인 상태
+           verified. 사이트(`bokjiclick.co.kr`·`www`)는 전후 모두 200.
+           · ⚠ **가비아 DNS 편집 함정 셋.** ① 편집은 「레코드 수정」을 누르면
+             뜨는 **팝업 안의 줄**에서 한다 — 같은 이름의 숨은 칸이 또 있어
+             엉뚱한 칸을 채우기 쉽다. ② **타입을 바꾸면 그 줄을 새로 그려**
+             먼저 넣은 호스트·값이 지워진다. 타입 먼저, 그다음 값. ③ 스크립트로
+             값을 넣으면 줄 「확인」이 안 받는다 — **칸에 커서만 옮기고 실제
+             키보드로 친다.** 줄마다 「확인」 → 끝에 「저장」 한 번이고, 저장하면
+             페이지가 새로 열린다.
+           **MX `@`(inbound…amazonaws.com)는 넣지 않는다** — 메일 *받기*용이다.
+           우리는 보내기만 하고, 루트에 MX를 걸면 나중에 쓸 메일 서비스와 부딪친다.
+         · ⚠ 화면의 값은 가운데가 `[…]`로 잘려 나온다. 복사해 옮기면 잘린 값이
+           들어간다 — 위 표는 페이지 원문에서 뽑은 전체 값이다.
+         · 추적은 **꺼져 있다**(`click_track=false`·`open_track=false`, 저장된 도메인
+           값으로 확인). 추가 화면에서는 「Enable click tracking」이 **체크된 채
+           회색**으로 보여 켜진 줄 알았는데, 추적 하위도메인이 없으면 적용되지
+           않는 칸이었다. 켜면 인증 링크가 추적 주소를 한 번 거치므로 켜지 않는다.
+           화면의 체크 표시보다 **저장된 값**을 본다.
+      7. Supabase → Authentication → SMTP: `smtp.resend.com` · 465 · 사용자
+         `resend` · 비밀번호 = Resend API 키 · 보내는 주소
+         `noreply@bokjiclick.co.kr`. (기본 메일은 시간당 몇 통이라 운영 불가.)
+         · API 키는 **이미 있다** — Resend 키 이름 `bokjiclick`, Sending access,
+           도메인 `bokjiclick.co.kr`만(09-11 사용자가 만듦, 상세 화면으로 확인).
+           같은 계정의 `dayonekorea` 키와 따로다. **새로 만들지 않는다.**
+           키 값은 만들 때 한 번만 보이므로, 잃어버렸으면 이 키를 지우고 같은
+           조건으로 다시 만든다.
+         · 09-11 복지클릭 프로젝트의 SMTP 칸을 비밀번호만 빼고 채워 뒀다
+           (보내는 이름 `복지클릭`, 최소 간격 60초). 비밀번호·저장은 사용자 몫.
+         · **09-11 저장 끝**(사용자가 키 입력·저장). 확인은 템플릿 화면으로 했다 —
+           「Set up custom SMTP to edit templates」 잠금이 풀리고 편집기가 열렸다.
+           ⚠ 저장 뒤에도 SMTP 화면의 「Save changes」·「Cancel」이 켜진 채 남아
+           "안 눌렸다"로 오판할 뻔했다. 단추 모양이 아니라 **잠금이 풀렸는지**를 본다.
+           스위치를 켜면 인증 메일 한도가 **시간당 30통**으로 바뀐다는 안내가 뜬다.
+         · ⚠ **러닝온 Supabase에도 SMTP 화면이 있다**(Gmail `runningon93`,
+           보내는 이름 「러닝온」). 09-11에 사용자가 그 화면을 보고 "이미 저장돼
+           있다"고 읽었다. SMTP 화면을 볼 때는 **탭 제목의 `bokjiclick`과 주소의
+           `mngvwlhvnocpnrusmqho`**부터 확인한다.
+      7-1. **실제 발송 시험(09-11, 사용자 요청 — `jgga1234567@gmail.com`)**.
+         대시보드 Users → Add user → **Send invitation**(비밀번호를 우리가 안
+         만드는 유일한 길) → 1분 뒤 그 가입자에 **Send password recovery**.
+         Resend 기록으로 확인한 결과:
+
+         | 제목 | 보낸 사람 | 상태 |
+         |---|---|---|
+         | [복지클릭] 비밀번호 재설정 링크 | `"복지클릭" <noreply@bokjiclick.co.kr>` | delivered |
+         | You've been invited | `"복지클릭" <noreply@bokjiclick.co.kr>` | delivered |
+         | (비교) 비밀번호 재설정 링크 | `Day One Korea <noreply@dayonekorea.co.kr>` | 09-10분 |
+
+         사용자가 받은 재설정 메일 본문을 붙여 줬다 — 「복지클릭 / 비밀번호를 새로
+         정하려면… / 새 비밀번호 정하기 / 요청하지 않으셨다면…」, 템플릿 그대로
+         한국어로 도착했다. **Gmail 받은편지함**(스팸함 아님, 사용자 확인).
+         → SMTP·Resend·DKIM이 한 줄로 돈다. **데이원코리아와 보낸 주소·이름·
+         키가 전부 갈라져 있다.** 초대 템플릿은 영어 기본 그대로다(우리 흐름에
+         초대가 없어 손대지 않았다).
+         · ⚠ **시험 가입자 하나가 남아 있다** — `jgga1234567@gmail.com`(초대
+           상태, id `5519689c-…`). 켜는 날 가입 중복 시험에 걸리므로 그 전에
+           지울지 사용자에게 묻는다(삭제는 되돌릴 수 없어 사용자가 정한다).
+           → 09-11 사용자가 "지워줘"라고 했다. **영구 삭제는 내가 누르지 않는다**
+           — Users에서 그 줄을 열어 「Delete user」 단추 앞까지 띄워 두고, 누르는
+           것은 사용자에게 넘겼다. 지워졌는지는 Users 목록이 비었는지로 확인한다.
+         · Resend `/emails` RSC에서 `created_at`을 뽑으면 **메일마다의 시각이
+           아니라 페이지 공통 값**이 잡힌다(네 통이 전부 같은 값). 시각이 필요하면
+           목록 화면의 글자를 읽는다.
+      8. 키 셋(`SUPABASE_URL`·`SUPABASE_PUBLISHABLE_KEY`·`SUPABASE_SECRET_KEY`)을
+         Vercel 환경변수와 `.env.local`에 넣는다(이름은 `.env.example`).
+      ── 켜는 날 (**내가 할 일**) ─────────────────────────────────
+      9. 방침 9조가 "중요한 변경은 **최소 7일 전**에 안내"라고 약속한다 —
+         켜기 7일 전에 바뀌는 내용을 먼저 알린다. 켜는 날 `SITE.policyEffectiveDate`
+         를 그날로 올린다.
+      10. Vercel에 `NEXT_PUBLIC_AUTH_ON=1` → 재배포 → 실제 메일로 가입·중복·
+          재발송·로그인·비밀번호 찾기·동기화·탈퇴를 끝까지 한 번 돈다.
 - [ ] 색인 요청 한도는 **고정된 수가 아니다.** 굴러가는 24시간 창이라
       전날 얼마나 썼는지에 따라 그날 들어가는 수가 달라진다. 실측: 09-03 3건,
       09-04 11건, 09-05 11건, 09-06 16건, **09-07 48건(할당량 안 걸림)**,
