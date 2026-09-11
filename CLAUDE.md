@@ -864,7 +864,8 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
         먼저 의심한다」와 같은 자리다.
 - [ ] **네이버 서치어드바이저 — 09-11 사용자가 진행하기로 했다. 토큰 넣음.**
       · 사용자가 HTML 태그 토큰을 줬다 → `layout.tsx` `verification.other`에
-        `naver-site-verification` 한 줄. 배포 뒤 라이브 `<meta>`로 확인한다.
+        `naver-site-verification` 한 줄. **`e91b613` 라이브 확인** — 홈·안내 글·상세 세 곳에 태그,
+        사이트맵 808, robots.txt가 Yeti를 안 막음. 남은 것은 콘솔의 「소유확인」·사이트맵 제출(사용자).
       · ⚠ **`searchadvisor.naver.com`은 앱 브라우저와 Claude in Chrome 둘 다
         「safety restrictions」로 열리지 않는다**(09-11). 그래서 사이트 등록·
         「소유확인」 단추·사이트맵 제출·수집 요청은 **사용자가 콘솔에서** 한다.
@@ -1268,7 +1269,28 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
         잡았다 — 그래서 "지자체 표본"이 중앙부처였다. `= [`로 찾는다.
       · auto 모드 권한 검사가 커밋+push를 한 줄로 이으면 막는다. **두 명령으로 나눈다.**
       **사용자 결정 남은 것**(변동 없음): Vercel Firewall 속도 제한 · Supabase
-      「Secure password change」 · 네이버 서치어드바이저 토큰 · PSI 재측정(429였음).
+      「Secure password change」(**09-11 켬** — 아래 「보안 설정 둘」) · 네이버 서치어드바이저 토큰(09-11 넣음) · PSI 재측정(429였음).
+- [x] **09-11 보안 설정 둘 — Supabase 「Secure password change」 켬 · Vercel 방화벽 속도 제한.**
+      · **Supabase 「Secure password change」 켬** — 복지클릭 프로젝트(`mngvwlhvnocpnrusmqho`)
+        Auth → Sign In / Providers → Email. 저장 알림 "Successfully updated settings",
+        새로고침 뒤 다시 열어 켜진 것을 값으로 확인했다. 「Require current password when
+        updating」은 **꺼 둔다** — 비밀번호 찾기 링크로 들어온 사람은 옛 비밀번호를 모른다.
+        켜 두면 로그인한 지 24시간 지난 세션의 비밀번호 변경이 `reauthentication_needed`로
+        막히는데, `lib/auth/actions.ts`가 이미 "로그아웃한 뒤 비밀번호 찾기 메일로" 안내한다.
+      · **Vercel 방화벽 속도 제한** — 규칙 `bokjiclick auth rate limit`: Method = POST
+        **그리고** 경로가 /login·/signup·/forgot·/reset 중 하나 → IP당 60초에 10회, 넘으면 429.
+        GET까지 세면 헤더 링크의 미리 불러오기(prefetch)가 한도를 먹어서, 빨리 둘러보던
+        사람이 로그인을 누를 때 429를 받을 수 있다. 그래서 POST만 센다. 게시 뒤 라이브에
+        POST를 연달아 보내 **10번째부터 429**가 나는 것을 확인했다(홈·상세 GET은 200 그대로).
+        「Add Rule」을 누르니 **요금 안내**가 떴다 — 통과한 요청 100만 건당 $0.50, 막은 요청은
+        무료. 결제가 붙는 일이라 사용자에게 물었고 **동의받아(09-11)** 저장했다.
+      · ⚠ **가려진(hidden) 크롬 탭**에서는 스크린샷이 안 되고, Chrome이 타이머를 늦춰
+        `setTimeout`을 쓰는 스크립트가 도구의 45초 제한을 넘긴다. 넘겨도 페이지 안에서는
+        계속 돌아서, 늦게 끝나며 뒤에 한 조작과 겹칠 수 있다 — **다시 조작하기 전에 상태부터
+        읽는다.** Radix 메뉴는 `PointerEvent('pointerdown')`로 열린다.
+      · 조건 줄을 하나 더할 때 **지우기 단추를 범위 없이 찾으면 첫 줄 것을 누른다**(첫 시도에
+        경로 목록이 날아갔다). 첫 줄을 먼저 Method로 바꾸고 AND로 둘째 줄을 더하면 헷갈릴 게 없다.
+      · 키 셋(`SUPABASE_*`)은 사용자가 붙인다. Vercel 환경변수는 09-11 기준 **0개**다.
 - [ ] 색인 요청 한도는 **고정된 수가 아니다.** 굴러가는 24시간 창이라
       전날 얼마나 썼는지에 따라 그날 들어가는 수가 달라진다. 실측: 09-03 3건,
       09-04 11건, 09-05 11건, 09-06 16건, **09-07 48건(할당량 안 걸림)**,
