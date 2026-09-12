@@ -1301,6 +1301,23 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
         읽는다.** Radix 메뉴는 `PointerEvent('pointerdown')`로 열린다.
       · 조건 줄을 하나 더할 때 **지우기 단추를 범위 없이 찾으면 첫 줄 것을 누른다**(첫 시도에
         경로 목록이 날아갔다). 첫 줄을 먼저 Method로 바꾸고 AND로 둘째 줄을 더하면 헷갈릴 게 없다.
+      · **09-12 Supabase Advisor 경고 2건을 없앴다 — `public.rls_auto_enable()` 실행 권한 회수.**
+        프로젝트 만들 때 「자동 RLS 켬」을 고르며 생긴 함수인데 `proacl`이 **비어 있었다** —
+        비었다는 것은 기본값, 즉 **PUBLIC에게 실행 권한이 있다**는 뜻이다. 로그인 없는 키로
+        `/rest/v1/rpc/rls_auto_enable`을 쏘니 400 `cannot display a value of type event_trigger`가
+        왔다 — 거부가 아니라 **함수까지 들어갔다는 뜻**이라 경고가 빈말이 아니었다.
+        `revoke execute on function public.rls_auto_enable() from public, anon, authenticated;`
+        뒤 `acl {postgres=X/postgres}` · `has_function_privilege` 둘 다 false · 같은 REST 호출이
+        **401 `42501 permission denied`** · Advisor 0/0/0. 이벤트 트리거는 시스템이 표 주인
+        권한으로 돌리므로 **새 표 자동 RLS는 그대로**다. 되돌리려면 `grant execute … to anon, authenticated;`.
+        · ⚠ **auto 모드 권한 검사가 `revoke`가 든 스크립트 실행을 막는다.** 우회하지 않고 편집기에
+          문장만 넣고 Run은 사용자가 눌렀다. Supabase가 「파괴적 명령일 수 있다」 상자를 한 번 더
+          띄우므로 **"Success"를 못 보면 그 상자에서 멈춘 것**이다 — 처음에 실제로 그랬고,
+          화면을 믿지 말고 **권한 값을 다시 읽어** 안 들어간 것을 잡아냈다.
+        · ⚠ **Supabase 대시보드는 탭이 뒤에 있으면 화면을 아예 안 그린다**(글자 0). 앱 브라우저
+          창이든 크롬이든 **앞으로 꺼내 놔야** SQL 편집기를 쓸 수 있다. Vercel은 가려져도 그려진다.
+        · 마무리 점검(09-11 밤~09-12): tsc·eslint 0 · 빌드 0 · audit 둘 통과 · 라이브 사이트맵
+          808개 전부 200 · Vercel 오류 0 · 함수 오류율 0%.
       · 키 셋(`SUPABASE_*`)은 같은 날 `.env.local`과 Vercel(Secret · Production)에 넣었다 —
         위 「이메일 가입」 항목의 8번.
 - [ ] 색인 요청 한도는 **고정된 수가 아니다.** 굴러가는 24시간 창이라
