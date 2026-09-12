@@ -39,6 +39,28 @@
  */
 
 export type CalendarEntry = {
+  /**
+   * 달력 항목마다의 붙박이 이름 — `.ics` 파일 주소와 React key로 쓴다.
+   * 배열 순서가 바뀌어도 주소가 안 흔들리게 손으로 적는다.
+   */
+  key: string;
+  /**
+   * 기계가 읽는 시작·끝 날짜(`YYYY-MM-DD`). **`period`가 명확히 말한 것만**
+   * 옮긴다 — 사람 말을 파싱해서 짐작하지 않는다(3절).
+   *
+   * · 「9월 말까지」처럼 날짜가 안 정해진 것은 **null**이다.
+   * · 노인일자리는 다음 해 모집일이 아직 발표 전이라 null이다 — 작년
+   *   날짜를 올해로 옮기지 않는다(3절).
+   * · 근로장려금 넷은 `period`에 연도가 없다(「3월 1일~3월 15일」).
+   *   국세청이 해마다 같은 날로 안내하는 일정이고, `checkedAt`이 2026년이라
+   *   그해로 읽었다. **해가 바뀌면 이 넷을 다시 확인한다.**
+   *
+   * null이면 「내 캘린더에 담기」 단추를 **그리지 않는다.** 확인 못 한 것은
+   * 싣지 않는다.
+   */
+  start: string | null;
+  /** 끝나는 날. 하루짜리면 `start`와 같다. */
+  end: string | null;
   /** 잇는 상세 페이지. 수록된 사업이어야 한다. */
   id: string;
   /** 화면에 쓰는 짧은 이름. 원문 사업명이 길면 줄여 적는다. */
@@ -70,6 +92,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      확인하도록 적었다(3절: 엇갈리면 기록한다). */
   {
     id: "WLF00001148",
+    key: "ktc-h2",
+    start: "2026-03-01",
+    end: "2026-03-15",
     label: "근로·자녀장려금",
     what: "반기신청 — 지난해 하반기 소득분",
     months: [3],
@@ -82,6 +107,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00001148",
+    key: "ktc-main",
+    start: "2026-05-01",
+    end: "2026-05-31",
     label: "근로·자녀장려금",
     what: "정기신청 — 한 해에 한 번뿐인 본신청",
     months: [5],
@@ -94,6 +122,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00001148",
+    key: "ktc-late",
+    start: "2026-06-02",
+    end: "2026-12-01",
     label: "근로·자녀장려금",
     what: "기한 후 신청 — 5월을 놓쳤다면",
     months: [6, 7, 8, 9, 10, 11, 12],
@@ -106,6 +137,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00001148",
+    key: "ktc-h1",
+    start: "2026-09-01",
+    end: "2026-09-15",
     label: "근로·자녀장려금",
     what: "반기신청 — 올해 상반기 소득분",
     months: [9],
@@ -118,6 +152,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00001148",
+    key: "ktc-pay-main",
+    start: null,
+    end: null,
     label: "근로·자녀장려금",
     what: "정기신청분 지급",
     months: [9],
@@ -130,6 +167,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00001148",
+    key: "ktc-pay-h1",
+    start: "2026-12-30",
+    end: "2026-12-30",
     label: "근로·자녀장려금",
     what: "반기 상반기분 지급",
     months: [12],
@@ -146,6 +186,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      16시로 **시각까지** 정해져 있다. */
   {
     id: "WLF00004661",
+    key: "youth-rent",
+    start: "2026-03-30",
+    end: "2026-05-29",
     label: "청년월세 지원",
     what: "신청 접수 (2026년분)",
     months: [3, 4, 5],
@@ -161,6 +204,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      여름 몫을 안 쓰고 넘기면 그대로 사라진다. */
   {
     id: "WLF00000072",
+    key: "energy-apply",
+    start: "2026-06-15",
+    end: "2026-12-31",
     label: "에너지바우처",
     what: "신청 접수 — 여름·겨울 몫을 한 번에",
     months: [6, 7, 8, 9, 10, 11, 12],
@@ -172,6 +218,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00000072",
+    key: "energy-summer",
+    start: "2026-07-01",
+    end: "2026-09-30",
     label: "에너지바우처",
     what: "여름 몫 사용 기간",
     months: [7, 8, 9],
@@ -183,6 +232,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00000072",
+    key: "energy-winter",
+    start: "2026-10-01",
+    end: "2027-05-31",
     label: "에너지바우처",
     what: "겨울 몫 사용 기간",
     months: [10, 11, 12, 1, 2, 3, 4, 5],
@@ -198,6 +250,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      「통합문화이용권」인데 사람들이 치는 말은 「문화누리카드」다. */
   {
     id: "WLF00000055",
+    key: "mnuri-issue",
+    start: "2026-02-02",
+    end: "2026-11-30",
     label: "문화누리카드(통합문화이용권)",
     what: "카드 발급 — 예산이 떨어지면 조기 마감됩니다",
     months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
@@ -209,6 +264,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
   },
   {
     id: "WLF00000055",
+    key: "mnuri-spend",
+    start: "2026-02-02",
+    end: "2026-12-31",
     label: "문화누리카드(통합문화이용권)",
     what: "사용 마감 — 남은 돈은 이월되지 않습니다",
     months: [12],
@@ -224,6 +282,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      쉬운 항목이다. 2026년에 일하려면 2025년 11월에 신청했어야 했다. */
   {
     id: "WLF00001155",
+    key: "senior-job",
+    start: null,
+    end: null,
     label: "노인일자리",
     what: "다음 해 참여자 모집",
     months: [11, 12],
@@ -240,6 +301,9 @@ export const CALENDAR: readonly CalendarEntry[] = [
      않으면 사라진다**는 것과 12월 마감만 확인해 적는다. */
   {
     id: "WLF00000076",
+    key: "sports-voucher",
+    start: "2026-12-10",
+    end: "2026-12-10",
     label: "스포츠강좌이용권",
     what: "그해 마지막 결제 마감",
     months: [12],
@@ -260,3 +324,23 @@ export function entriesOfMonth(month: number): readonly CalendarEntry[] {
 export const PROGRAM_COUNT = new Set(CALENDAR.map((e) => e.id)).size;
 
 export const MONTHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] as const;
+
+/**
+ * 날짜가 확인된 항목 — 이것만 「내 캘린더에 담기」를 받는다.
+ *
+ * 타입을 좁혀 두면 `.ics`를 만드는 쪽에서 null 검사를 또 하지 않아도 되고,
+ * 날짜 없는 항목에 단추가 붙는 실수를 **타입이 막는다.**
+ */
+export type DatedEntry = CalendarEntry & { start: string; end: string };
+
+export function hasDates(e: CalendarEntry): e is DatedEntry {
+  return e.start !== null && e.end !== null;
+}
+
+/** `.ics` 주소를 만들 항목들. 빌드 때 이 목록만큼 파일이 나간다. */
+export const DATED: readonly DatedEntry[] = CALENDAR.filter(hasDates);
+
+/** 달력 항목 하나의 `.ics` 주소. 주소를 두 군데서 짓지 않게 여기서만 만든다. */
+export function icsPath(key: string): string {
+  return `/calendar/${key}.ics`;
+}

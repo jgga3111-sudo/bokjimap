@@ -3,7 +3,14 @@ import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
 import GuideNav from "@/components/GuideNav";
 import { guideBySlug } from "@/lib/guides";
-import { CALENDAR, MONTHS, PROGRAM_COUNT, entriesOfMonth } from "@/lib/calendar";
+import {
+  CALENDAR,
+  MONTHS,
+  PROGRAM_COUNT,
+  entriesOfMonth,
+  hasDates,
+} from "@/lib/calendar";
+import AddToCalendar from "@/components/AddToCalendar";
 import { services } from "@/data/services";
 
 const G = guideBySlug("calendar")!;
@@ -142,6 +149,14 @@ export default function CalendarGuide() {
                           </a>{" "}
                           · {e.checkedAt} 확인
                         </p>
+                        {/* 날짜를 확인한 항목만 담을 수 있다. 「9월 말까지」
+                            처럼 날짜가 안 정해진 것과, 다음 해 모집일이 아직
+                            발표 전인 노인일자리는 단추가 없다(3절). */}
+                        {hasDates(e) && (
+                          <div className="mt-2">
+                            <AddToCalendar entry={e} />
+                          </div>
+                        )}
                       </li>
                     ))}
                   </ul>

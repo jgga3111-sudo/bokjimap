@@ -163,6 +163,16 @@ console.log(`  결과 화면          ${String(3).padStart(5)}개  /search·/fin
    /saved는 늘 noindex, 나머지 다섯은 계정 기능이 꺼져 있으면 404이고
    켜져 있으면 noindex다. 계정 화면을 더하면 이 수도 같이 고친다. */
 console.log(`  개인 화면          ${String(6).padStart(5)}개  /saved·/signup·/login·/forgot·/reset·/account — 이용자마다 달라 noindex`);
+/* 2026-09-12 추가. `/calendar/<key>.ics` — 신청 달력을 이용자의 캘린더로
+   보내는 파일이다. **페이지가 아니라 파일**이라 색인할 것이 없다.
+   개수는 `lib/calendar.ts`에서 날짜가 확인된 항목 수와 같다(손으로 센 수가
+   아니게 여기서 직접 읽는다 — 위 3·6과 달리 조용히 낡지 않는다). */
+const calSrc = read('src/lib/calendar.ts');
+const icsCount = calSrc.split('    key: "').length - 1;
+const icsDated = calSrc.split('    start: "').length - 1;
+console.log(
+  `  캘린더 파일        ${String(icsDated).padStart(5)}개  /calendar/*.ics — 페이지가 아니라 파일 (달력 항목 ${icsCount}개 중 날짜 확인된 것)`,
+);
 
 /* 본문 길이 분포 — MIN_BODY_LENGTH를 어디로 잡을지 정하는 근거. */
 const lens = services.map(bodyLen).sort((a, b) => a - b);
