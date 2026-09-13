@@ -38,6 +38,10 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "baby-money": ["WLF00001171", "WLF00004415", "WLF00004656", "WLF00004657"],
   livelihood: ["WLF00001132", "WLF00003180"],
   emergency: ["WLF00003180"],
+  /* 2026-09-13 애드센스 거절 뒤 새로 쓴 사업별 글. */
+  "youth-tomorrow-savings": ["WLF00000060"],
+  "phone-bill-discount": ["WLF00003257"],
+  "childcare-choice": ["WLF00003250", "WLF00000969", "WLF00003253", "WLF00004657"],
 };
 
 /** 긴급복지 여덟 갈래는 글이 이름으로 모은다(`guide/emergency` 머리말). */

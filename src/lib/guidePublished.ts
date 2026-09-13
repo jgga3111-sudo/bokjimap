@@ -26,4 +26,7 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "terms": "2026-09-01",
   "unemployment": "2026-09-07",
   "youth-savings": "2026-09-08",
+  "youth-tomorrow-savings": "2026-09-13",
+  "phone-bill-discount": "2026-09-13",
+  "childcare-choice": "2026-09-13",
 };
