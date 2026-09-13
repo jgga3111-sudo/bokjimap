@@ -79,6 +79,21 @@ export type WelfareService = {
   baseYear: string | null;
   /** 원본 최종수정일(YYYY-MM-DD) */
   updatedAt: string | null;
+  /**
+   * 원본을 **다시 받아 대조한 날**. null이면 처음 받은 날(`SERVICES_UPDATED`)
+   * 뒤로 다시 본 적이 없다는 뜻이다. 화면의 「확인일」은 `checkedAt ??
+   * SERVICES_UPDATED`로 쓴다(`scripts/build-data.mjs`의 RECHECK 머리말).
+   */
+  checkedAt: string | null;
+  /** 다시 받아 대조했더니 **내용이 실제로 달라진** 날. 사이트맵 lastmod용. */
+  changedAt: string | null;
+  /**
+   * 처음 수록 때(`SERVICES_UPDATED`)가 아니라 **나중에 새로 넣은** 날.
+   * 2026-09-13 세종 10건이 처음이다. 이 값이 있으면 상세의 "OO에 받아 정리"
+   * 문장이 `SERVICES_UPDATED`가 아니라 이 날짜를 말해야 한다 — 그 사업은
+   * 처음 수록한 날에 받은 적이 없다.
+   */
+  addedAt: string | null;
 };
 
 /**

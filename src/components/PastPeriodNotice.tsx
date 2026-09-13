@@ -61,7 +61,7 @@ export default function PastPeriodNotice({
    * 기다리는 일이고, 뒤는 지금 시작됐는지 확인하는 일이다. 한 문장으로
    * 뭉뚱그리면 둘 다 어긋난다.
    */
-  variant?: "period" | "plan";
+  variant?: "period" | "plan" | "program";
 }) {
   const today = useSyncExternalStore(noop, localToday, noToday);
 
@@ -74,6 +74,14 @@ export default function PastPeriodNotice({
         <>
           <strong>본문에 적힌 신청 기간({text})은 이미 지났습니다.</strong>{" "}
           해마다 다시 공고가 나오는 사업일 수 있으니, 올해 일정은{" "}
+        </>
+      ) : variant === "program" ? (
+        /* 2026-09-13 추가. 상세 API의 사업 시행 종료일(`enfcEndYmd`)이 지난
+           경우. 본문에 신청 기간 문장이 없어 위 `period`가 안 걸리는 사업이다.
+           "사업이 끝났습니다"라고 단정하지 않는다 — 연장됐는지 모른다. */
+        <>
+          <strong>원문에 적힌 사업 기간({text})이 지났습니다.</strong>{" "}
+          기간이 연장됐거나 새 사업으로 바뀌었을 수 있으니, 지금 운영하는지는{" "}
         </>
       ) : (
         /* "아직 시작 안 됐습니다"라고 쓰지 않는다. 우리가 아는 것은 원문에

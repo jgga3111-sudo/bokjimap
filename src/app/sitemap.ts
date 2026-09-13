@@ -64,26 +64,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter(isIndexable)
     .map((s) => ({
       url: `${SITE.url}/service/${s.id}`,
-      lastModified: s.updatedAt ?? SERVICES_UPDATED,
+      /* 우리가 다시 받아 **내용이 달라진 것을 반영한 날**(changedAt)이 가장
+         늦다. 다시 받았는데 내용이 같았던 것은 changedAt이 없어 원래 값 그대로다
+         — 안 바뀐 페이지의 lastmod를 밀지 않는다(2026-09-13). */
+      lastModified: s.changedAt ?? s.updatedAt ?? SERVICES_UPDATED,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
 
   /* 허브는 항목이 MIN_SERVICES개 이상인 것만 올린다. 한두 줄짜리 목록
      페이지를 수백 개 찍어내면 저품질 페이지 양산이 된다(docs/02). */
+  /* 허브 lastmod = 그 목록에 든 사업 중 **실제로 바뀐 가장 늦은 날**
+     (changedAt), 없으면 SERVICES_UPDATED. 2026-09-13 전에는 전부
+     SERVICES_UPDATED였는데, 그날 세종 사업이 처음 들어오며 `/region/sejong`이
+     새로 생겼는데도 09-04로 나갈 뻔했다. 사업이 안 바뀐 허브는 그대로다. */
   const hub = <T extends { slug: string }>(
     base: string,
     items: readonly T[],
-    has: (t: T) => boolean,
+    pick: (t: T) => readonly (typeof services)[number][],
   ): MetadataRoute.Sitemap =>
-    items.filter(has).map((t) => ({
-      url: `${SITE.url}${base}/${t.slug}`,
-      lastModified: SERVICES_UPDATED,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    }));
+    items.flatMap((t) => {
+      const list = pick(t);
+      if (!atLeast(list)) return [];
+      const latest = list.reduce(
+        (d, v) => (v.changedAt && v.changedAt > d ? v.changedAt : d),
+        SERVICES_UPDATED,
+      );
+      return [
+        {
+          url: `${SITE.url}${base}/${t.slug}`,
+          lastModified: latest,
+          changeFrequency: "weekly" as const,
+          priority: 0.8,
+        },
+      ];
+    });
 
-  const atLeast = (list: unknown[]) => list.length >= MIN_SERVICES;
+  const atLeast = (list: readonly unknown[]) => list.length >= MIN_SERVICES;
 
   /* 소득기준 허브. hub()를 못 쓴다 — 슬러그가 문자열이 아니라 숫자이고,
      건수 하한은 INCOME_BANDS를 만들 때 이미 걸렀다(lib/income.ts). */
@@ -108,18 +125,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guidePages,
     ...servicePages,
     ...hub("/region", SIDO_LIST, (s) =>
-      atLeast(services.filter((v) => v.sidoName === s.fullName)),
+      services.filter((v) => v.sidoName === s.fullName),
     ),
     ...hub("/theme", THEMES, (t) =>
-      atLeast(services.filter((v) => v.themes.includes(t.value))),
+      services.filter((v) => v.themes.includes(t.value)),
     ),
     ...hub("/target", TARGETS, (t) =>
-      atLeast(services.filter((v) => v.targets.includes(t.slug))),
+      services.filter((v) => v.targets.includes(t.slug)),
     ),
     ...hub("/life", LIFE_STAGES, (t) =>
-      atLeast(services.filter((v) => v.lifeStages.includes(t.slug))),
+      services.filter((v) => v.lifeStages.includes(t.slug)),
     ),
-    ...hub("/benefit", BENEFITS, (b) => atLeast(servicesOf(services, b))),
+    ...hub("/benefit", BENEFITS, (b) => servicesOf(services, b)),
     ...incomePages,
   ];
 }

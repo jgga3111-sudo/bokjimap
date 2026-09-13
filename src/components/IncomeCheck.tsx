@@ -14,6 +14,7 @@ import {
   HEALTH_INSURANCE,
 } from "@/lib/midIncome";
 import { won } from "@/lib/display";
+import ClosedBadge from "./ClosedBadge";
 
 type Mode = "monthly" | "annual" | "premium";
 
@@ -331,7 +332,8 @@ export default function IncomeCheck({
                                 className="text-xs text-brand hover:underline"
                               >
                                 {m.name}
-                              </Link>
+                              </Link>{" "}
+                              <ClosedBadge id={m.id} />
                             </li>
                           ))}
                           {/* 여기 걸린 것은 앞의 몇 건뿐이다. 나머지가 어디

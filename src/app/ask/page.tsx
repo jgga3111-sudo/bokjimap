@@ -4,6 +4,7 @@ import { services } from "@/data/services";
 import { parseAsk, type Chip } from "@/lib/askParse";
 import { askSearch, type AskHit } from "@/lib/askSearch";
 import AskBox from "@/components/AskBox";
+import ClosedBadge from "@/components/ClosedBadge";
 
 export const metadata: Metadata = {
   title: "말로 물어보고 지원금 찾기",
@@ -53,7 +54,9 @@ function HitList({ hits }: { hits: AskHit[] }) {
             href={`/service/${h.id}`}
             className="block px-4 py-3 transition hover:bg-brand-soft/40"
           >
-            <p className="font-medium text-ink">{h.name}</p>
+            <p className="font-medium text-ink">
+              {h.name} <ClosedBadge id={h.id} />
+            </p>
             <p className="mt-0.5 text-xs text-muted">
               {[h.place, h.dept].filter(Boolean).join(" · ")}
             </p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
+import ClosedList from "@/components/ClosedList";
 
 export const metadata: Metadata = {
   title: "많이 찾는 복지·지원금 순위",
@@ -77,6 +78,10 @@ export default function ServiceIndex() {
           . 각 목록에서 조건으로 좁히거나 전체를 이름으로 훑어볼 수 있습니다.
         </p>
       )}
+
+      {/* 마감된 것을 따로 모은다(2026-09-13). 위 목록에서는 빼지 않고 딱지만
+          붙인다 — 숨기지 말고 마감으로 표기(3절). 브라우저가 오늘로 고른다. */}
+      <ClosedList />
     </div>
   );
 }

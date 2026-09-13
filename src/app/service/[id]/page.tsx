@@ -16,6 +16,8 @@ import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import SaveButton from "@/components/SaveButton";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
+import ClosedBadge from "@/components/ClosedBadge";
+import { CLOSING } from "@/data/closing";
 import {
   statedApplyPeriod,
   statedPlan,
@@ -632,7 +634,10 @@ export default async function ServiceDetail({
         {/* ☆ 저장 (2026-09-11). 제목과 한 줄에 두면 긴 사업명이 좁은
             화면에서 단추에 밀려 세 줄이 된다 — 제목 아래 따로 둔다.
             저장하는 이름·지역은 「최근 본 지원」(TrackView)과 같은 값이다. */}
-        <div className="mt-3">
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          {/* 「마감」 딱지(2026-09-13). 목록·순위표와 같은 표·같은 판정이라
+              목록에서 본 딱지가 여기서 사라지는 일이 없다. */}
+          <ClosedBadge id={s.id} />
           <SaveButton
             id={s.id}
             name={nameWithAlias(s.id, s.name ?? id)}
@@ -672,7 +677,7 @@ export default async function ServiceDetail({
             href="#official"
             className="text-slate-400 underline decoration-slate-300 underline-offset-2 hover:text-brand"
           >
-            {SERVICES_UPDATED} 확인
+            {s.checkedAt ?? SERVICES_UPDATED} 확인
           </a>
           {/*
             원문 최종수정일을 확인일 **바로 옆**에 둔다. 여태 맨 아래
@@ -713,6 +718,29 @@ export default async function ServiceDetail({
         {period && <PastPeriodNotice end={period.end} text={period.text} />}
         {plan && (
           <PastPeriodNotice end={plan.end} text={plan.text} variant="plan" />
+        )}
+        {/* 신청 기간 문장은 없고 사업 시행 종료일만 있는 경우. 마감 표가
+            두 갈래(period·program)라 띠도 그 둘을 다 받는다. */}
+        {!period &&
+          CLOSING[s.id]?.kind === "program" &&
+          CLOSING[s.id].end !== null && (
+            <PastPeriodNotice
+              end={CLOSING[s.id].end as string}
+              text={CLOSING[s.id].text}
+              variant="program"
+            />
+          )}
+        {/* 원문이 스스로 마감이라고 적은 경우(2026-09-13). 날짜 비교가 없어
+            서버에서 그대로 그린다. 우리 말로 바꾸지 않고 원문 표기를 인용한다. */}
+        {CLOSING[s.id]?.kind === "stated" && (
+          <p className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
+            <strong>원문에 &ldquo;{CLOSING[s.id].text}&rdquo;이라고 적혀 있습니다.</strong>{" "}
+            다시 모집하는지는{" "}
+            <a href="#official" className="font-bold underline">
+              아래 공식 안내
+            </a>
+            에서 확인해 주세요.
+          </p>
         )}
       </header>
 
@@ -912,7 +940,17 @@ export default async function ServiceDetail({
             건지 반년 된 건지 알 수 없다. 수집일은 항상 적는다(3절). */}
         <p>
           이 내용은 공공데이터포털 &lsquo;복지서비스&rsquo; 데이터를{" "}
-          <strong>{SERVICES_UPDATED}에 받아</strong> 정리한 것입니다.
+          <strong>{s.addedAt ?? SERVICES_UPDATED}에 받아</strong> 정리한 것입니다.
+          {/* 2026-09-13부터 항목별로 다시 받아 대조한다(`checkedAt`). 처음
+              받은 날은 지우지 않고 두 날짜를 나란히 적는다 — 내용이 그대로였는지
+              바뀌었는지도 함께 말한다. 우리가 대조한 사실만 적는다.
+              새로 넣은 사업(`addedAt`)은 받은 날이 곧 확인한 날이라 덧붙이지
+              않는다 — "다시 받아 대조"는 그 사업에 일어난 적이 없다. */}
+          {s.checkedAt &&
+            s.checkedAt !== s.addedAt &&
+            (s.changedAt === s.checkedAt
+              ? ` ${s.checkedAt}에 원본을 다시 받아 대조했고, 바뀐 내용을 반영했습니다.`
+              : ` ${s.checkedAt}에 원본을 다시 받아 대조했고, 내용은 그대로였습니다.`)}
           {s.updatedAt && ` 원본 최종수정일은 ${s.updatedAt}입니다.`} 신청
           자격·금액·기간은 그 뒤로 바뀌었을 수 있으니{" "}
           <strong>반드시 아래 공식 안내로 최종 확인</strong>하세요.

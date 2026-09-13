@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
+import ClosedBadge from "./ClosedBadge";
 import {
   subscribe,
   getSnapshot,
@@ -48,7 +49,8 @@ export default function RecentViews() {
               href={`/service/${s.id}`}
               className="block px-4 py-2.5 transition hover:bg-brand-soft/40"
             >
-              <span className="text-sm font-medium text-ink">{s.name}</span>
+              <span className="text-sm font-medium text-ink">{s.name}</span>{" "}
+              <ClosedBadge id={s.id} />
               {s.place && (
                 <span className="ml-2 text-xs text-muted">{s.place}</span>
               )}

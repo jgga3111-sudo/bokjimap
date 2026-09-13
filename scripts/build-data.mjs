@@ -11,6 +11,9 @@
  * 수록한다(docs/02 — 얇은 페이지 대량 생성은 색인에서 손해).
  */
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+/* 화면의 「지난 신청 기간」 띠와 **같은 함수**로 마감 표를 만든다(아래 closing.ts).
+   Node 24는 .ts를 타입만 걷어 내고 읽는다 — 이 파일은 `import type`만 쓴다. */
+import { statedApplyPeriod } from "../src/lib/applyPeriod.ts";
 
 const LIMIT = Number(process.argv[2] ?? 600);
 const DETAIL_RAW = "data-research/detail-raw";
@@ -207,6 +210,35 @@ function links(list) {
   }));
 }
 
+/**
+ * 항목별 **다시 확인한 날** — `data-research/rechecks.json`.
+ *
+ * 2026-09-13 전에는 확인일이 `SERVICES_UPDATED` 하나뿐이었다. 그런데 그날
+ * 상위 100건과 목록이 바뀐 9건(합 109건)만 원본을 다시 받아 대조했다. 날짜를
+ * 오늘로 올리면 **안 본 791건까지 "09-13 확인"**이 되고, 그대로 두면 **본 109건이
+ * "09-04 확인"**으로 남는다. 어느 쪽도 사실이 아니라 항목마다 따로 둔다(3절
+ * `verifiedAt`).
+ *
+ *  · `checkedAt` — 원본을 다시 받아 대조한 날. 내용이 같았어도 확인은 한 것이다.
+ *  · `changedAt` — 대조해서 **내용이 실제로 달라진** 날. 사이트맵 lastmod에 쓴다.
+ *    같았던 99건은 여기 안 들어간다 — 안 바뀐 페이지의 lastmod를 밀면 거짓 신호다.
+ *
+ * 여러 번 점검하면 날짜 순으로 덮어써서 **가장 최근** 값이 남는다.
+ */
+const RECHECK = { checked: new Map(), changed: new Map(), added: new Map() };
+if (existsSync("data-research/rechecks.json")) {
+  const runs = JSON.parse(readFileSync("data-research/rechecks.json", "utf8"));
+  for (const date of Object.keys(runs).sort()) {
+    for (const id of runs[date].rechecked) RECHECK.checked.set(id, date);
+    for (const id of runs[date].changed) RECHECK.changed.set(id, date);
+    /* 그날 **처음** 수록한 것. 한 번 넣은 뒤로는 날짜를 덮어쓰지 않는다 —
+       나중에 다시 점검해도 "처음 받은 날"은 그대로여야 한다. */
+    for (const id of runs[date].added ?? []) {
+      if (!RECHECK.added.has(id)) RECHECK.added.set(id, date);
+    }
+  }
+}
+
 const raw = JSON.parse(readFileSync("data-research/parsed.json", "utf8"));
 const ranked = [
   ...raw.central.map((r) => ({ ...r, provider: "central" })),
@@ -268,6 +300,9 @@ const services = ranked.slice(0, LIMIT).map((l) => {
     officialUrl: clean(l.servDtlLink),
     baseYear: clean(d.crtrYr),
     updatedAt: ymd(l.lastModYmd ?? d.lastModYmd),
+    checkedAt: RECHECK.checked.get(l.servId) ?? null,
+    changedAt: RECHECK.changed.get(l.servId) ?? null,
+    addedAt: RECHECK.added.get(l.servId) ?? null,
   };
 });
 
@@ -358,6 +393,90 @@ export const SEARCH_INDEX: SearchRow[] = ${JSON.stringify(index)};
 console.log(
   `검색 색인 ${index.length}건 / ${(JSON.stringify(index).length / 1024).toFixed(1)}KB`,
 );
+
+/*
+  마감 표 — **끝나는 날이 적혀 있는 사업만** 뽑는다(2026-09-13).
+
+  「마감」 딱지는 목록 카드·첫 화면 순위표·상세·「신청 기간이 지난 지원」 모음에
+  붙는데, 그중 목록(HubList)과 모음은 **클라이언트 컴포넌트**다. 거기서 판정하려고
+  services.ts를 부르면 2.9MB가 번들에 실린다(바로 위 검색 색인과 같은 이유).
+  그래서 판정에 필요한 끝날만 따로 담는다. 수록 900건 중 열몇 건이다.
+
+  **지났는지는 여기서 정하지 않는다.** 끝날만 적고 비교는 브라우저가 한다 —
+  빌드한 날로 판정하면 배포를 안 하는 동안 조용히 틀려 간다(PastPeriodNotice 머리말).
+
+  두 갈래를 구분해 둔다. 읽는 사람에게 할 말이 다르다.
+   · `period`  본문에 적힌 **신청 기간**의 끝날(`statedApplyPeriod` — 상세의 띠와
+               같은 함수). 해마다 다시 공고가 날 수 있다.
+   · `program` 상세 API의 **사업 시행 종료일**(`enfcEndYmd`). `9999-…`는 상시라
+               뺀다(`9999-12-21` 같은 오타값도 있다).
+  둘 다 있으면 신청 기간을 쓴다 — 사업이 계속돼도 이번 신청은 끝났을 수 있다.
+*/
+/*
+  셋째 갈래 `stated` — **원문이 스스로 마감이라고 적은 것**(2026-09-13 추가).
+  날짜 규칙만으로는 안 잡혔다. 고양 청년둥지론은 사업명이 「… - 신청 마감」이고,
+  청년 주택임차보증금 이자는 본문에 「<2025년도 신청 마감>」이 있다. 화면 점검 중
+  허브 이름 목록에서 이름 끝의 "마감"을 딱지로 잘못 셌다가 알게 됐다.
+
+  조건부 문장은 **마감이 아니다.** 「예산소진시 마감」·「조기 소진에 따른 마감
+  가능」은 아직 안 끝났다는 뜻이라, 앞 12자에 `소진`·`시`가 붙거나 뒤에
+  `가능`·`될`이 오면 거른다. 상병수당의 「'24.12월 사업종료」도 일부 지역 1단계
+  얘기라 이 낱말(`사업종료`)은 아예 보지 않는다 — `(신청|접수|모집) 마감`만 본다.
+  2026-09-13 수록 900건 실측: 이 규칙에 걸리는 것 3건(경기여성 취업지원금은
+  신청 기간이 있어 period로 간다) → stated 2건.
+*/
+const STATED = /(\d{4}년도?\s*)?(신청|접수|모집)\s*마감/g;
+function statedClosure(s) {
+  const body = [s.name, s.summary, s.outline, s.supportContent, s.applyMethod, s.eligibility]
+    .filter(Boolean)
+    .join("\n");
+  for (const m of body.matchAll(STATED)) {
+    const before = body.slice(Math.max(0, m.index - 12), m.index);
+    const after = body.slice(m.index + m[0].length, m.index + m[0].length + 4);
+    if (/(소진|시)\s*$/.test(before) || /^\s*(가능|될|예정)/.test(after)) continue;
+    return m[0].replace(/\s+/g, " ").trim();
+  }
+  return null;
+}
+
+const closing = {};
+for (const s of services) {
+  const p = statedApplyPeriod(s);
+  const said = p ? null : statedClosure(s);
+  if (p) {
+    closing[s.id] = { kind: "period", end: p.end, text: p.text, name: s.name };
+  } else if (said) {
+    /* 날짜가 없다 — 원문이 끝났다고 말했으므로 오늘과 비교할 것이 없다. */
+    closing[s.id] = { kind: "stated", end: null, text: said, name: s.name };
+  } else if (s.applyEnd && !s.applyEnd.startsWith("9999")) {
+    closing[s.id] = { kind: "program", end: s.applyEnd, text: `~ ${s.applyEnd}`, name: s.name };
+  }
+}
+
+writeFileSync(
+  "src/data/closing.ts",
+  `/**
+ * 마감 표 — **자동 생성 파일. 직접 고치지 말 것.**
+ *
+ *   node scripts/build-data.mjs
+ *
+ * 끝나는 날이 적혀 있는 사업의 끝날. 지났는지는 브라우저가 오늘과 비교한다
+ * (\`components/ClosedBadge.tsx\`). 만드는 규칙은 build-data.mjs의 마감 표 주석.
+ */
+export type Closing = {
+  /** period = 본문의 신청 기간 · program = 사업 시행 종료일 · stated = 원문이 마감이라고 적음 */
+  kind: "period" | "program" | "stated";
+  /** YYYY-MM-DD. stated는 날짜가 없어 null이고, 늘 마감으로 본다. */
+  end: string | null;
+  /** 원문 조각 그대로 */
+  text: string;
+  name: string;
+};
+
+export const CLOSING: Readonly<Record<string, Closing>> = ${JSON.stringify(closing, null, 1)};
+`,
+);
+console.log(`마감 표 ${Object.keys(closing).length}건 (신청 기간 ${Object.values(closing).filter((c) => c.kind === "period").length} · 원문이 마감이라 적음 ${Object.values(closing).filter((c) => c.kind === "stated").length} · 사업 종료일 ${Object.values(closing).filter((c) => c.kind === "program").length})`);
 
 const bodyLen = services.map(
   (s) =>

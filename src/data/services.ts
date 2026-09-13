@@ -5,11 +5,11 @@ import type { WelfareService } from "@/types/welfare";
  *
  *   node scripts/build-data.mjs
  *
- * 수록 기준: 복지로 누적 조회수(inqNum) 상위 900건.
+ * 수록 기준: 복지로 누적 조회수(inqNum) 상위 910건.
  * 전체 5,219건 중 상위 500건이 전체 조회수의 86.5%를 차지한다 — 사람들이
  * 실제로 찾는 것부터 채운다(docs/02).
  *
- * 생성 시각: 2026-09-04 · 상세 본문 확보 900/900건
+ * 생성 시각: 2026-09-04 · 상세 본문 확보 910/910건
  */
 export const services: readonly WelfareService[] = [
  {
@@ -87,7 +87,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000060&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004661",
@@ -162,7 +165,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003249",
@@ -241,7 +247,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003249&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003201",
@@ -311,7 +320,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003201&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000072",
@@ -391,7 +403,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000072&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003250",
@@ -457,7 +472,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003257",
@@ -518,7 +536,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003257&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001164",
@@ -606,7 +627,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001164&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001188",
@@ -701,7 +725,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001188&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000969",
@@ -787,7 +814,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000969&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004657",
@@ -855,7 +885,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004657&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005567",
@@ -947,7 +980,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005567&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004656",
@@ -1025,7 +1061,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004656&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001171",
@@ -1098,7 +1137,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001171&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001103",
@@ -1246,7 +1288,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001103&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003180",
@@ -1308,7 +1353,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003180&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001089",
@@ -1386,7 +1434,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001089&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003253",
@@ -1450,7 +1501,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003253&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000024",
@@ -1528,7 +1582,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000092",
@@ -1616,7 +1673,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000092&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000078",
@@ -1696,7 +1756,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000078&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001068",
@@ -1782,7 +1845,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001068&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001148",
@@ -1843,7 +1909,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001148&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000100",
@@ -1917,7 +1986,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000100&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001132",
@@ -1992,7 +2064,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001132&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003258",
@@ -2067,7 +2142,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003258&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003227",
@@ -2197,7 +2275,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003227&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001175",
@@ -2256,7 +2337,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001175&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000781",
@@ -2292,10 +2376,10 @@ export const services: readonly WelfareService[] = [
   "supportContent": "(지원내용) 생리용품을 구입할 수 있는 바우처 포인트를 월 14,000원 지원합니다.* 신청시기와 관계없이 연간 지원금 전액 연 1회 일괄 지급\n지원된 바우처는 해당연도 12월 31일까지 사용하여야 하며, 잔여 바우처는 익년도 1월 1일에 전액 소멸\n자격 변동으로 바우처 지원 대상에서 제외되는 경우 사용여부와 관계없이 잔여 바우처 전액 소멸\n(사용방법) 국민행복카드(BC, 삼성, 롯데, 신한, 국민)를 발급받은 후 국민행복카드사별 가맹점에서 생리용품을 구매※ 문의 : 사회서비스 고객상담센터 1566-3232+선택 4\n생리용품 구매 바우처 사용을 위해서는 국민행복카드 발급 필요\n국민행복카드 발급 : BC카드 (1899-4651), 삼성카드(1566-3336), 롯데카드(1899-4282), 신한카드(1544-8868), KB국민카드(1599-7900)\n국민행복카드는 청소년 본인 또는 부모 등 법정대리인 명의로 발급할 수 있으며, 바우처 신청 시 신청인 정보에 부모 등 법정대리인 정보를 작성하여야 함\n(카드사별 가맹점) 발급받은 국민행복카드사의 가맹점에 한해 생리용품 구매가 가능합니다.\nBC카드\n - (오프라인) 홈플러스, 홈플러스익스프레스, 이마트, 이마트트레이더스, 이마트에브리데이, 이마트24, 노브랜드, 농협하나로마트, CU편의점, GS25편의점, GS더프레시 - (온라인) 국민행복몰, 지마켓, 옥션, 우리WON마켓, 쿠팡, 홈플러스\n삼성카드\n - (오프라인)  홈플러스, 홈플러스익스프레스, 이마트, 이마트트레이더스, 이마트에브리데이, 노브랜드, 농협하나로마트, CU편의점, GS25편의점, GS더프레시, 세븐일레븐편의점 - (온라인) 국민행복몰, 삼성카드쇼핑몰, 베팡몰, T딜, 미즈톡톡\n롯데카드\n - (오프라인) 홈플러스, 홈플러스익스프레스, 농협하나로마트, CU편의점, GS25편의점, GS더프레시, 롯데마트, VIC마켓, 세븐일레븐편의점 - (온라인) 국민행복몰, 롯데카드 띵샵, 엘포인트몰, 베팡몰\n신한카드\n - (오프라인) GS25편의점, CU편의점, 이마트, 이마트트레이더스, 이마트에브리데이, 노브랜드 - (온라인) 국민행복몰, 신한카드 올댓쇼핑, 베팡몰\nKB국민카드\n - (오프라인) GS25편의점, CU편의점, 세븐일레븐편의점 - (온라인) 국민행복몰, KBPAY쇼핑, 쿠팡",
   "applyMethod": null,
   "applySteps": [
+   "이의가 있을 경우, 담당 시/군/구청 또는 주소지 관할 시군구에 이의 신청 접수",
    "거주지 읍/면/동 주민센터, 읍면동 행정복지센터/주민센터 또는 복지로 웹사이트(PC/모바일앱)에서 ‘서비스 신청’",
    "담당 시/군/구청 또는 주소지 관할 시군구에서 조사 및 심사",
    "담당 시/군/구청 또는 주소지 관할 시군구에서 보장 결정",
-   "이의가 있을 경우, 담당 시/군/구청 또는 주소지 관할 시군구에 이의 신청 접수",
    "담당 시/군/구청 또는 주소지 관할 시군구에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 청소년의 주소등록지 읍·면·동 행정복지센터에서 서비스 제공 이후 대상자의 상황 관리"
   ],
@@ -2304,7 +2388,7 @@ export const services: readonly WelfareService[] = [
   "applyEnd": null,
   "contacts": [
    {
-    "name": "사회서비스전자바우처",
+    "name": "사회보장정보원",
     "url": "1566-3232"
    },
    {
@@ -2312,46 +2396,54 @@ export const services: readonly WelfareService[] = [
     "url": "1899-4651"
    },
    {
-    "name": "KB국민카드",
-    "url": "1599-7900"
-   },
-   {
     "name": "롯데카드",
     "url": "1899-4282"
+   },
+   {
+    "name": "삼성카드",
+    "url": "1566-3336"
    },
    {
     "name": "신한카드",
     "url": "1544-8868"
    },
    {
-    "name": "삼성카드",
-    "url": "1566-3336"
+    "name": "KB국민카드",
+    "url": "1599-7900"
+   },
+   {
+    "name": "현대카드",
+    "url": "1577-6000"
    }
   ],
   "homepages": [
    {
-    "name": "사회서비스전자바우처",
-    "url": "https://www.socialservice.or.kr:444/"
+    "name": "사회보장정보원",
+    "url": "www.socialservice.or.kr"
    },
    {
     "name": "BC카드",
     "url": "www.bccard.com"
    },
    {
-    "name": "KB국민카드",
-    "url": "card.kbcard.com"
-   },
-   {
     "name": "롯데카드",
     "url": "www.lottecard.co.kr"
+   },
+   {
+    "name": "삼성카드",
+    "url": "www.samsungcard.com"
    },
    {
     "name": "신한카드",
     "url": "www.shinhancard.com"
    },
    {
-    "name": "삼성카드",
-    "url": "www.samsungcard.com"
+    "name": "KB국민카드",
+    "url": "card.kbcard.com"
+   },
+   {
+    "name": "현대카드",
+    "url": "www.hyundaicard.com"
    }
   ],
   "lawBasis": [
@@ -2365,7 +2457,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000781&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00006196",
@@ -2436,7 +2531,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006196&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001155",
@@ -2512,7 +2610,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001155&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004004",
@@ -2563,7 +2664,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004004&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000061",
@@ -2637,7 +2741,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000061&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003260",
@@ -2728,7 +2835,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003260&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000055",
@@ -2807,7 +2917,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000055&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004658",
@@ -2877,7 +2990,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004658&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005411",
@@ -3018,7 +3134,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005411&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003267",
@@ -3081,7 +3200,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003267&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000074",
@@ -3140,7 +3262,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000074&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001138",
@@ -3218,7 +3343,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001138&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003191",
@@ -3286,7 +3414,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003191&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003265",
@@ -3365,7 +3496,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003265&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003245",
@@ -3443,7 +3577,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003245&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005442",
@@ -3513,7 +3650,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005442&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005708",
@@ -3565,7 +3705,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005708&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005253",
@@ -3621,7 +3764,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005253&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000076",
@@ -3693,7 +3839,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000076&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003171",
@@ -3756,7 +3905,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003171&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000102",
@@ -3828,7 +3980,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000102&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001176",
@@ -3910,7 +4065,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001176&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001147",
@@ -3991,7 +4149,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001063",
@@ -4060,7 +4221,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001063&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003179",
@@ -4122,7 +4286,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003179&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004649",
@@ -4227,7 +4394,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004649&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003222",
@@ -4306,7 +4476,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003222&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003247",
@@ -4368,7 +4541,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003247&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003240",
@@ -4442,7 +4618,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003240&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005440",
@@ -4509,7 +4688,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005440&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001119",
@@ -4582,7 +4764,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001119&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005691",
@@ -4633,7 +4818,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005691&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003195",
@@ -4733,7 +4921,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003195&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000867",
@@ -4802,7 +4993,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000867&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005687",
@@ -4858,7 +5052,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005687&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001088",
@@ -4926,7 +5123,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001088&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000843",
@@ -4992,7 +5192,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000843&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000089",
@@ -5055,7 +5258,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000089&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004717",
@@ -5116,7 +5322,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004717&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003279",
@@ -5207,7 +5416,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003279&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003176",
@@ -5276,7 +5488,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003176&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002497",
@@ -5330,7 +5545,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002497&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002006",
@@ -5384,7 +5602,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002006&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004292",
@@ -5433,7 +5654,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004292&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001169",
@@ -5512,7 +5736,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001169&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003753",
@@ -5564,7 +5791,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003753&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001093",
@@ -5643,7 +5873,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001093&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000026",
@@ -5725,7 +5958,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000026&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000056",
@@ -5795,7 +6031,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000056&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005036",
@@ -5856,7 +6095,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005036&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005858",
@@ -5921,7 +6163,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005858&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002907",
@@ -5981,7 +6226,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002907&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004473",
@@ -6042,7 +6290,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004473&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005631",
@@ -6100,7 +6351,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005631&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001087",
@@ -6192,7 +6446,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001087&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003213",
@@ -6267,7 +6524,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003213&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001104",
@@ -6345,7 +6605,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001104&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005221",
@@ -6396,7 +6659,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005221&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005444",
@@ -6463,7 +6729,68 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005444&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00005298",
+  "name": "세종 청년 미래적금",
+  "provider": "local",
+  "views": 86409,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 경제산업국 기업지원과",
+  "targets": [],
+  "lifeStages": [
+   "youth"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현금지급"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "인터넷"
+  ],
+  "onlineApply": null,
+  "summary": "관내 근로 청년의 저축을 장려하고, 자산 형성 기회를 제공해 장기근속 유도 및 지역사회로의 안정적 정착 지원",
+  "outline": null,
+  "eligibility": "ㅇ 연령 : 19~39세에 속하는 자ㅇ 거주 : 공고일 기준 관내 6개월 이상 계속 거주자ㅇ 근로 : 관내 기업 및 기관 근로ㅇ 소득 : 개인 기준 중위소득 120% 이하",
+  "selectionCriteria": "건강보험료 월 납입액이 기준 중위소득 환산 기준 120% 이하인 자",
+  "supportContent": "근로 청년이 3년 동안 적금 통장에 매월 15만원씩 적립 시, 세종시도 동일 금액을 매칭 적립해 만기 일시 지급",
+  "applyMethod": "세종청년희망내일센터 홈페이지를 통해 신청 가능",
+  "applySteps": [],
+  "medianPercent": 120,
+  "applyStart": "2022-05-20",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종일자리경제진흥원",
+    "url": "1533-1934"
+   },
+   {
+    "name": "세종특별자치시 기업지원과",
+    "url": "044-300-4843"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "세종특별자치시 청년기본 조례"
+  ],
+  "forms": [
+   {
+    "name": "세종특별자치시 청년기본 조례.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230621UUWBM1111590039984653&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005298&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-08-20",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00001162",
@@ -6526,7 +6853,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001162&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000917",
@@ -6589,7 +6919,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000917&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005092",
@@ -6651,7 +6984,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005092&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-08-20"
+  "updatedAt": "2025-08-20",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004639",
@@ -6721,7 +7057,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004639&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000025",
@@ -6795,7 +7134,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000025&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003192",
@@ -6872,7 +7214,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003192&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003262",
@@ -6955,7 +7300,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003262&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003927",
@@ -7012,7 +7360,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003927&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006266",
@@ -7074,7 +7425,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006266&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005247",
@@ -7125,7 +7479,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005247&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003226",
@@ -7204,7 +7561,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003226&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000499",
@@ -7262,7 +7622,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000499&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004637",
@@ -7331,7 +7694,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004637&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000838",
@@ -7398,7 +7764,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000838&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001184",
@@ -7487,7 +7856,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001184&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004663",
@@ -7607,7 +7979,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004663&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001079",
@@ -7676,7 +8051,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001079&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001179",
@@ -7747,7 +8125,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001179&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000087",
@@ -7821,7 +8202,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000087&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003211",
@@ -7895,7 +8279,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003211&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004006",
@@ -7947,7 +8334,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004006&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003283",
@@ -8025,7 +8415,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003283&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000946",
@@ -8084,7 +8477,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000946&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001115",
@@ -8161,7 +8557,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001115&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003989",
@@ -8216,7 +8615,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003989&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005552",
@@ -8262,7 +8664,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005552&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003903",
@@ -8312,7 +8717,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003903&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-03-13"
+  "updatedAt": "2026-03-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000047",
@@ -8376,7 +8784,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000047&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004997",
@@ -8468,7 +8879,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004997&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001109",
@@ -8550,7 +8964,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001109&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003224",
@@ -8620,7 +9037,65 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003224&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00005325",
+  "name": "청년 주거임대료 지원사업",
+  "provider": "local",
+  "views": 58087,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 기획조정실 청년정책담당관",
+  "targets": [],
+  "lifeStages": [
+   "youth"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현금지급"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "방문",
+   "인터넷"
+  ],
+  "onlineApply": null,
+  "summary": "○ 월세 거주 무주택 1인 가구 청년의 주거비 부담을 줄여 자립기반을 도모하고, 지역사회 정착을 지원",
+  "outline": null,
+  "eligibility": "○ (지원대상)세종시에 거주하는 만19세~39세 이하, 무주택 1인 가구 청년○ (자격요건)- 주택기준: 임대료 보증금 1억원 및 월세 60만원 이하, 전용면적 85㎡ 이하의 주택- 소득기준: 가구 기준 중위소득 150% 이하- 재산기준: 가구원 재산가액 122백만원 이하(2인 이상 470백만원 이하)○ (제외대상) 주택소유자, 주거급여 수급자, 공공임대 거주자, 정부 금융지원 또는 시 주거지원 사업 참여자",
+  "selectionCriteria": "○ (지원대상)세종시에 거주하는 만19세~39세 이하, 무주택 1인 가구 청년○ (자격요건)- 주택기준: 임대료 보증금 1억원 및 월세 60만원 이하, 전용면적 85㎡ 이하의 주택- 소득기준: 가구 기준 중위소득 150% 이하- 재산기준: 가구원 재산가액 122백만원 이하(2인 이상 470백만원 이하)○ (제외대상) 주택소유자, 주거급여 수급자, 공공임대 거주자, 정부 금융지원 또는 시 주거지원 사업 참여자",
+  "supportContent": "생애 1회에 한하여 월 20만원씩 최대 10개월 지원",
+  "applyMethod": "○ 온라인: 세종청년희망내일센터 누리집 잡아람(https://www.jobaram.com)※ 중지, 변경신청은 담당자 개별 연락",
+  "applySteps": [],
+  "medianPercent": 150,
+  "applyStart": "2022-07-11",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종시청 청년정책담당관",
+    "url": "044-300-6033"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "청년기본법 제20조, 주거기본법 제15조, 세종시 청년기본 조례 제24조, 세종시 청년주거 지원 조례 제5조"
+  ],
+  "forms": [
+   {
+    "name": "청년 주거임대료 지원 사업 추진근거.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250611UUWBM0920000141492138&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005325&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-14",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00005448",
@@ -8684,7 +9159,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005448&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005079",
@@ -8746,7 +9224,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005079&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003825",
@@ -8797,7 +9278,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003825&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003237",
@@ -8863,7 +9347,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003237&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001061",
@@ -8936,7 +9423,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001061&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003278",
@@ -9007,7 +9497,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003278&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000408",
@@ -9064,7 +9557,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000408&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001128",
@@ -9136,7 +9632,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001128&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003198",
@@ -9209,7 +9708,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003198&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001903",
@@ -9267,7 +9769,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001903&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000062",
@@ -9343,7 +9848,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000062&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001177",
@@ -9412,7 +9920,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001177&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006248",
@@ -9472,7 +9983,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006248&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001086",
@@ -9537,7 +10051,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001086&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001140",
@@ -9608,7 +10125,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001140&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003271",
@@ -9683,7 +10203,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003271&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003269",
@@ -9765,7 +10288,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003269&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005004",
@@ -9842,7 +10368,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005004&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003173",
@@ -9908,7 +10437,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003173&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005849",
@@ -9954,7 +10486,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005849&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-03"
+  "updatedAt": "2025-06-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001165",
@@ -10036,7 +10571,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001165&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002704",
@@ -10095,7 +10633,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002704&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004810",
@@ -10151,7 +10692,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004810&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004986",
@@ -10203,7 +10747,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004986&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004864",
@@ -10256,7 +10803,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004864&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002247",
@@ -10307,7 +10857,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002247&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003248",
@@ -10374,7 +10927,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003248&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004475",
@@ -10426,7 +10982,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004475&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003177",
@@ -10487,7 +11046,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003177&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000036",
@@ -10571,7 +11133,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000036&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000833",
@@ -10620,7 +11185,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000833&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003138",
@@ -10673,7 +11241,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003138&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000064",
@@ -10770,7 +11341,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000064&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003202",
@@ -10840,7 +11414,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003202&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005097",
@@ -10895,7 +11472,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-03-12"
+  "updatedAt": "2026-03-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002493",
@@ -10959,7 +11539,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002493&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001094",
@@ -11016,7 +11599,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001094&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003790",
@@ -11065,7 +11651,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003790&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003983",
@@ -11116,7 +11705,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003983&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004794",
@@ -11167,7 +11759,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004794&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000044",
@@ -11239,7 +11834,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000044&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000657",
@@ -11288,7 +11886,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000657&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-10"
+  "updatedAt": "2026-07-10",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001183",
@@ -11357,7 +11958,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001183&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003242",
@@ -11429,7 +12033,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003242&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000864",
@@ -11511,7 +12118,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000864&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005638",
@@ -11557,7 +12167,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005638&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005696",
@@ -11609,7 +12222,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005696&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004638",
@@ -11699,11 +12315,14 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004638&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003264",
-  "name": "지역사회 통합건강증진사업",
+  "name": "통합건강증진사업",
   "provider": "central",
   "views": 40767,
   "sidoName": null,
@@ -11755,11 +12374,11 @@ export const services: readonly WelfareService[] = [
   ],
   "lawBasis": [
    "지역보건법",
-   "국민영양관리법",
-   "보건의료기본법",
    "영유아보육법",
    "국민건강증진법",
-   "구강보건법"
+   "구강보건법",
+   "국민영양관리법",
+   "보건의료기본법"
   ],
   "forms": [
    {
@@ -11772,8 +12391,11 @@ export const services: readonly WelfareService[] = [
    }
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003264&wlfareInfoReldBztpCd=01",
-  "baseYear": "2025",
-  "updatedAt": null
+  "baseYear": "2026",
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00001135",
@@ -11839,7 +12461,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001135&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002234",
@@ -11888,7 +12513,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002234&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001060",
@@ -11957,7 +12585,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001060&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004375",
@@ -12009,7 +12640,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004375&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000091",
@@ -12183,7 +12817,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000091&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000099",
@@ -12255,7 +12892,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000099&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005748",
@@ -12314,7 +12954,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005748&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001150",
@@ -12385,7 +13028,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001150&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003967",
@@ -12438,7 +13084,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003967&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000104",
@@ -12503,7 +13152,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000104&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003277",
@@ -12575,7 +13227,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003277&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004660",
@@ -12642,7 +13297,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004660&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005112",
@@ -12694,7 +13352,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005112&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001067",
@@ -12758,7 +13419,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001067&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005143",
@@ -12814,7 +13478,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005143&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005409",
@@ -12872,7 +13539,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005409&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-09"
+  "updatedAt": "2026-07-09",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003299",
@@ -12924,7 +13594,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003299&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003929",
@@ -12984,7 +13657,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003929&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003520",
@@ -13033,7 +13709,64 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003520&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00004019",
+  "name": "노인일자리 및 사회활동 지원사업",
+  "provider": "local",
+  "views": 33890,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 노인장애인과",
+  "targets": [],
+  "lifeStages": [
+   "senior"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현금지급"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "방문"
+  ],
+  "onlineApply": null,
+  "summary": "노인이 일자리와 사회활동을 통하여 활동적이고 생산적인 노후생활을 영위할 수 있도록 지원함으로써 노인의 건강과 복지를 증진",
+  "outline": null,
+  "eligibility": "65세 이상 어르신(일부 유형 60세 이상)",
+  "selectionCriteria": "자격조건 없음(공익형 사업은 기초연금 수급자 대상)※ 제외자 : 생계급여 수급자, 국민건강보험 직장가입자(취업 지원 사업 제외), 장기요양보험 등급 판정자, 정부부처 및 지자체에서 추진하는 일자리사업에 2개 이상 참여하고 있는 자",
+  "supportContent": "해당없음",
+  "applyMethod": "방문 신청",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2017-01-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종시청 노인장애인과",
+    "url": "044-300-3812"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "노인 일자리 및 사회활동 지원에 관한 법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년 노인일자리 및 사회활동지원사업 운영안내.pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260709UUWBM1417420200506398&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004019&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-10",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00005244",
@@ -13086,7 +13819,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005244&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003225",
@@ -13171,7 +13907,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003225&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003238",
@@ -13247,7 +13986,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003238&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004651",
@@ -13333,7 +14075,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004651&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000888",
@@ -13417,7 +14162,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000888&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005538",
@@ -13464,7 +14212,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005538&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001091",
@@ -13523,7 +14274,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001091&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004647",
@@ -13582,7 +14336,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004647&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000010",
@@ -13648,7 +14405,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000010&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005852",
@@ -13711,7 +14471,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005852&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002178",
@@ -13767,7 +14530,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002178&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003178",
@@ -13832,7 +14598,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003178&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003281",
@@ -13894,7 +14663,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003281&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001130",
@@ -13960,7 +14732,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001130&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003244",
@@ -14081,7 +14856,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003244&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005856",
@@ -14146,7 +14924,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005856&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006014",
@@ -14201,7 +14982,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006014&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003209",
@@ -14270,7 +15054,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003209&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005023",
@@ -14323,7 +15110,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005023&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000892",
@@ -14385,7 +15175,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000892&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001178",
@@ -14462,7 +15255,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001178&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006135",
@@ -14517,7 +15313,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006135&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005702",
@@ -14566,7 +15365,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005702&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003282",
@@ -14634,7 +15436,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003282&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003218",
@@ -14698,7 +15503,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003218&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003862",
@@ -14749,7 +15557,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003862&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-27"
+  "updatedAt": "2026-08-27",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003719",
@@ -14807,7 +15618,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003719&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004655",
@@ -14874,7 +15688,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004655&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001107",
@@ -14945,7 +15762,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001107&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001182",
@@ -15029,7 +15849,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001182&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001149",
@@ -15169,7 +15992,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001149&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004076",
@@ -15220,7 +16046,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004076&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002235",
@@ -15270,7 +16099,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002235&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004041",
@@ -15327,7 +16159,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004041&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002637",
@@ -15379,7 +16214,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002637&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006436",
@@ -15426,7 +16264,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006436&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003181",
@@ -15496,7 +16337,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003181&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003053",
@@ -15549,7 +16393,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003053&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-19"
+  "updatedAt": "2026-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004696",
@@ -15600,7 +16447,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004696&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000037",
@@ -15663,7 +16513,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000037&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005861",
@@ -15717,7 +16570,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005861&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003273",
@@ -15787,7 +16643,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003273&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003246",
@@ -15856,7 +16715,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003246&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000095",
@@ -15946,7 +16808,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000095&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003266",
@@ -16016,7 +16881,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003266&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002617",
@@ -16066,7 +16934,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002617&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002058",
@@ -16126,7 +16997,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002058&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003594",
@@ -16183,7 +17057,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003594&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005261",
@@ -16232,7 +17109,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005261&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-02-12"
+  "updatedAt": "2026-02-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003199",
@@ -16302,7 +17182,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003199&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003184",
@@ -16368,7 +17251,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003184&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003473",
@@ -16425,7 +17311,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003473&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001638",
@@ -16477,7 +17366,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001638&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004213",
@@ -16530,7 +17422,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004213&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003228",
@@ -16596,7 +17491,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003228&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003194",
@@ -16663,7 +17561,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003194&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003236",
@@ -16731,7 +17632,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003236&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003241",
@@ -16795,7 +17699,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003241&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005445",
@@ -16873,7 +17780,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005445&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005863",
@@ -16932,7 +17842,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005863&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002966",
@@ -16993,7 +17906,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002966&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001076",
@@ -17079,7 +17995,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001076&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001112",
@@ -17144,7 +18063,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001112&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005019",
@@ -17380,7 +18302,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005019&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005293",
@@ -17431,7 +18356,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005293&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-09"
+  "updatedAt": "2026-07-09",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002322",
@@ -17480,7 +18408,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002322&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000103",
@@ -17548,7 +18479,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000103&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001098",
@@ -17619,7 +18553,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001098&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001071",
@@ -17684,7 +18621,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001071&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000923",
@@ -17750,7 +18690,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000923&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001895",
@@ -17805,7 +18748,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001895&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000093",
@@ -17878,7 +18824,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000093&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003197",
@@ -17943,7 +18892,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003197&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005033",
@@ -18018,7 +18970,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005033&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005641",
@@ -18065,7 +19020,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005641&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002372",
@@ -18115,7 +19073,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002372&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004207",
@@ -18167,7 +19128,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004207&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003547",
@@ -18218,7 +19182,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003547&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000049",
@@ -18286,7 +19253,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000049&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000057",
@@ -18371,7 +19341,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000057&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000040",
@@ -18440,7 +19413,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000040&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006154",
@@ -18490,7 +19466,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006154&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001951",
@@ -18546,7 +19525,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001951&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004662",
@@ -18632,7 +19614,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004662&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005427",
@@ -18679,7 +19664,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005427&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003235",
@@ -18744,7 +19732,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003235&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004353",
@@ -18805,7 +19796,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004353&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000067",
@@ -18874,7 +19868,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000067&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000097",
@@ -18941,7 +19938,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000097&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000884",
@@ -18997,7 +19997,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000884&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-24"
+  "updatedAt": "2026-07-24",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001361",
@@ -19055,7 +20058,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001361&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000048",
@@ -19126,7 +20132,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000048&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005693",
@@ -19184,7 +20193,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005693&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001161",
@@ -19256,7 +20268,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001161&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003010",
@@ -19309,7 +20324,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003010&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004946",
@@ -19360,7 +20378,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004946&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003945",
@@ -19417,7 +20438,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003945&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006181",
@@ -19470,7 +20494,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006181&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-09"
+  "updatedAt": "2026-07-09",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001120",
@@ -19537,7 +20564,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001120&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006076",
@@ -19597,7 +20627,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006076&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000059",
@@ -19669,7 +20702,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000059&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001108",
@@ -19738,7 +20774,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001108&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004012",
@@ -19790,7 +20829,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004012&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002402",
@@ -19846,7 +20888,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002402&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000098",
@@ -19935,7 +20980,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000098&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004605",
@@ -19987,7 +21035,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004605&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000054",
@@ -20054,7 +21105,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000054&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004104",
@@ -20107,7 +21161,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004104&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001136",
@@ -20211,7 +21268,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001136&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003186",
@@ -20278,7 +21338,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003186&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006313",
@@ -20345,7 +21408,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006313&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000030",
@@ -20401,7 +21467,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000030&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003067",
@@ -20448,7 +21517,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003067&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-08-01"
+  "updatedAt": "2025-08-01",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003820",
@@ -20505,7 +21577,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003820&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003169",
@@ -20591,7 +21666,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003169&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005765",
@@ -20829,7 +21907,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005765&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003276",
@@ -20898,7 +21979,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003276&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003597",
@@ -20953,7 +22037,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003597&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002391",
@@ -21004,7 +22091,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002391&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002254",
@@ -21064,7 +22154,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002254&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000052",
@@ -21127,7 +22220,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000052&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001131",
@@ -21198,7 +22294,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001131&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006034",
@@ -21251,7 +22350,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006034&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005482",
@@ -21310,7 +22412,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005482&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001154",
@@ -21373,7 +22478,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001154&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002547",
@@ -21429,7 +22537,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002547&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004633",
@@ -21482,7 +22593,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004633&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001755",
@@ -21541,7 +22655,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001755&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001146",
@@ -21613,7 +22730,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001146&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004300",
@@ -21680,7 +22800,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004300&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000837",
@@ -21753,7 +22876,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000837&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002425",
@@ -21990,7 +23116,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002425&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001180",
@@ -22063,7 +23192,68 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001180&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00001267",
+  "name": "저소득 한부모가족 생활안정지원",
+  "provider": "local",
+  "views": 17183,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 인구여성가족과",
+  "targets": [
+   "single-parent"
+  ],
+  "lifeStages": [
+   "teen",
+   "youth",
+   "child",
+   "infant",
+   "middle-age"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현금지급"
+  ],
+  "cycle": "년",
+  "applyMethods": [],
+  "onlineApply": null,
+  "summary": "저소득 한부모가족의 건전한 가족기능 유지와 생활안정에 기여(교통비, 명절지원금, 월동비 지원)",
+  "outline": null,
+  "eligibility": "1) 지원대상 : 저소득한부모로 책정된 대상자- 모자가족- 부자가족- 조손가족- 청소년 모자가족- 청소년 부자가족",
+  "selectionCriteria": "- 한부모, 조손가족 : 기준중위소득 65% - 청소년한부모가족 : 기준 중위소득 65%",
+  "supportContent": "1) 지급금액 : 한부모가족 자녀교육비, 교통비, 교복비, 월동비, 명절지원금\n   - 교통비 : 한부모가족자녀 중고등학생 대상(연 10만원, 상,하반기 지급)\n   - 학습지원비  : 한부모가족자녀 중 초,중, 고등학생 대상(상,하반기 지급) 등\n   - 월동비 : 저소득한부모가족(연 30만원)\n   - 명절지원비 : 명절전 지급(연 2회/ 회당 10만원)",
+  "applyMethod": null,
+  "applySteps": [],
+  "medianPercent": 65,
+  "applyStart": "2013-01-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종특별자치시 보건복지국 인구여성가족과",
+    "url": "044-300-3734"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "한부모가족지원법"
+  ],
+  "forms": [
+   {
+    "name": "2026년 저소득 한부모가족 지원 계획.pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260622UUWBM1402520198025225&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001267&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-03",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00006111",
@@ -22116,7 +23306,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006111&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-10-22"
+  "updatedAt": "2025-10-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002784",
@@ -22175,7 +23368,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002784&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002559",
@@ -22228,7 +23424,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002559&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000031",
@@ -22294,7 +23493,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000031&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005853",
@@ -22352,7 +23554,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005853&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003229",
@@ -22415,7 +23620,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003229&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003627",
@@ -22472,7 +23680,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003627&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006195",
@@ -22560,7 +23771,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006195&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004302",
@@ -22609,7 +23823,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004302&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003251",
@@ -22833,7 +24050,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003251&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001170",
@@ -22910,7 +24130,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001170&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000028",
@@ -22973,7 +24196,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000028&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002993",
@@ -23030,7 +24256,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002993&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000505",
@@ -23080,7 +24309,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000505&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004451",
@@ -23135,7 +24367,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004451&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-28"
+  "updatedAt": "2026-07-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004976",
@@ -23189,7 +24424,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004976&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003280",
@@ -23253,7 +24491,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003280&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003163",
@@ -23311,7 +24552,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003163&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003254",
@@ -23379,7 +24623,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003254&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001904",
@@ -23435,7 +24682,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001904&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005403",
@@ -23488,7 +24738,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005403&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002195",
@@ -23546,7 +24799,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002195&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004847",
@@ -23599,7 +24855,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004847&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002495",
@@ -23653,7 +24912,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002495&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005116",
@@ -23710,7 +24972,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005116&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-28"
+  "updatedAt": "2026-07-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003581",
@@ -23764,7 +25029,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003581&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-19"
+  "updatedAt": "2025-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005894",
@@ -23821,7 +25089,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005894&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002983",
@@ -23877,7 +25148,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002983&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001113",
@@ -23949,7 +25223,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001113&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005363",
@@ -24002,7 +25279,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005363&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2025-05-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005566",
@@ -24065,7 +25345,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005566&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002404",
@@ -24126,7 +25409,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002404&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-28"
+  "updatedAt": "2026-07-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003256",
@@ -24154,10 +25440,10 @@ export const services: readonly WelfareService[] = [
   "supportContent": "1회당 300만원 범위 내에서 입원부터 퇴원까지 발생한 총 진료비를 지원합니다. \n단, 상급병상 이용에 따라 추가 부담되는 입원료, 선택진료비, 100% 본인부담, 선별급여, 완화의료, 포괄간호 입원료 등 일부 비용은 지원 대상에서 제외",
   "applyMethod": null,
   "applySteps": [
+   "담당 시/군/구청 또는 국비/지방비로 의료비 지급에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 17개 지자체에서 조사 및 심사",
    "담당 시/군/구청 또는 보건복지부에서 보장 결정",
    "담당 시/군/구청 또는 17개 지자체에서 보장 결정",
-   "담당 시/군/구청 또는 국비/지방비로 의료비 지급에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 17개 지자체에서 서비스 제공 이후 대상자의 상황 관리"
   ],
   "medianPercent": null,
@@ -24165,11 +25451,11 @@ export const services: readonly WelfareService[] = [
   "applyEnd": null,
   "contacts": [
    {
-    "name": "국립중앙의료원 공공의료사업지원팀",
-    "url": "02-6362-3751"
+    "name": "국립중앙의료원 공공의료사업지원팀-외국인근로자 등 의료지원사업",
+    "url": "02-6362-3755"
    },
    {
-    "name": "보건복지상담센터",
+    "name": "보건복지부 콜센터",
     "url": "129"
    }
   ],
@@ -24180,9 +25466,9 @@ export const services: readonly WelfareService[] = [
    }
   ],
   "lawBasis": [
-   "난민법",
+   "공공보건의료에 관한 법률",
    "재한외국인 처우 기본법",
-   "난민법 시행령"
+   "난민법"
   ],
   "forms": [
    {
@@ -24192,7 +25478,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003256&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00005038",
@@ -24248,7 +25537,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005038&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003905",
@@ -24301,7 +25593,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003905&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000096",
@@ -24421,7 +25716,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000096&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004712",
@@ -24472,7 +25770,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004712&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003923",
@@ -24524,7 +25825,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003923&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001451",
@@ -24579,7 +25883,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001451&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005024",
@@ -24643,7 +25950,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005024&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005171",
@@ -24689,7 +25999,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005171&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004863",
@@ -24740,7 +26053,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004863&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-28"
+  "updatedAt": "2026-07-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001084",
@@ -24802,7 +26118,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001084&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004313",
@@ -24854,7 +26173,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004313&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003804",
@@ -24909,7 +26231,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003804&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005468",
@@ -25010,7 +26335,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005468&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005866",
@@ -25056,7 +26384,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005866&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-03-12"
+  "updatedAt": "2026-03-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003223",
@@ -25136,7 +26467,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003223&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001101",
@@ -25210,7 +26544,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001101&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005647",
@@ -25262,7 +26599,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005647&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001834",
@@ -25319,7 +26659,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001834&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004890",
@@ -25372,7 +26715,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004890&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002555",
@@ -25423,7 +26769,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002555&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002543",
@@ -25516,7 +26865,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002543&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004634",
@@ -25567,7 +26919,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004634&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004692",
@@ -25623,7 +26978,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004692&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005857",
@@ -25736,7 +27094,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005857&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-04-22"
+  "updatedAt": "2025-04-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003555",
@@ -25793,7 +27154,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003555&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004557",
@@ -25844,7 +27208,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004557&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005437",
@@ -25902,7 +27269,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005437&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004703",
@@ -25955,7 +27325,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004703&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006264",
@@ -26024,7 +27397,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006264&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006162",
@@ -26072,7 +27448,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006162&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002651",
@@ -26121,7 +27500,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002651&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005883",
@@ -26181,7 +27563,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005883&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003243",
@@ -26322,7 +27707,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003243&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005035",
@@ -26382,7 +27770,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005035&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003996",
@@ -26433,7 +27824,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003996&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006229",
@@ -26491,7 +27885,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006229&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005102",
@@ -26549,7 +27946,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005102&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001062",
@@ -26617,7 +28017,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001062&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000948",
@@ -26681,7 +28084,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000948&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005850",
@@ -26736,7 +28142,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005850&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006215",
@@ -26805,7 +28214,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006215&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001832",
@@ -26861,7 +28273,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001832&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000023",
@@ -26932,7 +28347,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000023&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001556",
@@ -26983,7 +28401,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001556&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002405",
@@ -27039,7 +28460,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002405&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005410",
@@ -27101,7 +28525,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005410&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006170",
@@ -27147,7 +28574,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006170&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-09-18"
+  "updatedAt": "2025-09-18",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005871",
@@ -27204,7 +28634,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005871&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005319",
@@ -27253,7 +28686,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005319&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005820",
@@ -27308,7 +28744,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005820&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001137",
@@ -27365,7 +28804,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001137&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002820",
@@ -27419,7 +28861,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002820&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000156",
@@ -27473,7 +28918,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000156&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002121",
@@ -27527,7 +28975,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002121&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000912",
@@ -27585,7 +29036,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000912&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004374",
@@ -27636,7 +29090,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004374&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004192",
@@ -27694,7 +29151,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004192&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005107",
@@ -27755,7 +29215,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005107&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005461",
@@ -27806,7 +29269,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005461&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005816",
@@ -27856,7 +29322,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005816&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001080",
@@ -27922,7 +29391,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001080&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005623",
@@ -27977,7 +29449,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005623&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002444",
@@ -28032,7 +29507,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002444&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001111",
@@ -28090,7 +29568,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001111&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003208",
@@ -28165,7 +29646,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003208&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005536",
@@ -28225,7 +29709,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005536&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000033",
@@ -28287,7 +29774,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000033&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000051",
@@ -28355,7 +29845,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000051&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004925",
@@ -28407,7 +29900,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004925&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005031",
@@ -28493,7 +29989,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005031&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000831",
@@ -28543,7 +30042,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000831&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004000",
@@ -28594,7 +30096,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004000&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005838",
@@ -28640,7 +30145,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005838&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001491",
@@ -28696,7 +30204,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001491&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002715",
@@ -28745,7 +30256,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002715&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006333",
@@ -28810,7 +30324,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006333&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000139",
@@ -28868,7 +30385,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000139&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005981",
@@ -28921,7 +30441,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005981&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000043",
@@ -28996,7 +30519,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000043&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005380",
@@ -29052,7 +30578,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005380&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000058",
@@ -29179,7 +30708,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000058&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004198",
@@ -29233,7 +30765,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004198&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003674",
@@ -29285,7 +30820,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003674&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002012",
@@ -29336,7 +30874,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002012&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001409",
@@ -29390,7 +30931,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001409&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003239",
@@ -29467,7 +31011,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003239&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003190",
@@ -29533,7 +31080,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003190&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001853",
@@ -29589,7 +31139,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001853&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002953",
@@ -29646,7 +31199,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002953&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-12"
+  "updatedAt": "2026-08-12",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002055",
@@ -29701,7 +31257,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002055&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2025-05-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002765",
@@ -29754,7 +31313,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002765&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001141",
@@ -29825,7 +31387,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001141&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004165",
@@ -29881,7 +31446,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004165&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004981",
@@ -29936,7 +31504,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004981&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002893",
@@ -29989,7 +31560,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002893&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001122",
@@ -30059,7 +31633,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001122&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005034",
@@ -30130,7 +31707,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005034&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001159",
@@ -30195,7 +31775,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001159&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001099",
@@ -30263,7 +31846,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001099&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001316",
@@ -30319,7 +31905,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001316&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004398",
@@ -30370,7 +31959,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004398&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004233",
@@ -30379,7 +31971,7 @@ export const services: readonly WelfareService[] = [
   "views": 12078,
   "sidoName": "경기도",
   "sigunguName": "광명시",
-  "department": "경기도 광명시 도시재생국 주택과",
+  "department": "경기도 광명시 부시장 청년정책관",
   "targets": [],
   "lifeStages": [],
   "themes": [],
@@ -30394,17 +31986,17 @@ export const services: readonly WelfareService[] = [
   "onlineApply": null,
   "summary": "광명시에 정착하는 신혼부부 및 청년의 주거비 부담을 완화하여 안정된 주거환경 조성하고자 신혼부부 및 청년 무주택자에게 전월세 보증금 대출 이자 지원 사업입니다.",
   "outline": null,
-  "eligibility": "○ 신혼부부- 대상자격: 혼인신고일부터 7년 이내(무주택자), 공고일 이전까지 혼인신고를 마친 자- 대상주택: 단독, 다가구, 아파트, 연립주택, 다세대주택 및 오피스텔(*전용면적 또는 계약면적 85㎡ 이하에 한함), 5억 원 이내(월세인 경우 [(임대료 × 12 ) ÷ 5.5% + 보증금] 으로 전환하여 계산)- 주소기준: 공고일 기준 부부 모두 광명시에 거주(부부 모두 주민등록상 주소와 임대차계약서 주소가 동일한 경우에 한함), 공고일 이전까지 전입신고 마친 자- 계약기준: 임대차계약서는 주택소유자(부부의 직계존비속 제외)와 신청인(또는 배우자)계약으로 한정- 소득기준: 기준 중위소득 180% 이하(부부 및 직계비속 포함)○ 청년- 대상자격: 만19세 ~ 39세 이하(무주택자), 공고일 기준 단독거주자- 대상주택: 단독, 다가구, 아파트, 연립주택, 다세대주택 및 오피스텔(*전용면적 또는 계약면적 60㎡ 이하에 한함), 3억 원 이내(월세인 경우 [(임대료 × 12 ) ÷ 5.5% + 보증금] 으로 전환하여 계산)- 주소기준: 공고일 기준 광명시에 거주(주민등록상 주소와 임대차계약서 주소가 동일한 경우에 한함), 공고일 이전까지 전입신고 마친 자- 계약기준: 임대차계약서는 주택소유자(청년의 직계존비속 제외)와 신청인 계약으로 한정- 소득기준: 기준 중위소득 180% 이하(1인 가족)",
+  "eligibility": "○ 신혼부부- 대상자격: 혼인신고일부터 7년 이내(무주택자), 공고일 이전까지 혼인신고를 마친 자- 대상주택: 단독, 다가구, 아파트, 연립주택, 다세대주택 및 오피스텔(*전용면적 또는 계약면적 85㎡ 이하에 한함), 5억 원 이내(월세인 경우 [(임대료 × 12 ) ÷ 4.75% + 보증금] 으로 전환하여 계산)- 주소기준: 공고일 기준 부부 모두 광명시에 거주(부부 모두 주민등록상 주소와 임대차계약서 주소가 동일한 경우에 한함), 공고일 이전까지 전입신고 마친 자- 계약기준: 임대차계약서는 주택소유자(부부의 직계존비속 제외)와 신청인(또는 배우자)계약으로 한정- 소득기준: 기준 중위소득 180% 이하(부부 및 직계비속 포함)○ 청년- 대상자격: 만19세 ~ 45세 이하(무주택자), 공고일 기준 단독거주자- 대상주택: 단독, 다가구, 아파트, 연립주택, 다세대주택 및 오피스텔(*전용면적 또는 계약면적 60㎡ 이하에 한함), 3억 원 이내(월세인 경우 [(임대료 × 12 ) ÷ 4.75% + 보증금] 으로 전환하여 계산)- 주소기준: 공고일 기준 광명시에 거주(주민등록상 주소와 임대차계약서 주소가 동일한 경우에 한함), 공고일 이전까지 전입신고 마친 자- 계약기준: 임대차계약서는 주택소유자(청년의 직계존비속 제외)와 신청인 계약으로 한정- 소득기준: 기준 중위소득 180% 이하(1인 가족)",
   "selectionCriteria": "신혼부부 : 보증금 5억원 이내인 단독, 다가구, 아파트 , 연립주택, 다세대 주택 및 오피스텔 거주(광명시), 소득기준 중위소득 180% 이하(부부 및 직계비속 포함)청년 : 보증금 3억원 이내인 단독, 다가구, 아파트 , 연립주택, 다세대 주택 및 오피스텔 거주, 소득기준 중위소득 180% 이하(1인 가족)",
   "supportContent": "신혼부부 : 연1회, 대출금 1억 5천만 원 범위에서 전세 2.5% 이내, 월세 2.7%이내(최대 3년 지원) 청년 : 연1회, 대출금 1억 5천만 원 범위에서 전세 1.2%이내, 월세 1.4%이내(최대 3년 지원)",
-  "applyMethod": "직접 방문 접수 및 우편접수",
+  "applyMethod": "광명시 홈페이지 온라인접수방문접수",
   "applySteps": [],
   "medianPercent": 180,
   "applyStart": "2021-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
    {
-    "name": "광명시 주택과",
+    "name": "광명시 청년정책관",
     "url": "02-2680-6332"
    }
   ],
@@ -30414,25 +32006,28 @@ export const services: readonly WelfareService[] = [
   ],
   "forms": [
    {
-    "name": "광명시 신혼부부 전월세 보증금 대출 이자 지원 신청서.hwp",
-    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1444030036025504&atcflSn=1"
+    "name": "광명시 청년 전월세 보증금 대출 이자 지원 신청서.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1445230036025874&atcflSn=1"
+   },
+   {
+    "name": "광명시 신혼부부 및 청년 전월세 대출 이자 지원 조례.pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260821UUWBM1748090205751671&atcflSn=1"
    },
    {
     "name": "광명시 전월세 보증금 대출 이자 지원 서약서 및 동의서.hwp",
     "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1447010036026331&atcflSn=1"
    },
    {
-    "name": "광명시 신혼부부 및 청년 전월세 대출 이자 지원 조례(경기도 광명시조례)(제2694호).pdf",
-    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=7807GOWF15GOWF157807&atcflSn=1"
-   },
-   {
-    "name": "광명시 청년 전월세 보증금 대출 이자 지원 신청서.hwp",
-    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1445230036025874&atcflSn=1"
+    "name": "광명시 신혼부부 전월세 보증금 대출 이자 지원 신청서.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230524UUWBM1444030036025504&atcflSn=1"
    }
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004233&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-06"
+  "updatedAt": "2026-09-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00001377",
@@ -30484,7 +32079,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001377&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005802",
@@ -30533,7 +32131,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005802&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000998",
@@ -30603,7 +32204,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000998&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004029",
@@ -30655,7 +32259,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004029&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000071",
@@ -30728,7 +32335,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000071&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004424",
@@ -30777,7 +32387,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004424&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003185",
@@ -30852,7 +32465,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003185&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003263",
@@ -30915,7 +32531,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003263&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005120",
@@ -30967,7 +32586,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005120&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001350",
@@ -31020,7 +32642,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001350&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004650",
@@ -31533,7 +33158,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004650&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004697",
@@ -31608,7 +33236,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004697&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006006",
@@ -31659,7 +33290,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006006&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000846",
@@ -31811,7 +33445,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000846&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-27"
+  "updatedAt": "2026-08-27",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004357",
@@ -31867,7 +33504,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004357&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002602",
@@ -31923,7 +33563,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002602&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003259",
@@ -31984,7 +33627,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003259&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005328",
@@ -32033,7 +33679,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005328&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003853",
@@ -32086,7 +33735,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003853&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002532",
@@ -32139,7 +33791,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002532&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004356",
@@ -32190,7 +33845,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004356&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004110",
@@ -32239,7 +33897,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004110&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006258",
@@ -32301,7 +33962,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006258&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003682",
@@ -32365,7 +34029,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003682&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002522",
@@ -32418,7 +34085,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002522&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003217",
@@ -32471,7 +34141,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003217&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005222",
@@ -32523,7 +34196,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005222&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004719",
@@ -32574,7 +34250,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004719&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005736",
@@ -32627,7 +34306,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005736&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2025-05-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006107",
@@ -32698,7 +34380,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006107&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003232",
@@ -32768,7 +34453,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003232&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000226",
@@ -32823,7 +34511,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000226&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004764",
@@ -32875,7 +34566,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004764&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003205",
@@ -32943,7 +34637,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003205&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003189",
@@ -33019,7 +34716,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003189&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004632",
@@ -33071,7 +34771,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004632&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-14"
+  "updatedAt": "2025-06-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004579",
@@ -33122,7 +34825,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004579&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001172",
@@ -33195,7 +34901,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001172&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004558",
@@ -33248,7 +34957,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004558&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-25"
+  "updatedAt": "2026-08-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005439",
@@ -33303,7 +35015,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005439&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000259",
@@ -33359,7 +35074,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000259&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006046",
@@ -33464,7 +35182,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006046&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005192",
@@ -33510,7 +35231,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005192&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004614",
@@ -33563,7 +35287,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004614&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004466",
@@ -33616,7 +35343,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004466&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004079",
@@ -33669,7 +35399,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004079&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-20"
+  "updatedAt": "2026-06-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006033",
@@ -33732,7 +35465,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006033&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005336",
@@ -33784,7 +35520,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005336&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005414",
@@ -33832,7 +35571,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005414&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-01"
+  "updatedAt": "2026-08-01",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001953",
@@ -33884,7 +35626,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001953&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002800",
@@ -33936,7 +35681,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002800&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006041",
@@ -33999,7 +35747,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006041&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001391",
@@ -34049,7 +35800,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001391&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003275",
@@ -34107,7 +35861,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003275&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006099",
@@ -34154,7 +35911,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006099&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005072",
@@ -34216,7 +35976,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005072&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-06"
+  "updatedAt": "2025-06-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006227",
@@ -34283,7 +36046,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006227&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001308",
@@ -34332,7 +36098,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001308&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002005",
@@ -34387,7 +36156,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002005&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005323",
@@ -34449,7 +36221,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005323&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-19"
+  "updatedAt": "2025-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004680",
@@ -34501,7 +36276,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004680&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006241",
@@ -34574,7 +36352,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006241&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005528",
@@ -34631,7 +36412,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005528&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003982",
@@ -34687,7 +36471,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003982&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-20"
+  "updatedAt": "2026-06-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003270",
@@ -34762,7 +36549,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003270&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005227",
@@ -34818,7 +36608,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005227&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003662",
@@ -34870,7 +36663,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003662&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003182",
@@ -35047,7 +36843,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003182&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001083",
@@ -35102,7 +36901,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001083&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003678",
@@ -35153,7 +36955,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003678&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004022",
@@ -35205,7 +37010,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004022&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006115",
@@ -35260,7 +37068,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006115&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003170",
@@ -35328,7 +37139,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003170&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002594",
@@ -35388,7 +37202,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002594&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000300",
@@ -35444,7 +37261,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000300&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005270",
@@ -35502,7 +37322,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005270&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-07-04"
+  "updatedAt": "2025-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001614",
@@ -35555,7 +37378,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001614&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003272",
@@ -35628,7 +37454,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003272&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001932",
@@ -35681,7 +37510,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001932&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001064",
@@ -35752,7 +37584,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001064&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002707",
@@ -35808,7 +37643,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002707&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003539",
@@ -35859,7 +37697,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003539&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005511",
@@ -35912,7 +37753,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005511&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000065",
@@ -36020,7 +37864,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000065&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001118",
@@ -36082,7 +37929,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001118&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002633",
@@ -36131,7 +37981,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002633&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005650",
@@ -36178,7 +38031,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005650&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002663",
@@ -36235,7 +38091,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002663&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-05-30"
+  "updatedAt": "2024-05-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004844",
@@ -36286,7 +38145,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004844&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006273",
@@ -36347,7 +38209,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006273&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005697",
@@ -36400,7 +38265,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005697&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001552",
@@ -36451,7 +38319,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001552&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004961",
@@ -36502,7 +38373,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004961&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003175",
@@ -36567,7 +38441,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003175&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002362",
@@ -36623,7 +38500,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002362&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001066",
@@ -36692,7 +38572,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001066&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004001",
@@ -36745,7 +38628,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004001&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002961",
@@ -36797,7 +38683,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002961&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003216",
@@ -36861,7 +38750,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003216&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005481",
@@ -36919,7 +38811,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005481&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001341",
@@ -36971,7 +38866,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001341&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001181",
@@ -37028,7 +38926,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001181&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004329",
@@ -37080,7 +38981,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004329&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004066",
@@ -37134,7 +39038,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004066&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003833",
@@ -37183,7 +39090,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003833&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001072",
@@ -37276,7 +39186,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001072&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003930",
@@ -37333,7 +39246,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003930&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004841",
@@ -37389,7 +39305,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004841&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003832",
@@ -37441,7 +39360,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003832&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000896",
@@ -37504,7 +39426,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000896&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004057",
@@ -37568,7 +39493,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004057&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001085",
@@ -37629,7 +39557,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001085&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003641",
@@ -37685,7 +39616,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003641&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001090",
@@ -37752,7 +39686,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001090&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000848",
@@ -37807,7 +39744,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000848&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003203",
@@ -37886,7 +39826,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003203&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001105",
@@ -37951,7 +39894,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001105&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004576",
@@ -38003,7 +39949,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004576&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005373",
@@ -38055,7 +40004,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005373&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002982",
@@ -38107,7 +40059,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002982&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001065",
@@ -38174,7 +40129,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001065&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005759",
@@ -38224,7 +40182,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005759&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2025-05-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001145",
@@ -38300,7 +40261,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001145&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002933",
@@ -38356,7 +40320,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002933&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001229",
@@ -38409,7 +40376,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001229&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-06-04"
+  "updatedAt": "2024-06-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002471",
@@ -38464,7 +40434,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002471&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004850",
@@ -38517,7 +40490,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004850&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003125",
@@ -38573,7 +40549,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003125&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001860",
@@ -38630,7 +40609,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001860&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-06-13"
+  "updatedAt": "2024-06-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003615",
@@ -38679,7 +40661,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003615&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-27"
+  "updatedAt": "2026-08-27",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004149",
@@ -38730,7 +40715,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004149&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003035",
@@ -38794,7 +40782,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003035&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005774",
@@ -38838,7 +40829,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005774&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000532",
@@ -38896,7 +40890,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000532&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001032",
@@ -38947,7 +40944,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001032&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000018",
@@ -39084,7 +41084,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000018&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004437",
@@ -39136,7 +41139,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004437&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002331",
@@ -39185,7 +41191,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002331&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002428",
@@ -39245,7 +41254,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002428&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006268",
@@ -39310,7 +41322,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006268&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002306",
@@ -39369,7 +41384,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002306&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005505",
@@ -39421,7 +41439,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005505&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006278",
@@ -39484,7 +41505,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006278&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001990",
@@ -39540,7 +41564,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001990&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003200",
@@ -39611,7 +41638,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003200&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004037",
@@ -39636,10 +41666,10 @@ export const services: readonly WelfareService[] = [
    "방문"
   ],
   "onlineApply": null,
-  "summary": "농작업, 가사, 육아를 병행하는 여성농업인에게 문화 혜택의 기회 제공으로 영농의욕 고취 및 삶의 질 향상 도모",
+  "summary": "농작업, 가사, 육아를 병행하는 여성농업인에게 바우처(포인트) 지급을 통한 문화 혜택의 기회 제공으로 영농의욕 고취 및 삶의 질 향상 도모",
   "outline": null,
-  "eligibility": "도내 농촌지역 거주, 실제 영농에 종사하는 만20세이상~ 만75세 미만의 여성농업인으로 2023.1.1이전 농업경영체 등록자",
-  "selectionCriteria": "만20세이상 만75세 미만, 2023.1.1이전 농업경영체 등록 여성농업인최종선정 기준 시군별 자체 설정",
+  "eligibility": "도내 농촌지역 거주, 실제 영농에 종사하는 만20세이상~ 만75세 미만의 여성농업인으로 2025.1.1이전 농업경영체 등록자",
+  "selectionCriteria": "만20세이상 만75세 미만, 2025.1.1이전 농업경영체 등록 여성농업인최종선정 기준 시군별 자체 설정",
   "supportContent": "여성농업인 문화, 여행, 스포츠부문 지원(1인 20만원 : 보조 100%)",
   "applyMethod": "관할 읍면동 사무소에 신청",
   "applySteps": [],
@@ -39658,13 +41688,16 @@ export const services: readonly WelfareService[] = [
   ],
   "forms": [
    {
-    "name": "2024년 여성농업인 복지바우처 지원사업 지침(송부용).hwp",
-    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240614UUWBM1555250089570064&atcflSn=1"
+    "name": "★2026년 복지바우처 도비 지원사업 지침(시군시행)_최종.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260827UUWBM1441290206351718&atcflSn=1"
    }
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004037&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-06-15"
+  "updatedAt": "2026-09-03",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00000009",
@@ -39786,7 +41819,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000009&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-19"
+  "updatedAt": "2026-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004707",
@@ -39844,7 +41880,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004707&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003129",
@@ -39900,7 +41939,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003129&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003392",
@@ -39955,7 +41997,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003392&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004546",
@@ -40014,7 +42059,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004546&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001652",
@@ -40072,7 +42120,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001652&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004393",
@@ -40127,7 +42178,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004393&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005003",
@@ -40181,7 +42235,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005003&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003574",
@@ -40247,7 +42304,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003574&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003231",
@@ -40326,7 +42386,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003231&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000050",
@@ -40395,7 +42458,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000050&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002340",
@@ -40449,7 +42515,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002340&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001941",
@@ -40507,7 +42576,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001941&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005050",
@@ -40643,7 +42715,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005050&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002636",
@@ -40700,7 +42775,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002636&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001117",
@@ -40784,7 +42862,66 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001117&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00002572",
+  "name": "노인급식지원사업",
+  "provider": "local",
+  "views": 9329,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 노인장애인과",
+  "targets": [
+   "low-income"
+  ],
+  "lifeStages": [
+   "senior"
+  ],
+  "themes": [],
+  "payTypes": [
+   "프로그램/서비스(서비스)"
+  ],
+  "cycle": "주",
+  "applyMethods": [
+   "방문"
+  ],
+  "onlineApply": null,
+  "summary": "저소득 결식우려의 거동불편 노인에 대한 양질의 급식지원",
+  "outline": null,
+  "eligibility": "1) 저소득 재가노인 식사(밑반찬) 배달  - 기초 수급자 및 차상위계층 노인 중 결식우려가  있는 60세 이상노인 - 소득인정액이 0원인 기초연금수급자로 결식이 우려되는 노인- 60세 이상 저소득노인 중 거동이 불편하여 식사 및 밑반찬 배달이 필요하다고 읍면동장이 인정하는 자",
+  "selectionCriteria": "기초수급자, 차상위, 저소득독거노인",
+  "supportContent": "1) 도시락 배달 : 주 5회 배달 지원2) 밑반찬 배달 :  주2회 배달 지원",
+  "applyMethod": "1) 저소득 재가노인 식사(밑반찬) 배달 : 읍면동에서 대상자를 수행기관에 신청하여 상담받고, 통보받은 대상에 대한 적합여부 시에서 최종 결정",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2012-07-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종특별자치시청 노인장애인과",
+    "url": "044-300-3814"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "노인복지법"
+  ],
+  "forms": [
+   {
+    "name": "2026년 노인급식지원 사업 추진계획 (6).pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260709UUWBM1328170200491426&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002572&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-10",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00001156",
@@ -40843,7 +42980,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001156&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004152",
@@ -40892,7 +43032,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004152&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004267",
@@ -40950,7 +43093,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004267&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004073",
@@ -41007,7 +43153,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004073&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005428",
@@ -41053,7 +43202,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005428&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004460",
@@ -41116,7 +43268,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004460&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003174",
@@ -41187,7 +43342,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003174&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006308",
@@ -41271,7 +43429,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006308&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000862",
@@ -41324,7 +43485,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000862&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005965",
@@ -41375,7 +43539,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005965&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005199",
@@ -41423,7 +43590,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005199&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002328",
@@ -41473,7 +43643,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002328&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005131",
@@ -41522,7 +43695,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005131&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000539",
@@ -41574,7 +43750,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000539&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001602",
@@ -41627,7 +43806,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001602&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001783",
@@ -41670,17 +43852,20 @@ export const services: readonly WelfareService[] = [
   ],
   "homepages": [],
   "lawBasis": [
-   "제주특별자치도 여성보호분야 예산 집행 기준"
+   "제주특별자치도 여성권익증진사업 예산 집행 기준"
   ],
   "forms": [
    {
-    "name": "여성보호 분야 예산 집행 기준(발송)...hwp",
-    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240705UUWBM0843360092671716&atcflSn=1"
+    "name": "★제주특별자치도 여성권익증진사업 예산 집행 기준.hwpx",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260907UUWBM1742220207670939&atcflSn=1"
    }
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001783&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2026-09-09",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00003754",
@@ -41732,7 +43917,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003754&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002465",
@@ -41786,7 +43974,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002465&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005450",
@@ -41860,7 +44051,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005450&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005251",
@@ -41909,7 +44103,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005251&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-09"
+  "updatedAt": "2026-07-09",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006069",
@@ -41955,7 +44152,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006069&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002782",
@@ -42005,7 +44205,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002782&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-27"
+  "updatedAt": "2026-08-27",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004491",
@@ -42054,7 +44257,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004491&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002695",
@@ -42116,7 +44322,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002695&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005086",
@@ -42175,7 +44384,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005086&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000022",
@@ -42240,7 +44452,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000022&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006263",
@@ -42299,7 +44514,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006263&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003689",
@@ -42348,7 +44566,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003689&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004875",
@@ -42401,7 +44622,93 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004875&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00004413",
+  "name": "장애인활동보조(시추가)",
+  "provider": "local",
+  "views": 8836,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 노인장애인과",
+  "targets": [
+   "disability"
+  ],
+  "lifeStages": [
+   "middle-age",
+   "child",
+   "youth",
+   "teen"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현물지급"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "방문"
+  ],
+  "onlineApply": null,
+  "summary": "국비로 지원되는 중증장애인 활동지원 급여부족(서비스 시간)에 따른 추가활동보조 서비스 제공으로 중증장애인의 자립생활도모 및 사회참여 증진",
+  "outline": null,
+  "eligibility": "장애인활동지원 국비지원대상자* 중 추가시간이 필요한 자(1등급 ~15등급) - 국비지원대상 : 만6세 ~만65세미만의 장애인복지법상 등록 장애인",
+  "selectionCriteria": "활동지원 등급과 돌봄상황을 고려하여 월 10시간~330시간으로 차등 지원",
+  "supportContent": "국비지원을 모두 사용한 자에게 추가지원(본인부담금 없음)활동보조 지원시간  10시간 ~ 330시간",
+  "applyMethod": "본인 또는 대리인이 주소지 읍면동행정복지센터 방문신청 구비서류 : 중증장애인 활동보조 시추가지원 신청서, 중증자애인 활동보조 시추가지원 대상 확인 조사서, 등",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2013-01-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종특별자치시 보건복지국 노인장애인과",
+    "url": "044-300-3813"
+   },
+   {
+    "name": "세종시케어믹스",
+    "url": "044-865-2633"
+   },
+   {
+    "name": "세종우리협동조합드림라온센터",
+    "url": "044-863-9433"
+   },
+   {
+    "name": "세종시장애인자립생활센터",
+    "url": "044-715-5300"
+   },
+   {
+    "name": "세종시장애인부모회",
+    "url": "044-868-6100"
+   },
+   {
+    "name": "세종도덕노인복지센터",
+    "url": "044-867-9054"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "장애인복지법 제55조, 장애인활동지원에관한법률"
+  ],
+  "forms": [
+   {
+    "name": "2026년 장애인활동지원 시비추가지원 신청서식(공문).hwpx",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260709UUWBM1408080200503118&atcflSn=1"
+   },
+   {
+    "name": "첨부파일없음.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240605UUWBM0946200088208104&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004413&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-10",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00004307",
@@ -42452,7 +44759,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004307&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004788",
@@ -42508,7 +44818,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004788&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004161",
@@ -42558,7 +44871,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004161&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000006",
@@ -42613,7 +44929,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000006&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001185",
@@ -42692,7 +45011,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001185&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002007",
@@ -42744,7 +45066,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002007&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003806",
@@ -42800,7 +45125,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003806&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000201",
@@ -42854,7 +45182,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000201&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006310",
@@ -42924,7 +45255,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006310&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002859",
@@ -42980,7 +45314,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002859&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005226",
@@ -43041,7 +45378,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005226&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003606",
@@ -43094,7 +45434,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003606&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006090",
@@ -43151,7 +45494,67 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006090&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-10"
+  "updatedAt": "2026-07-10",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00001583",
+  "name": "결식아동급식지원",
+  "provider": "local",
+  "views": 8602,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 아동청소년과",
+  "targets": [
+   "low-income",
+   "single-parent"
+  ],
+  "lifeStages": [
+   "child"
+  ],
+  "themes": [],
+  "payTypes": [
+   "전자바우처(바우처)"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "방문"
+  ],
+  "onlineApply": null,
+  "summary": "취약계층 등 결식우려아동 급식지원으로 아동의 건강한 성장 도모",
+  "outline": null,
+  "eligibility": "18세 미만의 취학아동 및 미취학 아동 중 결식우려가 있는 아동",
+  "selectionCriteria": "(1) 아래의 어느 하나에 해당하는 아동으로서 결식우려가 있는 아동\n ※ 다만, 「아동복지법」 제15조에 따라 생활시설 및 가정위탁으로 보호조치 된 아동 제외\n1. 「국민기초생활보장법」 제2조제2호에 따른 수급자 가구의 아동, 차상위계층 아동\n2. 「한부모가족지원법」에 제5조에 따른 지원대상자가 양육 하는 아동\n3. 「긴급복지지원법」에 따른 긴급복지 지원대상 가구의 아동\n4. 보호자가 사망, 가출, 행방불명, 구금시설에 수용되는 등의 사유로 보호가 필요한 아동\n5. 보호자의 사고, 급성질환, 만성질환 등의 사유로 보호자의 양육능력이 미약한 가구의 아동\n6. 기준중위소득 52%이하인 가구의 아동\n7. 위 각호에는 해당되지 않으나 담임교사, 사회복지사, 이·통· 반장, 시·군·구 담당공무원 등이 추천하는 아동으로서 아동급식심의위원회에서 급식지원이 필요하다고 결정한 아동\n(2) 지역아동센터, 사회복지관 등의 아동복지프로그램 이용 아동\n(3) 외국 국적 아동 중 (1), (2)의 지원기준에 해당하는 아동",
+  "supportContent": "학기 중(토, 공휴일)및 방학 중 중식 지원(1일/8,000원) 급식전자 카드 지원, 지역아동센터 이용아동 지원",
+  "applyMethod": "읍면동 행정복지센터 방문 신청",
+  "applySteps": [],
+  "medianPercent": 52,
+  "applyStart": "2013-01-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종시청 보건복지국 아동청소년과",
+    "url": "044-300-4914"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "아동복지법"
+  ],
+  "forms": [
+   {
+    "name": "★ 2023년도 결식아동 급식 업무 표준매뉴얼_지자체 송부.pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230713UUWBM1512410042863177&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001583&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-08-28",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00005600",
@@ -43197,7 +45600,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005600&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-14"
+  "updatedAt": "2025-06-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004120",
@@ -43246,7 +45652,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004120&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-07-25"
+  "updatedAt": "2025-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006224",
@@ -43309,7 +45718,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006224&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001707",
@@ -43367,7 +45779,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001707&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-02-27"
+  "updatedAt": "2026-02-27",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005059",
@@ -43419,7 +45834,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005059&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001808",
@@ -43474,7 +45892,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001808&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000814",
@@ -43534,7 +45955,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000814&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004938",
@@ -43583,7 +46007,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004938&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002255",
@@ -43632,7 +46059,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002255&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006169",
@@ -43686,7 +46116,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006169&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005447",
@@ -43745,7 +46178,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005447&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006239",
@@ -43810,7 +46246,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006239&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003188",
@@ -43882,7 +46321,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003188&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005167",
@@ -43933,7 +46375,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005167&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005407",
@@ -44087,7 +46532,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005407&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-01-10"
+  "updatedAt": "2024-01-10",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002817",
@@ -44137,7 +46585,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002817&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004136",
@@ -44192,7 +46643,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004136&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005321",
@@ -44251,7 +46705,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005321&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000516",
@@ -44302,7 +46759,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000516&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005089",
@@ -44360,7 +46820,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005089&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004993",
@@ -44414,7 +46877,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004993&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004592",
@@ -44468,7 +46934,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004592&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003491",
@@ -44519,7 +46988,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003491&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002578",
@@ -44574,7 +47046,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002578&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000450",
@@ -44631,7 +47106,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000450&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006051",
@@ -44682,7 +47160,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006051&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001125",
@@ -44743,7 +47224,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001125&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004588",
@@ -44797,7 +47281,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004588&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004727",
@@ -44855,7 +47342,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004727&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004465",
@@ -44909,7 +47399,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004465&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000147",
@@ -44961,7 +47454,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000147&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004966",
@@ -45012,7 +47508,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004966&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001020",
@@ -45086,7 +47585,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001020&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002325",
@@ -45137,7 +47639,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002325&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001152",
@@ -45201,7 +47706,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001152&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001606",
@@ -45257,7 +47765,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001606&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000950",
@@ -45309,7 +47820,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000950&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001983",
@@ -45364,7 +47878,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001983&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001569",
@@ -45425,7 +47942,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001569&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001483",
@@ -45477,7 +47997,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001483&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-06-13"
+  "updatedAt": "2024-06-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003141",
@@ -45531,7 +48054,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003141&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005653",
@@ -45589,7 +48115,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005653&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003204",
@@ -45657,7 +48186,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003204&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004708",
@@ -45706,7 +48238,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004708&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005599",
@@ -45754,7 +48289,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005599&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-06"
+  "updatedAt": "2025-06-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004100",
@@ -45809,7 +48347,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004100&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002592",
@@ -45862,7 +48403,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002592&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-11"
+  "updatedAt": "2025-06-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006269",
@@ -45925,7 +48469,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006269&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006202",
@@ -45973,7 +48520,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006202&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-02-03"
+  "updatedAt": "2026-02-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005241",
@@ -46024,7 +48574,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005241&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-02-13"
+  "updatedAt": "2026-02-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001627",
@@ -46076,7 +48629,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001627&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005368",
@@ -46136,7 +48692,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005368&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004512",
@@ -46188,7 +48747,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004512&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004415",
@@ -46247,7 +48809,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004415&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003741",
@@ -46302,7 +48867,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003741&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006089",
@@ -46355,7 +48923,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006089&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003431",
@@ -46413,7 +48984,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003431&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-07-25"
+  "updatedAt": "2025-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004013",
@@ -46469,7 +49043,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004013&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001590",
@@ -46523,7 +49100,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001590&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003168",
@@ -46603,7 +49183,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003168&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001540",
@@ -46658,7 +49241,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001540&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000484",
@@ -46714,7 +49300,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000484&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004851",
@@ -46765,7 +49354,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004851&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005561",
@@ -46817,7 +49409,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005561&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004201",
@@ -46868,7 +49463,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004201&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-18"
+  "updatedAt": "2026-06-18",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002890",
@@ -46896,7 +49494,7 @@ export const services: readonly WelfareService[] = [
   "eligibility": "서비스지원 종합조사 결과, 기능제한(x1)영역의 합산 점수가 성인 360점, 아동 260점 이상인 자로 1인가구(1인가구에서 아동은 제외), 취약가구, 가구특성 인정 가구 중 추가지원이 필요하다고 인정하는 자(국비 가산수당 지원대상자 제외)",
   "selectionCriteria": "국민연금공단 서비스지원 종합조사 결과 기능제한(x1)영역의 합산 점수가 성인 360점, 아동 260점 이상인 자",
   "supportContent": "활동보조 급여비용별 가산수당 지급(시간당 가산수당 3,000원~4,500원)",
-  "applyMethod": "ㅇ만6세이상 ~65세 미만 장애인복지법상 등록장애인\nㅇ장애인 활동지원 신청(읍면 행정복지센터)",
+  "applyMethod": "ㅇ만6세이상 ~65세 미만 장애인복지법상 등록장애인ㅇ장애인 활동지원 신청(읍면 행정복지센터)",
   "applySteps": [],
   "medianPercent": null,
   "applyStart": "2017-01-01",
@@ -46919,7 +49517,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002890&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-25"
+  "updatedAt": "2026-09-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00005984",
@@ -46966,7 +49567,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005984&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005851",
@@ -47020,7 +49624,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005851&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003193",
@@ -47089,7 +49696,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003193&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000053",
@@ -47177,7 +49787,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000053&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004101",
@@ -47229,7 +49842,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004101&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005474",
@@ -47276,7 +49892,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005474&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002511",
@@ -47325,7 +49944,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002511&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003156",
@@ -47380,7 +50002,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003156&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-19"
+  "updatedAt": "2026-08-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003973",
@@ -47440,7 +50065,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003973&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001187",
@@ -47507,7 +50135,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001187&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001446",
@@ -47536,8 +50167,8 @@ export const services: readonly WelfareService[] = [
   "onlineApply": null,
   "summary": "다자녀 양육가정의 경제적 부담을 완화하여 출산친화 환경 조성",
   "outline": null,
-  "eligibility": "지원대상 : 2024년 12월 31일까지 출생한 6세 미만의 둘째 이상 자녀지원자격 : 양육비 지원 신청일 기준 부 또는 모가 계양구에 1년 이상 주민등록이 된 경우로               지원대상 자녀와 동일 세대이어야 함",
-  "selectionCriteria": "지원대상 : 만6세 미만의 둘째 이상 자녀\n지원자격 : 양육비 지원 신청일 기준 부 또는 모가 계양구에 1년 이상 주민등록이 된 경우로 \n               지원대상 자녀와 동일 세대이어야 함",
+  "eligibility": "지원대상 : 2024년 12월 31일까지 출생한 6세 미만의 둘째 이상 자녀지원자격 : 양육비 지원 신청일 기준 부 또는 모가 계양구에 1년 이상 주민등록이 된 경우로 지원대상 자녀와 동일 세대이어야 함",
+  "selectionCriteria": "지원대상 : 만6세 미만의 둘째 이상 자녀지원자격 : 양육비 지원 신청일 기준 부 또는 모가 계양구에 1년 이상 주민등록이 된 경우로 지원대상 자녀와 동일 세대이어야 함",
   "supportContent": "지원금액 : 대상아동 1명당 월10만원\n지원기간 : 만6세 생일이 도달하는 달의 전달까지 지원\n * 지원기간 중 타 시군구로 전출이력이 있거나 전출시 지원종료",
   "applyMethod": "신청장소 : 주소지 동 행정복지센터에 신청",
   "applySteps": [],
@@ -47556,13 +50187,24 @@ export const services: readonly WelfareService[] = [
   ],
   "forms": [
    {
+    "name": "첨부파일없음.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240619UUWBM1111380090126145&atcflSn=1"
+   },
+   {
     "name": "다자녀 가정 양육비 지원 신청서.hwp",
     "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250604UUWBM1135560140616471&atcflSn=1"
+   },
+   {
+    "name": "★2023년 출산서비스 통합처리 신청서.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20230525UUWBM1303450036208891&atcflSn=1"
    }
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001446&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-05"
+  "updatedAt": "2026-09-08",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00001097",
@@ -47629,7 +50271,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001097&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004669",
@@ -47690,7 +50335,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004669&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004510",
@@ -47743,7 +50391,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004510&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003153",
@@ -47801,7 +50452,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003153&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006067",
@@ -47848,7 +50502,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006067&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004853",
@@ -47902,7 +50559,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004853&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005606",
@@ -47958,7 +50618,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005606&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004034",
@@ -48017,7 +50680,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004034&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005418",
@@ -48068,7 +50734,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005418&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002233",
@@ -48124,7 +50793,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002233&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005747",
@@ -48181,7 +50853,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005747&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002224",
@@ -48231,7 +50906,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002224&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-01"
+  "updatedAt": "2026-08-01",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001394",
@@ -48283,7 +50961,65 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001394&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00005737",
+  "name": "세종 이응패스 도입",
+  "provider": "local",
+  "views": 7718,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 교통국 대중교통과",
+  "targets": [
+   "disability"
+  ],
+  "lifeStages": [
+   "senior",
+   "teen"
+  ],
+  "themes": [],
+  "payTypes": [
+   "기타"
+  ],
+  "cycle": "월",
+  "applyMethods": [],
+  "onlineApply": null,
+  "summary": "타 특·광역시에 비해 낮은 대중교통 이용을 활성화하기 위해 세종형 대중교통 월정액권* 이응패스 도입\n* 일반 시민 이용료 2만원 / 어르신(만 70세 이상), 청소년(만 13세 ~ 만 80세), 장애인(장애인 등록자)은 패스 이용료 무료",
+  "outline": null,
+  "eligibility": "ㅇ (대상) 세종시민(주기적 주민등록 거주지 인증 시행)ㅇ (혜택) 월 2만원*에 월 5만원까지 혜택 받는 이응패스 구입(매월 1일부터 말일까지 사용)   * 만 70세 이상 고령자, 청소년(만 13~만 18세 이하), 장애인(장애인 등록자)은 패스 구입비 2만원 무료 ㅇ (제도 안내) 세종시청 이응패스 페이지(https://www.sejong.go.kr/life/sub02_0902.do) / 세종시청 민원 콜센터(044-120)",
+  "selectionCriteria": "ㅇ (대상) 세종시민(주기적 주민등록 거주지 인증 시행) ㅇ (혜택) 월 2만원에 구입하여 월 5만원까지 환급 혜택 받는 세종형 대중교통 월 정액권 이응패스(일반 이용자 3만원 경제적 이득)ㅇ (무료대상자) 2만원 패스 구입비 무료 - (어르신) 만 70세 이상 - (청소년) 만 13세 ~ 만 18세 - (장애인) 연령 무관, 장애인 등록자",
+  "supportContent": "ㅇ (대상) 이응패스 구입 세종시민(주기적 주민등록 거주지 인증 시행) ㅇ (혜택) 월 2만원에 월 5만원까지 혜택 받는 이응패스 구입  - 세종, 대전, 청주, 천안, 공주, 계룡 지역 대중교통 이용요금 5만원 환급",
+  "applyMethod": "직접 지원(별도 신청사항 없음)",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2024-09-09",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종특별자치시청",
+    "url": "044-120"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "세종특별자치시 대중교통 기본조례 제15조"
+  ],
+  "forms": [
+   {
+    "name": "첨부파일없음.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20240723UUWBM1043300095024531&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005737&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-14",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00002568",
@@ -48335,7 +51071,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002568&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005201",
@@ -48386,7 +51125,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005201&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006226",
@@ -48448,7 +51190,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006226&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005669",
@@ -48504,7 +51249,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005669&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005206",
@@ -48561,7 +51309,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005206&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001674",
@@ -48612,7 +51363,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001674&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-11"
+  "updatedAt": "2026-08-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003252",
@@ -48672,7 +51426,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003252&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005032",
@@ -48746,7 +51503,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005032&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004252",
@@ -48798,7 +51558,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004252&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005413",
@@ -48855,7 +51618,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005413&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005938",
@@ -48915,7 +51681,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005938&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-19"
+  "updatedAt": "2026-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001770",
@@ -48970,7 +51739,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001770&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2024-06-04"
+  "updatedAt": "2024-06-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004434",
@@ -49021,7 +51793,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004434&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005429",
@@ -49071,7 +51846,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005429&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-30"
+  "updatedAt": "2026-06-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002337",
@@ -49124,7 +51902,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002337&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005951",
@@ -49175,7 +51956,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005951&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001021",
@@ -49243,7 +52027,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001021&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004630",
@@ -49300,7 +52087,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004630&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005726",
@@ -49353,7 +52143,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005726&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-07-15"
+  "updatedAt": "2025-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004779",
@@ -49409,7 +52202,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004779&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-06-19"
+  "updatedAt": "2026-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001116",
@@ -49474,7 +52270,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001116&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003742",
@@ -49532,7 +52331,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003742&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005258",
@@ -49578,7 +52380,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005258&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005718",
@@ -49629,7 +52434,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005718&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-19"
+  "updatedAt": "2025-06-19",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004733",
@@ -49692,7 +52500,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004733&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004305",
@@ -49744,7 +52555,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004305&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-05"
+  "updatedAt": "2026-08-05",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005068",
@@ -49800,7 +52614,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005068&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002131",
@@ -49849,7 +52666,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002131&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001625",
@@ -49903,7 +52723,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001625&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002927",
@@ -49953,7 +52776,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002927&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002567",
@@ -50015,7 +52841,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002567&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001160",
@@ -50079,7 +52908,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001160&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001977",
@@ -50134,7 +52966,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001977&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003986",
@@ -50187,7 +53022,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003986&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002021",
@@ -50237,7 +53075,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002021&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003854",
@@ -50286,7 +53127,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003854&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000017",
@@ -50347,7 +53191,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000017&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005254",
@@ -50397,7 +53244,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005254&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005111",
@@ -50454,7 +53304,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005111&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005026",
@@ -50519,7 +53372,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005026&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002874",
@@ -50572,7 +53428,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002874&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004995",
@@ -50630,7 +53489,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004995&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003660",
@@ -50682,7 +53544,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003660&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001376",
@@ -50734,7 +53599,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001376&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001166",
@@ -50810,7 +53678,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001166&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000812",
@@ -50867,7 +53738,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000812&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006003",
@@ -50913,7 +53787,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006003&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005334",
@@ -50968,7 +53845,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005334&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005508",
@@ -51017,7 +53897,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005508&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005513",
@@ -51069,7 +53952,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005513&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-08-06"
+  "updatedAt": "2026-09-04",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00004151",
@@ -51124,7 +54010,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004151&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005408",
@@ -51180,7 +54069,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005408&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004481",
@@ -51217,7 +54109,7 @@ export const services: readonly WelfareService[] = [
   "contacts": [
    {
     "name": "시흥시보건소",
-    "url": "031-380-5488"
+    "url": "031-380-5815"
    }
   ],
   "homepages": [],
@@ -51232,7 +54124,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004481&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-07-05"
+  "updatedAt": "2026-09-03",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": null
  },
  {
   "id": "WLF00005426",
@@ -51291,7 +54186,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005426&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004490",
@@ -51343,7 +54241,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004490&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001075",
@@ -51417,7 +54318,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001075&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005574",
@@ -51474,7 +54378,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005574&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-14"
+  "updatedAt": "2025-06-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000038",
@@ -51535,7 +54442,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000038&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004128",
@@ -51641,7 +54551,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004128&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000944",
@@ -51696,7 +54609,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000944&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006018",
@@ -51747,7 +54663,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006018&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-25"
+  "updatedAt": "2026-07-25",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004947",
@@ -51802,7 +54721,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004947&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004446",
@@ -51856,7 +54778,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004446&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005968",
@@ -51908,7 +54833,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005968&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001494",
@@ -51965,7 +54893,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001494&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000063",
@@ -52043,7 +54974,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000063&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004472",
@@ -52095,7 +55029,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004472&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000807",
@@ -52164,7 +55101,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000807&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003062",
@@ -52215,7 +55155,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003062&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-06-11"
+  "updatedAt": "2025-06-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004322",
@@ -52264,7 +55207,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004322&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002502",
@@ -52313,7 +55259,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002502&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003550",
@@ -52372,7 +55321,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003550&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-04"
+  "updatedAt": "2026-08-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002066",
@@ -52428,7 +55380,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002066&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004042",
@@ -52479,7 +55434,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004042&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002044",
@@ -52538,7 +55496,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002044&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003206",
@@ -52619,7 +55580,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003206&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004332",
@@ -52683,7 +55647,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004332&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001521",
@@ -52733,7 +55700,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001521&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002634",
@@ -52785,7 +55755,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002634&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-07"
+  "updatedAt": "2026-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004186",
@@ -52842,7 +55815,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004186&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001234",
@@ -52894,7 +55870,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001234&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005268",
@@ -52946,7 +55925,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005268&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002332",
@@ -53003,7 +55985,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002332&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-30"
+  "updatedAt": "2026-07-30",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004900",
@@ -53054,7 +56039,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004900&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002895",
@@ -53111,7 +56099,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002895&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005767",
@@ -53343,7 +56334,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005767&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005343",
@@ -53389,7 +56383,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005343&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006284",
@@ -53455,7 +56452,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006284&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005142",
@@ -53511,7 +56511,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005142&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001121",
@@ -53580,7 +56583,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001121&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005770",
@@ -53652,7 +56658,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005770&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-01"
+  "updatedAt": "2026-08-01",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004523",
@@ -53703,7 +56712,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004523&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001623",
@@ -53757,7 +56769,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001623&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002755",
@@ -53806,7 +56821,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002755&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000802",
@@ -53859,7 +56877,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000802&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003214",
@@ -53923,7 +56944,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003214&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003432",
@@ -53984,7 +57008,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003432&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-06"
+  "updatedAt": "2026-08-06",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002509",
@@ -54035,7 +57062,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002509&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000918",
@@ -54093,7 +57123,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000918&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-11"
+  "updatedAt": "2026-07-11",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003293",
@@ -54152,7 +57185,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003293&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001696",
@@ -54201,7 +57237,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001696&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004032",
@@ -54254,7 +57293,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004032&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005350",
@@ -54305,7 +57347,68 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005350&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-21"
+  "updatedAt": "2026-08-21",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00005320",
+  "name": "청년 주택임차보증금 이자지원사업",
+  "provider": "local",
+  "views": 6832,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 기획조정실 청년정책담당관",
+  "targets": [],
+  "lifeStages": [
+   "youth"
+  ],
+  "themes": [],
+  "payTypes": [
+   "현금지급"
+  ],
+  "cycle": "분기",
+  "applyMethods": [
+   "인터넷"
+  ],
+  "onlineApply": null,
+  "summary": "○ 전·월세 거주 청년가구의 주거비 부담 완화 및 안정적인 주거생활 지원",
+  "outline": null,
+  "eligibility": "○ (신청대상) 세종시에 주소를 두고 있거나 세종시로 전입예정인 19~39세 이하의 무주택 청년 및 신혼부부  ○ (자격요건)    - 주택기준: 임차보증금 2억원 이하(신혼부부 3억원 이하)의 주택 또는 오피스텔   - 소득기준     1) 대학(원)생, 취업준비생 : 본인 연소득 45백만원 이하이면서, 부모 연소득 70백만원 이하     2) 직 장 인 : 본인 연소득 45백만원 이하     3) 신혼부부 : 부부합산 연소득 70백만원 이하 ○ (제외대상) 주택소유자, 주거급여 수급자, 공공임대 거주자, 정부 금융지원 또는 시 주거지원 사업 참여자",
+  "selectionCriteria": "○ (신청대상) 세종시에 주소를 두고 있거나 세종시로 전입예정인 19~39세 이하의 무주택 청년 및 신혼부부  ○ (자격요건)    - 주택기준: 임차보증금 2억원 이하(신혼부부 3억원 이하)의 주택 또는 오피스텔   - 소득기준     1) 대학(원)생, 취업준비생 : 본인 연소득 45백만원 이하이면서, 부모 연소득 70백만원 이하     2) 직 장 인 : 본인 연소득 45백만원 이하     3) 신혼부부 : 부부합산 연소득 80백만원 이하 ○ (제외대상) 주택소유자, 주거급여 수급자, 공공임대 거주자, 정부 금융지원 또는 시 주거지원 사업 참여자",
+  "supportContent": "대출한도 1억원 이내 대출추천 및 대출이자 최대 4.1% 지원('25년 기준)",
+  "applyMethod": "○ 온라인: 세종청년희망내일센터 누리집 잡아람(https://www.jobaram.com)※ 연장신청은 담당자 개별 연락",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2022-05-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종시청 청년정책담당관",
+    "url": "044-300-6033"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "청년기본법 제20조, 주거기본법 제15조, 세종시 청년기본 조례 제24조, 세종시 청년주거 지원 조례 제5조"
+  ],
+  "forms": [
+   {
+    "name": "청년 주택임차보증금 이자지원 사업 추진근거.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20250611UUWBM0911350141490345&atcflSn=1"
+   },
+   {
+    "name": "서식없음.hwp",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=5521GOWF15GOWF155521&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005320&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-06-30",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00002042",
@@ -54361,7 +57464,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002042&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000670",
@@ -54412,7 +57518,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000670&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004412",
@@ -54468,7 +57577,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004412&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004625",
@@ -54521,7 +57633,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004625&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000688",
@@ -54583,7 +57698,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000688&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-10"
+  "updatedAt": "2026-07-10",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001829",
@@ -54643,7 +57761,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001829&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005860",
@@ -54699,7 +57820,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005860&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004253",
@@ -54751,7 +57875,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004253&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-13"
+  "updatedAt": "2026-08-13",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001073",
@@ -54827,7 +57954,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001073&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000718",
@@ -54884,7 +58014,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000718&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002666",
@@ -54936,7 +58069,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002666&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-15"
+  "updatedAt": "2026-08-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002628",
@@ -54989,7 +58125,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002628&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000101",
@@ -55058,7 +58197,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000101&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004577",
@@ -55114,7 +58256,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004577&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-14"
+  "updatedAt": "2026-08-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001247",
@@ -55175,7 +58320,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001247&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-05-31"
+  "updatedAt": "2025-05-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000549",
@@ -55226,7 +58374,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000549&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005099",
@@ -55306,7 +58457,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005099&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005892",
@@ -55361,7 +58515,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005892&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005018",
@@ -55417,7 +58574,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005018&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004654",
@@ -55473,7 +58633,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004654&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004704",
@@ -55535,7 +58698,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004704&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001717",
@@ -55619,7 +58785,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001717&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00000908",
@@ -55668,7 +58837,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000908&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001173",
@@ -55737,7 +58909,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001173&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005762",
@@ -55801,7 +58976,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005762&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002183",
@@ -55852,7 +59030,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002183&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-17"
+  "updatedAt": "2026-07-17",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005203",
@@ -55907,7 +59088,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005203&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004245",
@@ -55958,7 +59142,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004245&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005630",
@@ -56006,7 +59193,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005630&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-20"
+  "updatedAt": "2026-08-20",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001673",
@@ -56059,7 +59249,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001673&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-15"
+  "updatedAt": "2026-07-15",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003680",
@@ -56113,7 +59306,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003680&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-22"
+  "updatedAt": "2026-08-22",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001384",
@@ -56171,7 +59367,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001384&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-04"
+  "updatedAt": "2026-07-04",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002134",
@@ -56227,7 +59426,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002134&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002008",
@@ -56285,7 +59487,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002008&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005355",
@@ -56340,7 +59545,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005355&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-14"
+  "updatedAt": "2026-07-14",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004534",
@@ -56404,7 +59612,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004534&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2022-06-29"
+  "updatedAt": "2022-06-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001096",
@@ -56464,7 +59675,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001096&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002557",
@@ -56517,7 +59731,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002557&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-16"
+  "updatedAt": "2026-07-16",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005855",
@@ -56563,7 +59780,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005855&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-29"
+  "updatedAt": "2026-07-29",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00002713",
@@ -56614,7 +59834,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002713&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-03"
+  "updatedAt": "2026-07-03",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00001786",
@@ -56670,7 +59893,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001786&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-08"
+  "updatedAt": "2026-08-08",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005847",
@@ -56722,7 +59948,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005847&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-28"
+  "updatedAt": "2026-07-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00003630",
@@ -56773,7 +60002,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003630&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006275",
@@ -56832,7 +60064,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006275&wlfareInfoReldBztpCd=01",
   "baseYear": "2026",
-  "updatedAt": null
+  "updatedAt": null,
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004112",
@@ -56948,7 +60183,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004112&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-08-28"
+  "updatedAt": "2026-08-28",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00006156",
@@ -57040,7 +60278,10 @@ export const services: readonly WelfareService[] = [
   "forms": [],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006156&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2025-08-07"
+  "updatedAt": "2025-08-07",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00005237",
@@ -57100,7 +60341,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005237&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  },
  {
   "id": "WLF00004036",
@@ -57157,7 +60401,63 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004036&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-31"
+  "updatedAt": "2026-07-31",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
+ },
+ {
+  "id": "WLF00004476",
+  "name": "아이 돌보는 아빠 장려금 지원",
+  "provider": "local",
+  "views": 6448,
+  "sidoName": "세종특별자치시",
+  "sigunguName": null,
+  "department": "세종특별자치시 보건복지국 인구여성가족과",
+  "targets": [],
+  "lifeStages": [],
+  "themes": [],
+  "payTypes": [
+   "지역화폐"
+  ],
+  "cycle": "월",
+  "applyMethods": [
+   "방문",
+   "인터넷"
+  ],
+  "onlineApply": null,
+  "summary": "□ 사업개요\n ○ (사업목적) 남성 근로자의 육아 휴직을 장려하고 양육에 따른 경제적 부담을 완화하므로써 일과 가정생활의 양립 및 가족 친화적인 사회환경 조성\n ○ (지원대상) ‘26. 1. 1 기준 육아휴직 중인 남성 근로자 \n ○ (지원조건) 다음 조건을 모두 충족하는 남성 육아휴직자\n   - 육아휴직자가 신청일 기준 시에 1년 이상 계속하여 주민등록이 되어 있는 경우\n   - 육아휴직의 대상 자녀가 신청일 기준 시에 주민등록을 두고 있는 경우\n   - 고용보험법 제70조에 따른 육아휴직 급여의 지급조건을 충족하는 경우\n   - 고용보험법 시행령 제95조의3에 해당하는 특례 적용자(월 통상임금의 100% 지급결정자)는 특례적용 기간이 종료된 달의 다음달부터 아빠장려금 지급 가능기간 \n     (특례적용 기간에는 아빠장려금 지급 제외) \n ○ (지원금액) 월30만원씩, 최소 1개월 ∼ 최대 6개월(30만원∼180만원)\n ○ (신청기간) 육아휴직 시작일 1개월부터 육아휴직 종료일 전일까지 \n ○ (지급방법) 세종시 지역화폐로 지급 → 여민전 \n   - 월1회(매월 20일) 지급, 월30만원씩 최대 6개월 지원  \n   - 급여대상자의 지급 대상 기간이 1개월을 채우지 못하는 경우에는 해당 월에 휴직한 일수에 따라 일할 계산          ※ 6개월 미만은 휴직 기간 만큼 지원",
+  "outline": null,
+  "eligibility": "○ (지원조건) 다음 조건을 모두 충족하는 남성 육아휴직자   - 육아휴직자가 신청일 기준 시에 1년이상 계속하여 주민등록이 되어 있는 경우   - 육아휴직의 대상 자녀가 신청일 기준 시에 주민등록을 두고 있는 경우   - 고용보험법 제70조에 따른 육아휴직 급여의 지급조건을 충족하는 경우   - 고용보험법 시행령 제95조의3에 해당하는 특례 적용자(월 통상임금의 100% 지급결정자)는 특례적용 기간이 종료된 달의 다음달부터 아빠장려금 지급 가능기간      (특례적용 기간에는 아빠장려금 지급 제외)",
+  "selectionCriteria": "○ (지원조건) 다음 조건을 모두 충족하는 남성 육아휴직자   - 육아휴직자가 신청일 기준 시에 1년이상 계속하여 주민등록이 되어 있는 경우   - 육아휴직의 대상 자녀가 신청일 기준 시에 주민등록을 두고 있는 경우   - 고용보험법 제70조에 따른 육아휴직 급여의 지급조건을 충족하는 경우   - 고용보험법 시행령 제95조의3에 해당하는 특례 적용자(월 통상임금의 100% 지급결정자)는 특례적용 기간이 종료된 달의 다음달부터 아빠장려금 지급 가능기간      (특례적용 기간에는 아빠장려금 지급 제외)",
+  "supportContent": "월 30만원씩 최대 6개월 지급(육아휴직 해당 자녀당) 육아휴직 기간 만큼 지급/지역화폐로 지급",
+  "applyMethod": "해당 읍/면/동 행정복지센터에 직접 방문 신청하거나 정부24 홈페이지에서 온라인 신청합니다. <구비서류> 1. 아이 돌보는 아빠 장려금 신청서 1부.2. 육아 휴직 급여 결정통지서 1부. (고용24 홈페이지에서 본인 직접 조회 출력)3. 육아 휴직확인서 1부. (고용24 홈페이지에서 본인 직접 조회 출력)",
+  "applySteps": [],
+  "medianPercent": null,
+  "applyStart": "2022-01-01",
+  "applyEnd": "9999-12-31",
+  "contacts": [
+   {
+    "name": "세종특별자치시 인구여성가족과",
+    "url": "044-300-3716"
+   }
+  ],
+  "homepages": [],
+  "lawBasis": [
+   "아이 돌보는 아빠 장려금 지원 조례"
+  ],
+  "forms": [
+   {
+    "name": "아빠장려금 조례.pdf",
+    "url": "https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20260616UUWBM1543020197228901&atcflSn=1"
+   }
+  ],
+  "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004476&wlfareInfoReldBztpCd=02",
+  "baseYear": null,
+  "updatedAt": "2026-07-03",
+  "checkedAt": "2026-09-13",
+  "changedAt": "2026-09-13",
+  "addedAt": "2026-09-13"
  },
  {
   "id": "WLF00002565",
@@ -57212,7 +60512,10 @@ export const services: readonly WelfareService[] = [
   ],
   "officialUrl": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002565&wlfareInfoReldBztpCd=02",
   "baseYear": null,
-  "updatedAt": "2026-07-23"
+  "updatedAt": "2026-07-23",
+  "checkedAt": null,
+  "changedAt": null,
+  "addedAt": null
  }
 ];
 

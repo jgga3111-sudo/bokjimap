@@ -4,6 +4,7 @@ import { searchFull } from "@/lib/searchFull";
 import { services } from "@/data/services";
 import SearchBox from "@/components/SearchBox";
 import { POPULAR } from "@/lib/popular";
+import ClosedBadge from "@/components/ClosedBadge";
 
 export const metadata: Metadata = {
   title: "복지 서비스 검색",
@@ -118,7 +119,9 @@ export default async function SearchPage({
                 href={`/service/${h.id}`}
                 className="block px-4 py-3 transition hover:bg-brand-soft/40"
               >
-                <p className="font-medium text-ink">{h.name}</p>
+                <p className="font-medium text-ink">
+                  {h.name} <ClosedBadge id={h.id} />
+                </p>
                 <p className="mt-0.5 text-xs text-muted">
                   {[h.place, h.dept].filter(Boolean).join(" · ")}
                 </p>

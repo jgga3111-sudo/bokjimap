@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import { isClosed } from "./ClosedBadge";
+import { useLocalToday } from "@/lib/useLocalToday";
 import { toCard, type HubRow, type FacetGroup } from "@/lib/hubRows";
 
 /**
@@ -40,6 +42,9 @@ export default function HubList({
      되는데, 사람이 기대하는 건 대개 "서울 중에서 청년"이다. */
   const [sel, setSel] = useState<Record<string, string>>({});
   const [shown, setShown] = useState(PAGE);
+  /* 아래 「이름으로 훑어보기」 줄에도 마감을 표시하려고 읽는다(2026-09-13).
+     카드는 ServiceCard 안의 ClosedBadge가 따로 판정한다. */
+  const today = useLocalToday();
 
   /*
     필터 상자를 접을지 말지.
@@ -247,6 +252,14 @@ export default function HubList({
                 >
                   {r[1]}
                 </a>
+                {/* 카드에는 「마감」 딱지가 붙는데 여기만 없으면, 카드 60장 밖의
+                    사업은 끝났는지 모른 채 눌러 들어가게 된다(2026-09-13 화면
+                    점검에서 청년 허브의 인천형 청년월세가 그랬다). */}
+                {isClosed(r[0], today) && (
+                  <span className="ml-1.5 text-xs font-bold text-amber-800">
+                    마감
+                  </span>
+                )}
               </li>
             ))}
           </ul>

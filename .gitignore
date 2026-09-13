@@ -44,3 +44,9 @@ next-env.d.ts
 
 # 상세 API 응답 캐시 중 파싱본 — 아무도 안 읽는다(build-data는 detail-raw만 본다)
 data-research/detail/
+
+# 변경 점검(check-updates.mjs) — 원본 덤프는 크고 되풀이 받을 수 있어 올리지 않는다.
+# 보고서와 다시 받은 id 목록만 남긴다(2026-09-13).
+data-research/check/*/*
+!data-research/check/*/report.json
+!data-research/check/*/recheck-ids.json
