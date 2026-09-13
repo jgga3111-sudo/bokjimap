@@ -3,10 +3,14 @@ import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import MailLink from "@/components/MailLink";
 import { SITE } from "@/lib/site";
-import { services } from "@/data/services";
+import { services, SERVICES_UPDATED } from "@/data/services";
 import { SIDO_LIST } from "@/lib/regions";
 import { BASE_YEAR } from "@/lib/midIncome";
 import AdSenseScript from "@/components/AdSenseScript";
+import { SOURCE_TOTAL, SOURCE_TOTALS } from "@/lib/sourceTotals";
+import { GUIDES } from "@/lib/guides";
+import { PAY_DATES } from "@/lib/payDates";
+import { CALENDAR } from "@/lib/calendar";
 
 export const metadata: Metadata = {
   title: "사이트 소개",
@@ -16,6 +20,15 @@ export const metadata: Metadata = {
 };
 
 const local = services.filter((s) => s.provider === "local").length;
+
+/* 조회수가 얼마나 몰려 있나 — 손으로 적었던 「상위 500건이 86.5%」가 수록이 바뀌며
+   낡아 있었다(2026-09-13 발견). 렌더할 때 센다. */
+const TOP_N = 100;
+const byViews = [...services].sort((a, b) => b.views - a.views);
+const totalViews = byViews.reduce((a, s) => a + s.views, 0);
+const topShare = totalViews
+  ? Math.round((byViews.slice(0, TOP_N).reduce((a, s) => a + s.views, 0) / totalViews) * 1000) / 10
+  : 0;
 const central = services.filter((s) => s.provider === "central").length;
 
 export default function AboutPage() {
@@ -44,8 +57,9 @@ export default function AboutPage() {
           items={[
             <>
               <strong>많이 찾는 것부터 보여줍니다.</strong> 복지로에서 실제로
-              조회된 횟수 순으로 정렬합니다. 전체 5,219건 중 상위 500건이 전체
-              조회수의 86.5%를 차지합니다.
+              조회된 횟수 순으로 정렬합니다. 수록한{" "}
+              {services.length.toLocaleString()}건 중 상위 {TOP_N}건이 수록분 조회수의{" "}
+              {topShare}%를 차지합니다.
             </>,
             <>
               <strong>한 장에서 읽히게 합니다.</strong> 현금인지 바우처인지
@@ -53,12 +67,12 @@ export default function AboutPage() {
               담습니다.
             </>,
             <>
-              <strong>내가 대상인지 바로 계산합니다.</strong>{" "}
+              <strong>내 소득이 기준선의 어디쯤인지 계산합니다.</strong>{" "}
               <Link href="/check" className="text-brand underline">
                 자가진단
               </Link>
               에 가구원 수와 소득을 넣으면 {BASE_YEAR}년 기준 중위소득의 몇
-              %인지, 어느 급여 기준선에 드는지 나옵니다.
+              %인지 나옵니다. 받을 수 있는지를 판정하지는 않습니다.
             </>,
             <>
               <strong>원문을 고치지 않습니다.</strong> 지원 대상·선정 기준·지원
@@ -116,8 +130,8 @@ export default function AboutPage() {
           </table>
         </div>
         <p>
-          공공데이터포털에 등록된 전체는 5,219건이고, 그중 조회수가 높은 것부터
-          차례로 채우고 있습니다. 어디서 받아 온 데이터인지는{" "}
+          공공데이터포털에 등록된 전체는 {SOURCE_TOTAL.toLocaleString()}건({SOURCE_TOTALS.checkedAt} 기준)이고,
+          그중 조회수가 높은 것부터 차례로 채우고 있습니다. 어디서 받아 온 데이터인지는{" "}
           <Link href="/source" className="text-brand underline">
             데이터 출처
           </Link>
@@ -125,10 +139,72 @@ export default function AboutPage() {
         </p>
       </DocSection>
 
+      <DocSection title="원문에 없는 것은 따로 확인합니다">
+        <p>
+          공공데이터에는 지급일·신청 일정·계산 방법처럼 사람들이 가장 궁금해하는 값이 빠져 있는
+          경우가 많습니다. 그런 값은 법령 조문, 부처 고시, 정부가 낸 사업안내서를 직접 읽고
+          찾아 출처와 확인일을 함께 적습니다.
+        </p>
+        <DocList
+          items={[
+            <>
+              직접 쓴{" "}
+              <Link href="/guide" className="text-brand underline">
+                안내 글 {GUIDES.length}편
+              </Link>{" "}
+              — 글마다 근거 조문·쪽수를 달았습니다.
+            </>,
+            <>
+              법령에서 찾은{" "}
+              <Link href="/guide/pay-dates" className="text-brand underline">
+                지급일 {PAY_DATES.length}건
+              </Link>{" "}
+              · 공식 공고로 확인한{" "}
+              <Link href="/guide/calendar" className="text-brand underline">
+                신청 일정 {CALENDAR.length}건
+              </Link>
+            </>,
+            <>
+              두 출처가 서로 다르면 한쪽을 고르지 않고 다르다는 사실을 그대로 적습니다. 자세한
+              원칙은{" "}
+              <Link href="/standards" className="text-brand underline">
+                정보 수집·검수 기준
+              </Link>
+              에 있습니다.
+            </>,
+          ]}
+        />
+      </DocSection>
+
+      <DocSection title="광고와 운영비">
+        <p>
+          복지클릭은 개인이 운영하며, 운영비는 Google AdSense 광고로 충당하려 합니다(현재 광고
+          승인 심사 중). 광고는 안내 글·지원 상세처럼 내용이 있는 페이지에만 싣고, 검색 결과·관심 지원
+          목록 같은 화면에는 싣지 않습니다.
+        </p>
+        <DocList
+          items={[
+            <>돈을 받고 특정 사업을 위에 올리거나 소개하지 않습니다. 순서는 복지로 조회수입니다.</>,
+            <>제휴(수수료) 링크를 쓰지 않습니다.</>,
+            <>
+              광고 쿠키가 어떻게 처리되는지는{" "}
+              <Link href="/privacy" className="text-brand underline">
+                개인정보처리방침
+              </Link>{" "}
+              4조에 적었습니다.
+            </>,
+          ]}
+        />
+      </DocSection>
+
       <DocSection title="운영">
         <DocList
           items={[
             <>운영자: {SITE.operator}</>,
+            <>
+              데이터를 처음 받은 날 {SERVICES_UPDATED} · 상위 사업을 다시 받아 대조한 날{" "}
+              {SOURCE_TOTALS.checkedAt}. 사업마다의 확인일은 각 상세 페이지 제목 아래에 있습니다.
+            </>,
             <>
               문의·오류 신고: <MailLink className="text-brand underline" />
             </>,

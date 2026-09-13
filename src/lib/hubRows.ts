@@ -3,6 +3,7 @@ import type { CardService } from "@/components/ServiceCard";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, hasBenefit } from "@/lib/benefits";
 import { SIDO_LIST } from "@/lib/regions";
+import { clipSummary } from "@/lib/display";
 
 /**
  * 허브 목록을 브라우저로 넘기기 위한 준비.
@@ -27,8 +28,15 @@ import { SIDO_LIST } from "@/lib/regions";
  * ────────────────────────────────────────────────────────────────
  */
 
-/** 카드 요약문을 자르는 길이. 카드는 두 줄까지만 보여주므로 그 이상은 버린다. */
-const SUMMARY_MAX = 140;
+/**
+ * 카드 요약문을 자르는 길이. 카드는 두 줄까지만 보여주므로 그 이상은 버린다.
+ *
+ * 140 → 80 (2026-09-13). 375px 두 줄에 실제로 보이는 것은 60~80자인데 140자를 HTML에 싣고
+ * 있었다. 허브 한 쪽에 원문 요약이 스물네 장씩 들어가 본문의 30~46%가 복지로 원문과 같은
+ * 글이 됐다(애드센스 「가치가 별로 없는 콘텐츠」 재점검). 보이지 않는 글자를 줄여 그 비중을 낮춘다.
+ * 자르는 규칙은 `lib/display.ts`의 `clipSummary` 하나 — ServiceCard도 같은 함수를 쓴다.
+ */
+const SUMMARY_MAX = 80;
 
 /**
  * 압축 행. 순서가 곧 규약이다 — `toCard`와 짝을 이룬다.
@@ -58,8 +66,7 @@ export type HubRow = [
   number, // medianPercent — 없으면 0
 ];
 
-const cut = (t: string | null) =>
-  !t ? "" : t.length > SUMMARY_MAX ? t.slice(0, SUMMARY_MAX) + "…" : t;
+const cut = (t: string | null) => clipSummary(t, SUMMARY_MAX) ?? "";
 
 const SIDO_SLUG = new Map(SIDO_LIST.map((s) => [s.fullName, s.slug]));
 const THEME_SLUG = new Map(THEMES.map((t) => [t.value, t.slug]));

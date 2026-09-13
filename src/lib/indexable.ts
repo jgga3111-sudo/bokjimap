@@ -1,5 +1,5 @@
 import { services } from "@/data/services";
-import { hasEnoughBody, type WelfareService } from "@/types/welfare";
+import { bodyText, hasEnoughBody, type WelfareService } from "@/types/welfare";
 import { hasExtras } from "@/lib/serviceExtras";
 
 /**
@@ -44,4 +44,19 @@ export function viewRank(s: WelfareService): number {
 export function isIndexable(s: WelfareService): boolean {
   if (!hasEnoughBody(s)) return false;
   return viewRank(s) <= INDEX_TOP_N || hasExtras(s);
+}
+
+/**
+ * 광고 코드를 실을 상세인가 (2026-09-13 재점검).
+ *
+ * 색인 대상 272쪽을 다시 재 보니 **본문 874~996자짜리 상세에도 광고 코드가 붙어** 있었다 —
+ * 소개 페이지보다 짧다. 검색에는 내보내되(조회수 상위라 찾는 사람이 있다) 광고는
+ * 원문 본문이 `AD_MIN_BODY`자 이상이거나 우리가 따로 확인한 정보가 붙은 사업에만 싣는다.
+ * 09-13 기준 272쪽 중 70쪽이 빠진다.
+ */
+export const AD_MIN_BODY = 500;
+
+export function showAds(s: WelfareService): boolean {
+  if (!isIndexable(s)) return false;
+  return bodyText(s).length >= AD_MIN_BODY || hasExtras(s);
 }

@@ -202,3 +202,18 @@ export function ro(word: string): string {
   const jong = code % 28;
   return jong === 0 || jong === 8 ? `${word}로` : `${word}으로`;
 }
+
+/**
+ * 목록 카드의 요약문 자르기 (2026-09-13).
+ *
+ * 카드는 `line-clamp-2`로 두 줄만 보여 주는데 HTML에는 요약문 전체가 실렸다. 보이지 않는 글자가
+ * 목록 페이지마다 원문을 되풀이해 「가치가 별로 없는 콘텐츠」 신호가 된다. 낱말 가운데서 자르지
+ * 않게 `max` 안의 마지막 띄어쓰기에서 끊는다(띄어쓰기가 너무 앞이면 그냥 `max`에서).
+ */
+export function clipSummary(t: string | null, max = 80): string | null {
+  if (!t) return null;
+  if (t.length <= max) return t;
+  const head = t.slice(0, max);
+  const sp = head.lastIndexOf(" ");
+  return (sp > max * 0.6 ? head.slice(0, sp) : head).replace(/[\s,.·]+$/, "") + "…";
+}

@@ -6,7 +6,7 @@ import {
   isCriteriaBoilerplate,
   type WelfareService,
 } from "@/types/welfare";
-import { isIndexable } from "@/lib/indexable";
+import { isIndexable, showAds } from "@/lib/indexable";
 import { extrasOf, hasExtras } from "@/lib/serviceExtras";
 import { hasDates } from "@/lib/calendar";
 import AddToCalendar from "@/components/AddToCalendar";
@@ -720,8 +720,8 @@ export default async function ServiceDetail({
 
   return (
     <article className="space-y-8">
-      {/* 광고 코드는 색인시키는 상세에만(2026-09-13, AdSenseScript 머리말). */}
-      {isIndexable(s) && <AdSenseScript />}
+      {/* 광고 코드는 색인시키는 상세 중 본문이 두툼하거나 따로 확인한 정보가 있는 곳에만(2026-09-13, lib/indexable.ts showAds). */}
+      {showAds(s) && <AdSenseScript />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumb) }}

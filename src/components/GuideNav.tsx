@@ -52,6 +52,30 @@ export default function GuideNav({ current }: { current: string }) {
 
   return (
     <nav className="mt-14 border-t border-line pt-8">
+      {/* 이 글을 누가 어떻게 썼나 (2026-09-13). 애드센스 「가치가 별로 없는 콘텐츠」 재점검에서
+          안내 글 22편 어디에도 쓴 사람·확인 방법이 화면에 없었다 — Article JSON-LD에만 있었다.
+          모든 글 끝에 이미 붙는 이 부품에 한 번 넣어 빠뜨릴 수 없게 한다. */}
+      <aside className="mb-8 rounded-xl border border-line bg-white px-4 py-3.5 text-sm leading-relaxed text-slate-700">
+        <p className="font-bold text-ink">이 글은 이렇게 썼습니다</p>
+        <p className="mt-1">
+          복지클릭 운영자가 공공데이터와 법령·고시·정부 사업안내서를 직접 읽고 썼습니다. 금액과
+          조건은 원문 표현을 그대로 옮기고, 저희가 계산한 값에는 따로 표시했습니다. 받을 수
+          있는지는 판정하지 않습니다.
+        </p>
+        <p className="mt-1.5 text-xs text-muted">
+          <Link href="/standards" className="underline hover:text-brand">
+            정보 수집·검수 기준
+          </Link>{" "}
+          ·{" "}
+          <Link href="/about" className="underline hover:text-brand">
+            사이트 소개
+          </Link>{" "}
+          · 틀린 곳을 찾으셨다면{" "}
+          <Link href="/contact" className="underline hover:text-brand">
+            알려 주세요
+          </Link>
+        </p>
+      </aside>
       <AdSenseScript />
       {article && (
         <script

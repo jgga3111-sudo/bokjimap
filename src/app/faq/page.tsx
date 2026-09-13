@@ -11,6 +11,7 @@ import { won } from "@/lib/display";
 import { SITE } from "@/lib/site";
 import { jsonLd as toJsonLd } from "@/lib/safe";
 import AdSenseScript from "@/components/AdSenseScript";
+import { SOURCE_TOTAL, SOURCE_TOTALS } from "@/lib/sourceTotals";
 
 export const metadata: Metadata = {
   title: "자주 묻는 질문 — 기준 중위소득·건강보험료·가구원 수",
@@ -443,7 +444,8 @@ const GROUPS: Group[] = [
               것입니다.
             </p>
             <p>
-              둘째, 아직 저희가 수록하지 않은 경우입니다. 전체 5,219건 중
+              둘째, 아직 저희가 수록하지 않은 경우입니다. 전체{" "}
+              {SOURCE_TOTAL.toLocaleString()}건({SOURCE_TOTALS.checkedAt} 기준) 중
               조회수가 높은 것부터 순서대로 채우고 있어서, 조회수가 낮은 사업은
               나중에 들어옵니다. 시청·군청·구청 홈페이지의 복지 안내도 함께
               확인해 보세요.
@@ -451,7 +453,7 @@ const GROUPS: Group[] = [
           </>
         ),
         plain:
-          "해당 지자체가 공공데이터포털에 사업을 등록하지 않았거나, 아직 저희가 수록하지 않은 경우입니다. 전체 5,219건 중 조회수가 높은 것부터 순서대로 채우고 있습니다.",
+          `해당 지자체가 공공데이터포털에 사업을 등록하지 않았거나, 아직 저희가 수록하지 않은 경우입니다. 전체 ${SOURCE_TOTAL.toLocaleString()}건 중 조회수가 높은 것부터 순서대로 채우고 있습니다.`,
       },
       {
         q: "정보가 실제와 다릅니다.",

@@ -5,6 +5,7 @@ import GuideNav from "@/components/GuideNav";
 import { guideBySlug } from "@/lib/guides";
 import { services } from "@/data/services";
 import { SIDO_LIST } from "@/lib/regions";
+import { SOURCE_TOTAL, SOURCE_TOTALS } from "@/lib/sourceTotals";
 
 const G = guideBySlug("region")!;
 
@@ -139,7 +140,7 @@ export default function RegionGuide() {
           </div>
           <DocNote>
             <strong>이 표를 &ldquo;복지가 많은 지역&rdquo;으로 읽지 마세요.</strong>{" "}
-            우리는 전체 5,219건 중 복지로에서 많이 조회된 순으로{" "}
+            우리는 전체 {SOURCE_TOTAL.toLocaleString()}건({SOURCE_TOTALS.checkedAt} 기준) 중 복지로에서 많이 조회된 순으로{" "}
             {services.length.toLocaleString()}건을 수록했습니다. 인구가 많은
             지역의 사업이 더 많이 조회되므로 인구 규모가 그대로 반영됩니다.
             지역별 복지 수준을 비교할 수 있는 자료가 아닙니다.

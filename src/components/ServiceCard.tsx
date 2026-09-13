@@ -9,6 +9,7 @@ import {
   views,
   placeLabel,
   visiblePayTypes,
+  clipSummary,
 } from "@/lib/display";
 import { targetBySlug, lifeStageBySlug } from "@/lib/axes";
 import type { WelfareService } from "@/types/welfare";
@@ -129,7 +130,7 @@ export default function ServiceCard({
 
       {s.summary && (
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-600">
-          {s.summary}
+          {clipSummary(s.summary)}
         </p>
       )}
 
