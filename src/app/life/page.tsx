@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { LIFE_STAGES } from "@/lib/axes";
 import { services } from "@/data/services";
 import AxisGrid from "@/components/AxisGrid";
-import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "생애주기별 복지·지원금",
@@ -14,7 +13,8 @@ export const metadata: Metadata = {
 export default function LifeIndex() {
   return (
     <div className="space-y-6">
-      <AdSenseScript />
+      {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
+          애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
       <h1 className="text-2xl font-bold">생애주기별 복지·지원금</h1>
       <AxisGrid
         base="/life"

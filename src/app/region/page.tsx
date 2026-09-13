@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SIDO_LIST } from "@/lib/regions";
 import { services } from "@/data/services";
-import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "지역별 복지·지원금",
@@ -16,7 +15,8 @@ const nationwide = services.filter((s) => s.provider === "central").length;
 export default function RegionIndex() {
   return (
     <div className="space-y-6">
-      <AdSenseScript />
+      {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
+          애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">지역별 복지·지원금</h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
