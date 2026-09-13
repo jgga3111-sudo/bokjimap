@@ -6,6 +6,7 @@ import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export function generateStaticParams() {
   return LIFE_STAGES.map((t) => ({ slug: t.slug }));
@@ -44,6 +45,7 @@ export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
   const groups = facetsFor(rows, ["region", "benefit", "theme"]);
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 시기 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>

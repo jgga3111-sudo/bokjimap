@@ -6,6 +6,7 @@ import { SITE } from "@/lib/site";
 import { services } from "@/data/services";
 import { SIDO_LIST } from "@/lib/regions";
 import { BASE_YEAR } from "@/lib/midIncome";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "사이트 소개",
@@ -19,6 +20,8 @@ const central = services.filter((s) => s.provider === "central").length;
 
 export default function AboutPage() {
   return (
+    <>
+    <AdSenseScript />
     <DocPage
       title="사이트 소개"
       lead="복지 정보는 정부 부처와 243개 지방자치단체에 따로따로 있습니다. 복지클릭은 그걸 한곳에 모아, 내가 받을 수 있는 것부터 보이게 만듭니다."
@@ -141,5 +144,6 @@ export default function AboutPage() {
         />
       </DocSection>
     </DocPage>
+    </>
   );
 }

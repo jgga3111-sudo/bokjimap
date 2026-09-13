@@ -3,6 +3,7 @@ import { GUIDES } from "@/lib/guides";
 import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
 import { SITE } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
+import AdSenseScript from "@/components/AdSenseScript";
 
 /**
  * 글 끝에 붙는 다른 글 목록.
@@ -51,6 +52,7 @@ export default function GuideNav({ current }: { current: string }) {
 
   return (
     <nav className="mt-14 border-t border-line pt-8">
+      <AdSenseScript />
       {article && (
         <script
           type="application/ld+json"

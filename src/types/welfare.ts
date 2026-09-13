@@ -177,6 +177,11 @@ export function bodyText(s: WelfareService): string {
  */
 export const MIN_BODY_LENGTH = 300;
 
-export function isIndexable(s: WelfareService): boolean {
+/**
+ * 본문이 기준선을 넘는가. 2026-09-13부터 이것만으로는 색인하지 않는다 —
+ * 조회수 순위·따로 확인한 정보까지 보는 `lib/indexable.ts`의 `isIndexable`이
+ * 최종 판정이다(이 파일은 데이터를 부를 수 없어 순위를 모른다).
+ */
+export function hasEnoughBody(s: WelfareService): boolean {
   return bodyText(s).length >= MIN_BODY_LENGTH;
 }

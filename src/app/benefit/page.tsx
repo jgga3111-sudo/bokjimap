@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { services } from "@/data/services";
 import AxisGrid from "@/components/AxisGrid";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "혜택 종류별 복지·지원금 — 현금·바우처·요금감면",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function BenefitIndex() {
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <header className="space-y-2">
         <h1 className="text-2xl font-bold">혜택 종류별 복지·지원금</h1>
         <p className="text-sm leading-relaxed text-muted">

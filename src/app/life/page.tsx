@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LIFE_STAGES } from "@/lib/axes";
 import { services } from "@/data/services";
 import AxisGrid from "@/components/AxisGrid";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "생애주기별 복지·지원금",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function LifeIndex() {
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <h1 className="text-2xl font-bold">생애주기별 복지·지원금</h1>
       <AxisGrid
         base="/life"

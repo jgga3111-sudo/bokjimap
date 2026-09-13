@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import { SERVICES_UPDATED } from "@/data/services";
 import { BASE_YEAR, HEALTH_INSURANCE } from "@/lib/midIncome";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "데이터 출처",
@@ -70,6 +71,8 @@ const SOURCES: Source[] = [
 
 export default function SourcePage() {
   return (
+    <>
+    <AdSenseScript />
     <DocPage
       title="데이터 출처"
       lead="복지클릭의 모든 수치는 정부가 공개한 자료에서 왔습니다. 어디서 무엇을 가져왔는지, 그 데이터가 무엇을 못 하는지까지 적습니다."
@@ -187,5 +190,6 @@ export default function SourcePage() {
         </p>
       </DocSection>
     </DocPage>
+    </>
   );
 }

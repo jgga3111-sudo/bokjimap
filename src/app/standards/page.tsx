@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import MailLink from "@/components/MailLink";
 import { services, SERVICES_UPDATED } from "@/data/services";
+import AdSenseScript from "@/components/AdSenseScript";
 
 /*
   ── 정보 수집·검수 기준 (2026-09-11) ──────────────────────────────
@@ -34,6 +35,8 @@ const total = services.length.toLocaleString();
 
 export default function StandardsPage() {
   return (
+    <>
+    <AdSenseScript />
     <DocPage
       title="정보 수집·검수 기준"
       lead="지원금 정보는 신청과 돈에 바로 닿습니다. 그래서 복지클릭은 무엇을 어디서 가져와 어떤 규칙으로 옮기는지, 그리고 무엇을 하지 않는지를 미리 적어 둡니다."
@@ -217,5 +220,6 @@ export default function StandardsPage() {
         </p>
       </DocSection>
     </DocPage>
+    </>
   );
 }

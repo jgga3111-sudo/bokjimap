@@ -10,6 +10,7 @@ import {
 import { won } from "@/lib/display";
 import { SITE } from "@/lib/site";
 import { jsonLd as toJsonLd } from "@/lib/safe";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "자주 묻는 질문 — 기준 중위소득·건강보험료·가구원 수",
@@ -514,6 +515,7 @@ export default function FaqPage() {
 
   return (
     <>
+      <AdSenseScript />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(schema) }}

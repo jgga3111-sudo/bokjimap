@@ -6,7 +6,7 @@ import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { GUIDES } from "@/lib/guides";
 import { INCOME_BANDS } from "@/lib/income";
 import { services, SERVICES_UPDATED } from "@/data/services";
-import { isIndexable } from "@/types/welfare";
+import { isIndexable } from "@/lib/indexable";
 
 /*
   사이트맵에는 **색인되기를 바라는 페이지만** 넣는다.

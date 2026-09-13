@@ -3,10 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import {
-  isIndexable,
   isCriteriaBoilerplate,
   type WelfareService,
 } from "@/types/welfare";
+import { isIndexable } from "@/lib/indexable";
+import { extrasOf, hasExtras } from "@/lib/serviceExtras";
+import { hasDates } from "@/lib/calendar";
+import AddToCalendar from "@/components/AddToCalendar";
+import DdayChip from "@/components/DdayChip";
+import AdSenseScript from "@/components/AdSenseScript";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { nameWithAlias } from "@/lib/aliases";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
@@ -143,6 +148,8 @@ function applyTitle(s: WelfareService): string {
 }
 
 const TOC = [
+  /* 원문에 없는 것이라 원문 절들보다 앞에 둔다(SiteChecked 주석). */
+  { id: "checked", title: "따로 확인한 것", has: (s: WelfareService) => hasExtras(s) },
   { id: "target", title: "지원 대상", has: (s: WelfareService) => !!s.eligibility },
   {
     id: "criteria",
@@ -539,6 +546,121 @@ function PreCheck({
   );
 }
 
+/**
+ * 「복지클릭이 따로 확인한 것」 (2026-09-13).
+ *
+ * 이 페이지에서 **복지로에 없는 것**만 모은 절이다. 법령 조문에서 찾은 지급일,
+ * 공식 공고로 확인한 신청 일정, 이 사업을 직접 다룬 안내 글·계산기. 전부 이미
+ * 출처와 확인일을 달고 `/guide`에 있던 것인데, 정작 그 사업의 상세에서는 한 줄도
+ * 안 이어져 있었다(애드센스 거절 뒤 표본 11쪽을 재 보니 사업만을 위한 문장 0개).
+ *
+ * 원문 절들(지원 대상…)보다 **앞**에 둔다. 원문은 복지로에서도 읽을 수 있지만
+ * 이 절은 여기서만 읽을 수 있다. 붙을 것이 없는 사업에는 절을 안 그린다 —
+ * "확인한 것 없음" 같은 빈 틀을 910쪽에 찍으면 그게 곧 틀 문구다.
+ *
+ * 값은 옮겨 적은 그대로다. 조문은 인용하고, 날짜는 달력 파일의 값을 쓰고,
+ * 계산하거나 해석하지 않는다(3절).
+ */
+function SiteChecked({ s }: { s: WelfareService }) {
+  const { payDate, calendar, guides } = extrasOf(s);
+  if (!payDate && calendar.length === 0 && guides.length === 0) return null;
+
+  return (
+    <Section id="checked" title="복지클릭이 따로 확인한 것">
+      {/* 안내 글만 붙는 사업에 "법령·공고에서 찾았다"고 쓰면 없는 일을 말한 셈이다. */}
+      <p className="mb-3 text-sm leading-relaxed text-slate-700">
+        {payDate || calendar.length > 0
+          ? "아래는 복지로 원문에 없는 내용입니다. 법령·공식 공고에서 찾아 출처와 확인일을 함께 적었습니다."
+          : "아래는 이 지원을 따로 다룬 복지클릭 안내 글입니다."}
+      </p>
+      <div className="space-y-3">
+        {payDate && (
+          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+            <p className="font-bold text-ink">
+              들어오는 날 — <span className="text-brand">{payDate.when}</span>
+            </p>
+            <blockquote className="mt-2 border-l-2 border-line pl-3 text-slate-700">
+              &ldquo;{payDate.quote}&rdquo;
+            </blockquote>
+            {payDate.note && (
+              <p className="mt-2 text-slate-600">{payDate.note}</p>
+            )}
+            <p className="mt-2 text-xs text-muted">
+              근거{" "}
+              <a
+                href={payDate.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-brand"
+              >
+                {payDate.source}
+              </a>{" "}
+              · {payDate.checkedAt} 확인 ·{" "}
+              <Link href="/guide/pay-dates" className="underline hover:text-brand">
+                다른 지원금 지급일
+              </Link>
+            </p>
+          </div>
+        )}
+
+        {calendar.length > 0 && (
+          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+            <p className="font-bold text-ink">신청 일정</p>
+            <ul className="mt-2 space-y-3">
+              {calendar.map((e) => (
+                <li key={e.key}>
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                    <span className="font-medium text-ink">{e.what}</span>
+                    {hasDates(e) && <DdayChip end={e.end} title={e.period} />}
+                  </div>
+                  <p className="text-slate-700">{e.period}</p>
+                  {e.note && <p className="text-xs text-slate-600">{e.note}</p>}
+                  <p className="mt-0.5 text-xs text-muted">
+                    출처{" "}
+                    <a
+                      href={e.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-brand"
+                    >
+                      {e.source}
+                    </a>{" "}
+                    · {e.checkedAt} 확인
+                  </p>
+                  {hasDates(e) && (
+                    <div className="mt-2">
+                      <AddToCalendar entry={e} />
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {guides.length > 0 && (
+          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+            <p className="font-bold text-ink">이 지원을 다룬 안내 글</p>
+            <ul className="mt-2 space-y-2">
+              {guides.map((g) => (
+                <li key={g.slug}>
+                  <Link
+                    href={`/guide/${g.slug}`}
+                    className="font-medium text-brand hover:underline"
+                  >
+                    {g.title} →
+                  </Link>
+                  <p className="text-xs text-slate-600">{g.summary}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </Section>
+  );
+}
+
 export default async function ServiceDetail({
   params,
 }: PageProps<"/service/[id]">) {
@@ -598,6 +720,8 @@ export default async function ServiceDetail({
 
   return (
     <article className="space-y-8">
+      {/* 광고 코드는 색인시키는 상세에만(2026-09-13, AdSenseScript 머리말). */}
+      {isIndexable(s) && <AdSenseScript />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumb) }}
@@ -754,6 +878,8 @@ export default async function ServiceDetail({
 
       {/* 신청 전 체크 — 옛 「한눈에 보기」와 「소득 기준」 배너를 합친 자리(PreCheck 주석). */}
       <PreCheck s={s} period={period} />
+
+      <SiteChecked s={s} />
 
       {/* 상세 본문을 아직 못 받은 항목. 없는 걸 없다고 쓰고 원문으로 보낸다 —
           그럴듯한 문장으로 빈자리를 메우면 그게 곧 저품질 페이지가 된다. */}

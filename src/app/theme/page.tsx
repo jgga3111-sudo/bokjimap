@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { THEMES } from "@/lib/axes";
 import { services } from "@/data/services";
 import AxisGrid from "@/components/AxisGrid";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "주제별 복지·지원금",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 export default function ThemeIndex() {
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">주제별 복지·지원금</h1>
         <p className="text-sm leading-relaxed text-muted">

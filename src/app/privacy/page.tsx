@@ -209,9 +209,10 @@ export default function PrivacyPage() {
           {AUTH_ON ? (
             <>
               <strong>
-                {SITE.policyEffectiveDate} 현재 사이트는 이용자 분석 도구나
-                광고를 사용하지 않습니다. 로그인한 이용자에게만 로그인 상태를
-                유지하기 위한 필수 쿠키를 심습니다.
+                {SITE.policyEffectiveDate} 현재 사이트는 광고 게재를 위해 Google
+                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 이용자 분석 도구는
+                사용하지 않습니다. 로그인한 이용자에게는 로그인 상태를 유지하기
+                위한 필수 쿠키를 심습니다.
               </strong>{" "}
               이 쿠키는 로그인 확인 외에 쓰지 않으며, 로그아웃하거나 탈퇴하면
               지워집니다.{" "}
@@ -219,8 +220,9 @@ export default function PrivacyPage() {
           ) : (
             <>
               <strong>
-                {SITE.policyEffectiveDate} 현재 사이트는 이용자 분석 도구나
-                광고를 사용하지 않으며, 쿠키를 심지 않습니다.
+                {SITE.policyEffectiveDate} 현재 사이트는 광고 게재를 위해 Google
+                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 이용자 분석 도구는
+                사용하지 않습니다. 운영자가 직접 심는 쿠키는 없습니다.
               </strong>{" "}
             </>
           )}
@@ -228,8 +230,9 @@ export default function PrivacyPage() {
           추적하는 데 쓰이지 않습니다.
         </p>
         <p>
-          다만 운영 비용 충당을 위해 향후 Google AdSense 광고를 도입할 예정이며,
-          도입 시 다음과 같이 처리됩니다.
+          Google AdSense 코드가 실린 페이지에서는 다음과 같이 처리됩니다. 광고
+          코드는 안내 글·지원 상세처럼 내용이 있는 페이지에만 싣고, 검색 결과·
+          관심 지원 목록 같은 화면에는 싣지 않습니다.
         </p>
         <DocList
           items={[
@@ -269,8 +272,9 @@ export default function PrivacyPage() {
           ]}
         />
         <p className="text-xs text-muted">
-          광고를 실제로 게재하기 시작하면 이 조항의 첫 문장을 그에 맞게 고치고
-          시행일을 갱신합니다.
+          2026-09-13 개정: 광고 코드가 이미 실려 있는데 &ldquo;광고를 사용하지
+          않는다&rdquo;고 적혀 있던 첫 문장을 실제에 맞게 고쳤습니다. 처리 방식은
+          개정 전 이 조항에 적어 둔 내용과 같습니다.
         </p>
       </DocSection>
 

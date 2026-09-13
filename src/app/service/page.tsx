@@ -3,6 +3,7 @@ import Link from "next/link";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import ClosedList from "@/components/ClosedList";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "많이 찾는 복지·지원금 순위",
@@ -21,6 +22,7 @@ export default function ServiceIndex() {
 
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">
           많이 찾는 복지·지원금

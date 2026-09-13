@@ -16,6 +16,7 @@ import AxisIcon from "@/components/AxisIcon";
 import AxisFinder from "@/components/AxisFinder";
 import AskBox from "@/components/AskBox";
 import LastFind from "@/components/LastFind";
+import AdSenseScript from "@/components/AdSenseScript";
 
 /**
  * 첫 화면.
@@ -181,6 +182,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="space-y-10">
+      <AdSenseScript />
       {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
       {/* 끝 색이 `white`였다. 지면이 오프화이트가 되면서 그러데이션이 지면에
           닿는 자리에 흰 띠가 한 줄 남는다 — `ground`로 맞춘다(globals.css). */}

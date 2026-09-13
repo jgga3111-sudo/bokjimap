@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 
     여기를 푼다고 전부 색인되는 것은 아니다. 본문이 MIN_BODY_LENGTH에 못 미치는
     항목은 상세 페이지에서 각자 noindex로 나가고 사이트맵에도 안 실린다
-    (types/welfare.ts의 isIndexable). 얇은 페이지를 거르는 일은 그쪽이 계속 한다.
+    (lib/indexable.ts의 isIndexable). 얇은 페이지를 거르는 일은 그쪽이 계속 한다.
   */
 };
 
@@ -103,29 +103,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className="h-full antialiased">
       {/*
-        애드센스 코드.
+        애드센스 코드는 여기 없다 — `components/AdSenseScript.tsx`.
 
-        2026-09-05, 애드센스에 bokjiclick.co.kr을 신청했다. 소유권 확인 방법이
-        셋(코드 스니펫 / ads.txt / 메타 태그)인데 **코드 스니펫**을 골랐다.
-        나머지 둘은 확인만 하고 끝이라, 광고를 실제로 띄울 때 이 코드를 다시
-        넣어야 한다. 한 번에 끝내는 쪽이 낫다.
-
-        `next/script`를 쓰지 않고 head에 그대로 박는다. `next/script`는
-        브라우저에서 나중에 끼워 넣는데, 소유권 확인은 **크롤러가 받아 간
-        HTML 원문**에 이 태그가 있어야 통과한다.
+        2026-09-05 소유권 확인 때 여기 `<head>`에 박아 모든 페이지에 실었다.
+        09-13 「가치가 별로 없는 콘텐츠」 거절 뒤, 내용 없는 화면(검색 빈 화면·
+        404·noindex 상세)에서 빼려고 **페이지가 직접 그리게** 옮겼다. React 19가
+        `async` 스크립트를 head로 올려 주므로 HTML 원문에는 전과 같이 나간다.
 
         ⚠ CSP를 손대야 할 때가 온다. 지금 next.config.ts의 CSP에는
-        `frame-ancestors`만 있어서 이 스크립트가 막히지 않는다. 나중에
-        `script-src`를 추가한다면 광고 도메인을 함께 허용해야 한다
-        (next.config.ts 주석 참고).
+        `script-src`가 없어서 이 스크립트가 막히지 않는다. 나중에 추가한다면
+        광고 도메인을 함께 허용해야 한다(next.config.ts 주석 참고).
       */}
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3333691556845206"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="flex min-h-full flex-col">
         <script
           type="application/ld+json"

@@ -9,6 +9,7 @@ import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts } from "@/lib/hubMeta";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export function generateStaticParams() {
   return SIDO_LIST.map((s) => ({ sido: s.slug }));
@@ -66,6 +67,7 @@ export default async function RegionPage({
 
   return (
     <div className="space-y-8">
+      {rows.length > 0 && <AdSenseScript />}
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">
           {sido.name} 복지·지원금

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SIDO_LIST } from "@/lib/regions";
 import { services } from "@/data/services";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "지역별 복지·지원금",
@@ -15,6 +16,7 @@ const nationwide = services.filter((s) => s.provider === "central").length;
 export default function RegionIndex() {
   return (
     <div className="space-y-6">
+      <AdSenseScript />
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">지역별 복지·지원금</h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">

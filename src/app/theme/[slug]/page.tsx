@@ -8,6 +8,7 @@ import { toRow, facetsFor } from "@/lib/hubRows";
 import { FindLink } from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
 import { ro } from "@/lib/display";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export function generateStaticParams() {
   return THEMES.map((t) => ({ slug: t.slug }));
@@ -49,6 +50,7 @@ export default async function ThemePage({ params }: PageProps<"/theme/[slug]">) 
 
   return (
     <div className="space-y-6">
+      {rows.length > 0 && <AdSenseScript />}
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>

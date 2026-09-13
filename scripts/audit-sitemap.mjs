@@ -66,7 +66,30 @@ const bodyLen = (s) =>
     .filter(Boolean)
     .join("").length;
 
-const indexable = services.filter((s) => bodyLen(s) >= MIN_BODY_LENGTH);
+/*
+  2026-09-13 — 본문만으로는 색인하지 않는다(`src/lib/indexable.ts`). 본문 기준을
+  넘고, 조회수 상위 INDEX_TOP_N 안이거나 **따로 확인한 정보**가 붙는 사업만.
+  따로 확인한 정보는 `lib/serviceExtras.ts`와 같은 규칙으로 센다 — 그 파일과
+  지급일·신청 달력 파일에 적힌 WLF 번호, 그리고 이름이 「긴급복지」로 시작하는 것.
+*/
+const INDEX_TOP_N = num("src/lib/indexable.ts", "INDEX_TOP_N");
+const EXTRA_IDS = new Set(
+  ["src/lib/serviceExtras.ts", "src/lib/payDates.ts", "src/lib/calendar.ts"].flatMap(
+    (f) => read(f).match(/WLF\d{8}/g) ?? [],
+  ),
+);
+const hasExtras = (s) => EXTRA_IDS.has(s.id) || (s.name ?? "").startsWith("긴급복지");
+const RANK = new Map(
+  services
+    .map((s, i) => ({ s, i }))
+    .sort((a, b) => b.s.views - a.s.views || a.i - b.i)
+    .map(({ s }, i) => [s.id, i + 1]),
+);
+const indexable = services.filter(
+  (s) =>
+    bodyLen(s) >= MIN_BODY_LENGTH &&
+    (RANK.get(s.id) <= INDEX_TOP_N || hasExtras(s)),
+);
 
 /** 허브 페이지 수 — sitemap.ts의 hub()와 같은 조건. */
 const countHub = (pick) => {
@@ -121,7 +144,7 @@ console.log(line);
 console.log(`  정적 페이지        ${String(staticPaths.length).padStart(5)}개`);
 console.log(`    ${staticPaths.map((p) => p || "/").join(" ")}`);
 console.log(`  안내 글            ${String(guides).padStart(5)}개  (하한 없음 — 전부 올린다)`);
-console.log(`  서비스 상세        ${String(indexable.length).padStart(5)}개  (본문 ${MIN_BODY_LENGTH}자 이상)`);
+console.log(`  서비스 상세        ${String(indexable.length).padStart(5)}개  (본문 ${MIN_BODY_LENGTH}자 이상 + 조회수 ${INDEX_TOP_N}위 안 또는 따로 확인한 정보)`);
 console.log(`  주제 허브          ${String(themes).padStart(5)}개  (각 ${MIN_SERVICES}건 이상)`);
 console.log(`  지역 허브          ${String(regions).padStart(5)}개`);
 console.log(`  대상 허브          ${String(targets).padStart(5)}개`);
@@ -156,7 +179,7 @@ console.log(line);
   두 줄은 성격이 다르다. 약관·방침·문의는 **색인은 되는데 제출만 안 하는 것**
   (sitemap.ts 머리말)이고, /search·/find는 **아예 noindex**다.
 */
-console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문이 ${MIN_BODY_LENGTH}자 미만 — 상세에서도 noindex`);
+console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문 기준 미달이거나 조회수 ${INDEX_TOP_N}위 밖(따로 확인한 정보 없음) — noindex·광고 코드 없음`);
 console.log(`  약관·방침·문의     ${String(3).padStart(5)}개  정형 문서라 색인 가치 없음 (푸터 링크로는 접근 가능)`);
 console.log(`  결과 화면          ${String(3).padStart(5)}개  /search·/find·/ask — 조건마다 URL이 생겨 noindex로 나간다`);
 /* 2026-09-11 추가. 사람마다 내용이 다른 화면이라 크롤러에게 줄 것이 없다.

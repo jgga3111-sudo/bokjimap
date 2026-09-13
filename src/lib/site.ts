@@ -19,7 +19,7 @@ export const SITE = {
   foundedYear: 2026,
 
   /** 약관·방침의 시행일. 내용을 고치면 이 날짜도 같이 올린다. */
-  policyEffectiveDate: "2026-09-01",
+  policyEffectiveDate: "2026-09-13",
 } as const;
 
 export const CONTACT_EMAIL = `${SITE.contactUser}@${SITE.contactHost}`;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
 import { services } from "@/data/services";
+import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: "복지 신청 안내 — 신청 방법·서류·용어",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function GuideIndex() {
   return (
     <div className="mx-auto max-w-3xl space-y-8">
+      <AdSenseScript />
       <header className="space-y-3">
         <h1 className="text-2xl font-extrabold sm:text-3xl">복지 신청 안내</h1>
         <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
