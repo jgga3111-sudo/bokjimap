@@ -283,6 +283,13 @@ export const GUIDES: readonly Guide[] = [
       "보육료·유아학비·양육수당은 한 아이에게 하나만 나옵니다. 옮길 때 신청일이 15일 전인지 뒤인지에 따라 그달 보육료를 자부담하게 되는 규칙을 교육부 보육사업안내에서 옮겼습니다.",
     updated: "2026-09-13",
   },
+  {
+    slug: "mental-health-voucher",
+    title: "심리상담 바우처, 8회에 내 부담은 얼마인가",
+    summary:
+      "상담사 유형과 소득 구간에 따라 본인부담이 달라집니다. 원문 단가와 본인부담률로 계산하고, 신청 자격 여섯 갈래마다 다른 증빙서류 유효기간을 정리했습니다.",
+    updated: "2026-09-13",
+  },
 ] as const;
 
 const BY_SLUG = new Map(GUIDES.map((g) => [g.slug, g]));
