@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import ServiceCard from "./ServiceCard";
-import { isClosed } from "./ClosedBadge";
+import { deadlineState } from "./DeadlineBadge";
+import { ddayLabel } from "@/lib/dday";
 import { useLocalToday } from "@/lib/useLocalToday";
 import { toCard, type HubRow, type FacetGroup } from "@/lib/hubRows";
 
@@ -43,7 +44,7 @@ export default function HubList({
   const [sel, setSel] = useState<Record<string, string>>({});
   const [shown, setShown] = useState(PAGE);
   /* 아래 「이름으로 훑어보기」 줄에도 마감을 표시하려고 읽는다(2026-09-13).
-     카드는 ServiceCard 안의 ClosedBadge가 따로 판정한다. */
+     카드는 ServiceCard 안의 DeadlineBadge가 따로 판정한다. */
   const today = useLocalToday();
 
   /*
@@ -255,11 +256,21 @@ export default function HubList({
                 {/* 카드에는 「마감」 딱지가 붙는데 여기만 없으면, 카드 60장 밖의
                     사업은 끝났는지 모른 채 눌러 들어가게 된다(2026-09-13 화면
                     점검에서 청년 허브의 인천형 청년월세가 그랬다). */}
-                {isClosed(r[0], today) && (
-                  <span className="ml-1.5 text-xs font-bold text-amber-800">
-                    마감
-                  </span>
-                )}
+                {(() => {
+                  /* 09-13부터 D-10~D-day도 같은 자리에 적는다. 카드의
+                     DeadlineBadge와 같은 판정 함수를 쓴다. */
+                  const st = deadlineState(r[0], today);
+                  if (!st) return null;
+                  return st.kind === "closed" ? (
+                    <span className="ml-1.5 text-xs font-bold text-amber-800">
+                      마감
+                    </span>
+                  ) : (
+                    <span className="ml-1.5 text-xs font-extrabold text-rose-700 tabular-nums">
+                      {ddayLabel(st.days)}
+                    </span>
+                  );
+                })()}
               </li>
             ))}
           </ul>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Badge from "./Badge";
 import IncomeMatch from "./IncomeMatch";
-import ClosedBadge from "./ClosedBadge";
+import DeadlineBadge from "./DeadlineBadge";
 import type { CardService } from "./ServiceCard";
 import { nameWithAlias } from "@/lib/aliases";
 import { payType, views, placeLabel, visiblePayTypes } from "@/lib/display";
@@ -51,7 +51,7 @@ export default function PopularList({
                   {/* 조회수 1위 청년내일저축계좌가 '26.5.20.에 모집이 끝났는데
                       이 순위표 맨 위에 아무 표시 없이 있었다(2026-09-13).
                       순서는 조회수 그대로 두고 딱지만 붙인다. */}
-                  <ClosedBadge id={s.id} />
+                  <DeadlineBadge id={s.id} />
                   <IncomeMatch percent={s.medianPercent} />
                   {pay && (
                     <Badge tone={payType(pay).tone}>{payType(pay).label}</Badge>

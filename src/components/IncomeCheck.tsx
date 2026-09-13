@@ -14,7 +14,7 @@ import {
   HEALTH_INSURANCE,
 } from "@/lib/midIncome";
 import { won } from "@/lib/display";
-import ClosedBadge from "./ClosedBadge";
+import DeadlineBadge from "./DeadlineBadge";
 
 type Mode = "monthly" | "annual" | "premium";
 
@@ -333,7 +333,7 @@ export default function IncomeCheck({
                               >
                                 {m.name}
                               </Link>{" "}
-                              <ClosedBadge id={m.id} />
+                              <DeadlineBadge id={m.id} />
                             </li>
                           ))}
                           {/* 여기 걸린 것은 앞의 몇 건뿐이다. 나머지가 어디

@@ -4,7 +4,7 @@
  *   node scripts/build-data.mjs
  *
  * 끝나는 날이 적혀 있는 사업의 끝날. 지났는지는 브라우저가 오늘과 비교한다
- * (`components/ClosedBadge.tsx`). 만드는 규칙은 build-data.mjs의 마감 표 주석.
+ * (`components/DeadlineBadge.tsx`). 만드는 규칙은 build-data.mjs의 마감 표 주석.
  */
 export type Closing = {
   /** period = 본문의 신청 기간 · program = 사업 시행 종료일 · stated = 원문이 마감이라고 적음 */

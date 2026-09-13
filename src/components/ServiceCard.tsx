@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Badge from "./Badge";
 import IncomeMatch from "./IncomeMatch";
-import ClosedBadge from "./ClosedBadge";
+import DeadlineBadge from "./DeadlineBadge";
 import { nameWithAlias } from "@/lib/aliases";
 import {
   payType,
@@ -105,7 +105,7 @@ export default function ServiceCard({
         <div className="mb-2 flex flex-wrap items-center gap-1.5 empty:hidden">
           {/* 마감을 맨 앞에 둔다. 끝난 사업이면 "내가 되는가"보다 먼저 알아야
               한다(2026-09-13). 브라우저에서만 그려지고, 지난 것에만 붙는다. */}
-          <ClosedBadge id={s.id} />
+          <DeadlineBadge id={s.id} />
           <IncomeMatch percent={s.medianPercent} />
           {pay && <Badge tone={payType(pay).tone}>{payType(pay).label}</Badge>}
           {s.onlineApply && <Badge>온라인신청</Badge>}

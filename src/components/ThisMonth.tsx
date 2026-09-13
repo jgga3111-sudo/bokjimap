@@ -4,6 +4,7 @@ import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { entriesOfMonth, hasDates } from "@/lib/calendar";
 import AddToCalendar from "@/components/AddToCalendar";
+import DdayChip from "@/components/DdayChip";
 
 /**
  * 첫 화면 「이번 달에 챙길 것」 — 이번 달에 걸리는 신청·마감을 펼친다.
@@ -121,6 +122,9 @@ export default function ThisMonth() {
                   {e.label}
                 </Link>
                 <span className="text-sm text-slate-700">{e.what}</span>
+                {/* D-10부터 끝나는 날까지(2026-09-13). 지나면 아래 「기간 지남」이
+                    받는다. 목록·상세의 딱지와 같은 계산(lib/dday.ts)이다. */}
+                {dated && !passed && <DdayChip end={e.end} title={e.period} />}
                 {passed && (
                   <span className="rounded bg-sunken px-1.5 py-0.5 text-[11px] font-bold text-muted">
                     기간 지남

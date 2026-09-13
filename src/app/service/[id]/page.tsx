@@ -16,7 +16,8 @@ import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import SaveButton from "@/components/SaveButton";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
-import ClosedBadge from "@/components/ClosedBadge";
+import DeadlineBadge from "@/components/DeadlineBadge";
+import DeadlineNotice from "@/components/DeadlineNotice";
 import { CLOSING } from "@/data/closing";
 import {
   statedApplyPeriod,
@@ -637,7 +638,7 @@ export default async function ServiceDetail({
         <div className="mt-3 flex flex-wrap items-center gap-2">
           {/* 「마감」 딱지(2026-09-13). 목록·순위표와 같은 표·같은 판정이라
               목록에서 본 딱지가 여기서 사라지는 일이 없다. */}
-          <ClosedBadge id={s.id} />
+          <DeadlineBadge id={s.id} />
           <SaveButton
             id={s.id}
             name={nameWithAlias(s.id, s.name ?? id)}
@@ -715,6 +716,9 @@ export default async function ServiceDetail({
         {/* 요약문 바로 밑이다. 신청 기간은 대개 그 문장 안에 적혀 있어서,
             읽은 자리에서 바로 "그건 이미 지났다"가 붙어야 뜻이 통한다.
             지났는지 아닌지는 브라우저가 정한다 — 컴포넌트 주석 참고. */}
+        {/* 끝나기 열흘 전부터 끝나는 날까지(2026-09-13). 날이 지나면 사라지고
+            바로 아래 PastPeriodNotice가 받는다. */}
+        <DeadlineNotice id={s.id} />
         {period && <PastPeriodNotice end={period.end} text={period.text} />}
         {plan && (
           <PastPeriodNotice end={plan.end} text={plan.text} variant="plan" />

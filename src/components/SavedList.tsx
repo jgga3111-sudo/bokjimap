@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
-import ClosedBadge from "./ClosedBadge";
+import DeadlineBadge from "./DeadlineBadge";
 import {
   subscribe,
   getSnapshot,
@@ -52,7 +52,7 @@ export default function SavedList({
               <span className="text-sm font-medium text-ink">{s.name}</span>
               {/* 저장해 둔 사업이 그 뒤로 끝났을 수 있다 — 여기가 가장 먼저
                   알려야 하는 자리다(2026-09-13). */}{" "}
-              <ClosedBadge id={s.id} />
+              <DeadlineBadge id={s.id} />
               {s.place && (
                 <span className="ml-2 text-xs text-muted">{s.place}</span>
               )}

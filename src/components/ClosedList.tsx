@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { CLOSING } from "@/data/closing";
 import { useLocalToday } from "@/lib/useLocalToday";
-import { isClosed } from "./ClosedBadge";
+import { isClosed } from "./DeadlineBadge";
 
 /**
  * 「기간이 지난 지원」 모음 — 마감된 것을 **따로** 한곳에 모은다.
