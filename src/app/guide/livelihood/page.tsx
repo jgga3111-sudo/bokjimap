@@ -196,8 +196,8 @@ export default function LivelihoodGuide() {
             >
               상세 페이지
             </Link>
-            에서 전체를 볼 수 있습니다. 긴급복지는 생계지원 말고도 의료·주거·
-            교육 등 여덟 갈래가 있는데, 대부분 생계지원 하나만 알고 나머지를
+            에서 전체를 볼 수 있습니다. 긴급복지는 생계지원 말고도 의료·주거·교육
+            등 여덟 갈래가 있는데, 대부분 생계지원 하나만 알고 나머지를
             놓칩니다 —{" "}
             <Link href="/guide/emergency" className="text-brand underline">
               갑자기 생계가 막혔을 때

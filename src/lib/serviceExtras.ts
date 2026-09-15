@@ -43,6 +43,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "phone-bill-discount": ["WLF00003257"],
   "childcare-choice": ["WLF00003250", "WLF00000969", "WLF00003253", "WLF00004657"],
   "mental-health-voucher": ["WLF00005567"],
+  "school-support": ["WLF00001103", "WLF00001089", "WLF00003227"],
+  "postpartum-care": ["WLF00001188"],
 };
 
 /** 긴급복지 여덟 갈래는 글이 이름으로 모은다(`guide/emergency` 머리말). */

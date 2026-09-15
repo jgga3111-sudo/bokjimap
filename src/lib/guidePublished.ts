@@ -30,4 +30,6 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "phone-bill-discount": "2026-09-13",
   "childcare-choice": "2026-09-13",
   "mental-health-voucher": "2026-09-13",
+  "school-support": "2026-09-15",
+  "postpartum-care": "2026-09-15",
 };

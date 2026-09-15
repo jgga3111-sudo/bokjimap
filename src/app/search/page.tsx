@@ -65,8 +65,8 @@ export default async function SearchPage({
         {q && (
           <p className="mt-1 text-sm text-muted">
             {hits.length.toLocaleString()}건
-            {hits.length > MAX && ` 중 ${MAX}건 표시`} · 이름과 지원내용·
-            지원대상을 함께 찾은 결과입니다
+            {hits.length > MAX && ` 중 ${MAX}건 표시`} · 이름과 지원내용·지원대상을
+            함께 찾은 결과입니다
           </p>
         )}
       </div>
