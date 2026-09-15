@@ -87,4 +87,22 @@ console.log(
 console.log(
   bad === 0 ? `\n✅ 고시값 ${total}개 전부 일치` : `\n❌ ${bad}건 불일치`,
 );
-process.exit(bad === 0 ? 0 : 1);
+/* ── 판정 일관성 (09-15) ────────────────────────────────────────
+   자가진단의 ✓(`percentOfMedian <= 기준%`)가 같은 줄의 「thresholdOf원 이하」와
+   늘 같은 답을 내는지, 실제 함수를 불러 기준선 둘레 ±2원을 전부 대조한다.
+   반올림하던 때는 1인 월 1,283,000원(50.034%)이 「50% 충족」으로 나왔다.
+   (Node 22.6+의 타입 걷어내기로 .ts를 바로 import 한다.) */
+const mid = await import("../src/lib/midIncome.ts");
+let mismatch = 0;
+for (let n = 1; n <= 8; n++) {
+  for (let p = 1; p <= 250; p++) {
+    const limit = mid.thresholdOf(n, p);
+    for (const m of [limit - 2, limit - 1, limit, limit + 1, limit + 2]) {
+      if ((mid.percentOfMedian(n, m) <= p) !== (m <= limit)) {
+        if (mismatch++ < 5) console.log(`  ❌ ${n}인 ${p}% 소득 ${m} → ${mid.percentOfMedian(n, m)}%`);
+      }
+    }
+  }
+}
+console.log(mismatch === 0 ? "✅ 자가진단 판정이 기준선 금액과 전부 일치" : `❌ 판정 불일치 ${mismatch}건`);
+process.exit(bad === 0 && mismatch === 0 ? 0 : 1);

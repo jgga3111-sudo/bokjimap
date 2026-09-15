@@ -65,9 +65,20 @@ export function thresholdOf(household: number, percent: number): number {
   return Math.round((medianIncome(household) * percent) / 100);
 }
 
-/** 소득이 기준 중위소득의 몇 %인가. 소수 첫째 자리까지. */
+/**
+ * 소득이 기준 중위소득의 몇 %인가. 소수 첫째 자리까지.
+ *
+ * ⚠ 그냥 반올림하면 안 된다. 이 값을 `pct <= 기준%`로 판정하는 곳이 넷인데
+ * (IncomeCheck·MyEligibility·IncomeMatch, 저장값), 1인 월 1,283,000원은
+ * 50.034%라 반올림하면 50.0 → 「50% 충족」이 뜬다. 같은 줄에는 「1,282,119원
+ * 이하」가 적혀 있다. 틀리는 방향이 늘 "받는다" 쪽이다(09-15).
+ * 그래서 **소득이 그 기준선 금액(thresholdOf) 이하가 되는 가장 작은 0.1%**를
+ * 돌려준다 — 그러면 `pct <= p`와 `monthly <= thresholdOf(h, p)`가 늘 같다.
+ */
 export function percentOfMedian(household: number, monthlyIncome: number): number {
-  return Math.round((monthlyIncome / medianIncome(household)) * 1000) / 10;
+  let tenths = Math.max(0, Math.floor((monthlyIncome / medianIncome(household)) * 1000) - 1);
+  while (monthlyIncome > thresholdOf(household, tenths / 10)) tenths++;
+  return tenths / 10;
 }
 
 /* ── 주요 기준선 ──────────────────────────────────────────────────

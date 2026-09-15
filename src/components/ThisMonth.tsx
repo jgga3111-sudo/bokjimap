@@ -68,8 +68,8 @@ export default function ThisMonth() {
   const sorted = [...rows].sort((a, b) => {
     const passed = (e: typeof a) => (hasDates(e) && e.end < now ? 1 : 0);
     if (passed(a) !== passed(b)) return passed(a) - passed(b);
-    if (!a.end) return 1;
-    if (!b.end) return -1;
+    /* 둘 다 날짜가 없으면 0 — 전엔 양쪽 다 1을 돌려줘 순서가 흔들렸다. */
+    if (!a.end || !b.end) return Number(!a.end) - Number(!b.end);
     return a.end.localeCompare(b.end);
   });
 

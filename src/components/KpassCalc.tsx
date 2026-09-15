@@ -66,6 +66,10 @@ export default function KpassCalc() {
   /* 3,000원 미만 이용분이 전체보다 클 수는 없다. 넣은 값이 어긋나면
      계산을 멈추고 그 사실만 알린다 — 조용히 고쳐서 계산하지 않는다. */
   const inconsistent = spend !== null && under !== null && under > spend;
+  /* 넣었는데 못 읽은 칸. 빈칸과 똑같이 「넣으면 계산됩니다」로 두면 무엇이
+     틀렸는지 모른다(09-15 — 둘째 칸에 abc를 넣어도 조용히 「계산 안 함」). */
+  const badInput =
+    (spendRaw.trim() !== "" && spend === null) || (underRaw.trim() !== "" && under === null);
 
   return (
     <section className="rounded-2xl border border-line bg-white p-5">
@@ -159,7 +163,11 @@ export default function KpassCalc() {
         </p>
       </fieldset>
 
-      {inconsistent ? (
+      {badInput ? (
+        <p className="mt-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+          금액은 만원 단위 숫자로 넣어 주세요(예: 8 또는 8만원, 1,000만원 이하).
+        </p>
+      ) : inconsistent ? (
         <p className="mt-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           3,000원 미만 이용분이 전체 이용금액보다 큽니다. 둘 중 하나를 다시
           확인해 주세요.
