@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { INCOME_BANDS, incomeBandOf, servicesAt } from "@/lib/income";
@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!band) return {};
   return {
     title: heading(band.percent, band.label),
-    description: `선정기준에 "기준 중위소득 ${band.percent}% 이하"가 적힌 복지 사업 ${band.count}건입니다. ${BASE_YEAR}년 기준 1인 가구 월 ${won(
+    description: `선정기준의 소득 기준선이 "기준 중위소득 ${band.percent}% 이하" 한 가지로 적힌 복지 사업 ${band.count}건입니다. ${BASE_YEAR}년 기준 1인 가구 월 ${won(
       thresholdOf(1, band.percent),
     )}, 4인 가구 월 ${won(thresholdOf(4, band.percent))} 이하입니다.`,
     alternates: { canonical: `/income/${band.percent}` },
@@ -39,7 +39,13 @@ export default async function IncomeBandPage({
 }: PageProps<"/income/[percent]">) {
   const { percent } = await params;
   const band = incomeBandOf(percent);
-  if (!band) notFound();
+  /* 09-15에 소득 기준선을 "값이 하나일 때만" 읽게 바꾸면서 72·85·140·200% 목록이 3건
+     아래로 줄어 사라졌다(build-data.mjs pickMedianPercent). 색인됐던 주소라 404 대신
+     기준선 목록으로 보낸다. */
+  if (!band) {
+    if (/^\d+$/.test(percent)) permanentRedirect("/income");
+    notFound();
+  }
 
   const rows = servicesAt(band.percent).map(toRow);
   const groups = facetsFor(rows, ["region", "benefit", "life"]);
@@ -64,9 +70,9 @@ export default async function IncomeBandPage({
           {heading(band.percent, band.label)}
         </h1>
         <p className="text-sm leading-relaxed text-slate-600">
-          선정기준 원문에 &ldquo;기준 중위소득 {band.percent}%&rdquo;가 적혀
-          있는 사업 {band.count}건입니다. 기준이 문장에 명시되지 않은 사업은
-          짐작해서 넣지 않았습니다.
+          선정기준 원문의 소득 기준선이 &ldquo;기준 중위소득 {band.percent}%&rdquo;
+          한 가지로 적힌 사업 {band.count}건입니다. 기준이 문장에 명시되지 않았거나
+          대상마다 기준선이 여럿 적힌 사업은 짐작해서 넣지 않았습니다.
         </p>
       </header>
 

@@ -19,7 +19,7 @@ export default function Image() {
     (
       <OgCard
         eyebrow="전국 복지·지원금"
-        title="내가 받을 수 있는 지원부터 봅니다"
+        title="내 상황에 맞는 지원부터 찾습니다"
         /* 수록 건수는 손으로 적지 않는다. 수집이 늘면 조용히 틀린 말이 된다. */
         note={`수록 ${services.length.toLocaleString()}건`}
       />

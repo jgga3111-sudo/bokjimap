@@ -216,7 +216,8 @@ export default function BabyMoneyGuide() {
 
         <DocSection title="한 번에 신청하는 통로가 있습니다">
           <p>
-            비교한 세 사업은 원문에 신청 창구가 적혀 있지 않습니다. 다만 수록된
+            비교한 세 사업은 원문 처리 절차에 &ldquo;주민센터 또는 복지로에서 서비스
+            신청&rdquo;이라고 적혀 있습니다. 그리고 수록된
             다른 출산 관련 사업 여럿이{" "}
             <strong>&ldquo;행복출산 원스톱 서비스&rdquo;</strong>를 신청 통로로
             안내하고 있어, 그 표현을 그대로 옮깁니다.

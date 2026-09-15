@@ -8,6 +8,7 @@ import {
   KPASS_TYPES,
   KPASS_REGIONS,
   KPASS_CHECKED,
+  KPASS_HALF_URL,
   KPASS_SOURCE,
   KPASS_SOURCE_URL,
   MIN_RIDES,
@@ -206,6 +207,25 @@ export default function KpassGuide() {
             이 표의 가장 작은 값이 {won(30000)}, 가장 큰 값이 {won(100000)}입니다.
             복지로 원문이 말한 &ldquo;기준금액(3~10만원)&rdquo;과 정확히
             맞습니다. <strong>서로 다른 두 출처가 같은 수를 가리킵니다.</strong>
+          </p>
+          <p>
+            <strong className="text-ink">
+              다만 2026년 4월부터 6개월(9월까지)은 이 표의 절반입니다.
+            </strong>{" "}
+            정부가 &ldquo;반값 모두의 카드&rdquo;로 정액형 기준금액을 50% 내렸습니다 —
+            수도권 일반 국민 일반형 3만원·플러스형 5만원, 청년·2자녀·어르신
+            2만5천원·4만5천원, 3자녀 이상·저소득 2만2천원·4만원입니다. 출퇴근 전후
+            지정 시차시간에 타면 기본형 환급률도 30%p 오릅니다(
+            <a
+              href={KPASS_HALF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              정책브리핑 2026-04-17
+            </a>
+            , 09-15 확인). 공단 표는 아직 평상시 값이라 계산기도 평상시 기준이고,
+            이 기간에는 실제 환급이 더 많을 수 있습니다.
           </p>
         </DocSection>
 

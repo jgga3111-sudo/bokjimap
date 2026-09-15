@@ -185,18 +185,34 @@ const toSlugs = (raw, map) =>
 /**
  * "기준 중위소득 60% 이하" 같은 문장에서 퍼센트를 읽는다.
  *
- * 여러 개가 나오면 **가장 큰 값**을 쓴다. 사업 문서는 보통 "생계급여 32%,
- * 차상위 50% …"처럼 좁은 기준부터 나열하는데, 이용자 입장에서 알아야 할 건
- * "여기까지는 해당된다"는 상한이기 때문이다.
- * 명시가 없으면 null. 짐작하지 않는다.
+ * 값이 **하나일 때만** 쓴다. 명시가 없거나 서로 다른 값이 둘 이상이면 null.
+ *
+ * 2026-09-15까지는 여러 개면 **가장 큰 값**을 썼다("좁은 기준부터 나열하니 상한을
+ * 알려 준다"). 그런데 여러 값은 상한 목록이 아니라 **동시에 지켜야 하는 조건**이거나
+ * **대상 무리마다 다른 기준**인 경우가 많았다 — 조회수 2위 청년월세는 "청년가구 60%
+ * 이하 **그리고** 원가구 100% 이하"인데 화면에 「중위소득 100% 이하」로 나가, 80%인
+ * 1인 청년에게 자가진단이 ✓를 달았다. 한부모 아동양육비는 65%(일반)·72%(청소년
+ * 한부모)인데 72%로 나갔다. 틀리는 방향이 "받는다" 쪽이라 3절에 걸린다(수록 910건
+ * 중 32건). 어느 값이 이 사람에게 해당하는지는 원문을 읽어야 안다 — 고르지 않는다.
  */
-function readMedianPercent(text) {
-  if (!text) return null;
+function readMedianPercents(text) {
+  if (!text) return [];
   const hits = [
     ...text.matchAll(/중위\s*소득\s*(?:의\s*)?(\d{2,3})\s*(?:%|퍼센트)/g),
   ].map((m) => Number(m[1]));
-  const valid = hits.filter((n) => n >= 20 && n <= 300);
-  return valid.length ? Math.max(...valid) : null;
+  return [...new Set(hits.filter((n) => n >= 20 && n <= 300))];
+}
+
+/* 선정 문장에 값이 있으면 그걸로만 정한다. 거기서 여럿이라 null이 됐을 때 요약문으로
+   내려가 하나를 주워 오면 안 된다 — 그래서 "없음"과 "여럿"을 가른다. */
+function pickMedianPercent(...texts) {
+  for (const t of texts) {
+    const v = readMedianPercents(t);
+    /* 「도시근로자 월평균소득 N%」를 함께 쓰는 사업(행복주택)은 중위소득이 일부
+       무리(주거급여 수급자)에만 걸린다 — 그 값을 사업 전체의 기준선으로 내보내면 틀린다. */
+    if (v.length) return v.length === 1 && !/도시근로자/.test(t) ? v[0] : null;
+  }
+  return null;
 }
 
 const ymd = (v) =>
@@ -285,9 +301,10 @@ const services = ranked.slice(0, LIMIT).map((l) => {
       .map((x) => x.url)
       .filter(Boolean),
 
-    medianPercent:
-      readMedianPercent([eligibility, selection].filter(Boolean).join(" ")) ??
-      readMedianPercent(clean(l.servDgst)),
+    medianPercent: pickMedianPercent(
+      [eligibility, selection].filter(Boolean).join(" "),
+      clean(l.servDgst),
+    ),
 
     applyStart: ymd(d.enfcBgngYmd),
     applyEnd: ymd(d.enfcEndYmd),

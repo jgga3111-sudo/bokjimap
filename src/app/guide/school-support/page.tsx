@@ -94,7 +94,7 @@ export default function SchoolSupportGuide() {
                 <tr className="border-b border-line">
                   <td className="px-3 py-2 font-medium">교육정보화 지원</td>
                   <td className="px-3 py-2">생계·의료·주거·교육급여 수급자, 한부모가족, 차상위계층 등 저소득층 가구의 초·중·고등학생</td>
-                  <td className="px-3 py-2">가구당 컴퓨터 1대, 인터넷 통신비 월 17,600원, 유해차단 서비스 월 1,650원</td>
+                  <td className="px-3 py-2">가구당 컴퓨터 1대, 인터넷 통신비 월 17,600원, 유해차단 서비스 월 1,650원(시·도별 기준에 따라)</td>
                 </tr>
               </tbody>
             </table>

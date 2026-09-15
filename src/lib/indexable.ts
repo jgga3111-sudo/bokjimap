@@ -1,5 +1,5 @@
 import { services } from "@/data/services";
-import { bodyText, hasEnoughBody, type WelfareService } from "@/types/welfare";
+import { hasEnoughBody, type WelfareService } from "@/types/welfare";
 import { hasExtras } from "@/lib/serviceExtras";
 
 /**
@@ -47,16 +47,16 @@ export function isIndexable(s: WelfareService): boolean {
 }
 
 /**
- * 광고 코드를 실을 상세인가 (2026-09-13 재점검).
+ * 광고 코드를 실을 상세인가.
  *
- * 색인 대상 272쪽을 다시 재 보니 **본문 874~996자짜리 상세에도 광고 코드가 붙어** 있었다 —
- * 소개 페이지보다 짧다. 검색에는 내보내되(조회수 상위라 찾는 사람이 있다) 광고는
- * 원문 본문이 `AD_MIN_BODY`자 이상이거나 우리가 따로 확인한 정보가 붙은 사업에만 싣는다.
- * 09-13 기준 272쪽 중 67쪽이 빠진다(광고 코드가 붙는 상세 205쪽).
+ * 09-13: 본문 500자 이상이거나 따로 확인한 정보가 있을 때(272쪽 중 205쪽).
+ * 09-15: 따로 확인한 정보가 있을 때만(아래 주석).
  */
-export const AD_MIN_BODY = 500;
-
 export function showAds(s: WelfareService): boolean {
   if (!isIndexable(s)) return false;
-  return bodyText(s).length >= AD_MIN_BODY || hasExtras(s);
+  /* 09-15 애드센스 재점검: 광고가 붙은 상세 206쪽 중 약 165쪽이 원문 + 공통 틀뿐이었다
+     (「가치가 별로 없는 콘텐츠」 거절 사유 그대로). 재신청 전에는 **우리가 따로 확인한
+     정보가 붙은 상세에만** 싣는다. 승인 뒤 넓히려면 아래 줄을 옛 조건
+     `bodyText(s).length >= 500 || hasExtras(s)`(bodyText는 types/welfare)로 되돌린다. */
+  return hasExtras(s);
 }

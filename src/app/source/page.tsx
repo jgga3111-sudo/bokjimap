@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import { SERVICES_UPDATED } from "@/data/services";
+import { LAST_CHECKED } from "@/lib/sourceTotals";
 import { BASE_YEAR, HEALTH_INSURANCE } from "@/lib/midIncome";
 import AdSenseScript from "@/components/AdSenseScript";
 
@@ -76,7 +77,7 @@ export default function SourcePage() {
     <DocPage
       title="데이터 출처"
       lead="복지클릭의 모든 수치는 정부가 공개한 자료에서 왔습니다. 어디서 무엇을 가져왔는지, 그 데이터가 무엇을 못 하는지까지 적습니다."
-      updated={`복지 서비스 데이터 최종 수집일 ${SERVICES_UPDATED}`}
+      updated={`복지 서비스 데이터 처음 수집 ${SERVICES_UPDATED} · 마지막 대조 ${LAST_CHECKED}`}
     >
       <DocSection title="출처 목록">
         <div className="overflow-x-auto">
@@ -158,8 +159,9 @@ export default function SourcePage() {
             </>,
             <>
               <strong>모든 사업이 등록돼 있지는 않습니다.</strong> 예를 들어
-              세종특별자치시는 이 데이터에 자체 사업이 한 건도 없습니다. 시가
-              사업을 안 하는 게 아니라 등록되지 않은 것입니다.
+              세종특별자치시는 2026년 8월 말에 받은 목록에 자체 사업이 한 건도
+              없다가, 9월 13일에 다시 받았을 때 53건이 새로 올라와 있었습니다.
+              사업이 없었던 게 아니라 등록되지 않았던 것입니다.
             </>,
             <>
               <strong>예산 소진·모집 마감을 알 수 없습니다.</strong> 데이터에

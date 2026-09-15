@@ -63,8 +63,10 @@ export default function IncomeLineGuide() {
         <DocSection title={`가장 많은 기준선은 ${busiest.percent}%였습니다`}>
           <p>
             수록한 {services.length.toLocaleString()}건 가운데 선정기준 원문에{" "}
-            &ldquo;기준 중위소득 ○○% 이하&rdquo;가 적혀 있는 것은{" "}
-            <strong>{withPercent.length}건</strong>입니다. 그 비율을 그대로
+            &ldquo;기준 중위소득 ○○% 이하&rdquo;가 <strong>한 가지로</strong> 적혀 있는
+            것은 <strong>{withPercent.length}건</strong>입니다(대상 무리마다 기준선이
+            둘 이상 적힌 사업은 어느 값이 해당하는지 원문을 읽어야 해서 세지
+            않았습니다). 그 비율을 그대로
             세어 늘어놓으면 이렇습니다.
           </p>
 
@@ -111,7 +113,8 @@ export default function IncomeLineGuide() {
             </strong>
             을 기준선으로 씁니다. 반대로 50% 이하는 {atOrBelow50}건(
             {pct(atOrBelow50)}%)뿐입니다. 복지를 저소득층만의 것으로 알고
-            있으면 절반 이상을 스스로 지워 버리는 셈입니다.
+            있으면 {atOrAbove100 * 2 > withPercent.length ? "절반 이상을" : "그만큼을"}{" "}
+            스스로 지워 버리는 셈입니다.
           </p>
         </DocSection>
 

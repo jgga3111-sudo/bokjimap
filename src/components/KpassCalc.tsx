@@ -7,6 +7,7 @@ import {
   MIN_RIDES,
   NORMAL_FARE_CAP,
   calcKpass,
+  KPASS_HALF_URL,
 } from "@/lib/kpass";
 import { won } from "@/lib/display";
 
@@ -214,6 +215,25 @@ export default function KpassCalc() {
             숫자를 크게 띄운 바로 밑에 단서를 단다. 실업급여 글에서
             "6만 8,100원은 조문에 없는 숫자입니다"라고 밝힌 것과 같은 자리다.
           */}
+          {/* 09-15 대조: 공단 페이지는 평상시 표만 싣는데, 정부가 2026년 4월부터 6개월간
+              정액형 기준금액을 50% 내렸다(정책브리핑 2026-04-17). 그 기간엔 이 계산이 실제보다
+              적게 나온다(덜 받는다). 한시 표를 따로 넣지 않고 기간과 값을 적는다. */}
+          <p className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-900">
+            <strong>2026년 4월~9월에는 이보다 더 받을 수 있습니다.</strong> 정부가 이
+            기간 한시로 정액형(일반형·플러스형) 기준금액을 50% 내렸습니다 — 수도권
+            일반 국민 일반형 3만원·플러스형 5만원, 청년·2자녀·어르신 2만5천원·4만5천원,
+            3자녀 이상·저소득 2만2천원·4만원. 지정된 시차시간에 타면 기본형
+            환급률도 30%p 오릅니다. 위 계산은 공단의 평상시 표 기준입니다(
+            <a
+              href={KPASS_HALF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              정책브리핑 2026-04-17
+            </a>
+            ).
+          </p>
           <p className="text-xs leading-relaxed text-muted">
             <strong className="text-slate-600">
               이 금액은 공단 표에 넣어 저희가 계산한 값입니다.

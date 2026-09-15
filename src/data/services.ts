@@ -130,7 +130,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 지자체에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 지자체에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -1548,7 +1548,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 지정 서비스 제공기관에서 보장 결정",
    "이의가 있을 경우, 담당 시/군/구청 또는 성평등가족부, 지자체에 이의 신청 접수"
   ],
-  "medianPercent": 250,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -1798,7 +1798,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 72,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -1951,7 +1951,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 한국자활복지개발원에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 50,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -3307,7 +3307,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 지역자활센터에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 한국자활복지개발원에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 50,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -3543,7 +3543,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 거주지 관할 고용센터에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 거주지 관할 고용센터에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 120,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -4331,7 +4331,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 각 공공주택사업자에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 각 공공주택사업자에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 45,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -4520,7 +4520,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 국민건강보험공단에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 국민건강보험공단에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -7400,7 +7400,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 서민금융진흥원에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 서민금융진흥원에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 200,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -7953,7 +7953,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 충북개발공사에서 서비스 제공 이후 대상자의 상황 관리",
    "담당 시/군/구청 또는 충청남도개발공사에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 150,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -8313,7 +8313,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "- 월 10만원씩 12개월 적립- 근로기간, 적립 횟수에 따라 적립금 감액 지급 또는 미지급",
   "applyMethod": "온라인 신청",
   "applySteps": [],
-  "medianPercent": 140,
+  "medianPercent": null,
   "applyStart": "2019-01-01",
   "applyEnd": "2026-09-30",
   "contacts": [
@@ -8922,7 +8922,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 시군구에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 시군구에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 72,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -9134,7 +9134,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 가족센터,다문화가족지원센터에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 가족센터,다문화가족지원센터에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -9402,7 +9402,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 시군구청에 등록된 사회서비스 제공기관에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 시군구청장에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 160,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -10836,7 +10836,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "1) 지급금액\n    - 차상위계층 : 세대당 월 10만원 (월 130가구)",
   "applyMethod": "1) 신청방법 \n    -  시청에서 읍/면/동주민센터로 국민기초수급자 비율로 대상자 배정\n    -  읍/면/동주민센터에서  대상자를 선정 후 시청에 신청\n   \n2) 지급시기 및 방법\n    -  지급개시일 : 매월 20일 지급(공휴일 경우 전일 기준으로 지급)\n    -  지급방법 : 수급자 계좌에 시장이 직접 입금",
   "applySteps": [],
-  "medianPercent": 50,
+  "medianPercent": null,
   "applyStart": "2000-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -12076,7 +12076,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 국민건강보험공단에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 시군구보건소에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 200,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -13196,7 +13196,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 한국장학재단에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 한국장학재단에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 200,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -14253,7 +14253,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 지방자치단체에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 보훈(지)청에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -16849,7 +16849,7 @@ export const services: readonly WelfareService[] = [
    "담당 시/군/구청 또는 근로복지공단에서 대상자에게 서비스 제공",
    "담당 시/군/구청 또는 근로복지공단에서 서비스 제공 이후 대상자의 상황 관리"
   ],
-  "medianPercent": 120,
+  "medianPercent": null,
   "applyStart": null,
   "applyEnd": null,
   "contacts": [
@@ -16971,7 +16971,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "셋째아 이상 기저귀 지원사업- 월90,000원 기저귀 구매비용을 국민행복카드 바우처 포인트로 3개월 단위로 지급- 카드사별 사용이 가능한 구매처에서 직접 물품을 구매",
   "applyMethod": "방문 신청(주소지 관할 읍면동 주민센터, 여수시 보건소 방문)온라인 신청(정부24, 복지로 사이트)",
   "applySteps": [],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": "2020-03-12",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -22568,7 +22568,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "1월, 2월, 12월(동절기) 3개월동안 월 50,000원 지급",
   "applyMethod": null,
   "applySteps": [],
-  "medianPercent": 65,
+  "medianPercent": null,
   "applyStart": "2013-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -27304,7 +27304,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "1. 미혼모부 아동양육비 : 만 5세 이하 아동 1인당 월10만원 지급2. 미혼모부 냉난방비 : 동하절기 각 2개월간 월 25,000원 지급3. 미혼모부 임신출산 의료비 : 임신1회당 산전,산후 진료비 및 출산일로부터 1년 이내 출산아동에 대한 진료비 최대 50만원 지급(단, 국민행복카드 바우처 전액 소진 증빙시 지원)",
   "applyMethod": "거주지 관할 동주민센터 방문접수",
   "applySteps": [],
-  "medianPercent": 72,
+  "medianPercent": null,
   "applyStart": "2022-01-07",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -28499,7 +28499,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "ㅇ 온라인 학습 사이트 이용권(최대 8개)   1. 진학 과정(초중고) 중 1개 업체 선택   2. EBS 콘텐츠(초중고)    3. 강남인강(중고)   4. AI 학습도구 콴다   5. 어학,자격증 콘텐츠 중 1개 업체 선택   6. AI, 진로 관련 콘텐츠 중 1개 업체 선택   7. 독서 콘텐츠 콴다   8, 자기계발을 위한 Stud.io(스튜디오)ㅇ 대학생 멘토링 서비스   - 대학생 멘토링, 시니어 멘토링, 실시간 맞춤형 멘토링 등 다양한 멘토링 서비스 제공 ㅇ 이 외에도 AI 진로진학 코치, 진로캠퍼스, 예체능 클래스, 오프라인 입시 설명회, 방학 중 영어캠프 등 다양한 프로그램이 있습니다.ㅇ 자세한 내용은 서울런 홈페이지(https://slearn.seoul.go.kr/)를 참고해주세요.",
   "applyMethod": "행복이음 서비스이용 및 신청방법ㅇ 서울런(slearn.seoul.go.kr) 홈페이지에서 온라인으로 신청합니다. (신청방법 안내: https://slearn.seoul.go.kr/introduction?section=0#join)    - 수급권자, 차상위계층,법정 한부모, 독립유공자(본인,배우자,자녀,손자녀),보훈대상자(본인,배우자,자녀) :       서울런(slearn.seoul.go.kr) 홈페이지의 '실시간 온라인 자격검증 서비스'를 통해 상시 가입이 가능합니다.     - 중위소득 50~80% 이하 : 소득관련 증빙을 서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가입이 가능합니다.    - 학교밖 : 최종학력증명서(정부 24 발급) 또는 기관장 확인서(비인가 대안교육기관 및 학교밖청소년 지원기관)를                    서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가입이 가능합니다.    - 다문화가족 : 가족관계증명서(정부 24 발급) 또는 기관장 확인서(다문화가족지원센터 등)를                        서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가입이 가능합니다.    - 북한이탈주민 : 북한이탈주민등록확인서(정부 24 발급) 또는 기관장 확인서(북한이탈주민지원센터)를                            서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가입이 가능합니다.  ※자녀의 경우 가족관계증명서 추가제출 필요합니다.    - 국가보훈대상자 : 서울런(slearn.seoul.go.kr) 홈페이지의 온라인 자격확인 서비스를 통해 상시 가입이 가능합니다.                              ※손자녀의 경우 가족관계증명서, 소득확인증명서 추가제출 필요합니다.    - 가족돌봄청년 : 서울런(slearn.seoul.go.kr) 홈페이지에서 신청후, 서울시복지재단 검증을 통해 담당자가 승인을 하면 가입이 가능합니다.    - 가정폭력피해자 보호시설, 꿀맛무지개교실, 아동보호시설, 지역아동센터 이용자, 한부모가족복지시설 입소자:        각 기관장 확인서를 서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가능이 가능합니다.    - 다자녀가구(3자녀이상 가구, 중위소득 100%이하): 주민등록등본, 가족관계증명서, 소득증빙자료 등을        서울런(slearn.seoul.go.kr) 홈페이지에 업로드 후 담당자가 승인을 하면 가입이 가능합니다.ㅇ 보다 자세한 내용은 서울런(slearn.seoul.go.kr) 홈페이지에서 확인 부탁드립니다. (신청방법 안내: https://slearn.seoul.go.kr/introduction?section=0#join)",
   "applySteps": [],
-  "medianPercent": 120,
+  "medianPercent": null,
   "applyStart": "2021-08-27",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -31236,7 +31236,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "<저소득층 특별생계비>○ 지원기준 : 1인가구 195,410원, 2인가구 324,790원, 3인가구 416,980원, 4인가구 507,670원5인가구 618,660원, 6인가구 679,390원",
   "applyMethod": "읍면동주민센터에서 신청",
   "applySteps": [],
-  "medianPercent": 80,
+  "medianPercent": null,
   "applyStart": "2006-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -34229,7 +34229,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "가구별 기준 중위소득 85% 기준액과 가구소득의 차액만큼의 50%를 매월 급여로 지급\n- 안심소득 급여액 = (기준 중위소득 85% 기준액 - 가구 실제 소득) * 0.5\n- 2022년 지원집단은 3년간 지급(22.7~25.6), 2023년 지원집단은 2년간 지급(23.7~25.6)",
   "applyMethod": "2022년 3월 28일(월)~4월 8일(금), 12일간\n- 온라인 신청 원칙, 신청 첫 주 출생연도 끝자리 5부제 운영(3.28~4.1)\n- 정보취약계층을 위한 접수 콜센터 운영(4.4~4.8)\n1차 5,000가구 무작위 선정 후 1차 선정가구에 한하여 거주지 동 주민센터 방문 서류 제출",
   "applySteps": [],
-  "medianPercent": 85,
+  "medianPercent": null,
   "applyStart": "2022-07-11",
   "applyEnd": "2026-12-31",
   "contacts": [
@@ -35117,7 +35117,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "산후조리비에 사용할 수 있는 인천e음(지역화폐) 150만원을 지원합니다.",
   "applyMethod": "정부24 '맘편한 산후조리비 지원' 신청* 외국인산모 및 청소년 산모 등 정부24 신청불가 시 방문신청",
   "applySteps": [],
-  "medianPercent": 65,
+  "medianPercent": null,
   "applyStart": "2025-02-03",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -36195,7 +36195,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "방과후학교 프로그램 수강료(수익자부담분) 지원(학생 1인당 연간 60만원 내외)",
   "applyMethod": "1. 우선지원대상학생(기초생활수급자, 한부모가정, 법정차상위대상자), 소득에 따른 지원대상자(중위소득 85% 이하)  - 학생 또는 보호자가 읍면동 주민센터 방문  - 온라인 신청: 교육비 원클릭 신청시스템(www.oneclick.moe.go.kr) 또는 복지로(www.bokjiro.go.kr)2. 다자녀가정 학생, 육아기 근로시간 단축 가정 자녀 등  - 학교에 지원 신청서 및 증빙서류 제출3. 학교장 추천 학생  - 보호자와의 면담 후 교내 학생복지심사위원회에서 추천 학생 선정",
   "applySteps": [],
-  "medianPercent": 85,
+  "medianPercent": null,
   "applyStart": "2014-03-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -42749,7 +42749,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "6개월간 구직활동비 총 3,000천원 지원\n지원항목 : 구직활동과 관련이 있는 모든 항목(교육비, 교통비, 식비, 도서구입비 등)",
   "applyMethod": "홈페이지를 통한 온라인 접수(https://youthpassdaejeon.ezwel.com/)관련서류 등기 제출(대전 유성구 가정북로 96 대전일자리지원센터 내일희망카드 담당자",
   "applySteps": [],
-  "medianPercent": 150,
+  "medianPercent": null,
   "applyStart": "2017-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -48090,7 +48090,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "가구당 융자한도1) 주민소득지원자금-일반융자: 5천만원 이하-소액융자: 2천만원 이하 2)생활안정자금-일반융자: 2천만원 이하-소액융자: 5백만원 이하",
   "applyMethod": "주민소득 생활안정자금(공통사항)- 주민소득 및 생활안정자금을 융자받고자 하는 가구의 세대주는 주민소득지원 및 생활안정자금 융자신청서, 사업계획서, 연대(인우)보증서, 서약서, 기타 필요서류를 작성하여 면사무소에 제출- 융자신청서를 접수받은 면장은 융자대상 및 융자목적, 사업계획의 타당성을 검토하여 현지조사서를 작성하고, 융자대상자로 적합하다고 판단될 때에는 융자대상자 추천서를 군수에게 제출(면장 → 군수)일반융자 공통점- 1인 이상의 연대보증인(재산세 납부 2만원 이상인 사람)소액융자 공통점- 주민소득지원자금 : 1인 이상의 연대보증인(재산세 납부 2만원 이상인 사람)- 생활안정자금 : 1인 이상의 인우보증인(이장, 새마을지도자, 부녀회장)민박 지원: 민박지원 대상자로 선정된 자는 군수에게 제출(신청자 → 군수)",
   "applySteps": [],
-  "medianPercent": 100,
+  "medianPercent": null,
   "applyStart": "2003-10-30",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -48902,7 +48902,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "예산 작액에 비해 신청자가 많거나 동점자 발생시 평가항목(소득분위, 자녀 수, 동두천시 최근 연속 거주년수, 기지원 여부)에 따라 선발최대 2회 지원(연 1회 1번만 신청 가능)",
   "applyMethod": "대상자 주소지 관할 행정복지센터에 구비서류 가지고 신청기간 내 방문(현장) 접수합니다.",
   "applySteps": [],
-  "medianPercent": 180,
+  "medianPercent": null,
   "applyStart": "2023-09-11",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -49923,7 +49923,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "가구당 연 2회(설, 추석) 각 2만원씩 연 4만원 지급",
   "applyMethod": null,
   "applySteps": [],
-  "medianPercent": 40,
+  "medianPercent": null,
   "applyStart": "2014-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -59764,7 +59764,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "산모 1인당 소득수준과 관계없이 산후조리비용 50만원 지역화폐 지원(인천e음에 등록된 가맹점 중 산후조리와 관련된 사용처에 한하여 결제 가능, 보건소 홈페이지 참고)",
   "applyMethod": "일반적으로 출생신고 하실 때 동행정복지센터 방문하셔서 각종 수당들과 함께 일괄신청 가능부득이하게, 복지로로 온라인으로 신청하는 경우 관할 동 행정복지센터에 누락된 출산관련 지자체서비스 없도록 본인이 반드시 재차 확인!(온라인 신청도 복지로보다 정부24 출산관련 서비스 통합처리 신청 경로가 확인이 더 빠릅니다)",
   "applySteps": [],
-  "medianPercent": 65,
+  "medianPercent": null,
   "applyStart": "2025-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [
@@ -59932,7 +59932,7 @@ export const services: readonly WelfareService[] = [
   "supportContent": "1인가구 -20만원, 2인가구 -25만원",
   "applyMethod": "1. 사업공고 및 모집2. 신청접수(읍면)3. 자격요건 심사4. 대상자 선정 및 통지5. 주거지원금 청구6. 청구서류 검토7. 주거지원금 지급8. 사업비 정산",
   "applySteps": [],
-  "medianPercent": 160,
+  "medianPercent": null,
   "applyStart": "2022-01-01",
   "applyEnd": "9999-12-31",
   "contacts": [

@@ -20,7 +20,7 @@ const G = guideBySlug("phone-bill-discount")!;
 const S = services.find((s) => s.id === PD_SOURCE_ID);
 
 export const metadata: Metadata = {
-  title: "휴대폰 요금감면 계산 — 생계·의료 33,500원, 차상위 21,500원, 기초연금 11,000원",
+  title: "휴대폰 요금감면 계산 — 월 최대 생계·의료 33,500원, 차상위 21,500원, 기초연금 11,000원",
   description:
     "통신요금 감면은 유형마다 계산식이 다릅니다. 과학기술정보통신부 고시의 감면 조문을 옮기고, 요금제 월정액과 통화료를 넣으면 감면액이 나오게 했습니다. 집 인터넷이 함께 감면되는 유형과 휴대폰만 되는 유형도 갈라 적었습니다.",
   alternates: { canonical: "/guide/phone-bill-discount" },

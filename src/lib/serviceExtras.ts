@@ -35,7 +35,9 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   /* youthSavings.ts의 YS_SOURCE_ID와 같은 값이다. */
   "youth-savings": ["WLF00006266"],
   "k-pass": ["WLF00005440"],
-  "baby-money": ["WLF00001171", "WLF00004415", "WLF00004656", "WLF00004657"],
+  /* 719위 달서구 사업은 09-15에 뺐다 — 글이 그 사업의 신청 통로 문장 하나를 인용했을 뿐
+     그 사업을 다루지는 않는다. 이 표에 들면 색인·광고 대상이 되므로 느슨하게 넣지 않는다. */
+  "baby-money": ["WLF00001171", "WLF00004656", "WLF00004657"],
   livelihood: ["WLF00001132", "WLF00003180"],
   emergency: ["WLF00003180"],
   /* 2026-09-13 애드센스 거절 뒤 새로 쓴 사업별 글. */

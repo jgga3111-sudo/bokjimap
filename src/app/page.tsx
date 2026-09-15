@@ -6,7 +6,9 @@ import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
+import { PAY_DATES } from "@/lib/payDates";
 import { services, SERVICES_UPDATED } from "@/data/services";
+import { LAST_CHECKED } from "@/lib/sourceTotals";
 import PopularList from "@/components/PopularList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
@@ -199,7 +201,9 @@ export default function Home() {
             말을 산문으로 한 번 더 하느라 첫 화면 한 뼘을 쓰고 있었다.
           */}
           <h1 className="text-2xl leading-tight font-extrabold sm:text-3xl">
-            내가 받을 수 있는 <span className="text-brand">복지 지원금</span>
+            {/* 09-15: "내가 받을 수 있는"은 판정해 주는 것처럼 읽혔다 — 이 사이트는
+                자격을 판정하지 않는다(3절). 찾는 일까지만 말한다. */}
+            내 상황에 맞는 <span className="text-brand">복지 지원금</span> 찾기
           </h1>
 
           {/*
@@ -268,12 +272,24 @@ export default function Home() {
           */}
           <p className="mt-3 text-xs leading-relaxed text-muted">
             공공데이터포털 복지서비스 데이터를 {SERVICES_UPDATED}에 받아
-            정리했습니다.{" "}
+            정리하고 {LAST_CHECKED}에 다시 대조했습니다.{" "}
             <Link href="/source" className="underline hover:text-brand">
               출처 자세히
             </Link>{" · "}
             <Link href="/standards" className="underline hover:text-brand">
               검수 기준
+            </Link>
+          </p>
+          {/* 09-15 애드센스 점검: 첫 화면에 이 사이트만의 것(원문 밖에서 찾은 것)이 안
+              보였다. 숫자는 표에서 센다 — 손으로 적지 않는다. */}
+          <p className="mt-1.5 text-xs leading-relaxed text-muted">
+            복지로에 없는 것은 따로 찾습니다 — 법령·사업안내서를 읽고 쓴{" "}
+            <Link href="/guide" className="underline hover:text-brand">
+              안내 글 {GUIDES.length}편
+            </Link>
+            {" · "}
+            <Link href="/guide/pay-dates" className="underline hover:text-brand">
+              법령·공고로 확인한 지급일 {PAY_DATES.length}건
             </Link>
           </p>
         </div>
@@ -315,12 +331,13 @@ export default function Home() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
             <h2 className="text-lg font-bold">
-              내가 대상자인지 1분이면 압니다
+              내 소득이 기준선 어디쯤인지 1분 계산
             </h2>
             <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
               복지 지원의 자격은 대부분 &ldquo;기준 중위소득 몇 % 이하&rdquo;로
               정해집니다. <strong>월 소득·연봉·건강보험료</strong> 중 아는 것
-              하나만 넣으면 어느 구간인지 바로 나옵니다.
+              하나만 넣으면 어느 구간인지 바로 나옵니다. 받을 수 있는지 판정하지는
+              않습니다.
             </p>
           </div>
           <Link

@@ -125,8 +125,8 @@ export default function YouthTomorrowSavingsGuide() {
           <DocList
             items={[
               <>
-                <strong>나이</strong> — 신청 당시 만 15세 이상~만 39세 이하(신청 월에
-                만 15세가 되는 자~신청 월에 만 40세가 되는 자)
+                <strong>나이</strong> — 신청 당시 만 15세 이상~만 39세 이하(신청 월의
+                전월에 만 15세가 된 자~신청 월에 만 40세가 되는 자)
               </>,
               <>
                 <strong>일</strong> — 지금 일하고 있고, 월 근로·사업소득이{" "}

@@ -59,6 +59,22 @@ export type ServicesByPercent = Record<
   { total: number; items: { id: string; name: string }[] } | undefined
 >;
 
+/** 입력값(만원·원) → 월 소득(원). 못 읽으면 null. */
+function toMonthly(raw: string, mode: Mode): number | null {
+  const n = Number(raw.replaceAll(",", ""));
+  if (!raw.trim() || !Number.isFinite(n) || n <= 0) return null;
+  const won =
+    mode === "monthly"
+      ? Math.round(n * 10_000)
+      : mode === "annual"
+        ? Math.round((n * 10_000) / 12)
+        : incomeFromHealthPremium(n);
+  /* 월 10억원을 넘으면 오타로 본다. 상한이 없어 아홉 자리를 치면
+     "중위소득 97,493,…%"가 그대로 나갔다 — KpassCalc 머리말이 인용하는
+     그 사례가 정작 여기서는 안 막혀 있었다(2026-09-10). */
+  return won > 1_000_000_000 ? null : won;
+}
+
 export default function IncomeCheck({
   servicesByPercent = {},
 }: {
@@ -67,24 +83,19 @@ export default function IncomeCheck({
   const [household, setHousehold] = useState(1);
   const [mode, setMode] = useState<Mode>("monthly");
   const [raw, setRaw] = useState("");
+  /* 저장할 값 — 입력 칸을 떠날 때 raw를 옮겨 적는다(아래 저장 주석). */
+  const [committedRaw, setCommittedRaw] = useState("");
 
-  const monthly = useMemo(() => {
-    const n = Number(raw.replaceAll(",", ""));
-    if (!raw.trim() || !Number.isFinite(n) || n <= 0) return null;
-    const won =
-      mode === "monthly"
-        ? Math.round(n * 10_000)
-        : mode === "annual"
-          ? Math.round((n * 10_000) / 12)
-          : incomeFromHealthPremium(n);
-    /* 월 10억원을 넘으면 오타로 본다. 상한이 없어 아홉 자리를 치면
-       "중위소득 97,493,…%"가 그대로 나갔다 — KpassCalc 머리말이 인용하는
-       그 사례가 정작 여기서는 안 막혀 있었다(2026-09-10). */
-    return won > 1_000_000_000 ? null : won;
-  }, [raw, mode]);
+  const monthly = useMemo(() => toMonthly(raw, mode), [raw, mode]);
+  const committed = useMemo(
+    () => toMonthly(committedRaw, mode),
+    [committedRaw, mode],
+  );
 
   const median = medianIncome(household);
   const pct = monthly === null ? null : percentOfMedian(household, monthly);
+  const committedPct =
+    committed === null ? null : percentOfMedian(household, committed);
 
   /*
     결과를 브라우저에 적어 둔다. 상세 페이지에서 "이 사업, 나는 해당되나?"를
@@ -94,10 +105,15 @@ export default function IncomeCheck({
     값이 없을 때(입력을 지웠을 때)는 건드리지 않는다. 지우는 건 이용자가
     "내 결과 지우기"를 눌렀을 때만이다 — 입력창을 비웠다고 예전 결과까지
     없애면, 다시 계산하려다 만 사람의 기록이 사라진다.
+
+    ⚠ 글자를 칠 때마다 저장하지 않는다(09-15). 350을 한 글자씩 지우는 도중
+    "3"(1.2%)이 저장되고, 칸이 비면 저장을 건너뛰어 1.2%가 남았다 — 그 뒤 상세마다
+    「소득 기준 충족」이 떴다(틀리는 방향이 "받는다"). 칸을 떠날 때의 값만 저장하고,
+    가구원 수·입력 방식을 바꾸면 그 값으로 다시 계산해 저장한다.
   */
   useEffect(() => {
-    if (pct !== null) saveMyIncome(household, pct);
-  }, [household, pct]);
+    if (committedPct !== null) saveMyIncome(household, committedPct);
+  }, [household, committedPct]);
 
   /* 게이지는 200%까지만 그린다. 그 위는 어차피 대부분의 사업 밖이다. */
   const gaugePct = pct === null ? 0 : Math.min(pct, 200);
@@ -211,6 +227,7 @@ export default function IncomeCheck({
             /* 점을 남긴다. 예전 필터(`[^\d,]`)가 점을 지워 "187.5"만원이
                "1875"가 되고 중위소득이 열 배로 나왔다(2026-09-10). */
             onChange={(e) => setRaw(e.target.value.replace(/[^\d.,]/g, ""))}
+            onBlur={() => setCommittedRaw(raw)}
             placeholder={
               mode === "premium"
                 ? "예: 120000"

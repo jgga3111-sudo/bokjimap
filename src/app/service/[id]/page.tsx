@@ -146,6 +146,52 @@ function applyTitle(s: WelfareService): string {
   return s.applyMethod ? "신청 방법" : "처리 절차(원문)";
 }
 
+/**
+ * 처리 단계를 **원문이 붙인 단계 이름대로** 줄 세운다. (2026-09-15)
+ *
+ * API의 `applmetList`는 배열 순서가 흔들린다(CLAUDE.md 6절 — 쉼표 목록 순서가
+ * 호출마다 바뀐 것과 같다). 그래서 조회수 2위 청년월세는 1번이 「보장 결정」·
+ * 2번이 「서비스 신청」, 8위 기초연금은 1번이 「조사 및 심사」로 나가고 있었다.
+ * 1·2·3 번호를 달아 두면 순서로 읽힌다.
+ *
+ * 원문 항목마다 단계 이름(`servSeDetailNm`: 신청기관·조사기관·결정기관·지급기관·
+ * 사후관리기관·이의신청접수기관)이 있고 문장 끝이 그와 짝지어 정해져 있다
+ * (중앙 330건 전수: ‘서비스 신청’ · 조사 및 심사 · 보장 결정 · 대상자에게 서비스
+ * 제공 · 상황 관리 · 이의 신청 접수 — 여섯 가지뿐). 그 끝말로 순서를 매긴다.
+ * 문장은 고치지 않는다. 모르는 끝말은 맨 뒤에 원래 순서대로 둔다.
+ * 「이의 신청」과 「서비스 제공 이후 … 상황 관리」는 다른 단계의 낱말을 품고
+ * 있어 먼저 가른다.
+ */
+const STAGE_ORDER: [RegExp, number][] = [
+  [/이의\s*신청/, 5],
+  [/상황\s*관리/, 4],
+  [/서비스\s*신청/, 0],
+  [/조사\s*및\s*심사/, 1],
+  [/보장\s*결정/, 2],
+  [/서비스\s*제공/, 3],
+];
+
+const stageOf = (step: string) =>
+  STAGE_ORDER.find(([re]) => re.test(step))?.[1] ?? 6;
+
+/* sort는 안정 정렬이라 같은 단계끼리는 원문 순서가 남는다. */
+const orderedSteps = (steps: string[]) =>
+  [...steps].sort((a, b) => stageOf(a) - stageOf(b));
+
+/**
+ * 원문의 **선정 기준** 칸이 다른 칸(지원 대상·지원 내용)과 같은 문장이면 절을 하나 뺀다.
+ * (2026-09-15 애드센스 점검) 색인 상세 15쪽에서 같은 원문 덩어리가 두 절에 똑같이
+ * 찍혔다 — 읽는 사람에게 새 정보가 없고 심사에는 복제로 읽힌다. 공백만 다르면 같다고 본다.
+ */
+const sameText = (a: string | null, b: string | null) =>
+  !!a && !!b && a.replace(/\s+/g, "") === b.replace(/\s+/g, "");
+const criteriaDupOf = (s: WelfareService): "target" | "benefit" | null =>
+  sameText(s.selectionCriteria, s.eligibility)
+    ? "target"
+    : sameText(s.selectionCriteria, s.supportContent)
+      ? "benefit"
+      : null;
+
 const TOC = [
   /* 원문에 없는 것이라 원문 절들보다 앞에 둔다(SiteChecked 주석). */
   { id: "checked", title: "따로 확인한 것", has: (s: WelfareService) => hasExtras(s) },
@@ -156,7 +202,9 @@ const TOC = [
     /* 상투 문구뿐인 149건에서는 절을 안 그리므로 목차에도 걸지 않는다.
        걸어 두면 눌러서 도착한 자리에 아무것도 없다. */
     has: (s: WelfareService) =>
-      !!s.selectionCriteria && !isCriteriaBoilerplate(s.selectionCriteria),
+      !!s.selectionCriteria &&
+      !isCriteriaBoilerplate(s.selectionCriteria) &&
+      !criteriaDupOf(s),
   },
   { id: "benefit", title: "지원 내용", has: (s: WelfareService) => !!s.supportContent },
   {
@@ -568,8 +616,10 @@ function SiteChecked({ s }: { s: WelfareService }) {
     <Section id="checked" title="복지클릭이 따로 확인한 것">
       {/* 안내 글만 붙는 사업에 "법령·공고에서 찾았다"고 쓰면 없는 일을 말한 셈이다. */}
       <p className="mb-3 text-sm leading-relaxed text-slate-700">
+        {/* 09-15: 신청 일정 중엔 출처가 복지로 원문 문장인 것도 있어(청년월세) "원문에 없는
+            내용"이라고 쓰면 바로 밑 출처와 어긋났다. 어디서 왔는지는 항목마다 적는다. */}
         {payDate || calendar.length > 0
-          ? "아래는 복지로 원문에 없는 내용입니다. 법령·공식 공고에서 찾아 출처와 확인일을 함께 적었습니다."
+          ? "아래는 법령·공식 공고에서 찾거나 원문 문장에서 날짜를 뽑아 따로 정리한 것입니다. 항목마다 출처와 확인일을 적었습니다."
           : "아래는 이 지원을 따로 다룬 복지클릭 안내 글입니다."}
       </p>
       <div className="space-y-3">
@@ -907,10 +957,16 @@ export default async function ServiceDetail({
               참고하라고만 되어 있습니다.
             </p>
           )}
+          {criteriaDupOf(s) === "target" && (
+            <p className="mt-2 text-xs text-muted">
+              원문의 선정 기준 항목은 위 지원 대상과 같은 문장이라 한 번만
+              실었습니다.
+            </p>
+          )}
         </Section>
       )}
 
-      {s.selectionCriteria && !isCriteriaBoilerplate(s.selectionCriteria) && (
+      {s.selectionCriteria && !isCriteriaBoilerplate(s.selectionCriteria) && !criteriaDupOf(s) && (
         <Section id="criteria" title="선정 기준">
           <Prose text={s.selectionCriteria} />
         </Section>
@@ -919,6 +975,12 @@ export default async function ServiceDetail({
       {s.supportContent && (
         <Section id="benefit" title="지원 내용">
           <Prose text={s.supportContent} />
+          {criteriaDupOf(s) === "benefit" && (
+            <p className="mt-2 text-xs text-muted">
+              원문의 선정 기준 항목은 이 지원 내용과 같은 문장이라 한 번만
+              실었습니다.
+            </p>
+          )}
         </Section>
       )}
 
@@ -928,20 +990,34 @@ export default async function ServiceDetail({
               주석). 그 단계를 신청 절차로 읽지 않게, 창구를 어디서 확인하는지
               먼저 적는다(2026-09-11). "창구가 없다"고 쓰지 않는다 — 원문에
               안 적혀 있을 뿐이다(CLAUDE.md 3절). */}
-          {!s.applyMethod && (
-            <p className="mb-3 text-sm leading-relaxed text-slate-700">
-              신청 창구는 원문에 따로 적혀 있지 않습니다. 아래는 담당 기관이
-              신청을 받은 뒤 처리하는 순서입니다. 어디서 신청하는지는{" "}
-              <a href="#official" className="text-brand underline">
-                문의처·공식 안내
-              </a>
-              에서 확인하세요.
-            </p>
-          )}
+          {/* 09-15: 옛 문장은 늘 "신청 창구는 원문에 따로 적혀 있지 않습니다"였는데,
+              중앙 330건 대부분이 「…주민센터 또는 복지로…에서 ‘서비스 신청’」 줄을
+              갖고 있어 바로 아래 목록과 말이 어긋났다. 그 줄이 있으면 그걸 가리킨다. */}
+          {!s.applyMethod &&
+            (s.applySteps.some((t) => stageOf(t) === 0) ? (
+              <p className="mb-3 text-sm leading-relaxed text-slate-700">
+                아래는 원문에 적힌 단계를 신청부터 순서대로 놓은 것입니다.
+                &lsquo;서비스 신청&rsquo;이라고 적힌 줄이 신청하는 곳이고, 나머지는
+                담당 기관이 처리하는 단계입니다. 창구가 바뀌었을 수 있으니{" "}
+                <a href="#official" className="text-brand underline">
+                  문의처·공식 안내
+                </a>
+                에서도 확인하세요.
+              </p>
+            ) : (
+              <p className="mb-3 text-sm leading-relaxed text-slate-700">
+                신청 창구는 원문에 따로 적혀 있지 않습니다. 아래는 담당 기관이
+                신청을 받은 뒤 처리하는 순서입니다. 어디서 신청하는지는{" "}
+                <a href="#official" className="text-brand underline">
+                  문의처·공식 안내
+                </a>
+                에서 확인하세요.
+              </p>
+            ))}
           {s.applyMethod && <Prose text={s.applyMethod} />}
           {s.applySteps.length > 0 && (
             <ol className="mt-3 space-y-2">
-              {s.applySteps.map((step, i) => (
+              {orderedSteps(s.applySteps).map((step, i) => (
                 <li key={i} className="flex gap-3 text-sm text-slate-700">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand">
                     {i + 1}

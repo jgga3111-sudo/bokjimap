@@ -134,6 +134,8 @@ export type TaxCreditResult = {
   assetRate: number;
   /** 총급여액 등이 소멸 지점을 넘어 근로장려금이 0이 되었는가 */
   workZeroByIncome: boolean;
+  /** 최소 지급 규정이 걸렸는가(workMinimum) — "none"은 1만5천원 미만이라 0원 */
+  workFloor: "none" | 100000 | 30000 | null;
 };
 
 /**
@@ -153,13 +155,45 @@ export function calcTaxCredit(
 
   /* 원 단위 아래는 반올림한다. 국세청은 별도 절사 규정을 두지만 원문에
      적혀 있지 않아, 우리가 정했다는 사실을 화면에 밝힌다. */
+  const { amount: work, floor: workFloor } = workMinimum(
+    toWon(workRawM * rate),
+    grossManwon,
+    h.work,
+  );
+  const child = toWon(childRawM * rate);
   return {
     workRaw: toWon(workRawM),
     childRaw: toWon(childRawM),
-    work: toWon(workRawM * rate),
-    child: toWon(childRawM * rate),
-    total: toWon((workRawM + childRawM) * rate),
+    work,
+    child,
+    /* 두 줄의 합이어야 화면의 세 숫자가 맞는다(09-15: 1,736,917 + 1,999,388 =
+       3,736,305인데 따로 반올림 안 한 합이 3,736,304로 나갔다). */
+    total: work + child,
     assetRate: rate,
     workZeroByIncome: grossManwon >= h.work.end,
+    workFloor,
   };
+}
+
+/**
+ * 근로장려금 최소 지급 — 조세특례제한법 제100조의7제3항(2026-01-01 시행판 확인).
+ *
+ * 원문(WLF00001148)에는 없는 규정이라 이 파일에서 유일하게 **밖에서 가져온** 값이다.
+ * 빼면 저소득 구간에서 실제보다 적게 알려 준다(09-15 점검). 조문:
+ *   · 산정액(감액 포함)이 1만5천원 미만 → 없는 것으로 결정
+ *   · 증가 구간(제100조의5①각 호 가목) 1만5천원 이상 10만원 미만 → 10만원
+ *   · 감소 구간(같은 호 다목) 1만5천원 이상 3만원 미만 → 3만원
+ * 자녀장려금의 3만원 하한(제100조의31②)은 이 계산기 범위(1인당 최소 50만원 × 50%)에서
+ * 걸릴 일이 없어 넣지 않았다.
+ */
+function workMinimum(
+  amount: number,
+  g: number,
+  w: Household["work"],
+): { amount: number; floor: "none" | 100000 | 30000 | null } {
+  if (amount <= 0) return { amount, floor: null };
+  if (amount < 15000) return { amount: 0, floor: "none" };
+  if (g < w.rise && amount < 100000) return { amount: 100000, floor: 100000 };
+  if (g >= w.flat && amount < 30000) return { amount: 30000, floor: 30000 };
+  return { amount, floor: null };
 }

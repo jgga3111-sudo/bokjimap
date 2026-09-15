@@ -150,11 +150,54 @@ export function askSearch(read: AskRead): AskAnswer {
   const sidoFull = (c: Chip) =>
     c.axis === "region" ? (sidoBySlug(c.slug)?.fullName ?? null) : null;
 
-  /* 혜택은 거르는 데 안 쓴다(위 BENEFIT_BOOST 주석). */
-  const filter = (chips: Chip[]) =>
-    services.filter((s) =>
-      chips.every((c) => c.axis === "benefit" || passes(s, c, sidoFull(c))),
+  /* 이름을 적어 물은 사업(09-15). 「부모급여 아동수당 같이」에서 「아동」이 조건이
+     되자 생애주기가 영유아뿐인 부모급여가 걸러져 사라졌다. 사람이 이름을 댄 사업은
+     생애주기·대상 조건으로 거르지 않는다 — 지역은 그대로 건다("서울 청년월세"에
+     인천형이 섞이면 안 된다). 낱말로 걸리지 않은 통째 이름은 점수만 올린다. */
+  const nameForms = new Map(
+    services.map((s) => [s.id, searchableNames(s.id, s.name).map(norm)] as const),
+  );
+  const wordNorms = new Set(read.words.map(norm));
+  const extraNames = read.names.filter((x) => !wordNorms.has(x.name));
+  /* 이름의 **대부분**을 댄 경우만 친다(질문 낱말이 이름 길이의 60% 이상). 「기초생활수급자」는
+     「기초생활수급자 명절 위로금 지원」의 앞머리일 뿐 그 사업을 가리킨 말이 아니다. */
+  const namedBy = (s: (typeof services)[number], list: AskRead["names"]) =>
+    list.filter((x) =>
+      nameForms.get(s.id)!.some((nm) => nm.includes(x.name) && x.name.length >= nm.length * 0.6),
     );
+
+  /* 생애주기·대상 칸이 **빈** 사업은 조건으로 거르지 않는다(09-15). 910건 중
+     lifeStages가 빈 것 241건, targets가 빈 것 459건 — 조회수 22위 「한부모가족
+     아동양육비」가 생애주기가 비어 「한부모 아동양육비」에서 사라졌다. 원본이 칸을
+     안 채운 것이지 조건에 안 맞는 것이 아니다(주제·혜택을 거르지 않는 것과 같은 이유).
+     다만 **낱말까지 걸린 것만** 보인다 — 칸이 빈 사업을 「조건에 맞는 것」으로
+     내보내면 그건 우리가 맞다고 말하는 셈이다(아래 unknownIds). */
+  const unknownIds = new Set<string>();
+  const passesOrBlank = (s: (typeof services)[number], c: Chip) => {
+    if (passes(s, c, sidoFull(c))) return true;
+    const blank =
+      (c.axis === "life" && s.lifeStages.length === 0) ||
+      (c.axis === "target" && s.targets.length === 0);
+    if (blank) unknownIds.add(s.id);
+    return blank;
+  };
+
+  /* 혜택은 거르는 데 안 쓴다(위 BENEFIT_BOOST 주석). */
+  const filter = (chips: Chip[]) => {
+    unknownIds.clear();
+    return services.filter((s) => {
+      const named = namedBy(s, read.names);
+      return chips.every(
+        (c) =>
+          c.axis === "benefit" ||
+          /* 이름을 댄 사업은 그 이름과 무관한 생애주기·대상 조건, 또는 그 이름
+             안에서 나온 조건으로 거르지 않는다. */
+          ((c.axis === "life" || c.axis === "target") &&
+            named.some((x) => x.covers.length === 0 || x.covers.includes(norm(c.from)))) ||
+          passesOrBlank(s, c),
+      );
+    });
+  };
 
   let pool = filter(applied);
   while (pool.length === 0 && applied.length > 0) {
@@ -176,9 +219,8 @@ export function askSearch(read: AskRead): AskAnswer {
 
   for (const s of pool) {
     const body = norm(bodyOf(s));
-    const place = placeLabel(s);
-    const meta = norm(place + (s.department ?? ""));
-    const forms = searchableNames(s.id, s.name).map(norm);
+    const place = norm(placeLabel(s));
+    const forms = nameForms.get(s.id)!;
 
     let matched = 0;
     let score = 0;
@@ -203,7 +245,9 @@ export function askSearch(read: AskRead): AskAnswer {
         /* 시·군·구 이름은 축이 아니라 낱말로 걸린다. "성남시 청년"에서
            「성남시」가 여기서 잡힌다 — 시·군·구를 축으로 만들면 171개짜리
            표가 하나 더 는다. */
-        if (here === 0 && meta.includes(f.n)) here = 12;
+        /* 담당 부서 이름은 보지 않는다(09-15). 「치매 부모님 돌봄」의 1위가 부서
+           「미래교육돌봄국」에 걸린 구미 청년월세였다 — 부서 이름은 사업 내용이 아니다. */
+        if (here === 0 && place.includes(f.n)) here = 12;
         if (here === 0 && body.includes(f.n)) {
           here = 6;
           bodyForm = f.raw;
@@ -221,6 +265,15 @@ export function askSearch(read: AskRead): AskAnswer {
         if (!hitWords.has(w.raw)) hitWords.set(w.raw, via ?? w.raw);
         if (best === 6) bodyToken ??= bodyForm ?? w.raw;
       }
+    }
+
+    if (extraNames.length && namedBy(s, extraNames).length) {
+      matched += 1;
+      score += 100;
+    } else if (extraNames.some((x) => forms.some((nm) => nm.includes(x.name)))) {
+      /* 이름의 일부만 댄 경우(「아동양육비」 → 「한부모가족 아동양육비 지원」)는 개수는
+         안 늘리고 같은 개수 안에서만 위로 올린다. */
+      score += 60;
     }
 
     /* 혜택은 걸러 내지 않고 위로 올리기만 한다. */
@@ -270,7 +323,7 @@ export function askSearch(read: AskRead): AskAnswer {
   });
 
   const matched = scored.filter((x) => x.matched > 0);
-  const rest = scored.filter((x) => x.matched === 0);
+  const rest = scored.filter((x) => x.matched === 0 && !unknownIds.has(x.s.id));
 
   return {
     matchedHits: matched.slice(0, MAX_MATCHED).map(toHit),
@@ -282,6 +335,6 @@ export function askSearch(read: AskRead): AskAnswer {
       .map((w) => ({ word: w, via: hitWords.get(w) === w ? null : hitWords.get(w)! })),
     missedWords: read.words.filter((w) => !hitWords.has(w)),
     matchedTotal: matched.length,
-    poolTotal: scored.length,
+    poolTotal: matched.length + rest.length,
   };
 }

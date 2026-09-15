@@ -99,9 +99,13 @@ export function statedApplyPeriod(s: WelfareService): StatedPeriod | null {
     const yb = [...before.matchAll(YEAR_BEFORE)].at(-1);
     const yRaw = m[4] ?? m[1] ?? (yb ? yb[1] ?? yb[2] : undefined);
     if (!yRaw) continue;
-    const y = fullYear(yRaw);
     const mo = Number(m[5]);
     const d = Number(m[6]);
+    /* 끝 연도가 생략됐는데 끝이 시작보다 앞 날짜면 해를 넘긴 것이다 —
+       「2025.12.29. ~ 1.7.」의 끝은 2026-01-07이다. 안 넘기면 신청 기간 중에
+       「마감」이 붙는다(09-15 코드 점검, 지금 수록분엔 해당 없음). */
+    const rolled = !m[4] && mo * 100 + d < Number(m[2]) * 100 + Number(m[3]);
+    const y = fullYear(yRaw) + (rolled ? 1 : 0);
     if (mo < 1 || mo > 12 || d < 1 || d > 31) continue;
 
     const end = `${y}-${pad(mo)}-${pad(d)}`;

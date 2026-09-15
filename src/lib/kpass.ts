@@ -39,6 +39,8 @@
 
 /** 이 표를 1차 출처에서 확인한 날. 화면에 그대로 띄운다. */
 export const KPASS_CHECKED = "2026-09-08";
+/** 2026년 4월부터 6개월 한시 「반값 모두의 카드」(정액제 기준금액 50% 인하) — 09-15 확인. */
+export const KPASS_HALF_URL = "https://www.korea.kr/news/policyNewsView.do?newsId=148962910";
 
 export const KPASS_SOURCE = "TS한국교통안전공단 「대중교통비 환급 지원 사업(K-패스)」";
 export const KPASS_SOURCE_URL =

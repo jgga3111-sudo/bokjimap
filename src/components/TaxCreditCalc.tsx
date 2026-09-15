@@ -172,7 +172,11 @@ export default function TaxCreditCalc() {
               hint={
                 result.workZeroByIncome
                   ? `총급여액 등이 ${hh.work.end.toLocaleString("ko-KR")}만원을 넘어 ${hh.label} 가구는 0원입니다`
-                  : `${hh.label} 가구 · 최대 ${hh.work.max}만원`
+                  : result.workFloor === "none"
+                    ? "계산액이 1만5천원 미만이면 지급하지 않습니다(조세특례제한법 제100조의7제3항)"
+                    : result.workFloor
+                      ? `계산액이 ${result.workFloor === 100000 ? "10만원" : "3만원"}보다 적어 최소 금액으로 올렸습니다(조세특례제한법 제100조의7제3항)`
+                      : `${hh.label} 가구 · 최대 ${hh.work.max}만원`
               }
             />
             <Row
@@ -198,6 +202,9 @@ export default function TaxCreditCalc() {
             <strong className="text-slate-600">
               이 금액은 원문의 산식에 넣어 저희가 계산한 값입니다.
             </strong>{" "}
+            <strong className="text-slate-600">5월 정기신청 기준 금액입니다.</strong>{" "}
+            기한 후 신청(6월~12월 초)은 이 금액의 95%만, 반기신청 상반기분은
+            35%가 먼저 나옵니다(기한 후 신청은 조세특례제한법 제100조의7제2항).
             원 단위 아래는 반올림했습니다. &ldquo;총급여액 등&rdquo;에 무엇이
             들어가는지, 국세 체납액이 있으면 얼마가 충당되는지는 국세청이
             정합니다. 실제 수령액은 심사 뒤에 확정됩니다.

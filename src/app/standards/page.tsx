@@ -3,6 +3,7 @@ import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import MailLink from "@/components/MailLink";
 import { services, SERVICES_UPDATED } from "@/data/services";
+import { LAST_CHECKED } from "@/lib/sourceTotals";
 import AdSenseScript from "@/components/AdSenseScript";
 
 /*
@@ -40,7 +41,7 @@ export default function StandardsPage() {
     <DocPage
       title="정보 수집·검수 기준"
       lead="지원금 정보는 신청과 돈에 바로 닿습니다. 그래서 복지클릭은 무엇을 어디서 가져와 어떤 규칙으로 옮기는지, 그리고 무엇을 하지 않는지를 미리 적어 둡니다."
-      updated={`복지 서비스 데이터 최종 수집일 ${SERVICES_UPDATED}`}
+      updated={`복지 서비스 데이터 처음 수집 ${SERVICES_UPDATED} · 마지막 대조 ${LAST_CHECKED}`}
     >
       <DocNote tone="brand" title="한 줄 요약">
         정부가 공개한 자료를 <strong>원문 그대로</strong> 옮기고, 확인하지 못한
@@ -64,7 +65,8 @@ export default function StandardsPage() {
                 ["수록 서비스", `${total}건`],
                 ["중앙부처 사업", `${central.toLocaleString()}건`],
                 ["지자체 사업", `${local.toLocaleString()}건`],
-                ["마지막 수집일", SERVICES_UPDATED],
+                ["처음 받은 날", SERVICES_UPDATED],
+                ["마지막으로 다시 받아 대조한 날", LAST_CHECKED],
               ].map(([k, v]) => (
                 <tr key={k} className="border-b border-line">
                   <th scope="row" className="py-2.5 text-left font-medium text-muted">
@@ -166,8 +168,10 @@ export default function StandardsPage() {
       <DocSection title="언제 갱신하나">
         <p>
           정해진 주기 없이 <strong>수시로</strong> 다시 받습니다. 복지 서비스
-          데이터의 마지막 수집일은 <strong>{SERVICES_UPDATED}</strong>이며, 이
-          날짜는 각 서비스 페이지 상단에도 &ldquo;확인&rdquo;으로 표시됩니다.
+          데이터는 <strong>{SERVICES_UPDATED}</strong>에 처음 받았고, 목록과 조회수
+          상위 사업을 <strong>{LAST_CHECKED}</strong>에 다시 받아 대조했습니다.
+          사업마다 실제로 확인한 날은 각 서비스 페이지 상단에
+          &ldquo;확인&rdquo;으로 따로 표시됩니다.
         </p>
         <p>
           직접 쓴 안내 글은 글마다 마지막으로 손본 날을 머리에 적습니다. 글

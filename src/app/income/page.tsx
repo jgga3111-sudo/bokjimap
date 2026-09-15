@@ -68,9 +68,10 @@ export default function IncomeIndex() {
       */}
       <p className="text-sm leading-relaxed text-muted">
         수록 {services.length.toLocaleString()}건 가운데 선정기준 문장에
-        기준선이 명시된 {covered}건만 여기 실립니다. 나머지가 소득 기준이
-        없다는 뜻은 아닙니다 — 문장에 퍼센트로 적혀 있지 않아 우리가 읽어내지
-        못한 것이고, <strong>짐작해서 배정하지 않습니다.</strong> 그 사업들은{" "}
+        기준선이 한 가지로 명시된 {covered}건만 여기 실립니다. 나머지가 소득
+        기준이 없다는 뜻은 아닙니다 — 문장에 퍼센트로 적혀 있지 않거나, 대상
+        무리마다 기준선이 달라 한 값으로 줄 세울 수 없는 것이고,{" "}
+        <strong>짐작해서 배정하지 않습니다.</strong> 그 사업들은{" "}
         <Link href="/theme" className="text-brand underline">
           주제별
         </Link>

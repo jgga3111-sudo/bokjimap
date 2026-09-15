@@ -37,7 +37,7 @@ export default function CheckPage() {
       <AdSenseScript />
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">
-          내가 받을 수 있나?{" "}
+          내 소득은 기준선 어디쯤?{" "}
           <span className="text-brand">1분 자가진단</span>
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">

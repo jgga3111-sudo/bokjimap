@@ -37,6 +37,40 @@ const AXIS_NAME: Record<Chip["axis"], string> = {
   region: "지역",
 };
 
+/** 질문 말투 → 이미 있는 안내 글. 판정하지 않고 글로 보낸다. */
+const ASK_GUIDES: { re: RegExp; lead: string; href: string; label: string }[] = [
+  {
+    re: /중복|(같이|함께|동시에?|둘\s*다)\s*받/,
+    lead: "함께 받을 수 있는지는 사업마다 다르고, 저희가 판정하지 않습니다.",
+    href: "/faq#apply",
+    label: "여러 지원을 동시에 받을 수 있나요",
+  },
+  {
+    re: /신청\s*(방법|하는\s*법|절차)|어디(서|에서)?\s*신청|어떻게\s*신청/,
+    lead: "신청 창구는 사업마다 다릅니다. 각 사업 페이지의 신청 방법 칸과 함께 보세요.",
+    href: "/guide/apply",
+    label: "어디서 어떻게 신청하나",
+  },
+  {
+    re: /(온라인|인터넷|모바일|앱)\s*(으로\s*)?신청/,
+    lead: "온라인 신청이 되는지는 사업마다 다릅니다.",
+    href: "/guide/online",
+    label: "온라인으로 신청할 수 있는 지원",
+  },
+  {
+    re: /지급일|입금일|언제\s*(들어|나와|나오|입금|지급|줘|주)/,
+    lead: "법령에 지급일이 적힌 제도는 따로 모아 두었습니다.",
+    href: "/guide/pay-dates",
+    label: "지원금 지급일",
+  },
+  {
+    re: /실업\s*급여|구직\s*급여/,
+    lead: "실업급여는 고용보험 제도라 복지로 수록 목록에 없습니다.",
+    href: "/guide/unemployment",
+    label: "실업급여 안내",
+  },
+];
+
 /** 은/는. 한글이 아닌 글자로 끝나면 받침을 모르니 둘 다 적는다. */
 function topicParticle(word: string): string {
   const c = word.charCodeAt(word.length - 1);
@@ -221,7 +255,19 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
               {topicParticle(answer.missedWords[answer.missedWords.length - 1])}{" "}
               {answer.poolTotal < services.length
                 ? `위 조건에 맞는 ${answer.poolTotal.toLocaleString()}건 안에서는 찾지 못했습니다.`
-                : `수록 ${services.length.toLocaleString()}건의 이름과 본문 어디에도 없어 쓰지 못했습니다.`}
+                : `수록 ${services.length.toLocaleString()}건의 이름·요약·지원 대상·지원 내용에서 찾지 못했습니다.`}
+              {/* 09-15: "본문 어디에도 없다"고 적었는데 선정 기준 칸은 보지 않는다
+                  (bodyOf). 「전세사기」가 긴급복지 8건의 선정 기준에 있는데 없다고 나갔다.
+                  보는 칸을 그대로 적는다. */}
+            </p>
+          )}
+
+          {/* 조건으로 안 쓰고 버린 나이 구간. 조용히 버리면 「60대」가 반영된 줄 안다. */}
+          {read && read.skipped.length > 0 && (
+            <p className="mt-2 text-xs leading-relaxed text-muted">
+              {read.skipped.map((w) => `“${w}”`).join(" · ")}
+              {topicParticle(read.skipped[read.skipped.length - 1])} 생애주기 둘 이상에
+              걸치는 나이라 조건으로 쓰지 않았습니다.
             </p>
           )}
         </section>
@@ -241,6 +287,23 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
               소득 구간 계산하기 →
             </Link>
           </p>
+        </section>
+      )}
+
+      {/* 목록이 답이 아닌 질문 — 신청 방법·함께 받기·지급일·수록 밖 제도. 이런 말은
+          낱말로 찾지 않고(askParse STOP) 이미 있는 글로 잇는다(09-15). */}
+      {q && ASK_GUIDES.some((g) => g.re.test(q)) && (
+        <section className="rounded-xl border border-line bg-sunken/70 px-4 py-3.5">
+          <ul className="space-y-1.5 text-sm leading-relaxed text-slate-700">
+            {ASK_GUIDES.filter((g) => g.re.test(q)).map((g) => (
+              <li key={g.href}>
+                {g.lead}{" "}
+                <Link href={g.href} className="font-bold text-brand underline">
+                  {g.label} →
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

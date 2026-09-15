@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   갖고 있으면서 산문으로만 보여주고 있었다.
 
   `/guide/k-pass`와 결정적으로 다른 점: 저 글은 공단 표를 밖에서 찾아왔지만,
-  여기는 **밖에서 가져온 숫자가 하나도 없다.**
+  여기는 **산식이 전부 원문에 있다.** 09-15에 원문에 없는 최소 지급 규정(조특법
+  제100조의7제3항)만 조문에서 더했다 — 빼면 저소득 구간을 실제보다 적게 알려 준다.
 */
 
 export default function TaxCreditAmountGuide() {
@@ -41,7 +42,7 @@ export default function TaxCreditAmountGuide() {
       >
         <DocSection title="산식이 원문에 그대로 있습니다">
           <p>
-            이 글의 숫자는 <strong>밖에서 가져온 것이 하나도 없습니다.</strong>{" "}
+            이 글의 산식은 <strong>전부 수록 원문에서 옮겼습니다.</strong>{" "}
             저희가 수록한{" "}
             {SOURCE ? (
               <Link
@@ -64,7 +65,10 @@ export default function TaxCreditAmountGuide() {
           </blockquote>
           <p>
             아래 계산기는 이 문장을 그대로 옮긴 것입니다. 홑벌이·맞벌이도 같은
-            모양이고 숫자만 다릅니다.
+            모양이고 숫자만 다릅니다. 원문에 없는 것은 하나만 더했습니다 —
+            조세특례제한법 제100조의7제3항의 최소 지급 규정입니다. 계산액이
+            1만5천원 미만이면 지급하지 않고, 늘어나는 구간에서 10만원 미만이면
+            10만원, 줄어드는 구간에서 3만원 미만이면 3만원으로 정합니다.
           </p>
         </DocSection>
 

@@ -8,6 +8,7 @@ import {
   YS_SOURCE_ID,
   YS_CHECKED,
   YS_FSC_URL,
+  YS_BRIEF_URL,
   MONTHS,
   MONTHLY_CAP,
 } from "@/lib/youthSavings";
@@ -80,9 +81,13 @@ export default function YouthSavingsGuide() {
           <YouthSavingsCalc />
         </DocSection>
 
-        <DocSection title="두 문서가 다릅니다">
+        <DocSection title="7,500만원과 6,000만원은 서로 다른 선입니다">
           <p>
-            우대형 기준(총급여 3,600만원)은 두 출처가 같습니다. 그런데{" "}
+            우대형 기준은 두 출처가 같습니다 — 소득 3,600만원 이하{" "}
+            <strong>중소기업 재직자</strong> 또는 연매출 1억원 이하 소상공인이고,
+            가구 중위소득 150% 이하입니다. 복지로 원문은 여기에 &ldquo;일반형
+            소득요건 충족하는 중소기업 취업자는 우대형으로 분류&rdquo;를
+            덧붙입니다. 그런데{" "}
             <strong>일반형이 다릅니다.</strong>
           </p>
           <div className="overflow-x-auto">
@@ -116,11 +121,27 @@ export default function YouthSavingsGuide() {
             </table>
           </div>
           <p>
-            <strong>6,000만~7,500만원 구간이 어떻게 되는지</strong>는 이 두
-            문서만으로 단정할 수 없습니다. 가입 상한과 기여금 상한이 다른 것으로
-            읽히지만, 그건 저희 해석이지 어느 문서에도 그렇게 적혀 있지
-            않습니다. 그래서 <strong>계산기에서 빼고 이 사실만 적어 둡니다.</strong>{" "}
-            해당되신다면 서민금융진흥원에 확인해 주세요.
+            처음 이 글을 쓸 때는 <strong>6,000만~7,500만원 구간</strong>을 두 문서만으로
+            단정할 수 없어 계산에서 뺐습니다. 이후 정부가{" "}
+            <a
+              href={YS_BRIEF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              정책브리핑(2026-06-19)
+            </a>
+            에 유형별 기준을 모두 적었습니다 — 총급여 6,000만원 초과~7,500만원
+            이하는 <strong>정부기여금 없이 이자소득 비과세만</strong> 받습니다.
+            7,500만원은 가입 상한이고 6,000만원은 기여금 상한이었습니다. 계산기의
+            &ldquo;기여금 없음&rdquo;이 이 구간입니다(2026-09-15 확인).
+          </p>
+          <p>
+            우대형(12%)도 소득만으로 갈리지 않습니다. 같은 자료에 따르면{" "}
+            <strong>중소기업 신규취업자</strong>는 총급여 6,000만원 이하·가구
+            중위소득 200% 이하면 우대형이고, 중소기업 재직자는 3,600만원 이하·
+            150% 이하, 소상공인은 연매출 1억원 이하·150% 이하입니다. 어느 유형인지는
+            저희가 정하지 않습니다 — 가입 은행과 서민금융진흥원 판정을 따르세요.
           </p>
         </DocSection>
 
