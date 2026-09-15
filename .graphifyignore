@@ -1,0 +1,12 @@
+# graphify 인덱싱 제외 목록 (.gitignore 는 자동 반영됨)
+# 코드 구조만 그래프로 만들고, 이미지·대용량 콘텐츠 데이터는 뺀다
+.claude/
+graphify-out/
+public/
+package-lock.json
+*.log
+
+# 대용량 콘텐츠 데이터
+data-research/
+src/data/services.ts
+src/data/searchIndex.ts
