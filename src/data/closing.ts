@@ -23,6 +23,12 @@ export const CLOSING: Readonly<Record<string, Closing>> = {
   "text": "'26.5.4.(월) ~ '26.5.20.",
   "name": "청년내일저축계좌"
  },
+ "WLF00004661": {
+  "kind": "period",
+  "end": "2026-05-29",
+  "text": "3.30(월) 09:00 ~ 5.29",
+  "name": "청년월세 지원사업"
+ },
  "WLF00004717": {
   "kind": "period",
   "end": "2026-05-29",
@@ -88,6 +94,12 @@ export const CLOSING: Readonly<Record<string, Closing>> = {
   "end": "2027-12-31",
   "text": "~ 2027-12-31",
   "name": "전북형 청년활력수당"
+ },
+ "WLF00004165": {
+  "kind": "period",
+  "end": "2026-06-24",
+  "text": "2026. 6. 17. ~ 6. 24.",
+  "name": "공공근로사업"
  },
  "WLF00004719": {
   "kind": "program",

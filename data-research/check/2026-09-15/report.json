@@ -1,0 +1,520 @@
+{
+ "stamp": "2026-09-15",
+ "totals": {
+  "central": {
+   "before": 461,
+   "after": 461
+  },
+  "local": {
+   "before": 4768,
+   "after": 4818
+  }
+ },
+ "removed": [
+  {
+   "id": "WLF00006148",
+   "provider": "local",
+   "name": "우유바우처 확대 지원사업",
+   "views": 3352,
+   "listed": false,
+   "rank": null
+  },
+  {
+   "id": "WLF00000341",
+   "provider": "local",
+   "name": "사회취약계층 앰뷸런스 지원사업",
+   "views": 3154,
+   "listed": false,
+   "rank": null
+  },
+  {
+   "id": "WLF00003794",
+   "provider": "local",
+   "name": "노인 이미용비 지원 사업",
+   "views": 1941,
+   "listed": false,
+   "rank": null
+  }
+ ],
+ "added": [
+  {
+   "id": "WLF00001036",
+   "provider": "local",
+   "name": "인플루엔자(독감) 무료예방접종 확대",
+   "views": 6283,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005648",
+   "provider": "local",
+   "name": "농업인 수당 지원사업",
+   "views": 6075,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00000676",
+   "provider": "local",
+   "name": "효행장려금 지원",
+   "views": 5707,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001265",
+   "provider": "local",
+   "name": "청소년 꿈끼카드 지원",
+   "views": 5685,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00002762",
+   "provider": "local",
+   "name": "산모·신생아 건강관리 지원사업",
+   "views": 4750,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00004893",
+   "provider": "local",
+   "name": "세종특별자치시 만 65세 이상 취약계층 어르신 대상포진 예방접종 지원사업",
+   "views": 4541,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001013",
+   "provider": "local",
+   "name": "노인대학 운영",
+   "views": 3943,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005301",
+   "provider": "local",
+   "name": "구직활동비 지원사업",
+   "views": 3818,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260820"
+  },
+  {
+   "id": "WLF00005692",
+   "provider": "local",
+   "name": "난임부부 지원사업",
+   "views": 3814,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260717"
+  },
+  {
+   "id": "WLF00000675",
+   "provider": "local",
+   "name": "청각장애인 인공달팽이관 수술비 및 재활치료비 지원사업",
+   "views": 3728,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005958",
+   "provider": "local",
+   "name": "세종특별자치시 다자녀가정 입학지원금",
+   "views": 3707,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00002657",
+   "provider": "local",
+   "name": "세종형 쉐어하우스 임대 및 운영",
+   "views": 3663,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00002682",
+   "provider": "local",
+   "name": "장애인 생활안정 추가지원(부부장애수당,중증장애인가구 월동비)",
+   "views": 3594,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00002662",
+   "provider": "local",
+   "name": "세종형 기초생계지원",
+   "views": 3451,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001015",
+   "provider": "local",
+   "name": "사회활동장려금 지원",
+   "views": 3373,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00002761",
+   "provider": "local",
+   "name": "저소득층 국민건강보험료 지원",
+   "views": 3352,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00002760",
+   "provider": "local",
+   "name": "장애인 의료재활지원",
+   "views": 3180,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005266",
+   "provider": "local",
+   "name": "중고 신입생 체육복비 지원",
+   "views": 3006,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00004939",
+   "provider": "local",
+   "name": "파랑새기금",
+   "views": 2716,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260728"
+  },
+  {
+   "id": "WLF00002659",
+   "provider": "local",
+   "name": "다문화가족 어울림, 정착지원 활성화, 다문화 특화사업",
+   "views": 2625,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00004834",
+   "provider": "local",
+   "name": "공영장례 지원",
+   "views": 2543,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001936",
+   "provider": "local",
+   "name": "여성장애인 출산 및 양육 지원",
+   "views": 2529,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00006009",
+   "provider": "local",
+   "name": "척척세종 생활민원 기동처리반 운영",
+   "views": 2486,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001923",
+   "provider": "local",
+   "name": "행려자 및 부랑인 지원",
+   "views": 2460,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260728"
+  },
+  {
+   "id": "WLF00006127",
+   "provider": "local",
+   "name": "세종특별자치시 영구임대주택 임대보증금 지원",
+   "views": 2379,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005362",
+   "provider": "local",
+   "name": "공공실버주택(신흥사랑주택) 일반관리비 지원 사업",
+   "views": 2220,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260821"
+  },
+  {
+   "id": "WLF00005299",
+   "provider": "local",
+   "name": "면접스타일링 지원사업",
+   "views": 2166,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260820"
+  },
+  {
+   "id": "WLF00005302",
+   "provider": "local",
+   "name": "세종특별자치시 행복아파트(영구임대주택) 임차인 중 저소득 원주민 임대료 일부 감면 사업",
+   "views": 2164,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00002661",
+   "provider": "local",
+   "name": "명절위문품 지원",
+   "views": 2122,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00001014",
+   "provider": "local",
+   "name": "독립유공자(유족) 및 전몰군경 명예수당 지원",
+   "views": 2072,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00005275",
+   "provider": "local",
+   "name": "현장체험학습비 지원",
+   "views": 2004,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00005487",
+   "provider": "local",
+   "name": "민간가정어린이집 차액보육료 지원",
+   "views": 1966,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20250619"
+  },
+  {
+   "id": "WLF00000651",
+   "provider": "local",
+   "name": "참전유공자 유족(배우자) 복지수당",
+   "views": 1944,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00005296",
+   "provider": "local",
+   "name": "입양아동 입학준비금 지원",
+   "views": 1777,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260822"
+  },
+  {
+   "id": "WLF00001039",
+   "provider": "local",
+   "name": "참전유공자 사망위로금 지급",
+   "views": 1731,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00001264",
+   "provider": "local",
+   "name": "입양축하금 지원",
+   "views": 1729,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20230718"
+  },
+  {
+   "id": "WLF00005361",
+   "provider": "local",
+   "name": "세종특별자치시 국민임대주택 공동전기료 지원 사업",
+   "views": 1657,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00001924",
+   "provider": "local",
+   "name": "참전유공자 참전명예수당",
+   "views": 1655,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00005297",
+   "provider": "local",
+   "name": "입양아동 상해보험료 지원",
+   "views": 1577,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260822"
+  },
+  {
+   "id": "WLF00006778",
+   "provider": "local",
+   "name": "저소득층 치과진료비 지원사업",
+   "views": 1547,
+   "sido": "경상남도",
+   "registered": null,
+   "lastMod": "20260909"
+  },
+  {
+   "id": "WLF00006445",
+   "provider": "local",
+   "name": "다자녀 가정 학생 교육비 지원",
+   "views": 1125,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260703"
+  },
+  {
+   "id": "WLF00006556",
+   "provider": "local",
+   "name": "365일 24시간 돌봄어린이집",
+   "views": 1001,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00006555",
+   "provider": "local",
+   "name": "민간가정어린이집 차액보육료 지원",
+   "views": 911,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260710"
+  },
+  {
+   "id": "WLF00006777",
+   "provider": "local",
+   "name": "청년 구직자 자격증 응시료 지원사업",
+   "views": 762,
+   "sido": "경상남도",
+   "registered": null,
+   "lastMod": "20260909"
+  },
+  {
+   "id": "WLF00006709",
+   "provider": "local",
+   "name": "읍면지역 1,000원 통학택시",
+   "views": 498,
+   "sido": "세종특별자치시",
+   "registered": null,
+   "lastMod": "20260731"
+  },
+  {
+   "id": "WLF00006774",
+   "provider": "local",
+   "name": "양산시 청년 면접 준비비용 지원사업",
+   "views": 461,
+   "sido": "경상남도",
+   "registered": null,
+   "lastMod": "20260905"
+  },
+  {
+   "id": "WLF00006772",
+   "provider": "local",
+   "name": "하동형 육아수당 지원사업",
+   "views": 410,
+   "sido": "경상남도",
+   "registered": null,
+   "lastMod": "20260905"
+  },
+  {
+   "id": "WLF00006773",
+   "provider": "local",
+   "name": "미등록 이주배경아동 보육지원금(어린이집 직접지원)",
+   "views": 409,
+   "sido": "경기도",
+   "registered": null,
+   "lastMod": "20260905"
+  },
+  {
+   "id": "WLF00006775",
+   "provider": "local",
+   "name": "관악구 청년 월세 지원사업",
+   "views": 388,
+   "sido": "서울특별시",
+   "registered": null,
+   "lastMod": "20260908"
+  },
+  {
+   "id": "WLF00006776",
+   "provider": "local",
+   "name": "관악구 청년 주거환경개선비 지원 사업",
+   "views": 351,
+   "sido": "서울특별시",
+   "registered": null,
+   "lastMod": "20260908"
+  },
+  {
+   "id": "WLF00006566",
+   "provider": "local",
+   "name": "강화군 대학생 주거비 지원사업",
+   "views": 172,
+   "sido": "인천광역시",
+   "registered": null,
+   "lastMod": "20260715"
+  },
+  {
+   "id": "WLF00006605",
+   "provider": "local",
+   "name": "보령시 청년 결혼장려금 지원",
+   "views": 171,
+   "sido": "충청남도",
+   "registered": null,
+   "lastMod": "20260717"
+  },
+  {
+   "id": "WLF00006330",
+   "provider": "local",
+   "name": "제1형 당뇨병 학생 의료물품 구입비 지원 사업",
+   "views": 141,
+   "sido": "경기도",
+   "registered": null,
+   "lastMod": "20260620"
+  }
+ ],
+ "changed": [],
+ "cutViews": 6447
+}
