@@ -48,6 +48,16 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "school-support": ["WLF00001103", "WLF00001089", "WLF00003227"],
   "postpartum-care": ["WLF00001188"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
+  /* 2026-09-16 함께 받기 글 — 본문에서 조문·지침으로 직접 다룬 사업만 적는다. */
+  "combined-support": [
+    "WLF00004657",
+    "WLF00001171",
+    "WLF00003250",
+    "WLF00003249",
+    "WLF00001164",
+    "WLF00001132",
+    "WLF00004661",
+  ],
 };
 
 /** 긴급복지 여덟 갈래는 글이 이름으로 모은다(`guide/emergency` 머리말). */

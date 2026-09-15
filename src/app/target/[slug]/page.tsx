@@ -7,6 +7,8 @@ import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
 import AdSenseScript from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { TARGET_NOTES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return TARGETS.map((t) => ({ slug: t.slug }));
@@ -36,7 +38,9 @@ export default async function TargetPage({
   const t = targetBySlug(slug);
   if (!t) notFound();
 
-  const rows = services.filter((s) => s.targets.includes(t.slug)).map(toRow);
+  const list = services.filter((s) => s.targets.includes(t.slug));
+  const rows = list.map(toRow);
+  const note = TARGET_NOTES[t.slug];
   const groups = facetsFor(rows, ["region", "benefit", "life"]);
   return (
     <div className="space-y-6">
@@ -47,6 +51,14 @@ export default async function TargetPage({
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
       <NarrowChips base={{ target: t.slug }} />
+      {note && (
+        <HubIntro
+          axisLabel={t.label}
+          fieldLabel="지원 대상"
+          list={list}
+          note={note}
+        />
+      )}
       <HubList rows={rows} groups={groups} />
     </div>
   );

@@ -7,6 +7,8 @@ import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
 import AdSenseScript from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { LIFE_NOTES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return LIFE_STAGES.map((t) => ({ slug: t.slug }));
@@ -41,7 +43,9 @@ export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
   const t = lifeStageBySlug(slug);
   if (!t) notFound();
 
-  const rows = services.filter((s) => s.lifeStages.includes(t.slug)).map(toRow);
+  const list = services.filter((s) => s.lifeStages.includes(t.slug));
+  const rows = list.map(toRow);
+  const note = LIFE_NOTES[t.slug];
   const groups = facetsFor(rows, ["region", "benefit", "theme"]);
   return (
     <div className="space-y-6">
@@ -52,6 +56,14 @@ export default async function LifePage({ params }: PageProps<"/life/[slug]">) {
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
       <NarrowChips base={{ life: t.slug }} />
+      {note && (
+        <HubIntro
+          axisLabel={t.label}
+          fieldLabel="생애주기"
+          list={list}
+          note={note}
+        />
+      )}
       <HubList rows={rows} groups={groups} />
     </div>
   );

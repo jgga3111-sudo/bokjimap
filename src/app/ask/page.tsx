@@ -41,9 +41,9 @@ const AXIS_NAME: Record<Chip["axis"], string> = {
 const ASK_GUIDES: { re: RegExp; lead: string; href: string; label: string }[] = [
   {
     re: /중복|(같이|함께|동시에?|둘\s*다)\s*받/,
-    lead: "함께 받을 수 있는지는 사업마다 다르고, 저희가 판정하지 않습니다.",
-    href: "/faq#apply",
-    label: "여러 지원을 동시에 받을 수 있나요",
+    lead: "자주 묻는 조합은 법령·부처 지침으로 확인해 따로 정리했습니다.",
+    href: "/guide/combined-support",
+    label: "두 가지를 같이 받을 수 있나",
   },
   {
     re: /신청\s*(방법|하는\s*법|절차)|어디(서|에서)?\s*신청|어떻게\s*신청/,
