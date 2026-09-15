@@ -9,8 +9,7 @@ import {
 import { isIndexable, showAds } from "@/lib/indexable";
 import { extrasOf, hasExtras } from "@/lib/serviceExtras";
 import { hasDates } from "@/lib/calendar";
-import AddToCalendar from "@/components/AddToCalendar";
-import DdayChip from "@/components/DdayChip";
+import CalendarEntryActions from "@/components/CalendarEntryActions";
 import AdSenseScript from "@/components/AdSenseScript";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { nameWithAlias } from "@/lib/aliases";
@@ -611,7 +610,6 @@ function SiteChecked({ s }: { s: WelfareService }) {
                 <li key={e.key}>
                   <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                     <span className="font-medium text-ink">{e.what}</span>
-                    {hasDates(e) && <DdayChip end={e.end} title={e.period} />}
                   </div>
                   <p className="text-slate-700">{e.period}</p>
                   {e.note && <p className="text-xs text-slate-600">{e.note}</p>}
@@ -627,9 +625,10 @@ function SiteChecked({ s }: { s: WelfareService }) {
                     </a>{" "}
                     · {e.checkedAt} 확인
                   </p>
+                  {/* 지난 일정은 「기간 지남」, 남은 일정만 D-day·담기 단추(09-15 점검). */}
                   {hasDates(e) && (
                     <div className="mt-2">
-                      <AddToCalendar entry={e} />
+                      <CalendarEntryActions entry={e} />
                     </div>
                   )}
                 </li>

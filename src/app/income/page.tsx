@@ -4,7 +4,6 @@ import { INCOME_BANDS } from "@/lib/income";
 import { BASE_YEAR, thresholdOf } from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import { services } from "@/data/services";
-import AdSenseScript from "@/components/AdSenseScript";
 
 const covered = INCOME_BANDS.reduce((sum, b) => sum + b.count, 0);
 
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 export default function IncomeIndex() {
   return (
     <div className="space-y-6">
-      <AdSenseScript />
+      {/* 광고 코드 없음(2026-09-15) — 소득 구간으로 가는 길잡이 화면이라 다른 축 목록(/theme·/benefit 등)과 같게 뺐다. */}
       <header className="space-y-2">
         <h1 className="text-2xl font-bold sm:text-3xl">소득기준별 찾기</h1>
         <p className="text-sm leading-relaxed text-slate-600">

@@ -10,8 +10,7 @@ import {
   entriesOfMonth,
   hasDates,
 } from "@/lib/calendar";
-import AddToCalendar from "@/components/AddToCalendar";
-import DdayChip from "@/components/DdayChip";
+import CalendarEntryActions from "@/components/CalendarEntryActions";
 import { services } from "@/data/services";
 
 const G = guideBySlug("calendar")!;
@@ -154,11 +153,10 @@ export default function CalendarGuide() {
                             처럼 날짜가 안 정해진 것과, 다음 해 모집일이 아직
                             발표 전인 노인일자리는 단추가 없다(3절). */}
                         {hasDates(e) && (
-                          <div className="mt-2 flex flex-wrap items-center gap-2">
-                            {/* 끝나기 열흘 전부터(2026-09-13). 브라우저가 오늘로
-                                세므로 이 정적 페이지도 날마다 줄어든다. */}
-                            <DdayChip end={e.end} title={e.period} />
-                            <AddToCalendar entry={e} />
+                          <div className="mt-2">
+                            {/* D-day(끝나기 열흘 전부터)·담기 단추, 지났으면 「기간 지남」.
+                                브라우저가 오늘로 세므로 이 정적 페이지도 날마다 바뀐다(09-15). */}
+                            <CalendarEntryActions entry={e} />
                           </div>
                         )}
                       </li>

@@ -99,7 +99,7 @@ export default function YouthTomorrowSavingsGuide() {
         <DocSection title="먼저 — 2026년 모집은 끝났고, 대상도 좁아졌습니다">
           <p>
             복지로 원문에 적힌 2026년 모집기간은{" "}
-            <strong>&lsquo;26.5.4.(월) ~ &lsquo;26.5.20.(수)</strong>입니다. 다음
+            <strong>&rsquo;26.5.4.(월) ~ &rsquo;26.5.20.(수)</strong>입니다. 다음
             모집 일정은 아직 원문에 없습니다. 작년 날짜로 짐작하지 않고 비워 둡니다.
           </p>
           <p>

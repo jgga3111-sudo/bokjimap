@@ -73,11 +73,21 @@ const bodyLen = (s) =>
   지급일·신청 달력 파일에 적힌 WLF 번호, 그리고 이름이 「긴급복지」로 시작하는 것.
 */
 const INDEX_TOP_N = num("src/lib/indexable.ts", "INDEX_TOP_N");
-const EXTRA_IDS = new Set(
-  ["src/lib/serviceExtras.ts", "src/lib/payDates.ts", "src/lib/calendar.ts"].flatMap(
-    (f) => read(f).match(/WLF\d{8}/g) ?? [],
-  ),
-);
+/* 2026-09-15: 파일 전체에서 WLF 번호를 긁으면 주석·인용에 적힌 번호까지 센다(점검에서 지적).
+   지급일·달력은 항목의 `id: "WLF…"` 줄만, serviceExtras는 GUIDE_SERVICES 표 안만 읽는다. */
+const idLines = (f) => [...read(f).matchAll(/\bid:\s*"(WLF\d{8})"/g)].map((m) => m[1]);
+const guideBlock = (() => {
+  const s = read("src/lib/serviceExtras.ts");
+  const i = s.indexOf("const GUIDE_SERVICES");
+  const j = s.indexOf("};", i);
+  if (i < 0 || j < 0) throw new Error("serviceExtras.ts에서 GUIDE_SERVICES를 못 찾음");
+  return s.slice(i, j).split("\n").filter((l) => !l.trim().startsWith("/*") && !l.trim().startsWith("*")).join("\n");
+})();
+const EXTRA_IDS = new Set([
+  ...idLines("src/lib/payDates.ts"),
+  ...idLines("src/lib/calendar.ts"),
+  ...(guideBlock.match(/WLF\d{8}/g) ?? []),
+]);
 const hasExtras = (s) => EXTRA_IDS.has(s.id) || (s.name ?? "").startsWith("긴급복지");
 const RANK = new Map(
   services

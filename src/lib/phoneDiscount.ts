@@ -18,7 +18,8 @@
  * 생계·의료급여는 고시가 「기본료 또는 월정액(26,000원 한도) 면제, 음성통화료,
  * 데이터 통화료 각각 50% 감면」이라고만 적는다. 차상위 조항과 달리 **26,000원을
  * 넘는 월정액**에 50%를 적용하는지 문장에 없다. 요즘 요금제는 대부분 월정액이라
- * 이 구간이 흔한데, 짐작해 한 수로 채우지 않고 **범위**로 보여준다(3절).
+ * 이 구간이 흔한데, 짐작해 한 수로 채우지 않고 **범위**로 보여준다(3절). 범위의 아랫값은
+ * 26,000원까지의 면제와 통화료 50%만 더한 값이다.
  */
 
 export const PD_SOURCE_ID = "WLF00003257";
@@ -90,25 +91,44 @@ export type PdResult =
   | { low: number; high: number };
 
 /**
- * `bill` = 한 달 요금 중 **기본료·월정액 + 음성·데이터 통화료**의 합(원).
+ * `plan` = 요금제의 **기본료 또는 월정액**(원), `calls` = 그 밖에 따로 청구된 **음성·데이터 통화료**(원).
  * 고시가 감면 대상으로 적은 항목은 이 셋뿐이라 단말기 할부금·부가서비스는 넣지 않는다.
  * 원 미만은 반올림한다(통신사 청구서의 끝자리 처리와 1원 단위로 다를 수 있다).
+ *
+ * ── 2026-09-15 고침: 입력을 둘로 나눴다 ─────────────────────────
+ * 처음엔 요금 한 칸만 받아 **전부 월정액으로 보고** 셈했다. 그런데 고시는 월정액만 한도까지
+ * 면제하고 통화료는 50%·35%만 깎는다. 통화료가 섞인 요금이면 감면액이 실제보다 크게 나왔고
+ * (생계·의료, 월정액 15,000 + 통화료 8,000 → 23,000으로 표시, 고시대로는 19,000),
+ * 틀리는 방향이 늘 "더 받는다" 쪽이었다(09-15 코드 점검에서 발견, 3절).
  */
-export function calcPhoneDiscount(kind: PdKind, bill: number): PdResult {
-  const b = Math.max(0, Math.floor(bill));
+export function calcPhoneDiscount(kind: PdKind, plan: number, calls: number): PdResult {
+  const P = Math.max(0, Math.floor(plan));
+  const C = Math.max(0, Math.floor(calls));
   const r = (n: number) => Math.round(n);
   switch (kind) {
     case "livelihood": {
-      if (b <= 26_000) return { exact: b };
-      /* 26,000원까지는 면제가 분명하다. 그 위를 50% 감면하는지는 월정액인지
-         통화료인지에 달렸고, 한도 41,000원 안에서만 적용된다. */
-      return { low: 26_000, high: r(26_000 + (Math.min(b, 41_000) - 26_000) * 0.5) };
+      /* 월정액 26,000원 한도 면제 + 음성·데이터 50%. 50%는 「면제금액과 음성·데이터 사용액을
+         합하여 41,000원」 한도 안에서만 적용된다. */
+      const waived = Math.min(P, 26_000);
+      const capLeft = Math.max(0, 41_000 - waived);
+      const callPart = Math.min(C, capLeft);
+      const low = waived + callPart * 0.5;
+      /* 26,000원을 넘는 월정액에 50%를 적용하는지는 문장에 없다 — 적용한다면 남은 한도 안에서 더해진다. */
+      const excess = Math.min(Math.max(P - 26_000, 0), Math.max(0, capLeft - callPart));
+      if (excess === 0) return { exact: r(low) };
+      return { low: r(low), high: r(low + excess * 0.5) };
     }
-    case "nearPoor":
-      return { exact: r(Math.min(b, 11_000) + Math.min(Math.max(b - 11_000, 0), 30_000) * 0.35) };
+    case "nearPoor": {
+      /* 월정액 11,000원 한도 면제 + 11,000원 넘는 월정액·음성·데이터 각각 35%(그 합 30,000원 한도). */
+      const waived = Math.min(P, 11_000);
+      const over = Math.max(P - 11_000, 0) + C;
+      return { exact: r(waived + Math.min(over, 30_000) * 0.35) };
+    }
     case "pension":
-      return { exact: r(Math.min(b, 22_000) * 0.5) };
+      /* 월정액·음성·데이터를 합쳐 청구한 이용료의 50%(이용료 22,000원 한도). */
+      return { exact: r(Math.min(P + C, 22_000) * 0.5) };
     case "disability":
-      return { exact: r(b * 0.35) };
+      /* 월정액·음성·데이터 각각 35%. 한도 문구 없음. */
+      return { exact: r((P + C) * 0.35) };
   }
 }

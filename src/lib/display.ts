@@ -215,5 +215,6 @@ export function clipSummary(t: string | null, max = 80): string | null {
   if (t.length <= max) return t;
   const head = t.slice(0, max);
   const sp = head.lastIndexOf(" ");
-  return (sp > max * 0.6 ? head.slice(0, sp) : head).replace(/[\s,.·]+$/, "") + "…";
+  /* 끝에 남은 글머리 기호(-·•○❏, 사용자 정의 글자 등)는 걷는다 — 「…신청 -…」처럼 보였다(09-15 점검, 5건). */
+  return (sp > max * 0.6 ? head.slice(0, sp) : head).replace(/[^\p{L}\p{N})\]」』%]+$/u, "") + "…";
 }
