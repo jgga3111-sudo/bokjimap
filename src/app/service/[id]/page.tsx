@@ -23,6 +23,7 @@ import PastPeriodNotice from "@/components/PastPeriodNotice";
 import DeadlineBadge from "@/components/DeadlineBadge";
 import DeadlineNotice from "@/components/DeadlineNotice";
 import { CLOSING } from "@/data/closing";
+import { GOV24, GOV24_CHECKED } from "@/data/gov24";
 import { leadSentence } from "@/lib/leadSentence";
 import { amongListed, rankOf } from "@/lib/amongListed";
 import {
@@ -220,6 +221,12 @@ const TOC = [
     id: "contact",
     title: "문의처",
     has: (s: WelfareService) => s.contacts.length > 0 || s.homepages.length > 0,
+  },
+  {
+    id: "papers",
+    title: "필요 서류",
+    /* 보조금24에서 가져온 절(GOV24). 우리 수록의 절이 아니라 두 번째 원천이다. */
+    has: (s: WelfareService) => !!GOV24[s.id]?.docs,
   },
   { id: "forms", title: "서식", has: (s: WelfareService) => s.forms.length > 0 },
   { id: "law", title: "근거 법령", has: (s: WelfareService) => s.lawBasis.length > 0 },
@@ -587,6 +594,68 @@ function ContactLine({ s }: { s: WelfareService }) {
         </a>
       )}
     </>
+  );
+}
+
+/**
+ * 「신청할 때 필요한 서류」 — **두 번째 원천**에서 가져온 절 (2026-09-16).
+ *
+ * 복지로 API에는 구비서류 칸이 없다. 09-16에 행정안전부 「대한민국 공공서비스
+ * (혜택) 정보」(보조금24)를 새로 받아, 이름·소관기관·급이 모두 맞는 393건만
+ * 골라 이었다(`scripts/build-gov24.mjs` 머리말에 거르는 규칙이 있다).
+ *
+ * ── 지키는 것 ──────────────────────────────────────────────────
+ * · 값은 **원문 그대로**. 우리가 줄이거나 다시 쓰지 않는다.
+ * · 절 머리에 **어디서 가져왔는지와 확인일**을 적는다. 복지로 원문 절과 섞이면
+ *   어느 쪽이 한 말인지 알 수 없게 된다.
+ * · 맞물린 사업이 없으면 절을 안 그린다(빈 틀을 910쪽에 찍지 않는다).
+ */
+function RequiredPapers({ s }: { s: WelfareService }) {
+  const g = GOV24[s.id];
+  if (!g?.docs) return null;
+  const lines = (t: string) =>
+    t
+      .split(/\r?\n/)
+      .map((x) => x.replace(/^[-·•○\s]+/, "").trim())
+      .filter(Boolean);
+
+  return (
+    <Section id="papers" title="신청할 때 필요한 서류">
+      <p className="mb-2 text-xs leading-relaxed text-muted">
+        아래는 <strong>행정안전부 「대한민국 공공서비스(혜택) 정보」</strong>에 적힌
+        내용을 그대로 옮긴 것입니다(정부24 「{g.gname}」 · {g.gorg} ·{" "}
+        {GOV24_CHECKED} 확인). 복지로 원문에는 없는 칸이라 따로 가져왔습니다.
+      </p>
+      <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
+        {lines(g.docs).map((l, i) => (
+          <li key={i}>{l}</li>
+        ))}
+      </ul>
+      {g.officialDocs && (
+        <>
+          <p className="mt-3 mb-1 text-sm font-bold text-ink">
+            공무원이 확인하는 서류 — 준비 안 해도 됩니다
+          </p>
+          <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
+            {lines(g.officialDocs).map((l, i) => (
+              <li key={i}>{l}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      <p className="mt-3 text-xs leading-relaxed text-muted">
+        해마다 바뀌고 지역마다 더 요구하는 서류가 있을 수 있습니다. 가기 전에 위
+        문의처로 한 번 확인하세요.{" "}
+        <a
+          href={`https://www.gov.kr/portal/rcvfvrSvc/dtlEx/${g.gid}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-brand"
+        >
+          정부24 원문 보기 ↗
+        </a>
+      </p>
+    </Section>
   );
 }
 
@@ -1113,6 +1182,8 @@ export default async function ServiceDetail({
         </Section>
       )}
 
+      <RequiredPapers s={s} />
+
       {s.forms.length > 0 && (
         <Section id="forms" title="서식·안내 자료">
           <ul className="space-y-1.5 text-sm">
@@ -1136,13 +1207,32 @@ export default async function ServiceDetail({
         </Section>
       )}
 
-      {s.lawBasis.length > 0 && (
+      {(s.lawBasis.length > 0 || GOV24[s.id]?.laws) && (
         <Section id="law" title="근거 법령">
           <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
             {s.lawBasis.map((l, i) => (
               <li key={i}>{l}</li>
             ))}
           </ul>
+          {/* 보조금24는 **조문 번호까지** 준다(「기초연금법(제3조)」). 복지로는 법
+              이름만 주므로 겹쳐도 버리지 않고 아래에 따로 적는다 — 어느 쪽이 한
+              말인지 섞이지 않게 출처를 붙인다(2026-09-16). */}
+          {GOV24[s.id]?.laws && (
+            <div className="mt-3">
+              <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
+                {GOV24[s.id]!.laws!.split("||").map((l, i) => (
+                  <li key={`g${i}`}>{l.trim()}</li>
+                ))}
+                {GOV24[s.id]!.localLaws?.split("||").map((l, i) => (
+                  <li key={`c${i}`}>{l.trim()}</li>
+                ))}
+              </ul>
+              <p className="mt-1.5 text-xs text-muted">
+                행정안전부 「대한민국 공공서비스(혜택) 정보」에서 옮김 ·{" "}
+                {GOV24_CHECKED} 확인
+              </p>
+            </div>
+          )}
         </Section>
       )}
 
