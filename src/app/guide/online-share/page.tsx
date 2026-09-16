@@ -8,14 +8,6 @@ import { LAST_CHECKED } from "@/lib/sourceTotals";
 
 const G = guideBySlug("online-share")!;
 
-export const metadata: Metadata = {
-  title:
-    "인터넷으로 신청되는 지원금은 얼마나 되나 — 수록 910건을 세어 봤습니다",
-  description:
-    "복지로에서 온라인 신청이 되는 사업은 우리가 실은 910건 중 54건뿐입니다. 지자체 사업은 복지로가 아니라 각자의 누리집에서 받습니다. 「온라인 신청 안 됨」이 무슨 뜻인지, 어디로 가야 하는지를 수록분을 직접 세어 정리했습니다.",
-  alternates: { canonical: "/guide/online-share" },
-};
-
 /*
   왜 이 글인가 (2026-09-16).
 
@@ -50,13 +42,20 @@ const LOCAL_ONLINE = LOCAL.filter((s) =>
   s.applyMethods.some((v) => ONLINE_METHODS.has(v)),
 );
 
+/* 제목·설명의 숫자도 집계값이다(09-16 리뷰 — 처음엔 910·54를 손으로 적었다). */
+export const metadata: Metadata = {
+  title: `인터넷으로 신청되는 지원금은 얼마나 되나 — 수록 ${services.length}건을 세어 봤습니다`,
+  description: `복지로에서 온라인 신청이 되는 사업은 우리가 실은 ${services.length}건 중 ${ONLINE.length}건뿐입니다. 지자체 사업은 복지로가 아니라 각자의 누리집에서 받습니다. 「온라인 신청 안 됨」이 무슨 뜻인지, 어디로 가야 하는지를 수록분을 직접 세어 정리했습니다.`,
+  alternates: { canonical: "/guide/online-share" },
+};
+
 export default function OnlineShareGuide() {
   const total = services.length;
   return (
     <>
       <DocPage
         title={G.title}
-        lead="「온라인 신청 가능」이라는 표시는 복지로에서 바로 신청되는 사업에만 붙습니다. 그런 사업은 우리가 실은 910건 가운데 손에 꼽습니다. 그렇다고 나머지를 전부 주민센터에 가야 하는 것은 아닙니다 — 지자체 사업은 각자의 누리집에서 받습니다."
+        lead={`「온라인 신청 가능」이라는 표시는 복지로에서 바로 신청되는 사업에만 붙습니다. 그런 사업은 우리가 실은 ${total}건 가운데 ${ONLINE.length}건입니다. 그렇다고 나머지를 전부 주민센터에 가야 하는 것은 아닙니다 — 지자체 사업은 각자의 누리집에서 받습니다.`}
         updated={`최종 수정 ${G.updated} · 수록 ${total}건을 ${SERVICES_UPDATED}에 받아 ${LAST_CHECKED}에 다시 대조한 값을 셌습니다`}
       >
         <DocSection title="세어 보면 이렇습니다">

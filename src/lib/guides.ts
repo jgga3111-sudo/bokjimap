@@ -350,7 +350,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "deadline-share",
-    title: "마감일이 적힌 지원금은 100건에 2건뿐입니다",
+    title: "끝나는 날짜가 적힌 지원금은 얼마나 되나",
     summary:
       "끝나는 날짜가 원문에 적힌 사업이 몇 건인지, 마감이 없는 사업은 언제 끝나는지(예산 소진), 대신 무엇을 봐야 하는지를 수록분 집계로 정리했습니다.",
     updated: "2026-09-16",

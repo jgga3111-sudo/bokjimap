@@ -10,13 +10,6 @@ import { LAST_CHECKED } from "@/lib/sourceTotals";
 
 const G = guideBySlug("deadline-share")!;
 
-export const metadata: Metadata = {
-  title: "마감일이 적힌 지원금은 100건에 2건뿐입니다 — 그럼 언제까지 신청하나",
-  description:
-    "수록 910건 가운데 원문에 끝나는 날짜가 적힌 사업은 15건입니다. 나머지는 상시 접수이거나 날짜 칸이 9999-12-31로 채워져 있습니다. 마감이 없다고 언제까지나 받는 것은 아니어서, 예산이 떨어지면 끝나는 사업이 따로 있습니다.",
-  alternates: { canonical: "/guide/deadline-share" },
-};
-
 /*
   왜 이 글인가 (2026-09-16).
 
@@ -55,6 +48,18 @@ const BUDGET = services.filter((s) =>
 
 const CLOSING_COUNT = Object.keys(CLOSING).length;
 
+/* 이 칸은 신청 마감일이 아니라 **사업 기간의 끝날**이다 — 2050·2099년 같은 값이
+   섞여 있다. 「마감일」이라고 부르지 않는다(09-16 리뷰). */
+const LATEST_END = REAL_END.map((s) => s.applyEnd!).sort().at(-1)?.slice(0, 4);
+const PER_100 = Math.round((REAL_END.length / total) * 100);
+
+/* 제목·설명의 숫자도 집계값이다 — 손으로 적으면 수록이 바뀔 때 여기만 옛 수로 남는다. */
+export const metadata: Metadata = {
+  title: `끝나는 날짜가 적힌 지원금은 100건에 ${PER_100}건 — 그럼 언제까지 신청하나`,
+  description: `수록 ${total}건 가운데 원문에 사업 기간의 끝날이 적힌 사업은 ${REAL_END.length}건입니다. 나머지는 날짜 칸이 9999-12-31이거나 칸 자체가 없습니다. 끝날이 없다고 언제까지나 받는 것은 아니어서, 예산이 떨어지면 끝나는 사업이 따로 있습니다.`,
+  alternates: { canonical: "/guide/deadline-share" },
+};
+
 export default function DeadlineShareGuide() {
   return (
     <>
@@ -68,7 +73,7 @@ export default function DeadlineShareGuide() {
             <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">원문의 신청 종료일 칸</th>
+                  <th className="px-3 py-2 font-semibold">원문의 사업 기간 끝날 칸</th>
                   <th className="px-3 py-2 text-right font-semibold">건수</th>
                   <th className="px-3 py-2 font-semibold">화면에서 어떻게 보이나</th>
                 </tr>
@@ -78,7 +83,9 @@ export default function DeadlineShareGuide() {
                   <td className="px-3 py-2 font-medium">실제 날짜가 적힘</td>
                   <td className="px-3 py-2 text-right tabular-nums">{REAL_END.length}건</td>
                   <td className="px-3 py-2">
-                    열흘 안으로 들어오면 D-10부터 날짜가 줄어듭니다
+                    열흘 안으로 들어오면 D-10부터 날짜가 줄어듭니다. 신청
+                    마감일이 아니라 사업이 끝나는 날이라, {LATEST_END}년처럼 먼 날짜도
+                    섞여 있습니다
                   </td>
                 </tr>
                 <tr className="border-b border-line">

@@ -56,9 +56,21 @@ const dice = (a, b) => {
   return (2 * hit) / (a.size + b.size || 1);
 };
 
-/** 중앙부처인가 — 기관 이름의 끝 글자로 본다. */
+/* 시·도 이름 목록 — 우리 수록값과 보조금24 기관명의 첫 낱말에서 모은다. */
+const SIDO = new Set([
+  ...ours.map((s) => s.sidoName).filter(Boolean),
+  ...list
+    .map((g) => (g["소관기관명"] ?? "").trim().split(/\s+/))
+    .filter((p) => p.length > 1)
+    .map((p) => p[0]),
+]);
+
+/** 중앙부처인가 — 기관 이름의 끝 글자로 본다.
+ *  ⚠ 「인천광역시서해구시설관리공단」처럼 띄어 쓰지 않은 지자체 기관이 「공단」으로
+ *  끝나 중앙으로 읽혔다(09-16 리뷰). 시·도 이름으로 시작하면 먼저 지자체로 본다. */
 const isCentralOrg = (org) => {
   const t = (org ?? "").trim();
+  for (const sido of SIDO) if (t.startsWith(sido)) return false;
   if (/(특별시|광역시|특별자치시|특별자치도|도|시|군|구|교육청)$/.test(t)) return false;
   return /(부|처|청|위원회|공단|공사|원|본부|관리원)$/.test(t);
 };
@@ -95,19 +107,19 @@ for (const s of ours) {
   for (const c of indexed) {
     if (central !== isCentralOrg(c.org)) continue;
     if (!central) {
-      const sido = (s.sidoName ?? "")
-        .replace(/(특별자치시|특별자치도|특별시|광역시|도)$/, "")
-        .slice(0, 2);
-      const sgg = (s.sigunguName ?? "").replace(/(시|군|구)$/, "").slice(0, 2);
-      if (sido && !c.org.includes(sido)) continue;
-      if (sgg && !c.org.includes(sgg)) continue;
+      /* 시·도와 시·군·구는 **낱말째 같아야** 한다. 앞 두 글자로 보던 때
+         「경상남도교육청」 사업이 「경상북도 김천시」에 붙었다(09-16 리뷰 —
+         경상남·북, 충청남·북이 둘 다 「경상」「충청」이 된다). */
+      const parts = c.org.split(/\s+/);
+      if (parts[0] !== s.sidoName) continue;
       /* ④ 급이 같아야 한다 — 도(道) 사업이 그 안의 시·군 사업과 붙는 것을 막는다.
          「충북 청년 월세 지원」이 「옥천군 청년 월세 지원」에 붙었다(09-16 실측).
-         같은 이름이라도 집행 주체가 다르면 구비서류·기한이 다를 수 있다. */
-      const tail = c.org.split(/\s+/).pop() ?? "";
-      const govIsSgg =
-        /(시|군|구)$/.test(tail) && !/(특별시|광역시|특별자치시|특별자치도)$/.test(tail);
-      if (govIsSgg !== Boolean(s.sigunguName)) continue;
+         같은 이름이라도 집행 주체가 다르면 구비서류·기한이 다를 수 있다.
+         시·군·구 칸이 비었어도 담당 부서가 「강원특별자치도 인제군 …」이면 군 사업이다. */
+      const deptSgg = (s.department ?? "").split(/\s+/)[1];
+      const ourSgg = s.sigunguName ?? (/(시|군|구)$/.test(deptSgg ?? "") ? deptSgg : null);
+      const govSgg = parts[1] && /(시|군|구)$/.test(parts[1]) ? parts[1] : null;
+      if (ourSgg !== govSgg) continue;
     }
     const score = dice(bg, c.bg);
     if (score > bestScore) {
@@ -142,7 +154,23 @@ for (const s of ours) {
     deadline: val("신청기한"),
   };
   /* 새로 주는 것이 하나도 없으면 싣지 않는다 — 빈 절을 910쪽에 찍지 않으려는 것. */
-  if (row.docs || row.laws || row.onlineUrl || row.deadline) matched.push(row);
+  if (row.docs || row.laws || row.localLaws || row.onlineUrl || row.deadline) matched.push(row);
+}
+
+/* ⑤ 보조금24 사업 하나는 우리 사업 하나에만 붙는다. 「주거안정 월세대출」이
+   「…월세대출 보증」(금융위원회)에도 붙었다(09-16 리뷰). 둘 이상이 한 사업을
+   가리키면 이름이 똑같은(1) 하나만 남기고, 그런 것이 없으면 전부 버린다. */
+const byGid = new Map();
+for (const m of matched) byGid.set(m.gid, [...(byGid.get(m.gid) ?? []), m]);
+for (const [gid, rows] of byGid) {
+  if (rows.length < 2) continue;
+  const exact = rows.filter((r) => r.score === 1);
+  const keep = exact.length === 1 ? exact[0] : null;
+  for (const r of rows) {
+    if (r === keep) continue;
+    matched.splice(matched.indexOf(r), 1);
+    rejected.push([r.id, gid, "같은 보조금24 사업에 둘 이상 붙음"]);
+  }
 }
 
 const out = `/* 자동 생성 — scripts/build-gov24.mjs. 손으로 고치지 않는다.

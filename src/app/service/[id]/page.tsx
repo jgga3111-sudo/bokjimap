@@ -196,6 +196,10 @@ const criteriaDupOf = (s: WelfareService): "target" | "benefit" | null =>
       ? "benefit"
       : null;
 
+/* 보조금24는 법령 없이 자치법규만 주는 행이 많다 — 둘 중 하나만 있어도 절을 그린다. */
+const hasLawSection = (s: WelfareService) =>
+  s.lawBasis.length > 0 || !!GOV24[s.id]?.laws || !!GOV24[s.id]?.localLaws;
+
 const TOC = [
   /* 원문에 없는 것이라 원문 절들보다 앞에 둔다(SiteChecked 주석). */
   { id: "checked", title: "따로 확인한 것", has: (s: WelfareService) => hasExtras(s) },
@@ -230,7 +234,7 @@ const TOC = [
     has: (s: WelfareService) => !!GOV24[s.id]?.docs,
   },
   { id: "forms", title: "서식", has: (s: WelfareService) => s.forms.length > 0 },
-  { id: "law", title: "근거 법령", has: (s: WelfareService) => s.lawBasis.length > 0 },
+  { id: "law", title: "근거 법령", has: (s: WelfareService) => hasLawSection(s) },
 ] as const;
 
 function PageToc({ s }: { s: WelfareService }) {
@@ -616,11 +620,24 @@ function ContactLine({ s }: { s: WelfareService }) {
 function RequiredPapers({ s }: { s: WelfareService }) {
   const g = GOV24[s.id];
   if (!g?.docs) return null;
-  const lines = (t: string) =>
-    t
-      .split(/\r?\n/)
-      .map((x) => x.replace(/^[-·•○\s]+/, "").trim())
-      .filter(Boolean);
+  /* 「○ 대리신청시 구비서류」 아래 「 - 대리인 신분증」은 대리로 낼 때만 내는
+     서류다. 한 단계로 펴면 누구나 내는 서류처럼 읽혀서, **가장 얕은 줄보다 더
+     들여쓴 줄**과 **○ 머리 아래의 - 줄**은 들여 그린다(09-16 리뷰 — 316건 중
+     61건이 ○ 아래 - 구조). 글자는 그대로다. */
+  const lines = (t: string) => {
+    const raws = t.split(/\r?\n/).filter((r) => r.trim());
+    const depth = (r: string) => r.length - r.trimStart().length;
+    const base = Math.min(...raws.map(depth));
+    let underHead = false;
+    return raws
+      .map((raw) => {
+        const lead = raw.trimStart();
+        if (lead.startsWith("○")) underHead = true;
+        const sub = depth(raw) > base || (underHead && /^[-·•]/.test(lead));
+        return { text: raw.replace(/^[-·•○\s]+/, "").trim(), sub };
+      })
+      .filter((x) => x.text);
+  };
 
   return (
     <Section id="papers" title="신청할 때 필요한 서류">
@@ -631,7 +648,7 @@ function RequiredPapers({ s }: { s: WelfareService }) {
       </p>
       <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
         {lines(g.docs).map((l, i) => (
-          <li key={i}>{l}</li>
+          <li key={i} className={l.sub ? "ml-5 list-[circle]" : undefined}>{l.text}</li>
         ))}
       </ul>
       {g.officialDocs && (
@@ -641,7 +658,7 @@ function RequiredPapers({ s }: { s: WelfareService }) {
           </p>
           <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
             {lines(g.officialDocs).map((l, i) => (
-              <li key={i}>{l}</li>
+              <li key={i} className={l.sub ? "ml-5 list-[circle]" : undefined}>{l.text}</li>
             ))}
           </ul>
         </>
@@ -1224,7 +1241,7 @@ export default async function ServiceDetail({
         </Section>
       )}
 
-      {(s.lawBasis.length > 0 || GOV24[s.id]?.laws) && (
+      {hasLawSection(s) && (
         <Section id="law" title="근거 법령">
           <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
             {s.lawBasis.map((l, i) => (
@@ -1234,10 +1251,10 @@ export default async function ServiceDetail({
           {/* 보조금24는 **조문 번호까지** 준다(「기초연금법(제3조)」). 복지로는 법
               이름만 주므로 겹쳐도 버리지 않고 아래에 따로 적는다 — 어느 쪽이 한
               말인지 섞이지 않게 출처를 붙인다(2026-09-16). */}
-          {GOV24[s.id]?.laws && (
+          {(GOV24[s.id]?.laws || GOV24[s.id]?.localLaws) && (
             <div className="mt-3">
               <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
-                {GOV24[s.id]!.laws!.split("||").map((l, i) => (
+                {GOV24[s.id]!.laws?.split("||").map((l, i) => (
                   <li key={`g${i}`}>{l.trim()}</li>
                 ))}
                 {GOV24[s.id]!.localLaws?.split("||").map((l, i) => (

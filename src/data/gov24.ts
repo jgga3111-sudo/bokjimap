@@ -896,19 +896,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "onlineUrl": null,
   "deadline": "관할 보건소 문의"
  },
- "WLF00001079": {
-  "id": "WLF00001079",
-  "gid": "999000000025",
-  "gname": "주거안정 월세대출",
-  "gorg": "국토교통부",
-  "score": 0.88,
-  "docs": "소득 및 재직 증빙 서류, 개인 정보 제공동의서 등",
-  "officialDocs": null,
-  "laws": "주택도시기금법(제9조, 제1항)",
-  "localLaws": null,
-  "onlineUrl": "https://enhuf.molit.go.kr",
-  "deadline": "접수기관 별 상이"
- },
  "WLF00001179": {
   "id": "WLF00001179",
   "gid": "135200000113",
@@ -1493,19 +1480,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "localLaws": null,
   "onlineUrl": "http://www.work24.go.kr",
   "deadline": "분기별 신청( 매분기말 다음달)"
- },
- "WLF00005112": {
-  "id": "WLF00005112",
-  "gid": "648000001055",
-  "gname": "경상남도 청년 월세 지원",
-  "gorg": "경상남도",
-  "score": 0.9,
-  "docs": "1. 신청서 및 위임장·위임 첨부서류(대리인 접수 시) \r\n2. 개인정보제공동의서 \r\n3. 본인 신용정보조회서 \r\n4. 임대차계약서 \r\n5. 건강보험납부확인서 및 자격득실확인서 \r\n\r\n(행정정보공동이용시스템 미동의 시) \r\n- 주민등록등본 \r\n- 가족관계증명서 \r\n- 지방세 세목별 과세증명서 \r\n\r\n※자세한 사항은 '경남바로서비스' 해당 시·군 사업 안내 참조",
-  "officialDocs": null,
-  "laws": "주거기본법(제15조)||청년기본법(제20조)",
-  "localLaws": "경상남도 청년주거 지원 조례(제6조)||경상남도 청년 기본 조례(제13조)",
-  "onlineUrl": "https://baro.gyeongnam.go.kr/baro/",
-  "deadline": "접수기관 별 상이"
  },
  "WLF00003299": {
   "id": "WLF00003299",
@@ -2261,19 +2235,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "onlineUrl": "http://www.kosaf.go.kr",
   "deadline": "2026-2학기 신청기간 : 2026.7.1.~2026.11.17."
  },
- "WLF00003597": {
-  "id": "WLF00003597",
-  "gid": "653000000008",
-  "gname": "방학 중 아동급식 지원",
-  "gorg": "강원특별자치도",
-  "score": 0.77,
-  "docs": "○ 필수: 신분증\r\n\r\n○ 신청인 제출서류(급식 대상자선정을 위한 증빙자료)\r\n    - 건강보험료 납부액 확인이 가능한 납입 영수증명세서, 건강보험증 사본 등\r\n    - 의사 진단서 등(부모 등 보호자의 질병, 장애여부 증빙, 해당자)\r\n    - 고용확인서(근로시간 등 명시, 해당자)\r\n    - 건강보험자격득실확인서(맞벌이 가구 자격확인, 해당자)\r\n    - 이웃 또는 통장의 확인서(보호자 부재 여부 확인, 해당자) \r\n\r\n ○ 공무원 확인가능 서류(신청인 미제출 서류)\r\n    - 주민등록등본\r\n    - 가족관계증명서\r\n  ※ 행정정보공동이용 사전 동의 필요",
-  "officialDocs": null,
-  "laws": "아동복지법(제35조)||아동복지법(제35조, 제2항)||아동복지법(제35조, 제3항)||아동복지법(제35조, 제5항)",
-  "localLaws": null,
-  "onlineUrl": null,
-  "deadline": "상시신청"
- },
  "WLF00002391": {
   "id": "WLF00002391",
   "gid": "347000000114",
@@ -2390,19 +2351,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "localLaws": "세종특별자치시 한부모가족 지원 조례(제6조)",
   "onlineUrl": "https://www.bokjiro.go.kr",
   "deadline": "상시신청"
- },
- "WLF00006111": {
-  "id": "WLF00006111",
-  "gid": "626000000622",
-  "gname": "부산형 산후조리비 지원",
-  "gorg": "부산광역시",
-  "score": 0.9,
-  "docs": "○ 산모신생아 건강관리 서비스 제공 : 본인부담금 영수증(본인부담금 90% 지원)\r\n○ 산후조리원 이용 : 산후조리원 입실 계약서 (확인서)\r\n또는 지급 영수증\r\n○ 병의원 진료비 :  산모 명의의 진료비 명세서 및 영수증, 산후조리 관련 한방 진료(한약 조제비) 포함 \r\n      ※ 퇴원(분만으로 인한 입원) 후 발생한 영수증에 한함(자연분만, 제왕절개 등 분만 입원 비용 제외)\r\n     ※ 임신·출산 관련된 바우처 카드 결제 내역 지원 불가 \r\n     ※ 카드 소유주: 신생아의 부또는 모, 부또는 모의 직계 존속에 한 함(가족관계 증빙 서류 별도 제출)",
-  "officialDocs": null,
-  "laws": "저출산ㆍ고령사회기본법(제10조, 제1항)",
-  "localLaws": "부산광역시 산후조리 지원에 관한 조례(제7조, 제1항)||부산광역시 산후조리 지원에 관한 조례(제7조의1)",
-  "onlineUrl": null,
-  "deadline": "2026. 1. 1. ~  2026. 12. 30."
  },
  "WLF00002784": {
   "id": "WLF00002784",
@@ -2598,6 +2546,19 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "localLaws": "평택시 청년 기본 조례(제14조)",
   "onlineUrl": null,
   "deadline": "2026년은 신규 대상자 미 모집"
+ },
+ "WLF00001451": {
+  "id": "WLF00001451",
+  "gid": "383000000209",
+  "gname": "2026년 청년 어학·자격시험 응시료 지원",
+  "gorg": "경기도 안양시",
+  "score": 0.77,
+  "docs": "○ 신청인 제출 서류\r\n① 청년 어학시험 응시료 지원 신청서(시스템입력)\r\n② 개인정보 수집‧이용‧제공 및 고유식별정보 처리에 관한 동의서(시스템입력)\r\n③ 청년 어학시험 응시료 지원 유의사항 확인서(시스템입력)\r\n④ 결제 영수증(실제 본인이 부담한 비용)\r\n⑤ 어학시험 응시 증빙서류(응시확인서 또는 성적표)\r\n⑥ 주민등록 초본(마이데이터 서비스 이용 동의 시 첨부 불필요)\r\n⑦ 건강보험료 자격득실확인서\r\n⑧ 통장사본(계좌번호 인증 동의 시 첨부 불필요)",
+  "officialDocs": null,
+  "laws": null,
+  "localLaws": "안양시 청년 기본 조례",
+  "onlineUrl": null,
+  "deadline": "2026. 5.11.(월) 09:00~2026. 12. 4.(금) 18:00"
  },
  "WLF00005171": {
   "id": "WLF00005171",
@@ -3078,19 +3039,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "laws": null,
   "localLaws": "서울특별시 동대문구 만 65세 이상 취약계층 어르신 대상포진 예방접종 지원에 관한 조례",
   "onlineUrl": null,
-  "deadline": "상시신청"
- },
- "WLF00001141": {
-  "id": "WLF00001141",
-  "gid": "O00027100001",
-  "gname": "청소년 통합지원체계(청소년안전망)",
-  "gorg": "인천광역시서해구시설관리공단",
-  "score": 0.86,
-  "docs": null,
-  "officialDocs": null,
-  "laws": null,
-  "localLaws": null,
-  "onlineUrl": "www.sg1388.or.kr",
   "deadline": "상시신청"
  },
  "WLF00001122": {
@@ -4536,19 +4484,6 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "onlineUrl": null,
   "deadline": "상시신청"
  },
- "WLF00005747": {
-  "id": "WLF00005747",
-  "gid": "506000000130",
-  "gname": "중·고등학교 신입생 교복구입비 지원",
-  "gorg": "경상북도 김천시",
-  "score": 0.9,
-  "docs": "1. 교복구입비 지원 신청서(각 학교, 읍면동 주민센터, 김천시청 홈페이지 고시/공고에 비치)\r\n2. 통장사본(학생 본인 또는 부모님)\r\n3. 주민등록초본(과거 주소 1년 이상 포함)\r\n4. 재학증명서(주소지 읍면동 주민센터에서 신청 시)\r\n5. 졸업증명서(주소지 읍면동 주민센터에서 신청 시)\r\n6. (보호자가 부모님이 아닌 경우) 동거하는 보호자의 주민등록 등본(신청하는 학생이 등본상에 같이 기재되어 있어야 함)",
-  "officialDocs": null,
-  "laws": null,
-  "localLaws": "김천시 교복 지원 조례",
-  "onlineUrl": null,
-  "deadline": "상시신청"
- },
  "WLF00002224": {
   "id": "WLF00002224",
   "gid": "322000000118",
@@ -4639,6 +4574,19 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "localLaws": null,
   "onlineUrl": null,
   "deadline": "접수기관 별 상이"
+ },
+ "WLF00003986": {
+  "id": "WLF00003986",
+  "gid": "404000000118",
+  "gname": "산모·신생아 건강관리 지원(추가형)",
+  "gorg": "경기도 하남시",
+  "score": 0.86,
+  "docs": "○ 필수서류(공통)\r\n1. 신분증 지참(대리인방문시 대리인 신분증 포함)\r\n\r\n○ 추가서류\r\n1. 임신확인서(쌍태아의 경우)\r\n2. 수술일이 예정일인 경우(의사소견서 또는 수술일이 예정일이라는 확인 증빙서류)\r\n3. 가족관계증명원(결혼이민자, 세대분리의 경우)\r\n4. 출생증명서 1부(신생아출생 이후 신청일 경우)\r\n5. 휴직을 확인할 수 있는 증명서 원본 1부(휴직확인자료- 휴직기간과 유·무급여부, 유급시 월 급여액 등을 기재-회사고무인, 직인 날인된 서류)\r\n6. 급여명세서 원본 1부(본인 또는 배우자가 휴직일 경우- 회사고무인, 직인 날인된 서류)",
+  "officialDocs": null,
+  "laws": "사회서비스 이용 및 이용권 관리에 관한 법률(제4,5조)||저출산ㆍ고령사회기본법(제8조)||모자보건법(제15조의18)",
+  "localLaws": null,
+  "onlineUrl": "https://www.bokjiro.go.kr/ssis-teu/index.do",
+  "deadline": "상시신청"
  },
  "WLF00002021": {
   "id": "WLF00002021",
@@ -4860,6 +4808,19 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "localLaws": null,
   "onlineUrl": null,
   "deadline": "지급신청 후 통지한날이 속한달부터 지급"
+ },
+ "WLF00004523": {
+  "id": "WLF00004523",
+  "gid": "544000000118",
+  "gname": "호국함양 참전유공자 등 지원",
+  "gorg": "경상남도 하동군",
+  "score": 0.78,
+  "docs": "○ 신청인 제출서류\r\n   - 참전유공자증 사본 등 관련 증빙서류\r\n   - 신청인 통장사본\r\n   - 사망한 참전유공자의 배우자 관계 확인서류",
+  "officialDocs": null,
+  "laws": null,
+  "localLaws": "하동군 참전유공자 등 지원에 관한 조례||하동군 참전유공자 등 지원에 관한 조례||하동군 참전유공자 등 지원에 관한 조례",
+  "onlineUrl": null,
+  "deadline": "상시신청"
  },
  "WLF00001623": {
   "id": "WLF00001623",

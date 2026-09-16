@@ -13,6 +13,7 @@ import {
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { statedApplyPeriod } from "@/lib/applyPeriod";
 import { leadOf } from "@/lib/leadSentence";
+import DeadlineBadge from "@/components/DeadlineBadge";
 
 export const metadata: Metadata = {
   title: "지원금 두 가지 나란히 보기",
@@ -160,6 +161,13 @@ export default async function ComparePage({
       {nameWithAlias(s.id, s.name)}
     </Link>
   );
+  /* 다른 목록과 같이 끝난 사업에는 「마감」을 붙인다 — 여기만 날짜만 보여 줬다(09-16 리뷰). */
+  const head = (s: typeof a) => (
+    <span className="inline-flex flex-wrap items-center gap-1.5">
+      {line(s)}
+      <DeadlineBadge id={s.id} />
+    </span>
+  );
 
   const income = (p: number | null) =>
     p === null ? null : (
@@ -194,12 +202,13 @@ export default async function ComparePage({
           <thead>
             <tr className="border-y border-line bg-sunken text-left">
               <th className="w-28 px-3 py-2 text-xs font-semibold text-muted">항목</th>
-              <th className="px-3 py-2 text-sm">{line(a)}</th>
-              <th className="px-3 py-2 text-sm">{line(b)}</th>
+              <th className="px-3 py-2 text-sm">{head(a)}</th>
+              <th className="px-3 py-2 text-sm">{head(b)}</th>
             </tr>
           </thead>
           <tbody>
-            <Row label="어떤 지원인가" a={leadOf(a)} b={leadOf(b)} />
+            {/* 지원 대상 첫 문장이다(leadOf가 eligibility를 읽는다). */}
+            <Row label="지원 대상" a={leadOf(a)} b={leadOf(b)} />
             <Row label="지역" a={placeLabel(a)} b={placeLabel(b)} />
             <Row
               label="소득 기준선"

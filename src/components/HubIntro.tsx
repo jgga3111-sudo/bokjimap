@@ -56,8 +56,8 @@ export default function HubIntro({
       <h2 className="text-base font-bold text-ink">이 목록은 이렇게 모았습니다</h2>
 
       <p>
-        복지로 원문의 <strong>{fieldLabel}</strong> 칸에 &ldquo;{axisLabel}
-        &rdquo;이 적힌 사업 {total}건입니다. 중앙부처 사업 {central}건은 사는
+        복지로 원문의 <strong>{fieldLabel}</strong> 칸 값이 &ldquo;{axisLabel}
+        &rdquo;인 사업 {total}건입니다. 중앙부처 사업 {central}건은 사는
         곳과 상관없이 전국에서 같고, 지자체 사업 {local}건은 그 지역에 주소가
         있어야 신청할 수 있습니다
         {topSido && <> — 수록분에서는 {topSido} 순으로 많습니다</>}.
