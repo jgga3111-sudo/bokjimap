@@ -480,9 +480,12 @@ writeFileSync(
  * 끝나는 날이 적혀 있는 사업의 끝날. 지났는지는 브라우저가 오늘과 비교한다
  * (\`components/DeadlineBadge.tsx\`). 만드는 규칙은 build-data.mjs의 마감 표 주석.
  */
+import { GOV24_CLOSING } from "./gov24Closing";
+
 export type Closing = {
-  /** period = 본문의 신청 기간 · program = 사업 시행 종료일 · stated = 원문이 마감이라고 적음 */
-  kind: "period" | "program" | "stated";
+  /** period = 본문의 신청 기간 · program = 사업 시행 종료일 · stated = 원문이 마감이라고 적음
+   *  · gov24 = 보조금24 「신청기한」 칸(2026-09-17, scripts/build-gov24.mjs) */
+  kind: "period" | "program" | "stated" | "gov24";
   /** YYYY-MM-DD. stated는 날짜가 없어 null이고, 늘 마감으로 본다. */
   end: string | null;
   /** 원문 조각 그대로 */
@@ -490,7 +493,23 @@ export type Closing = {
   name: string;
 };
 
-export const CLOSING: Readonly<Record<string, Closing>> = ${JSON.stringify(closing, null, 1)};
+const BOKJIRO: Readonly<Record<string, Closing>> = ${JSON.stringify(closing, null, 1)};
+
+/* 두 원천을 합친다(2026-09-17).
+   · 원문이 마감이라고 적은 것(stated)은 그대로 둔다.
+   · 복지로에 사업 기간(program)만 있으면 보조금24의 **신청** 기간이 이긴다 —
+     전북형 청년활력수당은 사업 기간이 2027년인데 신청은 2026.3.20.에 끝났다.
+   · 둘 다 신청 기간이면 **끝날이 늦은 쪽**(더 새 공고)을 쓴다 — 아동건강체험활동비는
+     복지로 원문에 작년 기간만 남아 「마감」으로 나갔는데 보조금24에는 올해 기간이 있었다. */
+const pick = (b: Closing | undefined, g: Closing | undefined): Closing =>
+  !g ? b! : !b ? g : b.kind === "stated" ? b : b.kind === "program" ? g : (g.end ?? "") > (b.end ?? "") ? g : b;
+
+export const CLOSING: Readonly<Record<string, Closing>> = Object.fromEntries(
+  [...new Set([...Object.keys(BOKJIRO), ...Object.keys(GOV24_CLOSING)])].map((id) => [
+    id,
+    pick(BOKJIRO[id], GOV24_CLOSING[id]),
+  ]),
+);
 `,
 );
 console.log(`마감 표 ${Object.keys(closing).length}건 (신청 기간 ${Object.values(closing).filter((c) => c.kind === "period").length} · 원문이 마감이라 적음 ${Object.values(closing).filter((c) => c.kind === "stated").length} · 사업 종료일 ${Object.values(closing).filter((c) => c.kind === "program").length})`);

@@ -522,7 +522,16 @@ function PreCheck({
           }
         />
         <Row label="지역" value={placeLabel(s)} />
-        <Row label="신청 기간" value={period?.text} />
+        {/* 보조금24 신청기한이 마감 표에서 이겼으면 그쪽을 적는다(2026-09-17) —
+            복지로 본문에 작년 기간만 남은 사업이 있다(아동건강체험활동비). */}
+        <Row
+          label="신청 기간"
+          value={
+            CLOSING[s.id]?.kind === "gov24"
+              ? `${CLOSING[s.id].text} (보조금24)`
+              : period?.text
+          }
+        />
         <Row label="시행 기간" value={enforced} />
         <Row label="접수 방식" value={s.applyMethods.join(" · ")} />
         <Row
@@ -1020,7 +1029,17 @@ export default async function ServiceDetail({
         {/* 끝나기 열흘 전부터 끝나는 날까지(2026-09-13). 날이 지나면 사라지고
             바로 아래 PastPeriodNotice가 받는다. */}
         <DeadlineNotice id={s.id} />
-        {period && <PastPeriodNotice end={period.end} text={period.text} />}
+        {/* 보조금24 신청기한이 이긴 사업은 그 기간으로 띠를 단다 — 복지로 본문의
+            옛 기간으로 「지났습니다」를 띄우면 올해 기간이 남은 사업이 끝난 것처럼 읽힌다. */}
+        {CLOSING[s.id]?.kind === "gov24" ? (
+          <PastPeriodNotice
+            end={CLOSING[s.id].end as string}
+            text={CLOSING[s.id].text}
+            variant="gov24"
+          />
+        ) : (
+          period && <PastPeriodNotice end={period.end} text={period.text} />
+        )}
         {plan && (
           <PastPeriodNotice end={plan.end} text={plan.text} variant="plan" />
         )}

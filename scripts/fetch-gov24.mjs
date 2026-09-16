@@ -61,4 +61,4 @@ async function all(endpoint) {
 
 await all("serviceList");
 await all("serviceDetail");
-console.log(`\n받은 날: ${new Date().toISOString().slice(0, 10)} — build-gov24.mjs 를 이어서 돌린다.`);
+console.log(`\n받은 날: ${new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10) /* KST — UTC면 오전 9시 전에 어제가 된다 */} — build-gov24.mjs 를 이어서 돌린다.`);

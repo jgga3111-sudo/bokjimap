@@ -27,7 +27,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const CHECKED = process.argv[2] ?? new Date().toISOString().slice(0, 10);
+const CHECKED = process.argv[2] ?? new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10) /* KST — UTC면 오전 9시 전에 어제가 된다 */;
 const SRC = path.join("data-research", "gov24");
 const read = (f) => JSON.parse(fs.readFileSync(path.join(SRC, f), "utf8"));
 
@@ -207,6 +207,76 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = ${JSON.stringify(
 `;
 
 fs.writeFileSync(path.join("src", "data", "gov24.ts"), out);
+
+/* ── 보조금24 신청기한 → 마감 표 (2026-09-17) ──────────────────────────
+   복지로 원문에는 기간이 없는데 보조금24 「신청기한」 칸에는 **날짜가 온전히**
+   적힌 사업이 있다(평택 청년월세 「2026-04-06 ~ 2026-04-17」 등). 그 끝날을
+   `gov24Closing.ts`에 담아 「마감」·D-day 딱지가 함께 보게 한다. 복지로 원문에서
+   뽑은 기간이 있으면 그쪽이 이긴다(closing.ts에서 합칠 때).
+
+   좁게 읽는다 — 틀리게 「마감」을 붙이면 아직 받을 수 있는 사람이 포기한다.
+   · `~`로 이은 **범위**만. 왼쪽은 연도까지 적힌 날짜(2026. / '26.)여야 한다.
+   · 오른쪽은 연도·월·일, 월·일, 일 중 하나. 빠진 연도·월은 왼쪽에서 잇는다.
+   · 「매년 3~4월」「2026년 상반기」「2026.3.~2026.11.」처럼 **일이 없으면 버린다.**
+   · 범위가 여럿이면 **가장 늦은 끝날**(울주 「~11.30.(집중신청기간 : 2.9.~3.31.)」).
+   · 끝날의 해가 확인한 해보다 앞이면 버린다 — 「'25.7.21.~'25.11.21」은 작년 공고라
+     올해 다시 받는지 모른다. */
+const YMD = /(?:(20\d{2})|['’](\d{2}))\s*[.\-년/]\s*(\d{1,2})\s*[.\-월/]\s*(\d{1,2})\s*일?\.?/g;
+const iso = (y, m, d) => {
+  const t = new Date(Date.UTC(y, m - 1, d));
+  return t.getUTCFullYear() === y && t.getUTCMonth() === m - 1 && t.getUTCDate() === d
+    ? t.toISOString().slice(0, 10)
+    : null;
+};
+function deadlineEnd(text) {
+  let best = null;
+  for (let i = text.indexOf("~"); i >= 0; i = text.indexOf("~", i + 1)) {
+    const left = [...text.slice(Math.max(0, i - 30), i).matchAll(YMD)].at(-1);
+    if (!left) continue;
+    const tail = text.slice(Math.max(0, i - 30), i).slice(left.index + left[0].length);
+    if (!/^[\s().월화수목금토일:\d]*$/.test(tail)) continue;
+    const ly = left[1] ? +left[1] : 2000 + +left[2];
+    const lm = +left[3];
+    const right = text.slice(i + 1).trimStart();
+    let r;
+    let end = null;
+    if ((r = right.match(/^(?:(20\d{2})|['’](\d{2}))\s*[.\-년/]\s*(\d{1,2})\s*[.\-월/]\s*(\d{1,2})(?!\d)/))) {
+      end = iso(r[1] ? +r[1] : 2000 + +r[2], +r[3], +r[4]);
+    } else if ((r = right.match(/^(\d{1,2})\s*[.\-월/]\s*(\d{1,2})(?!\d)/))) {
+      end = iso(+r[1] < lm ? ly + 1 : ly, +r[1], +r[2]);
+    } else if ((r = right.match(/^(\d{1,2})\s*일/))) {
+      end = iso(ly, lm, +r[1]);
+    }
+    if (end && (!best || end > best)) best = end;
+  }
+  return best && best.slice(0, 4) >= CHECKED.slice(0, 4) ? best : null;
+}
+
+const oursById = new Map(ours.map((s) => [s.id, s]));
+const gov24Closing = {};
+for (const m of matched) {
+  const end = m.deadline && deadlineEnd(m.deadline);
+  if (end) {
+    gov24Closing[m.id] = {
+      kind: "gov24",
+      end,
+      text: m.deadline.replace(/\s+/g, " ").trim(),
+      name: oursById.get(m.id).name,
+    };
+  }
+}
+fs.writeFileSync(
+  path.join("src", "data", "gov24Closing.ts"),
+  `/* 자동 생성 — scripts/build-gov24.mjs. 손으로 고치지 않는다.
+ *
+ * 보조금24 「신청기한」 칸에 날짜가 온전히 적힌 사업의 끝날(읽는 규칙은 그 스크립트).
+ * \`closing.ts\`가 복지로 원문에서 뽑은 마감 표와 합친다 — 겹치면 복지로 쪽이 이긴다.
+ */
+export const GOV24_CLOSING: Readonly<
+  Record<string, { kind: "gov24"; end: string; text: string; name: string }>
+> = ${JSON.stringify(gov24Closing, null, 1)};
+`,
+);
 
 const has = (f) => matched.filter((m) => m[f]).length;
 console.log(`수록 ${ours.length}건 · 보조금24 ${list.length}건`);

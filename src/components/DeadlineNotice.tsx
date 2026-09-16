@@ -26,7 +26,11 @@ export default function DeadlineNotice({ id }: { id: string }) {
   /* 신청 기간은 본문 문장에서 뽑은 것이고, 사업 기간은 원문의 시행 기간 칸에서
      온 것이다. 「본문에 적힌 사업 기간」이라고 쓰면 본문에 없는 말을 한 셈이다. */
   const what =
-    c.kind === "period" ? "본문에 적힌 신청 기간" : "원문에 적힌 사업 기간";
+    c.kind === "period"
+      ? "본문에 적힌 신청 기간"
+      : c.kind === "gov24"
+        ? "보조금24(행정안전부)에 적힌 신청기한"
+        : "원문에 적힌 사업 기간";
 
   return (
     <p className="mt-4 rounded-xl border border-rose-300 bg-rose-50 px-4 py-3 text-sm leading-relaxed text-rose-900">

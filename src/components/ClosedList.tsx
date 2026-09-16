@@ -40,8 +40,8 @@ export default function ClosedList() {
           기간이 지난 지원 {rows.length}건
         </h2>
         <p className="mt-1 text-xs leading-relaxed text-slate-600">
-          원문에 적힌 신청 기간이나 사업 기간이 지났거나, 원문이 마감이라고 적어
-          둔 것입니다. 해마다 다시
+          원문(복지로·보조금24)에 적힌 신청 기간이나 사업 기간이 지났거나,
+          원문이 마감이라고 적어 둔 것입니다. 해마다 다시
           공고가 나거나 기간이 연장되는 사업도 있으니, 올해 일정은 각 상세의
           공식 안내에서 확인하세요.
         </p>
@@ -60,7 +60,7 @@ export default function ClosedList() {
                 <span className="mt-0.5 block text-xs text-muted">
                   {c.kind === "stated"
                     ? `원문 표기 「${c.text}」`
-                    : `${c.kind === "period" ? "신청 기간" : "사업 기간"} ${c.text}`}
+                    : `${c.kind === "period" ? "신청 기간" : c.kind === "gov24" ? "보조금24 신청기한" : "사업 기간"} ${c.text}`}
                 </span>
               </span>
               <span className="shrink-0 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-xs font-bold text-amber-900">

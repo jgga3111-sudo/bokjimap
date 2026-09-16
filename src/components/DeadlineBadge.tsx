@@ -58,7 +58,11 @@ export default function DeadlineBadge({ id }: { id: string }) {
 }
 
 const what = (c: Closing) =>
-  c.kind === "period" ? "원문에 적힌 신청 기간" : "원문에 적힌 사업 기간";
+  c.kind === "period"
+    ? "원문에 적힌 신청 기간"
+    : c.kind === "gov24"
+      ? "보조금24에 적힌 신청기한"
+      : "원문에 적힌 사업 기간";
 
 const closedTitle = (c: Closing) =>
   c.kind === "stated"

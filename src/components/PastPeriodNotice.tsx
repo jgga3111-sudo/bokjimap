@@ -60,8 +60,11 @@ export default function PastPeriodNotice({
    * 남아 있는 것은 **읽는 사람이 해야 할 일이 다르다.** 앞은 내년 공고를
    * 기다리는 일이고, 뒤는 지금 시작됐는지 확인하는 일이다. 한 문장으로
    * 뭉뚱그리면 둘 다 어긋난다.
+   *
+   * · `gov24`  — 보조금24 「신청기한」 칸(2026-09-17). 복지로 원문에는 기간이 없거나
+   *   더 옛 기간만 있는 사업이다. 출처가 다르므로 출처를 밝힌다.
    */
-  variant?: "period" | "plan" | "program";
+  variant?: "period" | "plan" | "program" | "gov24";
 }) {
   const today = useSyncExternalStore(noop, localToday, noToday);
 
@@ -73,6 +76,11 @@ export default function PastPeriodNotice({
       {variant === "period" ? (
         <>
           <strong>본문에 적힌 신청 기간({text})은 이미 지났습니다.</strong>{" "}
+          해마다 다시 공고가 나오는 사업일 수 있으니, 올해 일정은{" "}
+        </>
+      ) : variant === "gov24" ? (
+        <>
+          <strong>보조금24(행정안전부 공공서비스 정보)에 적힌 신청기한({text})이 지났습니다.</strong>{" "}
           해마다 다시 공고가 나오는 사업일 수 있으니, 올해 일정은{" "}
         </>
       ) : variant === "program" ? (

@@ -46,7 +46,9 @@ const BUDGET = services.filter((s) =>
   ),
 );
 
-const CLOSING_COUNT = Object.keys(CLOSING).length;
+/* 보조금24 신청기한에서 온 것은 따로 센다(2026-09-17) — 「문장을 읽어 냈다」는 말은 복지로 몫에만 맞다. */
+const GOV24_COUNT = Object.values(CLOSING).filter((c) => c.kind === "gov24").length;
+const CLOSING_COUNT = Object.keys(CLOSING).length - GOV24_COUNT;
 
 /* 이 칸은 신청 마감일이 아니라 **사업 기간의 끝날**이다 — 2050·2099년 같은 값이
    섞여 있다. 「마감일」이라고 부르지 않는다(09-16 리뷰). */
@@ -117,7 +119,8 @@ export default function DeadlineShareGuide() {
             날짜 칸은 비어 있어도 <strong>요약문·지원 내용 문장 안에</strong> 기간을 적어
             둔 사업이 있습니다. 예를 들면 &ldquo;2026년 모집기간: &rsquo;26.5.4.~
             &rsquo;26.5.20.&rdquo; 같은 문장입니다. 저희는 그런 문장을 따로 읽어
-            내 <strong>{CLOSING_COUNT}건</strong>을 마감 표로 들고 있고, 지났는지는 보는
+            내 <strong>{CLOSING_COUNT}건</strong>, 행정안전부 보조금24의 신청기한 칸에서{" "}
+            <strong>{GOV24_COUNT}건</strong>을 더 읽어 마감 표로 들고 있고, 지났는지는 보는
             사람의 브라우저가 그날 날짜로 판정합니다.
           </p>
           <p>
