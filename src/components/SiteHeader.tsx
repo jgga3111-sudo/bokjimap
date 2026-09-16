@@ -47,9 +47,16 @@ const NAV: Nav[] = [
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur">
-      <div className="mx-auto max-w-5xl px-4">
-        <div className="flex h-14 items-center gap-3">
+    <>
+      {/* 위 줄(로고·검색)만 늘 붙어 있는다. 아래 분류 줄은 375px에서 헤더를
+          100px로 만들어 스크롤 내내 화면 위 12%를 먹고 있었다 — 좁은 화면에서는
+          함께 흘려보내고, 넓은 화면에서는 자리가 남으니 아래에 붙여 둔다.
+
+          ⚠ 두 줄을 <header> 하나로 감싸면 안 된다. sticky는 **부모 상자 안에서만**
+          붙으므로, 100px짜리 헤더 안에 넣으면 그 헤더가 지나가는 순간 같이 사라진다
+          (2026-09-16에 실제로 그렇게 만들었다가 잡았다). 둘 다 <body>의 자식이어야 한다. */}
+      <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4">
           <Link
             href="/"
             className="shrink-0 text-lg font-bold sm:text-xl"
@@ -65,14 +72,14 @@ export default function SiteHeader() {
           {/* 계정 기능이 꺼져 있으면 아무것도 안 그린다(AccountLink). */}
           <AccountLink />
         </div>
+      </header>
 
-        {/* 좁은 화면에서 가로 스크롤되도록. 페이지 전체가 밀리지 않게 여기서만 넘긴다.
-
-            오른쪽 끝을 흰색으로 흐린다. 칩 여섯 개가 375px에서 넘치는데
-            마지막 것이 화면 경계에 딱 잘려 있으면 잘린 건지 거기까지인 건지
-            알 수 없다. 흐림이 "옆으로 더 있다"를 말해 준다.
-            pointer-events-none이라 칩을 가리지 않는다. */}
-        <div className="relative">
+      {/* 칩 줄은 좁은 화면에서 가로 스크롤되도록 한다. 페이지 전체가 밀리지
+          않게 여기서만 넘긴다. 오른쪽 끝을 흐리는 것은 "옆으로 더 있다"를
+          말해 주기 위해서다 — 화면 경계에 딱 잘려 있으면 잘린 건지 거기까지인
+          건지 알 수 없다. pointer-events-none이라 칩을 가리지 않는다. */}
+      <div className="relative z-20 border-b border-line bg-white/90 backdrop-blur sm:sticky sm:top-14">
+        <div className="relative mx-auto max-w-5xl px-4">
           <nav className="-mx-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <ul className="flex gap-1.5 whitespace-nowrap">
               {NAV.map((n) => (
@@ -97,6 +104,6 @@ export default function SiteHeader() {
           />
         </div>
       </div>
-    </header>
+    </>
   );
 }

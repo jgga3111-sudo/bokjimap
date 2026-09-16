@@ -25,6 +25,7 @@ import DeadlineNotice from "@/components/DeadlineNotice";
 import { CLOSING } from "@/data/closing";
 import { GOV24, GOV24_CHECKED } from "@/data/gov24";
 import { leadSentence } from "@/lib/leadSentence";
+import { formName } from "@/lib/formName";
 import { amongListed, rankOf } from "@/lib/amongListed";
 import {
   statedApplyPeriod,
@@ -294,9 +295,11 @@ function Section({
   /* scroll-mt는 sticky 헤더보다 커야 한다. 헤더가 99px(로고·검색 56 +
      분류 칩 43)인데 scroll-mt-20(80px)이어서, 목차로 뛰면 제목이 헤더 밑에
      19px 잠겼다. 앵커는 900건에 다 깔려 있었지만 목차가 없어 아무도 누르지
-     않았고, 그래서 여태 안 드러났다. 28 = 112px. */
+     않았고, 그래서 여태 안 드러났다. 28 = 112px.
+     2026-09-16에 좁은 화면의 붙는 높이가 57px(로고·검색만)로 줄어, 거기서는
+     112px이 도리어 빈 자리를 만든다 — 폭으로 갈랐다(16 = 64px). */
   return (
-    <section id={id} className="scroll-mt-28">
+    <section id={id} className="scroll-mt-16 sm:scroll-mt-28">
       <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         {title}
@@ -486,7 +489,7 @@ function PreCheck({
       : null;
 
   return (
-    <section id="precheck" className="scroll-mt-28">
+    <section id="precheck" className="scroll-mt-16 sm:scroll-mt-28">
       <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         신청 전 체크
@@ -673,7 +676,7 @@ function AmongListed({ s }: { s: WelfareService }) {
   const total = services.length;
 
   return (
-    <section id="among" className="scroll-mt-28">
+    <section id="among" className="scroll-mt-16 sm:scroll-mt-28">
       <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         우리 수록에서 어디쯤인가
@@ -1190,15 +1193,29 @@ export default async function ServiceDetail({
             {s.forms.map((f, i) => {
               const url = safeUrl(f.url);
               if (!url) return null;
+              /* 파일 이름은 자르지 않고 **갈라서** 적는다 — 이름은 크게, 서식
+                 번호와 출처는 밑에 작게. 원래 이름은 title에 통째로 남긴다. */
+              const n = formName(f.name || "첨부파일");
               return (
                 <li key={i}>
                   <a
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand underline"
+                    title={f.name || undefined}
+                    className="group block"
                   >
-                    {f.name || "첨부파일"}
+                    <span className="text-brand underline group-hover:no-underline">
+                      {n.label}
+                    </span>
+                    {n.ext && (
+                      <span className="ml-1.5 align-middle text-[11px] text-muted">
+                        {n.ext}
+                      </span>
+                    )}
+                    {n.note && (
+                      <span className="block text-xs text-muted">{n.note}</span>
+                    )}
                   </a>
                 </li>
               );
