@@ -86,16 +86,26 @@ export default async function IncomeBandPage({
           {HOUSEHOLDS.map((n) => (
             <div key={n} className="flex items-baseline justify-between gap-2">
               <dt className="text-sm text-muted">{n}인 가구</dt>
-              <dd className="text-sm font-bold text-ink">
-                {won(thresholdOf(n, band.percent))}
+              <dd className="text-right">
+                <span className="text-sm font-bold text-ink">
+                  {won(thresholdOf(n, band.percent))}
+                </span>
+                {/* 연봉 환산 (2026-09-16). 서치콘솔에서 「중위소득 60 이하 연봉」
+                    「120 이하 연봉」으로 들어오는데 화면에는 월 금액만 있었다.
+                    월 기준액 × 12일 뿐이고 세전이라는 것을 아래 단서에 적는다 —
+                    실제 심사는 소득인정액으로 하므로 이 값은 환산값이다. */}
+                <span className="block text-xs font-normal text-muted">
+                  연 {won(thresholdOf(n, band.percent) * 12)}
+                </span>
               </dd>
             </div>
           ))}
         </dl>
         <p className="mt-3 text-xs leading-relaxed text-muted">
-          세전 월 소득 기준입니다. 실제 심사는 월급이 아니라 소득인정액(소득 +
-          재산의 소득환산액)으로 하고 공제 항목이 있어, 월급이 이 금액을 넘어도
-          해당될 수 있습니다.
+          세전 월 소득 기준이고, 연 금액은 <strong>그 값에 12를 곱한 환산값</strong>
+          입니다(상여·수당이 있으면 달라집니다). 실제 심사는 월급이 아니라
+          소득인정액(소득 + 재산의 소득환산액)으로 하고 공제 항목이 있어, 월급이 이
+          금액을 넘어도 해당될 수 있습니다.
         </p>
       </section>
 

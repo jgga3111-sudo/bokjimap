@@ -23,6 +23,8 @@ import PastPeriodNotice from "@/components/PastPeriodNotice";
 import DeadlineBadge from "@/components/DeadlineBadge";
 import DeadlineNotice from "@/components/DeadlineNotice";
 import { CLOSING } from "@/data/closing";
+import { leadSentence } from "@/lib/leadSentence";
+import { amongListed, rankOf } from "@/lib/amongListed";
 import {
   statedApplyPeriod,
   statedPlan,
@@ -427,53 +429,6 @@ function KeyFacts({ s }: { s: WelfareService }) {
 }
 
 /**
- * 원문 지원 대상의 **첫 문장(들)**을 120자 안에서 끊는다. (2026-09-11)
- *
- * 「신청 전 체크」의 자격 조건 줄에 쓴다. 우리가 요약해 다시 쓰지 않는다
- * (CLAUDE.md 3절) — 원문을 앞에서부터 문장 단위로 잘라 붙이고, 끊겼으면
- * "…"과 함께 전문(#target)으로 보낸다.
- *
- * 문장 경계는 **줄바꿈**과 **「…다.」「…음.」 같은 한국어 종결 뒤 마침표**만
- * 본다. 마침표 하나로 자르면 "2026. 1. 1. 이후 출생"(영유아보육료)의 날짜가
- * 세 토막 난다. lookbehind는 tsconfig target(ES2017)에서 못 쓰므로 종결
- * 뒤에 줄바꿈을 끼워 넣고 줄로 가른다.
- *
- * `※`로 시작하는 토막은 조건이 아니라 조건에 붙는 단서다(K-패스: "※ 외국인
- * 등록번호가 있는 외국인에 한해…"). 첫 문장을 이미 잡았으면 거기서 멈춘다.
- * 원문이 `※`로 **시작**하면(청년월세 지원사업) 그건 첫 줄이므로 그대로 싣는다.
- *
- * 첫 토막부터 120자를 넘는 원문이 있다 — 홍천군 운전면허 학원비처럼 줄바꿈
- * 없이 「- 」로 항목을 잇는 것. 그때는 마지막 띄어쓰기에서 자른다. 낱말
- * 가운데를 자르면 "18세 이상 20세 이"처럼 뜻이 바뀌어 보인다.
- */
-const LEAD_MAX = 120;
-
-function leadSentence(text: string): { lead: string; cut: boolean } {
-  const parts = text
-    .replace(/([다음됨함임요])\.\s+/g, "$1.\n")
-    .split(/\n+/)
-    .map((p) => p.replace(/\s+/g, " ").trim())
-    .filter(Boolean);
-
-  let lead = "";
-  let used = 0;
-  for (const p of parts) {
-    if (lead && /^[※*]/.test(p)) break;
-    const next = lead ? `${lead} ${p}` : p;
-    if (next.length > LEAD_MAX) break;
-    lead = next;
-    used += 1;
-  }
-
-  if (lead) return { lead, cut: used < parts.length };
-
-  const head = parts[0] ?? "";
-  const space = head.lastIndexOf(" ", LEAD_MAX);
-  const at = space > LEAD_MAX / 2 ? space : LEAD_MAX;
-  return { lead: head.slice(0, at).trim(), cut: true };
-}
-
-/**
  * 신청 전 체크 — 본문을 읽기 전에 "나한테 해당되나·어디서·언제"부터. (2026-09-11)
  *
  * ── 왜 바꿨나 ──────────────────────────────────────────────────
@@ -577,6 +532,11 @@ function PreCheck({
             )
           }
         />
+        {/* 문의 전화 — 889건(99%)에 값이 있는데 여태 페이지 맨 아래 「문의처」
+            절까지 내려가야 보였다. 09-16 경쟁 조사에서 서울복지포털이 목록
+            카드에까지 직통번호를 박아 두는 것을 보고 올렸다. 번호로 읽히는
+            값만 링크를 건다(telHref) — 「평일 09~18시」 같은 안내문이 섞인다. */}
+        <Row label="문의" value={<ContactLine s={s} />} />
         <Row label="담당" value={s.department} />
         <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
       </dl>
@@ -608,6 +568,85 @@ function PreCheck({
  * 값은 옮겨 적은 그대로다. 조문은 인용하고, 날짜는 달력 파일의 값을 쓰고,
  * 계산하거나 해석하지 않는다(3절).
  */
+/** 「신청 전 체크」의 문의 줄. 전화로 읽히는 첫 값 하나만 — 목록이 아니라 한 줄이다. */
+function ContactLine({ s }: { s: WelfareService }) {
+  const first = s.contacts.find((c) => telHref(c.url));
+  if (!first) return null;
+  const tel = telHref(first.url)!;
+  return (
+    <>
+      <a href={tel} className="font-medium text-brand underline">
+        {first.url}
+      </a>
+      {first.name && (
+        <span className="font-normal text-slate-600"> {first.name}</span>
+      )}
+      {s.contacts.length > 1 && (
+        <a href="#contact" className="ml-1 text-xs font-medium text-brand hover:underline">
+          전체 보기 ↓
+        </a>
+      )}
+    </>
+  );
+}
+
+/**
+ * 「우리 수록에서 어디쯤인가」 (2026-09-16).
+ *
+ * 복지로 원문을 한 글자도 쓰지 않는 절이다 — 값은 전부 우리가 910건을 세어
+ * 만든다(`lib/amongListed.ts` 머리말). 페이지마다 수가 달라 틀 문구가 아니고,
+ * 옆 축 목록으로 이어 준다. 자격·우열은 말하지 않는다(3절).
+ */
+function AmongListed({ s }: { s: WelfareService }) {
+  const rows = amongListed(s);
+  if (rows.length === 0) return null;
+  const rank = rankOf(s);
+  const total = services.length;
+
+  return (
+    <section id="among" className="scroll-mt-28">
+      <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
+        <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
+        우리 수록에서 어디쯤인가
+      </h2>
+      <div className="rounded-xl border border-line bg-white px-4 py-3 text-sm leading-relaxed text-slate-700">
+        <p>
+          복지클릭이 실은 {total}건 가운데 이 사업은 복지로 조회수 기준{" "}
+          <strong className="text-ink">{rank}위</strong>입니다. 함께 볼 만한 자리는
+          아래와 같습니다.
+        </p>
+        <ul className="mt-2 space-y-1">
+          {rows.map((r) => (
+            <li key={r.label}>
+              <span className="text-muted">{r.label}</span>{" "}
+              {r.href ? (
+                <Link href={r.href} className="font-medium text-brand underline">
+                  {r.count}건
+                </Link>
+              ) : (
+                <strong className="text-ink">{r.count}건</strong>
+              )}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-2 text-xs text-muted">
+          여기서 센 것은 <strong>복지클릭이 실은 {total}건 안에서만</strong>입니다.
+          전국의 전체 사업 수가 아닙니다.
+        </p>
+        {/* 나란히 보기 진입점 (2026-09-16). 비교 화면은 noindex라 여기서만 들어간다. */}
+        <p className="mt-3 text-sm">
+          <Link
+            href={`/compare?a=${s.id}`}
+            className="font-medium text-brand underline hover:no-underline"
+          >
+            다른 지원과 나란히 보기 →
+          </Link>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function SiteChecked({ s }: { s: WelfareService }) {
   const { payDate, calendar, guides } = extrasOf(s);
   if (!payDate && calendar.length === 0 && guides.length === 0) return null;
@@ -929,6 +968,8 @@ export default async function ServiceDetail({
       <PreCheck s={s} period={period} />
 
       <SiteChecked s={s} />
+
+      <AmongListed s={s} />
 
       {/* 상세 본문을 아직 못 받은 항목. 없는 걸 없다고 쓰고 원문으로 보낸다 —
           그럴듯한 문장으로 빈자리를 메우면 그게 곧 저품질 페이지가 된다. */}

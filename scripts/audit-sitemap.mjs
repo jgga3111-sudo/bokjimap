@@ -191,7 +191,7 @@ console.log(line);
 */
 console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문 기준 미달이거나 조회수 ${INDEX_TOP_N}위 밖(따로 확인한 정보 없음) — noindex·광고 코드 없음`);
 console.log(`  약관·방침·문의     ${String(3).padStart(5)}개  정형 문서라 색인 가치 없음 (푸터 링크로는 접근 가능)`);
-console.log(`  결과 화면          ${String(3).padStart(5)}개  /search·/find·/ask — 조건마다 URL이 생겨 noindex로 나간다`);
+console.log(`  결과 화면          ${String(4).padStart(5)}개  /search·/find·/ask·/compare — 조건마다 URL이 생겨 noindex로 나간다`);
 /* 2026-09-11 추가. 사람마다 내용이 다른 화면이라 크롤러에게 줄 것이 없다.
    /saved는 늘 noindex, 나머지 다섯은 계정 기능이 꺼져 있으면 404이고
    켜져 있으면 noindex다. 계정 화면을 더하면 이 수도 같이 고친다. */

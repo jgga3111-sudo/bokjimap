@@ -48,6 +48,10 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "school-support": ["WLF00001103", "WLF00001089", "WLF00003227"],
   "postpartum-care": ["WLF00001188"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
+  /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
+  "voucher-use": ["WLF00000055"],
+  /* 근로장려금·생계급여의 환수·반환명령을 조문으로 다룬 글. */
+  refund: ["WLF00001148", "WLF00001132"],
   /* 2026-09-16 함께 받기 글 — 본문에서 조문·지침으로 직접 다룬 사업만 적는다. */
   "combined-support": [
     "WLF00004657",

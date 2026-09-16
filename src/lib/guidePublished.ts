@@ -34,4 +34,9 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "postpartum-care": "2026-09-15",
   "single-parent-support": "2026-09-15",
   "combined-support": "2026-09-16",
+  "online-share": "2026-09-16",
+  "official-docs": "2026-09-16",
+  "refund": "2026-09-16",
+  "voucher-use": "2026-09-16",
+  "deadline-share": "2026-09-16",
 };
