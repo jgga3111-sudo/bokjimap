@@ -33,7 +33,7 @@ export const LIFE_NOTES: Readonly<Record<string, HubNote>> = {
   },
   infant: {
     body: "영유아 칸에는 어린이집을 다니는 아이와 집에서 키우는 아이에게 각각 나가는 돈이 함께 들어 있습니다. 보육료·유아학비·양육수당은 한 아이에게 하나만 나가고, 0~1세는 부모급여가 그 자리를 대신합니다. 어디서 키우느냐를 바꿀 때는 신청일이 15일 이전인지 뒤인지에 따라 그달 돈이 달라집니다.",
-    guides: ["childcare-choice", "baby-money", "combined-support"],
+    guides: ["childcare-choice", "childcare-service", "baby-money", "combined-support"],
   },
   child: {
     body: "아동 칸은 나이를 초등학생 언저리로 잡은 사업들입니다. 같은 교육비라도 교육급여·교육비 지원·교육정보화는 창구가 같고 받는 방법이 달라서, 한 번 신청했다고 다 받는 것이 아닙니다. 아동수당처럼 나이만 맞으면 소득을 안 보는 사업과, 소득 기준선이 있는 사업이 한 목록에 섞여 있습니다.",

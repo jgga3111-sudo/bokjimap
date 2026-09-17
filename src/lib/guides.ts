@@ -305,6 +305,13 @@ export const GUIDES: readonly Guide[] = [
     updated: "2026-09-15",
   },
   {
+    slug: "childcare-service",
+    title: "아이돌봄서비스, 소득 유형별로 내는 돈은 얼마인가",
+    summary:
+      "아이돌봄서비스 요금은 누구나 같고, 정부가 내 주는 몫이 가~라형 소득 유형과 아이 나이에 따라 달라집니다. 아이돌봄 누리집 요금표로 한 달 본인부담금을 계산하고, 어린이집 시간 제외·취소 수수료를 정리했습니다.",
+    updated: "2026-09-17",
+  },
+  {
     slug: "single-parent-support",
     title: "한부모가족 아동양육비, 추가로 받는 경우와 신청한 달부터 나오는 규칙",
     summary:
