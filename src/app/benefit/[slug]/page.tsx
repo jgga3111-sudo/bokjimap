@@ -10,6 +10,9 @@ import { FindLink } from "@/components/NarrowChips";
 import { topLifeStages, joinCounts, withTail } from "@/lib/hubMeta";
 import { MIN_SERVICES } from "@/lib/axes";
 import { ro } from "@/lib/display";
+import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { BENEFIT_GUIDES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return BENEFITS.map((b) => ({ slug: b.slug }));
@@ -52,11 +55,13 @@ export default async function BenefitPage({
     `HubList`가 둘 다 푼다 — 카드는 24장만 그려 가볍게 두고, 전체는 맨 아래
     이름 목록에 링크로 남긴다. 자를 이유가 없어졌다.
   */
-  const rows = servicesOf(services, b).map(toRow);
+  const list = servicesOf(services, b);
+  const rows = list.map(toRow);
   const groups = facetsFor(rows, ["region", "theme", "life"]);
 
   return (
     <div className="space-y-6">
+      {rows.length >= Math.max(MIN_SERVICES, AD_MIN_ITEMS) && <AdSenseScript />}
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -77,11 +82,24 @@ export default async function BenefitPage({
 
       <FindLink axisLabel="혜택" />
 
-      {/* 목록 위에 한 문단. 축 페이지가 목록만 있는 껍데기가 되지 않게 하고,
-          그 형태를 받을 때 실제로 놓치는 것을 먼저 알린다. */}
-      <p className="rounded-xl border border-line bg-sunken/70 px-4 py-3.5 text-sm leading-relaxed text-slate-700">
-        {b.note}
-      </p>
+      {/* 목록 위 머리말. 그 형태를 받을 때 실제로 놓치는 것(benefits.ts의 note)을
+          다른 허브와 같은 머리말 틀에 싣는다(09-17, 전에는 note 한 문단뿐). */}
+      <HubIntro
+        lead={
+          <>
+            복지로 원문의 <strong>지급형태</strong> 칸에{" "}
+            {b.values.map((v, i) => (
+              <span key={v}>
+                {i > 0 && " · "}&ldquo;{v}&rdquo;
+              </span>
+            ))}{" "}
+            값이 있는 사업 {rows.length}건입니다. 한 사업에 형태가 여럿 적힌
+            경우가 있어 다른 혜택 목록과 겹칠 수 있습니다.
+          </>
+        }
+        list={list}
+        note={{ body: b.note, guides: BENEFIT_GUIDES[b.slug] ?? [] }}
+      />
 
       <HubList rows={rows} groups={groups} />
     </div>

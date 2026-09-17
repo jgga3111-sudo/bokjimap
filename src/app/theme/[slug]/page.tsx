@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ROBOTS_INDEX } from "@/lib/site";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { THEMES, themeBySlug } from "@/lib/axes";
 import { services } from "@/data/services";
 import HubList from "@/components/HubList";
@@ -8,6 +9,9 @@ import { toRow, facetsFor } from "@/lib/hubRows";
 import { FindLink } from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
 import { ro } from "@/lib/display";
+import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { THEME_NOTES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return THEMES.map((t) => ({ slug: t.slug }));
@@ -42,19 +46,39 @@ export default async function ThemePage({ params }: PageProps<"/theme/[slug]">) 
   if (!t) notFound();
 
   /* 데이터에는 슬러그가 아니라 원문 값("생활지원")이 들어 있다. */
-  const rows = services.filter((s) => s.themes.includes(t.value)).map(toRow);
+  const list = services.filter((s) => s.themes.includes(t.value));
+  const rows = list.map(toRow);
+  const note = THEME_NOTES[t.slug];
   /* 자기 축(주제)은 빼고 셋만 건다. 다섯을 다 걸면 필터 상자가 화면 한 장을
      차지해 정작 목록이 안 보인다. */
   const groups = facetsFor(rows, ["region", "benefit", "life"]);
 
   return (
     <div className="space-y-6">
+      {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
       <FindLink axisLabel="주제" />
+      {note && (
+        <HubIntro
+          lead={
+            <>
+              복지로 원문의 <strong>관심주제</strong> 칸 값이 &ldquo;{t.label}
+              &rdquo;인 사업 {rows.length}건입니다. 이 칸은 중앙부처 사업에만
+              적혀 있어, 같은 주제의 지자체 사업은{" "}
+              <Link href="/region" className="text-brand underline">
+                지역별 목록
+              </Link>
+              에서 따로 찾아야 합니다.
+            </>
+          }
+          list={list}
+          note={note}
+        />
+      )}
       <HubList rows={rows} groups={groups} />
     </div>
   );

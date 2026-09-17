@@ -9,6 +9,9 @@ import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts } from "@/lib/hubMeta";
+import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { REGION_NOTES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return SIDO_LIST.map((s) => ({ sido: s.slug }));
@@ -61,11 +64,14 @@ export default async function RegionPage({
 
   /* 지자체 사업은 경기도가 100건으로 가장 많다. 지역 축은 이미 이 페이지가
      정해 놓았으므로 필터에서 빼고, 나머지 셋으로 좁히게 한다. */
-  const rows = localOf(sido.fullName).map(toRow);
+  const list = localOf(sido.fullName);
+  const rows = list.map(toRow);
   const groups = facetsFor(rows, ["benefit", "theme", "life"]);
+  const note = REGION_NOTES[sido.slug];
 
   return (
     <div className="space-y-8">
+      {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">
           {sido.name} 복지·지원금
@@ -76,6 +82,20 @@ export default async function RegionPage({
       </header>
 
       <NarrowChips base={{ region: sido.slug }} />
+
+      {note && (
+        <HubIntro
+          lead={
+            <>
+              복지로 원문의 <strong>시·도</strong> 칸이 &ldquo;{sido.fullName}
+              &rdquo;인 지자체 사업 {rows.length}건입니다. 전국 어디서나
+              신청하는 중앙부처 사업은 아래에 따로 모았습니다.
+            </>
+          }
+          list={list}
+          note={note}
+        />
+      )}
 
       <section>
         <h2 className="mb-3 text-lg font-bold">

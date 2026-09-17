@@ -32,9 +32,12 @@
  * 지역·소득 허브와 `/service` 목록은 원문 요약 카드가 50~74%이고 우리 문장은
  * 머리말 한 줄뿐이었다(가장 얇은 `/theme/legal`은 우리 글 약 520자, 그것도 칸 이름).
  * 그래서 이 다섯 갈래에서 뺐다(138 → 93쪽). 생애주기·대상 허브는 `HubIntro`
- * 머리말이 있어 남긴다. **머리말(`hubNotes.ts`)을 쓴 허브부터 다시 넣는다.**
- * (위 `AD_MIN_ITEMS` 조건은 쓰는 곳이 없어져 지웠다 — 10건.)
+ * 머리말이 있어 남긴다.
+ * · 같은 날 주제·혜택·지역·소득 허브에 머리말(`hubNotes.ts`)을 써서 **머리말이
+ *   있고 항목이 `AD_MIN_ITEMS`건 이상인 허브**에 다시 넣었다. `/service` 전체
+ *   목록은 머리말이 없어 계속 뺀다.
  */
+export const AD_MIN_ITEMS = 10;
 export default function AdSenseScript() {
   return (
     <script

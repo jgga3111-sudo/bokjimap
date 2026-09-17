@@ -6,6 +6,9 @@ import { BASE_YEAR, thresholdOf } from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
+import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
+import HubIntro from "@/components/HubIntro";
+import { INCOME_NOTES } from "@/lib/hubNotes";
 
 export function generateStaticParams() {
   return INCOME_BANDS.map((b) => ({ percent: String(b.percent) }));
@@ -46,11 +49,14 @@ export default async function IncomeBandPage({
     notFound();
   }
 
-  const rows = servicesAt(band.percent).map(toRow);
+  const list = servicesAt(band.percent);
+  const rows = list.map(toRow);
+  const note = INCOME_NOTES[band.percent];
   const groups = facetsFor(rows, ["region", "benefit", "life"]);
 
   return (
     <div className="space-y-6">
+      {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -115,6 +121,8 @@ export default async function IncomeBandPage({
         </Link>
         에서 월 소득·연봉·건강보험료 중 하나만 넣으면 바로 나옵니다.
       </div>
+
+      {note && <HubIntro lead={<></>} list={list} note={note} incomeLine={false} />}
 
       <HubList rows={rows} groups={groups} />
 
