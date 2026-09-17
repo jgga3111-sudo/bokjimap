@@ -64,9 +64,10 @@ export default function SiteHeader() {
           >
             복지<span className="text-brand">클릭</span>
           </Link>
-          {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 제한한다. 좁은 화면에서는
-              남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다. */}
-          <div className="min-w-0 flex-1 sm:ml-auto sm:max-w-xs sm:flex-none">
+          {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 정해 둔다. 좁은 화면에서는
+              남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다.
+              09-17 사용자 요청으로 넓혔다(전: 최대 320px, 실제 약 245px). */}
+          <div className="min-w-0 flex-1 sm:ml-auto sm:w-96 sm:flex-none md:w-[32rem]">
             <SearchBox placeholder="지원금 이름 검색" popular={POPULAR} />
           </div>
           {/* 계정 기능이 꺼져 있으면 아무것도 안 그린다(AccountLink). */}
