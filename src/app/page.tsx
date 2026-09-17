@@ -13,6 +13,7 @@ import PopularList from "@/components/PopularList";
 import { BASE_YEAR } from "@/lib/midIncome";
 import RecentViews from "@/components/RecentViews";
 import SavedHome from "@/components/SavedHome";
+import { CHANGED_AT as CHANGED } from "@/lib/changedAt";
 import ThisMonth from "@/components/ThisMonth";
 import AxisIcon from "@/components/AxisIcon";
 import AxisFinder from "@/components/AxisFinder";
@@ -322,6 +323,14 @@ export default function Home() {
         <AskBox />
       </section>
 
+      {/* 골라 둔 게 있을 때만 나타난다(2026-09-11). 최근 본 것보다 위에
+          둔다 — 저절로 쌓인 것보다 **이용자가 직접 고른 것**이 더 무겁다.
+          09-17에 이번 달 달력 뒤(375px에서 1,788px)에서 물어보기 상자 바로
+          밑으로 올렸다 — 다시 온 사람이 가장 먼저 찾는 것이다. 물어보기 위로는
+          안 올린다: 브라우저에서 늦게 그려지는 칸이라 첫 화면 안에 두면
+          나타나는 순간 아래가 밀린다. */}
+      <SavedHome changed={CHANGED} />
+
       {/* 자가진단 — 이 사이트에만 있는 것.
           "첫 화면에서 버튼은 여기 하나뿐"이라고 적어 뒀었는데, 09-09에
           바로 위 「말로 물어보기」에 「찾아보기」가 생겨 둘이 됐다. 그래도
@@ -352,10 +361,6 @@ export default function Home() {
       {/* 이번 달에 마감이 걸린 것. 브라우저에서 달을 읽어 그리므로 정적
           HTML에는 없다 — 빌드 날짜가 박히면 달이 넘어갈 때 거짓말이 된다. */}
       <ThisMonth />
-
-      {/* 골라 둔 게 있을 때만 나타난다(2026-09-11). 최근 본 것보다 위에
-          둔다 — 저절로 쌓인 것보다 **이용자가 직접 고른 것**이 더 무겁다. */}
-      <SavedHome />
 
       {/* 본 게 있을 때만 나타난다. 처음 온 사람에게는 아예 안 보인다. */}
       <RecentViews />

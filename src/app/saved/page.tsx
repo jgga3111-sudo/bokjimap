@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SavedList from "@/components/SavedList";
+import { CHANGED_AT } from "@/lib/changedAt";
 import { AUTH_ON } from "@/lib/auth/config";
 
 export const metadata: Metadata = {
@@ -48,7 +49,7 @@ export default function SavedPage() {
           )}
         </p>
       </header>
-      <SavedList showEmpty />
+      <SavedList showEmpty changed={CHANGED_AT} />
     </div>
   );
 }

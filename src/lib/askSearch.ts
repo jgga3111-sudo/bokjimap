@@ -324,6 +324,11 @@ export function askSearch(read: AskRead): AskAnswer {
 
   const matched = scored.filter((x) => x.matched > 0);
   const rest = scored.filter((x) => x.matched === 0 && !unknownIds.has(x.s.id));
+  /* 지역을 말했으면 조건만 맞는 것 중 **그 지역 사업을 먼저**(09-17). 조회수로만
+     세우면 전국 사업이 위를 다 차지한다 — 「경기도 사는 28살 직장인」의 첫 20건에
+     경기도 사업이 0건이었다. sort는 안정 정렬이라 같은 무리 안의 순서는 그대로다. */
+  if (applied.some((c) => c.axis === "region"))
+    rest.sort((a, b) => Number(b.s.provider !== "central") - Number(a.s.provider !== "central"));
 
   return {
     matchedHits: matched.slice(0, MAX_MATCHED).map(toHit),

@@ -19,6 +19,8 @@ import { jsonLd, safeUrl, telHref } from "@/lib/safe";
 import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import SaveButton from "@/components/SaveButton";
+import ShareButton from "@/components/ShareButton";
+import NextYearCheck from "@/components/NextYearCheck";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
 import DeadlineBadge from "@/components/DeadlineBadge";
 import DeadlineNotice from "@/components/DeadlineNotice";
@@ -954,6 +956,7 @@ export default async function ServiceDetail({
             name={nameWithAlias(s.id, s.name ?? id)}
             place={placeLabel(s)}
           />
+          <ShareButton title={nameWithAlias(s.id, s.name)} path={`/service/${s.id}`} />
         </div>
 
         {/*
@@ -1040,6 +1043,8 @@ export default async function ServiceDetail({
         ) : (
           period && <PastPeriodNotice end={period.end} text={period.text} />
         )}
+        {/* 신청 기간이 지났으면 「다음에 놓치지 않게」 확인 일정을 담게 한다(09-17). */}
+        <NextYearCheck id={s.id} />
         {plan && (
           <PastPeriodNotice end={plan.end} text={plan.text} variant="plan" />
         )}

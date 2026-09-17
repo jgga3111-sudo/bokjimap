@@ -20,9 +20,12 @@ import {
 export default function SavedList({
   limit,
   showEmpty = false,
+  changed,
 }: {
   limit?: number;
   showEmpty?: boolean;
+  /** 내용이 바뀐 사업 id → 바뀐 날(`lib/changedAt.ts`). 서버가 넘긴다. */
+  changed?: Readonly<Record<string, string>>;
 }) {
   const items = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
@@ -53,6 +56,16 @@ export default function SavedList({
               {/* 저장해 둔 사업이 그 뒤로 끝났을 수 있다 — 여기가 가장 먼저
                   알려야 하는 자리다(2026-09-13). */}{" "}
               <DeadlineBadge id={s.id} />
+              {/* 저장해 둔 뒤 원문이 고쳐졌을 수 있다(09-17). 언제 바뀌었는지 날짜를
+                  적는다 — 저장한 날을 따로 적지 않으므로 「저장 뒤에」라고는 쓰지 않는다. */}
+              {changed?.[s.id] && (
+                <span
+                  title={`${changed[s.id]}에 다시 받아 보니 원문 내용이 달라져 반영했습니다`}
+                  className="ml-1 inline-flex items-center rounded-full border border-brand/30 bg-brand-soft px-2 py-0.5 align-middle text-xs font-bold text-brand"
+                >
+                  {Number(changed[s.id].slice(5, 7))}/{Number(changed[s.id].slice(8, 10))} 내용 바뀜
+                </span>
+              )}
               {s.place && (
                 <span className="ml-2 text-xs text-muted">{s.place}</span>
               )}

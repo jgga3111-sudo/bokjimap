@@ -367,7 +367,11 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
                       ? `${answer.applied
                           .filter((c) => c.axis !== "benefit")
                           .map((c) => c.label)
-                          .join(" · ")}에 걸린 사업을 조회수 순으로 보여드립니다.`
+                          .join(" · ")}에 걸린 사업을 ${
+                          answer.applied.some((c) => c.axis === "region")
+                            ? "그 지역 사업 먼저, 조회수 순으로"
+                            : "조회수 순으로"
+                        } 보여드립니다.`
                       : "수록분을 조회수 순으로 보여드립니다."}
                     {answer.poolTotal > answer.otherHits.length &&
                       ` 모두 ${answer.poolTotal.toLocaleString()}건이라 위에서 ${answer.otherHits.length}건만 보여드립니다.`}

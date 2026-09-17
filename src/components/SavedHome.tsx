@@ -9,7 +9,12 @@ import SavedList from "./SavedList";
  * 첫 화면의 「관심 지원」 칸. 골라 둔 게 없으면 제목까지 통째로 안 그린다
  * — SavedList만 쓰면 목록은 사라져도 제목이 덩그러니 남는다.
  */
-export default function SavedHome() {
+export default function SavedHome({
+  changed,
+}: {
+  /** 내용이 바뀐 사업 id → 바뀐 날(`lib/changedAt.ts`) */
+  changed?: Readonly<Record<string, string>>;
+}) {
   const items = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   if (items.length === 0) return null;
 
@@ -27,7 +32,7 @@ export default function SavedHome() {
           전체 보기 →
         </Link>
       </div>
-      <SavedList limit={5} />
+      <SavedList limit={5} changed={changed} />
     </section>
   );
 }

@@ -99,7 +99,7 @@ export default async function RegionPage({
 
       <section>
         <h2 className="mb-3 text-lg font-bold">
-          {sido.name}이 직접 하는 사업
+          {sido.name}에서 직접 하는 사업
         </h2>
         {rows.length > 0 ? (
           <HubList rows={rows} groups={groups} />

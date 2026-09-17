@@ -61,7 +61,14 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
 
   /* 자르되 **잘랐다고 적는다**(`/search`와 같은 규칙). */
   const MAX = 120;
-  const shown = hits.slice(0, MAX);
+
+  /* 지역을 골랐으면 **그 지역 사업을 먼저** 따로 보인다(09-17). 한 줄에 조회수로
+     섞으면 전국 사업이 위를 다 차지한다 — 경기·청년 139건 중 첫 20건에 경기도
+     사업이 0건, 첫 경기 사업이 30번째였다. `/region/[sido]`와 같은 두 절이다. */
+  const localHits = sido ? hits.filter((s) => s.provider !== "central") : [];
+  const restHits = sido ? hits.filter((s) => s.provider === "central") : hits;
+  const shownLocal = localHits.slice(0, MAX);
+  const shownRest = restHits.slice(0, MAX);
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -89,7 +96,9 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
         </h1>
         <p className="mt-1 text-sm text-muted">
           {hits.length.toLocaleString()}건
-          {hits.length > MAX && ` · 위에서 ${MAX}건만 보여드립니다`}
+          {sido
+            ? ` · ${sido.name} 사업 ${localHits.length}건 · 전국 공통 ${restHits.length}건`
+            : hits.length > MAX && ` · 위에서 ${MAX}건만 보여드립니다`}
         </p>
       </header>
 
@@ -125,8 +134,43 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
             </Link>
           </p>
         </div>
+      ) : sido ? (
+        <>
+          <section>
+            <h2 className="mb-3 text-lg font-bold">
+              {sido.name}에서 직접 하는 사업{" "}
+              <span className="text-sm font-normal text-muted">
+                {localHits.length}건
+                {localHits.length > MAX && ` · 위에서 ${MAX}건`}
+              </span>
+            </h2>
+            {localHits.length > 0 ? (
+              <ServiceList services={shownLocal} />
+            ) : (
+              <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-muted">
+                고른 조건에 맞는 {sido.name} 사업은 수록분에 없습니다. 아래 전국
+                공통 사업은 {sido.name}에서도 신청할 수 있습니다.
+              </p>
+            )}
+          </section>
+          {restHits.length > 0 && (
+            <section>
+              <h2 className="mb-1 text-lg font-bold">
+                전국 어디서나 신청하는 사업{" "}
+                <span className="text-sm font-normal text-muted">
+                  {restHits.length}건
+                  {restHits.length > MAX && ` · 위에서 ${MAX}건`}
+                </span>
+              </h2>
+              <p className="mb-3 text-xs text-muted">
+                중앙부처 사업이라 사는 곳과 상관없이 같습니다. 조회수 순입니다.
+              </p>
+              <ServiceList services={shownRest} />
+            </section>
+          )}
+        </>
       ) : (
-        <ServiceList services={shown} />
+        <ServiceList services={shownRest} />
       )}
 
       {/* 색인되는 축 페이지로 내보낸다. 이 화면 자체는 noindex라, 좋은 결과를

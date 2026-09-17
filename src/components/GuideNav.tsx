@@ -4,6 +4,7 @@ import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
 import { SITE } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
 import AdSenseScript from "@/components/AdSenseScript";
+import ShareButton from "@/components/ShareButton";
 
 /**
  * 글 끝에 붙는 다른 글 목록.
@@ -52,6 +53,13 @@ export default function GuideNav({ current }: { current: string }) {
 
   return (
     <nav className="mt-14 border-t border-line pt-8">
+      {/* 보내기(09-17) — 글을 다 읽은 자리가 건네기 좋은 자리다. */}
+      {g && (
+        <p className="mb-6 flex items-center justify-between gap-3 text-sm text-muted">
+          도움이 됐다면 필요한 분께 보내 주세요.
+          <ShareButton title={g.title} path={`/guide/${g.slug}`} />
+        </p>
+      )}
       {/* 이 글을 누가 어떻게 썼나 (2026-09-13). 애드센스 「가치가 별로 없는 콘텐츠」 재점검에서
           안내 글 22편 어디에도 쓴 사람·확인 방법이 화면에 없었다 — Article JSON-LD에만 있었다.
           모든 글 끝에 이미 붙는 이 부품에 한 번 넣어 빠뜨릴 수 없게 한다. */}

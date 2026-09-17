@@ -98,13 +98,7 @@ export function buildIcs(e: DatedEntry): string {
      내게 한다(사이트맵 lastmod를 함부로 안 미는 것과 같은 이유). */
   const stamp = `${compact(e.checkedAt)}T000000Z`;
 
-  const lines = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    `PRODID:-//${SITE.name}//${SITE.url}//KO`,
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
+  return vcalendar([
     `UID:${e.key}@bokjiclick.co.kr`,
     `DTSTAMP:${stamp}`,
     `DTSTART;VALUE=DATE:${compact(e.end)}`,
@@ -119,6 +113,19 @@ export function buildIcs(e: DatedEntry): string {
     "ACTION:DISPLAY",
     `DESCRIPTION:${esc(`${e.label} · ${e.what}`)}`,
     "END:VALARM",
+  ]);
+}
+
+/** VEVENT 줄들을 VCALENDAR 한 장으로 감싼다. */
+function vcalendar(event: string[]): string {
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    `PRODID:-//${SITE.name}//${SITE.url}//KO`,
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    ...event,
     "END:VEVENT",
     "END:VCALENDAR",
   ];
@@ -126,4 +133,42 @@ export function buildIcs(e: DatedEntry): string {
   /* RFC 5545는 줄 끝을 CRLF로 못 박는다. 파일이 LF로 나가면 깐깐한 캘린더가
      통째로 거른다 — 이 파일만은 저장소 줄바꿈과 무관하게 CRLF다. */
   return lines.map(fold).join("\r\n") + "\r\n";
+}
+
+/**
+ * 「내년에 다시 확인하기」 일정 한 장(2026-09-17, `lib/reminder.ts`).
+ *
+ * 날짜는 내년 공고일이 아니라 **우리가 정한 확인할 날**이라 설명 첫 줄에 그렇게
+ * 적는다. 알림은 그날 오전 9시(종일 일정 시작 + 9시간).
+ */
+export function buildReminderIcs(r: {
+  id: string;
+  name: string;
+  date: string;
+  periodText: string;
+  today: string;
+}): string {
+  const detail = `${SITE.url}/service/${r.id}`;
+  const desc = [
+    `지난 신청 기간: ${r.periodText}`,
+    "이 날짜는 공고일이 아닙니다. 지난번 신청 기간이 시작된 날의 2주 전으로 복지클릭이 정한 「확인해 볼 날」입니다.",
+    "올해도 모집하는지, 언제인지는 공식 공고에서 확인하세요.",
+    `자세히: ${detail}`,
+  ].join("\n");
+
+  return vcalendar([
+    `UID:remind-${r.id}-${compact(r.date)}@bokjiclick.co.kr`,
+    `DTSTAMP:${compact(r.today)}T000000Z`,
+    `DTSTART;VALUE=DATE:${compact(r.date)}`,
+    `DTEND;VALUE=DATE:${nextDay(r.date)}`,
+    `SUMMARY:${esc(`[${SITE.name}] ${r.name} · 모집 공고 확인하기`)}`,
+    `DESCRIPTION:${esc(desc)}`,
+    `URL:${esc(detail)}`,
+    "TRANSP:TRANSPARENT",
+    "BEGIN:VALARM",
+    "TRIGGER;RELATED=START:PT9H",
+    "ACTION:DISPLAY",
+    `DESCRIPTION:${esc(`${r.name} 모집 공고 확인하기`)}`,
+    "END:VALARM",
+  ]);
 }
