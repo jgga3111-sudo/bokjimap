@@ -484,7 +484,7 @@ import { GOV24_CLOSING } from "./gov24Closing";
 
 export type Closing = {
   /** period = 본문의 신청 기간 · program = 사업 시행 종료일 · stated = 원문이 마감이라고 적음
-   *  · gov24 = 보조금24 「신청기한」 칸(2026-09-17, scripts/build-gov24.mjs) */
+   *  · gov24 = 보조금24 「신청기한」 칸(받은 날은 gov24.ts의 GOV24_CHECKED, scripts/build-gov24.mjs) */
   kind: "period" | "program" | "stated" | "gov24";
   /** YYYY-MM-DD. stated는 날짜가 없어 null이고, 늘 마감으로 본다. */
   end: string | null;

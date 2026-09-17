@@ -177,10 +177,15 @@ export default function CalendarGuide() {
             </li>
             <li>
               <strong className="text-ink">
-                에너지바우처 여름 몫은 9월 30일에 사라집니다.
+                에너지바우처는 여름에 안 쓴 돈이 겨울로 이어집니다.
               </strong>{" "}
-              신청은 한 번인데 쓰는 기간이 여름·겨울로 갈립니다. 여름 몫을 안 쓰고
-              넘기면 겨울로 이월되지 않습니다.
+              쓰는 기간이 여름·겨울로 갈리지만 금액은 하나이고, 9월 30일에 없어지지
+              않습니다. 다만 겨울에 연탄쿠폰 같은 다른 이용권을 받으려고 여름 몫만
+              신청한 세대는 10월 1일에 잔액이 없어집니다 —{" "}
+              <Link href="/guide/energy-voucher" className="text-brand underline">
+                에너지바우처 금액과 사용 기한
+              </Link>
+              에 정리했습니다.
             </li>
             <li>
               <strong className="text-ink">
