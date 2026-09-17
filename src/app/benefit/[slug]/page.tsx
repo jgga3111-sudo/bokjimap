@@ -10,7 +10,6 @@ import { FindLink } from "@/components/NarrowChips";
 import { topLifeStages, joinCounts, withTail } from "@/lib/hubMeta";
 import { MIN_SERVICES } from "@/lib/axes";
 import { ro } from "@/lib/display";
-import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
 
 export function generateStaticParams() {
   return BENEFITS.map((b) => ({ slug: b.slug }));
@@ -58,7 +57,6 @@ export default async function BenefitPage({
 
   return (
     <div className="space-y-6">
-      {rows.length >= Math.max(MIN_SERVICES, AD_MIN_ITEMS) && <AdSenseScript />}
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈

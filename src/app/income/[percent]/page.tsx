@@ -6,7 +6,6 @@ import { BASE_YEAR, thresholdOf } from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
-import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
 
 export function generateStaticParams() {
   return INCOME_BANDS.map((b) => ({ percent: String(b.percent) }));
@@ -52,7 +51,6 @@ export default async function IncomeBandPage({
 
   return (
     <div className="space-y-6">
-      {rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
