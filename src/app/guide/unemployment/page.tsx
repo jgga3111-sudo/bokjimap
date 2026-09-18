@@ -335,6 +335,11 @@ export default function UnemploymentGuide() {
               복지 지원금은 매월 며칠에 들어오나 →
             </Link>
           </p>
+          <p>
+            <Link href="/guide/national-employment" className="text-brand underline">
+              실업급여를 받고 6개월 안에는 구직촉진수당이 안 될 수 있습니다 — 국민취업지원제도 →
+            </Link>
+          </p>
         </DocSection>
       </DocPage>
       <GuideNav current="unemployment" />
