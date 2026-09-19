@@ -12,7 +12,7 @@ export const metadata: Metadata = {
      탭과 검색결과에 들어가는 글자라 여기서만 따로 적는다. */
   title: "근로장려금 지급일과 신청 기간 — 정기신청·반기신청·기한 후 신청의 차이",
   description:
-    "5월 정기신청은 9월 말까지, 9월 반기신청(상반기분)은 12월 30일에 들어옵니다. 기한 후 신청은 신청일로부터 4개월 이내이고 95%만 나옵니다. 국세청 안내로 정리했습니다.",
+    "5월 정기신청분은 2026년 8월 27일에 지급됐고(기한 9월 말), 9월 반기신청(상반기분)은 12월 17일 지급 예정입니다. 기한 후 신청은 신청일로부터 4개월 이내이고 95%만 나옵니다. 국세청 안내로 정리했습니다.",
   alternates: { canonical: "/guide/tax-credit" },
 };
 
@@ -51,22 +51,22 @@ const DOORS: readonly Door[] = [
     key: "정기신청",
     when: "5월 1일~5월 31일(말일이 주말이면 다음 평일 — 2026년은 6월 1일)",
     who: "모두 — 자녀장려금도 여기서 신청합니다(반기신청은 안 됨)",
-    pay: "9월 말까지",
+    pay: "9월 말까지 — 2026년은 8월 27일에 지급됐습니다",
     cut: null,
   },
   {
     key: "반기신청 — 상반기분",
     when: "9월 1일~9월 15일",
     who: "근로소득만 있는 사람",
-    pay: "2026년 12월 30일",
+    pay: "2026년 12월 17일 지급 예정(지급 기한 12월 30일)",
     cut: "연간 산정액의 35%가 먼저 나오고, 나머지는 다음 해에 정산됩니다.",
   },
   {
     key: "반기신청 — 하반기분",
-    when: "3월 1일~3월 15일(주말이면 다음 평일 — 2026년은 3월 16일)",
+    when: "다음 해 3월 1일~3월 15일(주말이면 다음 평일) — 2026년 소득분은 2027년 3월",
     who: "근로소득만 있는 사람",
-    pay: "2027년 6월 30일",
-    cut: "상반기분을 신청했다면 자동으로 신청된 것으로 봅니다.",
+    pay: "2027년 6월 30일까지",
+    cut: "상반기분을 신청할 때 원하면 하반기분도 신청한 것으로 봅니다(조세특례제한법 제100조의6제9항).",
   },
   {
     key: "기한 후 신청",
@@ -193,8 +193,26 @@ export default function TaxCreditGuide() {
               className="underline hover:text-brand"
             >
               국세청 — 심사 및 지급
+            </a>{" "}
+            · 지급 예정일은 국세청 보도자료{" "}
+            <a
+              href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775692"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              정기분(8월 27일)
             </a>
-            . 2026-09-06 확인.
+            ·
+            <a
+              href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776384"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              반기 상반기분(12월 17일)
+            </a>
+            . 2026-09-19 확인.
           </p>
         </DocSection>
 
@@ -205,7 +223,7 @@ export default function TaxCreditGuide() {
             조세특례제한법 제100조의31제1항이 반기신청 조항(제100조의6제7항)을
             준용에서 뺐습니다. 5월을 놓쳤다면 자녀장려금도 기한 후 신청은
             됩니다(같은 조항이 기한 후 신청인 제8항은 빼지 않았습니다). 정기신청
-            돈은 9월 말에 들어옵니다.
+            돈은 9월 말까지 들어옵니다(2026년은 8월 27일에 지급됐습니다).
           </p>
           <p>
             <strong className="text-ink">

@@ -111,24 +111,25 @@ const BENEFIT_WORDS: Record<string, readonly string[]> = {
   "local-currency": ["지역화폐", "지역상품권"],
 };
 
-/** 시·도는 이름이 짧아 별칭이 필요하다(전남과 광주가 한 축이다). */
+/** 시·도는 이름이 짧아 별칭이 필요하다(전남과 광주가 한 축이다).
+    정식 이름(「대구광역시」)도 넣는다 — 빠지면 「광역시」가 검색어로 남아 순위를 망쳤다(09-19). */
 const REGION_WORDS: Record<string, readonly string[]> = {
-  seoul: ["서울"],
-  busan: ["부산"],
-  daegu: ["대구"],
-  incheon: ["인천"],
-  daejeon: ["대전"],
-  ulsan: ["울산"],
-  sejong: ["세종"],
-  gyeonggi: ["경기"],
-  gangwon: ["강원"],
+  seoul: ["서울", "서울특별시"],
+  busan: ["부산", "부산광역시"],
+  daegu: ["대구", "대구광역시"],
+  incheon: ["인천", "인천광역시"],
+  daejeon: ["대전", "대전광역시"],
+  ulsan: ["울산", "울산광역시"],
+  sejong: ["세종", "세종특별자치시", "세종시"],
+  gyeonggi: ["경기", "경기도"],
+  gangwon: ["강원", "강원도", "강원특별자치도"],
   chungbuk: ["충북", "충청북도"],
   chungnam: ["충남", "충청남도"],
-  jeonbuk: ["전북", "전라북도"],
-  "jeonnam-gwangju": ["전남", "전라남도", "광주"],
+  jeonbuk: ["전북", "전라북도", "전북특별자치도"],
+  "jeonnam-gwangju": ["전남", "전라남도", "광주", "광주광역시"],
   gyeongbuk: ["경북", "경상북도"],
   gyeongnam: ["경남", "경상남도"],
-  jeju: ["제주"],
+  jeju: ["제주", "제주도", "제주특별자치도"],
 };
 
 /**
@@ -254,6 +255,12 @@ const SINGLE = new Set(["암"]);
 const NUMERIC = /^\d[\d,]*(만원|천원|원|살|세|년|개월|일|명|인|대|번|차)?$/;
 
 /** 조건 표에 있는 낱말 전부(`&` 조각 포함) — 떼고 남은 조각이 조건어인지 볼 때 쓴다. */
+/** 조건 칸으로도 쓰고 낱말로도 남기는 말 — 축 이름이 아니라 특정 사업·혜택을 가리킨다. */
+const KEEP_AS_WORD = new Set([
+  "기저귀", "분유", "어린이집", "난임", "조리원", "산후", "신생아",
+  "문화누리", "국민행복카드", "지역화폐", "지역상품권", // 「수당」·「바우처」는 너무 넓어 뺐다(「국가유공자 수당」 1위가 아동수당이 됐다)
+]);
+
 const TABLE_WORDS = new Set(
   [LIFE_WORDS, TARGET_WORDS, BENEFIT_WORDS, REGION_WORDS].flatMap((t) =>
     Object.values(t).flatMap((ws) => ws.flatMap((w) => w.split("&").map(norm))),
@@ -387,6 +394,15 @@ export function parseAsk(question: string): AskRead {
     if (n.length >= 4 && !consumed.includes(n) && !names.some((x) => x.name === n))
       names.push({ name: n, covers: consumed.filter((c) => n.includes(c)) });
     if (nameOnly) continue;
+    /* 조건이 됐어도 **사업을 가리키는 말**은 낱말로도 남긴다(09-19). 「기저귀」가 영유아 칸으로만
+       쓰이고 사라져, 기저귀바우처(조회수 20위)가 결과 10번째로 밀렸다. 「난임」·「수당」도 같았다. */
+    if (KEEP_AS_WORD.has(n)) {
+      if (!seen.has(n)) {
+        seen.add(n);
+        words.push(t);
+      }
+      continue;
+    }
     /* 이미 조건이 된 말은 빼야 한다. "청년"이 칩이 됐는데 낱말로도 남으면
        청년 305건 안에서 다시 "청년"을 찾게 되어 순위가 흔들린다.
 

@@ -31,7 +31,7 @@ export default function NotFound() {
           href="/check"
           className="rounded-xl border border-line bg-white px-5 py-3 font-bold text-ink transition hover:border-brand hover:text-brand"
         >
-          자격 자가진단
+          소득 자가진단
         </Link>
       </div>
 

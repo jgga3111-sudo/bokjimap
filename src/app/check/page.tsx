@@ -9,12 +9,12 @@ import { services } from "@/data/services";
 import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
-  title: `${BASE_YEAR}년 복지 지원금 자격 자가진단 — 기준 중위소득 계산기`,
-  description: `가구원 수와 월 소득(또는 연봉·건강보험료)을 넣으면 ${BASE_YEAR}년 기준 중위소득 대비 몇 %인지, 생계·의료·주거·교육급여와 차상위 기준에 해당하는지 바로 확인합니다.`,
+  title: `${BASE_YEAR}년 기준 중위소득 계산기 — 내 소득은 기준선의 몇 %인가`,
+  description: `가구원 수와 월 소득(또는 연봉·건강보험료)을 넣으면 ${BASE_YEAR}년 기준 중위소득 대비 몇 %인지, 생계·의료·주거·교육급여와 차상위 기준선이 어디쯤인지 나란히 보여 줍니다. 재산을 소득으로 환산한 소득인정액이 아니라 월 소득으로 셈하므로 자격을 판정하지는 않습니다.`,
   alternates: { canonical: "/check" },
 };
 
-/** 표에 실을 가구원 수. 1~6인은 고시 표, 7인은 고시 규칙으로 외삽한 값이다. */
+/** 표에 실을 가구원 수. 1~7인 전부 고시 표 값이다(고시 제2025-135호). */
 const HOUSEHOLDS = [1, 2, 3, 4, 5, 6, 7];
 
 /**
@@ -85,7 +85,7 @@ export default function CheckPage() {
         </h2>
         <p className="mt-1 text-xs text-muted">
           보건복지부 제77차 중앙생활보장위원회 의결(2025-07-31). 4인 가구 기준
-          6.51% 인상으로 역대 최대 폭입니다.
+          6.51% 인상입니다.
         </p>
         <div className="mt-3 overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse text-sm">
@@ -131,8 +131,8 @@ export default function CheckPage() {
           <p>
             국민기초생활보장법은 네 가지 급여의 선정기준을 기준 중위소득의
             일정 비율로 정합니다. 생계급여 32%, 의료급여 40%, 주거급여 48%,
-            교육급여 50%입니다. 흔히 말하는 <strong>차상위계층</strong>도 기준
-            중위소득 50% 이하를 뜻합니다.
+            교육급여 50%입니다. 흔히 말하는 <strong>차상위계층</strong>도 소득인정액이
+            기준 중위소득 50% 이하인 가구를 뜻합니다.
           </p>
           <p>
             그 밖의 사업은 60%, 100%, 150% 등 저마다 다른 기준선을 씁니다. 같은

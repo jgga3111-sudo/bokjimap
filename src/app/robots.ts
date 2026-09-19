@@ -70,7 +70,36 @@ const AI_TRAINING = [
   "Kangaroo Bot",
   "Webzio-Extended",
   "Scrapy", // 기본값 그대로 돌리는 수집 스크립트
+  // 09-19 추가 — ai.robots.txt 목록과 각 회사 문서로 학습·수집용임을 확인한 것
+  "Ai2Bot-Dolma",
+  "PanguBot", // Huawei
+  "TikTokSpider",
+  "DoubaoBot", // ByteDance
+  "DeepSeekBot",
+  "QwenBot", // Alibaba
+  "ERNIEBot", // Baidu (검색용 Baiduspider와 다르다)
+  "KimiBot",
+  "ChatGLM-Spider",
+  "MistralAI-Training", // 이용자 요청용 MistralAI-User는 열어 둔다
+  "YandexAdditional",
+  "img2dataset",
+  "LAIONDownloader",
+  "ICC-Crawler",
+  "SBIntuitionsBot",
+  "Cotoyogi",
+  "FriendlyCrawler",
+  "VelenPublicWebCrawler",
+  "Sidetrade indexer bot",
+  "FirecrawlAgent", // 이하 넷은 남의 사이트를 긁어 AI에 넣어 주는 대행 수집기
+  "ApifyBot",
+  "Crawl4AI",
+  "Brightbot",
+  "TavilyBot",
+  "ExaBot",
 ];
+/* 열어 두는 AI 봇(이용자 질문·AI 검색용, 출처를 달아 사람을 보낸다):
+   OAI-SearchBot · ChatGPT-User · Claude-SearchBot · Claude-User · PerplexityBot ·
+   Perplexity-User · DuckAssistBot · MistralAI-User. 헷갈려 위에 넣지 않는다. */
 
 /**
  * SEO 분석 크롤러.

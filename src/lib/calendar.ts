@@ -146,7 +146,7 @@ export const CALENDAR: readonly CalendarEntry[] = [
     what: "반기신청 — 올해 상반기 소득분",
     months: [9],
     period: "9월 1일~9월 15일",
-    note: "상반기분을 신청하면 하반기분도 자동으로 신청된 것으로 봅니다.",
+    note: "상반기분을 신청할 때 원하면 하반기분도 신청한 것으로 봅니다(조세특례제한법 제100조의6제9항).",
     source: "국세청",
     sourceUrl:
       "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=40397&cntntsId=238977",
@@ -155,32 +155,33 @@ export const CALENDAR: readonly CalendarEntry[] = [
   {
     id: "WLF00001148",
     key: "ktc-pay-main",
-    start: null,
-    end: null,
+    /* 09-19: 「9월 말까지」(국세청 누리집의 지급 기한)로 9월 칸에 두었는데, 2026년은
+       국세청이 기한보다 한 달 앞당겨 8월 27일에 이미 지급했다(보도자료). */
+    start: "2026-08-27",
+    end: "2026-08-27",
     label: "근로·자녀장려금",
     what: "정기신청분 지급",
-    months: [9],
-    period: "9월 말까지",
+    months: [8],
+    period: "2026년 8월 27일 (지급 기한 9월 말보다 앞당겨 지급)",
     note: null,
-    source: "국세청",
-    sourceUrl:
-      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2453&cntntsId=7784",
-    checkedAt: CHECKED,
+    source: "국세청 보도자료(정책브리핑)",
+    sourceUrl: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775692",
+    checkedAt: "2026-09-19",
   },
   {
     id: "WLF00001148",
     key: "ktc-pay-h1",
-    start: "2026-12-30",
-    end: "2026-12-30",
+    /* 09-19: 12월 30일은 국세청 누리집의 **지급 기한**이고, 지급 예정일은 보도자료의 12월 17일이다. */
+    start: "2026-12-17",
+    end: "2026-12-17",
     label: "근로·자녀장려금",
     what: "반기 상반기분 지급",
     months: [12],
-    period: "2026년 12월 30일",
-    note: "연간 산정액의 35%가 먼저 나옵니다. 나머지는 다음 해 6월 말입니다.",
-    source: "국세청",
-    sourceUrl:
-      "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=2453&cntntsId=7784",
-    checkedAt: CHECKED,
+    period: "2026년 12월 17일 지급 예정 (지급 기한 12월 30일)",
+    note: "연간 산정액의 35%가 먼저 나옵니다. 나머지는 다음 해 6월 말까지 정산해 나옵니다.",
+    source: "국세청 보도자료(정책브리핑)",
+    sourceUrl: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776384",
+    checkedAt: "2026-09-19",
   },
 
   /* ── 청년월세 지원 (국토교통부·복지로) ──────────────────────
@@ -263,7 +264,7 @@ export const CALENDAR: readonly CalendarEntry[] = [
     what: "카드 발급 — 예산이 떨어지면 조기 마감됩니다",
     months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     period: "2026. 2. 2.(월) ~ 2026. 11. 30.(월)",
-    note: "기본 15만원에 생애주기별 추가 1만원이 붙습니다.",
+    note: "1인당 15만원이고, 청소년(13~18세)과 준고령(60~64세)은 1만원이 더 붙습니다.",
     source: "문화누리카드",
     sourceUrl: "https://www.mnuri.kr/munhwa/cardIssueGuide.do",
     checkedAt: CHECKED,

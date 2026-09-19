@@ -122,7 +122,7 @@ export default function PrivacyPage() {
       <DocSection no={2} title="브라우저에 저장되는 정보">
         <p>
           <Link href="/check" className="text-brand underline">
-            자격 자가진단
+            소득 자가진단
           </Link>
           에 입력하는 가구원 수와 소득(또는 건강보험료)은{" "}
           <strong>이용자의 브라우저 안에서만 계산</strong>됩니다. 입력한 값은

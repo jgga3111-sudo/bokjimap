@@ -6,7 +6,6 @@ import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts, withTail } from "@/lib/hubMeta";
-import AdSenseScript from "@/components/AdSenseScript";
 import HubIntro from "@/components/HubIntro";
 import { TARGET_NOTES } from "@/lib/hubNotes";
 
@@ -44,7 +43,6 @@ export default async function TargetPage({
   const groups = facetsFor(rows, ["region", "benefit", "life"]);
   return (
     <div className="space-y-6">
-      <AdSenseScript />
       <header className="space-y-1">
         <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>

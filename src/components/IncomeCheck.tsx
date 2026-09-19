@@ -206,6 +206,9 @@ export default function IncomeCheck({
               onClick={() => {
                 setMode(m.id);
                 setRaw("");
+                /* 확정값도 버린다(09-19). 남겨 두면 월 소득 350(만원)을 건보료 350원으로
+                   다시 읽어 0.4%로 저장했다 — 화면은 빈 채로 상세마다 「충족」. */
+                setCommittedRaw("");
               }}
               aria-pressed={mode === m.id}
               className={`flex-1 rounded-lg border px-2 py-2 text-sm font-medium transition ${

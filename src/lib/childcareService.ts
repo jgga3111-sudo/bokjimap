@@ -55,10 +55,22 @@ export const CS_GOV_30: Readonly<Record<CsTime, Record<Exclude<CsTier, "ma">, re
   night: { ga: [8_152, 7_672], na: [5_754, 4_795], da: [2_877, 2_398], ra: [1_439, 959] },
 };
 
+/** 영아종일제 정부지원 시간의 월 상한. */
+export const INFANT_MAX_HOURS = 200;
+
 /** 30분 단위 시간(0.5 배수)을 받아 한 달 요금을 나눈다. 영아종일제는 A형 표만 있다. */
 export function calcChildcare(service: CsService, tier: CsTier, age: CsAge, time: CsTime, hours: number) {
   const fee = CS_FEE_30[service][time];
   const gov = tier === "ma" ? 0 : CS_GOV_30[time][tier][service === "infant" || age === "A" ? 0 : 1];
   const halves = Math.round(hours * 2);
-  return { fee: fee * halves, gov: gov * halves, mine: (fee - gov) * halves, perHourMine: (fee - gov) * 2 };
+  /* 영아종일제는 정부지원이 월 200시간까지다(누리집 「월 80~200시간」, 09-19 점검에서 한도 누락을 잡음).
+     넘는 시간은 요금 전액을 본인이 낸다. */
+  const govHalves = service === "infant" ? Math.min(halves, INFANT_MAX_HOURS * 2) : halves;
+  return {
+    fee: fee * halves,
+    gov: gov * govHalves,
+    mine: fee * halves - gov * govHalves,
+    perHourMine: (fee - gov) * 2,
+    overCap: halves > govHalves ? (halves - govHalves) / 2 : 0,
+  };
 }

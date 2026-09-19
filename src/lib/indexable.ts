@@ -1,6 +1,6 @@
 import { services } from "@/data/services";
 import { hasEnoughBody, type WelfareService } from "@/types/welfare";
-import { hasExtras } from "@/lib/serviceExtras";
+import { extrasOf, hasExtras } from "@/lib/serviceExtras";
 
 /**
  * 상세 페이지를 색인·사이트맵·광고에 내보낼 것인가 (2026-09-13 좁힘).
@@ -58,5 +58,10 @@ export function showAds(s: WelfareService): boolean {
      (「가치가 별로 없는 콘텐츠」 거절 사유 그대로). 재신청 전에는 **우리가 따로 확인한
      정보가 붙은 상세에만** 싣는다. 승인 뒤 넓히려면 아래 줄을 옛 조건
      `bodyText(s).length >= 500 || hasExtras(s)`(bodyText는 types/welfare)로 되돌린다. */
-  return hasExtras(s);
+  /* 09-19 전체 점검: 광고 코드가 붙은 상세 41쪽 중 26쪽은 「따로 확인한 것」이 안내 글
+     링크 한 줄뿐이었다(절 132~445자) — 페이지 자체는 원문과 틀 문구 그대로다. 그래서
+     **확인한 값(법령 지급일·공고 신청 일정)이 화면에 실리는 상세에만** 싣는다(41 → 15쪽).
+     글 링크까지 넓히려면 `return hasExtras(s);`로 되돌린다. 색인 기준은 그대로다. */
+  const x = extrasOf(s);
+  return !!x.payDate || x.calendar.length > 0;
 }

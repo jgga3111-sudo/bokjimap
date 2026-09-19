@@ -47,7 +47,7 @@ const COLUMNS: { title: string; items: Item[] }[] = [
   {
     title: "도움말",
     items: [
-      { href: "/check", label: "자격 자가진단", ready: true },
+      { href: "/check", label: "소득 자가진단", ready: true },
       { href: "/check#median-table", label: "기준 중위소득 표", ready: true },
       { href: "/faq", label: "자주 묻는 질문", ready: true },
       { href: "/contact", label: "문의·오류 신고", ready: true },

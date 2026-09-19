@@ -1,5 +1,5 @@
 import { SEARCH_INDEX, type SearchRow } from "@/data/searchIndex";
-import { toChoseong, isChoseongQuery, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, norm } from "@/lib/searchText";
 import { ALIASES_BY_ROW_ID, nameWithAlias } from "@/lib/aliases";
 
 /**
@@ -81,6 +81,7 @@ export function searchAll(query: string): Hit[] {
       }
       if (best > 0) score += best;
       else if (rest.includes(t)) score += 10;
+      else if (!useCho && row[2] === "전국" && isSidoWord(t)) continue;
       else {
         matchedAll = false;
         break;

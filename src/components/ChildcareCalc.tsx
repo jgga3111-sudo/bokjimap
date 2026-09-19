@@ -122,6 +122,11 @@ export default function ChildcareCalc() {
                 </div>
               ))}
             </dl>
+            {r.overCap > 0 && (
+              <p className="text-xs leading-relaxed text-slate-600">
+                영아종일제 정부지원은 한 달 200시간까지라, 넘는 {r.overCap}시간은 요금 전액을 본인부담으로 셈했습니다.
+              </p>
+            )}
           </>
         ) : (
           <p className="rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">

@@ -157,7 +157,7 @@ export default function DocumentsGuide() {
           </p>
           <p>
             <Link href="/check" className="text-brand underline">
-              자격 자가진단
+              소득 자가진단
             </Link>
             에 가구원 수와 소득만 넣으면 바로 나옵니다. 넣은 값은 브라우저에만
             저장되고 서버로 보내지 않습니다.

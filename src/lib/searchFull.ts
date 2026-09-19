@@ -1,6 +1,6 @@
 import { services } from "@/data/services";
 import { placeLabel } from "@/lib/display";
-import { toChoseong, isChoseongQuery, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, norm } from "@/lib/searchText";
 import { nameWithAlias, searchableNames } from "@/lib/aliases";
 
 /**
@@ -112,6 +112,7 @@ export function searchFull(query: string): FullHit[] {
       }
       if (best > 0) score += best;
       else if (meta.includes(t)) score += 10;
+      else if (!useCho && place === "전국" && isSidoWord(t)) continue;
       else if (text.includes(t)) {
         score += 5;
         bodyToken ??= t;
