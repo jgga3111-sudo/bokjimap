@@ -36,6 +36,8 @@
   --color-ink: #1a1a18;
   --color-brand: #0b57d0;
   --color-brand-soft: #e8f0fe;
+  /* 첫 화면 「새로 쓴 해설」의 짙은 면(09-19). 흰 상자만 이어지는 가운데를 한 번 끊는다. */
+  --color-brand-deep: #0d2b5c;
   --color-sky: #0ea5e9;
   --color-emerald: #10b981;
   --color-amber: #f59e0b;

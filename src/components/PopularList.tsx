@@ -5,6 +5,8 @@ import DeadlineBadge from "./DeadlineBadge";
 import type { CardService } from "./ServiceCard";
 import { nameWithAlias } from "@/lib/aliases";
 import { payType, views, placeLabel, visiblePayTypes } from "@/lib/display";
+import { THEMES } from "@/lib/axes";
+import AxisIcon from "./AxisIcon";
 
 /**
  * 첫 화면 「많이 찾는 지원」 전용 순위 목록.
@@ -22,8 +24,12 @@ import { payType, views, placeLabel, visiblePayTypes } from "@/lib/display";
  */
 export default function PopularList({
   services,
+  withIcon = false,
 }: {
-  services: readonly CardService[];
+  services: readonly (CardService & { themes?: readonly string[] })[];
+  /** 주제 아이콘(2026-09-19). 원문이 매긴 첫 주제로 그린다 — 주제가 없는 사업(지자체)은
+      빈 칸만 둔다. 줄마다 자리가 같아야 이름이 한 줄로 선다. */
+  withIcon?: boolean;
 }) {
   return (
     <ol className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-white">
@@ -38,6 +44,13 @@ export default function PopularList({
               <span className="w-5 shrink-0 text-center text-sm font-extrabold text-brand tabular-nums">
                 {i + 1}
               </span>
+              {withIcon && (
+                <span className="hidden size-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand sm:flex">
+                  <AxisIcon
+                    slug={THEMES.find((t) => s.themes?.includes(t.value))?.slug ?? ""}
+                  />
+                </span>
+              )}
               <span className="min-w-0 flex-1">
                 <span className="line-clamp-2 font-semibold leading-snug text-ink group-hover:text-brand">
                   {nameWithAlias(s.id, s.name)}

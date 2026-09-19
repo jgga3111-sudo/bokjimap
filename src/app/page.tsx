@@ -6,6 +6,7 @@ import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
 import { GUIDES } from "@/lib/guides";
+import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
 import { PAY_DATES } from "@/lib/payDates";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { LAST_CHECKED } from "@/lib/sourceTotals";
@@ -76,6 +77,19 @@ const BENEFIT_COUNT = new Map(
   BENEFITS.map((b) => [b.slug, servicesOf(services, b).length] as const),
 );
 const SIDO_COUNT = countBy((s) => (s.sidoName ? [s.sidoName] : []));
+
+/**
+ * 「새로 쓴 해설」(2026-09-19). 사업별 해설 글이 서른 편을 넘었는데 첫 화면에는
+ * 맨 앞 네 편(09-01에 쓴 일반 글)만 보였다 — 이 사이트가 원문 밖에서 따로 찾아 쓴
+ * 것이 첫 화면에서 안 보였던 셈이다(애드센스 「가치가 별로 없는 콘텐츠」의 반대편).
+ * 처음 올린 날(`guidePublished.ts`, git 첫 커밋일) 최신순 여섯 편. 날짜가 없는 글은 뺀다.
+ */
+const NEW_GUIDES = GUIDES.filter((g) => GUIDE_PUBLISHED[g.slug])
+  .map((g, i) => ({ g, i, on: GUIDE_PUBLISHED[g.slug] }))
+  .sort((a, b) => b.on.localeCompare(a.on) || b.i - a.i)
+  .slice(0, 6);
+const monthDay = (ymd: string) =>
+  `${Number(ymd.slice(5, 7))}월 ${Number(ymd.slice(8, 10))}일`;
 
 /** 히어로 수치용. 시·군·구가 자기 예산으로 하는 사업 수. */
 const LOCAL_COUNT = services.filter((s) => s.provider === "local").length;
@@ -190,7 +204,8 @@ export default function Home() {
       {/* 끝 색이 `white`였다. 지면이 오프화이트가 되면서 그러데이션이 지면에
           닿는 자리에 흰 띠가 한 줄 남는다 — `ground`로 맞춘다(globals.css). */}
       <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-ground px-4 pt-6 pb-6">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto flex max-w-3xl items-center gap-8">
+        <div className="min-w-0 flex-1">
           {/*
             2026-09-09에 **반으로 줄였다.** 줄인 것은 셋이다 —
             두 줄짜리 제목을 한 줄로, 4xl을 3xl로, 그리고 아래에 있던
@@ -294,6 +309,11 @@ export default function Home() {
             </Link>
           </p>
         </div>
+        {/* 삽화(2026-09-19). 스톡 사진은 라이선스가 걸려 안 쓴다(6절) — 아이콘 세트와 같은
+            규칙(선만, 면 없음, currentColor)으로 직접 그렸다. 좁은 화면에서는 히어로를
+            다시 늘리지 않으려고 숨긴다(09-09에 341 → 187px로 줄인 자리). */}
+        <HeroArt />
+        </div>
       </section>
 
       {/*
@@ -381,7 +401,46 @@ export default function Home() {
         {/* 2026-09-10: 카드 여덟 장(375px에서 1,700px 가까이)을 한 줄짜리
             순위표로 바꿨다. 이 자리는 훑는 곳이라 요약 두 줄이 필요 없다 —
             이유는 PopularList 머리말. 허브 목록은 카드 그대로다. */}
-        <PopularList services={popular} />
+        <PopularList services={popular} withIcon />
+      </section>
+
+      {/* 새로 쓴 해설 — 첫 화면에서 유일하게 짙은 면이다. 흰 상자만 이어지던 가운데에서
+          한 번 끊어 주고, 이 사이트가 직접 쓴 글이 여기 있다는 것을 눈에 띄게 한다. */}
+      <section className="-mx-4 bg-brand-deep px-4 py-7 text-white sm:mx-0 sm:rounded-2xl sm:px-6">
+        <div className="mb-4 flex items-end justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-bold">새로 쓴 해설</h2>
+            <p className="mt-0.5 text-xs text-white/70">
+              복지로 원문에 없는 것을 법령·사업안내서·공고에서 찾아 썼습니다
+            </p>
+          </div>
+          <Link
+            href="/guide"
+            className="shrink-0 text-sm text-white/80 hover:text-white"
+          >
+            {GUIDES.length}편 전체 →
+          </Link>
+        </div>
+        <ul className="grid gap-2.5 sm:grid-cols-2">
+          {NEW_GUIDES.map(({ g, on }, i) => (
+            <li key={g.slug} className={i >= 4 ? "hidden sm:block" : undefined}>
+              <Link
+                href={`/guide/${g.slug}`}
+                className="group flex h-full flex-col rounded-xl bg-white/[0.07] p-4 ring-1 ring-white/10 transition hover:bg-white/[0.12]"
+              >
+                <span className="text-[11px] font-bold text-sky-200 tabular-nums">
+                  {monthDay(on)}
+                </span>
+                <span className="mt-1 font-semibold leading-snug group-hover:underline">
+                  {g.title}
+                </span>
+                <span className="mt-1 line-clamp-2 text-sm leading-relaxed text-white/70">
+                  {g.summary}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/*
@@ -565,5 +624,38 @@ export default function Home() {
         </ul>
       </section>
     </div>
+  );
+}
+
+/**
+ * 첫 화면 삽화 — 서류(체크)·달력·동전. 이 사이트가 하는 일 셋(찾기·기간·금액)을 그렸다.
+ * 규칙은 AxisIcon과 같다: 선 1.6, 면을 칠하지 않음, 색은 currentColor.
+ */
+function HeroArt() {
+  return (
+    <svg
+      aria-hidden
+      viewBox="0 0 160 128"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="hidden h-32 w-40 shrink-0 text-brand sm:block"
+    >
+      {/* 서류 */}
+      <rect x="18" y="14" width="64" height="84" rx="8" className="fill-white" />
+      <path d="M30 34h40M30 46h40M30 58h28" opacity={0.45} />
+      <circle cx="62" cy="78" r="10" />
+      <path d="m57.5 78 3 3 6-6.5" />
+      {/* 달력 */}
+      <rect x="88" y="40" width="54" height="50" rx="8" className="fill-white" />
+      <path d="M88 56h54M101 34v12M129 34v12" />
+      <path d="M100 68h6M112 68h6M124 68h6M100 78h6M112 78h6" opacity={0.45} />
+      <circle cx="127" cy="78" r="4" />
+      {/* 동전 */}
+      <circle cx="104" cy="106" r="13" className="fill-white" />
+      <path d="M99 101.5 101.5 111l2.5-7 2.5 7 2.5-9.5M98 105.5h12" />
+    </svg>
   );
 }
