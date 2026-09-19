@@ -1,7 +1,7 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import Link from "next/link";
+import { useLocalToday } from "@/lib/useLocalToday";
 import { entriesOfMonth, hasDates } from "@/lib/calendar";
 import AddToCalendar from "@/components/AddToCalendar";
 import DdayChip from "@/components/DdayChip";
@@ -34,27 +34,14 @@ import DdayChip from "@/components/DdayChip";
  * 거의 다 칠해져 **언제가 급한지가 안 보인다.**
  */
 
-/** 달·날짜는 세션 도중 바뀌지 않는다. 구독할 바깥 사건이 없어 해지 함수만 준다. */
-const noop = () => () => {};
-
-/**
- * 오늘을 `YYYY-MM-DD`로. **현지 시각으로 만든다** — `toISOString()`은 UTC라
- * 한국에서 자정~오전 9시 사이에는 어제 날짜가 나오고, 달이 바뀌는 날 새벽에
- * 지난달을 보여주게 된다.
- */
-const today = () => {
-  const d = new Date();
-  const pad = (n: number) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
-};
-/** 서버에는 "지금"이 없다. 정적 HTML에 빌드한 날을 박지 않으려고 null을 준다. */
-const noToday = () => null;
+/* 오늘은 `useLocalToday`(현지 시각, 서버에서는 null)로 읽는다. 09-19까지 여기 사본이 있었는데
+   세션 도중 날짜가 안 바뀐다고 봐서, 자정을 넘겨 열어 둔 탭이 어제 달·D-day에 머물렀다. */
 
 /** 첫 화면에 펼칠 최대 개수. 넘는 것은 수로 말하고 달력으로 보낸다. */
 const SHOWN = 4;
 
 export default function ThisMonth() {
-  const now = useSyncExternalStore(noop, today, noToday);
+  const now = useLocalToday();
 
   if (now === null) return null;
 
@@ -113,7 +100,32 @@ export default function ThisMonth() {
           const dated = hasDates(e);
           const passed = dated && e.end < now;
           return (
-            <li key={e.key} className="px-5 py-3">
+            <li key={e.key} className="flex gap-3.5 px-5 py-3">
+              {/* 끝나는 날 조각(2026-09-19) — 무엇이 먼저 끝나는지를 글을 읽기 전에 보게 한다.
+                  날짜를 확인 못 한 항목은 빈 조각을 그리지 않고 자리만 둔다. */}
+              <span
+                aria-hidden
+                className={`flex w-11 shrink-0 flex-col items-center self-start rounded-lg border pt-1 pb-1.5 ${
+                  !dated
+                    ? "border-transparent"
+                    : passed
+                      ? "border-line bg-sunken text-muted"
+                      : "border-amber-300 bg-white text-amber-900"
+                }`}
+              >
+                {dated && (
+                  <>
+                    <span className="text-[10px] font-bold leading-tight">
+                      {Number(e.end.slice(5, 7))}월
+                    </span>
+                    <span className="text-lg leading-none font-extrabold tabular-nums">
+                      {Number(e.end.slice(8, 10))}
+                    </span>
+                    <span className="mt-0.5 text-[10px] leading-none">까지</span>
+                  </>
+                )}
+              </span>
+              <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                 <Link
                   href={`/service/${e.id}`}
@@ -144,6 +156,7 @@ export default function ThisMonth() {
                   <AddToCalendar entry={e} />
                 </div>
               )}
+              </div>
             </li>
           );
         })}
