@@ -210,7 +210,7 @@ export default function KpassGuide() {
           </p>
           <p>
             <strong className="text-ink">
-              다만 2026년 4월부터 6개월(9월까지)은 이 표의 절반입니다.
+              다만 2026년 4월 1일~9월 30일 이용분은 이 표의 절반입니다.
             </strong>{" "}
             정부가 &ldquo;반값 모두의 카드&rdquo;로 정액형 기준금액을 50% 내렸습니다 —
             수도권 일반 국민 일반형 3만원·플러스형 5만원, 청년·2자녀·어르신

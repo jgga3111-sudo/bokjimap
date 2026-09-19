@@ -209,7 +209,12 @@ export default function BabyMoneyGuide() {
             다만{" "}
             <strong>이 사이트는 중복 수급 여부를 판정하지 않습니다.</strong>{" "}
             연령 조건이 겹친다는 것은 원문에서 읽히는 사실이지만, 실제로 함께
-            받을 수 있는지는 신청 시점의 지침에 달려 있습니다. 전화로 물을 곳은{" "}
+            받을 수 있는지는 신청 시점의 지침에 달려 있습니다. 부모급여와 아동수당처럼
+            법령에 답이 적힌 조합은{" "}
+            <Link href="/guide/combined-support" className="text-brand underline">
+              두 가지를 같이 받을 수 있나
+            </Link>
+            에 조문으로 옮겨 두었습니다. 전화로 물을 곳은{" "}
             <strong>보건복지상담센터 국번 없이 129</strong>입니다.
           </DocNote>
         </DocSection>

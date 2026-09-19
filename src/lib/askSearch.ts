@@ -161,9 +161,14 @@ export function askSearch(read: AskRead): AskAnswer {
   const extraNames = read.names.filter((x) => !wordNorms.has(x.name));
   /* 이름의 **대부분**을 댄 경우만 친다(질문 낱말이 이름 길이의 60% 이상). 「기초생활수급자」는
      「기초생활수급자 명절 위로금 지원」의 앞머리일 뿐 그 사업을 가리킨 말이 아니다. */
+  /* 「지원사업」 같은 꼬리말은 길이에서 뺀다(09-19). 안 빼면 「청년월세」가 「청년 월세 지원」(옥천군)은
+     가리키고 「청년월세 지원사업」(조회수 2위, 전국)은 못 가리켜 지자체가 위로 갔다. */
+  const stemOf = (nm: string) => nm.replace(/(지원사업|사업|지원)+$/, "") || nm;
   const namedBy = (s: (typeof services)[number], list: AskRead["names"]) =>
     list.filter((x) =>
-      nameForms.get(s.id)!.some((nm) => nm.includes(x.name) && x.name.length >= nm.length * 0.6),
+      nameForms.get(s.id)!.some(
+        (nm) => nm.includes(x.name) && x.name.length >= stemOf(nm).length * 0.6,
+      ),
     );
 
   /* 생애주기·대상 칸이 **빈** 사업은 조건으로 거르지 않는다(09-15). 910건 중

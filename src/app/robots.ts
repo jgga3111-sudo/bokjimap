@@ -14,7 +14,8 @@ import { SITE } from "@/lib/site";
  * 그리고 robots.txt는 **지키는 봇에게만** 통한다. 법적 구속력이 없고, 악성
  * 스크레이퍼는 그냥 무시한다. 그래도 다는 이유는, 실제로 트래픽을 많이
  * 먹는 대형 수집기(AI 학습·SEO 분석)는 대부분 이걸 지키기 때문이다.
- * 진짜로 요청을 끊으려면 Vercel 방화벽(WAF)이 필요하다 — 대시보드에서 켠다.
+ * 진짜로 요청을 끊는 것은 Vercel 방화벽 규칙 「bokjiclick AI 수집 차단」이다(09-19 켬, User-Agent
+ * 정규식 → Deny). 여기에 이름을 더하면 그 규칙의 정규식에도 같이 더한다(CLAUDE.md 6절 09-19).
  *
  * ── 왜 AI 학습 수집기를 막나 ──────────────────────────────────────
  * 이 사이트의 경쟁 상대는 **틀린 정보를 퍼뜨리는 AI 양산 블로그**다
@@ -54,7 +55,7 @@ const AI_TRAINING = [
   "Google-Extended", // Gemini 학습. 검색 색인·순위와는 무관하다
   "Applebot-Extended", // Apple Intelligence 학습 (검색용 Applebot은 열어 둔다)
   "meta-externalagent", // Meta AI 학습 (미리보기용 facebookexternalhit은 열어 둔다)
-  "meta-externalfetcher",
+  // meta-externalfetcher는 09-19에 뺐다 — 이용자가 요청할 때 가져가는 봇이라 위 판단 기준상 연다.
   "FacebookBot",
   "Bytespider", // ByteDance. 요청량이 유난히 많은 것으로 알려져 있다
   "Amazonbot",

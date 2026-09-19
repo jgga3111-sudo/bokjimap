@@ -13,9 +13,17 @@ import { useSyncExternalStore } from "react";
  *   null을 준다 — 배포를 안 하는 동안 조용히 틀려 간다(PastPeriodNotice 머리말).
  * · `toISOString()`은 UTC라 한국 새벽 0~9시에 어제로 읽힌다. 마감 당일 아홉
  *   시간 동안 딱지가 안 뜨는 창이 생기므로 현지 날짜로 만든다.
- * · 날짜는 세션 도중 바뀌지 않는다고 본다. 구독할 사건이 없어 해지 함수만 준다.
+ * · 자정을 넘겨 열어 둔 탭은 다시 볼 때(탭 복귀·창 포커스) 날짜를 다시 읽는다(09-19).
+ *   안 그러면 D-day가 어제 값으로 남는다. 타이머는 두지 않는다 — 안 보는 탭은 틀려도 해가 없다.
  */
-const noop = () => () => {};
+const subscribe = (onChange: () => void) => {
+  document.addEventListener("visibilitychange", onChange);
+  window.addEventListener("focus", onChange);
+  return () => {
+    document.removeEventListener("visibilitychange", onChange);
+    window.removeEventListener("focus", onChange);
+  };
+};
 
 const localToday = () => {
   const d = new Date();
@@ -26,5 +34,5 @@ const localToday = () => {
 const noToday = () => null;
 
 export function useLocalToday(): string | null {
-  return useSyncExternalStore(noop, localToday, noToday);
+  return useSyncExternalStore(subscribe, localToday, noToday);
 }
