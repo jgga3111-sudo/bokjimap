@@ -2093,6 +2093,33 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
       · 구글 2건 요청됨(`/guide/tax-credit`·`/guide/calendar`, 둘 다 이미 색인·내용 변경) · 빙 URL 2건(100 → 98). 사이트맵 수 그대로라 재제출 안 함.
       · 신청 달력 글 `updated`가 09-06에 멈춰 있었다(09-15·09-18에 내용이 바뀌었는데) — 네이버 검색 결과 「최종 수정 2026-09-06」으로 보고 잡았다.
         **`calendar.ts`를 고치면 guides.ts의 calendar `updated`도 같이 올린다.**
+- [x] **09-19 후속 — Vercel 방화벽 AI 수집 차단 · 남은 버그 · 첫 화면 꾸미기(가지 `home-design`, 미배포).** 사용자 "1-6 다 수정 · 방화벽 추가".
+      ── 방화벽 규칙 「bokjiclick AI 수집 차단」 (사용자 승인, 무료 사용자 규칙) ──────────
+      · Firewall → Rules → Add Rule: **User Agent · Matches expression** → **Deny**, Publish. 정규식은 GPTBot|ClaudeBot|anthropic-ai|
+        Claude-Web|CCBot|Bytespider|TikTokSpider|DoubaoBot|meta-externalagent|FacebookBot|Amazonbot|cohere-|Diffbot|omgili|Webzio|
+        ImagesiftBot|Timpibot|AI2Bot|Ai2Bot|YouBot|Kangaroo Bot|PanguBot|DeepSeekBot|QwenBot|ERNIEBot|KimiBot|ChatGLM-Spider|
+        MistralAI-Training|YandexAdditional|img2dataset|LAION|ICC-Crawler|SBIntuitionsBot|Cotoyogi|FriendlyCrawler|VelenPublicWebCrawler|
+        Sidetrade|Factset_spyderbot|FirecrawlAgent|ApifyBot|Crawl4AI|Brightbot|TavilyBot|ExaBot|Panscient|aiHitBot|Scrapy|AhrefsBot|
+        SemrushBot|MJ12bot|DotBot|BLEXBot|DataForSeoBot|Barkrowler|serpstatbot|ZoominfoBot|magpie-crawler|SeekportBot (631자).
+      · 실측(실제 UA 문자열 21개): GPTBot·ClaudeBot·CCBot·Bytespider·meta-externalagent·Scrapy·AhrefsBot **403** /
+        Googlebot·Mediapartners-Google·AdsBot-Google·bingbot·Yeti·Daum·facebookexternalhit·kakaotalk-scrap·OAI-SearchBot·ChatGPT-User·
+        Claude-User·PerplexityBot·크롬·카톡 인앱 **200**.
+      · ⚠ 대시보드 조작 — 탭이 가려져 스크린샷이 안 돼 전부 스크립트로 했다. 속성 칸(검색 콤보)은 옵션 클릭이 안 먹고 **입력 뒤
+        ArrowDown+Enter 키 이벤트**로 골라졌다. 연산자·동작 메뉴는 버튼 `click()` → `[role=menuitem]` pointerdown+click.
+        「Add Rule」 뒤 **Review Changes → Publish**를 눌러야 적용된다(안 누르면 staged로만 남는다).
+      · robots.ts에 이름을 더하면 이 정규식에도 더한다. `meta-externalfetcher`는 robots에서 뺐다(이용자 요청용 — 09-06 기준).
+      · 관리형 「AI Bots」는 계속 Allow(AI 검색봇까지 막음). GET 속도 제한은 과금이라 안 걸었다.
+      ── 남은 버그 (`cde21b7`·`2913fcd`, 배포·라이브 확인) ─────────────────────────
+      · `applyPeriod` 끝 연도: 두 자리는 따옴표(`'26`)일 때만 — 「~10.31. 18:00」을 2010년대로 읽던 것. 910건 결과 13건 그대로.
+      · /ask 「청년월세」: 이름 60% 판정에서 「지원사업·사업·지원」 꼬리말을 뺀다(`stemOf`) — 1위가 옥천군 → 전국 사업.
+      · `useLocalToday`: 탭 복귀·포커스 때 날짜 다시 읽음(자정 넘긴 탭의 D-day).
+      · K-패스 반값: 「2026년 4월 1일~9월 30일 이용분은…」 — 10월 뒤에도 맞는 문장으로. baby-money → combined-support 링크.
+      · **guidePublished.ts에 energy-voucher·national-employment가 빠져** Article datePublished가 안 나가고 있었다. 새 글을 내면 이 표에도 한 줄.
+      · K-패스 월 60회 한도는 **넣지 않았다** — 2024 국토부 보도자료에만 있고 공단 현행 안내(우리 출처)에는 없다. 확인 못 한 것은 안 싣는다.
+      ── 첫 화면 꾸미기 — 가지 `home-design`(`8a9437b`), **배포는 사용자 결정 대기** ─────────
+      · 「새로 쓴 해설」(처음 올린 날 최신순 6편, 휴대폰 4편, 짙은 면 `--color-brand-deep #0d2b5c`) · 히어로 삽화(서류·달력·동전, sm 이상) ·
+        이번 달 끝나는 날 조각(「9월 30 까지」) · 인기 순위 주제 아이콘(sm 이상 — 휴대폰에선 이름이 잘려 뺐다).
+      · 375px 첫 화면 6,299px(새 칸 약 660px), 가로 넘침 0, 1280px 넘침 0. 배포하려면 `git merge home-design` 뒤 push.
 - [ ] 색인 요청 한도는 **고정된 수가 아니다.** 굴러가는 24시간 창이라
       전날 얼마나 썼는지에 따라 그날 들어가는 수가 달라진다. 실측: 09-03 3건,
       09-04 11건, 09-05 11건, 09-06 16건, **09-07 48건(할당량 안 걸림)**,
