@@ -55,6 +55,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "national-employment": ["WLF00003245"],
   /* 2026-09-21 아침 루틴 — 2026년 모자보건사업 안내로 신청일별 지원 개월수를 옮긴 글. */
   "diaper-formula": ["WLF00000092"],
+  /* 2026-09-21 — 재단 모집 공고와 지원센터 누리집으로 사용 기한을 확인한 글. */
+  "science-voucher": ["WLF00004658"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],

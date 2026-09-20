@@ -43,4 +43,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "energy-voucher": "2026-09-18",
   "national-employment": "2026-09-19",
   "diaper-formula": "2026-09-21",
+  "science-voucher": "2026-09-21",
 };
