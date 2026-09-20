@@ -53,6 +53,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "energy-voucher": ["WLF00000072"],
   /* 2026-09-19 아침 루틴 — 법·시행령·시행규칙·고시로 수당이 줄거나 끊기는 규칙을 옮긴 글. */
   "national-employment": ["WLF00003245"],
+  /* 2026-09-21 아침 루틴 — 2026년 모자보건사업 안내로 신청일별 지원 개월수를 옮긴 글. */
+  "diaper-formula": ["WLF00000092"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],

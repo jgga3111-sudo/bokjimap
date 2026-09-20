@@ -22,7 +22,7 @@ export type Gov24Row = {
 };
 
 /** 보조금24 원본을 받아 대조한 날. */
-export const GOV24_CHECKED = "2026-09-19";
+export const GOV24_CHECKED = "2026-09-21";
 
 export const GOV24: Readonly<Record<string, Gov24Row>> = {
  "WLF00004661": {
