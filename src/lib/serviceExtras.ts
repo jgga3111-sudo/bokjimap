@@ -61,6 +61,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "hope-savings": ["WLF00000100"],
   /* 2026-09-23 아침 루틴 — 아동복지법 시행규칙과 국가아동권리보장원 안내로 매칭 한도·해지 규칙을 확인한 글. */
   "child-development-account": ["WLF00003258"],
+  /* 2026-09-23 — 원문 첨부 지침(’25.10월)으로 요건 재는 법을 옮긴 글. 자활근로 상세에도 잇는다. */
+  "self-support-bonus": ["WLF00006196", "WLF00001138"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
