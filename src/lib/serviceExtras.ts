@@ -59,6 +59,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "science-voucher": ["WLF00004658"],
   /* 2026-09-22 아침 루틴 — 2026년 자산형성지원 통장사업 안내로 모집 일정과 환수 조건을 옮긴 글. */
   "hope-savings": ["WLF00000100"],
+  /* 2026-09-23 아침 루틴 — 아동복지법 시행규칙과 국가아동권리보장원 안내로 매칭 한도·해지 규칙을 확인한 글. */
+  "child-development-account": ["WLF00003258"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
