@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+/* 글꼴 파일(OFL)을 우리 도메인에서 내보낸다. 화면에 쓰인 글자 조각만 받는다(globals.css 머리말). */
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";

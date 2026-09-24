@@ -22,7 +22,7 @@ export default function SavedHome({
     <section>
       <div className="mb-3 flex items-end justify-between gap-3">
         <div>
-          <h2 className="text-lg font-bold">관심 지원</h2>
+          <h2 className="text-xl font-extrabold">관심 지원</h2>
           <p className="mt-0.5 text-xs text-muted">☆로 저장한 지원</p>
         </div>
         <Link

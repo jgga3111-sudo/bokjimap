@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import MailLink from "./MailLink";
+import BrandMark from "./BrandMark";
 
 /**
  * 푸터 — 4분류(복지 찾기 / 신청 안내 / 도움말 / 사이트).
@@ -70,8 +71,11 @@ export default function SiteFooter() {
     <footer className="mt-16 border-t border-line bg-sunken/60">
       <div className="mx-auto max-w-5xl px-4 py-10">
         <div className="mb-8">
-          <p className="text-xl font-bold">
-            복지<span className="text-brand">클릭</span>
+          <p className="flex items-center gap-1.5 text-xl font-extrabold">
+            <BrandMark className="h-7 w-7" />
+            <span>
+              복지<span className="text-brand">클릭</span>
+            </span>
           </p>
           <p className="mt-2 text-sm text-muted">{SITE.description}</p>
         </div>

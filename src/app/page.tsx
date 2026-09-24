@@ -203,8 +203,11 @@ export default function Home() {
       {/* 히어로 — 페이지 여백을 뚫고 배경을 깔기 위해 음수 마진을 쓴다. */}
       {/* 끝 색이 `white`였다. 지면이 오프화이트가 되면서 그러데이션이 지면에
           닿는 자리에 흰 띠가 한 줄 남는다 — `ground`로 맞춘다(globals.css). */}
-      <section className="-mx-4 -mt-8 bg-gradient-to-b from-brand-soft to-ground px-4 pt-6 pb-6">
-        <div className="mx-auto flex max-w-3xl items-center gap-8">
+      {/* 09-24: 연한 파랑 그러데이션 → 흰 면. 웰로·토스처럼 지면(회색) 위에 흰 면이 한 장 깔리고
+          그 위에 사실(수치·출처)이 서는 모양이다. 그러데이션은 경계가 흐려 어디까지가 머리인지
+          읽히지 않았다. */}
+      <section className="-mx-4 -mt-8 bg-white px-4 pt-6 pb-6 [clip-path:inset(0_-100vmax)] shadow-[0_0_0_100vmax_#fff] sm:pt-10 sm:pb-10">
+        <div className="mx-auto flex max-w-5xl items-center gap-10">
         <div className="min-w-0 flex-1">
           {/*
             2026-09-09에 **반으로 줄였다.** 줄인 것은 셋이다 —
@@ -216,11 +219,22 @@ export default function Home() {
             정확하게 하고 있는 말**이다(수록 900건 · 시·군·구 570건). 같은
             말을 산문으로 한 번 더 하느라 첫 화면 한 뼘을 쓰고 있었다.
           */}
-          <h1 className="text-2xl leading-tight font-extrabold sm:text-3xl">
+          {/* 09-24: 확인한 날을 제목 위 작은 딱지로. 복지 정보는 날짜가 곧 믿을 근거다. */}
+          <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand">
+            <CheckDot />
+            {LAST_CHECKED} 공공데이터 원문과 다시 대조
+          </p>
+          <h1 className="text-[1.65rem] leading-[1.25] font-extrabold sm:text-[2.5rem]">
             {/* 09-15: "내가 받을 수 있는"은 판정해 주는 것처럼 읽혔다 — 이 사이트는
                 자격을 판정하지 않는다(3절). 찾는 일까지만 말한다. */}
-            내 상황에 맞는 <span className="text-brand">복지 지원금</span> 찾기
+            내 상황에 맞는 <br className="hidden sm:block" />
+            <span className="text-brand">복지 지원금</span> 찾기
           </h1>
+          {/* 좁은 화면에서는 뺀다 — 09-09에 히어로를 줄여 「말로 물어보기」를 첫 화면에 올린 결정. */}
+          <p className="mt-3 hidden max-w-xl text-base leading-relaxed text-slate-600 sm:block">
+            중앙부처와 시·군·구가 따로 공고하는 지원을 한곳에서 조건으로 찾고,
+            원문에 없는 지급일·신청 기간은 법령과 공고에서 확인해 덧붙입니다.
+          </p>
 
           {/*
             히어로에도 큰 검색창을 뒀었다. 375px 화면을 찍어 보니 헤더 검색과
@@ -255,18 +269,21 @@ export default function Home() {
             히어로에서 사실을 말하는 줄은 여기뿐이기 때문이다. 세 칸도
             출처 줄도 그대로 있고 글자만 한 치수 작다.
           */}
-          <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+          <dl className="mt-4 grid max-w-md grid-cols-3 gap-2 sm:mt-6">
             {[
               { n: services.length.toLocaleString(), unit: "건", k: "수록 지원사업" },
               { n: LOCAL_COUNT.toLocaleString(), unit: "건", k: "시·군·구 사업" },
               { n: BASE_YEAR.toString(), unit: "년", k: "기준연도" },
             ].map((s) => (
-              <div key={s.k}>
-                <dd className="text-base font-extrabold text-ink sm:text-lg">
-                  {s.n}
-                  <span className="ml-0.5 text-xs font-bold">{s.unit}</span>
-                </dd>
+              <div
+                key={s.k}
+                className="flex flex-col-reverse rounded-xl bg-ground px-3 py-2.5 sm:px-4 sm:py-3"
+              >
                 <dt className="mt-0.5 text-xs text-muted">{s.k}</dt>
+                <dd className="text-lg font-extrabold text-ink tabular-nums sm:text-2xl">
+                  {s.n}
+                  <span className="ml-0.5 text-xs font-bold text-slate-600 sm:text-sm">{s.unit}</span>
+                </dd>
               </div>
             ))}
           </dl>
@@ -286,7 +303,7 @@ export default function Home() {
 
             크게 만들지 않는다. 수치가 주인공이고 이건 각주다.
           */}
-          <p className="mt-3 text-xs leading-relaxed text-muted">
+          <p className="mt-4 text-xs leading-relaxed text-muted sm:text-[13px]">
             공공데이터포털 복지서비스 데이터를 {SERVICES_UPDATED}에 받아
             정리하고 {LAST_CHECKED}에 다시 대조했습니다.{" "}
             <Link href="/source" className="underline hover:text-brand">
@@ -298,7 +315,7 @@ export default function Home() {
           </p>
           {/* 09-15 애드센스 점검: 첫 화면에 이 사이트만의 것(원문 밖에서 찾은 것)이 안
               보였다. 숫자는 표에서 센다 — 손으로 적지 않는다. */}
-          <p className="mt-1.5 text-xs leading-relaxed text-muted">
+          <p className="mt-1 text-xs leading-relaxed text-muted sm:text-[13px]">
             복지로에 없는 것은 따로 찾습니다 — 법령·사업안내서를 읽고 쓴{" "}
             <Link href="/guide" className="underline hover:text-brand">
               안내 글 {GUIDES.length}편
@@ -312,7 +329,9 @@ export default function Home() {
         {/* 삽화(2026-09-19). 스톡 사진은 라이선스가 걸려 안 쓴다(6절) — 아이콘 세트와 같은
             규칙(선만, 면 없음, currentColor)으로 직접 그렸다. 좁은 화면에서는 히어로를
             다시 늘리지 않으려고 숨긴다(09-09에 341 → 187px로 줄인 자리). */}
-        <HeroArt />
+        <div className="hidden shrink-0 rounded-3xl bg-brand-soft p-7 md:block">
+          <HeroArt />
+        </div>
         </div>
       </section>
 
@@ -334,8 +353,8 @@ export default function Home() {
         상자는 평범한 `<form method="get">`이라 자바스크립트가 0바이트다.
         답하는 쪽(`/ask`)은 서버에서 900건을 훑는다.
       */}
-      <section className="rounded-2xl border border-line bg-white p-5 sm:p-6">
-        <h2 className="text-lg font-bold">받고 싶은 지원을 말로 물어보세요</h2>
+      <section className="rounded-2xl bg-white p-5 shadow-[0_1px_3px_rgba(16,24,40,0.06)] ring-1 ring-line/70 sm:p-7">
+        <h2 className="text-xl font-extrabold">받고 싶은 지원을 말로 물어보세요</h2>
         <p className="mt-0.5 mb-4 text-sm leading-relaxed text-slate-600">
           나이·지역·상황을 문장으로 적어 주시면, 조건으로 바꿔 수록{" "}
           {services.length.toLocaleString()}건에서 찾아 드립니다.
@@ -356,10 +375,10 @@ export default function Home() {
           바로 위 「말로 물어보기」에 「찾아보기」가 생겨 둘이 됐다. 그래도
           **색이 칠해진 큰 단추는 여전히 여기 하나뿐**이다 — 위엣것은 입력창에
           딸린 회색 단추라 무게가 다르다. 이 자리를 계속 제일 무겁게 둔다. */}
-      <section className="rounded-2xl border border-brand/20 bg-brand-soft/40 p-5 sm:p-6">
+      <section className="rounded-2xl bg-brand-soft p-5 sm:p-7">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="min-w-0">
-            <h2 className="text-lg font-bold">
+            <h2 className="text-xl font-extrabold">
               내 소득이 기준선 어디쯤인지 1분 계산
             </h2>
             <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
@@ -371,7 +390,7 @@ export default function Home() {
           </div>
           <Link
             href="/check"
-            className="shrink-0 rounded-xl bg-brand px-5 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
+            className="shrink-0 rounded-xl bg-brand px-6 py-3.5 font-bold text-white shadow-sm transition hover:brightness-110"
           >
             자가진단 하기 →
           </Link>
@@ -388,7 +407,7 @@ export default function Home() {
       <section>
         <div className="mb-3 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-lg font-bold">사람들이 가장 많이 찾는 지원</h2>
+            <h2 className="text-xl font-extrabold">사람들이 가장 많이 찾는 지원</h2>
             <p className="mt-0.5 text-xs text-muted">복지로 누적 조회수 순</p>
           </div>
           <Link
@@ -409,7 +428,7 @@ export default function Home() {
       <section className="-mx-4 bg-brand-deep px-4 py-7 text-white sm:mx-0 sm:rounded-2xl sm:px-6">
         <div className="mb-4 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-lg font-bold">새로 쓴 해설</h2>
+            <h2 className="text-xl font-extrabold">새로 쓴 해설</h2>
             <p className="mt-0.5 text-xs text-white/70">
               복지로 원문에 없는 것을 법령·사업안내서·공고에서 찾아 썼습니다
             </p>
@@ -463,8 +482,8 @@ export default function Home() {
         나머지 53개는 **지우지 않고 접었다.** 접혀 있어도 HTML에는 있으므로
         크롤러는 그대로 읽는다(HubList에서 쓰는 것과 같은 수법).
       */}
-      <section className="rounded-2xl border border-line bg-sunken/60 p-5 sm:p-6">
-        <h2 className="text-lg font-bold">어떤 분이신가요</h2>
+      <section className="rounded-2xl bg-white p-5 shadow-[0_1px_3px_rgba(16,24,40,0.06)] ring-1 ring-line/70 sm:p-7">
+        <h2 className="text-xl font-extrabold">어떤 분이신가요</h2>
         <p className="mt-0.5 mb-4 text-xs text-muted">
           해당하는 것을 고르면 그에 걸린 지원만 모아 보여드립니다
         </p>
@@ -591,7 +610,7 @@ export default function Home() {
       <section>
         <div className="mb-3 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-lg font-bold">신청에서 막힌다면</h2>
+            <h2 className="text-xl font-extrabold">신청에서 막힌다면</h2>
             <p className="mt-0.5 text-xs text-muted">
               수록 {services.length.toLocaleString()}건을 직접 집계해
               정리했습니다
@@ -627,6 +646,16 @@ export default function Home() {
   );
 }
 
+/** 히어로 딱지 앞의 작은 확인 표시. */
+function CheckDot() {
+  return (
+    <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden>
+      <circle cx="8" cy="8" r="7" className="fill-brand" />
+      <path d="m5 8.2 2 2 4-4.2" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 /**
  * 첫 화면 삽화 — 서류(체크)·달력·동전. 이 사이트가 하는 일 셋(찾기·기간·금액)을 그렸다.
  * 규칙은 AxisIcon과 같다: 선 1.6, 면을 칠하지 않음, 색은 currentColor.
@@ -641,7 +670,7 @@ function HeroArt() {
       strokeWidth={1.6}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="hidden h-32 w-40 shrink-0 text-brand sm:block"
+      className="h-36 w-44 text-brand"
     >
       {/* 서류 */}
       <rect x="18" y="14" width="64" height="84" rx="8" className="fill-white" />

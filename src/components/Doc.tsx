@@ -19,7 +19,8 @@ export function DocPage({
   children: React.ReactNode;
 }) {
   return (
-    <article className="mx-auto max-w-3xl">
+    /* 09-24: 넓은 화면에서는 글을 흰 종이 한 장 위에 올린다 — 회색 지면에 글자가 바로 앉아 있으면 초안처럼 보였다. */
+    <article className="mx-auto max-w-3xl sm:rounded-2xl sm:bg-white sm:px-10 sm:py-9 sm:shadow-[0_1px_3px_rgba(16,24,40,0.06)] sm:ring-1 sm:ring-line/70">
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈

@@ -63,10 +63,12 @@ export default function ThisMonth() {
   const shown = sorted.slice(0, SHOWN);
   const more = sorted.length - shown.length;
 
+  /* 09-24: 호박색 상자 → 흰 카드. 첫 화면에서 유일하게 노란 면이라 경고창처럼 보였다.
+        호박색은 날짜 칸에만 남긴다 — 「기간」이라는 뜻은 거기서 충분히 읽힌다. */
   return (
-    <section className="overflow-hidden rounded-2xl border border-amber-300/70 bg-amber-50/70">
-      <div className="flex items-baseline justify-between gap-3 px-5 pt-4">
-        <h2 className="inline-flex items-center gap-1.5 text-sm font-extrabold text-amber-900">
+    <section className="overflow-hidden rounded-2xl bg-white shadow-[0_1px_3px_rgba(16,24,40,0.06)] ring-1 ring-line/70">
+      <div className="flex items-baseline justify-between gap-3 px-5 pt-5 sm:px-6">
+        <h2 className="inline-flex items-center gap-2 text-xl font-extrabold text-ink">
           {/* 📅였다. 기기마다 다른 그림이 나와 선 아이콘으로 바꿨다
               (SearchBox 주석과 같은 이유). 글자색을 따라가 호박색에 맞는다. */}
           <svg
@@ -76,7 +78,7 @@ export default function ThisMonth() {
             stroke="currentColor"
             strokeWidth={1.6}
             strokeLinecap="round"
-            className="size-4 shrink-0"
+            className="size-5 shrink-0 text-amber-600"
           >
             <rect x="2" y="3.5" width="12" height="10.5" rx="2" />
             <path d="M5.5 1.75v3M10.5 1.75v3M2 7.25h12" />
@@ -85,22 +87,22 @@ export default function ThisMonth() {
         </h2>
         <Link
           href={`/guide/calendar#m${month}`}
-          className="shrink-0 text-xs font-bold text-amber-800 hover:underline"
+          className="shrink-0 text-sm text-muted hover:text-brand"
         >
           열두 달 전체 →
         </Link>
       </div>
 
-      <p className="px-5 pb-3 pt-1 text-xs text-slate-600">
+      <p className="px-5 pb-3 pt-0.5 text-xs text-muted sm:px-6">
         기간이 정해져 있어 놓치면 못 받는 것만 공식 공고에서 확인해 모았습니다.
       </p>
 
-      <ul className="divide-y divide-amber-200/70 border-t border-amber-200/70 bg-white/70">
+      <ul className="divide-y divide-line border-t border-line">
         {shown.map((e) => {
           const dated = hasDates(e);
           const passed = dated && e.end < now;
           return (
-            <li key={e.key} className="flex gap-3.5 px-5 py-3">
+            <li key={e.key} className="flex gap-3.5 px-5 py-3.5 sm:px-6">
               {/* 끝나는 날 조각(2026-09-19) — 무엇이 먼저 끝나는지를 글을 읽기 전에 보게 한다.
                   날짜를 확인 못 한 항목은 빈 조각을 그리지 않고 자리만 둔다. */}
               <span
@@ -110,7 +112,7 @@ export default function ThisMonth() {
                     ? "border-transparent"
                     : passed
                       ? "border-line bg-sunken text-muted"
-                      : "border-amber-300 bg-white text-amber-900"
+                      : "border-amber-200 bg-amber-50 text-amber-800"
                 }`}
               >
                 {dated && (
@@ -165,7 +167,7 @@ export default function ThisMonth() {
       {more > 0 && (
         <Link
           href={`/guide/calendar#m${month}`}
-          className="block border-t border-amber-200/70 bg-white/70 px-5 py-2.5 text-center text-xs font-bold text-amber-900 hover:underline"
+          className="block border-t border-line px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-ground hover:text-brand"
         >
           이번 달 남은 {more}가지 더 보기 →
         </Link>

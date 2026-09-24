@@ -20,7 +20,7 @@
   색 온도도 파랑 쪽에서 중립으로 살짝 옮겼다(ink·muted·line). 지면이 따뜻한데
   글자만 차가우면 화면이 붕 뜬다.
 
-  **주색 파랑은 그대로 둔다.** 러닝온과 완전히 갈라서는 것이 아니라 지면만
+  (아래 두 문단은 09-24에 바뀌었다 — 다음 블록.) **주색 파랑은 그대로 둔다.** 러닝온과 완전히 갈라서는 것이 아니라 지면만
   손본 것이다. 다시 형제로 맞추려면 ground를 #fff, sunken을 #f8fafc로
   되돌리면 된다 — 그 두 줄이 전부다.
 
@@ -28,34 +28,57 @@
   이 프로젝트로 파일을 복사하는 건 CLAUDE.md 0절에서 금지했다. 우선 OS 기본
   한글 글꼴로 두고, GmarketSans를 쓰려면 원본을 새로 받아 넣는다.
 */
+/*
+  ── 2026-09-24: 따뜻한 지면 → 차가운 회색, 글꼴을 실제로 불러온다 ──────────
+  사용자가 "신뢰가 안 가고 이쁘지 않다"고 해서 웰로·정부24·토스를 실측했다.
+  · 셋 다 Pretendard 계열을 **실제로 불러온다**(웰로 Pretendard Variable, 정부24
+    Pretendard GOV). 우리는 스택 첫머리에 이름만 적고 파일이 없어서, 윈도에서는
+    맑은 고딕으로 그려지고 있었다 — 가장 큰 차이였다. `pretendard` 패키지(OFL)의
+    다이내믹 서브셋을 layout.tsx에서 불러온다. 우리 도메인에서 나가고, 화면에
+    쓰인 글자 조각만 받는다.
+  · 지면을 따뜻한 오프화이트(#faf9f7)에서 차가운 회색(#f3f5f8)으로. 본문 회색
+    269곳이 slate(차가운 회색)라 따뜻한 지면과 온도가 어긋나 있었다.
+  · 주색은 조금 밝은 파랑(#1b64da, 흰 바탕 대비 5.2:1). 되돌리려면 이 블록의
+    값 여덟 줄과 layout.tsx의 글꼴 import 한 줄이다.
+*/
 @theme inline {
   --font-sans:
-    "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
+    "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
     system-ui, sans-serif;
 
-  --color-ink: #1a1a18;
-  --color-brand: #0b57d0;
-  --color-brand-soft: #e8f0fe;
+  --color-ink: #191f28;
+  --color-brand: #1b64da;
+  --color-brand-soft: #e8f3ff;
   /* 첫 화면 「새로 쓴 해설」의 짙은 면(09-19). 흰 상자만 이어지는 가운데를 한 번 끊는다. */
-  --color-brand-deep: #0d2b5c;
+  --color-brand-deep: #0f2c5c;
   --color-sky: #0ea5e9;
   --color-emerald: #10b981;
   --color-amber: #f59e0b;
-  --color-muted: #5f5e5a;
-  --color-line: #e6e2da;
+  --color-muted: #5b6573;
+  --color-line: #e3e7ec;
 
   /* 면의 세 층. `bg-white`(카드)는 토큰이 아니라 흰색 그대로 쓴다. */
-  --color-ground: #faf9f7;
-  --color-sunken: #f0ede7;
+  --color-ground: #f3f5f8;
+  --color-sunken: #eaeef3;
+
+  /* 09-24 둥근 모서리를 한 치수 키웠다(12→16, 16→20). 토스·웰로의 카드가 이 크기다. */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
 }
 
 body {
   font-family: var(--font-sans);
   color: var(--color-ink);
   background: var(--color-ground);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
   /* 한글은 단어 중간에서 끊기면 읽기 나쁘다 */
   word-break: keep-all;
+}
+
+/* 제목은 자간을 조금 더 좁힌다. Pretendard는 기본 자간이 넓어 큰 글씨에서 벌어져 보인다. */
+h1,
+h2 {
+  letter-spacing: -0.025em;
 }
 
 /*

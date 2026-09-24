@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SearchBox from "./SearchBox";
 import AccountLink from "./AccountLink";
+import BrandMark from "./BrandMark";
 import { POPULAR } from "@/lib/popular";
 
 /**
@@ -55,15 +56,37 @@ export default function SiteHeader() {
           ⚠ 두 줄을 <header> 하나로 감싸면 안 된다. sticky는 **부모 상자 안에서만**
           붙으므로, 100px짜리 헤더 안에 넣으면 그 헤더가 지나가는 순간 같이 사라진다
           (2026-09-16에 실제로 그렇게 만들었다가 잡았다). 둘 다 <body>의 자식이어야 한다. */}
-      <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4">
+      <header className="sticky top-0 z-30 border-b border-line bg-white/95 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4 lg:h-16 lg:gap-5">
           <Link
             href="/"
-            className="shrink-0 text-lg font-bold sm:text-xl"
+            className="flex shrink-0 items-center gap-1.5 text-lg font-extrabold tracking-tight sm:text-xl"
             aria-label="복지클릭 홈"
           >
-            복지<span className="text-brand">클릭</span>
+            <BrandMark className="h-7 w-7" />
+            <span>
+              복지<span className="text-brand">클릭</span>
+            </span>
           </Link>
+          {/* 넓은 화면(lg 이상)에서는 분류를 로고 옆 한 줄에 둔다(09-24). 칩 줄이 따로 있으면
+              헤더가 두 층이 되어 필터처럼 보였다 — 이름난 사이트는 전부 로고 옆에 메뉴를 둔다.
+              좁은 화면은 자리가 없으니 아래 칩 줄을 그대로 쓴다. */}
+          <nav aria-label="주요 메뉴" className="hidden lg:block">
+            <ul className="flex items-center gap-1">
+              {NAV.map((n) => (
+                <li key={n.href}>
+                  <Link
+                    href={n.href}
+                    className={`rounded-lg px-3 py-2 text-[15px] font-semibold transition hover:bg-sunken ${
+                      n.accent ? "text-brand" : "text-slate-700 hover:text-ink"
+                    }`}
+                  >
+                    {n.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 정해 둔다. 좁은 화면에서는
               남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다.
               09-17 사용자 요청으로 넓혔다(전: 최대 320px, 실제 약 245px). */}
@@ -79,7 +102,7 @@ export default function SiteHeader() {
           않게 여기서만 넘긴다. 오른쪽 끝을 흐리는 것은 "옆으로 더 있다"를
           말해 주기 위해서다 — 화면 경계에 딱 잘려 있으면 잘린 건지 거기까지인
           건지 알 수 없다. pointer-events-none이라 칩을 가리지 않는다. */}
-      <div className="relative z-20 border-b border-line bg-white/90 backdrop-blur sm:sticky sm:top-14">
+      <div className="relative z-20 border-b border-line bg-white/95 backdrop-blur sm:sticky sm:top-14 lg:hidden">
         <div className="relative mx-auto max-w-5xl px-4">
           <nav className="-mx-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <ul className="flex gap-1.5 whitespace-nowrap">
@@ -89,8 +112,8 @@ export default function SiteHeader() {
                     href={n.href}
                     className={`inline-block rounded-full border px-3 py-1.5 text-sm transition ${
                       n.accent
-                        ? "border-brand bg-brand-soft font-semibold text-brand"
-                        : "border-line text-slate-600 hover:border-brand hover:text-brand"
+                        ? "border-transparent bg-brand font-semibold text-white"
+                        : "border-line bg-white font-medium text-slate-700 hover:border-brand hover:text-brand"
                     }`}
                   >
                     {n.label}
