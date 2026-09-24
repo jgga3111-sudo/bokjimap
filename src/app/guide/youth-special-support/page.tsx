@@ -204,7 +204,7 @@ export default function YouthSpecialSupportGuide() {
           </p>
           <DocNote title="중간에 끊기는 경우">
             나이 기준을 넘거나, 부모 소득이 바뀌었거나, 취업해서 지원이 필요 없어졌거나, 연락이 끊기거나,{" "}
-            <strong>외국에 90일 넘게 머물면</strong> 지원이 멈춥니다. 변동이 확인된 달(또는 그다음 달)부터
+            <strong>외국에 90일 이상 머물면</strong> 지원이 멈춥니다. 변동이 확인된 달(또는 그다음 달)부터
             멈추고, 부당하게 받았거나 정한 용도와 다르게 쓴 돈은 돌려받아 갑니다.
           </DocNote>
           <Src pages="557~558·560~561쪽" />

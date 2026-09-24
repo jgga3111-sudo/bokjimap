@@ -65,6 +65,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "self-support-bonus": ["WLF00006196", "WLF00001138"],
   /* 2026-09-24 아침 루틴 — 원문 첨부 2026년 청소년사업 안내로 대상·기간·중복 기준을 옮긴 글. */
   "youth-special-support": ["WLF00000078"],
+  /* 2026-09-24 — 같은 지침 Ⅻ장으로 바우처 생성·소멸 시기와 결제 규칙을 옮긴 글. */
+  "period-product-voucher": ["WLF00000781"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],

@@ -48,4 +48,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "child-development-account": "2026-09-23",
   "self-support-bonus": "2026-09-23",
   "youth-special-support": "2026-09-24",
+  "period-product-voucher": "2026-09-24",
 };
