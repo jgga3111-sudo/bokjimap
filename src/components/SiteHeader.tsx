@@ -39,7 +39,9 @@ type Nav = { href: string; label: string; accent?: boolean };
  *   지역별   — 축 여섯 중 유일하게 "나는 어디 산다"로 바로 답이 되는 것
  *   신청 안내 — 목록이 아니라 읽을거리라 성격이 다르다
  */
+/* 09-24 사용자 요청: 자가진단 앞에 「홈」. 로고가 홈 링크인 줄 모르는 사람이 있다. */
 const NAV: Nav[] = [
+  { href: "/", label: "홈" },
   { href: "/check", label: "자가진단", accent: true },
   { href: "/service", label: "인기순" },
   { href: "/region", label: "지역별" },
