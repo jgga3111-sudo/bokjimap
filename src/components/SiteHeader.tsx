@@ -42,8 +42,10 @@ type Nav = { href: string; label: string; accent?: boolean };
 /* 09-24 사용자 요청: 자가진단 앞에 「홈」. 로고가 홈 링크인 줄 모르는 사람이 있다. */
 const NAV: Nav[] = [
   { href: "/", label: "홈" },
-  { href: "/check", label: "자가진단", accent: true },
-  { href: "/service", label: "인기순" },
+  /* 09-24 푸터·404와 같은 이름으로. 「자가진단」만 두면 자격 판정처럼 읽히고(09-19),
+     「인기순」은 가는 곳이 아니라 정렬 이름으로 읽혔다(09-24 점검). */
+  { href: "/check", label: "소득 자가진단", accent: true },
+  { href: "/service", label: "많이 찾는 지원" },
   { href: "/region", label: "지역별" },
   { href: "/guide", label: "신청 안내" },
 ];
@@ -91,8 +93,10 @@ export default function SiteHeader() {
           </nav>
           {/* 넓은 화면에서는 오른쪽 끝으로 밀고 폭을 정해 둔다. 좁은 화면에서는
               남는 폭을 그대로 다 쓴다 — 검색어가 잘리면 쓸모가 없다.
-              09-17 사용자 요청으로 넓혔다(전: 최대 320px, 실제 약 245px). */}
-          <div className="min-w-0 flex-1 sm:ml-auto sm:w-96 sm:flex-none md:w-[32rem]">
+              09-17 사용자 요청으로 넓혔다(전: 최대 320px, 실제 약 245px).
+              lg 이상은 메뉴가 옆에 서므로 남는 폭만 쓰고 512px에서 멈춘다 — 고정 폭이면
+              1024px에서 메뉴와 합쳐 화면 밖으로 50px 넘쳤다(09-24). */}
+          <div className="min-w-0 flex-1 sm:ml-auto sm:w-96 sm:flex-none md:w-[32rem] lg:w-auto lg:max-w-[32rem] lg:flex-1">
             <SearchBox placeholder="지원금 이름 검색" popular={POPULAR} />
           </div>
           {/* 계정 기능이 꺼져 있으면 아무것도 안 그린다(AccountLink). */}
