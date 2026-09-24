@@ -67,6 +67,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "youth-special-support": ["WLF00000078"],
   /* 2026-09-24 — 같은 지침 Ⅻ장으로 바우처 생성·소멸 시기와 결제 규칙을 옮긴 글. */
   "period-product-voucher": ["WLF00000781"],
+  /* 2026-09-24 — 국가아동권리보장원 2026 자립정보북·업무 매뉴얼로 지급일·신청·정지 사유와 시·도별 자립정착금을 옮긴 글. */
+  "self-reliance-allowance": ["WLF00001175", "WLF00005445"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
