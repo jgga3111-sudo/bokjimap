@@ -60,6 +60,7 @@ export default async function BenefitPage({
 
   return (
     <div className="space-y-6">
+      <div className="band">
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -72,11 +73,12 @@ export default async function BenefitPage({
         <span className="text-slate-600">{b.label}</span>
       </nav>
 
-      <header className="space-y-2">
-        <h1 className="text-2xl font-bold">{ro(b.label)} 받는 복지·지원금</h1>
+      <header className="mt-3 space-y-2">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">{ro(b.label)} 받는 복지·지원금</h1>
         <p className="text-sm text-muted">{b.blurb}</p>
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>
+      </div>
 
       <FindLink axisLabel="혜택" />
 

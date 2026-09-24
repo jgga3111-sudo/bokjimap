@@ -99,8 +99,8 @@ export default function HubIntro({
     .filter((g): g is NonNullable<ReturnType<typeof guideBySlug>> => !!g);
 
   return (
-    <section className="space-y-3 rounded-2xl border border-line bg-white px-4 py-4 text-sm leading-relaxed text-slate-700 sm:px-5">
-      <h2 className="text-base font-bold text-ink">이 목록은 이렇게 모았습니다</h2>
+    <section className="card space-y-3 px-5 py-5 text-sm leading-relaxed text-slate-700 sm:px-7 sm:py-6">
+      <h2 className="text-lg font-extrabold text-ink">이 목록은 이렇게 모았습니다</h2>
 
       <p>
         {lead ?? (

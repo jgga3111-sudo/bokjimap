@@ -28,7 +28,7 @@ export async function generateMetadata({
     title: heading(band.percent, band.label),
     description: `선정기준의 소득 기준선이 "기준 중위소득 ${band.percent}% 이하" 한 가지로 적힌 복지 사업 ${band.count}건입니다. ${BASE_YEAR}년 기준 1인 가구 월 ${won(
       thresholdOf(1, band.percent),
-    )}, 4인 가구 월 ${won(thresholdOf(4, band.percent))} 이하입니다.`,
+    )}(연봉 환산 ${won(thresholdOf(1, band.percent) * 12)}), 4인 가구 월 ${won(thresholdOf(4, band.percent))} 이하입니다.`,
     alternates: { canonical: `/income/${band.percent}` },
   };
 }
@@ -57,6 +57,7 @@ export default async function IncomeBandPage({
   return (
     <div className="space-y-6">
       {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
+      <div className="band">
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -69,8 +70,8 @@ export default async function IncomeBandPage({
         <span className="text-slate-600">중위소득 {band.percent}%</span>
       </nav>
 
-      <header className="space-y-2">
-        <h1 className="text-2xl font-bold sm:text-3xl">
+      <header className="mt-3 space-y-2">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">
           {heading(band.percent, band.label)}
         </h1>
         <p className="text-sm leading-relaxed text-slate-600">
@@ -79,12 +80,13 @@ export default async function IncomeBandPage({
           대상마다 기준선이 여럿 적힌 사업은 짐작해서 넣지 않았습니다.
         </p>
       </header>
+      </div>
 
       {/* 퍼센트만 보면 내 소득이 여기 드는지 알 수 없다. 금액으로 바꿔 준다.
           계산은 /check와 같은 고시 표(thresholdOf)를 쓴다. */}
-      <section className="rounded-xl border border-line bg-white px-4 py-4">
+      <section className="card px-5 py-5 sm:px-7">
         <h2 className="text-sm font-bold text-ink">
-          {BASE_YEAR}년 중위소득 {band.percent}%는 얼마인가
+          {BASE_YEAR}년 중위소득 {band.percent}%는 얼마인가 — 월 소득·연봉 환산
         </h2>
         <dl className="mt-2.5 grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3">
           {HOUSEHOLDS.map((n) => (

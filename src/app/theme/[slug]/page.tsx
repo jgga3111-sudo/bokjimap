@@ -54,8 +54,8 @@ export default async function ThemePage({ params }: PageProps<"/theme/[slug]">) 
 
   return (
     <div className="space-y-6">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-bold">{t.label} 복지·지원금</h1>
+      <header className="band space-y-1.5">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">{t.label} 복지·지원금</h1>
         <p className="text-sm text-muted">{t.blurb}</p>
         <p className="text-sm text-muted">{rows.length}건 · 조회수 높은 순</p>
       </header>

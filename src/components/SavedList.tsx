@@ -37,6 +37,21 @@ export default function SavedList({
         <br />
         지원 상세 페이지 제목 옆의 <strong>☆ 관심 지원 저장</strong>을 누르면
         여기에 모입니다.
+        {/* 09-24 빈 화면이 막다른 곳이었다 — 고를 만한 곳 둘로 잇는다. */}
+        <span className="mt-4 flex flex-wrap justify-center gap-2">
+          <Link
+            href="/service"
+            className="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
+          >
+            많이 찾는 지원 보기
+          </Link>
+          <Link
+            href="/#ask"
+            className="rounded-full bg-brand-soft px-4 py-2 text-sm font-semibold text-brand hover:bg-brand hover:text-white"
+          >
+            말로 물어보기
+          </Link>
+        </span>
       </p>
     );
   }

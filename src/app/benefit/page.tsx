@@ -16,8 +16,8 @@ export default function BenefitIndex() {
     <div className="space-y-6">
       {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
           애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
-      <header className="space-y-2">
-        <h1 className="text-2xl font-bold">혜택 종류별 복지·지원금</h1>
+      <header className="band space-y-2">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">혜택 종류별 복지·지원금</h1>
         <p className="text-sm leading-relaxed text-muted">
           지원금이라고 다 계좌로 들어오는 것은 아닙니다. 카드 포인트로 오는
           것, 요금이 깎이는 것, 물건으로 주는 것, 나중에 갚아야 하는 것이 모두

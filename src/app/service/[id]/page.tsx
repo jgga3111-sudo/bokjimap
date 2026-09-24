@@ -20,6 +20,7 @@ import TrackView from "@/components/TrackView";
 import MyEligibility from "@/components/MyEligibility";
 import SaveButton from "@/components/SaveButton";
 import ShareButton from "@/components/ShareButton";
+import PrintPapers from "@/components/PrintPapers";
 import NextYearCheck from "@/components/NextYearCheck";
 import PastPeriodNotice from "@/components/PastPeriodNotice";
 import DeadlineBadge from "@/components/DeadlineBadge";
@@ -59,6 +60,30 @@ const dupName = new Set(
     .map(([name]) => name),
 );
 
+/** 기호·줄바꿈을 접어 한 줄로. 글자는 그대로 둔다. */
+function oneLine(t: string): string {
+  return t.replace(/\s+/g, " ").replace(/(^|\s)[○●◦•※*\-❏□■▶►ㅇ·]+\s/g, "$1").trim();
+}
+
+function clip(t: string, n: number): string {
+  return t.length <= n ? t : `${t.slice(0, n - 1).trimEnd()}…`;
+}
+
+/** 원문 「지원 내용」에서 금액이 든 첫 문장(원문 그대로, 한 줄로 접음). 없으면 null. */
+function firstMoneySentence(t: string | null | undefined): string | null {
+  if (!t) return null;
+  for (const line of t.split(/\n|(?<=[.다])\s/)) {
+    let one = oneLine(line);
+    /* 문장 뒤에 붙은 각주(「…지급합니다.* 25일이…」)는 떼어 낸다. */
+    const cut = one.search(/[.](?=\s*[*※])/);
+    if (cut > 0) one = one.slice(0, cut + 1);
+    /* 맨 앞 글머리(○·①·1))만 뗀다. 문장 글자는 그대로다. */
+    one = one.replace(/^(?:[○●◦•※*\-❏□■▶►ㅇ·\u2460-\u2473]|\d\))+\s*/, "");
+    if (/\d[\d,.]*\s*(만\s*)?원/.test(one) && one.length >= 8) return clip(one, 90);
+  }
+  return null;
+}
+
 export function generateStaticParams() {
   return services.map((s) => ({ id: s.id }));
 }
@@ -87,11 +112,33 @@ export async function generateMetadata({
      경감시키고…"로 시작한다. 본문은 전혀 다른데 설명만 보면 같은
      페이지고, 그러면 구글이 하나로 접는다. 사업명이 그 둘을 가른다. */
   const gist = s.summary ?? s.outline;
+  /*
+    09-24 검색 결과에서 누를지 정하는 것은 금액과 날짜다. 설명이 원문의 「사업
+    목적」 문장뿐이라 금액이 든 상세가 271쪽 중 7쪽이었다. 원문 「지원 내용」에서
+    금액(숫자+원)이 든 첫 문장을 **그대로** 앞에 세운다 — 고치거나 요약하지
+    않고 기호·줄바꿈만 접는다(3절). 지급일을 법령으로 확인해 둔 사업은
+    제목에도 그 날을 세운다(「장애수당 지급일」 노출 13·클릭 1).
+  */
+  const pay = extrasOf(s).payDate;
+  const money = firstMoneySentence(s.supportContent);
+  /* 금액 문장이 이미 그 날을 말하면(기초연금 「매월 25일에…」) 되풀이하지 않는다. */
+  const lead = [pay?.day && !money?.includes(pay.when) ? `지급일 ${pay.when}.` : null, money].filter(Boolean).join(" ");
   return {
-    title: `${label} — 지원대상·지원내용·신청방법`,
-    description: gist
-      ? `${label} — ${gist}`
-      : `${label}의 지원 대상과 신청 방법을 정리했습니다.`,
+    /* 이름이 길면 꼬리를 뗀다. 60자를 넘으면 검색 결과에서 이름부터 잘린다. */
+    title: pay?.day
+      ? `${label} 지급일 ${pay.when} — 지원대상·신청방법`
+      : label.length > 28
+        ? label
+        : `${label} — 지원대상·지원내용·신청방법`,
+    /* oneLine은 원문 조각에만 건다 — 이어 붙인 「 · 」까지 글머리로 알고 지운다. */
+    description: clip(
+      lead
+        ? `${label} — ${lead}${gist ? ` · ${oneLine(gist)}` : ""}`
+        : gist
+          ? `${label} — ${oneLine(gist)}`
+          : `${label}의 지원 대상과 신청 방법을 정리했습니다.`,
+      160,
+    ),
     alternates: { canonical: `/service/${s.id}` },
     /* 본문이 얇은 항목은 색인에서 뺀다. 러닝온에서 얇은 페이지 510개가
        "발견됨 – 색인 안 됨"에 빠진 것을 실측했다(docs/02). */
@@ -261,14 +308,14 @@ function PageToc({ s }: { s: WelfareService }) {
   const official = safeUrl(s.officialUrl);
 
   return (
-    <nav aria-label="이 페이지 안에서" className="rounded-xl border border-line bg-sunken/70 px-4 py-3">
+    <nav aria-label="이 페이지 안에서" className="card px-5 py-4">
       <h2 className="text-xs font-bold text-muted">이 페이지에서</h2>
       <ul className="mt-2 flex flex-wrap gap-1.5">
         {items.map((t) => (
           <li key={t.id}>
             <a
               href={`#${t.id}`}
-              className="inline-block rounded-full border border-line bg-white px-3 py-1.5 text-sm text-slate-700 transition hover:border-brand hover:text-brand"
+              className="inline-block rounded-full bg-ground px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
             >
               {t.id === "apply" ? applyTitle(s) : t.title}
             </a>
@@ -278,7 +325,7 @@ function PageToc({ s }: { s: WelfareService }) {
           <li>
             <a
               href="#official"
-              className="inline-block rounded-full border border-brand bg-brand-soft px-3 py-1.5 text-sm font-medium text-brand transition hover:bg-brand hover:text-white"
+              className="inline-block rounded-full bg-brand px-3 py-1.5 text-sm font-semibold text-white transition hover:brightness-110"
             >
               공식 안내 ↓
             </a>
@@ -305,8 +352,8 @@ function Section({
      2026-09-16에 좁은 화면의 붙는 높이가 57px(로고·검색만)로 줄어, 거기서는
      112px이 도리어 빈 자리를 만든다 — 폭으로 갈랐다(16 = 64px). */
   return (
-    <section id={id} className="scroll-mt-16 sm:scroll-mt-28">
-      <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
+    <section id={id} className="card scroll-mt-16 p-5 sm:scroll-mt-28 sm:p-7">
+      <h2 className="mb-3 flex items-center gap-2 text-lg font-extrabold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         {title}
       </h2>
@@ -423,12 +470,12 @@ function KeyFacts({ s }: { s: WelfareService }) {
   return (
     <section
       aria-label="핵심 정보"
-      /* 칸 사이 선을 gap-px + 배경색으로 낸다. 칸마다 border를 주면 맞닿는
-         자리가 2px로 겹쳐 두꺼워진다. */
-      className={`mt-4 grid gap-px overflow-hidden rounded-xl border border-line bg-line ${cols}`}
+      /* 09-24: 머리가 흰 띠 위로 올라가 선으로 가른 표 대신 회색 칸 셋으로 둔다
+         (첫 화면 수치 칸과 같은 모양). */
+      className={`mt-5 grid gap-2 ${cols}`}
     >
       {cells.map((c) => (
-        <div key={c.k} className="bg-white px-4 py-3">
+        <div key={c.k} className="rounded-xl bg-ground px-4 py-3.5">
           <p className="text-xs font-bold text-muted">{c.k}</p>
           <p className="mt-0.5 text-lg leading-tight font-extrabold text-ink">
             {c.v}
@@ -495,12 +542,12 @@ function PreCheck({
       : null;
 
   return (
-    <section id="precheck" className="scroll-mt-16 sm:scroll-mt-28">
-      <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
+    <section id="precheck" className="card scroll-mt-16 p-5 sm:scroll-mt-28 sm:p-7">
+      <h2 className="mb-3 flex items-center gap-2 text-lg font-extrabold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         신청 전 체크
       </h2>
-      <dl className="rounded-xl border border-line bg-white px-4 py-1">
+      <dl className="-my-1">
         <Row
           label="자격 조건"
           value={
@@ -652,6 +699,8 @@ function RequiredPapers({ s }: { s: WelfareService }) {
 
   return (
     <Section id="papers" title="신청할 때 필요한 서류">
+      {/* 인쇄할 때만 보이는 사업 이름 — 종이에는 어느 사업 서류인지가 있어야 한다. */}
+      <p className="mb-2 hidden text-base font-bold print:block">{nameWithAlias(s.id, s.name)}</p>
       <p className="mb-2 text-xs leading-relaxed text-muted">
         아래는 <strong>행정안전부 「대한민국 공공서비스(혜택) 정보」</strong>에 적힌
         내용을 그대로 옮긴 것입니다(정부24 「{g.gname}」 · {g.gorg} ·{" "}
@@ -685,6 +734,8 @@ function RequiredPapers({ s }: { s: WelfareService }) {
         >
           정부24 원문 보기 ↗
         </a>
+        <br />
+        <PrintPapers />
       </p>
     </Section>
   );
@@ -704,12 +755,12 @@ function AmongListed({ s }: { s: WelfareService }) {
   const total = services.length;
 
   return (
-    <section id="among" className="scroll-mt-16 sm:scroll-mt-28">
-      <h2 className="mb-2 flex items-center gap-2 font-bold text-ink">
+    <section id="among" className="card scroll-mt-16 p-5 sm:scroll-mt-28 sm:p-7">
+      <h2 className="mb-3 flex items-center gap-2 text-lg font-extrabold text-ink">
         <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
         우리 수록에서 어디쯤인가
       </h2>
-      <div className="rounded-xl border border-line bg-white px-4 py-3 text-sm leading-relaxed text-slate-700">
+      <div className="rounded-xl bg-ground px-4 py-3 text-sm leading-relaxed text-slate-700">
         <p>
           복지클릭이 실은 {total}건 가운데 이 사업은 복지로 조회수 기준{" "}
           <strong className="text-ink">{rank}위</strong>입니다. 함께 볼 만한 자리는
@@ -763,7 +814,7 @@ function SiteChecked({ s }: { s: WelfareService }) {
       </p>
       <div className="space-y-3">
         {payDate && (
-          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+          <div className="rounded-xl bg-ground p-4 text-sm leading-relaxed">
             <p className="font-bold text-ink">
               들어오는 날 — <span className="text-brand">{payDate.when}</span>
             </p>
@@ -792,7 +843,7 @@ function SiteChecked({ s }: { s: WelfareService }) {
         )}
 
         {calendar.length > 0 && (
-          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+          <div className="rounded-xl bg-ground p-4 text-sm leading-relaxed">
             <p className="font-bold text-ink">신청 일정</p>
             <ul className="mt-2 space-y-3">
               {calendar.map((e) => (
@@ -827,7 +878,7 @@ function SiteChecked({ s }: { s: WelfareService }) {
         )}
 
         {guides.length > 0 && (
-          <div className="rounded-xl border border-line bg-white p-4 text-sm leading-relaxed">
+          <div className="rounded-xl bg-ground p-4 text-sm leading-relaxed">
             <p className="font-bold text-ink">이 지원을 다룬 안내 글</p>
             <ul className="mt-2 space-y-2">
               {guides.map((g) => (
@@ -872,10 +923,20 @@ export default async function ServiceDetail({
     같은 상위 5건(청년내일저축계좌·청년월세…)을 가리킨다. 내부 링크가 한곳으로
     몰려 나머지 페이지로 가는 길이 생기지 않는다.
     같은 지역을 가장 무겁게 치고, 그다음 대상·생애주기가 겹치는 정도로 매긴다.
+    09-24: 이름 줄기가 같은 사업(옥천 「청년 월세 지원」 ↔ 국토부 「청년월세 지원사업」)을
+    가장 먼저 둔다. 지역만 보니 옥천 청년월세 아래에 한부모 난방비·산모신생아가 떴다.
   */
+  const stem = (nm: string) =>
+    nm.replace(/\s|\(.*?\)/g, "").replace(/(지원사업|사업|지원)+$/, "");
+  const myStem = stem(s.name);
   const related = services
     .filter((o) => o.id !== s.id)
     .map((o) => {
+      const os = stem(o.name);
+      const sameName =
+        myStem.length >= 3 && os.length >= 3 && (os.includes(myStem) || myStem.includes(os))
+          ? o.provider === "central" ? 6 : 5
+          : 0;
       const sameRegion = o.sidoName && o.sidoName === s.sidoName ? 3 : 0;
       const sharedTargets = o.targets.filter((t) =>
         s.targets.includes(t),
@@ -883,7 +944,7 @@ export default async function ServiceDetail({
       const sharedStages = o.lifeStages.filter((t) =>
         s.lifeStages.includes(t),
       ).length;
-      return { o, score: sameRegion + sharedTargets + sharedStages };
+      return { o, score: sameName + sameRegion + sharedTargets + sharedStages };
     })
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || b.o.views - a.o.views)
@@ -907,7 +968,7 @@ export default async function ServiceDetail({
   };
 
   return (
-    <article className="space-y-8">
+    <article className="space-y-4 sm:space-y-5">
       {/* 광고 코드는 색인시키는 상세 중 본문이 두툼하거나 따로 확인한 정보가 있는 곳에만(2026-09-13, lib/indexable.ts showAds). */}
       {showAds(s) && <AdSenseScript />}
       <script
@@ -921,6 +982,8 @@ export default async function ServiceDetail({
         name={nameWithAlias(s.id, s.name ?? id)}
         place={placeLabel(s)}
       />
+      {/* 09-24: 이동경로부터 경고 띠까지를 흰 띠 하나에 담는다(첫 화면 히어로와 같은 면). */}
+      <div className="band sm:pt-6 sm:pb-8">
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">
           홈
@@ -937,11 +1000,11 @@ export default async function ServiceDetail({
         <span className="text-slate-600">{nameWithAlias(s.id, s.name)}</span>
       </nav>
 
-      <header>
+      <header className="mt-4">
         {/* 제목 위에 지급형태 배지를 달았었다. 바로 아래 「핵심 세 칸」이
             같은 값을 더 크게, 뜻까지 붙여 말하므로 뺐다. 배지는 목록에서
             여러 건을 훑을 때 쓰는 장치다(KeyFacts 주석 참고). */}
-        <h1 className="text-2xl leading-snug font-extrabold sm:text-3xl">
+        <h1 className="text-[1.65rem] leading-snug font-extrabold sm:text-[2.25rem]">
           {nameWithAlias(s.id, s.name)}
         </h1>
         {/* ☆ 저장 (2026-09-11). 제목과 한 줄에 두면 긴 사업명이 좁은
@@ -1021,7 +1084,7 @@ export default async function ServiceDetail({
         <KeyFacts s={s} />
 
         {(s.summary ?? s.outline) && (
-          <p className="mt-4 rounded-xl bg-sunken p-4 text-sm leading-relaxed text-slate-700">
+          <p className="mt-3 rounded-xl bg-ground p-4 text-sm leading-relaxed text-slate-700 sm:text-[15px]">
             {s.summary ?? s.outline}
           </p>
         )}
@@ -1072,6 +1135,7 @@ export default async function ServiceDetail({
           </p>
         )}
       </header>
+      </div>
 
       {/* 목차는 「신청 전 체크」 앞이다. 표를 먼저 두면 목차가 첫 화면 밖으로
           밀려서, 정작 스크롤을 아끼려고 만든 것이 스크롤해야 보인다. */}
@@ -1300,7 +1364,7 @@ export default async function ServiceDetail({
         (덤으로, 글이 색인되려면 안쪽에서 걸리는 링크가 있어야 한다. 푸터
         링크 하나로는 부족하다.)
       */}
-      <aside className="rounded-xl border border-line bg-white px-4 py-3.5 text-sm leading-relaxed">
+      <aside className="card px-5 py-4 text-sm leading-relaxed sm:px-7">
         <p className="font-bold text-ink">복지 신청이 처음이라면</p>
         <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-slate-600">
           <li>
@@ -1326,7 +1390,7 @@ export default async function ServiceDetail({
 
       <footer
         id="official"
-        className="scroll-mt-28 space-y-3 rounded-xl border border-line bg-sunken p-4 text-xs leading-relaxed text-slate-600"
+        className="scroll-mt-28 space-y-4 rounded-2xl bg-brand-soft p-5 text-xs leading-relaxed text-slate-700 sm:p-7 sm:text-[13px]"
       >
         {/* 날짜를 두 개 쓴다. "우리가 받아둔 날"과 "기관이 고친 날"은 다른
             값이라 한 칸에 넣으면 안 된다. 원본 최종수정일은 330건이 비어
@@ -1363,7 +1427,7 @@ export default async function ServiceDetail({
             href={safeUrl(s.officialUrl)!}
             target="_blank"
             rel="noopener noreferrer"
-            className="block rounded-lg bg-brand px-4 py-3 text-center text-sm font-bold text-white transition hover:brightness-110 sm:inline-block sm:px-5"
+            className="block rounded-xl bg-brand px-4 py-3.5 text-center text-sm font-bold text-white shadow-sm transition hover:brightness-110 sm:inline-block sm:px-6"
           >
             복지로에서 공식 안내 보기 ↗
           </a>
@@ -1371,19 +1435,23 @@ export default async function ServiceDetail({
       </footer>
 
       {related.length > 0 && (
-        <section>
-          <h2 className="mb-2 font-bold text-ink">비슷한 대상의 다른 지원</h2>
-          <ul className="space-y-1.5">
+        <section className="card p-5 sm:p-7">
+          <h2 className="mb-1 flex items-center gap-2 text-lg font-extrabold text-ink">
+            <span aria-hidden className="h-4 w-1 shrink-0 rounded-full bg-brand" />
+            비슷한 대상의 다른 지원
+          </h2>
+          <ul className="divide-y divide-line">
             {related.map((r) => (
               <li key={r.id}>
                 <Link
                   href={`/service/${r.id}`}
-                  className="text-sm text-slate-700 hover:text-brand hover:underline"
+                  className="group flex items-baseline gap-2 py-3 text-[15px] font-medium text-ink hover:text-brand"
                 >
-                  {r.name}
-                  <span className="ml-1.5 text-xs text-muted">
+                  <span className="min-w-0 flex-1">{r.name}</span>
+                  <span className="shrink-0 text-xs font-normal text-muted">
                     {placeLabel(r)}
                   </span>
+                  <span aria-hidden className="shrink-0 text-slate-300 group-hover:text-brand">›</span>
                 </Link>
               </li>
             ))}

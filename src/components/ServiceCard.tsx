@@ -84,7 +84,7 @@ export default function ServiceCard({
   return (
     <Link
       href={`/service/${s.id}`}
-      className="group flex h-full flex-col rounded-xl border border-line bg-white p-4 transition hover:border-brand hover:shadow-[0_2px_12px_rgba(11,87,208,0.08)]"
+      className="card group flex h-full flex-col p-4 transition-shadow hover:shadow-[0_6px_20px_rgb(27_100_218/0.12),0_0_0_1px_rgb(27_100_218/0.35)] sm:p-5"
     >
       {/*
         세 번째 딱지를 허용한 예외.
@@ -113,9 +113,9 @@ export default function ServiceCard({
         </div>
       )}
 
-      <h3 className="font-bold leading-snug text-ink group-hover:text-brand">
+      <h3 className="text-[16px] font-bold leading-snug text-ink group-hover:text-brand sm:text-[17px]">
         {rank !== undefined && (
-          <span className="mr-1.5 text-sm font-extrabold text-brand">
+          <span className="mr-1.5 font-extrabold text-brand tabular-nums">
             {rank}
           </span>
         )}
@@ -134,7 +134,7 @@ export default function ServiceCard({
         </p>
       )}
 
-      <div className="mt-auto flex items-end justify-between gap-3 pt-3 text-xs text-slate-400">
+      <div className="mt-auto flex items-end justify-between gap-3 pt-3.5 text-xs text-slate-400">
         <span className="min-w-0 truncate">{meta.join(" · ")}</span>
         {s.views > 0 && (
           <span className="shrink-0" title="복지로 누적 조회수">

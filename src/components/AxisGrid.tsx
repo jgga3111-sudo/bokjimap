@@ -34,9 +34,9 @@ export default function AxisGrid<T extends Item>({
           */}
           <Link
             href={`${base}/${a.slug}`}
-            className="flex h-full gap-3 rounded-xl border border-line bg-white p-4 transition hover:border-brand"
+            className="card flex h-full gap-3 p-4 transition-shadow hover:shadow-[0_6px_20px_rgb(27_100_218/0.12),0_0_0_1px_rgb(27_100_218/0.35)] sm:p-5"
           >
-            <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand">
+            <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand">
               <AxisIcon slug={a.slug} />
             </span>
             <span className="min-w-0">

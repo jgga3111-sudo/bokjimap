@@ -17,8 +17,8 @@ export default function IncomeIndex() {
   return (
     <div className="space-y-6">
       {/* 광고 코드 없음(2026-09-15) — 소득 구간으로 가는 길잡이 화면이라 다른 축 목록(/theme·/benefit 등)과 같게 뺐다. */}
-      <header className="space-y-2">
-        <h1 className="text-2xl font-bold sm:text-3xl">소득기준별 찾기</h1>
+      <header className="band space-y-2">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">소득기준별 찾기</h1>
         <p className="text-sm leading-relaxed text-slate-600">
           복지 지원의 자격은 대부분 &ldquo;기준 중위소득 몇 % 이하&rdquo;로
           정해집니다. 선정기준 원문에 그 기준선이 적혀 있는 사업을 기준선별로

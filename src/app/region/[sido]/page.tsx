@@ -72,8 +72,8 @@ export default async function RegionPage({
   return (
     <div className="space-y-8">
       {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
-      <header>
-        <h1 className="text-2xl font-bold sm:text-3xl">
+      <header className="band">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">
           {sido.name} 복지·지원금
         </h1>
         <p className="mt-2 text-sm text-muted">

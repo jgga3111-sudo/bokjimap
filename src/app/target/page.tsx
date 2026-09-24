@@ -15,7 +15,9 @@ export default function TargetIndex() {
     <div className="space-y-6">
       {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
           애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
-      <h1 className="text-2xl font-bold">대상별 복지·지원금</h1>
+      <header className="band">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">대상별 복지·지원금</h1>
+      </header>
       <AxisGrid
         base="/target"
         items={TARGETS}

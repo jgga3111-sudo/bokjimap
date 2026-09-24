@@ -66,6 +66,33 @@
   --radius-2xl: 1.25rem;
 }
 
+/*
+  09-24 면 두 가지를 한 곳에 둔다. 첫 화면에서 쓴 모양을 상세·목록이 같이 쓴다.
+
+  band — 페이지 머리를 흰 띠로 화면 끝까지 편다. main이 max-w-5xl·px-4·py-8이라
+  -mx-4·-mt-8로 붙이고, 옆으로는 그림자(100vmax)로 늘린 뒤 clip-path로 위아래만
+  자른다. w-screen은 스크롤바 폭만큼 가로 넘침이 난다(09-24 첫 화면에서 겪음).
+  **페이지의 첫 요소에만 쓴다** — -mt-8이 main의 위 여백을 먹는 자리라서다.
+
+  card — 회색 지면 위의 흰 카드. 테두리 대신 옅은 선(ring)과 얕은 그림자.
+*/
+@utility band {
+  margin-inline: -1rem;
+  margin-top: -2rem;
+  padding: 1.25rem 1rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 -100vmax);
+}
+
+@utility card {
+  border-radius: var(--radius-2xl);
+  background: #fff;
+  box-shadow:
+    0 1px 3px rgb(16 24 40 / 0.06),
+    0 0 0 1px rgb(227 231 236 / 0.7);
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-ink);
@@ -92,6 +119,18 @@ h2 {
   우리 버튼을 지우고 기본 것을 쓰지 않는 이유 — 기본 버튼은 사파리에서
   안 나오고, 화면 낭독기에 이름이 붙지 않는다.
 */
+/* 서류 목록만 인쇄(components/PrintPapers.tsx). 인쇄하는 동안만 body에 표시가 붙는다. */
+@media print {
+  body[data-print="papers"] > :not(main),
+  body[data-print="papers"] main article > :not(#papers) {
+    display: none !important;
+  }
+  body[data-print="papers"] #papers {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;

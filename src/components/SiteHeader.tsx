@@ -79,7 +79,7 @@ export default function SiteHeader() {
                 <li key={n.href}>
                   <Link
                     href={n.href}
-                    className={`rounded-lg px-3 py-2 text-[15px] font-semibold transition hover:bg-sunken ${
+                    className={`whitespace-nowrap rounded-lg px-3 py-2 text-[15px] font-semibold transition hover:bg-sunken ${
                       n.accent ? "text-brand" : "text-slate-700 hover:text-ink"
                     }`}
                   >

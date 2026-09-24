@@ -31,7 +31,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
   return (
     <nav
       aria-label="이 안에서 더 좁히기"
-      className="rounded-xl border border-line bg-sunken/70 px-3.5 py-3"
+      className="card px-4 py-3.5 sm:px-5"
     >
       <p className="text-sm font-medium text-slate-700">
         이 안에서 더 좁히기
@@ -56,7 +56,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
                 key={c.slug}
                 href={c.href}
                 prefetch={false}
-                className="rounded-full border border-line bg-white px-2.5 py-1 text-xs text-slate-600 transition hover:border-brand hover:text-brand"
+                className="rounded-full bg-ground px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
               >
                 {c.label}
                 <span className="ml-1 text-slate-400">{c.count}</span>
@@ -67,7 +67,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
                 href={r.moreHref}
                 prefetch={false}
                 aria-label={`나머지 ${r.label} 고르기 — 조건으로 찾기`}
-                className="rounded-full border border-line bg-white px-2.5 py-1 text-xs text-slate-600 transition hover:border-brand hover:text-brand"
+                className="rounded-full bg-ground px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
               >
                 …
               </Link>

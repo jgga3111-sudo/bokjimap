@@ -9,6 +9,7 @@ import {
   visiblePayTypes,
   won,
   periodLabel,
+  gwa,
 } from "@/lib/display";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
 import { statedApplyPeriod } from "@/lib/applyPeriod";
@@ -92,7 +93,7 @@ export default async function ComparePage({
           <Link href={`/service/${a.id}`} className="font-bold text-brand underline">
             {a.name}
           </Link>
-          과(와) 견줄 지원을 하나 고르세요. 아래는 같은 대상·시기로 분류됐거나 담당이
+          {gwa(a.name)} 견줄 지원을 하나 고르세요. 아래는 같은 대상·시기로 분류됐거나 담당이
           같은 사업을 조회수 순으로 여덟 개 뽑은 것입니다.
         </p>
         <ul className="space-y-1.5 text-sm">

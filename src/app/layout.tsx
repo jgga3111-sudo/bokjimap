@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
-  alternates: { canonical: "/" },
+  /* RSS(09-24)는 하위 페이지가 alternates를 통째로 덮으므로 여기와 /guide에만 나간다. */
+  alternates: { canonical: "/", types: { "application/rss+xml": "/rss.xml" } },
   /*
     검색엔진 소유 확인 — 구글만 들어 있다.
 

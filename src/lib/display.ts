@@ -203,6 +203,13 @@ export function ro(word: string): string {
   return jong === 0 || jong === 8 ? `${word}로` : `${word}으로`;
 }
 
+/** 「과/와」만 돌려준다. 한글이 아닌 글자로 끝나면(괄호·숫자) 판정할 수 없어 「과(와)」. */
+export function gwa(word: string): string {
+  const code = (word.at(-1) ?? "").charCodeAt(0) - 0xac00;
+  if (!(code >= 0 && code <= 11171)) return "과(와)";
+  return code % 28 === 0 ? "와" : "과";
+}
+
 /**
  * 목록 카드의 요약문 자르기 (2026-09-13).
  *

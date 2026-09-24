@@ -7,7 +7,7 @@ import AdSenseScript from "@/components/AdSenseScript";
 export const metadata: Metadata = {
   title: "복지 신청 안내 — 신청 방법·서류·용어",
   description: `복지 지원금을 어디서 신청하는지, 어떤 서류가 필요한지, 공고문의 낯선 말이 무슨 뜻인지 — 수록 ${services.length.toLocaleString()}건을 직접 집계해 정리한 안내 글 ${GUIDES.length}편입니다.`,
-  alternates: { canonical: "/guide" },
+  alternates: { canonical: "/guide", types: { "application/rss+xml": "/rss.xml" } },
 };
 
 export default function GuideIndex() {

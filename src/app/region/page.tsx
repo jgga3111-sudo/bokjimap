@@ -17,8 +17,8 @@ export default function RegionIndex() {
     <div className="space-y-6">
       {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
           애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
-      <header>
-        <h1 className="text-2xl font-bold sm:text-3xl">지역별 복지·지원금</h1>
+      <header className="band">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">지역별 복지·지원금</h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
           지자체가 직접 하는 사업은 지역마다 다릅니다. 중앙부처 사업{" "}
           {nationwide}건은 거주지와 무관하게 어디서나 신청할 수 있어, 각 지역

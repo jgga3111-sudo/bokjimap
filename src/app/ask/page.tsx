@@ -211,6 +211,26 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
             </p>
           )}
 
+          {/* 09-24 조건이 둘 이상이면 겹친 목록(/find)으로 잇는다. 칩은 한 축씩만
+              걸려 있어서 「서울 + 청년」을 한 번에 볼 길이 없었다. /find가 받는
+              세 축(생애주기·대상·지역)만 넘긴다. */}
+          {(() => {
+            const qs = new URLSearchParams();
+            for (const c of answer.applied) {
+              if ((c.axis === "life" || c.axis === "target" || c.axis === "region") && !qs.has(c.axis)) {
+                qs.set(c.axis, c.slug);
+              }
+            }
+            if ([...qs.keys()].length < 2) return null;
+            return (
+              <p className="mt-3 text-sm">
+                <Link href={`/find?${qs}`} className="font-semibold text-brand underline hover:no-underline">
+                  이 조건을 겹친 전체 목록 보기 →
+                </Link>
+              </p>
+            );
+          })()}
+
           {/* 혜택은 거르지 않고 위로 올리기만 한다 — 그 사실을 적는다.
               원본이 「전기요금 복지할인」을 「현금지급」으로 분류해 둔 탓에,
               걸러 내면 가장 맞는 답이 사라진다(lib/askSearch.ts). */}

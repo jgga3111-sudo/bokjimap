@@ -1,6 +1,7 @@
 import { services } from "@/data/services";
 import type { WelfareService } from "@/types/welfare";
-import { LIFE_STAGES, TARGETS } from "@/lib/axes";
+import { LIFE_STAGES, TARGETS, THEMES } from "@/lib/axes";
+import { INCOME_BANDS } from "@/lib/income";
 import { BENEFITS, hasBenefit } from "@/lib/benefits";
 import { SIDO_LIST } from "@/lib/regions";
 
@@ -96,5 +97,30 @@ export function amongListed(s: WelfareService): AmongRow[] {
   benefit.sort((a, b) => a.count - b.count);
   if (benefit[0]) rows.push(benefit[0]);
 
-  return rows.slice(0, 4);
+  /* 09-24 주제·소득 기준선 줄. 두 허브(/theme/*·/income/*)는 들어오는 링크가
+     목록 쪽 하나뿐이었다. 주제는 중앙부처에만 붙는다(5절). 소득은 기준선이
+     하나로 적힌 사업만, 그 기준선 페이지가 있을 때만 잇는다. */
+  const theme: AmongRow[] = [];
+  for (const slug of s.themes) {
+    const axis = THEMES.find((t) => t.slug === slug);
+    if (!axis) continue;
+    theme.push({
+      label: `「${axis.label}」 주제로 분류된 사업`,
+      count: services.filter((x) => x.themes.includes(slug)).length,
+      href: `/theme/${slug}`,
+    });
+  }
+  theme.sort((a, b) => a.count - b.count);
+  if (theme[0]) rows.push(theme[0]);
+
+  const band = INCOME_BANDS.find((b) => b.percent === s.medianPercent);
+  if (band) {
+    rows.push({
+      label: `선정기준에 「기준 중위소득 ${band.percent}%」가 적힌 사업`,
+      count: band.count,
+      href: `/income/${band.percent}`,
+    });
+  }
+
+  return rows.slice(0, 6);
 }

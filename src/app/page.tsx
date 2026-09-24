@@ -353,7 +353,7 @@ export default function Home() {
         상자는 평범한 `<form method="get">`이라 자바스크립트가 0바이트다.
         답하는 쪽(`/ask`)은 서버에서 900건을 훑는다.
       */}
-      <section className="rounded-2xl bg-white p-5 shadow-[0_1px_3px_rgba(16,24,40,0.06)] ring-1 ring-line/70 sm:p-7">
+      <section id="ask" className="scroll-mt-20 rounded-2xl bg-white p-5 shadow-[0_1px_3px_rgba(16,24,40,0.06)] ring-1 ring-line/70 sm:p-7">
         <h2 className="text-xl font-extrabold">받고 싶은 지원을 말로 물어보세요</h2>
         <p className="mt-0.5 mb-4 text-sm leading-relaxed text-slate-600">
           나이·지역·상황을 문장으로 적어 주시면, 조건으로 바꿔 수록{" "}

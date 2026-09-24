@@ -3,6 +3,9 @@ import Link from "next/link";
 import { services } from "@/data/services";
 import ServiceList from "@/components/ServiceList";
 import ClosedList from "@/components/ClosedList";
+import DeadlineBadge from "@/components/DeadlineBadge";
+import { nameWithAlias } from "@/lib/aliases";
+import { placeLabel } from "@/lib/display";
 
 export const metadata: Metadata = {
   title: "많이 찾는 복지·지원금 순위",
@@ -18,11 +21,19 @@ export default function ServiceIndex() {
   const list = services.slice(0, PAGE_SIZE);
   const online = services.filter((s) => s.onlineApply).length;
   const cash = services.filter((s) => s.payTypes.includes("현금지급")).length;
+  /* 09-24 「최근 바뀐·새로 실은 지원」. 날짜는 이미 항목마다 있다(changedAt·addedAt) —
+     관심 지원의 「내용 바뀜」에만 쓰던 값을 목록으로도 보인다. 따로 페이지를 만들면
+     스무 건 남짓의 얇은 페이지라 여기 한 칸으로 둔다. 새로 실은 것은 받은 날이 곧
+     바뀐 날이라 changedAt보다 addedAt을 먼저 본다. */
+  const recent = services
+    .filter((s) => s.addedAt || s.changedAt)
+    .map((s) => ({ s, added: !!s.addedAt, date: (s.addedAt ?? s.changedAt)! }))
+    .sort((a, b) => b.date.localeCompare(a.date) || b.s.views - a.s.views);
 
   return (
     <div className="space-y-6">
-      <header>
-        <h1 className="text-2xl font-bold sm:text-3xl">
+      <header className="band">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">
           많이 찾는 복지·지원금
         </h1>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -45,7 +56,7 @@ export default function ServiceIndex() {
         </dl>
       </header>
 
-      <div className="rounded-xl border border-line bg-brand-soft/50 px-4 py-3 text-sm">
+      <div className="rounded-2xl bg-brand-soft px-5 py-4 text-sm">
         내 소득이 어느 구간인지 모르겠다면{" "}
         <Link href="/check" className="font-bold text-brand underline">
           1분 자가진단
@@ -77,6 +88,39 @@ export default function ServiceIndex() {
           </Link>
           . 각 목록에서 조건으로 좁히거나 전체를 이름으로 훑어볼 수 있습니다.
         </p>
+      )}
+
+      {recent.length > 0 && (
+        <section className="card p-5 sm:p-7">
+          <h2 className="text-lg font-extrabold text-ink">최근 바뀐·새로 실은 지원</h2>
+          <p className="mt-1 text-xs leading-relaxed text-muted">
+            원본을 다시 받아 대조했을 때 <strong>내용이 달라진 사업</strong>과 나중에{" "}
+            <strong>새로 실은 사업</strong>입니다. 날짜는 저희가 대조·수록한 날입니다.
+          </p>
+          <ul className="mt-3 divide-y divide-line">
+            {recent.map(({ s, added, date }) => (
+              <li key={s.id}>
+                <Link
+                  href={`/service/${s.id}`}
+                  className="group flex flex-wrap items-baseline gap-x-2 gap-y-0.5 py-3"
+                >
+                  <span
+                    className={`shrink-0 rounded-md px-1.5 py-0.5 text-[11px] font-bold ${
+                      added ? "bg-emerald-50 text-emerald-700" : "bg-brand-soft text-brand"
+                    }`}
+                  >
+                    {added ? "새로 실음" : "내용 바뀜"} {date.slice(5).replace("-", "/")}
+                  </span>
+                  <span className="min-w-0 flex-1 text-[15px] font-medium text-ink group-hover:text-brand">
+                    {nameWithAlias(s.id, s.name)}
+                  </span>
+                  <span className="text-xs text-muted">{placeLabel(s)}</span>
+                  <DeadlineBadge id={s.id} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       {/* 마감된 것을 따로 모은다(2026-09-13). 위 목록에서는 빼지 않고 딱지만

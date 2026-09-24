@@ -15,8 +15,8 @@ export default function ThemeIndex() {
     <div className="space-y-6">
       {/* 광고 코드 없음(2026-09-13) — 칸 몇 개로 된 길잡이 화면이라 본문이 200~500자다.
           애드센스 「탐색용 화면에 광고」 정책에 걸리지 않게 뺀다(AdSenseScript 머리말). */}
-      <header className="space-y-1">
-        <h1 className="text-2xl font-bold">주제별 복지·지원금</h1>
+      <header className="band space-y-1.5">
+        <h1 className="text-2xl font-extrabold sm:text-3xl">주제별 복지·지원금</h1>
         <p className="text-sm leading-relaxed text-muted">
           중앙부처가 운영하는 사업을 주제로 나눈 것입니다. 무엇이 급한지는
           아는데 사업 이름을 모를 때 여기서 찾으세요.

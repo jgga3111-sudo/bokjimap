@@ -47,8 +47,20 @@ export default function GuideNav({ current }: { current: string }) {
     ...(published ? { datePublished: published } : {}),
     dateModified: g.updated,
     mainEntityOfPage: `${SITE.url}/guide/${g.slug}`,
+    /* 09-24 공유 이미지를 Article에도 싣는다(43편 전부 opengraph-image가 있다). */
+    image: `${SITE.url}/guide/${g.slug}/opengraph-image`,
     author: { "@type": "Person", name: SITE.operator },
     publisher: { "@type": "Person", name: SITE.operator },
+  };
+  /* 검색 결과에 「복지클릭 › 복지 신청 안내 › 글」 경로가 보이게(상세와 같은 모양). */
+  const crumbs = g && {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "복지 신청 안내", item: `${SITE.url}/guide` },
+      { "@type": "ListItem", position: 3, name: g.title },
+    ],
   };
 
   return (
@@ -89,6 +101,12 @@ export default function GuideNav({ current }: { current: string }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(article) }}
+        />
+      )}
+      {crumbs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(crumbs) }}
         />
       )}
       <div className="flex items-baseline justify-between gap-3">

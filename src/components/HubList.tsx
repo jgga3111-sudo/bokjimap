@@ -123,9 +123,9 @@ export default function HubList({
         <details
           open={openFilter}
           onToggle={(e) => setOpenFilter(e.currentTarget.open)}
-          className="rounded-xl border border-line bg-sunken/70"
+          className="card"
         >
-          <summary className="cursor-pointer px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-brand">
+          <summary className="cursor-pointer px-4 py-3 text-sm font-semibold text-slate-700 hover:text-brand sm:px-5">
             조건으로 좁히기
             <span className="ml-1.5 text-xs font-normal text-muted">
               {groups.map((g) => g.label).join(" · ")}
@@ -136,7 +136,7 @@ export default function HubList({
               </span>
             )}
           </summary>
-          <div className="space-y-2.5 border-t border-line px-3.5 pt-3 pb-3.5">
+          <div className="space-y-2.5 border-t border-line px-4 pt-3 pb-4 sm:px-5">
             {groups.map((g) => {
               /* 남는 칸이 없는 축은 줄째로 뺀다. 「서울」을 고르면 주제 축은
                  고를 게 하나도 없어지는데, 라벨만 덩그러니 남으면 고장으로
@@ -171,7 +171,7 @@ export default function HubList({
                         className={`rounded-full border px-2.5 py-1 text-xs transition ${
                           on
                             ? "border-brand bg-brand font-medium text-white"
-                            : "border-line bg-white text-slate-600 hover:border-brand hover:text-brand"
+                            : "border-transparent bg-ground text-slate-700 hover:bg-brand-soft hover:text-brand"
                         }`}
                       >
                         {o.label}
@@ -228,7 +228,7 @@ export default function HubList({
             <button
               type="button"
               onClick={() => setShown((n) => n + PAGE)}
-              className="w-full rounded-xl border border-line bg-white py-3 text-sm font-medium text-slate-700 transition hover:border-brand hover:text-brand"
+              className="card w-full py-3.5 text-sm font-semibold text-slate-700 transition hover:text-brand"
             >
               {(filtered.length - shown).toLocaleString()}건 더 보기
             </button>
@@ -240,8 +240,8 @@ export default function HubList({
           Link 대신 a를 쓴다. 수백 개를 Link로 걸면 미리 가져오기가 한꺼번에
           돌아 목록을 여는 것만으로 네트워크가 붐빈다. */}
       {filtered.length > PAGE && (
-        <details className="rounded-xl border border-line bg-white">
-          <summary className="cursor-pointer px-4 py-3 text-sm font-medium text-slate-700 hover:text-brand">
+        <details className="card">
+          <summary className="cursor-pointer px-4 py-3.5 text-sm font-semibold text-slate-700 hover:text-brand sm:px-5">
             전체 {filtered.length.toLocaleString()}건 이름으로 훑어보기
           </summary>
           <ul className="grid gap-x-4 gap-y-1.5 border-t border-line px-4 py-3.5 text-sm sm:grid-cols-2">
@@ -292,7 +292,7 @@ export default function HubList({
         <p className="pt-1 text-center">
           <a
             href="#top"
-            className="inline-block rounded-lg border border-line bg-white px-4 py-2 text-xs text-muted transition hover:border-brand hover:text-brand"
+            className="card inline-block px-4 py-2 text-xs text-muted transition hover:text-brand"
           >
             ↑ 맨 위로 — 조건 다시 고르기
           </a>
