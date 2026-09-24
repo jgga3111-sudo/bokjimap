@@ -22,7 +22,7 @@ export type Gov24Row = {
 };
 
 /** 보조금24 원본을 받아 대조한 날. */
-export const GOV24_CHECKED = "2026-09-24";
+export const GOV24_CHECKED = "2026-09-25";
 
 export const GOV24: Readonly<Record<string, Gov24Row>> = {
  "WLF00004661": {
@@ -4417,7 +4417,7 @@ export const GOV24: Readonly<Record<string, Gov24Row>> = {
   "laws": "청년기본법(제20조)",
   "localLaws": "제주특별자치도 주거기본 조례(제12조)",
   "onlineUrl": null,
-  "deadline": "2026.02.03~2026.05.08"
+  "deadline": "2026.10.02~2026.11.20"
  },
  "WLF00001446": {
   "id": "WLF00001446",

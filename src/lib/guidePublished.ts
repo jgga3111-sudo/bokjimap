@@ -50,4 +50,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "youth-special-support": "2026-09-24",
   "period-product-voucher": "2026-09-24",
   "self-reliance-allowance": "2026-09-24",
+  "disability-activity-support": "2026-09-25",
 };
