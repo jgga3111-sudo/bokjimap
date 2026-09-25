@@ -49,8 +49,8 @@ export default function GuideNav({ current }: { current: string }) {
     mainEntityOfPage: `${SITE.url}/guide/${g.slug}`,
     /* 09-24 공유 이미지를 Article에도 싣는다(43편 전부 opengraph-image가 있다). */
     image: `${SITE.url}/guide/${g.slug}/opengraph-image`,
-    author: { "@type": "Person", name: SITE.operator },
-    publisher: { "@type": "Person", name: SITE.operator },
+    author: { "@type": "Person", name: SITE.operator, url: `${SITE.url}/about` },
+    publisher: { "@type": "Person", name: SITE.operator, url: `${SITE.url}/about` },
   };
   /* 검색 결과에 「복지클릭 › 복지 신청 안내 › 글」 경로가 보이게(상세와 같은 모양). */
   const crumbs = g && {
@@ -77,6 +77,16 @@ export default function GuideNav({ current }: { current: string }) {
           모든 글 끝에 이미 붙는 이 부품에 한 번 넣어 빠뜨릴 수 없게 한다. */}
       <aside className="mb-8 rounded-xl border border-line bg-white px-4 py-3.5 text-sm leading-relaxed text-slate-700">
         <p className="font-bold text-ink">이 글은 이렇게 썼습니다</p>
+        {/* 쓴 사람·날짜(2026-09-25) — 애드센스 점검에서 「운영자 익명」 지적. JSON-LD에만 있던 것을 화면에 둔다. */}
+        {g && (
+          <p className="mt-1 text-xs text-muted">
+            쓴 사람{" "}
+            <Link href="/about" className="underline hover:text-brand">
+              {SITE.operator}
+            </Link>
+            {published && <> · 처음 올린 날 {published}</>} · 마지막으로 고친 날 {g.updated}
+          </p>
+        )}
         <p className="mt-1">
           복지클릭 운영자가 공공데이터와 법령·고시·정부 사업안내서를 직접 읽고 썼습니다. 금액과
           조건은 원문 표현을 그대로 옮기고, 저희가 계산한 값에는 따로 표시했습니다. 받을 수

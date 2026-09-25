@@ -30,6 +30,9 @@ const topShare = totalViews
   ? Math.round((byViews.slice(0, TOP_N).reduce((a, s) => a + s.views, 0) / totalViews) * 1000) / 10
   : 0;
 const central = services.filter((s) => s.provider === "central").length;
+/* 새로 넣은 사업은 받은 날이 곧 checkedAt이라 「다시 받아 대조」에서 뺀다(상세 페이지와 같은 규칙). */
+const rechecked = services.filter((s) => s.checkedAt && s.checkedAt !== s.addedAt).length;
+const changed = services.filter((s) => s.changedAt).length;
 
 export default function AboutPage() {
   return (
@@ -49,6 +52,13 @@ export default function AboutPage() {
           정작 공공데이터포털에는 중앙부처와 지자체의 복지 서비스가 모두 공개돼
           있습니다. 흩어져 있을 뿐 없는 정보가 아닙니다. 복지클릭은 그 데이터를
           받아 사람이 읽을 수 있는 형태로 정리합니다.
+        </p>
+        <p>
+          정리하다 보니 공공데이터에 <strong>가장 궁금한 값이 빠진 경우</strong>가 많았습니다.
+          장애인활동지원 원문은 바우처를 &ldquo;인정등급에 해당되는 만큼의 매월 일정액&rdquo;이라고만
+          적어 금액이 한 줄도 없고, 사람들이 많이 검색하는 근로장려금·기초연금의 지급일은 원문에 칸
+          자체가 없습니다. 그런 값은 보건복지부 사업안내서와 법령 조문에서 찾아 쪽수·조항과 함께
+          싣습니다. 원문을 옮기는 데서 멈추지 않고 그 빈자리를 채우는 것이 복지클릭이 하는 일입니다.
         </p>
       </DocSection>
 
@@ -193,6 +203,36 @@ export default function AboutPage() {
                 개인정보처리방침
               </Link>{" "}
               4조에 적었습니다.
+            </>,
+          ]}
+        />
+      </DocSection>
+
+      <DocSection title="어떻게 확인하나">
+        <DocList
+          items={[
+            <>
+              <strong>목록 전체를 직전 목록과 대조합니다.</strong> 점검할 때마다 공공데이터포털의 복지
+              서비스 {SOURCE_TOTAL.toLocaleString()}건을 새로 받아 새로 생긴 사업·없어진 사업·바뀐
+              항목을 찾습니다.
+            </>,
+            <>
+              <strong>수록한 사업을 다시 받아 한 글자씩 비교합니다.</strong> 지금까지 {rechecked}건을
+              다시 받아 대조했고, 내용이 실제로 바뀐 {changed}건은 상세 페이지에 &ldquo;바뀐 내용을
+              반영&rdquo;했다고 적었습니다.
+            </>,
+            <>
+              <strong>두 번째 출처와 맞춰 봅니다.</strong> 행정안전부 공공서비스 정보(보조금24)의
+              신청 서류·신청 기한을 같은 사업끼리 맞춰 붙이고, 두 출처가 다르면 다르다고 적습니다.
+            </>,
+            <>
+              <strong>계산기는 정부 표와 칸마다 대조합니다.</strong> 예를 들어 장애인활동지원 본인부담금
+              계산기는 사업안내서 조견표 90칸이 모두 같게 나오는 것을 확인한 뒤에 실었습니다.
+            </>,
+            <>
+              <strong>틀린 것은 1차 출처로 다시 확인해 고칩니다.</strong> 최근에는 근로장려금의 법정 지급 기한을 지급일처럼
+              적었던 것, 에너지바우처 여름 몫이 겨울로 이월되지 않는다고 적었던 것을 고시·보도자료로
+              바로잡았습니다.
             </>,
           ]}
         />

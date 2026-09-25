@@ -147,9 +147,18 @@ const decodeNamedSymbols = (s) => s.replace(RE_SYMBOL, (m, k) => SYMBOL_ENTITIES
  * 남는 위험은 본문에 "&#13;"을 글자 그대로 설명하는 경우뿐인데, 복지 공고문에
  * 그런 문장은 없다.
  */
+/**
+ * 깨진 글머리 글자 (2026-09-25). 원문 편집기가 Wingdings 같은 기호 글꼴로 찍은 글머리가
+ * 사용자 영역 글자(U+E000~F8FF)로 넘어와 화면에 네모로 나온다. 보조금24의 「수집\uF09E이용」처럼
+ * 가운뎃점 자리에 쓰인 것이 확인돼 가운뎃점으로 바꾼다. 「？」(전각 물음표)도 같은 자리가 깨진
+ * 것이다 — 「수집？이용」「시？군」. 문자열 맨 앞(「？「장애인복지법」」)이면 떼고 나머지는 가운뎃점.
+ * 전각 별표 「＊」는 원문의 주석 표시라 그대로 둔다.
+ */
+const fixGlyphs = (s) =>
+  s.replace(/[\uE000-\uF8FF]/g, "·").replace(/^？\s*/, "").replace(/？/g, "·");
 function clean(v) {
   if (!v) return null;
-  const s = decodeNamedSymbols(decodeNumeric(decodeEntities(v)))
+  const s = fixGlyphs(decodeNamedSymbols(decodeNumeric(decodeEntities(v))))
     .replace(/\r\n?/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();

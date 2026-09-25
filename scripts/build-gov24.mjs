@@ -29,6 +29,15 @@ import path from "node:path";
 
 const CHECKED = process.argv[2] ?? new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10) /* KST — UTC면 오전 9시 전에 어제가 된다 */;
 const SRC = path.join("data-research", "gov24");
+/**
+ * 깨진 글머리 글자 (2026-09-25). 원문 편집기가 Wingdings 같은 기호 글꼴로 찍은 글머리가
+ * 사용자 영역 글자(U+E000~F8FF)로 넘어와 화면에 네모로 나온다. 보조금24의 「수집\uF09E이용」처럼
+ * 가운뎃점 자리에 쓰인 것이 확인돼 가운뎃점으로 바꾼다. 「？」(전각 물음표)도 같은 자리가 깨진
+ * 것이다 — 「수집？이용」「시？군」. 문자열 맨 앞(「？「장애인복지법」」)이면 떼고 나머지는 가운뎃점.
+ * 전각 별표 「＊」는 원문의 주석 표시라 그대로 둔다.
+ */
+const fixGlyphs = (s) =>
+  s.replace(/[\uE000-\uF8FF]/g, "·").replace(/^？\s*/, "").replace(/？/g, "·");
 const read = (f) => JSON.parse(fs.readFileSync(path.join(SRC, f), "utf8"));
 
 const list = read("serviceList.json");
@@ -136,7 +145,7 @@ for (const s of ours) {
 
   const d = details.get(best["서비스ID"]) ?? {};
   const val = (k) => {
-    const v = (d[k] ?? "").trim();
+    const v = fixGlyphs((d[k] ?? "").trim());
     return v && v !== "해당없음" ? v : null;
   };
 

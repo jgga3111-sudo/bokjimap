@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { TARGETS } from "@/lib/axes";
 import { services } from "@/data/services";
 import AxisGrid from "@/components/AxisGrid";
+import AxisIndexNote from "@/components/AxisIndexNote";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "대상별 복지·지원금",
@@ -23,6 +25,18 @@ export default function TargetIndex() {
         items={TARGETS}
         countOf={(a) => services.filter((s) => s.targets.includes(a.slug)).length}
       />
+      <AxisIndexNote field="targets" word="대상" axes={TARGETS}>
+        이 칸은 원문이 말하는 「주로 누구를 위한 사업인가」이지 받을 자격을 판정한 것이 아닙니다.
+        「저소득」 칸에 있어도 소득 기준선은 사업마다 따로 있습니다. 기준선이 원문에 적힌 사업은{" "}
+        <Link href="/income" className="text-brand underline">
+          소득기준별 찾기
+        </Link>
+        에 모아 두었고, 내 소득이 기준 중위소득의 몇 %인지는{" "}
+        <Link href="/check" className="text-brand underline">
+          소득 자가진단
+        </Link>
+        에서 계산할 수 있습니다.
+      </AxisIndexNote>
     </div>
   );
 }
