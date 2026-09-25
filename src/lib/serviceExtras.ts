@@ -71,6 +71,9 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "self-reliance-allowance": ["WLF00001175", "WLF00005445"],
   /* 2026-09-25 — 보건복지부 2026 사업안내로 구간별 월 한도액·본인부담금·65세 이후를 옮긴 글. */
   "disability-activity-support": ["WLF00003260"],
+  /* 2026-09-26 아침 루틴 — 의료급여법 시행령 별표 1·제13조와 시행규칙으로 본인부담금·월 상한·면제 대상을 옮긴 글.
+     같은 제도의 상위 상세 넷(49·48·33·73위)에 잇는다. */
+  "medical-aid": ["WLF00000102", "WLF00003171", "WLF00000061", "WLF00001169"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
