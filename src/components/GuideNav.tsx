@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
 import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
-import { SITE } from "@/lib/site";
+import { SITE, OPERATOR_CREDENTIALS, OPERATOR_PERSON } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
 import AdSenseScript from "@/components/AdSenseScript";
 import ShareButton from "@/components/ShareButton";
@@ -49,8 +49,8 @@ export default function GuideNav({ current }: { current: string }) {
     mainEntityOfPage: `${SITE.url}/guide/${g.slug}`,
     /* 09-24 공유 이미지를 Article에도 싣는다(43편 전부 opengraph-image가 있다). */
     image: `${SITE.url}/guide/${g.slug}/opengraph-image`,
-    author: { "@type": "Person", name: SITE.operator, url: `${SITE.url}/about` },
-    publisher: { "@type": "Person", name: SITE.operator, url: `${SITE.url}/about` },
+    author: OPERATOR_PERSON,
+    publisher: OPERATOR_PERSON,
   };
   /* 검색 결과에 「복지클릭 › 복지 신청 안내 › 글」 경로가 보이게(상세와 같은 모양). */
   const crumbs = g && {
@@ -83,7 +83,8 @@ export default function GuideNav({ current }: { current: string }) {
             쓴 사람{" "}
             <Link href="/about" className="underline hover:text-brand">
               {SITE.operator}
-            </Link>
+            </Link>{" "}
+            — {OPERATOR_CREDENTIALS}
             {published && <> · 처음 올린 날 {published}</>} · 마지막으로 고친 날 {g.updated}
           </p>
         )}

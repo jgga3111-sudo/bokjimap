@@ -9,6 +9,12 @@ export const SITE = {
   operator: "복지클릭 운영자 (개인)",
 
   /**
+   * 운영자가 가진 국가자격 (2026-09-25 사용자 확인). 소개·글 끝·푸터·JSON-LD에 붙인다.
+   * 약관·방침의 운영 주체 표기(operator)는 그대로 둔다 — 자격은 주체가 아니라 설명이다.
+   */
+  credentials: ["사회복지사 2급", "재활상담사 2급"],
+
+  /**
    * 문의·오류 신고 주소. 화면에는 `MailLink`로 조합해 띄운다
    * (본문에 평문으로 박아 두면 수집 대상이 된다).
    */
@@ -23,6 +29,21 @@ export const SITE = {
 } as const;
 
 export const CONTACT_EMAIL = `${SITE.contactUser}@${SITE.contactHost}`;
+
+/** 화면용 한 줄 — 「사회복지사 2급 · 재활상담사 2급」 */
+export const OPERATOR_CREDENTIALS = SITE.credentials.join(" · ");
+
+/** JSON-LD의 운영자 Person (layout WebSite·안내 글 Article이 같이 쓴다). */
+export const OPERATOR_PERSON = {
+  "@type": "Person",
+  name: SITE.operator,
+  url: `${SITE.url}/about`,
+  hasCredential: SITE.credentials.map((name) => ({
+    "@type": "EducationalOccupationalCredential",
+    credentialCategory: "국가자격",
+    name,
+  })),
+};
 
 /**
  * 색인되는 페이지의 robots 값 (2026-09-11).

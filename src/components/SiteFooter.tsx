@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE } from "@/lib/site";
+import { SITE, OPERATOR_CREDENTIALS } from "@/lib/site";
 import MailLink from "./MailLink";
 import BrandMark from "./BrandMark";
 
@@ -104,7 +104,7 @@ export default function SiteFooter() {
 
         <div className="mt-10 space-y-2 border-t border-line pt-6 text-xs text-muted">
           <p>
-            운영자 {SITE.operator} · 문의{" "}
+            운영자 {SITE.operator} — {OPERATOR_CREDENTIALS} · 문의{" "}
             <MailLink className="underline hover:text-brand" />
           </p>
           <p>

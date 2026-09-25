@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
 import MailLink from "@/components/MailLink";
-import { SITE } from "@/lib/site";
+import { SITE, OPERATOR_CREDENTIALS } from "@/lib/site";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import { SIDO_LIST } from "@/lib/regions";
 import { BASE_YEAR } from "@/lib/midIncome";
@@ -246,7 +246,10 @@ export default function AboutPage() {
       <DocSection title="운영">
         <DocList
           items={[
-            <>운영자: {SITE.operator}</>,
+            <>
+              운영자: {SITE.operator} — {OPERATOR_CREDENTIALS} 국가자격을 가지고 있습니다. 자격은 정보를
+              정리하는 사람의 배경이고, 이 사이트가 개별 상담이나 자격 판정을 한다는 뜻은 아닙니다.
+            </>,
             <>
               데이터를 처음 받은 날 {SERVICES_UPDATED} · 상위 사업을 다시 받아 대조한 날{" "}
               {SOURCE_TOTALS.checkedAt}. 사업마다의 확인일은 각 상세 페이지 제목 아래에 있습니다.
