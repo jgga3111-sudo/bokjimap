@@ -88,9 +88,10 @@ export default function GuideNav({ current }: { current: string }) {
           </p>
         )}
         <p className="mt-1">
-          복지클릭 운영자가 공공데이터와 법령·고시·정부 사업안내서를 직접 읽고 썼습니다. 금액과
-          조건은 원문 표현을 그대로 옮기고, 저희가 계산한 값에는 따로 표시했습니다. 받을 수
-          있는지는 판정하지 않습니다.
+          공공데이터와 법령·고시·정부 사업안내서를 근거로, AI 도구의 도움을 받아 썼습니다. 금액과
+          조건은 원문 표현을 그대로 옮기고 출처의 조항·쪽수를 달았으며, 저희가 계산한 값에는 따로
+          표시했습니다. 내용의 책임은 복지클릭 운영자에게 있습니다. 받을 수 있는지는 판정하지
+          않습니다.
         </p>
         <p className="mt-1.5 text-xs text-muted">
           <Link href="/standards" className="underline hover:text-brand">
