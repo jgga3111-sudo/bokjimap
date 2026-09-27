@@ -55,4 +55,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "cancer-screening": "2026-09-27",
   "daily-care": "2026-09-27",
   "senior-care": "2026-09-28",
+  "emergency-care": "2026-09-28",
 };

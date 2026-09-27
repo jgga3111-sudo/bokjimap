@@ -427,7 +427,7 @@ export default function DailyCareGuide() {
         <DocNote tone="amber" title="이 글에 없는 것">
           시·도가 따로 만든 특화서비스(경기 세탁 서비스 등, 23쪽)의 가격은 싣지 않았습니다. 수술·사고로 갑자기 며칠
           돌봄이 필요한 경우는 기간과 조건이 다른{" "}
-          <Link href="/service/WLF00005442" className="text-brand underline">
+          <Link href="/guide/emergency-care" className="text-brand underline">
             긴급돌봄 지원사업
           </Link>
           이 따로 있습니다. 대상이 되는지는 주민센터가 정합니다 — 이 글은 판정하지 않습니다.
