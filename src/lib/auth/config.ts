@@ -68,7 +68,11 @@ export function safeNext(raw: string | null | undefined, fallback: string): stri
     const base = "https://bokjiclick.invalid";
     const u = new URL(raw, base);
     if (u.origin !== base) return fallback;
-    return u.pathname + u.search + u.hash;
+    /* ⚠ 출처 대조만으로는 모자랐다(09-28 보안 점검) — `/.//evil.com`·`/%2e//evil.com`은
+       출처가 그대로인 채 풀려 경로가 `//evil.com`이 되고, 받는 쪽이 이것을 다시 URL로
+       풀면 다른 사이트로 간다. 풀어 낸 경로도 `//`로 시작하면 거절한다. */
+    const out = u.pathname + u.search + u.hash;
+    return out.startsWith("//") ? fallback : out;
   } catch {
     return fallback;
   }

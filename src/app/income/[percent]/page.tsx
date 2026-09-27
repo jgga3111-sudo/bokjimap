@@ -6,7 +6,6 @@ import { BASE_YEAR, thresholdOf } from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
-import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
 import HubIntro from "@/components/HubIntro";
 import { INCOME_NOTES } from "@/lib/hubNotes";
 
@@ -56,7 +55,8 @@ export default async function IncomeBandPage({
 
   return (
     <div className="space-y-6">
-      {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
+      {/* 광고 코드 없음(09-28) — 링크 목록 화면이라 뺐다(AdSenseScript 머리말). 승인 뒤 되돌리려면
+          `note && rows.length >= 10 && <AdSenseScript />` 한 줄. */}
       <div className="band">
       <nav aria-label="위치" className="text-xs text-muted">
         <Link href="/" className="hover:text-brand">

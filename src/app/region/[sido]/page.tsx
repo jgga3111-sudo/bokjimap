@@ -9,7 +9,6 @@ import HubList from "@/components/HubList";
 import { toRow, facetsFor } from "@/lib/hubRows";
 import NarrowChips from "@/components/NarrowChips";
 import { topBenefits, joinCounts } from "@/lib/hubMeta";
-import AdSenseScript, { AD_MIN_ITEMS } from "@/components/AdSenseScript";
 import HubIntro from "@/components/HubIntro";
 import { REGION_NOTES } from "@/lib/hubNotes";
 
@@ -71,7 +70,8 @@ export default async function RegionPage({
 
   return (
     <div className="space-y-8">
-      {note && rows.length >= AD_MIN_ITEMS && <AdSenseScript />}
+      {/* 광고 코드 없음(09-28) — 링크 목록 화면이라 뺐다(AdSenseScript 머리말). 승인 뒤 되돌리려면
+          `note && rows.length >= 10 && <AdSenseScript />` 한 줄. */}
       <header className="band">
         <h1 className="text-2xl font-extrabold sm:text-3xl">
           {sido.name} 복지·지원금

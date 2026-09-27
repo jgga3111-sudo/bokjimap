@@ -229,7 +229,7 @@ const stageOf = (step: string) =>
 
 /* sort는 안정 정렬이라 같은 단계끼리는 원문 순서가 남는다. */
 const orderedSteps = (steps: string[]) =>
-  [...steps].sort((a, b) => stageOf(a) - stageOf(b));
+  [...new Set(steps)].sort((a, b) => stageOf(a) - stageOf(b));
 
 /**
  * 원문의 **선정 기준** 칸이 다른 칸(지원 대상·지원 내용)과 같은 문장이면 절을 하나 뺀다.
@@ -247,7 +247,14 @@ const criteriaDupOf = (s: WelfareService): "target" | "benefit" | null =>
 
 /* 보조금24는 법령 없이 자치법규만 주는 행이 많다 — 둘 중 하나만 있어도 절을 그린다. */
 const hasLawSection = (s: WelfareService) =>
-  s.lawBasis.length > 0 || !!GOV24[s.id]?.laws || !!GOV24[s.id]?.localLaws;
+  s.lawBasis.length > 0 || g24Laws(s).length > 0;
+/* 보조금24 법령·자치법규 줄. 복지로 줄과 글자까지 같은 것은 뺀다 — 같은 이름이 한 절에
+   두 번 찍혀 새 정보가 없다(09-28 애드센스 점검, 「같은 페이지 안의 중복」). 조문 번호가
+   붙은 줄(「기초연금법(제3조)」)은 글자가 달라 그대로 남는다(09-16 주석). */
+const g24Laws = (s: WelfareService) =>
+  [...(GOV24[s.id]?.laws?.split("||") ?? []), ...(GOV24[s.id]?.localLaws?.split("||") ?? [])]
+    .map((l) => l.trim())
+    .filter((l) => l && !s.lawBasis.includes(l));
 
 const TOC = [
   /* 원문에 없는 것이라 원문 절들보다 앞에 둔다(SiteChecked 주석). */
@@ -1295,7 +1302,7 @@ export default async function ServiceDetail({
       {s.forms.length > 0 && (
         <Section id="forms" title="서식·안내 자료">
           <ul className="space-y-1.5 text-sm">
-            {s.forms.map((f, i) => {
+            {s.forms.filter((f, i) => s.forms.findIndex((g) => g.url === f.url) === i).map((f, i) => {
               const url = safeUrl(f.url);
               if (!url) return null;
               /* 파일 이름은 자르지 않고 **갈라서** 적는다 — 이름은 크게, 서식
@@ -1339,14 +1346,11 @@ export default async function ServiceDetail({
           {/* 보조금24는 **조문 번호까지** 준다(「기초연금법(제3조)」). 복지로는 법
               이름만 주므로 겹쳐도 버리지 않고 아래에 따로 적는다 — 어느 쪽이 한
               말인지 섞이지 않게 출처를 붙인다(2026-09-16). */}
-          {(GOV24[s.id]?.laws || GOV24[s.id]?.localLaws) && (
+          {g24Laws(s).length > 0 && (
             <div className="mt-3">
               <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
-                {GOV24[s.id]!.laws?.split("||").map((l, i) => (
-                  <li key={`g${i}`}>{l.trim()}</li>
-                ))}
-                {GOV24[s.id]!.localLaws?.split("||").map((l, i) => (
-                  <li key={`c${i}`}>{l.trim()}</li>
+                {g24Laws(s).map((l, i) => (
+                  <li key={`g${i}`}>{l}</li>
                 ))}
               </ul>
               <p className="mt-1.5 text-xs text-muted">
