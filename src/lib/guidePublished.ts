@@ -53,4 +53,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "disability-activity-support": "2026-09-25",
   "medical-aid": "2026-09-26",
   "cancer-screening": "2026-09-27",
+  "daily-care": "2026-09-27",
 };
