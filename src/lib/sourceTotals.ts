@@ -13,7 +13,7 @@ import { services, SERVICES_UPDATED } from "@/data/services";
 export const SOURCE_TOTALS = {
   central: 461,
   local: 4_819,
-  checkedAt: "2026-09-26",
+  checkedAt: "2026-09-27",
 } as const;
 
 export const SOURCE_TOTAL = SOURCE_TOTALS.central + SOURCE_TOTALS.local;

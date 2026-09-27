@@ -52,4 +52,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "self-reliance-allowance": "2026-09-24",
   "disability-activity-support": "2026-09-25",
   "medical-aid": "2026-09-26",
+  "cancer-screening": "2026-09-27",
 };
