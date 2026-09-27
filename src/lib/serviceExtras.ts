@@ -78,6 +78,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "cancer-screening": ["WLF00001176"],
   /* 2026-09-27 저녁(사용자 요청) — 2026년 일상돌봄 서비스 사업안내로 본인부담·유형·이용 기간 규칙을 옮긴 글. */
   "daily-care": ["WLF00005411"],
+  /* 2026-09-28 아침 루틴 — 2026년 노인맞춤돌봄서비스 사업안내로 돌봄군별 시간·퇴원후돌봄군·대기·종결을 옮긴 글. */
+  "senior-care": ["WLF00003191"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
