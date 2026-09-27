@@ -67,3 +67,21 @@ const SIDO_WORDS = new Set(
   ].map((w) => norm(w)),
 );
 export const isSidoWord = (normalized: string) => SIDO_WORDS.has(normalized);
+
+/**
+ * 무엇을 알고 싶은지만 말하는 낱말 — 「기초연금 신청」의 「신청」, 「장애수당 지급일」의 「지급일」.
+ *
+ * 낱말이 모두 걸려야 해서, 본문에 「신청」이 없는 기초연금이 「기초연금 신청」에서 빠지고
+ * 장애인연금이 1위가 됐다. 「기초연금 지급일」은 0건이었다(09-28 점검). 이런 낱말은 안 걸려도
+ * 떨어뜨리지 않는다(점수는 주지 않는다). 질의가 **이런 낱말뿐**이면 평소처럼 센다
+ * (`hasKeyword`) — 안 그러면 「신청」 하나로 910건이 전부 나온다.
+ * `/ask`의 빼는 말(askParse.ts STOP)과 같은 생각이다. `search.ts`·`searchFull.ts`가 같이 쓴다.
+ */
+const INTENT_WORDS = new Set(
+  [
+    "신청", "신청방법", "신청기간", "신청자격", "방법", "금액", "지원금액", "얼마",
+    "지급일", "지급날짜", "대상", "자격", "조건", "서류", "구비서류", "기간", "언제", "기준",
+  ].map((w) => norm(w)),
+);
+export const isIntentWord = (normalized: string) => INTENT_WORDS.has(normalized);
+export const hasKeyword = (tokens: string[]) => tokens.some((t) => !INTENT_WORDS.has(t));

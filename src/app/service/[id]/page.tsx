@@ -66,7 +66,11 @@ function oneLine(t: string): string {
 }
 
 function clip(t: string, n: number): string {
-  return t.length <= n ? t : `${t.slice(0, n - 1).trimEnd()}…`;
+  if (t.length <= n) return t;
+  /* 띄어쓰기에서 자른다 — 글자 수로만 자르니 「6인 2,6…」처럼 금액 한가운데서 끊겨 검색 결과에 나갔다(09-28 점검). */
+  const head = t.slice(0, n - 1);
+  const sp = head.lastIndexOf(" ");
+  return `${(sp > n * 0.6 ? head.slice(0, sp) : head).replace(/[\s·,(—-]+$/, "")}…`;
 }
 
 /** 원문 「지원 내용」에서 금액이 든 첫 문장(원문 그대로, 한 줄로 접음). 없으면 null. */
@@ -126,7 +130,7 @@ export async function generateMetadata({
   return {
     /* 이름이 길면 꼬리를 뗀다. 60자를 넘으면 검색 결과에서 이름부터 잘린다. */
     title: pay?.day
-      ? `${label} 지급일 ${pay.when} — 지원대상·신청방법`
+      ? `${label.replace(/\s*지급$/, "")} 지급일 ${pay.when} — 지원대상·신청방법` /* 「아동수당 지급 지급일」이 되지 않게(09-28) */
       : label.length > 28
         ? label
         : `${label} — 지원대상·지원내용·신청방법`,

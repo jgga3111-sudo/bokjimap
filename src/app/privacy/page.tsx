@@ -37,7 +37,7 @@ export default function PrivacyPage() {
             지웁니다. 이름·연락처·주소는 받지 않습니다. 자가진단에 입력한{" "}
             <strong>소득 금액은 어디에도 저장하지 않습니다.</strong> 가입하지
             않으면 계산 결과와 최근 본 지원·관심 지원은{" "}
-            <strong>이용자 본인의 브라우저에만</strong> 남습니다. 광고 코드가 실린 페이지에서는 Google이 광고 쿠키를 쓸 수 있습니다(4조).
+            <strong>이용자 본인의 브라우저에만</strong> 남습니다. 광고 코드가 실린 페이지에서는 Google이 광고 쿠키를 쓸 수 있습니다(4조). 방문 통계는 쿠키 없이 페이지 단위의 합계로만 셉니다(3조).
           </>
         ) : (
           <>
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             않습니다. 자가진단에 입력한{" "}
             <strong>소득 금액은 어디에도 저장하지 않습니다.</strong> 계산 결과와
             최근 본 지원·관심 지원 같은 이용 기록만 <strong>이용자 본인의 브라우저에</strong> 남으며,
-            운영자의 서버로는 전송되지 않습니다. 광고 코드가 실린 페이지에서는 Google이 광고 쿠키를 쓸 수 있습니다(4조).
+            운영자의 서버로는 전송되지 않습니다. 광고 코드가 실린 페이지에서는 Google이 광고 쿠키를 쓸 수 있습니다(4조). 방문 통계는 쿠키 없이 페이지 단위의 합계로만 셉니다(3조).
           </>
         )}
       </DocNote>
@@ -311,7 +311,7 @@ export default function PrivacyPage() {
               <tr className="border-b border-line">
                 <td className="px-3 py-2.5">Vercel Inc.</td>
                 <td className="px-3 py-2.5 text-slate-600">
-                  웹사이트 호스팅 및 콘텐츠 전송
+                  웹사이트 호스팅 및 콘텐츠 전송, 방문 통계(Web Analytics, 3조)
                 </td>
               </tr>
               <tr className="border-b border-line">

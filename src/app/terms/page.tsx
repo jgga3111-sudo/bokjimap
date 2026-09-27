@@ -16,7 +16,7 @@ export default function TermsPage() {
     <DocPage
       title="이용약관"
       lead={`${SITE.name}(${SITE.url}, 이하 "사이트")을 이용하실 때 적용되는 조건입니다.`}
-      updated={`시행일 ${SITE.policyEffectiveDate}`}
+      updated={`시행일 ${SITE.termsEffectiveDate}`}
     >
       <DocSection no={1} title="목적">
         <p>

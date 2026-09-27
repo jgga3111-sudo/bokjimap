@@ -1,5 +1,5 @@
 import { SEARCH_INDEX, type SearchRow } from "@/data/searchIndex";
-import { toChoseong, isChoseongQuery, isSidoWord, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, norm } from "@/lib/searchText";
 import { ALIASES_BY_ROW_ID, nameWithAlias } from "@/lib/aliases";
 
 /**
@@ -47,6 +47,7 @@ export function searchAll(query: string): Hit[] {
   const useCho = isChoseongQuery(raw);
   const tokens = raw.split(/\s+/).map(norm).filter(Boolean);
   if (tokens.length === 0) return [];
+  const skipIntent = hasKeyword(tokens);
 
   const scored: { row: Row; score: number }[] = [];
 
@@ -82,6 +83,7 @@ export function searchAll(query: string): Hit[] {
       if (best > 0) score += best;
       else if (rest.includes(t)) score += 10;
       else if (!useCho && row[2] === "전국" && isSidoWord(t)) continue;
+      else if (skipIntent && isIntentWord(t)) continue;
       else {
         matchedAll = false;
         break;

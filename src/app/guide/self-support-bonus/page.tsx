@@ -26,7 +26,7 @@ const JOB = services.find((s) => s.id === SSB_JOB_ID);
 const GUIDE_PDF = S?.forms.find((f) => f.name.includes("지침"))?.url ?? null;
 
 export const metadata: Metadata = {
-  title: "자활성공지원금 150만원, 퇴사했어도 받습니다 — 주 22시간과 6개월을 세는 법",
+  title: "자활성공지원금 150만원, 퇴사했어도 신청할 수 있습니다 — 주 22시간과 6개월을 세는 법",
   description:
     "자활근로를 하다 취업·창업해 생계급여에서 벗어나면 6개월에 50만원, 12개월에 100만원을 받습니다. 주 22시간, 프리랜서는 월 90만원, 회사를 한 번 옮겨도 인정, 이미 퇴사했어도 소급 신청 — 복지로 원문에 없는 기준을 보건복지부 지침으로 확인했습니다.",
   alternates: { canonical: "/guide/self-support-bonus" },

@@ -81,7 +81,8 @@ export function calcSelfSupportBonus(start: Date, today: Date): SsbRound[] {
   const t = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   return SSB_STEPS.map((s) => {
     const until = servedUntil(start, s.months);
-    return { ...s, until, reached: t.getTime() >= until.getTime() };
+    /* until은 기간의 **마지막 날**이다. 그날은 아직 채우는 중이라 「지났다」는 다음 날부터(09-28 점검 — `>=`로 하루 일렀다). */
+    return { ...s, until, reached: t.getTime() > until.getTime() };
   });
 }
 

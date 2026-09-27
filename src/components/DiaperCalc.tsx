@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { DV_KINDS, DV_MONTHLY, calcDiaper, type DvKind } from "@/lib/diaperVoucher";
 import { won } from "@/lib/display";
+import { useLocalToday } from "@/lib/useLocalToday";
 
 /**
  * 기저귀·조제분유 지원 개월수 계산기 (2026-09-21).
@@ -28,8 +29,11 @@ export default function DiaperCalc() {
   const [kind, setKind] = useState<DvKind>("diaper");
 
   const born = parse(bornRaw);
-  /* 신청일을 비워 두면 오늘로 본다. 브라우저가 판정하므로 배포 없이 날마다 움직인다. */
-  const apply = applyRaw ? parse(applyRaw) : new Date();
+  /* 신청일을 비워 두면 오늘로 본다. 브라우저가 판정하므로 배포 없이 날마다 움직인다.
+     ⚠ 여기서 `new Date()`를 부르면 빌드 때 서버가 그린 날(UTC)이 정적 HTML에 박혀
+     브라우저의 오늘과 어긋나고 하이드레이션 오류(React #418)가 났다(09-28 점검). 서버에서는 null. */
+  const today = useLocalToday();
+  const apply = applyRaw ? parse(applyRaw) : today ? parse(today) : null;
   const r = born && apply ? calcDiaper(born, apply, kind) : null;
 
   const chip = (on: boolean) =>

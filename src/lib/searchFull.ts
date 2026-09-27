@@ -1,6 +1,6 @@
 import { services } from "@/data/services";
 import { placeLabel } from "@/lib/display";
-import { toChoseong, isChoseongQuery, isSidoWord, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, norm } from "@/lib/searchText";
 import { nameWithAlias, searchableNames } from "@/lib/aliases";
 
 /**
@@ -77,6 +77,7 @@ export function searchFull(query: string): FullHit[] {
   const useCho = isChoseongQuery(raw);
   const tokens = raw.split(/\s+/).map(norm).filter(Boolean);
   if (tokens.length === 0) return [];
+  const skipIntent = hasKeyword(tokens);
 
   const scored: { s: (typeof services)[number]; score: number; hitAt: string | null }[] =
     [];
@@ -113,6 +114,7 @@ export function searchFull(query: string): FullHit[] {
       if (best > 0) score += best;
       else if (meta.includes(t)) score += 10;
       else if (!useCho && place === "전국" && isSidoWord(t)) continue;
+      else if (skipIntent && isIntentWord(t) && !(text.includes(t))) continue;
       else if (text.includes(t)) {
         score += 5;
         bodyToken ??= t;

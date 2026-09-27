@@ -87,7 +87,10 @@ export function calcCda(monthly: number, months: number): CdaResult {
 export function monthsToEighteen(born: Date, from: Date): number {
   const end = new Date(born.getFullYear() + 18, born.getMonth(), 1);
   const start = new Date(from.getFullYear(), from.getMonth(), 1);
-  return Math.max(0, (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()));
+  const diff = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
+  /* 이번 달과 18세가 되는 달을 **둘 다** 센다 — 화면 문구가 「이번 달부터 18세가 되는 달까지」다.
+     전에는 끝 달을 빼서 한 달 적게 셌고, 생일이 이번 달 뒤쪽이어도 「이미 18세」라고 했다(09-28 점검). */
+  return diff < 0 ? 0 : diff + 1;
 }
 
 /**

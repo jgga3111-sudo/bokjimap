@@ -333,7 +333,9 @@ export default function DailyCareGuide() {
           />
           <p className="mt-4">
             건강보험료(본인부담분)가 아래 금액 <strong>이하</strong>면 그 구간입니다(사업안내 248쪽 「건강보험료
-            소득판정기준표(2026)」, 7인 이상은 같은 쪽 참조).
+            소득판정기준표(2026)」, 7인 이상은 같은 쪽 참조). 표의 금액은{" "}
+            <strong>노인장기요양보험료를 뺀 건강보험료</strong>입니다 — 고지서 합계와 견주면 실제보다 높은 구간으로
+            읽힙니다.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <PremiumTable title="중위소득 120% (본인부담 10%까지)" rows={P120} />
