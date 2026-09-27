@@ -134,6 +134,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteFooter />
         {/* 로그인했을 때만 관심 지원을 계정과 맞춘다. 화면에는 안 그린다. */}
         <SavedSync />
+        {/*
+          방문자 분석 (2026-09-27, 사용자 요청) — Vercel Web Analytics.
+          쿠키를 쓰지 않고 개인정보를 저장하지 않는다(방침 3·4조). 대시보드에서 켜 둬야
+          이 주소가 응답한다. @vercel/analytics 패키지 대신 스크립트 한 줄 — 사이트 안
+          이동(pushState)도 스크립트가 스스로 센다. 개발 서버에서는 404라 아무것도 안 센다.
+        */}
+        <script defer src="/_vercel/insights/script.js" />
       </body>
     </html>
   );

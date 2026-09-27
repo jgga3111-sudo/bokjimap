@@ -202,6 +202,17 @@ export default function PrivacyPage() {
           이용되며, 개별 이용자를 식별하는 데 사용하지 않습니다. 호스팅 사업자의
           보관 정책에 따라 일정 기간 후 자동으로 삭제됩니다.
         </p>
+        <p>
+          <strong>방문 통계</strong> — 어떤 페이지가 얼마나 읽히는지 알기 위해 같은 회사의 Vercel
+          Web Analytics를 씁니다. 페이지 주소, 들어온 경로(Referrer), 나라, 기기·브라우저·운영체제
+          종류를 모아 합계로만 봅니다. <strong>쿠키를 쓰지 않고</strong>, IP 주소 등 이용자를 식별할
+          수 있는 정보를 저장하지 않으며, 같은 방문자를 하루 안에서만 구분하고 그 값은 날마다
+          버려집니다.
+        </p>
+        <p className="text-xs text-muted">
+          2026-09-27 개정: 방문 통계 도구를 쓰기 시작해 이 문단과 4조 첫 문장을 더했습니다. 개인정보를
+          새로 수집하지 않아 처리 방식에는 바뀐 것이 없습니다.
+        </p>
       </DocSection>
 
       <DocSection no={4} title="쿠키">
@@ -210,8 +221,8 @@ export default function PrivacyPage() {
             <>
               <strong>
                 {SITE.policyEffectiveDate} 현재 사이트는 광고 게재를 위해 Google
-                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 이용자 분석 도구는
-                사용하지 않습니다. 로그인한 이용자에게는 로그인 상태를 유지하기
+                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 방문 통계는 쿠키를
+                쓰지 않는 Vercel Web Analytics로 셉니다(3조). 로그인한 이용자에게는 로그인 상태를 유지하기
                 위한 필수 쿠키를 심습니다.
               </strong>{" "}
               이 쿠키는 로그인 확인 외에 쓰지 않으며, 로그아웃하거나 탈퇴하면
@@ -221,8 +232,8 @@ export default function PrivacyPage() {
             <>
               <strong>
                 {SITE.policyEffectiveDate} 현재 사이트는 광고 게재를 위해 Google
-                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 이용자 분석 도구는
-                사용하지 않습니다. 운영자가 직접 심는 쿠키는 없습니다.
+                AdSense 코드를 싣고 있으며(광고 승인 심사 중), 방문 통계는 쿠키를
+                쓰지 않는 Vercel Web Analytics로 셉니다(3조). 운영자가 직접 심는 쿠키는 없습니다.
               </strong>{" "}
             </>
           )}
