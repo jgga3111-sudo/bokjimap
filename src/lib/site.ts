@@ -9,6 +9,14 @@ export const SITE = {
   operator: "복지클릭 운영자 (개인)",
 
   /**
+   * 글쓴이 표시 이름(필명) — 2026-09-28 사용자 결정 「복지쌤」.
+   * 글 끝 「쓴 사람」·소개·푸터·JSON-LD Person에 쓴다. 검색 가이드가 말하는 「누가 썼나」를
+   * 「운영자」보다 분명히 하려는 것이고, 실명은 쓰지 않는다. 약관·방침의 운영 주체(operator)는
+   * 그대로 둔다. 공무원·기관처럼 읽히는 이름은 쓰지 않는다(애드센스 사칭 조항).
+   */
+  author: "복지쌤",
+
+  /**
    * 운영자가 가진 국가자격 (2026-09-25 사용자 확인). 소개·글 끝·푸터·JSON-LD에 붙인다.
    * 약관·방침의 운영 주체 표기(operator)는 그대로 둔다 — 자격은 주체가 아니라 설명이다.
    */
@@ -39,7 +47,8 @@ export const OPERATOR_CREDENTIALS = SITE.credentials.join(" · ");
 /** JSON-LD의 운영자 Person (layout WebSite·안내 글 Article이 같이 쓴다). */
 export const OPERATOR_PERSON = {
   "@type": "Person",
-  name: SITE.operator,
+  name: SITE.author,
+  description: `${SITE.name} 운영자(개인)의 필명`,
   url: `${SITE.url}/about`,
   hasCredential: SITE.credentials.map((name) => ({
     "@type": "EducationalOccupationalCredential",

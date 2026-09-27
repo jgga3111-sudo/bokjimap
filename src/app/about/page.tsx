@@ -247,7 +247,8 @@ export default function AboutPage() {
         <DocList
           items={[
             <>
-              운영자: {SITE.operator} — {OPERATOR_CREDENTIALS} 국가자격을 가지고 있습니다. 자격은 정보를
+              운영자: {SITE.author}(필명, 개인 운영) — {OPERATOR_CREDENTIALS} 국가자격을 가지고 있습니다. 안내 글은 모두
+              이 이름으로 씁니다. 자격은 정보를
               정리하는 사람의 배경이고, 이 사이트가 개별 상담이나 자격 판정을 한다는 뜻은 아닙니다.
             </>,
             <>

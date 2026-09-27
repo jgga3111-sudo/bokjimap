@@ -104,7 +104,7 @@ export default function SiteFooter() {
 
         <div className="mt-10 space-y-2 border-t border-line pt-6 text-xs text-muted">
           <p>
-            운영자 {SITE.operator} — {OPERATOR_CREDENTIALS} · 문의{" "}
+            운영자 {SITE.author} — {OPERATOR_CREDENTIALS} · 문의{" "}
             <MailLink className="underline hover:text-brand" />
           </p>
           <p>

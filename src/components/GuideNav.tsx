@@ -82,7 +82,7 @@ export default function GuideNav({ current }: { current: string }) {
           <p className="mt-1 text-xs text-muted">
             쓴 사람{" "}
             <Link href="/about" className="underline hover:text-brand">
-              {SITE.operator}
+              {SITE.author}
             </Link>{" "}
             — {OPERATOR_CREDENTIALS}
             {published && <> · 처음 올린 날 {published}</>} · 마지막으로 고친 날 {g.updated}
@@ -91,7 +91,7 @@ export default function GuideNav({ current }: { current: string }) {
         <p className="mt-1">
           공공데이터와 법령·고시·정부 사업안내서를 근거로, AI 도구의 도움을 받아 썼습니다. 금액과
           조건은 원문 표현을 그대로 옮기고 출처의 조항·쪽수를 달았으며, 저희가 계산한 값에는 따로
-          표시했습니다. 내용의 책임은 복지클릭 운영자에게 있습니다. 받을 수 있는지는 판정하지
+          표시했습니다. 내용의 책임은 {SITE.author}(복지클릭 운영자)에게 있습니다. 받을 수 있는지는 판정하지
           않습니다.
         </p>
         <p className="mt-1.5 text-xs text-muted">
