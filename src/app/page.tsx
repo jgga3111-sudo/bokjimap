@@ -5,7 +5,7 @@ import { SIDO_LIST } from "@/lib/regions";
 import { TARGETS, LIFE_STAGES, THEMES } from "@/lib/axes";
 import { BENEFITS, servicesOf } from "@/lib/benefits";
 import { INCOME_BANDS } from "@/lib/income";
-import { GUIDES } from "@/lib/guides";
+import { GUIDES, GUIDE_GROUPS } from "@/lib/guides";
 import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
 import { PAY_DATES } from "@/lib/payDates";
 import { services, SERVICES_UPDATED } from "@/data/services";
@@ -90,6 +90,11 @@ const NEW_GUIDES = GUIDES.filter((g) => GUIDE_PUBLISHED[g.slug])
   .slice(0, 6);
 const monthDay = (ymd: string) =>
   `${Number(ymd.slice(5, 7))}월 ${Number(ymd.slice(8, 10))}일`;
+
+/** 「이런 일이 생겼다면」 — /guide와 같은 갈래 표. 상황이 아닌 「숫자로 본 복지」는 뺀다. */
+const SITUATIONS = GUIDE_GROUPS.filter((grp) => grp.key !== "data")
+  .map((grp) => ({ ...grp, count: GUIDES.filter((g) => g.group === grp.key).length }))
+  .filter((grp) => grp.count > 0);
 
 /** 히어로 수치용. 시·군·구가 자기 예산으로 하는 사업 수. */
 const LOCAL_COUNT = services.filter((s) => s.provider === "local").length;
@@ -604,39 +609,43 @@ export default function Home() {
       </section>
 
       {/*
-        안내 글. 목록만 있는 사이트는 "공공데이터를 옮겨 놓은 곳"으로 읽힌다.
-        첫 화면에서 한 번은 보이게 둔다 — 푸터에만 있으면 아무도 안 읽는다.
+        이런 일이 생겼다면(2026-09-28) — 바로 위 「어떤 분이신가요」가 **내가 누구인가**로
+        고르는 입구라면, 여기는 **무슨 일이 생겼나**로 고르는 입구다. 같은 자리에 있던
+        「신청에서 막힌다면」(맨 앞 글 넷)을 바꿨다 — 글이 49편이 되니 앞 넷은 아무 대표도
+        아니었다. 갈래는 /guide와 같은 표(GUIDE_GROUPS)이고, 눌러 가면 그 갈래 글이 모여 있다.
+        「숫자로 본 복지」는 상황이 아니라 뺀다. 휴대폰에서는 두 칸에 제목만 둔다.
       */}
       <section>
         <div className="mb-3 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-xl font-extrabold">신청에서 막힌다면</h2>
+            <h2 className="text-xl font-extrabold">이런 일이 생겼다면</h2>
             <p className="mt-0.5 text-xs text-muted">
-              수록 {services.length.toLocaleString()}건을 직접 집계해
-              정리했습니다
+              상황에 맞는 해설을 모아 두었습니다
             </p>
           </div>
           <Link
             href="/guide"
             className="shrink-0 text-sm text-muted hover:text-brand"
           >
-            전체 보기 →
+            {GUIDES.length}편 전체 →
           </Link>
         </div>
-        {/* 여덟 편을 다 깔면 첫 화면이 글 목록 페이지가 된다. 넷만. */}
-        <ul className="grid gap-3 sm:grid-cols-2">
-          {GUIDES.slice(0, 4).map((g) => (
-            <li key={g.slug}>
+        <ul className="grid grid-cols-2 gap-2.5 lg:grid-cols-4">
+          {SITUATIONS.map((grp) => (
+            <li key={grp.key}>
               <Link
-                href={`/guide/${g.slug}`}
-                className="group block h-full rounded-xl border border-line bg-white p-4 transition hover:border-brand"
+                href={`/guide#${grp.key}`}
+                className="group flex h-full flex-col rounded-xl border border-line bg-white p-3.5 transition hover:border-brand sm:p-4"
               >
-                <p className="font-semibold text-ink group-hover:text-brand">
-                  {g.title}
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-muted">
-                  {g.summary}
-                </p>
+                <span className="text-sm font-bold leading-snug text-ink group-hover:text-brand sm:text-base">
+                  {grp.title}
+                </span>
+                <span className="mt-1 hidden text-sm leading-relaxed text-muted sm:block">
+                  {grp.hint}
+                </span>
+                <span className="mt-auto pt-2 text-xs text-slate-500">
+                  해설 {grp.count}편 →
+                </span>
               </Link>
             </li>
           ))}

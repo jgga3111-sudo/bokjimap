@@ -40,7 +40,19 @@ export default async function TargetPage({
   const list = services.filter((s) => s.targets.includes(t.slug));
   const rows = list.map(toRow);
   const note = TARGET_NOTES[t.slug];
-  const groups = facetsFor(rows, ["region", "benefit", "life"]);
+  /* 「X만 / X 포함」을 맨 앞에(09-28). 장애인 허브 143건 중 75건은 저소득·노인 같은 다른
+     대상과 함께 걸린 사업이라, 장애인만 겨눈 68건이 그 사이에 묻혔다. */
+  const groups = facetsFor(rows, ["scope", "region", "benefit", "life"]).map((grp) =>
+    grp.key === "scope"
+      ? {
+          ...grp,
+          options: grp.options.map((o) => ({
+            ...o,
+            label: o.value === "only" ? `${t.label}만` : `${t.label} 포함 여러 대상`,
+          })),
+        }
+      : grp,
+  );
   return (
     <div className="space-y-6">
       <header className="band space-y-1.5">

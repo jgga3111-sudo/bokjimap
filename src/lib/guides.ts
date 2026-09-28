@@ -20,8 +20,28 @@
  * · 분량을 채우려고 아는 척하지 않는다. 짧아도 확인된 것만 쓴다.
  * ────────────────────────────────────────────────────────────────
  */
+/**
+ * 상황 갈래 (2026-09-28). `/guide`를 이 순서로 묶고, 첫 화면 「이런 일이 생겼다면」이
+ * 앞의 여덟을 입구로 쓴다. 글마다 `group`이 **필수**라 새 글을 내면 어디에 넣을지 같이
+ * 정해야 한다(빠뜨리면 tsc가 멈춘다). hint에도 숫자는 적지 않는다(위 규칙).
+ */
+export const GUIDE_GROUPS = [
+  { key: "baby", short: "아이", title: "아이가 태어났거나 키우고 있다면", hint: "부모급여·첫만남이용권, 기저귀·산후도우미, 어린이집과 아이돌봄, 교육비" },
+  { key: "money", short: "생계", title: "벌이가 적거나 생계가 막혔다면", hint: "긴급복지, 생계급여, 근로장려금, 희망저축계좌" },
+  { key: "job", short: "일자리", title: "일을 그만뒀거나 일자리를 찾는다면", hint: "실업급여, 국민취업지원제도, 자활성공지원금" },
+  { key: "care", short: "건강·돌봄", title: "아프거나 돌봄이 필요하다면", hint: "의료급여, 암검진, 심리상담, 장애인활동지원, 어르신·긴급·일상 돌봄" },
+  { key: "youth", short: "청년", title: "청년·청소년이라면", hint: "청년미래적금, 청년내일저축계좌, 자립수당, 청소년특별지원, 생리용품" },
+  { key: "bills", short: "요금 줄이기", title: "요금·생활비를 줄이고 싶다면", hint: "K-패스, 휴대폰 요금감면, 에너지바우처, 문화누리카드, 과학문화바우처" },
+  { key: "basics", short: "처음 신청", title: "처음 신청한다면", hint: "어디서 신청하나, 서류, 온라인 신청, 자격선, 낯선 말 풀이" },
+  { key: "dates", short: "날짜·지급일", title: "언제 신청하고 언제 들어오나", hint: "신청 달력, 지급일, 함께 받기, 돌려줘야 할 때" },
+  { key: "data", short: "숫자로 본 복지", title: "숫자로 본 복지", hint: "많이 찾는 복지, 온라인 신청이 되는 비율, 끝나는 날짜가 적힌 비율" },
+] as const;
+export type GuideGroup = (typeof GUIDE_GROUPS)[number]["key"];
+
 export type Guide = {
   slug: string;
+  /** 상황 갈래 — 위 GUIDE_GROUPS의 key */
+  group: GuideGroup;
   title: string;
   /** 목록 카드에 쓰는 한 줄 */
   summary: string;
@@ -32,6 +52,7 @@ export type Guide = {
 export const GUIDES: readonly Guide[] = [
   {
     slug: "apply",
+    group: "basics",
     title: "복지 지원금, 어디서 어떻게 신청하나",
     summary:
       "복지로·정부24·주민센터 세 창구가 어떻게 다른지, 수록한 사업을 집계해 어느 쪽이 실제로 쓰이는지 정리했습니다.",
@@ -39,6 +60,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "documents",
+    group: "basics",
     title: "복지 신청 서류, 무엇을 준비하나",
     summary:
       "사업이 달라도 반복해서 요구되는 공통 서식 네 가지와, 서류를 준비하는 순서를 정리했습니다.",
@@ -46,6 +68,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "online",
+    group: "basics",
     title: "집에서 온라인으로 신청할 수 있는 지원",
     summary:
       "주민센터에 가지 않고 인터넷으로 신청할 수 있는 사업만 골라 모았습니다.",
@@ -53,6 +76,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "emergency",
+    group: "money",
     title: "갑자기 생계가 막혔을 때",
     summary:
       "긴급복지지원은 하나의 사업이 아니라 여덟 갈래입니다. 대부분 생계지원 하나만 알고 나머지를 놓칩니다.",
@@ -60,6 +84,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "income-line",
+    group: "basics",
     title: "자격선은 생각보다 높습니다",
     summary:
       "선정기준에 중위소득 비율이 한 가지로 적힌 사업을 전부 세어 봤습니다. 가장 흔한 기준선은 기초생활 구간보다 훨씬 높았습니다.",
@@ -67,6 +92,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "region",
+    group: "basics",
     title: "사는 곳에 따라 받는 것이 달라집니다",
     summary:
       "전국 어디서나 되는 사업과 내 지역에서만 되는 사업이 섞여 있습니다. 둘을 가르는 법과, 이사할 때 생기는 일을 정리했습니다.",
@@ -74,6 +100,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "mistakes",
+    group: "basics",
     title: "신청에서 자주 놓치는 여섯 가지",
     summary:
       "돈이 아닌데 돈으로 알거나, 한 번인데 매달로 알거나 — 데이터에서 실제로 잘 틀리는 지점만 골랐습니다.",
@@ -81,6 +108,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "terms",
+    group: "basics",
     title: "복지 공고에서 자주 막히는 말들",
     summary:
       "소득인정액·차상위·바우처·융자처럼 공고문에 그냥 적혀 있어 넘어가기 쉬운 말을 풀었습니다.",
@@ -88,6 +116,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "popular",
+    group: "data",
     title: "사람들이 실제로 찾는 복지는 몇 개 안 됩니다",
     summary:
       "복지로 누적 조회수를 그대로 세어 봤습니다. 관심은 맨 위 몇 개에 극단적으로 몰려 있고, 나머지는 있는지도 잘 알려지지 않았습니다.",
@@ -95,6 +124,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "life-stage",
+    group: "basics",
     title: "나이가 바뀌면 받을 수 있는 것도 바뀝니다",
     summary:
       "임신·출산부터 노년까지 일곱 단계에 각각 어떤 지원이 걸려 있는지, 수록한 사업을 단계별로 집계했습니다.",
@@ -115,6 +145,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "baby-money",
+    group: "baby",
     title: "아이가 태어나면 받는 셋, 무엇이 다른가",
     summary:
       "부모급여·아동수당·첫만남이용권은 이름이 비슷하고 소관도 같습니다. 언제 한 번인지 매달인지, 현금인지 카드 포인트인지가 전부 다릅니다.",
@@ -122,6 +153,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "livelihood",
+    group: "money",
     title: "생계비를 주는 두 제도, 어느 쪽 문인가",
     summary:
       "생계급여와 긴급복지 생계지원은 목록에서 거의 같아 보입니다. 갈라지는 곳은 선정기준과 금액을 정하는 방식입니다.",
@@ -142,6 +174,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "calendar",
+    group: "dates",
     title: "달마다 챙길 것 — 신청 달력",
     summary:
       "복지는 아무 때나 신청되는 게 아닙니다. 한 해에 며칠뿐인 창구를 공식 공고에서 확인해 달별로 모았습니다.",
@@ -149,6 +182,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "tax-credit",
+    group: "money",
     /* 제목에 "지급일"을 세운 이유. 네이버 데이터랩으로 재 보니(2026-09-06)
        **"근로장려금 지급일" 한 낱말이** 청년월세 관련 세 낱말을 합친 것의
        3배였다(8월 기준). 그런데 이 글을 처음 쓸 때는 "지급일"이라는 말이
@@ -172,6 +206,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "pay-dates",
+    group: "dates",
     /* 처음엔 "20일과 25일에 들어옵니다"였다. 2026-09-07에 법령을 더 뒤져
        **15일**(보훈급여금·참전명예수당)이 나오면서 제목이 틀린 말이 됐다.
        제목에 숫자를 세우면 데이터가 늘 때 여기가 조용히 어긋난다 —
@@ -218,6 +253,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "tax-credit-amount",
+    group: "money",
     title: "근로장려금, 얼마 받나",
     summary:
       "소득이 오를수록 늘다가 한동안 그대로였다가 다시 줄어 0이 됩니다. 그 꺾이는 지점이 가구 유형마다 다르고, 재산이 1억7천만원 이상이면 절반이 됩니다.",
@@ -233,6 +269,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "youth-savings",
+    group: "youth",
     title: "청년미래적금, 3년 뒤 얼마가 되나",
     summary:
       "매월 낸 돈에 유형·소득에 따라 정부기여금 6% 또는 12%가 붙습니다(기여금이 없는 구간도 있습니다). 복지로 안내에는 그 비율이 적혀 있지 않아 금융위원회 자료에서 확인해 옮겼습니다.",
@@ -240,6 +277,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "k-pass",
+    group: "bills",
     title: "K-패스, 내 유형이면 얼마 돌려받나",
     summary:
       "환급이 기본형·일반형·플러스형 셋으로 갈리고 가장 큰 것이 자동 적용됩니다. 복지로에 없는 유형별 요율과 지역별 기준금액을 공단 표에서 옮겨, 월 이용금액만 넣으면 계산됩니다.",
@@ -247,6 +285,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "unemployment",
+    group: "job",
     title: "실업급여, 12개월이 지나면 남은 날수도 사라집니다",
     summary:
       "실업급여는 하나가 아니라 다섯 갈래이고, 소정급여일수와 별개로 12개월이라는 기한이 따로 걸려 있습니다. 고용보험법 조문으로 정리했습니다.",
@@ -264,6 +303,7 @@ export const GUIDES: readonly Guide[] = [
   */
   {
     slug: "youth-tomorrow-savings",
+    group: "youth",
     title: "청년내일저축계좌, 3년 뒤 정부지원금까지 받으려면",
     summary:
       "매달 정부가 얹어 주는 돈은 조건을 지켜야 내 돈이 됩니다. 정부지원금을 잃는 일곱 가지, 적립중지 신청법, 소득이 늘었을 때를 보건복지부 사업안내에서 옮겼습니다.",
@@ -271,6 +311,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "phone-bill-discount",
+    group: "bills",
     title: "휴대폰 요금감면, 내 유형이면 한 달에 얼마까지",
     summary:
       "수급자·차상위·기초연금·장애인마다 감면 방식이 다릅니다. 과학기술정보통신부 고시의 계산식을 옮기고, 요금제 월정액과 통화료를 넣으면 감면액이 나오게 했습니다.",
@@ -278,6 +319,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "childcare-choice",
+    group: "baby",
     title: "어린이집·유치원·집, 어디서 키우느냐에 따라 받는 돈",
     summary:
       "보육료·유아학비·양육수당은 한 아이에게 하나만 나옵니다. 옮길 때 신청일이 15일 전인지 뒤인지에 따라 그달 보육료를 자부담하게 되는 규칙을 교육부 보육사업안내에서 옮겼습니다.",
@@ -285,6 +327,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "mental-health-voucher",
+    group: "care",
     title: "심리상담 바우처, 8회에 내 부담은 얼마인가",
     summary:
       "상담사 유형과 소득 구간에 따라 본인부담이 달라집니다. 원문 단가와 본인부담률로 계산하고, 신청 자격 여섯 갈래마다 다른 증빙서류 유효기간을 정리했습니다.",
@@ -292,6 +335,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "school-support",
+    group: "baby",
     title: "초중고 교육비 지원, 교육급여 바우처는 따로 신청해야 받습니다",
     summary:
       "교육급여·교육비 지원·교육정보화는 창구가 같아도 받는 방법이 다릅니다. 결정 뒤에 한 번 더 신청해야 하는 교육급여 바우처와, 신청한 달부터만 나오는 교육비 지원을 교육부 지침으로 정리했습니다.",
@@ -299,6 +343,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "postpartum-care",
+    group: "baby",
     title: "산후도우미 바우처, 내 본인부담금은 얼마인가",
     summary:
       "산모·신생아 건강관리 지원은 출산 유형·소득 구간·이용 기간에 따라 내는 돈이 달라집니다. 보건복지부 2026년 사업안내의 가격·정부지원금 표로 계산하고, 신청·사용 기한을 정리했습니다.",
@@ -306,6 +351,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "childcare-service",
+    group: "baby",
     title: "아이돌봄서비스, 소득 유형별로 내는 돈은 얼마인가",
     summary:
       "아이돌봄서비스 요금은 누구나 같고, 정부가 내 주는 몫이 가~라형 소득 유형과 아이 나이에 따라 달라집니다. 아이돌봄 누리집 요금표로 한 달 본인부담금을 계산하고, 어린이집 시간 제외·취소 수수료를 정리했습니다.",
@@ -313,6 +359,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "single-parent-support",
+    group: "baby",
     title: "한부모가족 아동양육비, 추가로 받는 경우와 신청한 달부터 나오는 규칙",
     summary:
       "자녀 1인당 월 23만원에 나이·가족 형태에 따라 10만원이 더 붙거나 청소년 한부모 금액으로 바뀝니다. 급여가 시작되는 날, 생계급여와 겹쳐 받는 것, 학용품비 7월 지급을 성평등가족부 2026년 지침으로 정리했습니다.",
@@ -320,6 +367,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "combined-support",
+    group: "dates",
     title: "두 가지를 같이 받을 수 있나 — 자주 묻는 조합 일곱",
     summary:
       "부모급여와 아동수당은 함께 나오고, 장애인연금 기초급여는 65세부터 기초연금으로 바뀝니다. 기초연금은 생계급여를 줄이지만 장애인연금·한부모 아동양육비는 줄이지 않습니다. 법령과 2026년 부처 지침으로 확인했습니다.",
@@ -329,6 +377,7 @@ export const GUIDES: readonly Guide[] = [
      우리가 집계한 것만 말한다(경쟁 조사에서 본 방식, CLAUDE.md 09-16). */
   {
     slug: "online-share",
+    group: "data",
     title: "인터넷으로 신청되는 지원금은 얼마나 되나",
     summary:
       "복지로에서 바로 신청되는 사업은 생각보다 적습니다. 수록분을 세어 「복지로에서 안 된다」와 「인터넷으로 못 한다」가 어떻게 다른지, 지자체 사업은 어디서 받는지 정리했습니다.",
@@ -336,6 +385,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "voucher-use",
+    group: "bills",
     title: "문화누리카드, 받은 다음이 더 중요합니다",
     summary:
       "남은 지원금은 12월 31일이 지나면 국고로 돌아갑니다. 잔액 확인 전화번호, 세대 합산, 재발급 기한, 12월 결제 취소의 함정을 공식 안내로 정리했습니다.",
@@ -343,6 +393,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "refund",
+    group: "dates",
     title: "받은 지원금을 돌려달라고 할 때 — 환수·반환명령",
     summary:
       "근로장려금 반기신청은 다음 해 6월 30일까지 정산해 차액을 환수합니다. 기초생활보장의 반환명령과 부정수급 징수는 조문이 다릅니다. 무엇이 잘못이 아니고 무엇이 잘못인지 법으로 갈랐습니다.",
@@ -350,6 +401,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "official-docs",
+    group: "basics",
     title: "정부 사업안내 지침은 어디서 보나",
     summary:
       "금액·예외가 실제로 적힌 것은 부처가 해마다 내는 「사업안내」입니다. 수록 사업에 첨부로 붙은 안내·지침 파일을 모으고 몇 년판인지 함께 적었습니다.",
@@ -357,6 +409,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "deadline-share",
+    group: "data",
     title: "끝나는 날짜가 적힌 지원금은 얼마나 되나",
     summary:
       "끝나는 날짜가 원문에 적힌 사업이 몇 건인지, 마감이 없는 사업은 언제 끝나는지(예산 소진), 대신 무엇을 봐야 하는지를 수록분 집계로 정리했습니다.",
@@ -364,6 +417,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "energy-voucher",
+    group: "bills",
     title: "에너지바우처, 여름에 남은 돈은 겨울에 쓸 수 있습니다",
     summary:
       "금액은 세대원 수로만 갈려 1인 295,200원부터 4인 이상 701,300원까지입니다. 여름에 안 쓴 금액이 9월 30일에 없어지는지, 없어지는 경우는 무엇인지를 2026년 사업안내서와 고시로 확인했습니다.",
@@ -371,6 +425,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "national-employment",
+    group: "job",
     title: "국민취업지원제도, 구직촉진수당이 줄거나 끊기는 경우",
     summary:
       "월 60만원(부양가족 1인당 10만원 추가)을 최대 6개월 받는 수당이지만, 실업급여를 받은 지 6개월이 안 됐거나 일해서 번 돈이 일정액을 넘으면 줄거나 멈춥니다. 법·시행령·시행규칙과 고용노동부 고시로 확인했습니다.",
@@ -378,6 +433,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "diaper-formula",
+    group: "baby",
     title: "기저귀·조제분유 지원, 신청이 늦으면 받는 달수가 줄어듭니다",
     summary:
       "기저귀 월 9만원·조제분유 월 11만원을 최대 24개월 받지만, 태어난 날부터 60일 안에 신청해야 24개월분을 전부 받습니다. 하루 늦으면 두 달치가 사라지는 규칙을 2026년 사업안내 지침의 표로 확인했습니다.",
@@ -385,6 +441,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "science-voucher",
+    group: "bills",
     title: "과학문화바우처, 받은 포인트를 쓸 수 있는 날이 정해져 있습니다",
     summary:
       "2026년은 1인당 10만원으로 지난해의 두 배가 됐지만, 2026년 포인트를 쓰는 기간은 7월 13일부터 10월 12일 오후 5시까지로 정해져 있습니다. 신청 자격의 출생 연도가 복지로 원문과 다른 점까지 재단 모집 공고와 지원센터 누리집으로 확인했습니다.",
@@ -392,6 +449,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "hope-savings",
+    group: "money",
     title: "희망저축계좌 Ⅰ·Ⅱ, 모집 달을 놓치거나 조건을 빠뜨리면 정부지원금이 사라집니다",
     summary:
       "매달 10만원을 넣으면 정부가 Ⅰ은 30만원, Ⅱ는 10~30만원을 얹어 주는 3년 통장입니다. 2026년 하반기 모집 일정은 Ⅱ 10월 1~26일, Ⅰ 11월 2~16일이고, 3년을 채워도 탈수급·교육·계획서 조건을 못 맞추면 정부지원금은 돌려받지 못합니다. 보건복지부 2026년 사업안내로 확인했습니다.",
@@ -399,6 +457,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "child-development-account",
+    group: "baby",
     title: "디딤씨앗통장, 정부가 얹어 주는 돈은 월 10만원입니다",
     summary:
       "아이가 넣은 돈의 두 배를 정부가 얹어 주는 통장인데, 복지로 원문에는 절반으로 적힌 줄이 남아 있습니다. 통장이 왜 둘인지, 중간에 찾으면 정부가 얹은 돈은 어떻게 되는지를 아동복지법 시행규칙과 국가아동권리보장원 안내로 확인했습니다.",
@@ -406,6 +465,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "self-support-bonus",
+    group: "job",
     title: "자활성공지원금 150만원, 그만둔 뒤에도 신청할 수 있습니다",
     summary:
       "자활근로를 하다 취업·창업해 생계급여에서 벗어나면 6개월과 12개월에 나눠 받습니다. 주 몇 시간을 일해야 하는지, 회사를 옮겨도 되는지, 어떤 지원금과 겹치면 안 되는지는 원문에 없어 보건복지부 지침에서 옮겼습니다.",
@@ -413,6 +473,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "youth-special-support",
+    group: "youth",
     title: "청소년특별지원, 생활비와 치료비는 누구에게 나오나",
     summary:
       "9~24세 위기청소년에게 생활·건강·학업·자립·상담비 등을 지원합니다. 생활비와 치료비는 보호자가 없거나 고립·은둔한 청소년에게만 나오고, 부모 소득은 함께 사는 부모만 셉니다. 기간과 겹쳐 받을 수 없는 것까지 성평등가족부 2026년 지침에서 옮겼습니다.",
@@ -420,6 +481,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "period-product-voucher",
+    group: "youth",
     title: "생리용품 바우처, 1년치가 한 번에 들어오고 12월 31일에 사라집니다",
     summary:
       "9~24세 수급자·차상위·한부모가족 여성청소년에게 월 14,000원씩 1년치를 국민행복카드로 줍니다. 언제 신청해도 신청한 달에 1년치가 생기고 다음 해 1월 1일에 사라집니다. 탐폰·생리컵, 기저귀 바우처와 따로 결제하는 법까지 성평등가족부 2026년 지침에서 옮겼습니다.",
@@ -427,6 +489,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "self-reliance-allowance",
+    group: "youth",
     title: "자립준비청년 자립수당, 매월 20일에 50만원 — 언제 신청하고 언제 멈추나",
     summary:
       "아동복지시설·가정위탁 보호가 끝난 청년에게 5년간 매달 50만원을 줍니다. 보호종료 30일 전부터 신청할 수 있고 자립교육 이수증이 필요하며, 해외 90일 이상 체류나 재보호조치 동안에는 멈춥니다. 시·도별 자립정착금까지 국가아동권리보장원 2026년 자료에서 옮겼습니다.",
@@ -434,6 +497,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "disability-activity-support",
+    group: "care",
     title: "장애인활동지원, 구간별 월 한도액과 본인부담금 — 65세가 되면 어떻게 되나",
     summary:
       "방문조사 종합점수 42점 이상이면 15구간 중 하나로 월 104만~829만원의 바우처가 나옵니다. 본인부담금은 소득에 따라 면제·2만원·4~10%(상한 21만 6,200원)이고, 안 쓴 바우처는 12월 31일에 사라지며, 65세가 되면 장기요양 판정에 따라 갈립니다. 보건복지부 2026년 사업안내에서 옮겼습니다.",
@@ -441,6 +505,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "medical-aid",
+    group: "care",
     title: "의료급여 1종·2종, 병원에서 얼마 내나 — 외래 1,000원부터 한 달 상한까지",
     summary:
       "1종은 외래 1회 1,000~2,000원·입원 0원, 2종은 의원 1,000원·병원 15%·입원 10%입니다. 한 달 본인부담이 1종 2만원·2종 20만원을 넘으면 돌려받는 상한(2026년 1월 개정), 본인부담이 없는 사람, 의원부터 가는 의뢰서 순서, 연 400일 급여일수를 의료급여법 시행령·시행규칙에서 옮겼습니다.",
@@ -448,6 +513,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "cancer-screening",
+    group: "care",
     title: "국가암검진, 올해 안에 받아야 합니다 — 나이별 대상·주기와 돈이 드는 자리",
     summary:
       "위암 40세·2년, 대장암 50세·1년, 유방암 40세·2년, 자궁경부암 20세·2년, 간암·폐암은 고위험군. 본인부담은 10%(대장암·자궁경부암 0원)이고 의료급여 수급권자와 보험료 하위 50%(직장 월 127,500원·지역 60,000원 이하)는 그마저 없습니다. 해를 넘기면 그해 몫이 사라진다는 것, 수면내시경처럼 따로 내는 돈을 2026 국가암검진사업 안내와 고시에서 옮겼습니다.",
@@ -455,6 +521,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "daily-care",
+    group: "care",
     title: "일상돌봄 서비스, 소득 제한은 없고 내는 돈이 갈립니다 — 대상·A~D형·본인부담",
     summary:
       "질병·부상·고립으로 돌봄이 필요한 13~64세와 가족을 돌보는 39세 이하 청년이 대상입니다. 소득과 상관없이 신청하고 본인부담만 0·10·25·100%로 갈립니다. A형 월 36시간 684,000원 등 유형별 금액, 건강보험료 판정표, 1년·3년·65세·2개월 미사용 규칙, 아직 시행하지 않는 시·군·구를 2026년 사업안내에서 옮겼습니다.",
@@ -462,6 +529,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "senior-care",
+    group: "care",
     title: "노인맞춤돌봄서비스, 누가 받고 한 달에 몇 시간인가 — 돌봄군별 시간과 퇴원 뒤 집중 돌봄",
     summary:
       "65세 이상 기초생활수급자·차상위·기초연금 수급자 중 장기요양 등급이 없는 노인이 대상입니다. 일반돌봄군 월 16시간 미만, 중점돌봄군 20~40시간이고, 2026년에 생긴 퇴원후돌봄군은 한 달 848,000원 한도로 본인부담 없이 1개월 집중 돌봄을 받습니다. 대기자 순서, 중지·종결, 이사, 이의신청 90일을 2026년 사업안내에서 옮겼습니다.",
@@ -469,6 +537,7 @@ export const GUIDES: readonly Guide[] = [
   },
   {
     slug: "emergency-care",
+    group: "care",
     title: "긴급돌봄, 갑자기 돌봄이 끊겼을 때 72시간 — 지역별 본인부담과 90일 기한",
     summary:
       "갑자기 아프거나 다치거나 돌봐 주던 가족이 입원·사망했을 때 소득 제한 없이 받는 긴급돌봄은 최대 72시간(하루 8시간), 시간당 19,000원입니다. 본인부담률이 시·도마다 달라 2026년 사업안내의 지역별 표를 그대로 옮겼고, 이용권 90일 기한, 한 번 더 받는 72시간, 대기 중인 사람도 받을 수 있다는 것, 이의신청 20일을 적었습니다.",

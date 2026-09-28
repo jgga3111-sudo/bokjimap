@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SavedList from "@/components/SavedList";
+import OfficialAlerts from "@/components/OfficialAlerts";
 import { CHANGED_AT } from "@/lib/changedAt";
 import { AUTH_ON } from "@/lib/auth/config";
 
@@ -50,6 +51,15 @@ export default function SavedPage() {
         </p>
       </header>
       <SavedList showEmpty changed={CHANGED_AT} />
+      {/* 저장만 되고 알려 주지는 않는다 — 알림을 원하는 사람을 공식 서비스로 잇는다(09-28). */}
+      <section className="card p-5 sm:p-6">
+        <h2 className="text-base font-extrabold text-ink">알림은 공식 서비스로 받으세요</h2>
+        <p className="mt-1 mb-3 text-sm leading-relaxed text-muted">
+          복지클릭은 알림을 보내지 않습니다. 받을 수 있는 지원이 생기거나 신청할 때가 되면
+          알려 주는 정부 서비스가 있습니다.
+        </p>
+        <OfficialAlerts />
+      </section>
     </div>
   );
 }

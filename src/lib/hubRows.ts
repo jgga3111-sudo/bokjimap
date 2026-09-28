@@ -80,6 +80,8 @@ function facetsOf(s: WelfareService): string[] {
       : `region:${SIDO_SLUG.get(s.sidoName ?? "") ?? "etc"}`,
   );
   for (const t of s.targets) out.push(`target:${t}`);
+  /* 대상 허브의 「X만 / X 포함」(09-28) — 대상 칸이 하나뿐이면 그 대상만 겨눈 사업이다. */
+  if (s.targets.length) out.push(s.targets.length === 1 ? "scope:only" : "scope:multi");
   for (const l of s.lifeStages) out.push(`life:${l}`);
   for (const t of s.themes) {
     const slug = THEME_SLUG.get(t);
@@ -130,6 +132,14 @@ export type FacetGroup = { key: string; label: string; options: FacetOption[] };
 
 /** 필터로 쓸 수 있는 축들. 라벨은 화면에 그대로 나간다. */
 const GROUPS = {
+  /* 라벨은 대상 허브가 「장애인만」처럼 제 이름으로 바꿔 쓴다(target/[slug]/page.tsx). */
+  scope: {
+    label: "대상 범위",
+    items: [
+      { value: "only", label: "이 대상만" },
+      { value: "multi", label: "다른 대상과 함께" },
+    ],
+  },
   region: {
     label: "지역",
     items: [

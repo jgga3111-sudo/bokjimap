@@ -27,6 +27,7 @@ import DeadlineBadge from "@/components/DeadlineBadge";
 import DeadlineNotice from "@/components/DeadlineNotice";
 import { CLOSING } from "@/data/closing";
 import { GOV24, GOV24_CHECKED } from "@/data/gov24";
+import { termsIn } from "@/lib/termChips";
 import { leadSentence } from "@/lib/leadSentence";
 import { formName } from "@/lib/formName";
 import { amongListed, rankOf } from "@/lib/amongListed";
@@ -154,10 +155,22 @@ export async function generateMetadata({
 function Prose({ text }: { text: string }) {
   return (
     <div className="space-y-1.5 text-sm leading-relaxed whitespace-pre-line text-slate-700">
-      {text}
+      {breakBullets(text)}
     </div>
   );
 }
+
+/*
+  원문이 글머리(○ ◎ ■ □ ▶ ㅇ)를 줄바꿈 없이 문장 뒤에 바로 붙인 곳이 있다 — 「…이사한
+  경우○ 구비서류 : 통장사본」. 수록 910건 중 약 90건 · 377곳(09-28 실측). 그 앞에서만 줄을
+  바꾼다. 글자는 한 자도 안 바꾸고 공백만 줄바꿈으로 — 원문 그대로다(3절).
+  「-」 「※」는 범위·빼기·문장 속 주석으로도 쓰여서 건드리지 않는다. 「(○)」 「○○시」처럼
+  괄호·자리표시로 쓴 ○는 앞뒤 글자로 거른다(09-28 실측으로는 0곳).
+*/
+const breakBullets = (t: string) =>
+  t
+    .replace(/([^\s(（○□◎■])[ \t]*([○◎■□▶])(?![○)）,])/g, "$1\n$2")
+    .replace(/(\S)[ \t]+(ㅇ[ \t])/g, "$1\n$2");
 
 /**
  * 본문 한 절.
@@ -624,6 +637,7 @@ function PreCheck({
         <Row label="문의" value={s.contacts.some((c) => telHref(c.url)) ? <ContactLine s={s} /> : null} />
         <Row label="담당" value={s.department} />
         <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
+        <Row label="용어 풀이" value={termLinks(s)} />
       </dl>
       {/* 빠진 줄이 "해당 없음"으로 읽히지 않게. 접수 방식이 안 보이는 중앙부처
           330건이 특히 그렇다 — 필드가 없는 것이지 창구가 없는 게 아니다. */}
@@ -653,6 +667,25 @@ function PreCheck({
  * 값은 옮겨 적은 그대로다. 조문은 인용하고, 날짜는 달력 파일의 값을 쓰고,
  * 계산하거나 해석하지 않는다(3절).
  */
+/** 「신청 전 체크」의 용어 풀이 줄(2026-09-28) — 본문에 나오는 말만 /guide/terms로 잇는다. */
+function termLinks(s: WelfareService) {
+  const found = termsIn(s.summary, s.eligibility, s.selectionCriteria, s.supportContent, s.applyMethod);
+  if (!found.length) return null;
+  return (
+    <span className="flex flex-wrap gap-1.5">
+      {found.map((t) => (
+        <Link
+          key={t.id}
+          href={`/guide/terms#${t.id}`}
+          className="rounded-full border border-line px-2.5 py-0.5 text-xs font-medium text-slate-600 hover:border-brand hover:text-brand"
+        >
+          {t.word}
+        </Link>
+      ))}
+    </span>
+  );
+}
+
 /**
  * 「신청 전 체크」의 신청하는 곳 줄(2026-09-28) — 보조금24 「온라인신청사이트」 칸.
  * 128건에 값이 있는데 여태 화면에 안 쓰고 있었다. 주소는 원문 그대로 걸고

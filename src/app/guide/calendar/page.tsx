@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
 import GuideNav from "@/components/GuideNav";
+import OfficialAlerts from "@/components/OfficialAlerts";
 import { guideBySlug } from "@/lib/guides";
 import {
   CALENDAR,
@@ -217,6 +218,16 @@ export default function CalendarGuide() {
               상시 신청하는 지원 전체 보기 →
             </Link>
           </p>
+        </DocSection>
+
+        {/* 달력은 우리가 확인한 날짜만 싣는다. 내 상황에 맞춰 알려 주는 것은 정부 서비스 몫이다(09-28). */}
+        <DocSection title="날짜를 알림으로 받으려면">
+          <p>
+            위 달력의 「캘린더에 담기」로 받는 일정 파일(.ics)에는 3일 전 알림이 들어 있습니다. 복지클릭이
+            따로 알림을 보내지는 않습니다. 내 소득·가구에 맞춰 받을 수 있는 지원을 알려 주는 것은
+            정부가 운영하는 아래 서비스입니다.
+          </p>
+          <OfficialAlerts />
         </DocSection>
       </DocPage>
       <GuideNav current="calendar" />
