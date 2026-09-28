@@ -82,6 +82,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "senior-care": ["WLF00003191"],
   /* 2026-09-28(사용자 요청) — 2026년 긴급돌봄 지원사업 안내로 지역별 본인부담률·90일 기한·추가 지원을 옮긴 글. */
   "emergency-care": ["WLF00005442"],
+  /* 2026-09-29 아침 루틴 — 2026년 국민기초생활보장 사업안내로 장제·해산급여의 받는 사람·서류·지급 기한을 옮긴 글. */
+  "funeral-birth-benefit": ["WLF00003267", "WLF00001135"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
