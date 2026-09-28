@@ -34,7 +34,11 @@ export default function SelfSupportBonusCalc() {
       </p>
 
       <label className="mt-4 block sm:max-w-xs">
-        <span className="text-sm font-medium text-ink">취업한 날 (창업이면 사업자등록일)</span>
+        <span className="text-sm font-medium text-ink">취업(창업)과 탈수급을 둘 다 채운 날</span>
+        <span className="mt-0.5 block text-xs leading-relaxed text-muted">
+          둘 중 늦은 날을 넣으세요 — 지침 예시: 1월 15일 취업, 1월 28일 보장중지면 1월 28일부터 셉니다. 창업은
+          사업자등록일과 사업개시일 중 늦은 날입니다.
+        </span>
         <input
           type="date"
           value={raw}

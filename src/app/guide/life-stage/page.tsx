@@ -111,7 +111,7 @@ export default function LifeStageGuide() {
           <p>
             반대로 어느 단계에도 걸리지 않는 사업이 {none.length}건입니다.
             나이가 아니라 <strong>소득이나 상황</strong>으로 대상을 정하기
-            때문입니다. 기초생활보장, 긴급복지, 요금 감면 같은 것들이 여기
+            때문입니다. 긴급복지나 요금 감면 가운데 상당수가 여기
             들어갑니다.
           </p>
           <p>

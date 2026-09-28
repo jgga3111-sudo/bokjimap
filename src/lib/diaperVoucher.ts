@@ -79,6 +79,13 @@ function addMonths(born: Date, n: number): Date {
   return d;
 }
 
+/** 토·일요일이면 다음 월요일로 민다. */
+function pastWeekend(d: Date): Date {
+  const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  while (x.getDay() === 0 || x.getDay() === 6) x.setDate(x.getDate() + 1);
+  return x;
+}
+
 const dayDiff = (a: Date, b: Date) =>
   Math.round(
     (Date.UTC(a.getFullYear(), a.getMonth(), a.getDate()) -
@@ -113,15 +120,21 @@ export function calcDiaper(born: Date, apply: Date, kind: DvKind): DvResult {
   const dayNo = dayDiff(apply, born) + 1;
   if (dayNo < 1) return { ok: false, reason: "before" };
 
-  const deadline = new Date(born.getFullYear(), born.getMonth(), born.getDate() + 59);
-  if (apply >= addMonths(born, 24)) return { ok: false, reason: "over" };
+  /* 60일째 날·만 2년 전날이 토·일요일이면 다음 월요일까지 인정한다(인쇄 348쪽). 공휴일은 해마다
+     달라 넣지 않았다 — 화면에 그 사실을 적는다(09-28 점검: 2026-08-05생은 60일째가 토요일·개천절). */
+  const deadline = pastWeekend(new Date(born.getFullYear(), born.getMonth(), born.getDate() + 59));
+  const lastDay = addMonths(born, 24);
+  lastDay.setDate(lastDay.getDate() - 1);
+  if (apply > pastWeekend(lastDay)) return { ok: false, reason: "over" };
 
+  /* 만 2년 전날이 주말이라 월요일까지 연장된 날에 냈으면 그 전날에 낸 것으로 센다(1개월). */
+  const at = apply > lastDay ? lastDay : apply;
   let months: number;
-  if (dayNo <= 60) months = 24;
-  else if (apply < addMonths(born, 3)) months = 22;
+  if (apply <= deadline) months = 24;
+  else if (at < addMonths(born, 3)) months = 22;
   else {
     let n = 3;
-    while (n < 24 && apply >= addMonths(born, n + 1)) n += 1;
+    while (n < 24 && at >= addMonths(born, n + 1)) n += 1;
     months = 24 - n;
   }
 

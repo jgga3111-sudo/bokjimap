@@ -50,12 +50,17 @@ export default function TaxCreditCalc() {
   const kidsNum = num(kidsRaw, 20);
   const kids = kidsNum !== null && Number.isInteger(kidsNum) ? kidsNum : null;
 
+  /* 원문(근로·자녀장려금) 「단독가구 : 배우자, 부양자녀, 부양부모가 없는 가구」. 단독을 고르고 자녀를
+     넣으면 계산하지 않고 홑벌이로 고르라고 안내한다(09-28 점검 — 「혼자 키우니 단독」으로 고른 한부모에게
+     자녀장려금 「해당 없음」, 근로장려금도 적게 나갔다. 틀리는 방향이 "못 받는다"). */
+  const singleWithKids = hh.id === "single" && kids !== null && kids > 0;
+
   const result = useMemo(
     () =>
-      gross === null || kids === null
+      gross === null || kids === null || singleWithKids
         ? null
         : calcTaxCredit(gross, Math.floor(kids), hh, asset),
-    [gross, kids, hh, asset],
+    [gross, kids, hh, asset, singleWithKids],
   );
 
   const childNotApplicable = hh.child === null;
@@ -144,9 +149,17 @@ export default function TaxCreditCalc() {
       </fieldset>
 
       {result === null ? (
-        <p className="mt-5 rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">
-          총급여액 등과 자녀 수를 넣으면 계산됩니다.
-        </p>
+        singleWithKids ? (
+          <p role="alert" className="mt-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
+            원문은 <strong>단독가구를 「배우자, 부양자녀, 부양부모가 없는 가구」</strong>로 적습니다. 18세 미만
+            부양자녀가 있으면 <strong>홑벌이</strong>(배우자 총급여가 300만원 이상이면 맞벌이)로 골라 주세요 — 혼자
+            아이를 키워도 홑벌이 가구입니다.
+          </p>
+        ) : (
+          <p className="mt-5 rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">
+            총급여액 등과 자녀 수를 넣으면 계산됩니다.
+          </p>
+        )
       ) : asset === "over24" ? (
         /* 0원을 크게 띄우지 않는다. 금액이 0인 것과 신청 자체가 안 되는 것은
            다른 말이고, 원문도 "2.4억원 미만이면 신청할 수 있습니다"라고

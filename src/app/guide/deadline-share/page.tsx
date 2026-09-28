@@ -128,7 +128,7 @@ export default function DeadlineShareGuide() {
             <Link href="/guide/calendar" className="text-brand underline">
               올해 신청 달력
             </Link>
-            에 모아 두었습니다. 캘린더에 담아 두면 3일 전에 알림이 옵니다.
+            에 모아 두었습니다. 「캘린더 파일」로 담으면 끝나는 날 3일 전에 알림이 옵니다(구글 캘린더 바로 담기에는 알림이 따로 붙지 않습니다).
           </p>
         </DocSection>
 

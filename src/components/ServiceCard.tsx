@@ -134,7 +134,7 @@ export default function ServiceCard({
         </p>
       )}
 
-      <div className="mt-auto flex items-end justify-between gap-3 pt-3.5 text-xs text-slate-400">
+      <div className="mt-auto flex items-end justify-between gap-3 pt-3.5 text-xs text-slate-500">
         <span className="min-w-0 truncate">{meta.join(" · ")}</span>
         {s.views > 0 && (
           <span className="shrink-0" title="복지로 누적 조회수">

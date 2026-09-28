@@ -158,7 +158,7 @@ export default function IncomeLineGuide() {
             </table>
           </div>
           <DocNote tone="brand">
-            비교하는 값은 월급이 아니라 <strong>소득인정액</strong>입니다.
+            비교하는 값은 월급이 아니라 <strong>소득인정액</strong>인 경우가 많습니다(건강보험료로 보는 사업도 있습니다).
             근로소득의 일부를 공제하고 재산을 소득으로 환산해 더한 금액이라
             월급과 다릅니다.{" "}
             <Link href="/guide/terms#recognized-income" className="text-brand underline">

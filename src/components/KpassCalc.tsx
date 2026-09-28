@@ -130,7 +130,7 @@ export default function KpassCalc() {
                   : "border-line bg-white text-slate-600 hover:border-brand"
               }`}
             >
-              {t.label} {Math.round(t.rate * 100)}%
+              {t.label} {Math.round(t.rate * 1000) / 10}%
             </button>
           ))}
         </div>
@@ -190,9 +190,9 @@ export default function KpassCalc() {
 
           <dl className="overflow-hidden rounded-xl border border-line text-sm">
             <Row
-              label={`기본형 (${Math.round(type.rate * 100)}%)`}
+              label={`기본형 (${Math.round(type.rate * 1000) / 10}%)`}
               value={won(result.basic)}
-              hint={`${won(spend!)} × ${Math.round(type.rate * 100)}%`}
+              hint={`${won(spend!)} × ${Math.round(type.rate * 1000) / 10}%`}
             />
             <Row
               label="플러스형"

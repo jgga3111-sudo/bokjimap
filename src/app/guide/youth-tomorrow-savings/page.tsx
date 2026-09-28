@@ -11,7 +11,7 @@ const G = guideBySlug("youth-tomorrow-savings")!;
 export const metadata: Metadata = {
   title: "청년내일저축계좌 만기 조건 — 정부지원금을 못 받게 되는 7가지",
   description:
-    "매월 10만원 이상 넣으면 정부가 30만원을 얹어 3년 뒤 1,440만원+이자가 됩니다. 다만 교육 10시간·자금사용계획서를 빠뜨리거나 12개월 미납이면 정부지원금은 환수됩니다. 2026년 보건복지부 사업안내로 정리했습니다.",
+    "매월 10만원씩 넣고 조건을 지키면 정부지원금 30만원이 붙어 3년 뒤 1,440만원+이자가 되는 통장입니다(2026년 신규 가입은 차상위 이하로 좁혀졌습니다). 다만 교육 10시간·자금사용계획서를 빠뜨리거나 12개월 미납이면 정부지원금은 환수됩니다. 2026년 보건복지부 사업안내로 정리했습니다.",
   alternates: { canonical: "/guide/youth-tomorrow-savings" },
 };
 
@@ -103,7 +103,7 @@ export default function YouthTomorrowSavingsGuide() {
             모집 일정은 아직 원문에 없습니다. 작년 날짜로 짐작하지 않고 비워 둡니다.
           </p>
           <p>
-            그리고 올해부터 <strong>새로 가입할 수 있는 사람이 줄었습니다.</strong>{" "}
+            그리고 2026년부터 <strong>새로 가입할 수 있는 사람이 줄었습니다.</strong>{" "}
             보건복지부 안내서의 2026년 주요 개정에 이렇게 적혀 있습니다.
           </p>
           <blockquote className="border-l-2 border-line pl-3 text-slate-700">
@@ -116,7 +116,7 @@ export default function YouthTomorrowSavingsGuide() {
             매칭」 줄이 남아 있습니다. 안내서는 같은 구간에 대해 위처럼 신규모집
             중단을 적고, 68쪽에서 &ldquo;가입 시 가구소득 기준에 따라 지원&rdquo;되며
             &ldquo;가입 이후 계층이동이 발생하더라도 지원액은 변경되지 않는다&rdquo;고
-            적습니다. 올해 새로 가입하는 경우 어느 구간이 적용되는지는 주민센터나
+            적습니다. 2026년에 새로 가입하는 경우 어느 구간이 적용되는지는 주민센터나
             보건복지상담센터(129)에서 확인해 주세요.
           </DocNote>
         </DocSection>
@@ -321,7 +321,7 @@ export default function YouthTomorrowSavingsGuide() {
           <Source page="15~16·64쪽" />
         </DocSection>
 
-        <DocSection title="소득이 늘면 오히려 먼저 받습니다">
+        <DocSection title="소득이 늘면 만기 전에 받을 수도 있습니다">
           <p>
             가입한 뒤 청년 본인의 근로·사업소득이 <strong>기준 중위소득 100%</strong>를
             넘으면 탈락이 아니라 <strong>중도 지급</strong>입니다. 교육 이수와 자금사용

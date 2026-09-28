@@ -44,7 +44,7 @@ export default async function IncomeBandPage({
      아래로 줄어 사라졌다(build-data.mjs pickMedianPercent). 색인됐던 주소라 404 대신
      기준선 목록으로 보낸다. */
   if (!band) {
-    if (/^\d+$/.test(percent)) permanentRedirect("/income");
+    if (["72", "85", "140", "200"].includes(percent)) permanentRedirect("/income");
     notFound();
   }
 

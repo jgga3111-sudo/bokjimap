@@ -29,7 +29,9 @@ export default function CdaCalc() {
   const [bornRaw, setBornRaw] = useState("");
   const [monthly, setMonthly] = useState<number>(50_000);
 
-  const born = parse(bornRaw);
+  const parsed = parse(bornRaw);
+  const future = !!parsed && parsed > new Date();
+  const born = future ? null : parsed;
   const months = born ? monthsToEighteen(born, new Date()) : null;
   const r = months !== null ? calcCda(monthly, months) : null;
 
@@ -77,7 +79,12 @@ export default function CdaCalc() {
       </div>
 
       <div className="mt-5 space-y-3">
-        {!born && (
+        {future && (
+          <p role="alert" className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            태어난 날이 오늘보다 뒤입니다. 날짜를 다시 확인해 주세요.
+          </p>
+        )}
+        {!born && !future && (
           <p className="rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">
             태어난 날을 넣으면 18세가 되는 달까지 남은 개월수로 원금 합계를 세어 드립니다.
           </p>

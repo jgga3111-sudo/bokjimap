@@ -140,6 +140,7 @@ export default function SearchBox({
           role="combobox"
           aria-expanded={open && hits.length > 0}
           aria-controls={listId}
+          aria-activedescendant={open && cursor >= 0 && cursor < hits.length ? `${listId}-${cursor}` : undefined}
           aria-autocomplete="list"
           aria-label="복지 서비스 검색"
           onChange={(e) => {
@@ -229,7 +230,7 @@ export default function SearchBox({
             <>
               <ul id={listId} role="listbox" className="divide-y divide-line">
                 {hits.map((h, i) => (
-                  <li key={h.id} role="option" aria-selected={i === cursor}>
+                  <li key={h.id} id={`${listId}-${i}`} role="option" aria-selected={i === cursor}>
                     <Link
                       href={`/service/${h.id}`}
                       onClick={leave}

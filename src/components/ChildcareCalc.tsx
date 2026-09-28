@@ -114,7 +114,7 @@ export default function ChildcareCalc() {
               {[
                 ["이용요금", won(r.fee)],
                 ["정부지원금", won(r.gov)],
-                ["1시간당 본인부담", won(r.perHourMine)],
+                [r.overCap > 0 ? "1시간당 본인부담 (200시간까지)" : "1시간당 본인부담", won(r.perHourMine)],
               ].map(([k, v]) => (
                 <div key={k} className="flex items-baseline justify-between gap-3 border-b border-line px-4 py-2.5 last:border-0">
                   <dt className="text-slate-600">{k}</dt>

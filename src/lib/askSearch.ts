@@ -213,6 +213,15 @@ export function askSearch(read: AskRead): AskAnswer {
     pool = filter(applied);
   }
 
+  /** 칩 이름을 이름 대조용 낱말로 — 「한부모·조손」 → 한부모·조손, 「장애인」 → 장애, 「보훈대상자」 → 보훈. */
+  const chipWords = (axes: readonly string[]) =>
+    applied
+      .filter((c) => axes.includes(c.axis))
+      .flatMap((c) => c.label.split("·"))
+      .map((w) => w.replace(/(대상자|인)$/, ""))
+      .filter((w) => w.length >= 2);
+  const chipNameWords = chipWords(["life", "target"]);
+
   /** 걸린 낱말 → 실제로 걸린 형태. 자기 자신으로 걸렸으면 값이 자기 자신이다. */
   const hitWords = new Map<string, string>();
   const scored: {
@@ -281,6 +290,10 @@ export function askSearch(read: AskRead): AskAnswer {
       score += 60;
     }
 
+    /* 알아들은 생애주기·대상이 **이름에** 들어 있으면 조금 위로(09-28). 「청년 월세 지원금 얼마」의
+       1위가 이름이 「월세」로 시작하는 장애인 주거비였다 — 「청년월세 지원사업」은 「월세」가 가운데라 점수가 낮았다. */
+    if (chipNameWords.some((w) => s.name.includes(w))) score += 60;
+
     /* 혜택은 걸러 내지 않고 위로 올리기만 한다. */
     for (const c of applied)
       if (c.axis === "benefit" && passes(s, c, null)) score += BENEFIT_BOOST;
@@ -332,6 +345,14 @@ export function askSearch(read: AskRead): AskAnswer {
   /* 지역을 말했으면 조건만 맞는 것 중 **그 지역 사업을 먼저**(09-17). 조회수로만
      세우면 전국 사업이 위를 다 차지한다 — 「경기도 사는 28살 직장인」의 첫 20건에
      경기도 사업이 0건이었다. sort는 안정 정렬이라 같은 무리 안의 순서는 그대로다. */
+  /* 대상을 말했으면 **이름에 그 대상이 든 사업**을 먼저(09-28). 「혼자 아이 키우는데」 →
+     한부모·조손 119건을 조회수로만 세우니 1위가 에너지바우처, 「한부모가족 아동양육비」는
+     6위였다. 지역 규칙보다 먼저 세워, 지역을 말했으면 지역이 앞서고 그 안에서 이 순서가 남는다. */
+  const targetWords = chipWords(["target"]);
+  if (targetWords.length) {
+    const named = (x: { s: (typeof services)[number] }) => targetWords.some((w) => x.s.name.includes(w));
+    rest.sort((a, b) => Number(named(b)) - Number(named(a)));
+  }
   if (applied.some((c) => c.axis === "region"))
     rest.sort((a, b) => Number(b.s.provider !== "central") - Number(a.s.provider !== "central"));
 

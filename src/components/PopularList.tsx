@@ -72,7 +72,7 @@ export default function PopularList({
                 </span>
                 {s.views > 0 && (
                   <span
-                    className="text-xs text-slate-400 tabular-nums"
+                    className="text-xs text-slate-500 tabular-nums"
                     title="복지로 누적 조회수"
                   >
                     조회 {views(s.views)}

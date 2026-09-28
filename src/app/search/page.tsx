@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { searchFull } from "@/lib/searchFull";
+import { searchFullSplit } from "@/lib/searchFull";
 import { services } from "@/data/services";
 import SearchBox from "@/components/SearchBox";
 import { POPULAR } from "@/lib/popular";
@@ -43,7 +43,7 @@ export default async function SearchPage({
   /* /ask와 같은 120자 상한. 낱말 수백 개짜리 검색어를 반복 보내면 900건 ×
      낱말 수만큼 서버가 돈다(09-11 보안 점검). */
   const q = (Array.isArray(raw) ? raw[0] : (raw ?? "")).trim().slice(0, 120);
-  const hits = q ? searchFull(q) : [];
+  const { hits, split } = q ? searchFullSplit(q) : { hits: [], split: null };
 
   /* 자르는 이유. "지원"처럼 흔한 낱말은 수백 건이 걸리는데, 그걸 다 깔아도
      읽는 사람은 위에서 열 몇 개만 본다. 자르되 **잘랐다고 적는다.** */
@@ -64,6 +64,11 @@ export default async function SearchPage({
         </h1>
         {q && (
           <p className="mt-1 text-sm text-muted">
+            {split && (
+              <>
+                &ldquo;{q}&rdquo;로는 없어 <strong className="text-ink">&ldquo;{split}&rdquo;</strong>로 나눠 찾았습니다 ·{" "}
+              </>
+            )}
             {hits.length.toLocaleString()}건
             {hits.length > MAX && ` 중 ${MAX}건 표시`} · 이름과 지원내용·지원대상을
             함께 찾은 결과입니다

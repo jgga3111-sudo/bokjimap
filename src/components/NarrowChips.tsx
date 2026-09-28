@@ -59,7 +59,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
                 className="rounded-full bg-ground px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
               >
                 {c.label}
-                <span className="ml-1 text-slate-400">{c.count}</span>
+                <span className="ml-1 text-slate-500">{c.count}</span>
               </Link>
             ))}
             {r.moreHref && (

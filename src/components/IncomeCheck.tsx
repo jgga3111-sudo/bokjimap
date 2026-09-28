@@ -59,10 +59,29 @@ export type ServicesByPercent = Record<
   { total: number; items: { id: string; name: string }[] } | undefined
 >;
 
-/** 입력값(만원·원) → 월 소득(원). 못 읽으면 null. */
+/**
+ * 단위를 잘못 넣은 것으로 보이면 그 이유(화면 문구). (2026-09-28 점검)
+ * 건강보험료 칸에 8.9875(8만 9,875원을 만원으로 착각)를 넣으면 월 소득 250원 · 중위소득 0.1%로
+ * **저장까지** 돼, 모든 상세에 「기준선 아래」가 떴다(틀리는 방향이 "받는다"). 반대로 월 소득 칸에
+ * 원 단위(2,500,000)를 넣으면 10억 상한에 걸려 아무 말 없이 빈 안내만 나왔다.
+ */
+function unitProblem(raw: string, mode: Mode): string | null {
+  const n = Number(raw.replaceAll(",", ""));
+  if (!raw.trim() || !Number.isFinite(n)) return null;
+  if (mode === "premium") {
+    if (n === 0) return "건강보험료가 0원이면 이 방식으로는 계산할 수 없습니다. 월 소득으로 넣어 주세요.";
+    return n < 1000 ? "건강보험료는 원 단위로 넣어 주세요 — 예: 8만 9,875원이면 89875" : null;
+  }
+  const limit = mode === "annual" ? 1_000_000 : 100_000;
+  return n >= limit
+    ? `만원 단위로 넣어 주세요 — 예: ${mode === "annual" ? "연 3,600만원이면 3600" : "월 250만원이면 250"}`
+    : null;
+}
+
+/** 입력값(만원·원) → 월 소득(원). 못 읽거나 단위가 이상하면 null. 월·연 소득 0은 0으로 센다. */
 function toMonthly(raw: string, mode: Mode): number | null {
   const n = Number(raw.replaceAll(",", ""));
-  if (!raw.trim() || !Number.isFinite(n) || n <= 0) return null;
+  if (!raw.trim() || !Number.isFinite(n) || n < 0 || unitProblem(raw, mode)) return null;
   const won =
     mode === "monthly"
       ? Math.round(n * 10_000)
@@ -87,6 +106,7 @@ export default function IncomeCheck({
   const [committedRaw, setCommittedRaw] = useState("");
 
   const monthly = useMemo(() => toMonthly(raw, mode), [raw, mode]);
+  const problem = unitProblem(raw, mode);
   const committed = useMemo(
     () => toMonthly(committedRaw, mode),
     [committedRaw, mode],
@@ -255,9 +275,15 @@ export default function IncomeCheck({
       </div>
 
       {monthly === null ? (
-        <p className="rounded-xl border border-dashed border-line px-4 py-8 text-center text-sm text-muted">
-          소득을 입력하면 기준 중위소득 대비 비율이 바로 계산됩니다.
-        </p>
+        problem ? (
+          <p role="alert" className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-6 text-center text-sm text-amber-900">
+            {problem}
+          </p>
+        ) : (
+          <p className="rounded-xl border border-dashed border-line px-4 py-8 text-center text-sm text-muted">
+            소득을 입력하면 기준 중위소득 대비 비율이 바로 계산됩니다.
+          </p>
+        )
       ) : (
         <>
           <div className="rounded-2xl border border-line bg-white p-5">

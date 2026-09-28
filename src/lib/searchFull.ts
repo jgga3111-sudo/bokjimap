@@ -70,6 +70,24 @@ function snippetOf(body: string, token: string): string | null {
  * 여러 낱말은 **모두** 걸려야 한다. 다만 낱말마다 걸리는 자리는 달라도 된다
  * ("서울 치과" → 지역에서 서울, 본문에서 치과).
  */
+/**
+ * 띄어 쓰지 않은 한 낱말이 0건이면 **둘로 나눠** 다시 찾는다 — 「과학바우처」 → 「과학 바우처」,
+ * 「인천월세」 → 「인천 월세」. 나누는 자리마다 찾아 보고 가장 많이 걸린 것을 쓰며, 화면에 어떻게
+ * 나눴는지 밝힌다(알아들은 척하지 않는다 — /ask와 같은 원칙). 한글 4~10자 한 낱말일 때만.
+ */
+export function searchFullSplit(query: string): { hits: FullHit[]; split: string | null } {
+  const hits = searchFull(query);
+  const q = query.trim();
+  if (hits.length > 0 || /\s/.test(q) || !/^[가-힣]{4,10}$/.test(q)) return { hits, split: null };
+  let best: { hits: FullHit[]; split: string | null } = { hits, split: null };
+  for (let i = 2; i <= q.length - 2; i++) {
+    const split = `${q.slice(0, i)} ${q.slice(i)}`;
+    const h = searchFull(split);
+    if (h.length > best.hits.length) best = { hits: h, split };
+  }
+  return best;
+}
+
 export function searchFull(query: string): FullHit[] {
   const raw = query.trim();
   if (raw.length === 0) return [];

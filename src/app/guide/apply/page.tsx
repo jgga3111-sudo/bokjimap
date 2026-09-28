@@ -107,7 +107,7 @@ export default function ApplyGuide() {
           </div>
         </DocSection>
 
-        <DocSection title="온라인으로 되는 사업은 절반이 안 됩니다">
+        <DocSection title="원문에 온라인 신청이 적힌 사업은 절반이 안 됩니다">
           <p>
             중앙부처 사업과 지자체 사업은 원문이 신청 정보를 적는 방식이
             다릅니다. 중앙부처는 온라인 신청 가능 여부를 표시하고, 지자체는
@@ -159,9 +159,10 @@ export default function ApplyGuide() {
             </table>
           </div>
           <p>
-            합치면 온라인으로 신청할 수 있는 사업은{" "}
-            <strong>{onlineTotal}건</strong>입니다. 나머지는 창구에 가거나
-            우편·전화로 접수해야 합니다. 지자체 사업 중 방문 접수를 받는 것은{" "}
+            합치면 원문에 온라인 신청이 적힌 사업은{" "}
+            <strong>{onlineTotal}건</strong>입니다. 나머지가 모두 창구에만 가야 하는 것은 아닙니다 —
+            근로장려금(홈택스)이나 청년 적금(은행)처럼 복지로가 아닌 곳에서 인터넷으로 받는 사업도
+            있어, 각 상세의 신청 방법 칸을 봐야 합니다. 지자체 사업 중 방문 접수를 받는 것은{" "}
             {localVisit.length}건으로 가장 많습니다.
           </p>
           <p>

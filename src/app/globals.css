@@ -136,3 +136,14 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
   appearance: none;
 }
+
+/* 휴대폰에서 입력칸 글자는 16px 이상(09-28 이용자 점검). 아이폰 사파리는 16px보다 작은 칸을
+   누르면 화면을 저절로 확대한다 — 헤더 검색창과 계산기 칸 여럿이 14px(text-sm)이었다.
+   레이어 밖 규칙이라 유틸리티의 text-sm보다 우선한다. 넓은 화면은 그대로 둔다. */
+@media (max-width: 639px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}

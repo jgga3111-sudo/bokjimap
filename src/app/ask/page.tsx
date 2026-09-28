@@ -40,7 +40,7 @@ const AXIS_NAME: Record<Chip["axis"], string> = {
 /** 질문 말투 → 이미 있는 안내 글. 판정하지 않고 글로 보낸다. */
 const ASK_GUIDES: { re: RegExp; lead: string; href: string; label: string }[] = [
   {
-    re: /중복|(같이|함께|동시에?|둘\s*다)\s*받/,
+    re: /중복|(같이|함께|동시에?|둘\s*다)\s*받|더\s*받을/,
     lead: "자주 묻는 조합은 법령·부처 지침으로 확인해 따로 정리했습니다.",
     href: "/guide/combined-support",
     label: "두 가지를 같이 받을 수 있나",
@@ -64,10 +64,34 @@ const ASK_GUIDES: { re: RegExp; lead: string; href: string; label: string }[] = 
     label: "지원금 지급일",
   },
   {
-    re: /실업\s*급여|구직\s*급여/,
+    re: /실업\s*급여|구직\s*급여|실직|해고|잘렸|잘리|퇴사|(일자리|직장)[을를]?\s*잃/,
     lead: "실업급여는 고용보험 제도라 복지로 수록 목록에 없습니다.",
     href: "/guide/unemployment",
     label: "실업급여 안내",
+  },
+  {
+    re: /실직|해고|잘렸|잘리|퇴사|(일자리|직장)[을를]?\s*잃|국민\s*취업|구직\s*촉진/,
+    lead: "실업급여를 못 받거나 끝난 사람도 받을 수 있는 구직촉진수당이 있습니다.",
+    href: "/guide/national-employment",
+    label: "국민취업지원제도",
+  },
+  {
+    re: /(생계|생활비|먹고\s*살)[이가]?\s*(막|어려|없|힘들)|긴급\s*(복지|지원)|당장\s*(생활비|돈)/,
+    lead: "갑자기 소득이 끊겼을 때 받는 긴급복지 생계지원 금액을 정리했습니다.",
+    href: "/guide/emergency",
+    label: "긴급복지 지원",
+  },
+  {
+    re: /발달\s*장애|활동\s*지원/,
+    lead: "장애인활동지원의 구간별 한도와 본인부담금을 정리했습니다.",
+    href: "/guide/disability-activity-support",
+    label: "장애인활동지원",
+  },
+  {
+    re: /돌봐\s*줄\s*사람|돌봄이?\s*(끊|필요)|(아파|다쳐)서?.*(돌봐|돌봄)/,
+    lead: "갑자기 돌봄이 끊겼을 때는 긴급돌봄, 몇 달 이상 필요하면 일상돌봄을 봅니다.",
+    href: "/guide/emergency-care",
+    label: "긴급돌봄 지원사업",
   },
 ];
 
@@ -126,6 +150,8 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
 
   const read = q ? parseAsk(q) : null;
   const answer = read ? askSearch(read) : null;
+  /* 생애주기·대상·지역처럼 **거르는** 조건을 하나라도 알아들었나. 혜택은 거르지 않는다. */
+  const filtering = !!answer?.applied.some((c) => c.axis !== "benefit");
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -372,13 +398,17 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
             {/* ② 조건만 맞는 것. **가르는 줄을 긋고 무엇이 다른지 적는다.**
                 이 줄이 없으면 다섯째부터 나오는 장애인연금이 「월세」로 찾은
                 결과처럼 읽힌다(lib/askSearch.ts 주석 ㉠). */}
-            {answer.otherHits.length > 0 && (
+            {/* 조건 없이 낱말만 걸렸으면 아래 목록을 붙이지 않는다 — 조건이 없는데 「조건에 맞는 것」이라는
+                제목으로 무관한 인기 사업 20건이 붙었다(09-28 점검). 아무것도 안 걸렸을 때만 많이 찾는 순으로 보인다. */}
+            {answer.otherHits.length > 0 && (filtering || answer.matchedHits.length === 0) && (
               <div>
                 <div className="mb-3 border-t border-line pt-4">
                   <h2 className="text-sm font-bold text-ink">
-                    {answer.matchedHits.length > 0
-                      ? "낱말은 안 걸렸지만 조건에는 맞는 것"
-                      : "조건에 맞는 것"}
+                    {!filtering
+                      ? "많이 찾는 지원"
+                      : answer.matchedHits.length > 0
+                        ? "낱말은 안 걸렸지만 조건에는 맞는 것"
+                        : "조건에 맞는 것"}
                   </h2>
                   <p className="mt-0.5 text-xs leading-relaxed text-muted">
                     {/* 혜택은 거르는 조건이 아니므로 여기 이름에 넣지 않는다.

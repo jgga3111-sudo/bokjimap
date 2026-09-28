@@ -54,7 +54,7 @@ export default function CalendarGuide() {
     <>
       <DocPage
         title={G.title}
-        lead="복지는 아무 때나 신청되지 않습니다. 근로장려금은 한 해에 신청할 수 있는 날이 며칠뿐이고, 노인일자리는 해가 바뀌기 전에 모집이 끝납니다."
+        lead="복지는 아무 때나 신청되지 않습니다. 근로장려금은 신청하는 기간이 정해져 있고, 노인일자리는 해가 바뀌기 전에 모집이 끝납니다."
         updated={`최종 수정 ${G.updated} · 제도 ${PROGRAM_COUNT}개 · 항목 ${CALENDAR.length}개를 공식 공고에서 확인`}
       >
         <DocSection title="왜 시기가 중요한가">
@@ -189,9 +189,9 @@ export default function CalendarGuide() {
             </li>
             <li>
               <strong className="text-ink">
-                근로장려금을 5월에 놓쳐도 받을 수는 있습니다.
+                근로장려금을 5월에 놓쳐도 신청할 길은 있습니다.
               </strong>{" "}
-              다만 기한 후 신청(6월 2일~12월 1일)은 95%만 나옵니다. 5%가 줄어듭니다.
+              다만 기한 후 신청(2026년은 6월 2일~12월 1일)은 95%만 나옵니다. 5%가 줄어듭니다.
             </li>
           </ul>
         </DocSection>

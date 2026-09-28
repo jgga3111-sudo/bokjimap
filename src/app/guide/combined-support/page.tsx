@@ -124,7 +124,7 @@ export default function CombinedSupportGuide() {
                     같은 성격의 돈이라 한쪽을 받으면 다른 쪽이 안 나옵니다.
                   </td>
                   <td className="px-3 py-2">
-                    부모급여와 보육료 · 장애인연금 기초급여와 기초연금
+                    장애인연금 기초급여와 기초연금 · 부모급여와 보육료(0세는 차액을 현금으로 받습니다 — 2절)
                   </td>
                 </tr>
                 <tr className="border-b border-line">
@@ -295,7 +295,7 @@ export default function CombinedSupportGuide() {
         <DocSection title="7. 청년월세 + 주거급여 — 겹치는 만큼 뺀 금액만 나옵니다">
           <p>
             청년월세 지원은 주거급여를 받는 사람도 신청할 수 있지만 전액이 나오지는
-            않습니다. 원문이 &ldquo;주거급여 수급자의 경우 주거급여액 중
+            않습니다(2026년 신규 신청은 5월 29일에 끝났습니다). 원문이 &ldquo;주거급여 수급자의 경우 주거급여액 중
             월차임분(청년 주거급여 분리지급액 포함)을 차감한 금액만
             지원합니다&rdquo;라고 적고 있습니다. 같은 원문이{" "}
             <strong>국토부나 지자체의 다른 청년월세 지원을 받고 있으면 제외</strong>

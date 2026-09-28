@@ -619,7 +619,8 @@ function PreCheck({
             절까지 내려가야 보였다. 09-16 경쟁 조사에서 서울복지포털이 목록
             카드에까지 직통번호를 박아 두는 것을 보고 올렸다. 번호로 읽히는
             값만 링크를 건다(telHref) — 「평일 09~18시」 같은 안내문이 섞인다. */}
-        <Row label="문의" value={<ContactLine s={s} />} />
+        {/* 전화번호가 하나도 없으면 줄을 안 그린다 — 요소를 그대로 넘기면 늘 참이라 빈 줄이 떴다(09-28 점검, 3쪽). */}
+        <Row label="문의" value={s.contacts.some((c) => telHref(c.url)) ? <ContactLine s={s} /> : null} />
         <Row label="담당" value={s.department} />
         <Row label="기준연도" value={s.baseYear && `${s.baseYear}년`} />
       </dl>
@@ -1055,7 +1056,7 @@ export default async function ServiceDetail({
           {s.views > 0 && (
             <>
               {" · "}
-              <span className="text-slate-400">
+              <span className="text-slate-500">
                 복지로 조회 {views(s.views)}
               </span>
             </>
@@ -1063,7 +1064,7 @@ export default async function ServiceDetail({
           {" · "}
           <a
             href="#official"
-            className="text-slate-400 underline decoration-slate-300 underline-offset-2 hover:text-brand"
+            className="text-slate-600 underline decoration-slate-300 underline-offset-2 hover:text-brand"
           >
             {s.checkedAt ?? SERVICES_UPDATED} 확인
           </a>
@@ -1085,7 +1086,7 @@ export default async function ServiceDetail({
             붙지 않는다. 없는 것을 "정보 없음"으로 채우지 않는다.
           */}
           {s.updatedAt && (
-            <span className="text-slate-400"> · 원문 {s.updatedAt}</span>
+            <span className="text-slate-500"> · 원문 {s.updatedAt}</span>
           )}
         </p>
 

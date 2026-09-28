@@ -99,7 +99,7 @@ export default function EmergencyGuide() {
             나머지 {family.length - 1}갈래 합계 {fmtViews(rest)}회
           </p>
           <p>
-            같은 위기 상황에서 <strong>함께 신청할 수 있는 것들인데</strong>{" "}
+            같은 위기 상황에서 <strong>따로 신청하는 갈래가 여럿인데</strong>{" "}
             생계지원 하나만 알고 나머지를 그냥 지나칩니다. 병원비가 문제라면
             의료지원이, 살 곳이 문제라면 주거지원이 따로 있습니다.
           </p>
