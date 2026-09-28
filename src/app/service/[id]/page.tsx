@@ -587,13 +587,14 @@ function PreCheck({
         <Row
           label="신청 기간"
           value={
-            CLOSING[s.id]?.kind === "gov24"
+            CLOSING[s.id]?.kind === "gov24" || CLOSING[s.id]?.source === "gov24"
               ? `${CLOSING[s.id].text} (보조금24)`
               : period?.text
           }
         />
         <Row label="시행 기간" value={enforced} />
         <Row label="접수 방식" value={s.applyMethods.join(" · ")} />
+        <Row label="신청하는 곳" value={applyPlace(s.id)} />
         <Row
           label="소득 기준선"
           value={
@@ -652,6 +653,39 @@ function PreCheck({
  * 값은 옮겨 적은 그대로다. 조문은 인용하고, 날짜는 달력 파일의 값을 쓰고,
  * 계산하거나 해석하지 않는다(3절).
  */
+/**
+ * 「신청 전 체크」의 신청하는 곳 줄(2026-09-28) — 보조금24 「온라인신청사이트」 칸.
+ * 128건에 값이 있는데 여태 화면에 안 쓰고 있었다. 주소는 원문 그대로 걸고
+ * 어디서 온 값인지 밝힌다. http(s)로 시작하지 않는 셋(「www.nosa.or.kr」 등)은
+ * 우리가 앞을 붙이면 원문을 고치는 셈이라 싣지 않는다.
+ */
+function applyPlace(id: string) {
+  const raw = GOV24[id]?.onlineUrl?.trim();
+  if (!raw || !/^https?:\/\//i.test(raw)) return null;
+  let host: string;
+  try {
+    host = new URL(raw).host;
+  } catch {
+    return null;
+  }
+  return (
+    <>
+      <a
+        href={raw}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={raw}
+        className="break-all font-medium text-brand underline"
+      >
+        {host} ↗
+      </a>
+      <span className="block text-xs font-normal text-slate-600">
+        보조금24에 적힌 온라인 신청 주소입니다. 방문·우편 신청을 받는 사업도 있습니다.
+      </span>
+    </>
+  );
+}
+
 /** 「신청 전 체크」의 문의 줄. 전화로 읽히는 첫 값 하나만 — 목록이 아니라 한 줄이다. */
 function ContactLine({ s }: { s: WelfareService }) {
   const first = s.contacts.find((c) => telHref(c.url));
@@ -1138,7 +1172,10 @@ export default async function ServiceDetail({
             서버에서 그대로 그린다. 우리 말로 바꾸지 않고 원문 표기를 인용한다. */}
         {CLOSING[s.id]?.kind === "stated" && (
           <p className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
-            <strong>원문에 &ldquo;{CLOSING[s.id].text}&rdquo;이라고 적혀 있습니다.</strong>{" "}
+            <strong>
+              {CLOSING[s.id].source === "gov24" ? "보조금24 신청기한 칸" : "원문"}에 &ldquo;
+              {CLOSING[s.id].text}&rdquo;이라고 적혀 있습니다.
+            </strong>{" "}
             다시 모집하는지는{" "}
             <a href="#official" className="font-bold underline">
               아래 공식 안내

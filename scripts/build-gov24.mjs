@@ -261,28 +261,42 @@ function deadlineEnd(text) {
   return best && best.slice(0, 4) >= CHECKED.slice(0, 4) ? best : null;
 }
 
+/* 날짜 없이 **문장으로** 마감이라고 적은 것(2026-09-28, 사용자 결정) — 「금년 접수 마감」
+   「2026년은 신규 대상자 미 모집」 「신규계약 … -모집완료」. 391건 중 딱 이 셋이 걸린다.
+   · 좁게 — 접수·신청·모집 바로 뒤의 마감·완료, 또는 「미 모집」만. 「예산소진시까지」
+     「종료일로부터 12개월 이내」는 안 걸린다.
+   · 적힌 해가 확인한 해보다 앞이면 버린다(작년 공고 — 올해 다시 받는지 모른다).
+   · 광주 WLF00004245는 신규만 끝났고 갱신은 받는다 — 문구를 통째로 옮겨 상세 띠·딱지
+     설명에 갱신 일정이 그대로 보이게 한다. */
+function statedClosed(text) {
+  if (!/(접수|신청|모집)\s*(마감|완료)|미\s*모집/.test(text)) return false;
+  return [...text.matchAll(/(20\d{2})\s*년/g)].every((y) => y[1] >= CHECKED.slice(0, 4));
+}
+
 const oursById = new Map(ours.map((s) => [s.id, s]));
 const gov24Closing = {};
 for (const m of matched) {
-  const end = m.deadline && deadlineEnd(m.deadline);
-  if (end) {
-    gov24Closing[m.id] = {
-      kind: "gov24",
-      end,
-      text: m.deadline.replace(/\s+/g, " ").trim(),
-      name: oursById.get(m.id).name,
-    };
-  }
+  if (!m.deadline) continue;
+  const end = deadlineEnd(m.deadline);
+  const base = { text: m.deadline.replace(/\s+/g, " ").trim(), name: oursById.get(m.id).name };
+  if (end) gov24Closing[m.id] = { kind: "gov24", end, ...base };
+  else if (statedClosed(m.deadline))
+    gov24Closing[m.id] = { kind: "stated", end: null, ...base, source: "gov24" };
 }
 fs.writeFileSync(
   path.join("src", "data", "gov24Closing.ts"),
   `/* 자동 생성 — scripts/build-gov24.mjs. 손으로 고치지 않는다.
  *
- * 보조금24 「신청기한」 칸에 날짜가 온전히 적힌 사업의 끝날(읽는 규칙은 그 스크립트).
+ * 보조금24 「신청기한」 칸에 날짜가 온전히 적힌 사업의 끝날, 그리고 날짜 없이 문장으로
+ * 마감이라고 적은 것(stated · source gov24). 읽는 규칙은 그 스크립트.
  * \`closing.ts\`가 복지로 원문에서 뽑은 마감 표와 합친다 — 겹치면 복지로 쪽이 이긴다.
  */
 export const GOV24_CLOSING: Readonly<
-  Record<string, { kind: "gov24"; end: string; text: string; name: string }>
+  Record<
+    string,
+    | { kind: "gov24"; end: string; text: string; name: string }
+    | { kind: "stated"; end: null; text: string; name: string; source: "gov24" }
+  >
 > = ${JSON.stringify(gov24Closing, null, 1)};
 `,
 );

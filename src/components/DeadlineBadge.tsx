@@ -66,7 +66,7 @@ const what = (c: Closing) =>
 
 const closedTitle = (c: Closing) =>
   c.kind === "stated"
-    ? `원문에 「${c.text}」이라고 적혀 있습니다`
+    ? `${c.source === "gov24" ? "보조금24 신청기한 칸" : "원문"}에 「${c.text}」이라고 적혀 있습니다`
     : `${what(c)}(${c.text})이 지났습니다`;
 
 export type DeadlineState =

@@ -59,7 +59,7 @@ export default function ClosedList() {
                 </span>
                 <span className="mt-0.5 block text-xs text-muted">
                   {c.kind === "stated"
-                    ? `원문 표기 「${c.text}」`
+                    ? `${c.source === "gov24" ? "보조금24 신청기한" : "원문 표기"} 「${c.text}」`
                     : `${c.kind === "period" ? "신청 기간" : c.kind === "gov24" ? "보조금24 신청기한" : "사업 기간"} ${c.text}`}
                 </span>
               </span>

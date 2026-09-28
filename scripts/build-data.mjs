@@ -500,12 +500,15 @@ export type Closing = {
   /** 원문 조각 그대로 */
   text: string;
   name: string;
+  /** stated인데 복지로가 아니라 보조금24 「신청기한」 칸이 마감이라고 적은 것(2026-09-28). */
+  source?: "gov24";
 };
 
 const BOKJIRO: Readonly<Record<string, Closing>> = ${JSON.stringify(closing, null, 1)};
 
 /* 두 원천을 합친다(2026-09-17).
-   · 원문이 마감이라고 적은 것(stated)은 그대로 둔다.
+   · 원문이 마감이라고 적은 것(stated)은 그대로 둔다. 보조금24 칸이 문장으로 마감이라고
+     적은 것(stated·source gov24)은 날짜가 없어서, 복지로에 신청 기간이 있으면 그쪽이 이긴다.
    · 복지로에 사업 기간(program)만 있으면 보조금24의 **신청** 기간이 이긴다 —
      전북형 청년활력수당은 사업 기간이 2027년인데 신청은 2026.3.20.에 끝났다.
    · 둘 다 신청 기간이면 **끝날이 늦은 쪽**(더 새 공고)을 쓴다 — 아동건강체험활동비는

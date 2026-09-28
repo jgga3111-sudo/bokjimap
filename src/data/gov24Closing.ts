@@ -1,10 +1,15 @@
 /* 자동 생성 — scripts/build-gov24.mjs. 손으로 고치지 않는다.
  *
- * 보조금24 「신청기한」 칸에 날짜가 온전히 적힌 사업의 끝날(읽는 규칙은 그 스크립트).
+ * 보조금24 「신청기한」 칸에 날짜가 온전히 적힌 사업의 끝날, 그리고 날짜 없이 문장으로
+ * 마감이라고 적은 것(stated · source gov24). 읽는 규칙은 그 스크립트.
  * `closing.ts`가 복지로 원문에서 뽑은 마감 표와 합친다 — 겹치면 복지로 쪽이 이긴다.
  */
 export const GOV24_CLOSING: Readonly<
-  Record<string, { kind: "gov24"; end: string; text: string; name: string }>
+  Record<
+    string,
+    | { kind: "gov24"; end: string; text: string; name: string }
+    | { kind: "stated"; end: null; text: string; name: string; source: "gov24" }
+  >
 > = {
  "WLF00000072": {
   "kind": "gov24",
@@ -77,6 +82,13 @@ export const GOV24_CLOSING: Readonly<
   "end": "2026-01-18",
   "text": "2026. 1. 8. ~ 2026. 1. 18.",
   "name": "청년13(일+삶)통장 지원 사업"
+ },
+ "WLF00004712": {
+  "kind": "stated",
+  "end": null,
+  "text": "2026년은 신규 대상자 미 모집",
+  "name": "평택시 청년 전월세보증금 대출이자 지원",
+  "source": "gov24"
  },
  "WLF00001451": {
   "kind": "gov24",
@@ -168,10 +180,24 @@ export const GOV24_CLOSING: Readonly<
   "text": "신청기간 : 2026. 1. 15. ~ 11. 30.",
   "name": "성북구 아동·청소년동행카드 지원사업"
  },
+ "WLF00005320": {
+  "kind": "stated",
+  "end": null,
+  "text": "금년 접수 마감",
+  "name": "청년 주택임차보증금 이자지원사업",
+  "source": "gov24"
+ },
  "WLF00005099": {
   "kind": "gov24",
   "end": "2026-03-16",
   "text": "2026. 3. 3. ~ 3. 16.",
   "name": "전북청년 함께 두배적금"
+ },
+ "WLF00004245": {
+  "kind": "stated",
+  "end": null,
+  "text": "신규계약: (상) 1월 (하) 7월 -모집완료 / 갱신계약: 3,5,7,9,11월 1일~10일",
+  "name": "청년맞춤형 주택임차보증금 지원사업",
+  "source": "gov24"
  }
 };

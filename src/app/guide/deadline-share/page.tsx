@@ -47,7 +47,7 @@ const BUDGET = services.filter((s) =>
 );
 
 /* 보조금24 신청기한에서 온 것은 따로 센다(2026-09-17) — 「문장을 읽어 냈다」는 말은 복지로 몫에만 맞다. */
-const GOV24_COUNT = Object.values(CLOSING).filter((c) => c.kind === "gov24").length;
+const GOV24_COUNT = Object.values(CLOSING).filter((c) => c.kind === "gov24" || c.source === "gov24").length;
 const CLOSING_COUNT = Object.keys(CLOSING).length - GOV24_COUNT;
 
 /* 이 칸은 신청 마감일이 아니라 **사업 기간의 끝날**이다 — 2050·2099년 같은 값이
