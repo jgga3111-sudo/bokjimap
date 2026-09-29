@@ -84,6 +84,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "emergency-care": ["WLF00005442"],
   /* 2026-09-29 아침 루틴 — 2026년 국민기초생활보장 사업안내로 장제·해산급여의 받는 사람·서류·지급 기한을 옮긴 글. */
   "funeral-birth-benefit": ["WLF00003267", "WLF00001135"],
+  /* 2026-09-30 아침 루틴 — 양곡관리법 제9조의5(2026-08-27 시행)와 시행령으로 양곡할인의 대상 다섯 갈래·월 단위 신청·세부 기준의 위임을 옮긴 글. */
+  "grain-discount": ["WLF00000074"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],
