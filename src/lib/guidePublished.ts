@@ -58,4 +58,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "emergency-care": "2026-09-28",
   "funeral-birth-benefit": "2026-09-29",
   "grain-discount": "2026-09-30",
+  "catastrophic-medical": "2026-10-01",
 };
