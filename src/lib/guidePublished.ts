@@ -60,4 +60,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "grain-discount": "2026-09-30",
   "catastrophic-medical": "2026-10-01",
   "childcare-extended": "2026-10-01",
+  "low-income-copay": "2026-10-02",
 };

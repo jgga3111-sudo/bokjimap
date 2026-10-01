@@ -90,6 +90,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "catastrophic-medical": ["WLF00003247"],
   /* 2026-10-01 — 그 밖의 연장형 보육료(야간연장·야간12시간·24시간·휴일). 교육부 2026년도 보육사업안내의 신청서·대상 요건·보호자 준수사항을 옮긴 글. */
   "childcare-extended": ["WLF00001147"],
+  /* 2026-10-02 — 차상위 본인부담경감대상자 지원. 보건복지부 2026년 사업 안내의 병원별 본인부담·부양의무자 판정·자격 종료일을 옮긴 글. */
+  "low-income-copay": ["WLF00001119"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],

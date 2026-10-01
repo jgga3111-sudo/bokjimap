@@ -182,6 +182,24 @@ for (const [gid, rows] of byGid) {
   }
 }
 
+/* ⑥ 보조금24가 **목록에서 지운** 사업은 지난번 값을 그대로 둔다(2026-10-02).
+   대구 다자녀 고교 입학축하금은 신청이 9/30에 끝나자 원본에서 사라졌고, 그대로
+   다시 만들면 서류 절과 「마감」 표시가 함께 없어진다. 마감된 사업은 숨기지 않고
+   마감으로 표기한다(CLAUDE.md 3절). 원본에 아직 있는데 규칙에서 탈락한 것은
+   (이름이 바뀌었거나 다른 사업과 겹친 것) 그대로 버린다. */
+const prevSrc = fs.readFileSync(path.join("src", "data", "gov24.ts"), "utf8");
+const prevJson = prevSrc.match(/Record<string, Gov24Row>> = (\{[\s\S]*\});\s*$/);
+const listGids = new Set(list.map((g) => g["서비스ID"]));
+const carried = [];
+if (prevJson) {
+  const have = new Set(matched.map((m) => m.id));
+  for (const row of Object.values(JSON.parse(prevJson[1]))) {
+    if (have.has(row.id) || listGids.has(row.gid)) continue;
+    matched.push(row);
+    carried.push(row);
+  }
+}
+
 const out = `/* 자동 생성 — scripts/build-gov24.mjs. 손으로 고치지 않는다.
  *
  * 행정안전부 「대한민국 공공서비스(혜택) 정보」(보조금24)에서 우리 수록 사업과
@@ -307,6 +325,7 @@ console.log(`맞물린 것 ${matched.length}건 (유사도 ${MIN_SCORE} 이상 �
 console.log(
   `  구비서류 ${has("docs")} · 법령 ${has("laws")} · 자치법규 ${has("localLaws")} · 온라인신청 ${has("onlineUrl")} · 신청기한 ${has("deadline")}`,
 );
+if (carried.length) console.log(`보조금24에서 사라져 지난 값을 둔 것 ${carried.length}건: ${carried.map((r) => r.id + " " + r.gname).join(" · ")}`);
 if (rejected.length) {
   console.log(`\n낱말이 달라 버린 것 ${rejected.length}건:`);
   for (const r of rejected.slice(0, 10)) console.log("  ", r.join("  →  "));
