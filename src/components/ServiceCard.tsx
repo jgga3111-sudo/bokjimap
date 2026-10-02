@@ -1,3 +1,5 @@
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import Link from "next/link";
 import Badge from "./Badge";
 import IncomeMatch from "./IncomeMatch";
@@ -83,7 +85,7 @@ export default function ServiceCard({
 
   return (
     <Link
-      href={`/service/${s.id}`}
+      {...serviceLink(s.id)}
       className="card group flex h-full flex-col p-4 transition-shadow hover:shadow-[0_6px_20px_rgb(27_100_218/0.12),0_0_0_1px_rgb(27_100_218/0.35)] sm:p-5"
     >
       {/*
@@ -122,6 +124,7 @@ export default function ServiceCard({
         {/* 통칭이 있으면 함께 적는다. 검색 결과·상세는 통칭을 달고 있는데
             목록 카드만 공식명이면 같은 사업이 두 이름으로 보인다. */}
         {nameWithAlias(s.id, s.name)}
+        <OutMark id={s.id} />
       </h3>
 
       <p className="mt-1 text-xs text-muted">

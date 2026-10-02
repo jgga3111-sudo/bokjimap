@@ -1,5 +1,6 @@
 "use client";
 
+import { serviceLink } from "@/lib/serviceLink";
 import Link from "next/link";
 import { useLocalToday } from "@/lib/useLocalToday";
 import { entriesOfMonth, hasDates } from "@/lib/calendar";
@@ -130,7 +131,7 @@ export default function ThisMonth() {
               <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                 <Link
-                  href={`/service/${e.id}`}
+                  {...serviceLink(e.id)}
                   className="font-bold text-ink hover:text-brand hover:underline"
                 >
                   {e.label}

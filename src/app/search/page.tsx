@@ -1,3 +1,5 @@
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { searchFullSplit } from "@/lib/searchFull";
@@ -121,11 +123,12 @@ export default async function SearchPage({
           {shown.map((h) => (
             <li key={h.id}>
               <Link
-                href={`/service/${h.id}`}
+                {...serviceLink(h.id)}
                 className="block px-4 py-3 transition hover:bg-brand-soft/40"
               >
                 <p className="font-medium text-ink">
                   {h.name} <DeadlineBadge id={h.id} />
+                  <OutMark id={h.id} />
                 </p>
                 <p className="mt-0.5 text-xs text-muted">
                   {[h.place, h.dept].filter(Boolean).join(" · ")}

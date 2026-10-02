@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -196,7 +197,7 @@ export default function VoucherUseGuide() {
           <p className="text-sm">
             신청 자격·금액 같은 제도 쪽 내용은{" "}
             {CARD ? (
-              <Link href={`/service/${CARD.id}`} className="text-brand underline">
+              <Link {...serviceLink(CARD.id)} className="text-brand underline">
                 {CARD.name}
               </Link>
             ) : (

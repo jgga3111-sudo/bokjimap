@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { services } from "@/data/services";
+import { isIndexable } from "@/lib/indexable";
 import { placeLabel, views } from "@/lib/display";
 import { OgCard, OG_SIZE, ogFonts } from "@/lib/og";
 
@@ -10,11 +11,11 @@ export const alt = "복지클릭 사업 안내";
 const byId = new Map(services.map((s) => [s.id, s]));
 
 /*
-  900장을 빌드 때 미리 굽는다. 요청 때 그리게 두면 카톡 미리보기 봇이
+  상세가 있는 사업의 카드만(2026-10-02, page.tsx와 같은 조건) 빌드 때 미리 굽는다. 요청 때 그리게 두면 카톡 미리보기 봇이
   기다려 주지 않아 첫 공유에서 빈 카드가 나갈 수 있다.
 */
 export function generateStaticParams() {
-  return services.map((s) => ({ id: s.id }));
+  return services.filter(isIndexable).map((s) => ({ id: s.id }));
 }
 
 export default async function Image({

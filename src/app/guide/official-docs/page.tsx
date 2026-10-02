@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -111,7 +112,7 @@ export default function OfficialDocsGuide() {
                   <tr key={`${d.serviceId}-${d.name}`} className="border-b border-line">
                     <td className="px-3 py-2">
                       <Link
-                        href={`/service/${d.serviceId}`}
+                        {...serviceLink(d.serviceId)}
                         className="font-medium text-brand underline hover:no-underline"
                       >
                         {d.serviceName}

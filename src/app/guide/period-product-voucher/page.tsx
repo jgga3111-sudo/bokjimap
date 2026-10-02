@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -13,7 +14,7 @@ const S = services.find((s) => s.id === PAD_SOURCE_ID);
 const GUIDE_PDF = S?.forms.find((f) => f.name.includes("청소년사업 안내"))?.url ?? null;
 
 export const metadata: Metadata = {
-  title: "생리용품 바우처, 1년치가 한 번에 들어오고 12월 31일에 사라집니다 — 신청 시기와 결제 규칙",
+  title: "생리용품 바우처 — 1년치가 한 번에 들어오고 12월 31일에 사라집니다",
   description:
     "9~24세 수급자·차상위·한부모가족 여성청소년에게 월 14,000원씩 1년치를 국민행복카드로 줍니다. 언제 신청해도 신청한 달에 1년치가 생기고 쓰지 않은 돈은 다음 해 1월 1일에 사라집니다. 탐폰·생리컵도 되는지, 기저귀 바우처와 함께 결제하면 어떻게 되는지까지 성평등가족부 2026년 지침으로 확인했습니다.",
   alternates: { canonical: "/guide/period-product-voucher" },
@@ -223,7 +224,7 @@ export default function PeriodProductVoucherGuide() {
           </p>
           {S && (
             <p>
-              <Link href={`/service/${S.id}`} className="text-brand underline">
+              <Link {...serviceLink(S.id)} className="text-brand underline">
                 {S.name} 상세 보기 — 복지로 원문(카드사별 가맹점) →
               </Link>
             </p>

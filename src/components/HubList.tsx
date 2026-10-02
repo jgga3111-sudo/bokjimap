@@ -1,5 +1,7 @@
 "use client";
 
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import { useMemo, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { deadlineState } from "./DeadlineBadge";
@@ -248,10 +250,11 @@ export default function HubList({
             {filtered.map((r) => (
               <li key={r[0]} className="truncate">
                 <a
-                  href={`/service/${r[0]}`}
+                  {...serviceLink(r[0])}
                   className="text-slate-600 hover:text-brand hover:underline"
                 >
                   {r[1]}
+                  <OutMark id={r[0]} />
                 </a>
                 {/* 카드에는 「마감」 딱지가 붙는데 여기만 없으면, 카드 60장 밖의
                     사업은 끝났는지 모른 채 눌러 들어가게 된다(2026-09-13 화면

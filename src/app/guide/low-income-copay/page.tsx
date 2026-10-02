@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -509,7 +510,7 @@ export default function LowIncomeCopayGuide() {
           <ul className="space-y-1 text-sm">
             {SVC && (
               <li>
-                <Link href={`/service/${SVC.id}`} className="text-brand underline">
+                <Link {...serviceLink(SVC.id)} className="text-brand underline">
                   {SVC.name} — 복지로 원문 →
                 </Link>
               </li>

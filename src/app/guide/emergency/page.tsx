@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -110,7 +111,7 @@ export default function EmergencyGuide() {
               return (
                 <li key={s.id}>
                   <Link
-                    href={`/service/${s.id}`}
+                    {...serviceLink(s.id)}
                     className="group flex flex-wrap items-baseline gap-x-2 gap-y-1 rounded-lg border border-line bg-white px-4 py-3 transition hover:border-brand"
                   >
                     <span className="font-semibold text-ink group-hover:text-brand">
@@ -182,7 +183,7 @@ export default function EmergencyGuide() {
             <p className="text-xs leading-relaxed text-muted">
               이 표는 저희가 적어 넣은 것이 아니라{" "}
               <Link
-                href={`/service/${LIVELIHOOD.id}`}
+                {...serviceLink(LIVELIHOOD.id)}
                 className="underline hover:text-brand"
               >
                 원문
@@ -285,7 +286,7 @@ export default function EmergencyGuide() {
               {localCrisis.map((s) => (
                 <li key={s.id}>
                   <Link
-                    href={`/service/${s.id}`}
+                    {...serviceLink(s.id)}
                     className="text-sm text-slate-700 hover:text-brand hover:underline"
                   >
                     {s.name}

@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/data/services";
@@ -101,7 +102,7 @@ export default function ServiceIndex() {
             {recent.map(({ s, added, date }) => (
               <li key={s.id}>
                 <Link
-                  href={`/service/${s.id}`}
+                  {...serviceLink(s.id)}
                   className="group flex flex-wrap items-baseline gap-x-2 gap-y-0.5 py-3"
                 >
                   <span

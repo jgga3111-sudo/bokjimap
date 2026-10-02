@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -47,7 +48,7 @@ export default function YouthSavingsGuide() {
             저희가 수록한{" "}
             {SOURCE ? (
               <Link
-                href={`/service/${YS_SOURCE_ID}`}
+                {...serviceLink(YS_SOURCE_ID)}
                 className="font-bold text-brand underline"
               >
                 청년미래적금

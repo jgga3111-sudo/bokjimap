@@ -1,5 +1,7 @@
 "use client";
 
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import Link from "next/link";
 import { CLOSING } from "@/data/closing";
 import { useLocalToday } from "@/lib/useLocalToday";
@@ -50,12 +52,13 @@ export default function ClosedList() {
         {rows.map(([id, c]) => (
           <li key={id}>
             <Link
-              href={`/service/${id}`}
+              {...serviceLink(id)}
               className="group flex items-baseline justify-between gap-3 px-4 py-2.5 hover:bg-white"
             >
               <span className="min-w-0">
                 <span className="font-semibold text-ink group-hover:text-brand">
                   {c.name}
+                  <OutMark id={id} />
                 </span>
                 <span className="mt-0.5 block text-xs text-muted">
                   {c.kind === "stated"

@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocList, DocNote } from "@/components/Doc";
@@ -365,7 +366,7 @@ export default function NationalEmploymentGuide() {
           </p>
           {S && (
             <p>
-              <Link href={`/service/${S.id}`} className="text-brand underline">
+              <Link {...serviceLink(S.id)} className="text-brand underline">
                 {S.name} 상세 보기 — 복지로 원문 →
               </Link>
             </p>

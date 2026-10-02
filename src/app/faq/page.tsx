@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage } from "@/components/Doc";
@@ -386,7 +387,7 @@ const GROUPS: Group[] = [
                 않습니다.&rdquo;
               </li>
               <li>
-                <Link href="/service/WLF00003520" className="text-brand underline">
+                <Link {...serviceLink("WLF00003520")} className="text-brand underline">
                   저소득층 난방연료비 지원
                 </Link>
                 (지자체) — &ldquo;에너지바우처와 다른 타사업과 중복지원 제외 후

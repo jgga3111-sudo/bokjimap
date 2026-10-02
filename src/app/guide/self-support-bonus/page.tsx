@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -195,7 +196,7 @@ export default function SelfSupportBonusGuide() {
             자활근로 쪽 조건도 있습니다 — <strong>자활근로에 참여하는 중이거나, 참여가 끝난 뒤 6개월 안에</strong>{" "}
             취업·창업하고 탈수급해야 합니다. 자활근로는{" "}
             {JOB ? (
-              <Link href={`/service/${JOB.id}`} className="text-brand underline">
+              <Link {...serviceLink(JOB.id)} className="text-brand underline">
                 시장진입형·사회서비스형·인턴도우미형·근로유지형 등 모든 유형
               </Link>
             ) : (
@@ -272,7 +273,7 @@ export default function SelfSupportBonusGuide() {
           </p>
           {S && (
             <p>
-              <Link href={`/service/${S.id}`} className="text-brand underline">
+              <Link {...serviceLink(S.id)} className="text-brand underline">
                 {S.name} 상세 보기 — 복지로 원문 →
               </Link>
             </p>

@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -135,7 +136,7 @@ export default function BabyMoneyGuide() {
                   {COLS.map((c) => (
                     <td key={c.id} className="py-2.5 pr-3">
                       <Link
-                        href={`/service/${c.id}`}
+                        {...serviceLink(c.id)}
                         className="text-brand underline"
                       >
                         보기
@@ -236,7 +237,7 @@ export default function BabyMoneyGuide() {
             <span className="mt-1.5 block text-xs text-muted">
               — 수록 사업{" "}
               <Link
-                href="/service/WLF00004415"
+                {...serviceLink("WLF00004415")}
                 className="text-brand underline"
               >
                 다자녀가정 출산축하금 지원(확대)

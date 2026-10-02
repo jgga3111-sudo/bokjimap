@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -261,7 +262,7 @@ export default function KpassGuide() {
           {SERVICE && (
             <p>
               <Link
-                href={`/service/${SERVICE_ID}`}
+                {...serviceLink(SERVICE_ID)}
                 className="text-brand underline"
               >
                 복지로 원문으로 보기 — {SERVICE.name} →

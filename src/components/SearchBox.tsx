@@ -1,5 +1,7 @@
 "use client";
 
+import OutMark from "@/components/OutMark";
+import { hasPage, serviceHref, serviceLink } from "@/lib/serviceLink";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -67,7 +69,9 @@ export default function SearchBox({
 
   const goService = (id: string) => {
     leave();
-    router.push(`/service/${id}`);
+    /* 상세가 없는 사업은 복지로 원문을 새 창으로 연다(링크를 눌렀을 때와 같게). */
+    if (hasPage(id)) router.push(`/service/${id}`);
+    else window.open(serviceHref(id), "_blank", "noopener,noreferrer");
   };
 
   /** 전체 결과 페이지로. 검색어는 그대로 넘긴다. */
@@ -184,7 +188,7 @@ export default function SearchBox({
             {popular.map((p) => (
               <li key={p.id}>
                 <Link
-                  href={`/service/${p.id}`}
+                  {...serviceLink(p.id)}
                   onClick={() => setOpen(false)}
                   className="inline-block rounded-full border border-line px-2.5 py-1 text-xs text-slate-600 transition hover:border-brand hover:text-brand"
                 >
@@ -232,14 +236,17 @@ export default function SearchBox({
                 {hits.map((h, i) => (
                   <li key={h.id} id={`${listId}-${i}`} role="option" aria-selected={i === cursor}>
                     <Link
-                      href={`/service/${h.id}`}
+                      {...serviceLink(h.id)}
                       onClick={leave}
                       onMouseEnter={() => setCursor(i)}
                       className={`block px-4 py-2.5 ${
                         i === cursor ? "bg-brand-soft" : ""
                       }`}
                     >
-                      <p className="text-sm font-medium text-ink">{h.name}</p>
+                      <p className="text-sm font-medium text-ink">
+                        {h.name}
+                        <OutMark id={h.id} />
+                      </p>
                       <p className="mt-0.5 text-xs text-muted">
                         {[h.place, h.dept].filter(Boolean).join(" · ")}
                       </p>

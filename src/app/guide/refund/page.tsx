@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -152,7 +153,7 @@ export default function RefundGuide() {
           {TC && (
             <p className="text-sm">
               사업 원문은{" "}
-              <Link href={`/service/${TC.id}`} className="text-brand underline">
+              <Link {...serviceLink(TC.id)} className="text-brand underline">
                 {TC.name}
               </Link>
               , 신청 시기와 지급일은{" "}
@@ -196,7 +197,7 @@ export default function RefundGuide() {
           {LIVELIHOOD && (
             <p className="text-sm">
               사업 원문은{" "}
-              <Link href={`/service/${LIVELIHOOD.id}`} className="text-brand underline">
+              <Link {...serviceLink(LIVELIHOOD.id)} className="text-brand underline">
                 {LIVELIHOOD.name}
               </Link>
               , 소득이 바뀌면 급여가 어떻게 달라지는지는{" "}

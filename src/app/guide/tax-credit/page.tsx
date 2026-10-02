@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -268,7 +269,7 @@ export default function TaxCreditGuide() {
           {S && (
             <p>
               <Link
-                href={`/service/${S.id}`}
+                {...serviceLink(S.id)}
                 className="text-brand underline"
               >
                 {S.name} 상세 보기 — 지원 대상·선정 기준 원문 →

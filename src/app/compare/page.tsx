@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/data/services";
@@ -90,7 +91,7 @@ export default async function ComparePage({
       <div className="mx-auto max-w-2xl space-y-4">
         <h1 className="text-2xl font-bold">무엇과 나란히 볼까요</h1>
         <p className="text-sm leading-relaxed text-slate-700">
-          <Link href={`/service/${a.id}`} className="font-bold text-brand underline">
+          <Link {...serviceLink(a.id)} className="font-bold text-brand underline">
             {a.name}
           </Link>
           {gwa(a.name)} 견줄 지원을 하나 고르세요. 아래는 같은 대상·시기로 분류됐거나 담당이
@@ -158,7 +159,7 @@ export default async function ComparePage({
   const periodB = statedApplyPeriod(b);
 
   const line = (s: typeof a) => (
-    <Link href={`/service/${s.id}`} className="font-bold text-brand underline">
+    <Link {...serviceLink(s.id)} className="font-bold text-brand underline">
       {nameWithAlias(s.id, s.name)}
     </Link>
   );
@@ -254,11 +255,11 @@ export default async function ComparePage({
 
       <p className="text-xs text-muted">
         전문은 각 상세에서 보세요 —{" "}
-        <Link href={`/service/${a.id}`} className="underline hover:text-brand">
+        <Link {...serviceLink(a.id)} className="underline hover:text-brand">
           {a.name}
         </Link>{" "}
         ·{" "}
-        <Link href={`/service/${b.id}`} className="underline hover:text-brand">
+        <Link {...serviceLink(b.id)} className="underline hover:text-brand">
           {b.name}
         </Link>
       </p>

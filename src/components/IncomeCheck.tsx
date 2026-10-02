@@ -1,5 +1,7 @@
 "use client";
 
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import { useEffect, useMemo, useState } from "react";
 import { save as saveMyIncome } from "@/lib/myIncome";
 import Link from "next/link";
@@ -374,10 +376,11 @@ export default function IncomeCheck({
                           {matches.map((m) => (
                             <li key={m.id}>
                               <Link
-                                href={`/service/${m.id}`}
+                                {...serviceLink(m.id)}
                                 className="text-xs text-brand hover:underline"
                               >
                                 {m.name}
+                                <OutMark id={m.id} />
                               </Link>{" "}
                               <DeadlineBadge id={m.id} />
                             </li>

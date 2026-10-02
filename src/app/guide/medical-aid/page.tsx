@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -354,7 +355,7 @@ export default function MedicalAidGuide() {
               const s = svc(id);
               return s ? (
                 <li key={id}>
-                  <Link href={`/service/${s.id}`} className="text-brand underline">
+                  <Link {...serviceLink(s.id)} className="text-brand underline">
                     {s.name} 상세 보기 — 복지로 원문 →
                   </Link>
                 </li>

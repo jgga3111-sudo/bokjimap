@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -118,7 +119,7 @@ export default function LivelihoodGuide() {
                   </th>
                   <td className="py-2.5 pr-3">
                     <Link
-                      href={`/service/${ID.basic}`}
+                      {...serviceLink(ID.basic)}
                       className="text-brand underline"
                     >
                       보기
@@ -126,7 +127,7 @@ export default function LivelihoodGuide() {
                   </td>
                   <td className="py-2.5 pr-3">
                     <Link
-                      href={`/service/${ID.urgent}`}
+                      {...serviceLink(ID.urgent)}
                       className="text-brand underline"
                     >
                       보기
@@ -191,7 +192,7 @@ export default function LivelihoodGuide() {
           <p>
             목록이 원문에서 잘려 있으면{" "}
             <Link
-              href={`/service/${ID.urgent}`}
+              {...serviceLink(ID.urgent)}
               className="text-brand underline"
             >
               상세 페이지

@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -143,7 +144,7 @@ export default function DeadlineShareGuide() {
             {BUDGET.slice(0, 6).map((s) => (
               <li key={s.id}>
                 <Link
-                  href={`/service/${s.id}`}
+                  {...serviceLink(s.id)}
                   className="text-brand underline hover:no-underline"
                 >
                   {s.name}

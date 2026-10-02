@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { Children, isValidElement } from "react";
+
+/** 절 제목으로 만드는 앵커. 목차와 절이 같은 함수를 써야 서로 맞는다. */
+const anchorOf = (title: string) => title.trim().replace(/\s+/g, "-");
 
 /**
  * 소개·약관·방침 같은 글 페이지의 공통 틀.
@@ -18,6 +22,12 @@ export function DocPage({
   updated?: string;
   children: React.ReactNode;
 }) {
+  /* 차례(2026-10-02). 글 안의 절 제목을 그대로 모은다 — 따로 적는 목록이 아니라서
+     절을 고치면 차례도 같이 바뀐다. 절이 넷 미만인 짧은 글에는 그리지 않는다. */
+  const toc = Children.toArray(children).flatMap((c) =>
+    isValidElement<{ title: string }>(c) && c.type === DocSection ? [c.props.title] : [],
+  );
+
   return (
     /* 09-24: 넓은 화면에서는 글을 흰 종이 한 장 위에 올린다 — 회색 지면에 글자가 바로 앉아 있으면 초안처럼 보였다. */
     <article className="mx-auto max-w-3xl sm:rounded-2xl sm:bg-white sm:px-10 sm:py-9 sm:shadow-[0_1px_3px_rgba(16,24,40,0.06)] sm:ring-1 sm:ring-line/70">
@@ -41,6 +51,22 @@ export function DocPage({
         )}
       </header>
 
+      {toc.length >= 4 && (
+        <nav aria-label="차례" className="mt-6 rounded-xl bg-ground px-4 py-3.5 text-sm">
+          <p className="font-bold text-ink">이 글의 차례</p>
+          <ol className="mt-2 space-y-1.5 text-slate-700">
+            {toc.map((t, i) => (
+              <li key={t} className="flex gap-2">
+                <span className="w-4 shrink-0 text-right text-muted tabular-nums">{i + 1}</span>
+                <a href={`#${anchorOf(t)}`} className="min-w-0 hover:text-brand hover:underline">
+                  {t}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
       <div className="mt-8 space-y-10">{children}</div>
     </article>
   );
@@ -57,7 +83,7 @@ export function DocSection({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section id={anchorOf(title)} className="scroll-mt-16 sm:scroll-mt-28">
       <h2 className="text-lg font-bold text-ink">
         {no !== undefined && (
           <span className="mr-1.5 text-brand">제{no}조</span>

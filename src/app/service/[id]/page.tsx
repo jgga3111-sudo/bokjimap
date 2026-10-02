@@ -1,6 +1,8 @@
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { services, SERVICES_UPDATED } from "@/data/services";
 import {
   isCriteriaBoilerplate,
@@ -89,8 +91,13 @@ function firstMoneySentence(t: string | null | undefined): string | null {
   return null;
 }
 
+/* 2026-10-02 — 상세는 색인 대상인 사업에만 만든다. 09-13에는 얇은 상세를 noindex로만
+   돌리고 페이지는 남겼는데, 애드센스가 같은 사유로 또 거절했다. noindex는 크롤링을
+   막지 않아 심사 대상에 그대로 남는다(러닝온이 같은 사유로 반려됐을 때 통한 조치도
+   주소째 없애는 것이었다). 빠진 사업은 목록·검색에 카드로 남고 복지로 원문으로 간다
+   (`lib/serviceLink.ts`). */
 export function generateStaticParams() {
-  return services.map((s) => ({ id: s.id }));
+  return services.filter(isIndexable).map((s) => ({ id: s.id }));
 }
 
 export async function generateMetadata({
@@ -985,6 +992,8 @@ export default async function ServiceDetail({
   const { id } = await params;
   const s = byId.get(id);
   if (!s) notFound();
+  /* 예전에 열리던 주소(북마크·관심 지원에 남은 것)는 복지로 원문으로 넘긴다. */
+  if (!isIndexable(s)) permanentRedirect(s.officialUrl ?? "/service");
 
   /* 본문 문장에 적힌 신청 기간. 여기서는 뽑기만 하고, 지났는지는 브라우저가
      판정한다 — 빌드한 날을 정적 HTML에 굳히지 않으려는 것이다. 900건 중
@@ -1523,10 +1532,13 @@ export default async function ServiceDetail({
             {related.map((r) => (
               <li key={r.id}>
                 <Link
-                  href={`/service/${r.id}`}
+                  {...serviceLink(r.id)}
                   className="group flex items-baseline gap-2 py-3 text-[15px] font-medium text-ink hover:text-brand"
                 >
-                  <span className="min-w-0 flex-1">{r.name}</span>
+                  <span className="min-w-0 flex-1">
+                    {r.name}
+                    <OutMark id={r.id} />
+                  </span>
                   <span className="shrink-0 text-xs font-normal text-muted">
                     {placeLabel(r)}
                   </span>

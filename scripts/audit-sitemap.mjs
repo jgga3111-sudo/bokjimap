@@ -189,7 +189,7 @@ console.log(line);
   두 줄은 성격이 다르다. 약관·방침·문의는 **색인은 되는데 제출만 안 하는 것**
   (sitemap.ts 머리말)이고, /search·/find는 **아예 noindex**다.
 */
-console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  본문 기준 미달이거나 조회수 ${INDEX_TOP_N}위 밖(따로 확인한 정보 없음) — noindex·광고 코드 없음`);
+console.log(`  서비스 상세        ${String(services.length - indexable.length).padStart(5)}개  상세 페이지를 만들지 않음(10-02) — 목록 카드가 복지로 원문으로 간다. 본문 기준 미달이거나 조회수 ${INDEX_TOP_N}위 밖(따로 확인한 정보 없음) — noindex·광고 코드 없음`);
 console.log(`  약관·방침·문의     ${String(3).padStart(5)}개  정형 문서라 색인 가치 없음 (푸터 링크로는 접근 가능)`);
 console.log(`  결과 화면          ${String(4).padStart(5)}개  /search·/find·/ask·/compare — 조건마다 URL이 생겨 noindex로 나간다`);
 /* 2026-09-11 추가. 사람마다 내용이 다른 화면이라 크롤러에게 줄 것이 없다.

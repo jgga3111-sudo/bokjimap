@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -266,7 +267,7 @@ export default function ChildcareChoiceGuide() {
           <ul className="space-y-1 text-sm">
             {[CARE, KINDER, HOME, PARENT].filter(Boolean).map((s) => (
               <li key={s!.id}>
-                <Link href={`/service/${s!.id}`} className="text-brand underline">
+                <Link {...serviceLink(s!.id)} className="text-brand underline">
                   {s!.name} — 복지로 원문 →
                 </Link>
               </li>

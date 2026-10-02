@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -44,7 +45,7 @@ const NAME_OF = new Map(
 function ProgramLink({ id, label }: { id: string; label: string }) {
   if (!NAME_OF.has(id)) return <span className="font-bold text-ink">{label}</span>;
   return (
-    <Link href={`/service/${id}`} className="font-bold text-brand hover:underline">
+    <Link {...serviceLink(id)} className="font-bold text-brand hover:underline">
       {label}
     </Link>
   );

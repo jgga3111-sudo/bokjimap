@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -10,7 +11,7 @@ const G = guideBySlug("combined-support")!;
 
 export const metadata: Metadata = {
   title:
-    "두 가지를 같이 받을 수 있나 — 부모급여·아동수당·기초연금·장애인연금을 법과 지침으로 확인했습니다",
+    "복지 중복 수급, 같이 받을 수 있나 — 부모급여·아동수당·기초연금·장애인연금",
   description:
     "부모급여와 아동수당은 함께 나오고, 장애인연금 기초급여는 65세부터 기초연금으로 바뀝니다. 기초연금은 생계급여를 줄이지만 장애인연금·한부모 아동양육비는 줄이지 않습니다. 자주 묻는 조합 일곱 가지를 아동수당법·기초연금법·장애인연금법과 2026년 국민기초생활보장 사업안내로 정리했습니다.",
   alternates: { canonical: "/guide/combined-support" },
@@ -50,7 +51,7 @@ function Svc({ id, name }: { id: string; name: string }) {
   const s = services.find((x) => x.id === id);
   if (!s) return <>{name}</>;
   return (
-    <Link href={`/service/${s.id}`} className="text-brand underline hover:no-underline">
+    <Link {...serviceLink(s.id)} className="text-brand underline hover:no-underline">
       {s.name}
     </Link>
   );

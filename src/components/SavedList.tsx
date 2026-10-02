@@ -1,5 +1,7 @@
 "use client";
 
+import OutMark from "@/components/OutMark";
+import { serviceLink } from "@/lib/serviceLink";
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import DeadlineBadge from "./DeadlineBadge";
@@ -64,10 +66,11 @@ export default function SavedList({
         {shown.map((s) => (
           <li key={s.id} className="flex items-center gap-2 pr-2">
             <Link
-              href={`/service/${s.id}`}
+              {...serviceLink(s.id)}
               className="min-w-0 flex-1 px-4 py-2.5 transition hover:bg-brand-soft/40"
             >
               <span className="text-sm font-medium text-ink">{s.name}</span>
+              <OutMark id={s.id} />
               {/* 저장해 둔 사업이 그 뒤로 끝났을 수 있다 — 여기가 가장 먼저
                   알려야 하는 자리다(2026-09-13). */}{" "}
               <DeadlineBadge id={s.id} />

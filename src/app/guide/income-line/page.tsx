@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -186,7 +187,7 @@ export default function IncomeLineGuide() {
                     {b.percent}%
                   </span>
                   <Link
-                    href={`/service/${b.list[0].id}`}
+                    {...serviceLink(b.list[0].id)}
                     className="min-w-0 text-slate-700 hover:text-brand hover:underline"
                   >
                     {b.list[0].name}

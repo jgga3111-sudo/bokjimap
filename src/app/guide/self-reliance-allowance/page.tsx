@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -100,7 +101,7 @@ export default function SelfRelianceAllowanceGuide() {
               <>
                 {" "}
                 청소년쉼터·청소년자립지원관 퇴소자에게 주는{" "}
-                <Link href={`/service/${SHELTER.id}`} className="text-brand underline">
+                <Link {...serviceLink(SHELTER.id)} className="text-brand underline">
                   {SHELTER.name}
                 </Link>
                 (성평등가족부)은 이름이 비슷한 다른 사업입니다. 어느 쪽 대상인지는 129나 행정복지센터에 확인하세요.
@@ -180,7 +181,7 @@ export default function SelfRelianceAllowanceGuide() {
           <p>
             자립수당과 별도로 보호가 끝날 때 <strong>한 번</strong> 주는{" "}
             {SETTLE ? (
-              <Link href={`/service/${SETTLE.id}`} className="text-brand underline">
+              <Link {...serviceLink(SETTLE.id)} className="text-brand underline">
                 자립정착금
               </Link>
             ) : (
@@ -225,7 +226,7 @@ export default function SelfRelianceAllowanceGuide() {
           </p>
           {S && (
             <p>
-              <Link href={`/service/${S.id}`} className="text-brand underline">
+              <Link {...serviceLink(S.id)} className="text-brand underline">
                 {S.name} 상세 보기 — 복지로 원문 →
               </Link>
             </p>

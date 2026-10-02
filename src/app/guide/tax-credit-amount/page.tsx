@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote } from "@/components/Doc";
@@ -46,7 +47,7 @@ export default function TaxCreditAmountGuide() {
             저희가 수록한{" "}
             {SOURCE ? (
               <Link
-                href={`/service/${TC_SOURCE_ID}`}
+                {...serviceLink(TC_SOURCE_ID)}
                 className="font-bold text-brand underline"
               >
                 {TC_SOURCE_NAME}

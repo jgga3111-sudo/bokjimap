@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import Link from "next/link";
 import { services } from "@/data/services";
 
@@ -44,7 +45,7 @@ export default function NotFound() {
             {popular.map((s) => (
               <li key={s.id}>
                 <Link
-                  href={`/service/${s.id}`}
+                  {...serviceLink(s.id)}
                   className="block px-4 py-3 text-sm hover:text-brand"
                 >
                   {s.name}

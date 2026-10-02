@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import Link from "next/link";
 import Badge from "./Badge";
 import IncomeMatch from "./IncomeMatch";
@@ -38,7 +39,7 @@ export default function PopularList({
         return (
           <li key={s.id}>
             <Link
-              href={`/service/${s.id}`}
+              {...serviceLink(s.id)}
               className="group flex items-center gap-3 px-4 py-3 transition hover:bg-ground"
             >
               <span className="w-5 shrink-0 text-center text-sm font-extrabold text-brand tabular-nums">

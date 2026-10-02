@@ -1,3 +1,4 @@
+import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
@@ -217,7 +218,7 @@ export default function FuneralBirthBenefitGuide() {
             <Link href="/service/WLF00003267" className="text-brand underline">
               장제급여 상세 보기 — 복지로 원문 →
             </Link>
-            <Link href="/service/WLF00001135" className="text-brand underline">
+            <Link {...serviceLink("WLF00001135")} className="text-brand underline">
               해산급여 상세 보기 — 복지로 원문 →
             </Link>
           </p>
