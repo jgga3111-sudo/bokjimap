@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ASK_EXAMPLES, ASK_EXAMPLE_GROUPS } from "@/lib/askExamples";
 
 /**
  * 말로 물어보는 상자.
@@ -20,20 +21,17 @@ import Link from "next/link";
  * 하는 일을 그대로 적는다 — 조건으로 바꿔 수록분에서 찾아 준다.
  */
 
-/** 예시는 **실제로 결과가 나오는 문장**만 둔다(2026-09-09 실측). */
-export const ASK_EXAMPLES = [
-  "서울 사는 30대인데 월세 지원 있나요",
-  "혼자 아이 키우는데 받을 수 있는 게 있을까요",
-  "67세인데 병원비가 부담됩니다",
-  "기초생활수급자 전기요금 감면",
-] as const;
+export { ASK_EXAMPLES, ASK_EXAMPLE_GROUPS };
 
 export default function AskBox({
   defaultValue = "",
   autoFocus = false,
+  examples = true,
 }: {
   defaultValue?: string;
   autoFocus?: boolean;
+  /** 상자 밑의 예시 넷. `/ask` 빈 화면은 상황별 예시를 따로 펼치므로 끈다. */
+  examples?: boolean;
 }) {
   return (
     <div>
@@ -56,6 +54,7 @@ export default function AskBox({
         </button>
       </form>
 
+      {examples && (
       <ul className="mt-3 flex flex-wrap gap-1.5">
         {ASK_EXAMPLES.map((e) => (
           <li key={e}>
@@ -68,6 +67,7 @@ export default function AskBox({
           </li>
         ))}
       </ul>
+      )}
     </div>
   );
 }

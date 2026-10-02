@@ -4,7 +4,7 @@ import { norm } from "@/lib/searchText";
 import { nameWithAlias, searchableNames } from "@/lib/aliases";
 import { BENEFITS } from "@/lib/benefits";
 import { sidoBySlug } from "@/lib/regions";
-import { formsOf, type AskRead, type Chip } from "@/lib/askParse";
+import { formsOf, ONE_PARTICLES, type AskRead, type Chip } from "@/lib/askParse";
 
 /**
  * 읽어 낸 조건과 낱말로 900건을 좁힌다 — **서버에서만 쓴다.**
@@ -58,6 +58,22 @@ export type AskAnswer = {
 /** 본문 — `lib/searchFull.ts`가 실측으로 고른 조합과 같게 둔다. */
 const bodyOf = (s: (typeof services)[number]) =>
   [s.summary, s.supportContent, s.eligibility].filter(Boolean).join(" ");
+
+/**
+ * 이름과 본문을 한 줄로 이은 것 — **낱말이 수록분에 몇 번 나오는지 셀 때만** 쓴다(10-02).
+ *
+ * askParse는 낱말 끝의 한 글자 조사를 뗀다(「월세를」 → 「월세」). 그런데 「자활근로」의 「로」,
+ * 「쌍둥이」의 「이」, 「국민취업지원제도」의 「도」는 조사가 아니라 낱말의 끝이다. 사전이 없으니
+ * 수록분을 사전 삼아 가른다 — **뗀 말이 나오는 자리마다 늘 그 글자가 뒤따르면** 그 글자는
+ * 낱말의 일부다(「자활근」은 「자활근로」로만 나온다). 「월세」는 「월세를」 말고도 수없이 나오므로
+ * 그대로 뗀 채 둔다.
+ */
+const CORPUS = services.map((s) => norm(s.name + " " + bodyOf(s))).join("\n");
+const occ = (w: string) => {
+  let n = 0;
+  for (let i = CORPUS.indexOf(w); i >= 0; i = CORPUS.indexOf(w, i + 1)) n++;
+  return n;
+};
 
 /** 걸린 자리 앞뒤를 원문에서 잘라 온다(`lib/searchFull.ts`와 같은 규칙). */
 function snippetOf(body: string, token: string): string | null {
@@ -117,6 +133,12 @@ function passes(
  * 축으로 쓸 수 있는 것은 아니다.
  */
 const BENEFIT_BOOST = 40;
+const PLACE_BOOST = 150;
+const CENTRAL_BOOST = 30;
+const VIEW_WEIGHT = 5;
+const UNKNOWN_PENALTY = 50;
+const VERB_END = "고면서게지야던러려니죠요다까네";
+const NAME_START = 80;
 
 /**
  * 조건을 뺄 때의 순서.
@@ -131,7 +153,29 @@ const DROP_ORDER: Chip["axis"][] = ["target", "life", "region"];
 const MAX_MATCHED = 40;
 const MAX_OTHER = 20;
 
-export function askSearch(read: AskRead): AskAnswer {
+export function askSearch(asked: AskRead): AskAnswer {
+  /* 잘못 뗀 조사를 되돌리고, 뜻 없는 두 글자 조각을 버린다(위 CORPUS 주석). */
+  const whole = (w: string) => {
+    const n = norm(w);
+    const p = asked.tails[n];
+    if (!p) return w;
+    const a = occ(n);
+    return a > 0 && a === occ(n + p) ? w + p : w;
+  };
+  const read: AskRead = {
+    ...asked,
+    words: asked.words
+      .map(whole)
+      /* 「돈이」「빚이」 — 조사를 떼면 한 글자라 못 뗀 것. 수록분 어디에도 없으면 낱말이 아니라
+         「돈」+조사다. 남겨 두면 "「돈이」는 찾지 못했습니다"가 나간다. */
+      .filter((w) => !(w.length === 2 && ONE_PARTICLES.includes(w[1]) && occ(norm(w)) === 0))
+      /* 「돌려달래요」「받으면서」「태어난지」 — 풀이말의 끝(요·서·지·고·면…)으로 끝나고 수록분
+         어디에도 없는 조각. 이름씨가 아니라서 「못 찾았습니다」로 알릴 것이 못 된다. 수록분에
+         **있는** 말은 끝 글자가 같아도 그대로 둔다(「복지」「학교」「화면」). */
+      .filter((w) => !(VERB_END.includes(w[w.length - 1]) && occ(norm(w)) === 0)),
+    names: asked.names.map((x) => ({ ...x, name: norm(whole(x.name)) })),
+  };
+
   /* 낱말 하나가 여러 형태로 걸릴 수 있다 — 사람 말과 원문 말이 다른 자리
      (`lib/askParse.ts`의 SYNONYMS). 어느 형태로 걸렸는지도 들고 다닌다. */
   const words = read.words
@@ -192,13 +236,23 @@ export function askSearch(read: AskRead): AskAnswer {
     unknownIds.clear();
     return services.filter((s) => {
       const named = namedBy(s, read.names);
+      /* 질문의 낱말이 **이름에 통째로 든** 사업은, 그 낱말에서 나온 조건으로 거르지 않는다(10-02).
+         「보호종료아동」의 「아동」이 조건이 되자 「자립준비청년(보호종료아동) 자립정착금」(생애주기
+         청년)이 걸러졌다 — 이름이 길어 위의 60% 규칙에는 못 들었다. */
+      const inName = read.names.filter(
+        (x) => x.covers.length > 0 && nameForms.get(s.id)!.some((nm) => nm.includes(x.name)),
+      );
       return chips.every(
         (c) =>
           c.axis === "benefit" ||
           /* 이름을 댄 사업은 그 이름과 무관한 생애주기·대상 조건, 또는 그 이름
              안에서 나온 조건으로 거르지 않는다. */
           ((c.axis === "life" || c.axis === "target") &&
-            named.some((x) => x.covers.length === 0 || x.covers.includes(norm(c.from)))) ||
+            (named.some((x) => x.covers.length === 0 || x.covers.includes(norm(c.from))) ||
+              inName.some((x) => x.covers.includes(norm(c.from))) ||
+              /* 이름에 그 말이 그대로 든 사업도 거르지 않는다 — 「수원 출산지원금」에서 「수원시 자녀
+                 출산·입양 지원금」이 생애주기 칸에 「임신·출산」이 없다는 이유로 빠졌다. 칸보다 이름이 먼저다. */
+              nameForms.get(s.id)!.some((nm) => nm.includes(norm(c.from))))) ||
           passesOrBlank(s, c),
       );
     });
@@ -214,13 +268,20 @@ export function askSearch(read: AskRead): AskAnswer {
   }
 
   /** 칩 이름을 이름 대조용 낱말로 — 「한부모·조손」 → 한부모·조손, 「장애인」 → 장애, 「보훈대상자」 → 보훈. */
-  const chipWords = (axes: readonly string[]) =>
-    applied
+  const chipWords = (axes: readonly string[], chips: readonly Chip[] = applied) =>
+    chips
       .filter((c) => axes.includes(c.axis))
       .flatMap((c) => c.label.split("·"))
       .map((w) => w.replace(/(대상자|인)$/, ""))
       .filter((w) => w.length >= 2);
-  const chipNameWords = chipWords(["life", "target"]);
+  /* 조건어가 **찾을 낱말로도 남은** 경우(「대학생」「미혼모」 — askParse의 KEEP_AS_WORD)에는
+     축 이름으로 올리지 않는다(10-02). 사람이 쓴 말이 이미 이름에서 점수를 받는데 축 이름까지
+     올리면 「대학생 등록금」의 1위가 이름에 「청년」이 든 청년창업농장학금이 됐다. */
+  const chipNameWords = chipWords(
+    ["life", "target"],
+    applied.filter((c) => !wordNorms.has(norm(c.from))),
+  );
+  const regionSaid = applied.some((c) => c.axis === "region");
 
   /** 걸린 낱말 → 실제로 걸린 형태. 자기 자신으로 걸렸으면 값이 자기 자신이다. */
   const hitWords = new Map<string, string>();
@@ -238,6 +299,7 @@ export function askSearch(read: AskRead): AskAnswer {
 
     let matched = 0;
     let score = 0;
+    let nameHit = false;
     let bodyToken: string | null = null;
 
     for (const w of words) {
@@ -251,7 +313,7 @@ export function askSearch(read: AskRead): AskAnswer {
         let here = 0;
         for (const n of forms) {
           if (n.startsWith(f.n)) {
-            here = 100;
+            here = NAME_START;
             break;
           }
           if (n.includes(f.n)) here = Math.max(here, 50);
@@ -261,7 +323,11 @@ export function askSearch(read: AskRead): AskAnswer {
            표가 하나 더 는다. */
         /* 담당 부서 이름은 보지 않는다(09-15). 「치매 부모님 돌봄」의 1위가 부서
            「미래교육돌봄국」에 걸린 구미 청년월세였다 — 부서 이름은 사업 내용이 아니다. */
-        if (here === 0 && place.includes(f.n)) here = 12;
+        /* 10-02 — 시·군·구를 말했으면 **그곳 사업이 맨 위**여야 한다. 이름에 안 걸렸을 때만
+           12점을 주던 때는 「수원 출산지원금」의 1위가 부천시였다(이름에 「출산지원금」이 통째로
+           든 다른 시 사업이 조회수로 앞섰다). 지역을 조건으로 건 것과 같은 무게를 준다. */
+        /* 한 글자(「암」)는 지역 이름으로 보지 않는다 — 「영암군」에 걸렸다. */
+        if (f.n.length >= 2 && place.includes(f.n)) here = Math.max(here, 12) + PLACE_BOOST;
         if (here === 0 && body.includes(f.n)) {
           here = 6;
           bodyForm = f.raw;
@@ -270,21 +336,28 @@ export function askSearch(read: AskRead): AskAnswer {
           best = here;
           via = f.raw;
         }
-        if (best === 100) break;
+        if (best >= NAME_START) break;
       }
 
+      if (best >= 50) nameHit = true;
       if (best > 0) {
         matched += 1;
         score += best;
         if (!hitWords.has(w.raw)) hitWords.set(w.raw, via ?? w.raw);
-        if (best === 6) bodyToken ??= bodyForm ?? w.raw;
+        if (bodyForm && best < 12) bodyToken ??= bodyForm;
       }
     }
 
     if (extraNames.length && namedBy(s, extraNames).length) {
       matched += 1;
       score += 100;
-    } else if (extraNames.some((x) => forms.some((nm) => nm.includes(x.name)))) {
+    } else if (
+      /* 조건어를 이름 맞추기에 넘긴 것(covers가 자기 자신)은 여기서 뺀다 — 「다문화 가정」에서
+         이름 괄호 안에 「다문화가정」이 든 상수도요금감면이 맨 위로 왔다. */
+      extraNames.some(
+        (x) => !(x.covers.length === 1 && x.covers[0] === x.name) && forms.some((nm) => nm.includes(x.name)),
+      )
+    ) {
       /* 이름의 일부만 댄 경우(「아동양육비」 → 「한부모가족 아동양육비 지원」)는 개수는
          안 늘리고 같은 개수 안에서만 위로 올린다. */
       score += 60;
@@ -292,13 +365,28 @@ export function askSearch(read: AskRead): AskAnswer {
 
     /* 알아들은 생애주기·대상이 **이름에** 들어 있으면 조금 위로(09-28). 「청년 월세 지원금 얼마」의
        1위가 이름이 「월세」로 시작하는 장애인 주거비였다 — 「청년월세 지원사업」은 「월세」가 가운데라 점수가 낮았다. */
-    if (chipNameWords.some((w) => s.name.includes(w))) score += 60;
+    /* 낱말이 본문에만 걸린 사업까지 올리지는 않는다(10-02) — 「중학생 교복 지원」의 1위가 이름에
+       「청소년」이 들었을 뿐 본문 한 줄에 「교복」이 있는 청소년특별지원이었다. 낱말이 하나도 없는
+       질문(조건만 맞는 목록)에서는 그대로 올린다. */
+    if ((nameHit || words.length === 0) && chipNameWords.some((w) => s.name.includes(w))) score += 60;
+
+    /* 지역을 말하지 않았으면 전국 사업을 조금 위로(10-02). 「수술비 지원」의 1위가 서귀포시
+       백내장 수술비였다 — 어디 사는지 모르는 사람에게는 어디서나 되는 것이 먼저다. 이름에 낱말이
+       든 지자체 사업(50)을 본문에만 든 전국 사업(6)이 넘지는 못하게 작게 준다. */
+    if (matched > 0 && !regionSaid && s.provider === "central") score += CENTRAL_BOOST;
+
+    /* 칸이 비어서 조건을 통과한 사업은 칸에 그 조건이 **적힌** 사업보다 아래다(10-02).
+       「장애인 교통비」의 1위가 대상 칸이 빈 「경기도 어린이·청소년 교통비」였다. */
+    if (unknownIds.has(s.id)) score -= UNKNOWN_PENALTY;
 
     /* 혜택은 걸러 내지 않고 위로 올리기만 한다. */
     for (const c of applied)
       if (c.axis === "benefit" && passes(s, c, null)) score += BENEFIT_BOOST;
 
-    score += Math.log10(s.views + 1);
+    /* 조회수의 무게를 다섯 배로(10-02, 이름 맨 앞 점수도 100 → 80). 로그 한 자리가 1점이라 이름 맨 앞과 가운데(50)의
+       차이를 전혀 못 넘었다 — 「월세」의 1위가 조회수 627위 보령시 「월세거주장애인 주거비」였고
+       2위 「청년월세 지원사업」(조회수 2위)이 그 아래였다. 낱말이 걸린 개수가 여전히 1순위다. */
+    score += VIEW_WEIGHT * Math.log10(s.views + 1);
     scored.push({ s, matched, score, bodyToken });
   }
 
@@ -340,7 +428,12 @@ export function askSearch(read: AskRead): AskAnswer {
     snippet: bodyToken ? snippetOf(bodyOf(s), norm(bodyToken)) : null,
   });
 
-  const matched = scored.filter((x) => x.matched > 0);
+  /* 칸이 비어서 조건을 통과한 사업은 **낱말이 전부 걸렸을 때만** 낸다(10-02). 하나만 걸려도
+     냈더니 「국가유공자 의료비」에 「고위험 임산부 의료비 지원」이 나왔다 — 대상 칸이 빈 사업이
+     「의료비」 하나로 보훈 목록에 들어온 것이다. */
+  const matched = scored.filter(
+    (x) => x.matched > 0 && (!unknownIds.has(x.s.id) || x.matched >= words.length),
+  );
   const rest = scored.filter((x) => x.matched === 0 && !unknownIds.has(x.s.id));
   /* 지역을 말했으면 조건만 맞는 것 중 **그 지역 사업을 먼저**(09-17). 조회수로만
      세우면 전국 사업이 위를 다 차지한다 — 「경기도 사는 28살 직장인」의 첫 20건에
@@ -353,7 +446,7 @@ export function askSearch(read: AskRead): AskAnswer {
     const named = (x: { s: (typeof services)[number] }) => targetWords.some((w) => x.s.name.includes(w));
     rest.sort((a, b) => Number(named(b)) - Number(named(a)));
   }
-  if (applied.some((c) => c.axis === "region"))
+  if (regionSaid)
     rest.sort((a, b) => Number(b.s.provider !== "central") - Number(a.s.provider !== "central"));
 
   return {

@@ -59,6 +59,12 @@ export type AskRead = {
   names: { name: string; covers: string[] }[];
   /** 조건으로 쓰지 않고 버린 나이 구간("60대") — 버렸다고 화면에 적는다. */
   skipped: string[];
+  /**
+   * 낱말 끝에서 뗀 **한 글자 조사**(정규화한 낱말 → 뗀 글자). 「자활근로」의 「로」,
+   * 「쌍둥이」의 「이」처럼 조사가 아니라 낱말의 끝이었는지는 수록분을 봐야 안다 —
+   * 이 파일은 데이터를 안 읽으므로 뗐다는 사실만 넘기고 askSearch가 되돌린다.
+   */
+  tails: Record<string, string>;
 };
 
 /* ── 낱말 표 ──────────────────────────────────────────────────────
@@ -75,10 +81,10 @@ export type AskRead = {
 
 const LIFE_WORDS: Record<string, readonly string[]> = {
   pregnancy: ["임신", "출산", "임산부", "산모", "난임", "산후", "조리원", "낳으면", "낳을"],
-  infant: ["영유아", "신생아", "아기", "기저귀", "분유", "어린이집", "유아", "태어나", "태어났", "낳았"],
+  infant: ["영유아", "신생아", "아기", "애기", "기저귀", "분유", "어린이집", "유아", "태어나", "태어났", "낳았"],
   child: ["아동", "어린이", "초등학생", "초등", "취학"],
   teen: ["청소년", "중학생", "고등학생", "중고생", "학교밖청소년"],
-  youth: ["청년", "대학생", "취준생", "사회초년생", "20대", "30대", "이십대", "삼십대"],
+  youth: ["청년", "대학생", "취준생", "취업준비생", "취업준비", "사회초년생", "20대", "30대", "이십대", "삼십대"],
   "middle-age": ["중장년", "중년", "장년", "40대", "50대", "사십대", "오십대"],
   senior: ["노년", "노인", "어르신", "고령", "경로", "은퇴", "70대", "80대", "할머니", "할아버지"],
 };
@@ -86,23 +92,32 @@ const LIFE_WORDS: Record<string, readonly string[]> = {
 const TARGET_WORDS: Record<string, readonly string[]> = {
   "low-income": [
     "저소득", "기초생활", "기초수급", "수급자", "차상위", "빈곤",
+    /* 통째로 적어 둔다(10-02). 「차상위계층」에서 「차상위」만 조건이 되면 남은 「계층」이
+       낱말이 되어 160건에 걸렸다. 긴 쪽이 이기므로(pick) 통째로 먹힌다. */
+    "차상위계층", "기초생활수급자", "기초수급자", "수급권자",
     "형편이어려", "생활이어려", "생계가어려",
   ],
-  disability: ["장애인", "장애", "발달장애", "지체장애", "중증장애"],
-  veteran: ["보훈", "국가유공자", "유공자", "참전", "상이군경"],
+  disability: ["장애인", "장애", "발달장애", "지체장애", "중증장애", "장애아동"],
+  /* 「참전용사」에서 「참전」만 먹히고 남은 「용사」가 「사용사업주」에 걸렸다(10-02). */
+  veteran: ["보훈", "국가유공자", "유공자", "참전", "상이군경", "참전용사", "참전유공자", "독립유공자"],
   /* 「혼자 아이 키우는데」는 낱말이 붙어 있지 않다. `&`로 이은 것은 **둘 다
      있어야** 걸린다(아래 `pick` 참고). 09-09에 "혼자키우"만 적어 뒀다가
      정작 사람들이 쓰는 어순에서 하나도 안 걸리는 것을 보고 고쳤다. */
   "single-parent": [
-    "한부모", "미혼모", "미혼부", "조손",
+    "한부모", "미혼모", "미혼부", "조손", "한부모가정", "한부모가족", "조손가정", "조손가족",
     "혼자&키우", "혼자&아이", "홀로&키우", "홀로&아이", "혼자서&키우",
+    /* 「할머니가 손주를 키우고 있어요」 — 조손가정이다(10-02). */
+    "손주", "조부모", "할머니&키우", "할아버지&키우",
   ],
-  "multi-child": ["다자녀", "셋째", "세자녀", "두자녀"],
-  multicultural: ["다문화", "결혼이민", "탈북", "북한이탈", "이주여성"],
+  "multi-child": ["다자녀", "셋째", "넷째", "세자녀", "두자녀", "다둥이"],
+  multicultural: [
+    "다문화", "결혼이민", "탈북", "북한이탈", "이주여성",
+    "다문화가정", "다문화가족", "탈북민", "북한이탈주민", "결혼이민자",
+  ],
 };
 
 const BENEFIT_WORDS: Record<string, readonly string[]> = {
-  cash: ["현금", "돈으로", "수당", "현금지원", "매달받"],
+  cash: ["현금", "돈으로", "수당", "현금지원", "매달&받"],
   voucher: ["바우처", "이용권", "국민행복카드", "문화누리"],
   discount: ["감면", "할인", "요금할인"],
   loan: ["융자", "대출", "빌리", "빌려"],
@@ -156,12 +171,14 @@ function bandOf(age: number): string | null {
  * 「됩니다」가 앞에 있어야 「부담」이 나온다.
  */
 const PARTICLES = [
+  /* 「파산했는데」「이혼했어요」 — 뗀 앞말(파산·이혼)이 찾을 낱말이다(10-02). */
+  "했는데요", "했습니다", "했는데", "했어요", "했어", "했다",
   "됩니다", "입니다", "합니다", "습니다", "했어요", "이에요", "인데요",
   "에서는", "으로는", "이라도", "해서요", "네요", "군요", "나요", "까요",
   "해요", "어요", "아요", "한테", "에게", "에서", "으로", "인데", "까지",
   "부터", "이나", "라도", "처럼", "만큼", "는데", "은데", "이랑", "하고",
   "라서", "해서", "라고", "하면", "으면", "려면", "는지",
-  "은", "는", "이", "가", "을", "를", "에", "로", "도", "만", "의", "랑",
+  "은", "는", "이", "가", "을", "를", "에", "로", "도", "만", "의", "랑", "했",
 ];
 
 /**
@@ -198,7 +215,34 @@ export const SYNONYMS: Record<string, readonly string[]> = {
   /* 09-28 — 「갑자기 아파서 돌봐줄 사람이 없어요」가 돌봄 사업에 닿지 않았다(돌봐줄 0건 · 돌봄 60건). */
   돌봐줄: ["돌봄"],
   돌봐주는: ["돌봄"],
+  /* 10-02 — 질문 203개를 넣어 보고 더한 것(수록 910건의 이름·본문 건수).
+     자기 말이 먼저 걸리고 바꾼 말은 **더해서** 찾으므로, 사람 말이 몇 건 있어도
+     원문 말 쪽에 대표 사업이 있으면 넣는다.
+       생리대 0·2 → 생리용품 4·4 (조회수 29위 「여성청소년 생리용품 지원」이 안 나왔다)
+       유치원비 0·0 → 유아학비 1·1 (10위)  ·  휴대폰 0·0 · 핸드폰 0·1 → 이동통신 1·0 (7위)
+       장례비 3·7 → 장제 4·27 (38위 「장제급여」)  ·  쌀 0·2 → 양곡 1·1 (39위)
+       산후도우미 0·4 → 산모신생아 12·15 (9위)  ·  탈북 1·4 → 북한이탈 4·10
+       쌍둥이 0·4 → 다태아 0·8  ·  건보료 0·0 → 건강보험료 11·31 */
+  생리대: ["생리용품", "위생용품"],
+  유치원비: ["유아학비"],
+  휴대폰: ["이동통신"],
+  핸드폰: ["이동통신"],
+  장례비: ["장제"],
+  쌀: ["양곡"],
+  산후도우미: ["산모신생아"],
+  탈북: ["북한이탈"],
+  탈북민: ["북한이탈"],
+  쌍둥이: ["다태아"],
+  건보료: ["건강보험료"],
+  전역: ["제대"], // 전역 0·6 → 제대 4·16 (「제대군인전직지원금」)
+  /* 문장으로만 나오는 말 — parseAsk가 PHRASES로 이 열쇠를 낱말에 넣는다. */
+  "혼자 사는": ["독거"],
 };
+
+/** 낱말 하나로 안 잡히는 말투 → SYNONYMS의 열쇠. 화면에는 「혼자 사는 — 독거로 찾음」으로 나간다. */
+const PHRASES: readonly { re: RegExp; key: string }[] = [
+  { re: /(혼자|홀로)서?\s*(사는|살고|사시는|지내)/, key: "혼자 사는" },
+];
 
 /** 낱말 하나가 걸릴 수 있는 형태들 — 자기 자신이 먼저다. */
 export const formsOf = (word: string): string[] => [
@@ -246,10 +290,39 @@ const STOP = new Set([
      (금액 184건). 「갑자기 아파서 돌봐줄 사람이 없어요」는 「갑자기」「사람」(115건)만 걸려
      장애인연금이 1위였다. 둘 다 좁혀 주지 못하고 순위만 흔든다. */
   "금액", "지원금액", "액수", "갑자기", "사람",
+  /* 10-02 질문 203개 점검 — 좁혀 주지 못하고 순위만 흔든 말(걸린 건수).
+     급여 233 · 비용 162 · 필요 203 · 가구 231 · 계층 160 · 이하 296 · 카드 71.
+     「보훈 급여 지급일」의 1위가 본문에 「지급일」이 든 인천형 청년월세였다. 지급일·금액을
+     묻는 말은 낱말로 찾지 않고 안내 글로 잇는다(lib/askGuides.ts). */
+  "급여", "지급일", "입금일", "비용", "무료", "가입", "필요", "당장", "요금",
+  "가족", "계층", "가구", "이하", "이상", "카드",
+  "연봉", "월급", "월소득", "수입", "중위소득", "기준중위소득",
+  "나오", "나오는", "나왔", "나와", "들어와요", "신청할", "신청하", "당했",
+  "어머니", "아버지", "회사", "잘렸",
+  /* 「산후도우미 본인부담금」 — 얼마 내는지를 묻는 말이다. 낱말로 두면 이름에 「본인부담금 지원」이
+     든 시·군 사업이 전국 사업보다 위로 갔다. 붙여 쓴 「본인부담경감」 같은 이름은 그대로 걸린다. */
+  "본인부담금", "본인부담",
+  /* 문장으로 물을 때 딸려 오는 말(10-02 2차, 문장형 질문 135개). 생활 216 · 시간 115 · 예정 72.
+     「저는 40대 가장인데 실직해서 생활이 어렵습니다」가 「생활」「어렵」에 걸린 216건을 냈다. */
+  "생활", "어렵", "예정", "미리", "한달", "시간", "일을", "못하게", "사시", "사시는",
+  "키우", "키우고", "키우면", "키우는", "키워요", "키웁니다",
+  "뭐예요", "뭔가요", "뭐야", "뭔지",
 ]);
 
+/** 낱말이 아니라 풀이말인 조각 — 「신청해야」「신청하려면」「부담돼요」. */
+const VERBISH = /^(신청[해하할]|부담[돼됩되])/;
+
+/** 끝 글자의 받침이 ㅆ인가 — 「받았」「걸렸」「됐」. 과거형 줄기이고, 이렇게 끝나는 이름씨는 없다. */
+const endsInSsang = (w: string) => {
+  const c = w.charCodeAt(w.length - 1);
+  return c >= 0xac00 && c <= 0xd7a3 && (c - 0xac00) % 28 === 20;
+};
+
 /** 한 글자지만 뜻이 분명해 버리면 안 되는 말(「암 치료비」가 탈모 치료비로 갔다). */
-const SINGLE = new Set(["암"]);
+const SINGLE = new Set(["암", "쌀"]);
+
+/** 한 글자 조사 — 뗐다가 askSearch가 되돌릴 수 있는 것들. */
+export const ONE_PARTICLES = PARTICLES.filter((p) => p.length === 1);
 
 /**
  * 숫자만 있는 말은 버린다 — "200만원"·"35살"·"3명".
@@ -259,7 +332,7 @@ const SINGLE = new Set(["암"]);
  * (09-09 실측). 나이는 위에서 생애주기로 이미 읽었고, 금액은 `incomeSeen`이
  * 받아 `/check`로 보낸다.
  */
-const NUMERIC = /^\d[\d,]*(만원|천원|원|살|세|년|개월|일|명|인|대|번|차)?$/;
+const NUMERIC = /^\d[\d,]*(만원|천원|원|살|세|년|개월|일|명|인가구|인가족|인|대|번|차)?$/;
 
 /** 조건 표에 있는 낱말 전부(`&` 조각 포함) — 떼고 남은 조각이 조건어인지 볼 때 쓴다. */
 /** 조건 칸으로도 쓰고 낱말로도 남기는 말 — 축 이름이 아니라 특정 사업·혜택을 가리킨다. */
@@ -267,6 +340,10 @@ const KEEP_AS_WORD = new Set([
   "기저귀", "분유", "어린이집", "난임", "조리원", "산후", "신생아",
   "문화누리", "국민행복카드", "지역화폐", "지역상품권", // 「수당」·「바우처」는 너무 넓어 뺐다(「국가유공자 수당」 1위가 아동수당이 됐다)
   "발달장애", // 09-28 — 「발달장애 자녀 지원」 1위가 무주택 주거비였다(수록 14건에 이 낱말이 있다)
+  /* 10-02 — 축 이름(한부모·조손, 다문화·탈북민…)보다 **좁은 말**. 조건으로만 쓰면 「미혼모 지원」이
+     한부모 119건을 조회수순으로 보여 줄 뿐 이름에 「미혼모」가 든 사업이 위로 오지 않았다. */
+  "미혼모", "미혼부", "조손", "탈북", "북한이탈", "결혼이민", "유공자", "참전", "차상위",
+  "임산부", "산모", "대학생",
 ]);
 
 const TABLE_WORDS = new Set(
@@ -290,15 +367,27 @@ const LABELS = {
  * 흔들려서("혼자 아이 키우는데" / "아이를 혼자 키워요") 붙은 낱말 하나로는
  * 못 잡는 신호가 있다. 길이는 조각을 합쳐 센다.
  */
+/** 이 말이 뒤따르면 조건이 아니다 — 「수급자격」은 「수급자」가 아니다(「기초연금 수급자격」이 저소득으로 읽혔다). */
+const BLOCK: Record<string, string> = { 수급자: "수급자격" };
+
 function pick(
   flat: string,
+  toks: readonly string[],
   table: Record<string, readonly string[]>,
 ): { slug: string; from: string } | null {
+  /* 낱말 **안에서** 찾는다(10-02). 띄어쓰기를 지운 문장 전체에서 찾았더니 「환수 당했어요」가
+     「수당」으로 읽혀 현금 조건이 켜졌다. 네 글자 이상은 띄어 쓴 것도 받는다
+     (「학교 밖 청소년」「기초 생활」) — 그 길이면 우연히 이어질 일이 거의 없다. */
+  const has = (p: string) => {
+    const w = norm(p);
+    if (BLOCK[w] && flat.includes(BLOCK[w])) return false;
+    return toks.some((t) => t.includes(w)) || (w.length >= 4 && flat.includes(w));
+  };
   let best: { slug: string; from: string; len: number } | null = null;
   for (const [slug, words] of Object.entries(table)) {
     for (const w of words) {
       const parts = w.split("&");
-      if (!parts.every((p) => flat.includes(norm(p)))) continue;
+      if (!parts.every(has)) continue;
       const len = parts.join("").length;
       if (!best || len > best.len)
         best = { slug, from: parts.join(" "), len };
@@ -321,10 +410,11 @@ export function parseAsk(question: string): AskRead {
     consumed.push(norm(hit.from));
   };
 
-  add("region", pick(flat, REGION_WORDS));
-  add("life", pick(flat, LIFE_WORDS));
-  add("target", pick(flat, TARGET_WORDS));
-  add("benefit", pick(flat, BENEFIT_WORDS));
+  const toks = raw.split(/[^0-9A-Za-z가-힣]+/).map(norm).filter(Boolean);
+  add("region", pick(flat, toks, REGION_WORDS));
+  add("life", pick(flat, toks, LIFE_WORDS));
+  add("target", pick(flat, toks, TARGET_WORDS));
+  add("benefit", pick(flat, toks, BENEFIT_WORDS));
 
   /* 나이는 낱말로 못 읽었을 때만 쓴다. "청년"이라고 직접 말한 사람에게
      "35살"을 이유로 다른 칸을 켜 주면 스스로 고른 것을 뒤집는 셈이다. */
@@ -350,12 +440,35 @@ export function parseAsk(question: string): AskRead {
   const names: AskRead["names"] = [];
   const skipped: string[] = [];
   const seen = new Set<string>();
+  const tails: Record<string, string> = {};
+  const push = (key: string, shown: string) => {
+    if (seen.has(key)) return;
+    seen.add(key);
+    words.push(shown);
+  };
+
+  /* 조건이 된 말이 **사업 이름 그 자체**일 수 있다(10-02). 「학교 밖 청소년 지원」은 청소년
+     조건으로만 읽혀 정작 그 이름의 사업이 목록 위로 오지 않았다. 다섯 글자 이상인 조건어는
+     이름 맞추기에도 넘긴다 — 이름이 그 말과 거의 같은 사업만 올라온다(askSearch의 60% 규칙). */
+  for (const c of chips) {
+    const n = norm(c.from);
+    /* 생애주기 말만 넘긴다. 대상 말(「한부모가정」)까지 넘겼더니 이름이 그 말과 거의 같은
+       구청 사업 하나가 맨 위에 혼자 올라왔다. */
+    if (c.axis === "life" && n.length >= 5) names.push({ name: n, covers: [n] });
+  }
+  for (const p of PHRASES) if (p.re.test(raw)) push(norm(p.key), p.key);
 
   /* 띄어 쓰지 않은 문장(「월세지원받을수있나요」)은 한 덩어리로 찾으면 늘 0건이다.
      덩어리 안에 든 빼는 말을 경계 삼아 쪼갠다 — 「월세」·「받을수있」 → 「월세」. */
-  const STOP_LONG = [...STOP].filter((w) => w.length >= 2).sort((a, b) => b.length - a.length);
+  /* 쪼개는 경계는 **세 글자 이상**인 빼는 말과 「지원·신청·혜택」만 쓴다(10-02). 두 글자짜리를
+     다 쓰니 낱말 한가운데가 잘렸다 — 「국가장학금」이 「가장」에서 잘려 「학금」이,
+     「본인부담금」이 「부담」에서 잘려 「본인」(87건)이 됐다. */
+  /* 「지원·신청·혜택」으로는 **문장일 때만** 쪼갠다 — 세 글자 이상인 빼는 말이 함께 들어 있을 때다
+     (「월세지원받을수있나요」). 이름에는 「지원」이 흔해서, 늘 쪼개면 「장애인활동지원」이 「활동」이 됐다. */
+  const STOP_3 = [...STOP].filter((w) => w.length >= 3).sort((a, b) => b.length - a.length);
   const splitStops = (tok: string): string[] => {
     if (tok.length < 5) return [tok];
+    const STOP_LONG = STOP_3.some((w) => tok.includes(w)) ? [...STOP_3, "지원", "신청", "혜택"] : STOP_3;
     let parts = [tok];
     for (const w of STOP_LONG)
       parts = parts.flatMap((p) => (p.length >= 4 && p.includes(w) ? p.split(w) : [p]));
@@ -365,6 +478,8 @@ export function parseAsk(question: string): AskRead {
   /* 쪼갰으면 통째 덩어리는 이름 맞추기(names)에만 쓴다 — 낱말로 두면
      "「월세지원받을수있」은 못 찾았습니다"가 나간다. */
   const tokens = raw
+    /* 「K-패스」는 한 낱말이다 — 붙임표에서 끊으면 「K」는 버려지고 「패스」만 남는다. */
+    .replace(/([0-9A-Za-z가-힣])-(?=[0-9A-Za-z가-힣])/g, "$1")
     .split(/[^0-9A-Za-z가-힣]+/)
     .flatMap((tok) => {
       const pieces = splitStops(tok);
@@ -376,9 +491,10 @@ export function parseAsk(question: string): AskRead {
   for (const { t: rawTok, nameOnly } of tokens) {
     let t = rawTok;
     if (/^\d+대$/.test(t) && !consumed.includes(norm(t))) skipped.push(t);
+    /* 「쌀을」「암은」 — 한 글자 낱말에 조사가 붙은 것. */
+    if (t.length === 2 && SINGLE.has(t[0]) && ONE_PARTICLES.includes(t[1])) t = t[0];
     if (SINGLE.has(t)) {
-      if (!seen.has(t)) words.push(t);
-      seen.add(t);
+      push(t, t);
       continue;
     }
     if (t.length < 2 || NUMERIC.test(t)) continue;
@@ -391,26 +507,34 @@ export function parseAsk(question: string): AskRead {
       "어디에도 없습니다"로 나가는 것을 보고 갈랐다.
     */
     let dead = false;
+    let tail = "";
     for (const p of PARTICLES) {
       if (!t.endsWith(p)) continue;
-      if (t.length - p.length >= 2) t = t.slice(0, -p.length);
-      else if (p.length >= 2) dead = true;
+      if (t.length - p.length >= 2) {
+        t = t.slice(0, -p.length);
+        if (p.length === 1) tail = p;
+      } else if (p.length >= 2) dead = true;
       break;
     }
     if (dead || t.length < 2 || STOP.has(t) || NUMERIC.test(t)) continue;
+    if (VERBISH.test(t) || endsInSsang(t)) continue;
     let n = norm(t);
+    if (tail) tails[n] = tail;
     if (n.length >= 4 && !consumed.includes(n) && !names.some((x) => x.name === n))
       names.push({ name: n, covers: consumed.filter((c) => n.includes(c)) });
     if (nameOnly) continue;
-    /* 조건이 됐어도 **사업을 가리키는 말**은 낱말로도 남긴다(09-19). 「기저귀」가 영유아 칸으로만
-       쓰이고 사라져, 기저귀바우처(조회수 20위)가 결과 10번째로 밀렸다. 「난임」·「수당」도 같았다. */
-    if (KEEP_AS_WORD.has(n)) {
-      if (!seen.has(n)) {
-        seen.add(n);
-        words.push(t);
-      }
+    /* 바꿔 찾을 말이 있는 낱말은 조건을 품었어도 통째로 둔다 — 「산후도우미」에서 「산후」를
+       떼면 「도우미」가 남아 산림일자리에 걸렸다(10-02). */
+    if (SYNONYMS[n]) {
+      push(n, t);
       continue;
     }
+    /* 조건이 됐어도 **사업을 가리키는 말**은 낱말로도 남긴다(09-19). 「기저귀」가 영유아 칸으로만
+       쓰이고 사라져, 기저귀바우처(조회수 20위)가 결과 10번째로 밀렸다. 「난임」·「수당」도 같았다. */
+    /* 붙여 쓴 낱말 안에 든 것도 남긴다(10-02) — 「분유값」「문화누리카드」「산후조리원」.
+       낱말 전체가 그 말이면 여기서 끝이고, 아니면 나머지(「시술비」)는 아래에서 마저 본다. */
+    for (const k of KEEP_AS_WORD) if (n.includes(k)) push(k, k === n ? t : k);
+    if (KEEP_AS_WORD.has(n)) continue;
     /* 이미 조건이 된 말은 빼야 한다. "청년"이 칩이 됐는데 낱말로도 남으면
        청년 305건 안에서 다시 "청년"을 찾게 되어 순위가 흔들린다.
 
@@ -428,10 +552,8 @@ export function parseAsk(question: string): AskRead {
     }
     /* 뗀 나머지가 또 조건 낱말이면(「기초생활수급자」 → 「수급자」) 버린다. */
     if (n.length < 2 || STOP.has(n) || TABLE_WORDS.has(n)) continue;
-    if (seen.has(n)) continue;
-    seen.add(n);
-    words.push(n === norm(t) ? t : n);
+    push(n, n === norm(t) ? t : n);
   }
 
-  return { chips, words, ageUsed, incomeSeen, names, skipped };
+  return { chips, words, ageUsed, incomeSeen, names, skipped, tails };
 }

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { services } from "@/data/services";
 import { parseAsk, type Chip } from "@/lib/askParse";
 import { askSearch, type AskHit } from "@/lib/askSearch";
-import AskBox from "@/components/AskBox";
+import { askGuides } from "@/lib/askGuides";
+import AskBox, { ASK_EXAMPLE_GROUPS } from "@/components/AskBox";
 import DeadlineBadge from "@/components/DeadlineBadge";
 
 export const metadata: Metadata = {
@@ -39,63 +40,7 @@ const AXIS_NAME: Record<Chip["axis"], string> = {
   region: "지역",
 };
 
-/** 질문 말투 → 이미 있는 안내 글. 판정하지 않고 글로 보낸다. */
-const ASK_GUIDES: { re: RegExp; lead: string; href: string; label: string }[] = [
-  {
-    re: /중복|(같이|함께|동시에?|둘\s*다)\s*받|더\s*받을/,
-    lead: "자주 묻는 조합은 법령·부처 지침으로 확인해 따로 정리했습니다.",
-    href: "/guide/combined-support",
-    label: "두 가지를 같이 받을 수 있나",
-  },
-  {
-    re: /신청\s*(방법|하는\s*법|절차)|어디(서|에서)?\s*신청|어떻게\s*신청/,
-    lead: "신청 창구는 사업마다 다릅니다. 각 사업 페이지의 신청 방법 칸과 함께 보세요.",
-    href: "/guide/apply",
-    label: "어디서 어떻게 신청하나",
-  },
-  {
-    re: /(온라인|인터넷|모바일|앱)\s*(으로\s*)?신청/,
-    lead: "온라인 신청이 되는지는 사업마다 다릅니다.",
-    href: "/guide/online",
-    label: "온라인으로 신청할 수 있는 지원",
-  },
-  {
-    re: /지급일|입금일|언제\s*(들어|나와|나오|입금|지급|줘|주)/,
-    lead: "법령에 지급일이 적힌 제도는 따로 모아 두었습니다.",
-    href: "/guide/pay-dates",
-    label: "지원금 지급일",
-  },
-  {
-    re: /실업\s*급여|구직\s*급여|실직|해고|잘렸|잘리|퇴사|(일자리|직장)[을를]?\s*잃/,
-    lead: "실업급여는 고용보험 제도라 복지로 수록 목록에 없습니다.",
-    href: "/guide/unemployment",
-    label: "실업급여 안내",
-  },
-  {
-    re: /실직|해고|잘렸|잘리|퇴사|(일자리|직장)[을를]?\s*잃|국민\s*취업|구직\s*촉진/,
-    lead: "실업급여를 못 받거나 끝난 사람도 받을 수 있는 구직촉진수당이 있습니다.",
-    href: "/guide/national-employment",
-    label: "국민취업지원제도",
-  },
-  {
-    re: /(생계|생활비|먹고\s*살)[이가]?\s*(막|어려|없|힘들)|긴급\s*(복지|지원)|당장\s*(생활비|돈)/,
-    lead: "갑자기 소득이 끊겼을 때 받는 긴급복지 생계지원 금액을 정리했습니다.",
-    href: "/guide/emergency",
-    label: "긴급복지 지원",
-  },
-  {
-    re: /발달\s*장애|활동\s*지원/,
-    lead: "장애인활동지원의 구간별 한도와 본인부담금을 정리했습니다.",
-    href: "/guide/disability-activity-support",
-    label: "장애인활동지원",
-  },
-  {
-    re: /돌봐\s*줄\s*사람|돌봄이?\s*(끊|필요)|(아파|다쳐)서?.*(돌봐|돌봄)/,
-    lead: "갑자기 돌봄이 끊겼을 때는 긴급돌봄, 몇 달 이상 필요하면 일상돌봄을 봅니다.",
-    href: "/guide/emergency-care",
-    label: "긴급돌봄 지원사업",
-  },
-];
+/* 질문 말투 → 이미 있는 안내 글은 `lib/askGuides.ts`로 옮겼다(10-02). */
 
 /** 은/는. 한글이 아닌 글자로 끝나면 받침을 모르니 둘 다 적는다. */
 function topicParticle(word: string): string {
@@ -155,6 +100,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
   const answer = read ? askSearch(read) : null;
   /* 생애주기·대상·지역처럼 **거르는** 조건을 하나라도 알아들었나. 혜택은 거르지 않는다. */
   const filtering = !!answer?.applied.some((c) => c.axis !== "benefit");
+  const guides = q ? askGuides(q) : [];
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -171,10 +117,15 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
         {/* 몇 건인지만 적으면 "월세로 122건이 있구나"로 읽힌다. 조건으로
             좁힌 수와 낱말까지 걸린 수를 나눠 적는다. */}
         <p className="mt-1.5 text-sm text-muted">
+          {/* 조건을 하나도 못 읽었는데 「조건에 맞는 910건」이라고 하면 틀린 말이다(10-02). */}
           {answer
-            ? answer.matchedTotal > 0
-              ? `조건에 맞는 ${answer.poolTotal.toLocaleString()}건 가운데 말씀하신 낱말까지 걸린 것이 ${answer.matchedTotal.toLocaleString()}건입니다`
-              : `조건에 맞는 ${answer.poolTotal.toLocaleString()}건입니다`
+            ? !filtering
+              ? answer.matchedTotal > 0
+                ? `수록 ${services.length.toLocaleString()}건 가운데 말씀하신 낱말이 걸린 것이 ${answer.matchedTotal.toLocaleString()}건입니다`
+                : "질문에서 조건이나 찾을 낱말을 읽지 못했습니다"
+              : answer.matchedTotal > 0
+                ? `조건에 맞는 ${answer.poolTotal.toLocaleString()}건 가운데 말씀하신 낱말까지 걸린 것이 ${answer.matchedTotal.toLocaleString()}건입니다`
+                : `조건에 맞는 ${answer.poolTotal.toLocaleString()}건입니다`
             : `수록 ${services.length.toLocaleString()}건에서 문장 그대로 찾아 드립니다`}
         </p>
       </header>
@@ -183,7 +134,7 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
         <h2 className="mb-3 text-sm font-bold text-ink">
           {q ? "다시 물어보기" : "무엇이 필요하신가요"}
         </h2>
-        <AskBox defaultValue={q} autoFocus={!q} />
+        <AskBox defaultValue={q} autoFocus={!q} examples={!!q} />
       </section>
 
       {/* ── 이렇게 읽었습니다 ────────────────────────────────────────
@@ -341,12 +292,16 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
 
       {/* 목록이 답이 아닌 질문 — 신청 방법·함께 받기·지급일·수록 밖 제도. 이런 말은
           낱말로 찾지 않고(askParse STOP) 이미 있는 글로 잇는다(09-15). */}
-      {q && ASK_GUIDES.some((g) => g.re.test(q)) && (
-        <section className="rounded-xl border border-line bg-sunken/70 px-4 py-3.5">
-          <ul className="space-y-1.5 text-sm leading-relaxed text-slate-700">
-            {ASK_GUIDES.filter((g) => g.re.test(q)).map((g) => (
+      {guides.length > 0 && (
+        <section className="rounded-xl border border-brand/20 bg-white px-4 py-3.5">
+          <h2 className="text-sm font-bold text-ink">이 질문은 따로 정리한 글이 있습니다</h2>
+          <p className="mt-0.5 text-xs leading-relaxed text-muted">
+            금액·기간·조건처럼 목록만으로는 답이 안 나오는 것을 법령과 부처 지침으로 확인해 쓴 글입니다.
+          </p>
+          <ul className="mt-2.5 space-y-2 text-sm leading-relaxed text-slate-700">
+            {guides.map((g) => (
               <li key={g.href}>
-                {g.lead}{" "}
+                {g.lead && <>{g.lead} </>}
                 <Link href={g.href} className="font-bold text-brand underline">
                   {g.label} →
                 </Link>
@@ -358,13 +313,34 @@ export default async function AskPage({ searchParams }: PageProps<"/ask">) {
 
       {/* ── 결과 ──────────────────────────────────────────────────── */}
       {!q ? (
-        <p className="rounded-xl border border-line bg-sunken px-4 py-10 text-center text-sm leading-relaxed text-muted">
-          찾고 싶은 것을 문장으로 적어 주세요.
-          <br />
-          <span className="text-xs">
-            나이·지역·상황을 함께 적으면 더 잘 좁혀집니다.
-          </span>
-        </p>
+        /* 빈 화면에 「문장으로 적어 주세요」 한 줄만 있었다(10-02). 무엇을 어떻게 물으면 되는지
+           보여 주는 쪽이 낫다 — 예시는 전부 실제로 넣어 보고 맞는 답이 맨 위에 오는 것만 실었다
+           (components/AskBox.tsx). */
+        <section className="rounded-2xl border border-line bg-white p-5">
+          <h2 className="text-sm font-bold text-ink">이렇게 물어보세요</h2>
+          <p className="mt-1 text-xs leading-relaxed text-muted">
+            사는 곳(시·도나 시·군·구), 나이, 상황 가운데 아는 것을 함께 적으면 더 잘 좁혀집니다.
+            사업 이름을 아시면 이름만 적어도 됩니다.
+          </p>
+          <dl className="mt-4 space-y-3.5">
+            {ASK_EXAMPLE_GROUPS.map((g) => (
+              <div key={g.label}>
+                <dt className="text-xs font-bold text-slate-700">{g.label}</dt>
+                <dd className="mt-1.5 flex flex-wrap gap-1.5">
+                  {g.examples.map((e) => (
+                    <Link
+                      key={e}
+                      href={`/ask?q=${encodeURIComponent(e)}`}
+                      className="inline-block rounded-full border border-line bg-ground px-3 py-1.5 text-xs text-slate-700 transition hover:border-brand hover:text-brand"
+                    >
+                      {e}
+                    </Link>
+                  ))}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       ) : answer &&
         answer.matchedHits.length === 0 &&
         answer.otherHits.length === 0 ? (
