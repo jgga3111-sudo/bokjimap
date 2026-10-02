@@ -47,7 +47,18 @@ export function DocPage({
           </p>
         )}
         {updated && (
-          <p className="mt-3 text-xs text-muted">{updated}</p>
+          <p className="mt-3 text-xs text-muted">
+            {/* 날짜는 <time>으로 — 검색엔진이 수정일을 읽는다(2026-10-02). */}
+            {updated.split(/(\d{4}-\d{2}-\d{2})/).map((part, i) =>
+              i % 2 ? (
+                <time key={i} dateTime={part}>
+                  {part}
+                </time>
+              ) : (
+                part
+              ),
+            )}
+          </p>
         )}
       </header>
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
 import { GUIDE_PUBLISHED } from "@/lib/guidePublished";
+import { GUIDE_REFS } from "@/lib/guideRefs";
 import { SITE, OPERATOR_CREDENTIALS, OPERATOR_PERSON } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
 import AdSenseScript from "@/components/AdSenseScript";
@@ -37,6 +38,7 @@ export default function GuideNav({ current }: { current: string }) {
     jsonLd()가 부등호·앰퍼샌드를 이스케이프한다(safe.ts).
   */
   const g = i < 0 ? null : GUIDES[i];
+  const refs = g ? GUIDE_REFS[g.slug] : undefined;
   const published = g ? GUIDE_PUBLISHED[g.slug] : undefined;
   const article = g && {
     "@context": "https://schema.org",
@@ -85,7 +87,13 @@ export default function GuideNav({ current }: { current: string }) {
               {SITE.author}
             </Link>{" "}
             — {OPERATOR_CREDENTIALS}
-            {published && <> · 처음 올린 날 {published}</>} · 마지막으로 고친 날 {g.updated}
+            {published && (
+              <>
+                {" "}
+                · 처음 올린 날 <time dateTime={published}>{published}</time>
+              </>
+            )}{" "}
+            · 마지막으로 고친 날 <time dateTime={g.updated}>{g.updated}</time>
           </p>
         )}
         <p className="mt-1">
@@ -108,6 +116,26 @@ export default function GuideNav({ current }: { current: string }) {
           </Link>
         </p>
       </aside>
+      {/* 본문에 외부 출처가 없던 글의 근거 링크(lib/guideRefs.ts). */}
+      {refs && (
+        <aside className="mb-8 text-sm">
+          <h2 className="text-sm font-bold text-ink">근거와 원문</h2>
+          <ul className="mt-2 space-y-1.5">
+            {refs.map((r) => (
+              <li key={r.url}>
+                <a
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand underline"
+                >
+                  {r.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
       <AdSenseScript />
       {article && (
         <script

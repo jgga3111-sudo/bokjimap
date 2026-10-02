@@ -3,11 +3,14 @@ import Link from "next/link";
 import { GUIDES, GUIDE_GROUPS } from "@/lib/guides";
 import { services } from "@/data/services";
 import AdSenseScript from "@/components/AdSenseScript";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "복지 신청 안내 — 상황별로 묶은 해설",
   description: `아이가 태어났을 때, 일을 그만뒀을 때, 아프거나 돌봄이 필요할 때 — 상황별로 묶은 안내 글 ${GUIDES.length}편입니다. 어디서 신청하는지, 어떤 서류가 필요한지, 공고문의 낯선 말이 무슨 뜻인지도 수록 ${services.length.toLocaleString()}건을 직접 집계해 정리했습니다.`,
   alternates: { canonical: "/guide", types: { "application/rss+xml": "/rss.xml" } },
+  /* 글이 아니라 목록이라 website — app/guide/layout.tsx의 article을 되돌린다. */
+  openGraph: { type: "website", locale: "ko_KR", siteName: SITE.name },
 };
 
 /*

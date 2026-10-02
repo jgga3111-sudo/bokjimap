@@ -13,7 +13,7 @@ const GANGNAM = "https://bokji.gangnam.go.kr/board/BBS_SUPPORT/1498/view.do?mid=
 export const metadata: Metadata = {
   title: "양곡할인 2026 — 대상 5갈래와 매달 신청, 10kg 2,500원·10,000원",
   description:
-    "정부양곡 할인(복지용 쌀)은 2026년 8월 27일부터 양곡관리법 제9조의5에 근거를 두었습니다. 대상이 수급권자·차상위·한부모·재난 피해자·무상급식 단체까지 다섯 갈래인 점, 신청일 현재 자격을 보는 점, 월 단위로 신청하는 점, 할인율과 1인당 물량은 농림축산식품부가 정한다는 점을 법과 시행령에서 옮겼습니다.",
+    "정부양곡 할인(복지용 쌀)은 2026년 8월 27일부터 양곡관리법 제9조의5에 근거를 두었습니다. 대상 다섯 갈래, 신청일 현재 자격을 보는 점, 월 단위 신청을 법과 시행령에서 옮겼습니다.",
   alternates: { canonical: "/guide/grain-discount" },
 };
 
