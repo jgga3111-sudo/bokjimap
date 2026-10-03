@@ -3095,3 +3095,8 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- [x] **10-04 아침 루틴 — 변경 없음, 글은 안 씀 (`0855c47`, 배포·라이브 확인).**
+      · 복지로 목록 5,280건을 10-03 목록과 직접 대조 — 0/0/0. 중앙 재대조 두 바퀴째 100건(09-30분 30·10-01분 70) 내용 같음, 되돌림. 남은 것은 10-01분 30·10-02분 100·10-03분 100.
+      · 보조금24 — 원본 10,949건, 매칭 391 그대로, diff는 확인일뿐. 마감 표 변화 0. 열흘 안: 과학문화바우처 사용 10/12(D-8)뿐. 사이트맵 404쪽 전부 200.
+      · 글 안 씀(1차 출처 없는 후보뿐) · 트렌드는 네이버 MCP 9일째 없음 · 색인 요청은 바뀐 페이지가 없어 안 함(빙은 10-03에 로그인해 해결).
+      · 어제 사용자 결정 대기분을 판단해 정리: /ask 「자활근로→자활근」 표시 버그는 깨질 위험이 커서 계속 보류 · GET 속도 제한은 과금이라 안 함 · K-패스 반값 문장은 「4월 1일~9월 30일 이용분」이라 기간이 지나도 맞아 그대로.
