@@ -53,6 +53,11 @@ export default function PeriodProductVoucherGuide() {
         title={G.title}
         lead="기초생활수급·차상위·한부모가족 가구의 9~24세 여성청소년에게 생리용품을 살 수 있는 바우처를 국민행복카드로 줍니다. 복지로 원문은 금액과 가맹점을 적어 두었고, 돈이 언제 생기고 언제 사라지는지는 성평등가족부 2026년 지침에서 옮겼습니다."
         updated={`최종 수정 ${G.updated} · 성평등가족부 지침에서 ${PAD_CHECKED} 확인`}
+        quick={[
+          { label: "언제까지", value: "신청한 달에 1년치가 생기고, 안 쓴 돈은 다음 해 1월 1일에 사라짐" },
+          { label: "얼마", value: `월 ${won(PAD_MONTHLY)} (1년치 ${won(PAD_YEARLY)})` },
+          { label: "어디서", value: "주소지 읍·면·동 행정복지센터 또는 복지로" },
+        ]}
       >
         <DocNote tone="brand" title="늦게 신청할수록 짧은 기간에 다 써야 합니다">
           신청한 시기와 상관없이 <strong>신청한 달에 1년치({won(PAD_YEARLY)})가 한꺼번에</strong> 생기고, 쓰지 않은 돈은{" "}

@@ -61,6 +61,11 @@ export default function EnergyVoucherGuide() {
         title={G.title}
         lead="전기·가스·등유·연탄·LPG 값을 대신 결제해 주는 바우처입니다. 금액은 세대원 수로만 갈리고, 한 번 받은 금액을 여름과 겨울에 나눠 쓰는 것이 아니라 한 주머니에서 씁니다."
         updated={`최종 수정 ${G.updated} · 사업안내서와 고시에서 ${EV_CHECKED} 확인`}
+        quick={[
+          { label: "언제까지", value: `신청 ${EV_DATES.applyNew}` },
+          { label: "얼마", value: `1인 세대 ${won(EV_AMOUNT[0])} ~ 4인 이상 ${won(EV_AMOUNT[3])}` },
+          { label: "어디서", value: "주소지 읍·면·동 행정복지센터 또는 복지로" },
+        ]}
       >
         <DocSection title="세대원 수로 갈리는 네 단계">
           <p>

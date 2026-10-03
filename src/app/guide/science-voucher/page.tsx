@@ -74,6 +74,11 @@ export default function ScienceVoucherGuide() {
         title={G.title}
         lead="과학 도서와 교구를 살 수 있는 온라인 포인트입니다. 2026년에는 1인당 10만원으로 지난해의 두 배가 됐지만, 쓸 수 있는 날짜가 정해져 있고 그날이 지나면 남은 돈은 사라집니다."
         updated={`최종 수정 ${G.updated} · 모집 공고와 지원센터 누리집에서 ${SV_CHECKED} 확인`}
+        quick={[
+          { label: "언제까지", value: `포인트 사용 ${SV_DATES.useTo}까지` },
+          { label: "얼마", value: `1인당 ${won(SV_POINT)} (온라인 포인트)` },
+          { label: "어디서", value: "과학문화바우처 지원센터 누리집 — 전용 포인트몰" },
+        ]}
       >
         <DocNote title="2026년에 포인트를 받았다면 10월 12일 오후 5시까지입니다">
           지원센터 누리집 첫 화면과 모집 공고가 똑같이 적고 있습니다 —{" "}

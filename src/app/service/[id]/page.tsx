@@ -10,6 +10,7 @@ import {
 } from "@/types/welfare";
 import { isIndexable, showAds } from "@/lib/indexable";
 import { extrasOf, hasExtras } from "@/lib/serviceExtras";
+import { pairsOf } from "@/lib/servicePairs";
 import { hasDates } from "@/lib/calendar";
 import CalendarEntryActions from "@/components/CalendarEntryActions";
 import AdSenseScript from "@/components/AdSenseScript";
@@ -886,7 +887,11 @@ function AmongListed({ s }: { s: WelfareService }) {
 
 function SiteChecked({ s }: { s: WelfareService }) {
   const { payDate, calendar, guides } = extrasOf(s);
-  if (!payDate && calendar.length === 0 && guides.length === 0) return null;
+  const pairs = pairsOf(s.id).flatMap((p) => {
+    const t = services.find((x) => x.id === p.id);
+    return t ? [{ id: p.id, name: t.name, why: p.why }] : [];
+  });
+  if (!payDate && calendar.length === 0 && guides.length === 0) return null; // 짝은 안내 글이 있는 사업에만 생긴다
 
   return (
     <Section id="checked" title="복지클릭이 따로 확인한 것">
@@ -960,6 +965,32 @@ function SiteChecked({ s }: { s: WelfareService }) {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {pairs.length > 0 && (
+          <div className="rounded-xl bg-ground p-4 text-sm leading-relaxed">
+            <p className="font-bold text-ink">함께 보는 지원</p>
+            <ul className="mt-2 space-y-2">
+              {pairs.map((p) => (
+                <li key={p.id}>
+                  <Link
+                    {...serviceLink(p.id)}
+                    className="font-medium text-brand hover:underline"
+                  >
+                    {p.name} →
+                  </Link>
+                  <p className="text-xs text-slate-600">{p.why}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-2 text-xs text-muted">
+              근거 조문·쪽수는{" "}
+              <Link href="/guide/combined-support" className="underline hover:text-brand">
+                함께 받을 수 있나 안내 글
+              </Link>
+              에 있습니다. 실제로 함께 받을 수 있는지는 판정하지 않습니다.
+            </p>
           </div>
         )}
 

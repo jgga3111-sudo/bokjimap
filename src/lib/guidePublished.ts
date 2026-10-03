@@ -61,4 +61,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "catastrophic-medical": "2026-10-01",
   "childcare-extended": "2026-10-01",
   "low-income-copay": "2026-10-02",
+  "source-conflicts": "2026-10-04",
 };

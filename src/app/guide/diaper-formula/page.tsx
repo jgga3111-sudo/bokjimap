@@ -60,6 +60,11 @@ export default function DiaperFormulaGuide() {
         title={G.title}
         lead="기저귀와 조제분유 값을 국민행복카드에 포인트로 넣어 주는 바우처입니다. 금액은 원문에 적혀 있지만, 그 금액을 몇 달치 받는지는 신청한 날짜가 정합니다."
         updated={`최종 수정 ${G.updated} · 2026년 사업안내 지침에서 ${DV_CHECKED} 확인`}
+        quick={[
+          { label: "언제까지", value: "출생일부터 60일 안에 신청하면 24개월분 전부" },
+          { label: "얼마", value: `월 기저귀 ${won(DV_MONTHLY.diaper)} · 조제분유 ${won(DV_MONTHLY.formula)}` },
+          { label: "어디서", value: "주소지 보건소·주민센터 또는 온라인(복지로·정부24)" },
+        ]}
       >
         <DocSection title="60일이 갈림길입니다">
           <p>

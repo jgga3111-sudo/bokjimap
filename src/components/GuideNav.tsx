@@ -26,7 +26,13 @@ const SHOWN = 3;
 
 export default function GuideNav({ current }: { current: string }) {
   const i = GUIDES.findIndex((g) => g.slug === current);
-  const ordered = i < 0 ? GUIDES : [...GUIDES.slice(i + 1), ...GUIDES.slice(0, i)];
+  const rotated = i < 0 ? GUIDES : [...GUIDES.slice(i + 1), ...GUIDES.slice(0, i)];
+  /* 같은 갈래를 앞으로(2026-10-04) — 이 글을 읽은 사람이 다음에 찾을 글은 같은 상황의 글이다.
+     안정 정렬이라 갈래 안에서는 위의 순환 순서가 그대로 남는다. */
+  const ordered =
+    i < 0
+      ? rotated
+      : [...rotated.filter((x) => x.group === GUIDES[i].group), ...rotated.filter((x) => x.group !== GUIDES[i].group)];
   const rest = ordered.slice(0, SHOWN);
 
   /*

@@ -14,12 +14,18 @@ export function DocPage({
   title,
   lead,
   updated,
+  quick,
   children,
 }: {
   title: string;
   lead?: string;
   /** 시행일·최종 수정일 */
   updated?: string;
+  /**
+   * 「한 줄 답」(2026-10-04). 글을 열자마자 언제·얼마·어디서를 보이는 칸.
+   * 값은 그 글의 상수에서 가져온다 — 본문과 따로 적으면 한쪽만 고쳐져 어긋난다.
+   */
+  quick?: { label: string; value: React.ReactNode }[];
   children: React.ReactNode;
 }) {
   /* 차례(2026-10-02). 글 안의 절 제목을 그대로 모은다 — 따로 적는 목록이 아니라서
@@ -61,6 +67,17 @@ export function DocPage({
           </p>
         )}
       </header>
+
+      {quick && quick.length > 0 && (
+        <dl className="mt-5 grid gap-px overflow-hidden rounded-xl bg-line text-sm ring-1 ring-line sm:grid-cols-3">
+          {quick.map((q) => (
+            <div key={q.label} className="bg-brand-soft px-4 py-3">
+              <dt className="text-xs font-bold text-brand">{q.label}</dt>
+              <dd className="mt-1 leading-snug font-semibold text-ink">{q.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
 
       {toc.length >= 4 && (
         <nav aria-label="차례" className="mt-6 rounded-xl bg-ground px-4 py-3.5 text-sm">
