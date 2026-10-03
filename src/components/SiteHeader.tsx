@@ -116,7 +116,7 @@ export default function SiteHeader() {
                 <li key={n.href}>
                   <Link
                     href={n.href}
-                    className={`inline-block rounded-full border px-3 py-1.5 text-sm transition ${
+                    className={`inline-block rounded-full border px-3.5 py-2.5 text-sm transition ${
                       n.accent
                         ? "border-transparent bg-brand font-semibold text-white"
                         : "border-line bg-white font-medium text-slate-700 hover:border-brand hover:text-brand"

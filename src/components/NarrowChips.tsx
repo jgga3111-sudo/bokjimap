@@ -56,7 +56,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
                 key={c.slug}
                 href={c.href}
                 prefetch={false}
-                className="rounded-full bg-ground px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
+                className="rounded-full bg-ground px-3 py-2 text-[13px] font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
               >
                 {c.label}
                 <span className="ml-1 text-slate-500">{c.count}</span>
@@ -67,7 +67,7 @@ export default function NarrowChips({ base }: { base: FindQuery }) {
                 href={r.moreHref}
                 prefetch={false}
                 aria-label={`나머지 ${r.label} 고르기 — 조건으로 찾기`}
-                className="rounded-full bg-ground px-2.5 py-1 text-xs font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
+                className="rounded-full bg-ground px-3 py-2 text-[13px] font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
               >
                 …
               </Link>

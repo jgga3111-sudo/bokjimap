@@ -118,13 +118,13 @@ export default function ThisMonth() {
               >
                 {dated && (
                   <>
-                    <span className="text-[10px] font-bold leading-tight">
+                    <span className="text-xs font-bold leading-tight">
                       {Number(e.end.slice(5, 7))}월
                     </span>
                     <span className="text-lg leading-none font-extrabold tabular-nums">
                       {Number(e.end.slice(8, 10))}
                     </span>
-                    <span className="mt-0.5 text-[10px] leading-none">까지</span>
+                    <span className="mt-0.5 text-xs leading-none">까지</span>
                   </>
                 )}
               </span>
@@ -141,7 +141,7 @@ export default function ThisMonth() {
                     받는다. 목록·상세의 딱지와 같은 계산(lib/dday.ts)이다. */}
                 {dated && !passed && <DdayChip end={e.end} title={e.period} />}
                 {passed && (
-                  <span className="rounded bg-sunken px-1.5 py-0.5 text-[11px] font-bold text-muted">
+                  <span className="rounded bg-sunken px-1.5 py-0.5 text-xs font-bold text-muted">
                     기간 지남
                   </span>
                 )}

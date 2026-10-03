@@ -42,7 +42,7 @@ export function DocPage({
       <header className="mt-3 border-b border-line pb-6">
         <h1 className="text-2xl font-extrabold sm:text-3xl">{title}</h1>
         {lead && (
-          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+          <p className="mt-3 text-base leading-relaxed text-slate-600">
             {lead}
           </p>
         )}
@@ -101,7 +101,7 @@ export function DocSection({
         )}
         {title}
       </h2>
-      <div className="mt-3 space-y-3 text-sm leading-relaxed text-slate-700">
+      <div className="mt-3 space-y-3 text-base leading-relaxed sm:text-[15px] text-slate-700">
         {children}
       </div>
     </section>
