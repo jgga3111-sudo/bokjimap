@@ -88,7 +88,7 @@ export default function ScienceVoucherGuide() {
           . 이 시각이 지나면 남은 포인트는 쓸 수 없고, 다음 해로 넘어가지도 현금으로 바뀌지도 않습니다.
         </DocNote>
 
-        <DocSection title="2026년 일정 — 신청은 끝났고, 지금은 쓰는 기간입니다">
+        <DocSection title="2026년 일정 — 신청은 6월에 끝났고, 포인트는 10월 12일까지 씁니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[380px] border-collapse text-sm">
               <thead>
@@ -143,7 +143,7 @@ export default function ScienceVoucherGuide() {
           <DocNote title="예산이 떨어지면 기간 안이라도 못 씁니다">
             같은 공고와 「포인트 사용정책」 쪽이 <strong>「사용 기간 내라도 바우처 예산 소진 시 잔여 포인트 사용 불가」</strong>
             라고 적습니다. 예산보다 10% 많은 인원을 뽑았다는 문장과 나란히 있는 경고입니다. 언제 소진되는지는 어디에도
-            적혀 있지 않으니, 남은 포인트가 있다면 10월 12일을 기다릴 이유가 없습니다.
+            적혀 있지 않으니, 남은 포인트가 있다면 마감일(10월 12일)까지 기다릴 이유가 없습니다.
           </DocNote>
         </DocSection>
 

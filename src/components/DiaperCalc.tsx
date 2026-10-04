@@ -139,6 +139,11 @@ export default function DiaperCalc() {
               셌고, <strong>공휴일은 넣지 않았습니다</strong> — 그날이 공휴일이면 다음 날까지 인정됩니다. 실제 결정은
               관할 보건소가 신청 접수일로부터 14일 안에 합니다.
             </p>
+            <p className="text-xs leading-relaxed text-muted">
+              지침 표는 「출생일 기준 N개월 째 날」이라고만 적고, 그 달에 같은 날짜가 없을 때(2월 29일생·말일생)의
+              처리는 적지 않았습니다. 계산기는 <strong>그 달의 말일</strong>로 셌으니, 신청일이 그 경계 근처면
+              보건소에 확인해 주세요.
+            </p>
           </>
         )}
       </div>

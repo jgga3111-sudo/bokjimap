@@ -93,7 +93,7 @@ export const payTypeHelp = (v: string): string | null =>
  * 매달 나오는지는 생활 계획이 달라지는 문제다.
  */
 const CYCLE_HELP: Record<string, string> = {
-  월: "자격이 유지되는 동안 매달 나옵니다.",
+  월: "달마다 나오는 사업입니다. 나오는 기간(예: 동절기만)은 지원 내용을 확인하세요.",
   년: "한 해에 한 번 나옵니다.",
   주: "매주 나옵니다.",
   분기: "석 달에 한 번 나옵니다.",

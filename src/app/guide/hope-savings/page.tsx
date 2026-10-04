@@ -5,6 +5,7 @@ import { DocPage, DocSection, DocNote, DocList } from "@/components/Doc";
 import GuideNav from "@/components/GuideNav";
 import { guideBySlug } from "@/lib/guides";
 import { services } from "@/data/services";
+import HopeScheduleRows, { type HopeRow } from "@/components/HopeScheduleRows";
 
 const G = guideBySlug("hope-savings")!;
 const S = services.find((s) => s.id === "WLF00000100");
@@ -14,7 +15,7 @@ const DOC = "2026년 자활사업안내(Ⅱ) 자산형성지원 통장사업 안
 const CHECKED = "2026-09-22";
 
 export const metadata: Metadata = {
-  title: "희망저축계좌 Ⅰ·Ⅱ, 2026년 남은 모집 일정과 정부지원금을 잃는 경우",
+  title: "희망저축계좌 Ⅰ·Ⅱ, 2026년 모집 일정과 정부지원금을 잃는 경우",
   description:
     "희망저축계좌Ⅱ는 2026년 10월 1일~26일, Ⅰ은 11월 2일~16일에 모집합니다. 매달 10만원을 넣으면 정부가 더해 주지만 3년 뒤 탈수급 못 하거나 교육·계획서를 빠뜨리면 돌려받지 못합니다.",
   alternates: { canonical: "/guide/hope-savings" },
@@ -46,6 +47,17 @@ function Src({ pages }: { pages: string }) {
   );
 }
 
+/** 신규 모집 일정(인쇄 140~141쪽). end는 그 차수의 마지막 날 — 「지남」은 브라우저가 오늘로 정한다. */
+const HOPE_ROWS: HopeRow[] = [
+  { kind: "Ⅰ", round: "1차", when: "3.3(화) ~ 3.13(금)", end: "2026-03-13" },
+  { kind: "Ⅰ", round: "2차", when: "6.1(월) ~ 6.15(월)", end: "2026-06-15" },
+  { kind: "Ⅰ", round: "3차", when: "9.1(화) ~ 9.14(월)", end: "2026-09-14" },
+  { kind: "Ⅰ", round: "4차", when: "11.2(월) ~ 11.16(월)", end: "2026-11-16" },
+  { kind: "Ⅱ", round: "1차", when: "2.2(월) ~ 2.24(화)", end: "2026-02-24" },
+  { kind: "Ⅱ", round: "2차", when: "7.1(수) ~ 7.27(월)", end: "2026-07-27" },
+  { kind: "Ⅱ", round: "3차", when: "10.1(목) ~ 10.26(월)", end: "2026-10-26" },
+];
+
 const th = "px-3 py-2 font-semibold";
 const td = "px-3 py-2";
 
@@ -57,7 +69,7 @@ export default function HopeSavingsGuide() {
         lead="일하는 저소득 가구가 매달 10만원을 넣으면 정부가 돈을 더 얹어 3년 뒤 목돈으로 주는 통장입니다. 아무 때나 가입하는 통장이 아니라 정해진 달에만 모집하고, 3년을 다 채워도 조건 하나를 못 맞추면 정부가 얹은 돈은 받지 못합니다."
         updated={`최종 수정 ${G.updated} · 보건복지부 2026년 사업안내에서 ${CHECKED} 확인`}
       >
-        <DocNote title="2026년에 남은 모집은 Ⅱ 10월, Ⅰ 11월입니다">
+        <DocNote title="2026년 마지막 모집은 Ⅱ 10월, Ⅰ 11월입니다">
           <strong>희망저축계좌Ⅱ 10월 1일(목) ~ 10월 26일(월)</strong>,{" "}
           <strong>희망저축계좌Ⅰ 11월 2일(월) ~ 11월 16일(월)</strong>. 이 기간을 넘기면 그해에는 더 모집하지
           않습니다. 사업안내는 「신규 모집 일정은 제반 여건에 따라 변동될 수 있음」이라고 함께 적고 있으니, 주소지
@@ -127,24 +139,7 @@ export default function HopeSavingsGuide() {
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ["Ⅰ", "1차", "3.3(화) ~ 3.13(금)", true],
-                  ["Ⅰ", "2차", "6.1(월) ~ 6.15(월)", true],
-                  ["Ⅰ", "3차", "9.1(화) ~ 9.14(월)", true],
-                  ["Ⅰ", "4차", "11.2(월) ~ 11.16(월)", false],
-                  ["Ⅱ", "1차", "2.2(월) ~ 2.24(화)", true],
-                  ["Ⅱ", "2차", "7.1(수) ~ 7.27(월)", true],
-                  ["Ⅱ", "3차", "10.1(목) ~ 10.26(월)", false],
-                ].map(([a, b, c, past]) => (
-                  <tr key={`${a}${b}`} className={`border-b border-line ${past ? "text-muted" : ""}`}>
-                    <td className={`${td} font-medium`}>{a}</td>
-                    <td className={td}>{b}</td>
-                    <td className={`${td} tabular-nums`}>
-                      {c}
-                      {past ? " · 지남" : ""}
-                    </td>
-                  </tr>
-                ))}
+                <HopeScheduleRows rows={HOPE_ROWS} />
               </tbody>
             </table>
           </div>
