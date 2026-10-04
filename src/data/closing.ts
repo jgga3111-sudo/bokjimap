@@ -76,12 +76,6 @@ const BOKJIRO: Readonly<Record<string, Closing>> = {
   "text": "~ 2099-12-31",
   "name": "산모신생아건강관리사예외지원 확대실시사업"
  },
- "WLF00005566": {
-  "kind": "period",
-  "end": "2025-12-31",
-  "text": "2025. 1. 08.(수) ~ 12. 31.",
-  "name": "아동건강체험활동비 지원"
- },
  "WLF00004692": {
   "kind": "stated",
   "end": null,
@@ -123,12 +117,6 @@ const BOKJIRO: Readonly<Record<string, Closing>> = {
   "end": "2026-12-31",
   "text": "~ 2026-12-31",
   "name": "장애인통합복지카드(A형)발급수수료 지원사업"
- },
- "WLF00001229": {
-  "kind": "period",
-  "end": "2024-02-23",
-  "text": "2024. 1. 22.~2. 23.",
-  "name": "여성농업인 행복바우처 지원"
  },
  "WLF00002325": {
   "kind": "program",

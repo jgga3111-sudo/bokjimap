@@ -130,14 +130,14 @@ export default async function SearchPage({
                   {h.name} <DeadlineBadge id={h.id} />
                   <OutMark id={h.id} />
                 </p>
-                <p className="mt-0.5 text-xs text-muted">
+                <p className="mt-0.5 text-[13px] text-muted">
                   {[h.place, h.dept].filter(Boolean).join(" · ")}
                 </p>
                 {/* 이름에 없는 낱말로 걸린 건 **왜 걸렸는지** 보여준다.
                     「백신」으로 찾았는데 이름이 「어르신 건강관리 지원」이면,
                     조각이 없을 때 잘못 걸린 것처럼 보인다. */}
                 {h.snippet && (
-                  <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-500">
+                  <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500">
                     {h.snippet}
                   </p>
                 )}

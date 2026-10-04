@@ -494,9 +494,9 @@ function KeyFacts({ s }: { s: WelfareService }) {
      내고 있어서 빈 열이 곧 색면이 된다. 수록 900건 중 570건이 이 경우다. */
   const cols =
     cells.length >= 3
-      ? "sm:grid-cols-3"
+      ? "grid-cols-3"
       : cells.length === 2
-        ? "sm:grid-cols-2"
+        ? "grid-cols-2"
         : "";
 
   return (
@@ -507,13 +507,13 @@ function KeyFacts({ s }: { s: WelfareService }) {
       className={`mt-5 grid gap-2 ${cols}`}
     >
       {cells.map((c) => (
-        <div key={c.k} className="rounded-xl bg-ground px-4 py-3.5">
+        <div key={c.k} className="rounded-xl bg-ground px-3 py-3 sm:px-4 sm:py-3.5">
           <p className="text-xs font-bold text-muted">{c.k}</p>
-          <p className="mt-0.5 text-lg leading-tight font-extrabold text-ink">
+          <p className="mt-0.5 text-base leading-tight font-extrabold text-ink sm:text-lg">
             {c.v}
           </p>
           {c.help && (
-            <p className="mt-1.5 text-xs leading-relaxed text-slate-500">
+            <p className="mt-1.5 hidden text-xs leading-relaxed text-slate-500 sm:block">
               {c.help}
             </p>
           )}

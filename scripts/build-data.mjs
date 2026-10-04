@@ -469,7 +469,11 @@ const closing = {};
 for (const s of services) {
   const p = statedApplyPeriod(s);
   const said = p ? null : statedClosure(s);
-  if (p) {
+  /* 작년 이전에 끝난 기간은 「마감」으로 올리지 않는다(10-04) — 올해 다시 받는지 모른다.
+     보조금24 쪽은 09-17부터 같은 규칙이다. 여성농업인 행복바우처가 2024년 기간으로 마감이었다. */
+  if (p && p.end < `${new Date().getFullYear()}-01-01`) {
+    /* 건너뜀 */
+  } else if (p) {
     closing[s.id] = { kind: "period", end: p.end, text: p.text, name: s.name };
   } else if (said) {
     /* 날짜가 없다 — 원문이 끝났다고 말했으므로 오늘과 비교할 것이 없다. */

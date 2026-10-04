@@ -63,13 +63,13 @@ function HitList({ hits }: { hits: AskHit[] }) {
               {h.name} <DeadlineBadge id={h.id} />
               <OutMark id={h.id} />
             </p>
-            <p className="mt-0.5 text-xs text-muted">
+            <p className="mt-0.5 text-[13px] text-muted">
               {[h.place, h.dept].filter(Boolean).join(" · ")}
             </p>
             {/* 이름에 없는 낱말로 걸린 건 **왜 걸렸는지** 보여준다
                 (`/search`와 같은 규칙). */}
             {h.snippet && (
-              <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-slate-500">
+              <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-slate-500">
                 {h.snippet}
               </p>
             )}
