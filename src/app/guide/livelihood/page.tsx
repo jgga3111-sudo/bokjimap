@@ -254,7 +254,7 @@ export default function LivelihoodGuide() {
             </li>
             <li>
               <Link href="/check" className="text-brand underline">
-                1분 자가진단
+                소득 자가진단
               </Link>{" "}
               — 내 소득이 어느 구간인지부터 확인합니다
             </li>

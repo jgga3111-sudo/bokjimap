@@ -137,7 +137,7 @@ export default function PopularGuide() {
             그다음에 내 상황에 맞는 축으로 좁히면 됩니다. 소득이 어느 구간인지
             모르겠다면{" "}
             <Link href="/check" className="font-bold text-brand underline">
-              1분 자가진단
+              소득 자가진단
             </Link>
             이, 나이대로 보고 싶다면{" "}
             <Link href="/guide/life-stage" className="text-brand underline">

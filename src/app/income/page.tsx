@@ -29,7 +29,7 @@ export default function IncomeIndex() {
       <div className="rounded-xl border border-brand/20 bg-brand-soft/50 px-4 py-3 text-sm leading-relaxed">
         내가 몇 %인지부터 알아야 합니다.{" "}
         <Link href="/check" className="font-bold text-brand underline">
-          1분 자가진단
+          소득 자가진단
         </Link>
         에서 월 소득·연봉·건강보험료 중 하나만 넣으면 바로 나옵니다.
       </div>

@@ -60,7 +60,7 @@ export default function ServiceIndex() {
       <div className="rounded-2xl bg-brand-soft px-5 py-4 text-sm">
         내 소득이 어느 구간인지 모르겠다면{" "}
         <Link href="/check" className="font-bold text-brand underline">
-          1분 자가진단
+          소득 자가진단
         </Link>
         부터 해보세요.
       </div>

@@ -118,7 +118,7 @@ export default function LifeStageGuide() {
             이 사업들은 생애주기로 찾으면 아예 보이지 않습니다. 소득으로
             찾는 쪽이 맞습니다 —{" "}
             <Link href="/check" className="font-bold text-brand underline">
-              1분 자가진단
+              소득 자가진단
             </Link>
             으로 내 구간을 먼저 확인하거나,{" "}
             <Link href="/guide/income-line" className="text-brand underline">

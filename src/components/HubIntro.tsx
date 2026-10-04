@@ -149,7 +149,7 @@ export default function HubIntro({
           </>
         )}
         <Link href="/check" className="text-brand underline">
-          1분 자가진단
+          소득 자가진단
         </Link>
         으로 내 소득이 기준선 어디쯤인지 먼저 계산해 볼 수 있습니다.
       </p>
