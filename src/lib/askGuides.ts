@@ -89,6 +89,7 @@ const RULES: readonly Rule[] = [
   { re: /의료\s*급여/, slug: "medical-aid" },
   { re: /암\s*검진/, slug: "cancer-screening" },
   { re: /심리\s*상담|우울|마음\s*투자|정신(과|\s*건강).{0,6}상담/, slug: "mental-health-voucher" },
+  { re: /발달\s*재활|(언어|음악|미술|놀이)\s*(재활|치료).{0,8}(바우처|지원)/, slug: "developmental-rehab" },
   {
     re: /발달\s*장애|활동\s*지원/,
     slug: "disability-activity-support",

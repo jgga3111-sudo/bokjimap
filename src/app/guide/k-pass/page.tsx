@@ -10,6 +10,9 @@ import {
   KPASS_REGIONS,
   KPASS_CHECKED,
   KPASS_HALF_URL,
+  KPASS_NOTICE_URL,
+  KPASS_NOTICE_CHECKED,
+  KPASS_SITE_URL,
   KPASS_SOURCE,
   KPASS_SOURCE_URL,
   MIN_RIDES,
@@ -211,7 +214,7 @@ export default function KpassGuide() {
           </p>
           <p>
             <strong className="text-ink">
-              다만 2026년 4월 1일~9월 30일 이용분은 이 표의 절반입니다.
+              다만 2026년 4월 1일~9월 30일 이용분은 이 표의 절반이었습니다.
             </strong>{" "}
             정부가 &ldquo;반값 모두의 카드&rdquo;로 정액형 기준금액을 50% 내렸습니다 —
             수도권 일반 국민 일반형 3만원·플러스형 5만원, 청년·2자녀·어르신
@@ -226,7 +229,35 @@ export default function KpassGuide() {
               정책브리핑 2026-04-17
             </a>
             , 09-15 확인). 공단 표와 계산기는 평상시 기준이라, 그 기간 이용분은
-            실제 환급이 계산값보다 많을 수 있습니다.
+            실제 환급이 계산값보다 많았을 수 있습니다.
+          </p>
+          <p>
+            <strong className="text-ink">
+              10월 1일부터는 기준금액이 이 표의 값으로 돌아왔습니다.
+            </strong>{" "}
+            K-패스 누리집은 정액제 기준금액이 일반형 3~6.2만원, 플러스형 6.5~10만원으로 바뀐다고
+            공지했고(
+            <a
+              href={KPASS_SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              korea-pass.kr
+            </a>
+            ), 이 글의 표에서 일반형은 가장 작은 값 3만원·가장 큰 값 6.2만원, 플러스형은 6.5만원·10만원으로 그 범위와 정확히 같습니다.
+            출퇴근 지정 시차시간 환급 혜택은 <strong>2026년 12월 31일까지</strong> 기존과 같게
+            유지된다고 합니다(국토교통부 보도자료 「모두의카드 출퇴근 시차시간 혜택 계속 이어간다」,{" "}
+            <a
+              href={KPASS_NOTICE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-brand"
+            >
+              정책브리핑 2026-09-28
+            </a>
+            , 제목·날짜와 누리집 공지로 {KPASS_NOTICE_CHECKED} 확인). 시차시간 환급률 숫자는 이 글에 적지
+            않았습니다 — 공식 본문을 직접 열지 못했습니다.
           </p>
         </DocSection>
 

@@ -107,6 +107,7 @@ const CASES = {
   "지역마다 금액이 달라요": { noGuide: "source-conflicts" },
   "가구원 수에 따라 금액이 다르나요": { noGuide: "source-conflicts" },
   "복지로 말고 다른 지원": { noGuide: "source-conflicts" },
+  "발달재활서비스 본인부담금": { guide: "developmental-rehab" },
   constructor: {},
   "toString 청년": {},
 };
