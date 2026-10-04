@@ -57,7 +57,9 @@ export default function TaxCreditCalc() {
 
   const result = useMemo(
     () =>
-      gross === null || kids === null || singleWithKids
+      /* 소득 0은 계산하지 않는다(10-04) — 산식대로면 자녀장려금 전액이 나오는데,
+         조특법 제100조의28①은 소득이 「있는 거주자」를 대상으로 적는다. */
+      gross === null || gross === 0 || kids === null || singleWithKids
         ? null
         : calcTaxCredit(gross, Math.floor(kids), hh, asset),
     [gross, kids, hh, asset, singleWithKids],
@@ -154,6 +156,11 @@ export default function TaxCreditCalc() {
             원문은 <strong>단독가구를 「배우자, 부양자녀, 부양부모가 없는 가구」</strong>로 적습니다. 18세 미만
             부양자녀가 있으면 <strong>홑벌이</strong>(배우자 총급여가 300만원 이상이면 맞벌이)로 골라 주세요 — 혼자
             아이를 키워도 홑벌이 가구입니다.
+          </p>
+        ) : gross === 0 ? (
+          <p role="alert" className="mt-5 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
+            총급여액 등이 0이면 계산하지 않습니다. 자녀장려금은 <strong>「사업소득, 근로소득 또는 종교인소득이
+            있는 거주자」</strong>가 신청할 수 있다고 적혀 있습니다(조세특례제한법 제100조의28제1항).
           </p>
         ) : (
           <p className="mt-5 rounded-xl bg-sunken px-4 py-3 text-sm text-slate-600">

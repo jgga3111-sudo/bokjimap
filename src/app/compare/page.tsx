@@ -73,7 +73,8 @@ export default async function ComparePage({
 }: PageProps<"/compare">) {
   const sp = await searchParams;
   const a = find(one(sp.a));
-  const b = find(one(sp.b));
+  /* 같은 사업 둘이면 하나로 본다 — 같은 내용이 두 칸에 그려졌다(10-04). */
+  const b = one(sp.b) === one(sp.a) ? undefined : find(one(sp.b));
 
   /* a만 있을 때 — 상세에서 「나란히 보기」로 들어온 경우다. 같은 축에 든 사업을
      몇 개 권해서 한 번 더 고르게 한다. 권하는 기준은 조회수뿐이고 우열은 말하지 않는다. */

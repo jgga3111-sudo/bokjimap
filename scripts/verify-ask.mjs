@@ -101,6 +101,14 @@ const CASES = {
   "국가유공자 의료비": { top: "국가유공자" },
   "장애인 교통비": { in3: "장애인" },
   "생계급여 받으면서 근로장려금 받을 수 있나요": { top: "생계급여", guide: "combined-support" },
+
+  // 10-04 — 원문을 말한 질문만 어긋남 글로 간다. 프로토타입 이름은 500을 냈다.
+  "복지로랑 금액이 달라요": { guide: "source-conflicts" },
+  "지역마다 금액이 달라요": { noGuide: "source-conflicts" },
+  "가구원 수에 따라 금액이 다르나요": { noGuide: "source-conflicts" },
+  "복지로 말고 다른 지원": { noGuide: "source-conflicts" },
+  constructor: {},
+  "toString 청년": {},
 };
 
 const shown = [...ASK_EXAMPLES, ...ASK_EXAMPLE_GROUPS.flatMap((g) => g.examples)];
@@ -119,6 +127,7 @@ for (const [q, want] of Object.entries(CASES)) {
     bad(`위 셋에 「${want.in3}」이 없다 → ${hits.slice(0, 3).map((h) => h.name).join(" / ")}`);
   if (want.place && !hits[0]?.place.includes(want.place)) bad(`맨 위 지역이 ${want.place}이 아니다 → ${hits[0]?.place ?? "없음"}`);
   if (want.guide && !guides.some((h) => h.endsWith(want.guide))) bad(`안내 글 ${want.guide}로 안 이어진다 → ${guides.join(", ") || "없음"}`);
+  if (want.noGuide && guides.some((h) => h.endsWith(want.noGuide))) bad(`안내 글 ${want.noGuide}로 잘못 이어진다`);
   for (const c of want.chip ?? []) if (!a.applied.some((x) => x.label === c)) bad(`조건 ${c}을(를) 못 읽었다`);
   for (const c of want.noChip ?? []) if (a.applied.some((x) => x.axis === c)) bad(`조건(${c})을 잘못 읽었다`);
   const words = [...a.usedWords.map((w) => w.word), ...a.missedWords];

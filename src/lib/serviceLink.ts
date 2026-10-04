@@ -10,7 +10,7 @@ import { NO_PAGE } from "@/data/noPage";
  * 브라우저에서도 쓰므로 `@/data/services`(2.9MB)를 물지 않는다. 작은 표만 본다.
  */
 export function hasPage(id: string): boolean {
-  return !(id in NO_PAGE);
+  return !Object.hasOwn(NO_PAGE, id);
 }
 
 /** 복지로 원문 주소. `services.ts`의 officialUrl과 같은 형태다(생성 스크립트가 대조한다). */

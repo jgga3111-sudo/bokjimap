@@ -247,7 +247,9 @@ const PHRASES: readonly { re: RegExp; key: string }[] = [
 /** 낱말 하나가 걸릴 수 있는 형태들 — 자기 자신이 먼저다. */
 export const formsOf = (word: string): string[] => [
   word,
-  ...(SYNONYMS[word] ?? []),
+  /* hasOwn — 「constructor」「toString」을 물으면 Object.prototype의 함수가 잡혀
+     /ask가 500을 냈다(2026-10-04). 입력 낱말로 표를 볼 때는 늘 제 것인지 확인한다. */
+  ...(Object.hasOwn(SYNONYMS, word) ? SYNONYMS[word] : []),
 ];
 
 /**
@@ -380,7 +382,7 @@ function pick(
      (「학교 밖 청소년」「기초 생활」) — 그 길이면 우연히 이어질 일이 거의 없다. */
   const has = (p: string) => {
     const w = norm(p);
-    if (BLOCK[w] && flat.includes(BLOCK[w])) return false;
+    if (Object.hasOwn(BLOCK, w) && flat.includes(BLOCK[w])) return false;
     return toks.some((t) => t.includes(w)) || (w.length >= 4 && flat.includes(w));
   };
   let best: { slug: string; from: string; len: number } | null = null;
@@ -421,7 +423,8 @@ export function parseAsk(question: string): AskRead {
   let ageUsed: number | null = null;
   if (!chips.some((c) => c.axis === "life")) {
     /* 뒤에 「대」가 붙으면 나이가 아니다 — "3세대 가구"를 3살로 읽었다. */
-    const m = raw.match(/(\d{1,3})\s*(?:살|세)(?![0-9대])/);
+    /* 앞에 숫자·점이 붙으면 읽지 않는다 — "65.5세"를 5세, "1000세"를 0세로 읽었다(10-04). */
+    const m = raw.match(/(?<![\d.])(\d{1,3})\s*(?:살|세)(?![0-9대])/);
     const age = m ? Number(m[1]) : null;
     const band = age != null ? bandOf(age) : null;
     if (age != null && band) {
@@ -440,7 +443,7 @@ export function parseAsk(question: string): AskRead {
   const names: AskRead["names"] = [];
   const skipped: string[] = [];
   const seen = new Set<string>();
-  const tails: Record<string, string> = {};
+  const tails: Record<string, string> = Object.create(null);
   const push = (key: string, shown: string) => {
     if (seen.has(key)) return;
     seen.add(key);
@@ -525,7 +528,7 @@ export function parseAsk(question: string): AskRead {
     if (nameOnly) continue;
     /* 바꿔 찾을 말이 있는 낱말은 조건을 품었어도 통째로 둔다 — 「산후도우미」에서 「산후」를
        떼면 「도우미」가 남아 산림일자리에 걸렸다(10-02). */
-    if (SYNONYMS[n]) {
+    if (Object.hasOwn(SYNONYMS, n)) {
       push(n, t);
       continue;
     }

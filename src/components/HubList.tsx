@@ -248,10 +248,11 @@ export default function HubList({
           </summary>
           <ul className="grid gap-x-4 gap-y-1.5 border-t border-line px-4 py-3.5 text-sm sm:grid-cols-2">
             {filtered.map((r) => (
-              <li key={r[0]} className="truncate">
+              /* 이름만 줄인다 — li째 줄이면 긴 이름 뒤의 「마감」 딱지가 같이 잘렸다(10-04). */
+              <li key={r[0]} className="flex min-w-0 items-baseline">
                 <a
                   {...serviceLink(r[0])}
-                  className="text-slate-600 hover:text-brand hover:underline"
+                  className="min-w-0 truncate text-slate-600 hover:text-brand hover:underline"
                 >
                   {r[1]}
                   <OutMark id={r[0]} />
