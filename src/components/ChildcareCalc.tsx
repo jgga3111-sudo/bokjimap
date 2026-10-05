@@ -23,7 +23,8 @@ export default function ChildcareCalc() {
   const [time, setTime] = useState<CsTime>("day");
   const [hoursText, setHoursText] = useState("40");
 
-  const raw = hoursText.replace(/[,\s]|시간/g, "");
+  // 쉼표는 지우지 않는다 — 744시간까지라 천 단위 쉼표가 없고, 지우면 「1,5」가 15시간이 된다.
+  const raw = hoursText.replace(/\s|시간/g, "");
   const hours = Number(raw);
   const hoursOk = raw !== "" && Number.isFinite(hours) && hours > 0 && hours <= 744 && Number.isInteger(hours * 2);
   const r = hoursOk ? calcChildcare(service, tier, age, time, hours) : null;
