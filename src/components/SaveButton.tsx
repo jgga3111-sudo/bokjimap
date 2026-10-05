@@ -28,7 +28,7 @@ export default function SaveButton(item: SavedItem) {
       type="button"
       onClick={() => toggleSaved(item)}
       aria-pressed={on}
-      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-medium transition ${
+      className={`inline-flex shrink-0 min-h-11 items-center gap-1.5 rounded-full border px-3.5 text-sm font-medium transition ${
         on
           ? "border-amber-300 bg-amber-50 text-amber-800"
           : "border-line bg-white text-slate-600 hover:border-brand hover:text-brand"

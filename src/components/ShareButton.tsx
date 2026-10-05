@@ -40,7 +40,7 @@ export default function ShareButton({ title, path }: { title: string; path: stri
     <button
       type="button"
       onClick={share}
-      className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-slate-600 transition hover:border-brand hover:text-brand"
+      className="inline-flex shrink-0 min-h-11 items-center gap-1.5 rounded-full border border-line bg-white px-3.5 text-sm font-medium text-slate-600 transition hover:border-brand hover:text-brand"
     >
       <svg
         viewBox="0 0 24 24"

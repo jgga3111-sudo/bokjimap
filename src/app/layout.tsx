@@ -5,6 +5,7 @@ import "./globals.css";
 import { SITE, OPERATOR_PERSON } from "@/lib/site";
 import { jsonLd } from "@/lib/safe";
 import SiteHeader from "@/components/SiteHeader";
+import BackToTop from "@/components/BackToTop";
 import SiteFooter from "@/components/SiteFooter";
 import SavedSync from "@/components/SavedSync";
 
@@ -133,6 +134,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <SiteFooter />
         {/* 로그인했을 때만 관심 지원을 계정과 맞춘다. 화면에는 안 그린다. */}
+        <BackToTop />
         <SavedSync />
         {/*
           방문자 분석 (2026-09-27, 사용자 요청) — Vercel Web Analytics.

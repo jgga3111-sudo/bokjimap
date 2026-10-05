@@ -14,6 +14,7 @@ import { pairsOf } from "@/lib/servicePairs";
 import { hasDates } from "@/lib/calendar";
 import CalendarEntryActions from "@/components/CalendarEntryActions";
 import AdSenseScript from "@/components/AdSenseScript";
+import ClampText from "@/components/ClampText";
 import { payType, cycleLabel, placeLabel, views, won, visiblePayTypes, periodLabel, payTypeHelp, cycleHelp } from "@/lib/display";
 import { nameWithAlias } from "@/lib/aliases";
 import { thresholdOf, BASE_YEAR } from "@/lib/midIncome";
@@ -161,8 +162,40 @@ export async function generateMetadata({
 
 /** 본문 문단. 원문의 줄바꿈을 그대로 살린다 — 항목 나열이 뭉개지지 않게. */
 function Prose({ text }: { text: string }) {
+  /* 긴 원문은 접어 둔다(10-05, ClampText 머리말). 글자는 전부 HTML에 있다. */
+  return text.length > CLAMP_AT ? (
+    <ClampText>
+      <ProseBody text={text} />
+    </ClampText>
+  ) : (
+    <ProseBody text={text} />
+  );
+}
+
+/** 처리 단계 목록. 네 줄을 넘으면 접는다 — 기관 쪽 처리 순서라 신청하는 사람이 다 읽을 일이 드물다. */
+function Steps({ steps }: { steps: readonly string[] }) {
+  const list = (
+    <ol className="mt-3 space-y-2">
+      {steps.map((step, i) => (
+        <li key={i} className="flex max-w-[46rem] gap-3 text-[15px] text-slate-700">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand">
+            {i + 1}
+          </span>
+          <span className="min-w-0">{step}</span>
+        </li>
+      ))}
+    </ol>
+  );
+  return steps.length > 4 ? <ClampText>{list}</ClampText> : list;
+}
+
+/** 이보다 길면 접는다 — 700자면 휴대폰에서 두 화면쯤이다. */
+const CLAMP_AT = 700;
+
+/* 10-05 — 본문 14 → 15px, 폭은 46rem까지. PC에서 한 줄이 77자쯤이라 길었다(안내 글은 50자). */
+function ProseBody({ text }: { text: string }) {
   return (
-    <div className="space-y-1.5 text-sm leading-relaxed whitespace-pre-line text-slate-700">
+    <div className="max-w-[46rem] space-y-1.5 text-[15px] leading-relaxed whitespace-pre-line text-slate-700">
       {breakBullets(text)}
     </div>
   );
@@ -318,6 +351,49 @@ const TOC = [
   { id: "law", title: "근거 법령", has: (s: WelfareService) => hasLawSection(s) },
 ] as const;
 
+/**
+ * 핵심 한 줄 (2026-10-05, 사용자 승인) — 검색 제목이 약속한 답을 첫 화면에 둔다.
+ *
+ * 제목은 「기초연금 지급일 매월 25일」인데 그 날짜가 휴대폰에서 1.6화면 아래(따로 확인한 것),
+ * 금액은 4.3화면 아래(지원 내용)에 있었다. 정부24·웰로는 같은 자리에 기간·금액을 세운다.
+ *
+ * **새로 쓰지 않는다.** 날짜는 법령에서 확인해 둔 값(lib/payDates.ts), 금액은 원문 「지원 내용」에서
+ * 금액이 든 첫 문장 **그대로**다 — 검색 설명(generateMetadata)에 이미 쓰는 것과 같은 값이라
+ * 검색 결과와 화면이 같은 말을 한다. 둘 다 없으면 아무것도 안 그린다(3절).
+ * 「받을 수 있다」고 쓰지 않는다. 날짜와 원문 문장, 그리고 근거로 내려가는 길까지다.
+ */
+function KeyLine({ s }: { s: WelfareService }) {
+  const pay = extrasOf(s).payDate;
+  const money = firstMoneySentence(s.supportContent);
+  if (!pay && !money) return null;
+  return (
+    <dl className="mt-5 space-y-2 rounded-xl bg-brand-soft px-4 py-3.5 text-[15px] leading-relaxed">
+      {pay && (
+        <div className="flex gap-3">
+          <dt className="w-[4.5rem] shrink-0 pt-0.5 text-sm font-bold text-brand">들어오는 날</dt>
+          <dd className="min-w-0">
+            <strong className="font-extrabold text-ink">{pay.when}</strong>{" "}
+            <a href="#checked" className="text-sm whitespace-nowrap text-brand underline underline-offset-2">
+              근거 조문
+            </a>
+          </dd>
+        </div>
+      )}
+      {money && (
+        <div className="flex gap-3">
+          <dt className="w-[4.5rem] shrink-0 pt-0.5 text-sm font-bold text-brand">지원 내용</dt>
+          <dd className="min-w-0 text-ink">
+            {money}{" "}
+            <a href="#benefit" className="text-sm whitespace-nowrap text-brand underline underline-offset-2">
+              원문 전체
+            </a>
+          </dd>
+        </div>
+      )}
+    </dl>
+  );
+}
+
 function PageToc({ s }: { s: WelfareService }) {
   const items = TOC.filter((t) => t.has(s));
   if (items.length < 3) return null;
@@ -347,7 +423,7 @@ function PageToc({ s }: { s: WelfareService }) {
           <li key={t.id}>
             <a
               href={`#${t.id}`}
-              className="inline-block rounded-full bg-ground px-3 py-1.5 text-sm font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
+              className="inline-flex min-h-11 items-center rounded-full bg-ground px-3.5 text-sm font-medium text-slate-700 transition hover:bg-brand-soft hover:text-brand"
             >
               {t.id === "apply" ? applyTitle(s) : t.title}
             </a>
@@ -357,7 +433,7 @@ function PageToc({ s }: { s: WelfareService }) {
           <li>
             <a
               href="#official"
-              className="inline-block rounded-full bg-brand px-3 py-1.5 text-sm font-semibold text-white transition hover:brightness-110"
+              className="inline-flex min-h-11 items-center rounded-full bg-brand px-3.5 text-sm font-semibold text-white transition hover:brightness-110"
             >
               공식 안내 ↓
             </a>
@@ -1200,6 +1276,7 @@ export default async function ServiceDetail({
         {/* 원문보다 먼저 온다. 원문은 행정 문장이라 읽어야 알 수 있는데,
             "현금인가 바우처인가 · 한 번인가 매달인가"는 읽기 전에 알아야
             나머지를 읽을지 말지 정할 수 있다. */}
+        <KeyLine s={s} />
         <KeyFacts s={s} />
 
         {(s.summary ?? s.outline) && (
@@ -1355,18 +1432,7 @@ export default async function ServiceDetail({
               </p>
             ))}
           {s.applyMethod && <Prose text={s.applyMethod} />}
-          {s.applySteps.length > 0 && (
-            <ol className="mt-3 space-y-2">
-              {orderedSteps(s.applySteps).map((step, i) => (
-                <li key={i} className="flex gap-3 text-sm text-slate-700">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand">
-                    {i + 1}
-                  </span>
-                  <span className="min-w-0">{step}</span>
-                </li>
-              ))}
-            </ol>
-          )}
+          {s.applySteps.length > 0 && <Steps steps={orderedSteps(s.applySteps)} />}
         </Section>
       )}
 
