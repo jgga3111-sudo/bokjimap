@@ -128,7 +128,7 @@ export default async function SearchPage({
                 「말로 물어보기」가 맞는 자리다 — 같은 말을 그대로 넘긴다(10-05). */}
             <Link
               href={`/ask?q=${encodeURIComponent(q)}`}
-              className="rounded-lg border border-brand bg-brand px-4 py-2 text-sm font-bold text-white hover:opacity-90"
+              className="inline-flex min-h-11 items-center rounded-lg border border-brand bg-brand px-4 text-sm font-bold text-white hover:opacity-90"
             >
               같은 말로 물어보기
             </Link>

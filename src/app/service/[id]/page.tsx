@@ -78,6 +78,45 @@ function clip(t: string, n: number): string {
   return `${(sp > n * 0.6 ? head.slice(0, sp) : head).replace(/[\s·,(—-]+$/, "")}…`;
 }
 
+const MONEY = /\d[\d,.]*\s*(만\s*)?원/;
+
+/**
+ * 금액이 들었지만 **받는 금액이 아닌** 문장의 표지 (2026-10-05 점검, 181건 전부 읽음).
+ *
+ * 처음엔 「금액이 든 첫 문장」을 그대로 썼다. 그런데 그 금액이 본인이 내는 돈(「2,500원을
+ * 개인부담합니다」「요양급여비용의 14%」), 서비스 가격, 예시 속 소득·월세, 자격 요건의 소득선
+ * (「연소득 50백만원 이하」「월평균보수 270만원 미만」), 산식 한 줄인 경우가 있었다.
+ * 첫 화면 「지원 내용」 줄과 검색 설명에 나가는 자리라, 받는 돈으로 읽히면 3절 위반이다.
+ *
+ * **좁게 적는다.** 「한도·이하·미만」으로 거르면 40건이 바뀌는데 그중 28건이 좋은 문장이다
+ * (「월 65만원 이하」「120만원 한도」). 아래 표지는 세어 보니 좋은 문장을 하나도 안 지운다.
+ */
+const NOT_AMOUNT =
+  /개인부담합니다|요양급여비용의|\(예시\)|소득인정액|연소득|월평균보수|총급여액|서비스\s*(단가|가격|비용)|^지원대상|소득공제/;
+
+/**
+ * 문장 안에 표지가 없어 위 규칙으로 못 거르는 사업 — 이 사업들은 금액 문장을 안 세운다.
+ * 받는 돈이 아닌 것을 받는 돈처럼 세우느니 줄이 없는 편이 낫다(3절). 사업마다 이유를 적는다.
+ */
+const NO_MONEY_LINE = new Set([
+  "WLF00003201", // 주거급여 — 「1급지(서울) 369,000원」은 기준임대료(상한)다. 실제 임차료가 더 적으면 그만큼만 나온다
+  "WLF00005411", // 일상돌봄 — 「A형 월 684,000원」은 서비스 가격(소득에 따라 본인부담 최대 100%)
+  "WLF00001109", // 청소년한부모 — 원문의 0~1세·2세 이상 금액이 지침과 뒤바뀌어 있다(09-15 기록)
+  "WLF00000044", // 생활안정자금 — 「혼례비: 1,250만원」은 융자 한도인데 문장에 융자가 없다
+  "WLF00003241", // 노후긴급자금 — 빌려주는 돈인데 문장에 대부가 없다
+  "WLF00000043", // 보훈 보상금 — 여러 구간 중 가장 큰 값(건국훈장 1~3등급)만 보인다
+  "WLF00004006", // 대구 청년희망적금 — 「월 10만원씩 12개월 적립」이 내는 돈인지 받는 돈인지 알 수 없다
+  "WLF00003224", // 출산육아기 고용안정장려금 — 사업주에게 주는 돈
+  "WLF00003229", // 긴급복지 시설이용 — 시설에 주는 상한액
+  "WLF00003299", // 저소득층 냉·난방비 — 변경 전 금액만 보인다
+  "WLF00003257", // 이동통신요금감면 — 원문 「생계. 의료 급여」가 마침표에서 갈려 생계가 떨어진다
+  "WLF00005856", // 양육비 선지급 — 뒤의 「단, 집행권원의 금액을 초과하지 못함」이 떨어진다
+]);
+
+/** 첫 화면 핵심 한 줄과 검색 설명이 **같이** 쓰는 금액 문장. */
+const moneyLine = (s: WelfareService): string | null =>
+  NO_MONEY_LINE.has(s.id) ? null : firstMoneySentence(s.supportContent);
+
 /** 원문 「지원 내용」에서 금액이 든 첫 문장(원문 그대로, 한 줄로 접음). 없으면 null. */
 function firstMoneySentence(t: string | null | undefined): string | null {
   if (!t) return null;
@@ -88,7 +127,11 @@ function firstMoneySentence(t: string | null | undefined): string | null {
     if (cut > 0) one = one.slice(0, cut + 1);
     /* 맨 앞 글머리(○·①·1))만 뗀다. 문장 글자는 그대로다. */
     one = one.replace(/^(?:[○●◦•※*\-❏□■▶►ㅇ·\u2460-\u2473]|\d\))+\s*/, "");
-    if (/\d[\d,.]*\s*(만\s*)?원/.test(one) && one.length >= 8) return clip(one, 90);
+    if (!MONEY.test(one) || one.length < 8 || NOT_AMOUNT.test(one)) continue;
+    /* 90자에서 자르고 나서 금액이 안 남으면 그 문장은 버린다 — 「…봉사 활동(취약노인 지원…」처럼
+       금액이 잘려 나간 문장이 「지원 내용」으로 나갔다. */
+    const cut90 = clip(one, 90);
+    if (MONEY.test(cut90)) return cut90;
   }
   return null;
 }
@@ -134,7 +177,7 @@ export async function generateMetadata({
     제목에도 그 날을 세운다(「장애수당 지급일」 노출 13·클릭 1).
   */
   const pay = extrasOf(s).payDate;
-  const money = firstMoneySentence(s.supportContent);
+  const money = moneyLine(s);
   /* 금액 문장이 이미 그 날을 말하면(기초연금 「매월 25일에…」) 되풀이하지 않는다. */
   const lead = [pay?.day && !money?.includes(pay.when) ? `지급일 ${pay.when}.` : null, money].filter(Boolean).join(" ");
   return {
@@ -364,17 +407,17 @@ const TOC = [
  */
 function KeyLine({ s }: { s: WelfareService }) {
   const pay = extrasOf(s).payDate;
-  const money = firstMoneySentence(s.supportContent);
-  if (!pay && !money) return null;
+  const money = moneyLine(s);
+  if (!pay?.day && !money) return null;
   return (
     <dl className="mt-5 space-y-2 rounded-xl bg-brand-soft px-4 py-3.5 text-[15px] leading-relaxed">
-      {pay && (
+      {pay?.day && (
         <div className="flex gap-3">
           <dt className="w-[4.5rem] shrink-0 pt-0.5 text-sm font-bold text-brand">들어오는 날</dt>
           <dd className="min-w-0">
             <strong className="font-extrabold text-ink">{pay.when}</strong>{" "}
             <a href="#checked" className="text-sm whitespace-nowrap text-brand underline underline-offset-2">
-              근거 조문
+              근거
             </a>
           </dd>
         </div>

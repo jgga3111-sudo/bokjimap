@@ -94,15 +94,28 @@ export default function GuideBrowser({ groups }: { groups: GuideGroupView[] }) {
     };
     read();
     window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
+    window.addEventListener("popstate", read);
+    return () => {
+      window.removeEventListener("hashchange", read);
+      window.removeEventListener("popstate", read);
+    };
   }, [groups]);
 
   const pick = (k: string) => {
     setActive(k);
     setQ("");
-    window.history.replaceState(null, "", k === "all" ? window.location.pathname : `#${k}`);
+    /* 기록에 쌓는다 — 덮어쓰니 뒤로 가기가 직전 갈래가 아니라 이전 페이지로 갔다. */
+    window.history.pushState(null, "", k === "all" ? window.location.pathname : `#${k}`);
     document.getElementById("guide-list")?.scrollIntoView({ block: "start" });
   };
+
+  /* 고른 칩을 칩 줄 안으로 데려온다. 「날짜·지급일」은 줄 끝이라 휴대폰에서 켜진 칩이
+     화면 밖(left 727px)에 있었다. 세로로는 움직이지 않는다(block: nearest). */
+  useEffect(() => {
+    document
+      .querySelector('#guide-list nav [aria-current="true"]')
+      ?.scrollIntoView({ inline: "center", block: "nearest" });
+  }, [active]);
 
   const needle = norm(q);
   const shown = useMemo(
@@ -170,7 +183,7 @@ export default function GuideBrowser({ groups }: { groups: GuideGroupView[] }) {
         {/* 좁은 화면 — 위에 붙는 갈래 칩 줄 */}
         <nav
           aria-label="상황별 보기"
-          className="sticky top-[57px] z-10 -mx-4 mb-3 bg-ground/95 px-4 py-2 backdrop-blur sm:top-[99px] lg:hidden"
+          className="sticky top-[57px] z-10 -mx-4 mb-3 bg-ground/95 px-4 py-2 backdrop-blur sm:top-[107px] lg:hidden"
         >
           <ul className="flex gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {tabs.map((t) => {
