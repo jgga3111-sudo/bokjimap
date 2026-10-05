@@ -1,6 +1,6 @@
 import { services } from "@/data/services";
 import { placeLabel } from "@/lib/display";
-import { norm } from "@/lib/searchText";
+import { norm, unmask } from "@/lib/searchText";
 import { nameWithAlias, searchableNames } from "@/lib/aliases";
 import { BENEFITS } from "@/lib/benefits";
 import { sidoBySlug } from "@/lib/regions";
@@ -135,6 +135,8 @@ function passes(
 const BENEFIT_BOOST = 40;
 const PLACE_BOOST = 150;
 const CENTRAL_BOOST = 30;
+/* 시·도를 말했을 때 그 시·도 사업을 올리는 가산은 **두지 않는다**(10-05에 넣었다 뺌). 「울산 조부모 돌봄」은
+   나아지지만 「서울 사는 30대인데 월세 지원」의 1위가 전국 청년월세에서 강남구 신혼부부 대출이자로 바뀐다. */
 const VIEW_WEIGHT = 5;
 const UNKNOWN_PENALTY = 50;
 const VERB_END = "고면서게지야던러려니죠요다까네";
@@ -172,7 +174,10 @@ export function askSearch(asked: AskRead): AskAnswer {
       /* 「돌려달래요」「받으면서」「태어난지」 — 풀이말의 끝(요·서·지·고·면…)으로 끝나고 수록분
          어디에도 없는 조각. 이름씨가 아니라서 「못 찾았습니다」로 알릴 것이 못 된다. 수록분에
          **있는** 말은 끝 글자가 같아도 그대로 둔다(「복지」「학교」「화면」). */
-      .filter((w) => !(VERB_END.includes(w[w.length - 1]) && occ(norm(w)) === 0)),
+      .filter((w) => !(VERB_END.includes(w[w.length - 1]) && occ(norm(w)) === 0))
+      /* 붙여 쓴 두 낱말(「치매검진」「무릎수술」)을 둘로 나눠 찾는 것은 **넣었다가 뺐다**(10-05).
+         두 건은 나아졌지만 수록분에 없는 것(전세사기·청년도약계좌·주택청약·보금자리론)이 「전세」+「사기」로
+         갈려 엉뚱한 사업을 답처럼 냈다. 없는 것은 없다고 하는 쪽이 낫다. */,
     names: asked.names.map((x) => ({ ...x, name: norm(whole(x.name)) })),
   };
 
@@ -290,22 +295,28 @@ export function askSearch(asked: AskRead): AskAnswer {
     matched: number;
     score: number;
     bodyToken: string | null;
+    /** 지역 칸으로만 걸린 낱말 수 — 칸이 빈 사업을 낼지 볼 때 뺀다. */
+    placeOnly: number;
   }[] = [];
 
   for (const s of pool) {
     const body = norm(bodyOf(s));
-    const place = norm(placeLabel(s));
+    /* 지역 칸은 **토막의 앞머리**로만 대조한다(10-05). 통째로 includes 하니 「택시」가 「평택시」에,
+       「서구」가 「달서구」에 걸려 150점을 받았다 — 「장애인 택시」 1~3위가 평택시 사업이었다. */
+    const placeToks = placeLabel(s).split(/\s+/).map(norm);
     const forms = nameForms.get(s.id)!;
 
     let matched = 0;
     let score = 0;
     let nameHit = false;
+    let placeOnly = 0;
     let bodyToken: string | null = null;
 
     for (const w of words) {
       let best = 0;
       let via: string | null = null;
       let bodyForm: string | null = null;
+      let viaPlace = false;
 
       /* 형태를 앞에서부터 본다 — 자기 자신이 맨 앞이라, 그걸로 걸리면
          굳이 바꿔 찾았다고 말하지 않는다. */
@@ -316,7 +327,7 @@ export function askSearch(asked: AskRead): AskAnswer {
             here = NAME_START;
             break;
           }
-          if (n.includes(f.n)) here = Math.max(here, 50);
+          if (unmask(n, f.n).includes(f.n)) here = Math.max(here, 50);
         }
         /* 시·군·구 이름은 축이 아니라 낱말로 걸린다. "성남시 청년"에서
            「성남시」가 여기서 잡힌다 — 시·군·구를 축으로 만들면 171개짜리
@@ -327,8 +338,11 @@ export function askSearch(asked: AskRead): AskAnswer {
            12점을 주던 때는 「수원 출산지원금」의 1위가 부천시였다(이름에 「출산지원금」이 통째로
            든 다른 시 사업이 조회수로 앞섰다). 지역을 조건으로 건 것과 같은 무게를 준다. */
         /* 한 글자(「암」)는 지역 이름으로 보지 않는다 — 「영암군」에 걸렸다. */
-        if (f.n.length >= 2 && place.includes(f.n)) here = Math.max(here, 12) + PLACE_BOOST;
-        if (here === 0 && body.includes(f.n)) {
+        if (f.n.length >= 2 && placeToks.some((p) => p.startsWith(f.n))) {
+          if (here === 0) viaPlace = true;
+          here = Math.max(here, 12) + PLACE_BOOST;
+        }
+        if (here === 0 && unmask(body, f.n).includes(f.n)) {
           here = 6;
           bodyForm = f.raw;
         }
@@ -342,6 +356,7 @@ export function askSearch(asked: AskRead): AskAnswer {
       if (best >= 50) nameHit = true;
       if (best > 0) {
         matched += 1;
+        if (viaPlace) placeOnly += 1;
         score += best;
         if (!hitWords.has(w.raw)) hitWords.set(w.raw, via ?? w.raw);
         if (bodyForm && best < 12) bodyToken ??= bodyForm;
@@ -374,7 +389,6 @@ export function askSearch(asked: AskRead): AskAnswer {
        백내장 수술비였다 — 어디 사는지 모르는 사람에게는 어디서나 되는 것이 먼저다. 이름에 낱말이
        든 지자체 사업(50)을 본문에만 든 전국 사업(6)이 넘지는 못하게 작게 준다. */
     if (matched > 0 && !regionSaid && s.provider === "central") score += CENTRAL_BOOST;
-
     /* 칸이 비어서 조건을 통과한 사업은 칸에 그 조건이 **적힌** 사업보다 아래다(10-02).
        「장애인 교통비」의 1위가 대상 칸이 빈 「경기도 어린이·청소년 교통비」였다. */
     if (unknownIds.has(s.id)) score -= UNKNOWN_PENALTY;
@@ -387,7 +401,7 @@ export function askSearch(asked: AskRead): AskAnswer {
        차이를 전혀 못 넘었다 — 「월세」의 1위가 조회수 627위 보령시 「월세거주장애인 주거비」였고
        2위 「청년월세 지원사업」(조회수 2위)이 그 아래였다. 낱말이 걸린 개수가 여전히 1순위다. */
     score += VIEW_WEIGHT * Math.log10(s.views + 1);
-    scored.push({ s, matched, score, bodyToken });
+    scored.push({ s, matched, score, bodyToken, placeOnly });
   }
 
   /* 몇 개가 걸렸는지가 1순위. 같은 개수 안에서 점수로 가른다. */
@@ -432,7 +446,11 @@ export function askSearch(asked: AskRead): AskAnswer {
      냈더니 「국가유공자 의료비」에 「고위험 임산부 의료비 지원」이 나왔다 — 대상 칸이 빈 사업이
      「의료비」 하나로 보훈 목록에 들어온 것이다. */
   const matched = scored.filter(
-    (x) => x.matched > 0 && (!unknownIds.has(x.s.id) || x.matched >= words.length),
+    /* 지명 하나로는 안 낸다(10-05) — 「성남시 출산」에 대상·생애주기 칸이 빈 「장애인 택시 바우처
+       지원(성남시)」이 나왔다. 낱말이 지명뿐이면 늘 「전부 걸림」이 된다. */
+    (x) =>
+      x.matched > 0 &&
+      (!unknownIds.has(x.s.id) || (x.matched >= words.length && x.matched > x.placeOnly)),
   );
   const rest = scored.filter((x) => x.matched === 0 && !unknownIds.has(x.s.id));
   /* 지역을 말했으면 조건만 맞는 것 중 **그 지역 사업을 먼저**(09-17). 조회수로만

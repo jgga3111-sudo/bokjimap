@@ -1,6 +1,6 @@
 import { services } from "@/data/services";
 import { placeLabel } from "@/lib/display";
-import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, placeHas, unmask, norm } from "@/lib/searchText";
 import { nameWithAlias, searchableNames } from "@/lib/aliases";
 
 /**
@@ -109,9 +109,7 @@ export function searchFull(query: string): FullHit[] {
     const forms = searchableNames(s.id, s.name).map((n) =>
       useCho ? norm(toChoseong(n)) : norm(n),
     );
-    const meta = useCho
-      ? norm(toChoseong(place + s.department))
-      : norm(place + s.department);
+    const meta = useCho ? norm(toChoseong(place + s.department)) : norm(s.department ?? "");
     /* 초성 질의는 본문까지 초성으로 바꾸지 않는다. 본문은 한 건에 수백 자라
        초성으로 접으면 "ㅈㄴ"이 거의 모든 사업에 걸린다 — 뒤지는 의미가 없다. */
     const text = useCho ? "" : norm(body);
@@ -127,13 +125,14 @@ export function searchFull(query: string): FullHit[] {
           best = 100;
           break;
         }
-        if (n.includes(t)) best = 50;
+        if (unmask(n, t).includes(t)) best = 50;
       }
+      const inBody = !useCho && unmask(text, t).includes(t);
       if (best > 0) score += best;
-      else if (meta.includes(t)) score += 10;
+      else if (unmask(meta, t).includes(t) || (!useCho && placeHas(place, t))) score += 10;
       else if (!useCho && place === "전국" && isSidoWord(t)) continue;
-      else if (skipIntent && isIntentWord(t) && !(text.includes(t))) continue;
-      else if (text.includes(t)) {
+      else if (skipIntent && isIntentWord(t) && !inBody) continue;
+      else if (inBody) {
         score += 5;
         bodyToken ??= t;
       } else {

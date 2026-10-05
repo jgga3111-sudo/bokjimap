@@ -1,5 +1,5 @@
 import { SEARCH_INDEX, type SearchRow } from "@/data/searchIndex";
-import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, norm } from "@/lib/searchText";
+import { toChoseong, isChoseongQuery, isSidoWord, isIntentWord, hasKeyword, placeHas, unmask, norm } from "@/lib/searchText";
 import { ALIASES_BY_ROW_ID, nameWithAlias } from "@/lib/aliases";
 
 /**
@@ -64,9 +64,7 @@ export function searchAll(query: string): Hit[] {
     const alias = ALIASES_BY_ROW_ID.get(row[0]);
     const names = alias ? [row[1], ...alias] : [row[1]];
     const forms = names.map((n) => (useCho ? norm(toChoseong(n)) : norm(n)));
-    const rest = useCho
-      ? norm(toChoseong(row[2] + row[3]))
-      : norm(row[2] + row[3]);
+    const rest = useCho ? norm(toChoseong(row[2] + row[3])) : norm(row[3]);
 
     let score = 0;
     let matchedAll = true;
@@ -78,10 +76,10 @@ export function searchAll(query: string): Hit[] {
           best = 100;
           break;
         }
-        if (n.includes(t)) best = 50;
+        if (unmask(n, t).includes(t)) best = 50;
       }
       if (best > 0) score += best;
-      else if (rest.includes(t)) score += 10;
+      else if (unmask(rest, t).includes(t) || (!useCho && placeHas(row[2], t))) score += 10;
       else if (!useCho && row[2] === "전국" && isSidoWord(t)) continue;
       else if (skipIntent && isIntentWord(t)) continue;
       else {

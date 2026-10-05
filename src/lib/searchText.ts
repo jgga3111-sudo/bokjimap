@@ -69,6 +69,34 @@ const SIDO_WORDS = new Set(
 export const isSidoWord = (normalized: string) => SIDO_WORDS.has(normalized);
 
 /**
+ * 지역 칸에 걸렸는가 — **토막의 앞머리**로만 본다(10-05).
+ *
+ * 통째로 includes 하니 「택시」가 「평택시」에, 「서구」가 「달서구」에 걸렸다(「택시」 검색 1·2위가
+ * 평택시 사업). 「성남」→「성남시」, 「수원」→「경기도 수원시」는 그대로 걸린다.
+ * `search.ts`·`searchFull.ts`·`askSearch.ts`가 같은 규칙을 쓴다.
+ */
+/**
+ * 다른 낱말 **한가운데**에 걸리는 자리를 지우고 본다(10-05).
+ *
+ * 한국어는 붙여 쓰는 말이 많아 낱말 경계로 자를 수 없다(「청년월세」 안의 「월세」는 걸려야 한다).
+ * 그래서 실제로 엉뚱하게 걸린 자리만 적는다 — 「택시」의 1~3위가 「평택시」 사업과
+ * 「노후공공임대주택시설개선」이었고, 「장사」는 「기초생활보장사업」, 「관리비」는 「산후건강관리비용」에 걸렸다.
+ * 목록을 짐작으로 늘리지 않는다. 걸린 것을 보고 넣는다.
+ */
+const INSIDE: Record<string, readonly string[]> = {
+  택시: ["평택시", "주택시설"],
+  장사: ["보장사업"],
+  관리비: ["건강관리비"],
+};
+export const unmask = (normalizedText: string, normalizedWord: string) =>
+  Object.hasOwn(INSIDE, normalizedWord)
+    ? INSIDE[normalizedWord].reduce((t, m) => t.split(m).join(" "), normalizedText)
+    : normalizedText;
+
+export const placeHas = (place: string, normalized: string) =>
+  place.split(/\s+/).some((p) => norm(p).startsWith(normalized));
+
+/**
  * 무엇을 알고 싶은지만 말하는 낱말 — 「기초연금 신청」의 「신청」, 「장애수당 지급일」의 「지급일」.
  *
  * 낱말이 모두 걸려야 해서, 본문에 「신청」이 없는 기초연금이 「기초연금 신청」에서 빠지고
@@ -84,6 +112,7 @@ const INTENT_WORDS = new Set(
     /* 09-28 이용자 점검 — 검색창 안내가 「지원금 이름 검색」이라 이 말을 붙여 친다.
        「청년 월세 지원금 얼마」 7건에 전국 청년월세가 빠졌고, 「실직 지원금」은 2건이었다. */
     "지원금", "지원", "혜택", "받을수", "받는법",
+    "수급자격", "신청서류", // 10-05 — 「기초연금 수급자격」 0건
   ].map((w) => norm(w)),
 );
 export const isIntentWord = (normalized: string) => INTENT_WORDS.has(normalized);

@@ -3,6 +3,7 @@ import { serviceLink } from "@/lib/serviceLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { searchFullSplit } from "@/lib/searchFull";
+import { askGuides } from "@/lib/askGuides";
 import { services } from "@/data/services";
 import SearchBox from "@/components/SearchBox";
 import { POPULAR } from "@/lib/popular";
@@ -51,6 +52,10 @@ export default async function SearchPage({
      읽는 사람은 위에서 열 몇 개만 본다. 자르되 **잘랐다고 적는다.** */
   const MAX = 120;
   const shown = hits.slice(0, MAX);
+  /* 검색어가 이미 써 둔 안내 글의 주제면 그 글을 먼저 보여 준다(10-05). 「실업급여」는 수록 목록에
+     없는 제도라 검색 1위가 노인일자리였는데, 실업급여 글로 가는 길이 이 화면에 없었다.
+     규칙은 /ask와 같은 표(lib/askGuides.ts) — 두 화면이 다른 글을 가리키지 않게 한다. */
+  const guides = q ? askGuides(q) : [];
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -84,6 +89,21 @@ export default async function SearchPage({
           사람에게 다시 칠 말을 주는 자리다(lib/popular.ts). */}
       <SearchBox placeholder="다시 검색" size="lg" popular={POPULAR} />
 
+      {guides.length > 0 && (
+        <section className="rounded-xl border border-brand/20 bg-white px-4 py-3.5">
+          <h2 className="text-sm font-bold text-ink">이 검색어는 따로 정리한 글이 있습니다</h2>
+          <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-700">
+            {guides.map((g) => (
+              <li key={g.href}>
+                <Link href={g.href} className="font-bold text-brand underline">
+                  {g.label} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {q === "" ? (
         <p className="rounded-xl border border-line bg-sunken px-4 py-10 text-center text-sm text-muted">
           찾으시는 지원금 이름을 넣어 보세요.
@@ -104,6 +124,14 @@ export default async function SearchPage({
             있습니다.
           </p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
+            {/* 검색은 낱말이 **모두** 걸려야 한다. 문장이나 사는 곳·나이를 섞어 친 사람은
+                「말로 물어보기」가 맞는 자리다 — 같은 말을 그대로 넘긴다(10-05). */}
+            <Link
+              href={`/ask?q=${encodeURIComponent(q)}`}
+              className="rounded-lg border border-brand bg-brand px-4 py-2 text-sm font-bold text-white hover:opacity-90"
+            >
+              같은 말로 물어보기
+            </Link>
             <Link
               href="/service"
               className="rounded-lg border border-line bg-white px-4 py-2 text-sm font-medium hover:border-brand hover:text-brand"
