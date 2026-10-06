@@ -72,7 +72,7 @@ export default function GuideNav({ current }: { current: string }) {
   };
 
   return (
-    <nav className="mt-14 border-t border-line pt-8">
+    <nav aria-label="이어서 읽기" className="mt-14 border-t border-line pt-8">
       {/* 보내기(09-17) — 글을 다 읽은 자리가 건네기 좋은 자리다. */}
       {g && (
         <p className="mb-6 flex items-center justify-between gap-3 text-sm text-muted">

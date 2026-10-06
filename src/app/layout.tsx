@@ -123,6 +123,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(siteJsonLd) }}
         />
+        {/* 키보드·화면낭독기로 온 사람이 헤더 메뉴를 건너뛰는 링크(2026-10-06). 포커스가 올 때만 보인다. */}
+        <a
+          href="#top"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2.5 focus:text-sm focus:font-bold focus:text-white"
+        >
+          본문으로 건너뛰기
+        </a>
         <SiteHeader />
         {/* id="top" — 긴 목록 밑에서 "맨 위로"가 돌아올 자리. 자바스크립트
             없이 앵커 하나로 끝난다(HubList 맨 아래 참고). */}

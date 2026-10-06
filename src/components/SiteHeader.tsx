@@ -110,7 +110,7 @@ export default function SiteHeader() {
           건지 알 수 없다. pointer-events-none이라 칩을 가리지 않는다. */}
       <div className="relative z-20 border-b border-line bg-white/95 backdrop-blur sm:sticky sm:top-14 lg:hidden">
         <div className="relative mx-auto max-w-5xl px-4">
-          <nav className="-mx-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <nav aria-label="분류 메뉴" className="-mx-4 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <ul className="flex gap-1.5 whitespace-nowrap">
               {NAV.map((n) => (
                 <li key={n.href}>

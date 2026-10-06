@@ -175,7 +175,7 @@ function BrowseRow<T extends { slug: string; label: string }>({
               }`}
             >
               {i.label}
-              <span className="ml-1 text-xs text-slate-400">
+              <span className="ml-1 text-xs text-slate-500">
                 {countOf(i).toLocaleString()}
               </span>
             </Link>

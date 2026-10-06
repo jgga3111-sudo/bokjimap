@@ -309,7 +309,7 @@ export default function IncomeCheck({
               {[50, 100, 150].map((p) => (
                 <span
                   key={p}
-                  className="absolute top-4 -translate-x-1/2 text-[11px] text-slate-400"
+                  className="absolute top-4 -translate-x-1/2 text-[11px] text-slate-500"
                   style={{ left: `${(p / 200) * 100}%` }}
                 >
                   <span className="absolute -top-4 left-1/2 h-3 w-px -translate-x-1/2 bg-slate-300" />

@@ -95,6 +95,11 @@ export default function RefundGuide() {
             할 해당 과세연도 근로장려금을 비교하여 그 차액을 <strong>환급하거나 환수</strong>
             하여야 한다.&rdquo;
           </blockquote>
+          <p>
+            같은 항에는 단서가 하나 붙어 있습니다. 반기신청을 했지만 5월 정기신청을 한 것으로
+            보는 경우(제100조의6제3항)에는 &ldquo;다음 연도 <strong>9월 30일까지</strong> 정산하여야
+            한다&rdquo;고 적습니다. 내가 어느 쪽인지는 국세청 안내문이나 126에서 확인해 주세요.
+          </p>
           <p className="text-xs text-muted">
             출처{" "}
             <a

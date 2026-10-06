@@ -179,7 +179,7 @@ export default function HubList({
                         {o.label}
                         <span
                           className={
-                            on ? "ml-1 text-white/70" : "ml-1 text-slate-400"
+                            on ? "ml-1 text-white/70" : "ml-1 text-slate-500"
                           }
                         >
                           {c}
