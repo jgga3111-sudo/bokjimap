@@ -81,7 +81,7 @@ export default function MentalHealthVoucherGuide() {
       <DocPage
         title={G.title}
         lead="우울·불안으로 상담이 필요할 때 전문 심리상담을 8회 받을 수 있는 바우처입니다. 소득에 따라 본인부담이 0원부터 1회 4만원까지 달라지고, 신청할 때는 자격을 증명하는 서류가 한 가지 필요합니다."
-        updated={`최종 수정 ${G.updated} · 금액과 자격은 복지로 원문(기준연도 2026)에서 ${MV_CHECKED} 확인`}
+        updated={`최종 수정 ${G.updated} · 금액과 자격은 복지로 원문(기준연도 2026)과 보건복지부 2026년 사업지침에서 ${MV_CHECKED} 확인`}
       >
         <DocNote tone="amber" title="지금 많이 힘드시다면 먼저 전화하세요">
           바우처는 신청·심사에 시간이 걸립니다. 지금 위기라면 자살예방 상담전화{" "}
@@ -137,7 +137,7 @@ export default function MentalHealthVoucherGuide() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-muted">복지로 원문 「선정 기준」 · {MV_CHECKED} 확인</p>
+          <p className="text-xs text-muted">복지로 원문 「선정 기준」 · 보건복지부 2026년 사업지침 · {MV_CHECKED} 확인</p>
           <DocNote title="가장 흔히 걸리는 자리">
             진단서·소견서·의뢰서는 <strong>신청일 기준 3개월</strong>이 지나면 쓸 수 없습니다. 병원에서
             받아 두고 신청이 늦어지면 다시 발급받아야 합니다. 건강검진 결과서는 1년 안에 받은

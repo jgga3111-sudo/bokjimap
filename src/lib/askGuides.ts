@@ -113,6 +113,7 @@ const RULES: readonly Rule[] = [
   { re: /문화\s*누리/, slug: "voucher-use" },
   { re: /과학.{0,3}바우처/, slug: "science-voucher" },
   { re: /양곡|나라미|쌀.{0,6}(할인|지원|싸게)/, slug: "grain-discount" },
+  { re: /구미.{0,8}월세/, slug: "gumi-youth-rent" },
 
   /* ── 신청 ── */
   {

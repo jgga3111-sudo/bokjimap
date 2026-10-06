@@ -94,6 +94,8 @@ const GUIDE_SERVICES: Record<string, readonly string[]> = {
   "low-income-copay": ["WLF00001119"],
   /* 2026-10-04 — 발달재활서비스. 보건복지부 2026년 장애아동가족지원 사업안내의 소득 기준·지원 기간·대기자·중복 불가를 옮긴 글. */
   "developmental-rehab": ["WLF00003195"],
+  /* 2026-10-06 — 구미형 청년월세. 구미시 통합예약 누리집의 2026년 하반기 모집 공고(신청 기간·서류·15일 보완)를 옮긴 글. */
+  "gumi-youth-rent": ["WLF00005691"],
   "single-parent-support": ["WLF00001068", "WLF00001109"],
   /* 2026-09-16 — 문화누리카드는 「받은 다음」을 다루는 글이라 그 사업에만 잇는다. */
   "voucher-use": ["WLF00000055"],

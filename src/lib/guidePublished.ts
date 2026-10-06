@@ -63,4 +63,5 @@ export const GUIDE_PUBLISHED: Readonly<Record<string, string>> = {
   "low-income-copay": "2026-10-02",
   "source-conflicts": "2026-10-04",
   "developmental-rehab": "2026-10-04",
+  "gumi-youth-rent": "2026-10-06",
 };

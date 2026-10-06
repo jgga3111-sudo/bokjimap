@@ -132,6 +132,8 @@ const CASES = {
 
   // 10-04 — 원문을 말한 질문만 어긋남 글로 간다. 프로토타입 이름은 500을 냈다.
   "복지로랑 금액이 달라요": { guide: "source-conflicts" },
+  "구미 청년월세 지원 신청": { guide: "gumi-youth-rent" },
+  "서울 청년월세": { noGuide: "gumi-youth-rent" },
   "지역마다 금액이 달라요": { noGuide: "source-conflicts" },
   "가구원 수에 따라 금액이 다르나요": { noGuide: "source-conflicts" },
   "복지로 말고 다른 지원": { noGuide: "source-conflicts" },

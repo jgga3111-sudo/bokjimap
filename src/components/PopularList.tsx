@@ -40,7 +40,12 @@ export default function PopularList({
       {services.map((s, i) => {
         const pay = visiblePayTypes(s.payTypes)[0];
         return (
-          <li key={s.id} className={mobileLimit && i >= mobileLimit ? "max-sm:hidden" : undefined}>
+          <li
+            key={s.id}
+            className={
+              !mobileLimit ? undefined : i >= mobileLimit ? "max-sm:hidden" : i === mobileLimit - 1 ? "max-sm:border-b-0" : undefined
+            }
+          >
             <Link
               {...serviceLink(s.id)}
               className="group flex items-center gap-3 px-4 py-3 transition hover:bg-ground"
