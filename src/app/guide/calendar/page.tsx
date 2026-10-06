@@ -13,6 +13,7 @@ import {
   hasDates,
 } from "@/lib/calendar";
 import CalendarEntryActions from "@/components/CalendarEntryActions";
+import MonthFold from "@/components/MonthFold";
 import { services } from "@/data/services";
 
 const G = guideBySlug("calendar")!;
@@ -105,7 +106,8 @@ export default function CalendarGuide() {
         <DocSection title="달력">
           <p>
             아래는 <strong>공식 공고에서 하나씩 확인한 것만</strong> 실은
-            것입니다. 달을 골고루 채우려고 짐작해 넣지 않았습니다.
+            것입니다. 달을 골고루 채우려고 짐작해 넣지 않았습니다. 이번 달과 다음 달만 펼쳐
+            두었고, 다른 달은 달 이름을 누르면 펼쳐집니다.
           </p>
 
           <div className="space-y-4">
@@ -113,17 +115,7 @@ export default function CalendarGuide() {
               const rows = entriesOfMonth(m);
               if (rows.length === 0) return null;
               return (
-                <section
-                  key={m}
-                  id={`m${m}`}
-                  className="scroll-mt-24 overflow-hidden rounded-xl border border-line bg-white"
-                >
-                  <h3 className="border-b border-line bg-sunken px-4 py-2.5 text-sm font-extrabold text-ink">
-                    {m}월
-                    <span className="ml-2 text-xs font-normal text-muted">
-                      {rows.length}건
-                    </span>
-                  </h3>
+                <MonthFold key={m} m={m} count={rows.length}>
                   <ul className="divide-y divide-line">
                     {rows.map((e, i) => (
                       <li key={`${e.id}-${i}`} className="px-4 py-3">
@@ -164,7 +156,7 @@ export default function CalendarGuide() {
                       </li>
                     ))}
                   </ul>
-                </section>
+                </MonthFold>
               );
             })}
           </div>

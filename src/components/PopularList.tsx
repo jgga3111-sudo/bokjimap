@@ -26,18 +26,21 @@ import AxisIcon from "./AxisIcon";
 export default function PopularList({
   services,
   withIcon = false,
+  mobileLimit,
 }: {
   services: readonly (CardService & { themes?: readonly string[] })[];
   /** 주제 아이콘(2026-09-19). 원문이 매긴 첫 주제로 그린다 — 주제가 없는 사업(지자체)은
       빈 칸만 둔다. 줄마다 자리가 같아야 이름이 한 줄로 선다. */
   withIcon?: boolean;
+  /** 좁은 화면에서 보일 줄 수(2026-10-06). 넘는 줄은 가리기만 한다 — 링크는 HTML에 남는다. */
+  mobileLimit?: number;
 }) {
   return (
     <ol className="divide-y divide-line overflow-hidden rounded-xl border border-line bg-white">
       {services.map((s, i) => {
         const pay = visiblePayTypes(s.payTypes)[0];
         return (
-          <li key={s.id}>
+          <li key={s.id} className={mobileLimit && i >= mobileLimit ? "max-sm:hidden" : undefined}>
             <Link
               {...serviceLink(s.id)}
               className="group flex items-center gap-3 px-4 py-3 transition hover:bg-ground"

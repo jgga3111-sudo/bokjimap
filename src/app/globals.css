@@ -46,6 +46,11 @@
     "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
     system-ui, sans-serif;
 
+  /* 작은 글씨를 12px에서 13px로(2026-10-06). 13px 미만 글씨가 홈 38%·신청 달력 54%였다.
+     text-xs를 쓰는 곳이 300곳이 넘어 토큰에서 한 번에 올린다. 되돌리려면 이 두 줄을 지운다. */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5;
+
   --color-ink: #191f28;
   --color-brand: #1b64da;
   --color-brand-soft: #e8f3ff;

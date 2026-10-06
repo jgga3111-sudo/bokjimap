@@ -425,7 +425,7 @@ export default function Home() {
         {/* 2026-09-10: 카드 여덟 장(375px에서 1,700px 가까이)을 한 줄짜리
             순위표로 바꿨다. 이 자리는 훑는 곳이라 요약 두 줄이 필요 없다 —
             이유는 PopularList 머리말. 허브 목록은 카드 그대로다. */}
-        <PopularList services={popular} withIcon />
+        <PopularList services={popular} withIcon mobileLimit={5} />
       </section>
 
       {/* 새로 쓴 해설 — 첫 화면에서 유일하게 짙은 면이다. 흰 상자만 이어지던 가운데에서
@@ -447,7 +447,7 @@ export default function Home() {
         </div>
         <ul className="grid gap-2.5 sm:grid-cols-2">
           {NEW_GUIDES.map(({ g, on }, i) => (
-            <li key={g.slug} className={i >= 4 ? "hidden sm:block" : undefined}>
+            <li key={g.slug} className={i >= 3 ? "hidden sm:block" : undefined}>
               <Link
                 href={`/guide/${g.slug}`}
                 className="group flex h-full flex-col rounded-xl bg-white/[0.07] p-4 ring-1 ring-white/10 transition hover:bg-white/[0.12]"

@@ -410,9 +410,11 @@ const TOC = [
  * 「받을 수 있다」고 쓰지 않는다. 날짜와 원문 문장, 그리고 근거로 내려가는 길까지다.
  */
 function KeyLine({ s }: { s: WelfareService }) {
-  const pay = extrasOf(s).payDate;
+  const { payDate: pay, guides } = extrasOf(s);
   const money = moneyLine(s);
-  if (!pay?.day && !money) return null;
+  /* 금액 줄도 지급일도 없는데 해설 글은 있는 상세(에너지바우처 등)가 첫 화면에 아무것도 없었다(10-06). */
+  if (!pay?.day && !money && guides.length === 0) return null;
+  const online = GOV24[s.id]?.onlineUrl?.trim();
   return (
     <dl className="mt-5 space-y-2 rounded-xl bg-brand-soft px-4 py-3.5 text-[15px] leading-relaxed">
       {pay?.day && (
@@ -437,6 +439,38 @@ function KeyLine({ s }: { s: WelfareService }) {
           </dd>
         </div>
       )}
+      {guides[0] && (
+        <div className="flex gap-3">
+          <dt className="w-[4.5rem] shrink-0 pt-0.5 text-sm font-bold text-brand">해설 글</dt>
+          <dd className="min-w-0">
+            <Link href={`/guide/${guides[0].slug}`} className="font-semibold text-brand underline underline-offset-2">
+              {guides[0].title}
+            </Link>
+          </dd>
+        </div>
+      )}
+      <div className="flex gap-3">
+        <dt className="w-[4.5rem] shrink-0 pt-0.5 text-sm font-bold text-brand">신청</dt>
+        <dd className="min-w-0">
+          {online && /^https?:\/\//i.test(online) ? (
+            <a href="#precheck" className="text-brand underline underline-offset-2">
+              신청하는 곳(온라인 주소) 보기
+            </a>
+          ) : s.applyMethod || s.applySteps.length > 0 ? (
+            <a href="#apply" className="text-brand underline underline-offset-2">
+              {applyTitle(s)} 보기
+            </a>
+          ) : (
+            <a href="#contact" className="text-brand underline underline-offset-2">
+              문의처 보기
+            </a>
+          )}
+          {" · "}
+          <a href="#official" className="text-brand underline underline-offset-2">
+            공식 안내
+          </a>
+        </dd>
+      </div>
     </dl>
   );
 }
