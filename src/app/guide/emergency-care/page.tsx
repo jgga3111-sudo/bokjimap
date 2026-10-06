@@ -136,10 +136,11 @@ export default function EmergencyCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"내가 사는 곳에서 내는 돈"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>시·도</th>
-                  <th className={th}>소득 구간과 본인부담률</th>
+                  <th scope="col" className={th}>시·도</th>
+                  <th scope="col" className={th}>소득 구간과 본인부담률</th>
                 </tr>
               </thead>
               <tbody>
@@ -166,11 +167,12 @@ export default function EmergencyCareGuide() {
           <p className="mt-4">72시간 기본돌봄(A형, 1,368,000원)을 다 쓸 때 내는 돈(212쪽 표 그대로):</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"내가 사는 곳에서 내는 돈"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>본인부담률</th>
-                  <th className={th}>본인부담금</th>
-                  <th className={th}>정부지원금</th>
+                  <th scope="col" className={th}>본인부담률</th>
+                  <th scope="col" className={th}>본인부담금</th>
+                  <th scope="col" className={th}>정부지원금</th>
                 </tr>
               </thead>
               <tbody>

@@ -125,10 +125,10 @@ export default function SourceConflictsGuide() {
               <caption className="sr-only">복지로 원문과 다른 출처의 값이 어긋난 사업</caption>
               <thead className="bg-ground text-ink">
                 <tr>
-                  <th className="px-3 py-2 font-semibold">사업</th>
-                  <th className="px-3 py-2 font-semibold">복지로 원문</th>
-                  <th className="px-3 py-2 font-semibold">법령·고시·지침</th>
-                  <th className="px-3 py-2 font-semibold">저희가 한 처리</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">사업</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">복지로 원문</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">법령·고시·지침</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">저희가 한 처리</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line align-top">

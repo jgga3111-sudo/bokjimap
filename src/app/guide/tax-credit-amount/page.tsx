@@ -86,16 +86,17 @@ export default function TaxCreditAmountGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[30rem] border-collapse text-sm">
+              <caption className="sr-only">{"꺾이는 지점"}</caption>
               <thead>
                 <tr className="border-b border-line bg-sunken">
-                  <th className="px-3 py-2 text-left font-bold text-ink">가구</th>
-                  <th className="px-3 py-2 text-right font-bold text-ink">
+                  <th scope="col" className="px-3 py-2 text-left font-bold text-ink">가구</th>
+                  <th scope="col" className="px-3 py-2 text-right font-bold text-ink">
                     최대액
                   </th>
-                  <th className="px-3 py-2 text-right font-bold text-ink">
+                  <th scope="col" className="px-3 py-2 text-right font-bold text-ink">
                     최대가 되는 구간
                   </th>
-                  <th className="px-3 py-2 text-right font-bold text-ink">
+                  <th scope="col" className="px-3 py-2 text-right font-bold text-ink">
                     0이 되는 지점
                   </th>
                 </tr>

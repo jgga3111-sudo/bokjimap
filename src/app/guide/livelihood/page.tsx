@@ -94,11 +94,12 @@ export default function LivelihoodGuide() {
         <DocSection title="갈라지는 네 지점">
           <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[34rem] border-collapse text-sm">
+              <caption className="sr-only">{"갈라지는 네 지점"}</caption>
               <thead>
                 <tr className="border-b border-line text-left">
-                  <th className="py-2 pr-3 font-semibold text-muted"> </th>
-                  <th className="py-2 pr-3 font-bold text-ink">생계급여</th>
-                  <th className="py-2 pr-3 font-bold text-ink">
+                  <th scope="col" className="py-2 pr-3 font-semibold text-muted"> </th>
+                  <th scope="col" className="py-2 pr-3 font-bold text-ink">생계급여</th>
+                  <th scope="col" className="py-2 pr-3 font-bold text-ink">
                     긴급복지 생계지원
                   </th>
                 </tr>
@@ -106,7 +107,7 @@ export default function LivelihoodGuide() {
               <tbody className="align-top">
                 {DIFF.map((d) => (
                   <tr key={d.label} className="border-b border-line/70">
-                    <th className="py-2.5 pr-3 text-left font-semibold whitespace-nowrap text-muted">
+                    <th scope="row" className="py-2.5 pr-3 text-left font-semibold whitespace-nowrap text-muted">
                       {d.label}
                     </th>
                     <td className="py-2.5 pr-3 text-slate-700">{d.basic}</td>
@@ -114,7 +115,7 @@ export default function LivelihoodGuide() {
                   </tr>
                 ))}
                 <tr>
-                  <th className="py-2.5 pr-3 text-left font-semibold text-muted">
+                  <th scope="row" className="py-2.5 pr-3 text-left font-semibold text-muted">
                     상세
                   </th>
                   <td className="py-2.5 pr-3">

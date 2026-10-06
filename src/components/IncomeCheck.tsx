@@ -244,7 +244,7 @@ export default function IncomeCheck({
           ))}
         </div>
 
-        <div className="mt-3 flex items-center gap-2 rounded-lg border border-line px-3 focus-within:border-brand">
+        <div className="mt-3 flex items-center gap-2 rounded-lg border border-field px-3 focus-within:border-brand focus-within:shadow-[0_0_0_3px_rgb(27_100_218/0.22)]">
           <input
             type="text"
             inputMode="decimal"

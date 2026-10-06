@@ -98,12 +98,13 @@ function PremiumTable({ title, rows }: { title: string; rows: readonly Premium[]
     <div className="overflow-x-auto">
       <p className="mb-1 text-sm font-semibold">{title}</p>
       <table className="w-full min-w-[420px] border-collapse text-sm">
+        <caption className="sr-only">{title}</caption>
         <thead>
           <tr className={head}>
-            <th className={th}>가구원</th>
-            <th className={th}>직장가입자</th>
-            <th className={th}>지역가입자</th>
-            <th className={th}>혼합</th>
+            <th scope="col" className={th}>가구원</th>
+            <th scope="col" className={th}>직장가입자</th>
+            <th scope="col" className={th}>지역가입자</th>
+            <th scope="col" className={th}>혼합</th>
           </tr>
         </thead>
         <tbody>
@@ -210,13 +211,14 @@ export default function DailyCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"A·B·C·D형 — 무엇을 고르나"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>유형</th>
-                  <th className={th}>내용</th>
-                  <th className={th}>시간 (표준)</th>
-                  <th className={th}>월 금액</th>
-                  <th className={th}>특화서비스</th>
+                  <th scope="col" className={th}>유형</th>
+                  <th scope="col" className={th}>내용</th>
+                  <th scope="col" className={th}>시간 (표준)</th>
+                  <th scope="col" className={th}>월 금액</th>
+                  <th scope="col" className={th}>특화서비스</th>
                 </tr>
               </thead>
               <tbody>
@@ -259,11 +261,12 @@ export default function DailyCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
+              <caption className="sr-only">{"소득별로 내는 돈"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>소득</th>
-                  <th className={th}>기본서비스</th>
-                  <th className={th}>특화서비스</th>
+                  <th scope="col" className={th}>소득</th>
+                  <th scope="col" className={th}>기본서비스</th>
+                  <th scope="col" className={th}>특화서비스</th>
                 </tr>
               </thead>
               <tbody>
@@ -293,13 +296,14 @@ export default function DailyCareGuide() {
           <p className="mt-4">기본서비스를 한 달 다 쓸 때 내는 돈(사업안내 80쪽 표 그대로):</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"소득별로 내는 돈"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>유형</th>
-                  <th className={th}>수급자·차상위</th>
-                  <th className={th}>120% 이하</th>
-                  <th className={th}>120~160%</th>
-                  <th className={th}>160% 초과</th>
+                  <th scope="col" className={th}>유형</th>
+                  <th scope="col" className={th}>수급자·차상위</th>
+                  <th scope="col" className={th}>120% 이하</th>
+                  <th scope="col" className={th}>120~160%</th>
+                  <th scope="col" className={th}>160% 초과</th>
                 </tr>
               </thead>
               <tbody>
@@ -350,12 +354,13 @@ export default function DailyCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"특화서비스"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>서비스</th>
-                  <th className={th}>대상</th>
-                  <th className={th}>월 단가</th>
-                  <th className={th}>횟수</th>
+                  <th scope="col" className={th}>서비스</th>
+                  <th scope="col" className={th}>대상</th>
+                  <th scope="col" className={th}>월 단가</th>
+                  <th scope="col" className={th}>횟수</th>
                 </tr>
               </thead>
               <tbody>

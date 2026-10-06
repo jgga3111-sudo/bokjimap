@@ -82,13 +82,14 @@ export default function SourcePage() {
       <DocSection title="출처 목록">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
+            <caption className="sr-only">{"출처 목록"}</caption>
             <thead>
               <tr className="border-y border-line bg-sunken text-left">
-                <th className="px-3 py-2 font-semibold">항목</th>
-                <th className="px-3 py-2 font-semibold">출처</th>
-                <th className="px-3 py-2 font-semibold">제공기관</th>
-                <th className="px-3 py-2 font-semibold">이용조건</th>
-                <th className="px-3 py-2 font-semibold">갱신</th>
+                <th scope="col" className="px-3 py-2 font-semibold">항목</th>
+                <th scope="col" className="px-3 py-2 font-semibold">출처</th>
+                <th scope="col" className="px-3 py-2 font-semibold">제공기관</th>
+                <th scope="col" className="px-3 py-2 font-semibold">이용조건</th>
+                <th scope="col" className="px-3 py-2 font-semibold">갱신</th>
               </tr>
             </thead>
             <tbody>

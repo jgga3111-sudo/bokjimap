@@ -99,11 +99,12 @@ export default function BabyMoneyGuide() {
               페이지 전체가 가로로 밀리면 읽는 자리를 잃는다. */}
           <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[34rem] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면"}</caption>
               <thead>
                 <tr className="border-b border-line text-left">
-                  <th className="py-2 pr-3 font-semibold text-muted"> </th>
+                  <th scope="col" className="py-2 pr-3 font-semibold text-muted"> </th>
                   {COLS.map((c) => (
-                    <th key={c.id} className="py-2 pr-3 font-bold text-ink">
+                    <th scope="col" key={c.id} className="py-2 pr-3 font-bold text-ink">
                       {c.short}
                     </th>
                   ))}
@@ -119,7 +120,7 @@ export default function BabyMoneyGuide() {
                   ] as const
                 ).map(([label, key]) => (
                   <tr key={key} className="border-b border-line/70">
-                    <th className="py-2.5 pr-3 text-left font-semibold whitespace-nowrap text-muted">
+                    <th scope="row" className="py-2.5 pr-3 text-left font-semibold whitespace-nowrap text-muted">
                       {label}
                     </th>
                     {COLS.map((c) => (
@@ -130,7 +131,7 @@ export default function BabyMoneyGuide() {
                   </tr>
                 ))}
                 <tr>
-                  <th className="py-2.5 pr-3 text-left font-semibold text-muted">
+                  <th scope="row" className="py-2.5 pr-3 text-left font-semibold text-muted">
                     상세
                   </th>
                   {COLS.map((c) => (

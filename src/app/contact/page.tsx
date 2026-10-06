@@ -73,11 +73,12 @@ export default function ContactPage() {
         <p>아래로 문의하시면 정확한 안내를 받으실 수 있습니다.</p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[460px] border-collapse text-sm">
+            <caption className="sr-only">{"답변드리기 어려운 것"}</caption>
             <thead>
               <tr className="border-y border-line bg-sunken text-left">
-                <th className="px-3 py-2 font-semibold">문의처</th>
-                <th className="px-3 py-2 font-semibold">연락</th>
-                <th className="px-3 py-2 font-semibold">무엇을</th>
+                <th scope="col" className="px-3 py-2 font-semibold">문의처</th>
+                <th scope="col" className="px-3 py-2 font-semibold">연락</th>
+                <th scope="col" className="px-3 py-2 font-semibold">무엇을</th>
               </tr>
             </thead>
             <tbody>

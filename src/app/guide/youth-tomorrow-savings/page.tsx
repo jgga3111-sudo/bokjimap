@@ -145,10 +145,11 @@ export default function YouthTomorrowSavingsGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"가입 조건 셋 — 모두 맞아야 합니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가구원 수</th>
-                  <th className="px-3 py-2 text-right font-semibold">
+                  <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">
                     가입기준(중위소득 50%, 월)
                   </th>
                 </tr>
@@ -191,13 +192,14 @@ export default function YouthTomorrowSavingsGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"3년 뒤 얼마가 되나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">매월 본인 저축</th>
-                  <th className="px-3 py-2 text-right font-semibold">본인 3년</th>
-                  <th className="px-3 py-2 text-right font-semibold">정부 3년</th>
-                  <th className="px-3 py-2 text-right font-semibold">합계(이자 제외)</th>
-                  <th className="px-3 py-2 font-semibold">값</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">매월 본인 저축</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">본인 3년</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">정부 3년</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">합계(이자 제외)</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">값</th>
                 </tr>
               </thead>
               <tbody>

@@ -58,11 +58,12 @@ export default function PrivacyPage() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"회원가입 때 받는 개인정보"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">항목</th>
-                  <th className="px-3 py-2 font-semibold">쓰는 곳</th>
-                  <th className="px-3 py-2 font-semibold">보관 기간</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">항목</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">쓰는 곳</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">보관 기간</th>
                 </tr>
               </thead>
               <tbody className="text-slate-600">
@@ -301,10 +302,11 @@ export default function PrivacyPage() {
         <p>사이트 운영을 위해 다음 업무를 위탁하고 있습니다.</p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-sm">
+            <caption className="sr-only">{"처리 위탁"}</caption>
             <thead>
               <tr className="border-y border-line bg-sunken text-left">
-                <th className="px-3 py-2 font-semibold">수탁자</th>
-                <th className="px-3 py-2 font-semibold">위탁 업무</th>
+                <th scope="col" className="px-3 py-2 font-semibold">수탁자</th>
+                <th scope="col" className="px-3 py-2 font-semibold">위탁 업무</th>
               </tr>
             </thead>
             <tbody>

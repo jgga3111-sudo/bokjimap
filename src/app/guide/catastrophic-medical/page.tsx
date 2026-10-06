@@ -63,14 +63,15 @@ function TierTable({ data, rates }: { data: typeof TABLE1; rates: readonly strin
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[640px] border-collapse text-sm tabular-nums">
+        <caption className="sr-only">가구원 수와 건강보험료 구간별 의료비 부담수준과 지원 비율</caption>
         <thead>
           <tr className={head}>
-            <th className={th}>가구원 수</th>
-            <th className={th}>직장 가입자 가구</th>
-            <th className={th}>지역 가입자 가구</th>
-            <th className={th}>혼합 가구</th>
-            <th className={th}>1인의 의료비 부담수준</th>
-            <th className={th}>지원 비율</th>
+            <th scope="col" className={th}>가구원 수</th>
+            <th scope="col" className={th}>직장 가입자 가구</th>
+            <th scope="col" className={th}>지역 가입자 가구</th>
+            <th scope="col" className={th}>혼합 가구</th>
+            <th scope="col" className={th}>1인의 의료비 부담수준</th>
+            <th scope="col" className={th}>지원 비율</th>
           </tr>
         </thead>
         <tbody>

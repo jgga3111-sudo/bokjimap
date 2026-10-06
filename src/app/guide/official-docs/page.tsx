@@ -68,10 +68,11 @@ export default function OfficialDocsGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"⚠ 몇 년판인지 꼭 보세요"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">파일 이름의 연도</th>
-                  <th className="px-3 py-2 text-right font-semibold">개수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">파일 이름의 연도</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">개수</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,11 +101,12 @@ export default function OfficialDocsGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"많이 찾는 사업의 지침"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">사업</th>
-                  <th className="px-3 py-2 font-semibold">붙어 있는 안내·지침 파일</th>
-                  <th className="px-3 py-2 font-semibold">연도</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">사업</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">붙어 있는 안내·지침 파일</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">연도</th>
                 </tr>
               </thead>
               <tbody className="align-top">

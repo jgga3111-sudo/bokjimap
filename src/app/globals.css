@@ -52,6 +52,8 @@
   --text-xs--line-height: 1.5;
 
   --color-ink: #191f28;
+  /* 입력칸 테두리(2026-10-06). 옛 line(#e3e7ec)은 흰 바탕 대비 1.24:1이라 칸 경계가 안 보였다. 3.99:1. */
+  --color-field: #76808f;
   --color-brand: #1b64da;
   --color-brand-soft: #e8f3ff;
   /* 첫 화면 「새로 쓴 해설」의 짙은 면(09-19). 흰 상자만 이어지는 가운데를 한 번 끊는다. */
@@ -151,4 +153,15 @@ input[type="search"]::-webkit-search-decoration {
   textarea {
     font-size: 16px;
   }
+}
+
+/* 입력칸 — 테두리를 진하게, 선택하면 링(2026-10-06). 레이어 밖에 둬서 칸마다 적힌 border-line을 이긴다.
+   테두리가 감싸는 상자에 있는 칸(헤더 검색창·자가진단)은 그 상자가 focus-within으로 같은 링을 받는다. */
+:is(input:not([type="checkbox"], [type="radio"], [type="range"], [role="combobox"])[class*="border"], select, textarea) {
+  border-color: var(--color-field);
+}
+:is(input:not([type="checkbox"], [type="radio"], [type="range"], [role="combobox"])[class*="border"], select, textarea):focus-visible {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgb(27 100 218 / 0.22);
+  outline: none;
 }

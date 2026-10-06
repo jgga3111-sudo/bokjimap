@@ -126,13 +126,14 @@ export default function IncomeLineGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"그래서 그게 얼마인가"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">기준선</th>
-                  <th className="px-3 py-2 font-semibold">
+                  <th scope="col" className="px-3 py-2 font-semibold">기준선</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">
                     4인 가구 월 소득인정액
                   </th>
-                  <th className="px-3 py-2 font-semibold">해당 사업</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">해당 사업</th>
                 </tr>
               </thead>
               <tbody>

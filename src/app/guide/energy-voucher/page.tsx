@@ -74,11 +74,12 @@ export default function EnergyVoucherGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"세대원 수로 갈리는 네 단계"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구분</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구분</th>
                   {EV_HOUSEHOLD.map((h) => (
-                    <th key={h} className="px-3 py-2 text-right font-semibold">
+                    <th scope="col" key={h} className="px-3 py-2 text-right font-semibold">
                       {h}
                     </th>
                   ))}
@@ -133,11 +134,12 @@ export default function EnergyVoucherGuide() {
             적습니다. 이 경우의 금액은 아래와 같습니다.
             <div className="mt-3 overflow-x-auto">
               <table className="w-full min-w-[420px] border-collapse text-sm">
+                <caption className="sr-only">{"여름에 안 쓴 돈은 없어지지 않습니다"}</caption>
                 <thead>
                   <tr className="border-y border-amber-200 text-left">
-                    <th className="px-3 py-2 font-semibold">구분</th>
+                    <th scope="col" className="px-3 py-2 font-semibold">구분</th>
                     {EV_HOUSEHOLD.map((h) => (
-                      <th key={h} className="px-3 py-2 text-right font-semibold">
+                      <th scope="col" key={h} className="px-3 py-2 text-right font-semibold">
                         {h}
                       </th>
                     ))}
@@ -165,10 +167,11 @@ export default function EnergyVoucherGuide() {
         <DocSection title="언제 신청하고 언제 쓰나">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"언제 신청하고 언제 쓰나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">무엇</th>
-                  <th className="px-3 py-2 font-semibold">기간</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기간</th>
                 </tr>
               </thead>
               <tbody>

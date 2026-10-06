@@ -84,11 +84,12 @@ export default function ChildcareChoiceGuide() {
         <DocSection title="한 장으로 보면 (2026년)">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면 (2026년)"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">어디서</th>
-                  <th className="px-3 py-2 font-semibold">제도</th>
-                  <th className="px-3 py-2 font-semibold">원문의 2026년 금액</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">어디서</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">제도</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">원문의 2026년 금액</th>
                 </tr>
               </thead>
               <tbody>

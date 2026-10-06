@@ -127,11 +127,12 @@ export default function CdaGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm tabular-nums">
+              <caption className="sr-only">{"18세까지 넣으면 얼마가 되나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>매달 넣는 돈</th>
+                  <th scope="col" className={th}>매달 넣는 돈</th>
                   {CDA_TABLE_YEARS.map((y) => (
-                    <th key={y} className={th}>
+                    <th scope="col" key={y} className={th}>
                       {y}년
                     </th>
                   ))}
@@ -171,12 +172,13 @@ export default function CdaGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"중간에 찾으면 정부가 얹은 돈은 어떻게 되나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>어떻게 찾나</th>
-                  <th className={th}>조건</th>
-                  <th className={th}>내가 넣은 돈</th>
-                  <th className={th}>정부가 얹은 돈</th>
+                  <th scope="col" className={th}>어떻게 찾나</th>
+                  <th scope="col" className={th}>조건</th>
+                  <th scope="col" className={th}>내가 넣은 돈</th>
+                  <th scope="col" className={th}>정부가 얹은 돈</th>
                 </tr>
               </thead>
               <tbody>

@@ -129,10 +129,11 @@ export default function KpassGuide() {
         <DocSection title="① 기본형 환급 비율">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[22rem] border-collapse text-sm">
+              <caption className="sr-only">{"① 기본형 환급 비율"}</caption>
               <thead>
                 <tr className="border-b border-line bg-sunken">
-                  <th className="px-3 py-2 text-left font-bold text-ink">유형</th>
-                  <th className="px-3 py-2 text-right font-bold text-ink">
+                  <th scope="col" className="px-3 py-2 text-left font-bold text-ink">유형</th>
+                  <th scope="col" className="px-3 py-2 text-right font-bold text-ink">
                     환급 비율
                   </th>
                 </tr>
@@ -172,11 +173,12 @@ export default function KpassGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[34rem] border-collapse text-sm">
+              <caption className="sr-only">{"② 지역별 기준금액"}</caption>
               <thead>
                 <tr className="border-b border-line bg-sunken">
-                  <th className="px-3 py-2 text-left font-bold text-ink">지역</th>
+                  <th scope="col" className="px-3 py-2 text-left font-bold text-ink">지역</th>
                   {(["general", "mid", "high"] as const).map((g) => (
-                    <th
+                    <th scope="col"
                       key={g}
                       className="px-3 py-2 text-right font-bold text-ink"
                     >

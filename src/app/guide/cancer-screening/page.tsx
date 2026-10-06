@@ -104,12 +104,13 @@ export default function CancerScreeningGuide() {
         <DocSection title="나이와 주기">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"나이와 주기"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">암</th>
-                  <th className="px-3 py-2 font-semibold">대상</th>
-                  <th className="px-3 py-2 font-semibold">주기</th>
-                  <th className="px-3 py-2 font-semibold">기본 검사</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">암</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">대상</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">주기</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기본 검사</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,11 +174,12 @@ export default function CancerScreeningGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
+              <caption className="sr-only">{"돈이 드는 자리"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">검사</th>
-                  <th className="px-3 py-2 font-semibold">비용 총액</th>
-                  <th className="px-3 py-2 font-semibold">10%면 (저희 계산)</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">검사</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">비용 총액</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">10%면 (저희 계산)</th>
                 </tr>
               </thead>
               <tbody>

@@ -91,10 +91,11 @@ export default function ScienceVoucherGuide() {
         <DocSection title="2026년 일정 — 신청은 6월에 끝났고, 포인트는 10월 12일까지 씁니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[380px] border-collapse text-sm">
+              <caption className="sr-only">{"2026년 일정 — 신청은 6월에 끝났고, 포인트는 10월 12일까지 씁니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">무엇</th>
-                  <th className="px-3 py-2 font-semibold">언제</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">언제</th>
                 </tr>
               </thead>
               <tbody>
@@ -168,10 +169,11 @@ export default function ScienceVoucherGuide() {
         <DocSection title="무엇을 살 수 있나">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"무엇을 살 수 있나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구분</th>
-                  <th className="px-3 py-2 font-semibold">상품</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구분</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">상품</th>
                 </tr>
               </thead>
               <tbody>

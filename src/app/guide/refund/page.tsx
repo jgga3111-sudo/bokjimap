@@ -51,11 +51,12 @@ export default function RefundGuide() {
         <DocSection title="먼저 — 세 가지는 서로 다릅니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"먼저 — 세 가지는 서로 다릅니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">무엇</th>
-                  <th className="px-3 py-2 font-semibold">왜 생기나</th>
-                  <th className="px-3 py-2 font-semibold">잘못한 것인가</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">왜 생기나</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">잘못한 것인가</th>
                 </tr>
               </thead>
               <tbody className="align-top">

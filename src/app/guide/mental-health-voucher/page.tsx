@@ -152,12 +152,13 @@ export default function MentalHealthVoucherGuide() {
         <DocSection title="소득 구간별 본인부담률 (원문)">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"소득 구간별 본인부담률 (원문)"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구간</th>
-                  <th className="px-3 py-2 text-right font-semibold">본인부담률</th>
-                  <th className="px-3 py-2 text-right font-semibold">1급 1회</th>
-                  <th className="px-3 py-2 text-right font-semibold">2급 1회</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구간</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">본인부담률</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">1급 1회</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">2급 1회</th>
                 </tr>
               </thead>
               <tbody>

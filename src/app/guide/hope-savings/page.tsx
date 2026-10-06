@@ -79,11 +79,12 @@ export default function HopeSavingsGuide() {
         <DocSection title="Ⅰ과 Ⅱ는 누가 가입하느냐로 갈립니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"Ⅰ과 Ⅱ는 누가 가입하느냐로 갈립니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>구분</th>
-                  <th className={th}>희망저축계좌Ⅰ</th>
-                  <th className={th}>희망저축계좌Ⅱ</th>
+                  <th scope="col" className={th}>구분</th>
+                  <th scope="col" className={th}>희망저축계좌Ⅰ</th>
+                  <th scope="col" className={th}>희망저축계좌Ⅱ</th>
                 </tr>
               </thead>
               <tbody>
@@ -131,11 +132,12 @@ export default function HopeSavingsGuide() {
         <DocSection title="2026년 모집 일정">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"2026년 모집 일정"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>통장</th>
-                  <th className={th}>차수</th>
-                  <th className={th}>신규 모집</th>
+                  <th scope="col" className={th}>통장</th>
+                  <th scope="col" className={th}>차수</th>
+                  <th scope="col" className={th}>신규 모집</th>
                 </tr>
               </thead>
               <tbody>

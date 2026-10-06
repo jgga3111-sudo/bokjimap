@@ -67,12 +67,13 @@ export default function CalendarGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[26rem] border-collapse text-left text-sm">
+              <caption className="sr-only">{"왜 시기가 중요한가"}</caption>
               <thead>
                 <tr className="border-b border-line text-xs text-muted">
-                  <th className="py-2 pr-3 font-bold">검색어 무리</th>
-                  <th className="py-2 pr-3 font-bold">가장 많은 달</th>
-                  <th className="py-2 pr-3 font-bold">가장 적은 달</th>
-                  <th className="py-2 font-bold">차이</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">검색어 무리</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">가장 많은 달</th>
+                  <th scope="col" className="py-2 pr-3 font-bold">가장 적은 달</th>
+                  <th scope="col" className="py-2 font-bold">차이</th>
                 </tr>
               </thead>
               <tbody className="text-slate-700">

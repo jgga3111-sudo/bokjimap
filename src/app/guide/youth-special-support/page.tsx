@@ -109,10 +109,11 @@ export default function YouthSpecialSupportGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"부모 소득은 이렇게 셉니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>가구원 수</th>
-                  <th className={th}>기준 중위소득 100% (월)</th>
+                  <th scope="col" className={th}>가구원 수</th>
+                  <th scope="col" className={th}>기준 중위소득 100% (월)</th>
                 </tr>
               </thead>
               <tbody>
@@ -139,11 +140,12 @@ export default function YouthSpecialSupportGuide() {
         <DocSection title="무엇을 얼마까지">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"무엇을 얼마까지"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>종류</th>
-                  <th className={th}>상한</th>
-                  <th className={th}>무엇에 쓰나</th>
+                  <th scope="col" className={th}>종류</th>
+                  <th scope="col" className={th}>상한</th>
+                  <th scope="col" className={th}>무엇에 쓰나</th>
                 </tr>
               </thead>
               <tbody>
@@ -218,10 +220,11 @@ export default function YouthSpecialSupportGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"같이 받을 수 없는 것"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>특별지원 항목</th>
-                  <th className={th}>이미 받고 있으면 그 항목은 안 되는 것</th>
+                  <th scope="col" className={th}>특별지원 항목</th>
+                  <th scope="col" className={th}>이미 받고 있으면 그 항목은 안 되는 것</th>
                 </tr>
               </thead>
               <tbody>

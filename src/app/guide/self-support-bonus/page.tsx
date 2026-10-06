@@ -80,11 +80,12 @@ export default function SelfSupportBonusGuide() {
         <DocSection title="두 번에 걸쳐 150만원">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[380px] border-collapse text-sm">
+              <caption className="sr-only">{"두 번에 걸쳐 150만원"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>회차</th>
-                  <th className={th}>얼마나 이어 갔나</th>
-                  <th className={th}>받는 돈</th>
+                  <th scope="col" className={th}>회차</th>
+                  <th scope="col" className={th}>얼마나 이어 갔나</th>
+                  <th scope="col" className={th}>받는 돈</th>
                 </tr>
               </thead>
               <tbody>

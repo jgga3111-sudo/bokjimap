@@ -62,11 +62,12 @@ export default function OnlineShareGuide() {
         <DocSection title="세어 보면 이렇습니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"세어 보면 이렇습니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">갈래</th>
-                  <th className="px-3 py-2 text-right font-semibold">건수</th>
-                  <th className="px-3 py-2 font-semibold">무슨 뜻인가</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">갈래</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">건수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무슨 뜻인가</th>
                 </tr>
               </thead>
               <tbody className="align-top">
@@ -108,10 +109,11 @@ export default function OnlineShareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[360px] border-collapse text-sm">
+              <caption className="sr-only">{"지자체 사업은 접수 방식이 따로 적혀 있습니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">원문의 접수 방식</th>
-                  <th className="px-3 py-2 text-right font-semibold">건수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">원문의 접수 방식</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">건수</th>
                 </tr>
               </thead>
               <tbody>

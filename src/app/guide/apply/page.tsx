@@ -80,11 +80,12 @@ export default function ApplyGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"창구는 세 곳입니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">창구</th>
-                  <th className="px-3 py-2 font-semibold">성격</th>
-                  <th className="px-3 py-2 font-semibold">언제 쓰나</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">창구</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">성격</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">언제 쓰나</th>
                 </tr>
               </thead>
               <tbody>
@@ -115,12 +116,13 @@ export default function ApplyGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
+              <caption className="sr-only">{"원문에 온라인 신청이 적힌 사업은 절반이 안 됩니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구분</th>
-                  <th className="px-3 py-2 font-semibold">수록</th>
-                  <th className="px-3 py-2 font-semibold">온라인 신청</th>
-                  <th className="px-3 py-2 font-semibold">비율</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구분</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">수록</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">온라인 신청</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">비율</th>
                 </tr>
               </thead>
               <tbody>

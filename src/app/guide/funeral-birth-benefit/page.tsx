@@ -61,11 +61,12 @@ export default function FuneralBirthBenefitGuide() {
         <DocSection title="한 장으로 보면">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}></th>
-                  <th className={th}>장제급여 (사망)</th>
-                  <th className={th}>해산급여 (출산)</th>
+                  <th scope="col" className={th}></th>
+                  <th scope="col" className={th}>장제급여 (사망)</th>
+                  <th scope="col" className={th}>해산급여 (출산)</th>
                 </tr>
               </thead>
               <tbody>

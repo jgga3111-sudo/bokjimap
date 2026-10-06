@@ -71,11 +71,12 @@ export default function SchoolSupportGuide() {
         <DocSection title="한 장으로 보면">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">제도</th>
-                  <th className="px-3 py-2 font-semibold">누가</th>
-                  <th className="px-3 py-2 font-semibold">무엇을</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">제도</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">누가</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇을</th>
                 </tr>
               </thead>
               <tbody className="align-top">

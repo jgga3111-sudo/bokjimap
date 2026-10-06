@@ -101,11 +101,12 @@ export default function ChildcareServiceGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"정부지원을 받으려면"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">유형</th>
-                  <th className="px-3 py-2 font-semibold">기준 중위소득</th>
-                  <th className="px-3 py-2 text-right font-semibold">4인 가구 월소득</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">유형</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기준 중위소득</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">4인 가구 월소득</th>
                 </tr>
               </thead>
               <tbody>
@@ -140,13 +141,14 @@ export default function ChildcareServiceGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"30분당 정부지원금 표 (아이 1명)"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">유형</th>
-                  <th className="px-3 py-2 text-right font-semibold">주간 A형</th>
-                  <th className="px-3 py-2 text-right font-semibold">주간 B형</th>
-                  <th className="px-3 py-2 text-right font-semibold">야간·휴일 A형</th>
-                  <th className="px-3 py-2 text-right font-semibold">야간·휴일 B형</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">유형</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">주간 A형</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">주간 B형</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">야간·휴일 A형</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">야간·휴일 B형</th>
                 </tr>
               </thead>
               <tbody>

@@ -81,17 +81,18 @@ export default function PeriodProductVoucherGuide() {
           />
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"누가, 얼마를"}</caption>
               <tbody>
                 <tr className="border-y border-line">
-                  <th className={`${th} bg-sunken text-left`}>한 달 금액</th>
+                  <th scope="row" className={`${th} bg-sunken text-left`}>한 달 금액</th>
                   <td className={`${td} tabular-nums`}>{won(PAD_MONTHLY)}</td>
                 </tr>
                 <tr className="border-b border-line">
-                  <th className={`${th} bg-sunken text-left`}>1년에 한 번 생기는 금액(12개월분)</th>
+                  <th scope="row" className={`${th} bg-sunken text-left`}>1년에 한 번 생기는 금액(12개월분)</th>
                   <td className={`${td} tabular-nums font-semibold text-brand`}>{won(PAD_YEARLY)}</td>
                 </tr>
                 <tr className="border-b border-line">
-                  <th className={`${th} bg-sunken text-left`}>쓸 수 있는 기간</th>
+                  <th scope="row" className={`${th} bg-sunken text-left`}>쓸 수 있는 기간</th>
                   <td className={td}>생긴 다음 날부터 그해 12월 31일까지</td>
                 </tr>
               </tbody>
@@ -196,10 +197,11 @@ export default function PeriodProductVoucherGuide() {
           <p>다시 자격이 생기면 재신청할 수 있는데, 1년치가 새로 생기는 것이 아니라 그해에 안 쓴 만큼만 생깁니다.</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"자격이 바뀌면"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>1월 1일에 12개월분이 생긴 뒤, 2월 20일 자격 중지 전에</th>
-                  <th className={th}>4월 1일에 다시 신청하면</th>
+                  <th scope="col" className={th}>1월 1일에 12개월분이 생긴 뒤, 2월 20일 자격 중지 전에</th>
+                  <th scope="col" className={th}>4월 1일에 다시 신청하면</th>
                 </tr>
               </thead>
               <tbody>

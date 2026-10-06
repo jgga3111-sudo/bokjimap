@@ -100,13 +100,14 @@ export default function PostpartumCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"누가 받나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가구원 수</th>
-                  <th className="px-3 py-2 text-right font-semibold">소득기준</th>
-                  <th className="px-3 py-2 text-right font-semibold">직장가입자</th>
-                  <th className="px-3 py-2 text-right font-semibold">지역가입자</th>
-                  <th className="px-3 py-2 text-right font-semibold">혼합</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">소득기준</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">직장가입자</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">지역가입자</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">혼합</th>
                 </tr>
               </thead>
               <tbody>

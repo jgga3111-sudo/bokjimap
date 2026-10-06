@@ -78,12 +78,13 @@ export default function DiaperFormulaGuide() {
           </DocNote>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"60일이 갈림길입니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">신청한 날</th>
-                  <th className="px-3 py-2 text-right font-semibold">지원 개월수</th>
-                  <th className="px-3 py-2 text-right font-semibold">기저귀만</th>
-                  <th className="px-3 py-2 text-right font-semibold">기저귀+조제분유</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">신청한 날</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">지원 개월수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">기저귀만</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">기저귀+조제분유</th>
                 </tr>
               </thead>
               <tbody className="tabular-nums">
@@ -152,13 +153,14 @@ export default function DiaperFormulaGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"누가 받나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가구원 수</th>
-                  <th className="px-3 py-2 text-right font-semibold">소득 기준</th>
-                  <th className="px-3 py-2 text-right font-semibold">직장</th>
-                  <th className="px-3 py-2 text-right font-semibold">지역</th>
-                  <th className="px-3 py-2 text-right font-semibold">혼합</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">소득 기준</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">직장</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">지역</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">혼합</th>
                 </tr>
               </thead>
               <tbody className="tabular-nums">
@@ -271,10 +273,11 @@ export default function DiaperFormulaGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"중지되면 남은 돈도 못 씁니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">중지 사유</th>
-                  <th className="px-3 py-2 font-semibold">언제부터</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">중지 사유</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">언제부터</th>
                 </tr>
               </thead>
               <tbody>

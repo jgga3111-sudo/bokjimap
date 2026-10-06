@@ -149,12 +149,13 @@ export default function EmergencyGuide() {
             </p>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[18rem] border-collapse text-sm">
+                <caption className="sr-only">{"생계지원은 얼마인가"}</caption>
                 <thead>
                   <tr className="border-b border-line bg-sunken">
-                    <th className="px-3 py-2 text-left font-bold text-ink">
+                    <th scope="col" className="px-3 py-2 text-left font-bold text-ink">
                       가구원 수
                     </th>
-                    <th className="px-3 py-2 text-right font-bold text-ink">
+                    <th scope="col" className="px-3 py-2 text-right font-bold text-ink">
                       월 지원액
                     </th>
                   </tr>

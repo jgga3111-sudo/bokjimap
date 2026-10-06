@@ -89,14 +89,15 @@ export default function CheckPage() {
         </p>
         <div className="mt-3 overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse text-sm">
+            <caption className="sr-only">{`${BASE_YEAR}년 기준 중위소득 표`}</caption>
             <thead>
               <tr className="border-y border-line bg-sunken text-left">
-                <th className="px-3 py-2 font-semibold">가구원 수</th>
-                <th className="px-3 py-2 font-semibold">기준 중위소득</th>
-                <th className="px-3 py-2 font-semibold">생계급여 32%</th>
-                <th className="px-3 py-2 font-semibold">의료급여 40%</th>
-                <th className="px-3 py-2 font-semibold">주거급여 48%</th>
-                <th className="px-3 py-2 font-semibold">교육급여 50%</th>
+                <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                <th scope="col" className="px-3 py-2 font-semibold">기준 중위소득</th>
+                <th scope="col" className="px-3 py-2 font-semibold">생계급여 32%</th>
+                <th scope="col" className="px-3 py-2 font-semibold">의료급여 40%</th>
+                <th scope="col" className="px-3 py-2 font-semibold">주거급여 48%</th>
+                <th scope="col" className="px-3 py-2 font-semibold">교육급여 50%</th>
               </tr>
             </thead>
             <tbody>

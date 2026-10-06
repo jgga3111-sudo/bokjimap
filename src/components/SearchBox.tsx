@@ -110,7 +110,7 @@ export default function SearchBox({
   return (
     <div ref={boxRef} className="relative">
       <div
-        className={`flex items-center gap-2 rounded-xl border border-line bg-white px-3 transition focus-within:border-brand ${
+        className={`flex items-center gap-2 rounded-xl border border-field bg-white px-3 transition focus-within:border-brand focus-within:shadow-[0_0_0_3px_rgb(27_100_218/0.22)] ${
           big ? "h-13 py-3" : "h-10"
         }`}
       >

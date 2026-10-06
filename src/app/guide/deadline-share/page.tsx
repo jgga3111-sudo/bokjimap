@@ -74,11 +74,12 @@ export default function DeadlineShareGuide() {
         <DocSection title="끝나는 날이 적힌 사업은 몇 건인가">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"끝나는 날이 적힌 사업은 몇 건인가"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">원문의 사업 기간 끝날 칸</th>
-                  <th className="px-3 py-2 text-right font-semibold">건수</th>
-                  <th className="px-3 py-2 font-semibold">화면에서 어떻게 보이나</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">원문의 사업 기간 끝날 칸</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">건수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">화면에서 어떻게 보이나</th>
                 </tr>
               </thead>
               <tbody className="align-top">
@@ -167,10 +168,11 @@ export default function DeadlineShareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"대신 알아 둘 것 — 돈이 나오는 주기"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">주기</th>
-                  <th className="px-3 py-2 text-right font-semibold">건수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">주기</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">건수</th>
                 </tr>
               </thead>
               <tbody>

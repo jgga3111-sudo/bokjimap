@@ -58,11 +58,12 @@ function CopayTable({ rows }: { rows: readonly Row[] }) {
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[440px] border-collapse text-sm">
+        <caption className="sr-only">병원 종류별 본인부담금</caption>
         <thead>
           <tr className="border-y border-line bg-sunken text-left">
-            <th className="px-3 py-2 font-semibold">어디서</th>
-            <th className="px-3 py-2 font-semibold">외래</th>
-            <th className="px-3 py-2 font-semibold">입원</th>
+            <th scope="col" className="px-3 py-2 font-semibold">어디서</th>
+            <th scope="col" className="px-3 py-2 font-semibold">외래</th>
+            <th scope="col" className="px-3 py-2 font-semibold">입원</th>
           </tr>
         </thead>
         <tbody>
@@ -142,10 +143,11 @@ export default function MedicalAidGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[360px] border-collapse text-sm">
+              <caption className="sr-only">{"1종과 2종은 어떻게 갈리나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가구원 수</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 소득인정액 선 (40%)</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 소득인정액 선 (40%)</th>
                 </tr>
               </thead>
               <tbody>
@@ -200,11 +202,12 @@ export default function MedicalAidGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"한 달에 많이 나오면 — 돌려받는 상한"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구분</th>
-                  <th className="px-3 py-2 font-semibold">한 달 본인부담금</th>
-                  <th className="px-3 py-2 font-semibold">돌려받는 몫</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구분</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">한 달 본인부담금</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">돌려받는 몫</th>
                 </tr>
               </thead>
               <tbody>
@@ -229,11 +232,12 @@ export default function MedicalAidGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"한 달에 많이 나오면 — 돌려받는 상한"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">예시</th>
-                  <th className="px-3 py-2 text-right font-semibold">돌려받는 돈</th>
-                  <th className="px-3 py-2 text-right font-semibold">결국 내는 돈</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">예시</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">돌려받는 돈</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">결국 내는 돈</th>
                 </tr>
               </thead>
               <tbody>

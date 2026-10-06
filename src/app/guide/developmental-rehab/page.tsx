@@ -117,12 +117,13 @@ export default function DevelopmentalRehabGuide() {
         <DocSection title="얼마를 받고 얼마를 내나">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"얼마를 받고 얼마를 내나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">등급</th>
-                  <th className="px-3 py-2 font-semibold">소득 구분</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 바우처</th>
-                  <th className="px-3 py-2 text-right font-semibold">본인부담</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">등급</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">소득 구분</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 바우처</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">본인부담</th>
                 </tr>
               </thead>
               <tbody>
@@ -158,11 +159,12 @@ export default function DevelopmentalRehabGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"소득은 무엇으로 재나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">기준 중위소득</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기준 중위소득</th>
                   {["1인", "2인", "3인", "4인", "5인"].map((h) => (
-                    <th key={h} className="px-3 py-2 text-right font-semibold">
+                    <th scope="col" key={h} className="px-3 py-2 text-right font-semibold">
                       {h}
                     </th>
                   ))}

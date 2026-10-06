@@ -121,6 +121,7 @@ export default function AboutPage() {
       <DocSection title="지금 수록된 것">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-sm">
+            <caption className="sr-only">{"지금 수록된 것"}</caption>
             <tbody>
               {[
                 ["수록 서비스", `${services.length.toLocaleString()}건`],

@@ -119,11 +119,12 @@ export default function SeniorCareGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"돌봄군과 한 달 이용시간"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>돌봄군</th>
-                  <th className={th}>누구</th>
-                  <th className={th}>한 달 제공</th>
+                  <th scope="col" className={th}>돌봄군</th>
+                  <th scope="col" className={th}>누구</th>
+                  <th scope="col" className={th}>한 달 제공</th>
                 </tr>
               </thead>
               <tbody>

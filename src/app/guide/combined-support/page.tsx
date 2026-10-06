@@ -111,11 +111,12 @@ export default function CombinedSupportGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"막는 방식이 세 가지입니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">방식</th>
-                  <th className="px-3 py-2 font-semibold">무슨 일이 일어나나</th>
-                  <th className="px-3 py-2 font-semibold">이 글의 예</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">방식</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무슨 일이 일어나나</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">이 글의 예</th>
                 </tr>
               </thead>
               <tbody className="align-top">
@@ -323,11 +324,12 @@ export default function CombinedSupportGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"생계급여를 받는 집이라면 — 어느 돈이 생계급여를 깎나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">갈래</th>
-                  <th className="px-3 py-2 font-semibold">해당하는 돈</th>
-                  <th className="px-3 py-2 font-semibold">생계급여에 미치는 영향</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">갈래</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">해당하는 돈</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">생계급여에 미치는 영향</th>
                 </tr>
               </thead>
               <tbody className="align-top">

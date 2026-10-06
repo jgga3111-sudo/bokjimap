@@ -111,10 +111,11 @@ export default function YouthSavingsGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[26rem] border-collapse text-sm">
+              <caption className="sr-only">{"7,500만원과 6,000만원은 서로 다른 선입니다"}</caption>
               <thead>
                 <tr className="border-b border-line bg-sunken">
-                  <th className="px-3 py-2 text-left font-bold text-ink">출처</th>
-                  <th className="px-3 py-2 text-left font-bold text-ink">
+                  <th scope="col" className="px-3 py-2 text-left font-bold text-ink">출처</th>
+                  <th scope="col" className="px-3 py-2 text-left font-bold text-ink">
                     일반형 소득기준
                   </th>
                 </tr>

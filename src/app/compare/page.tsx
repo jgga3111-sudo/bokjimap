@@ -202,11 +202,12 @@ export default async function ComparePage({
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[560px] border-collapse">
+          <caption className="sr-only">고른 두 지원을 항목별로 나란히 놓은 표</caption>
           <thead>
             <tr className="border-y border-line bg-sunken text-left">
-              <th className="w-28 px-3 py-2 text-xs font-semibold text-muted">항목</th>
-              <th className="px-3 py-2 text-sm">{head(a)}</th>
-              <th className="px-3 py-2 text-sm">{head(b)}</th>
+              <th scope="col" className="w-28 px-3 py-2 text-xs font-semibold text-muted">항목</th>
+              <th scope="col" className="px-3 py-2 text-sm">{head(a)}</th>
+              <th scope="col" className="px-3 py-2 text-sm">{head(b)}</th>
             </tr>
           </thead>
           <tbody>

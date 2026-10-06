@@ -84,11 +84,12 @@ export default function SingleParentSupportGuide() {
         <DocSection title="한 장으로 보면">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">급여</th>
-                  <th className="px-3 py-2 font-semibold">누구에게</th>
-                  <th className="px-3 py-2 text-right font-semibold">금액</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">급여</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">누구에게</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">금액</th>
                 </tr>
               </thead>
               <tbody className="align-top">
@@ -137,11 +138,12 @@ export default function SingleParentSupportGuide() {
         <DocSection title="우리 집이면 한 달에 얼마인가 (예시)">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] border-collapse text-sm">
+              <caption className="sr-only">{"우리 집이면 한 달에 얼마인가 (예시)"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가족</th>
-                  <th className="px-3 py-2 font-semibold">더한 것</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 합계</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">가족</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">더한 것</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 합계</th>
                 </tr>
               </thead>
               <tbody>
@@ -229,12 +231,13 @@ export default function SingleParentSupportGuide() {
         <DocSection title="소득 기준 — 소득인정액으로 봅니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"소득 기준 — 소득인정액으로 봅니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">가구원 수</th>
-                  <th className="px-3 py-2 text-right font-semibold">기준 중위소득</th>
-                  <th className="px-3 py-2 text-right font-semibold">65%(복지급여)</th>
-                  <th className="px-3 py-2 text-right font-semibold">72%(청소년 한부모 증명서)</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">가구원 수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">기준 중위소득</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">65%(복지급여)</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">72%(청소년 한부모 증명서)</th>
                 </tr>
               </thead>
               <tbody>

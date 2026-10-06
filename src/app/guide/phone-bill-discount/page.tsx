@@ -60,11 +60,12 @@ export default function PhoneBillDiscountGuide() {
         <DocSection title="한 장으로 보면">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"한 장으로 보면"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">유형</th>
-                  <th className="px-3 py-2 font-semibold">깎는 방식(요약)</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 최대</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">유형</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">깎는 방식(요약)</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 최대</th>
                 </tr>
               </thead>
               <tbody>

@@ -150,12 +150,13 @@ export default function DisabilityActivitySupportGuide() {
         <DocSection title="구간별 월 한도액 (2026)">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
+              <caption className="sr-only">{"구간별 월 한도액 (2026)"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구간</th>
-                  <th className="px-3 py-2 font-semibold">종합점수</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 한도액</th>
-                  <th className="px-3 py-2 text-right font-semibold">중위 70% 이하 부담</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구간</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">종합점수</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 한도액</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">중위 70% 이하 부담</th>
                 </tr>
               </thead>
               <tbody>
@@ -191,11 +192,12 @@ export default function DisabilityActivitySupportGuide() {
         <DocSection title="한도액에 더해지는 특별지원급여">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[440px] border-collapse text-sm">
+              <caption className="sr-only">{"한도액에 더해지는 특별지원급여"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">사유</th>
-                  <th className="px-3 py-2 font-semibold">기간</th>
-                  <th className="px-3 py-2 text-right font-semibold">월 금액</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">사유</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기간</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">월 금액</th>
                 </tr>
               </thead>
               <tbody>

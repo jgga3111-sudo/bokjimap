@@ -60,6 +60,7 @@ export default function StandardsPage() {
         </p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[420px] border-collapse text-sm">
+            <caption className="sr-only">{"어디서 가져오나"}</caption>
             <tbody>
               {[
                 ["수록 서비스", `${total}건`],

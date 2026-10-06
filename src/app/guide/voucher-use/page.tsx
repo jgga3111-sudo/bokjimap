@@ -98,10 +98,11 @@ export default function VoucherUseGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[460px] border-collapse text-sm">
+              <caption className="sr-only">{"얼마 남았는지 — 본인인증이 없어도 확인됩니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">무엇을</th>
-                  <th className="px-3 py-2 font-semibold">어디로</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇을</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">어디로</th>
                 </tr>
               </thead>
               <tbody className="align-top">
@@ -156,10 +157,11 @@ export default function VoucherUseGuide() {
         <DocSection title="잃어버렸을 때 — 기한이 둘로 나뉩니다">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[420px] border-collapse text-sm">
+              <caption className="sr-only">{"잃어버렸을 때 — 기한이 둘로 나뉩니다"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">무엇</th>
-                  <th className="px-3 py-2 font-semibold">기한(2026년)</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">무엇</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">기한(2026년)</th>
                 </tr>
               </thead>
               <tbody>

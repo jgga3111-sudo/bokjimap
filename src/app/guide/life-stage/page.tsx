@@ -54,11 +54,12 @@ export default function LifeStageGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[30rem] border-collapse text-sm">
+              <caption className="sr-only">{`${LIFE_STAGES.length}단계에 각각 몇 건이 걸려 있나`}</caption>
               <thead>
                 <tr className="border-b border-line text-left text-muted">
-                  <th className="py-2 pr-3 font-medium">단계</th>
-                  <th className="py-2 pr-3 font-medium">건수</th>
-                  <th className="py-2 font-medium">가장 많이 찾는 사업</th>
+                  <th scope="col" className="py-2 pr-3 font-medium">단계</th>
+                  <th scope="col" className="py-2 pr-3 font-medium">건수</th>
+                  <th scope="col" className="py-2 font-medium">가장 많이 찾는 사업</th>
                 </tr>
               </thead>
               <tbody>

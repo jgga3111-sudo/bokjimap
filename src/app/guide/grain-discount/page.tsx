@@ -79,11 +79,12 @@ export default function GrainDiscountGuide() {
         <DocSection title="법이 정한 대상 다섯 갈래">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"법이 정한 대상 다섯 갈래"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>제9조의5제1항</th>
-                  <th className={th}>대상</th>
-                  <th className={th}>복지로 원문</th>
+                  <th scope="col" className={th}>제9조의5제1항</th>
+                  <th scope="col" className={th}>대상</th>
+                  <th scope="col" className={th}>복지로 원문</th>
                 </tr>
               </thead>
               <tbody>
@@ -129,10 +130,11 @@ export default function GrainDiscountGuide() {
         <DocSection title="얼마를 내나 — 원문 값, 그리고 정해지는 곳">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[480px] border-collapse text-sm">
+              <caption className="sr-only">{"얼마를 내나 — 원문 값, 그리고 정해지는 곳"}</caption>
               <thead>
                 <tr className={head}>
-                  <th className={th}>구분</th>
-                  <th className={th}>10kg 1포당 개인부담</th>
+                  <th scope="col" className={th}>구분</th>
+                  <th scope="col" className={th}>10kg 1포당 개인부담</th>
                 </tr>
               </thead>
               <tbody>

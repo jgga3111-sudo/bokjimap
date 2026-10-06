@@ -85,11 +85,12 @@ export default function LowIncomeCopayGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"병원에서 얼마를 내나"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">구분</th>
-                  <th className="px-3 py-2 font-semibold">일반 건강보험 가입자</th>
-                  <th className="px-3 py-2 font-semibold">차상위 본인부담경감 대상자</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">구분</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">일반 건강보험 가입자</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">차상위 본인부담경감 대상자</th>
                 </tr>
               </thead>
               <tbody>
@@ -211,9 +212,9 @@ export default function LowIncomeCopayGuide() {
               </caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-right">
-                  <th className="px-3 py-2 text-left font-semibold">가구 규모</th>
+                  <th scope="col" className="px-3 py-2 text-left font-semibold">가구 규모</th>
                   {LIMIT_50.map(([n]) => (
-                    <th key={n} className="px-3 py-2 font-semibold">
+                    <th scope="col" key={n} className="px-3 py-2 font-semibold">
                       {n}인
                     </th>
                   ))}
@@ -252,11 +253,11 @@ export default function LowIncomeCopayGuide() {
               </caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-right">
-                  <th className="px-3 py-2 text-left font-semibold">부양할 대상자 수</th>
-                  <th className="px-3 py-2 font-semibold">의무자 1인 세대</th>
-                  <th className="px-3 py-2 font-semibold">2인</th>
-                  <th className="px-3 py-2 font-semibold">3인</th>
-                  <th className="px-3 py-2 font-semibold">4인</th>
+                  <th scope="col" className="px-3 py-2 text-left font-semibold">부양할 대상자 수</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">의무자 1인 세대</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">2인</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">3인</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">4인</th>
                 </tr>
               </thead>
               <tbody>
@@ -363,11 +364,12 @@ export default function LowIncomeCopayGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[560px] border-collapse text-sm">
+              <caption className="sr-only">{"자격은 언제 끝나나 — 이 글에서 가장 놓치기 쉬운 부분"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className="px-3 py-2 font-semibold">갈래</th>
-                  <th className="px-3 py-2 font-semibold">차상위 해제일</th>
-                  <th className="px-3 py-2 font-semibold">계속 받으려면</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">갈래</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">차상위 해제일</th>
+                  <th scope="col" className="px-3 py-2 font-semibold">계속 받으려면</th>
                 </tr>
               </thead>
               <tbody>

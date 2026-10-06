@@ -191,10 +191,11 @@ export default function SelfRelianceAllowanceGuide() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-sm">
+              <caption className="sr-only">{"함께 알아 둘 것 — 자립정착금과 기초생활보장"}</caption>
               <thead>
                 <tr className="border-y border-line bg-sunken text-left">
-                  <th className={th}>시·도</th>
-                  <th className={th}>1인당 지급 기준</th>
+                  <th scope="col" className={th}>시·도</th>
+                  <th scope="col" className={th}>1인당 지급 기준</th>
                 </tr>
               </thead>
               <tbody>
