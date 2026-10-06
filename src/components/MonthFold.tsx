@@ -23,6 +23,22 @@ export default function MonthFold({
     const now = new Date().getMonth() + 1;
     const next = (now % 12) + 1;
     if (m === now || m === next || window.location.hash === `#m${m}`) ref.current!.open = true;
+    /* 인쇄할 때는 전부 편다 — 접힌 달은 종이에 안 찍힌다(ClampText가 인쇄 때 펴지는 것과 같은 이유).
+       인쇄가 끝나면 원래대로 되돌린다. */
+    let wasOpen = false;
+    const before = () => {
+      wasOpen = ref.current!.open;
+      ref.current!.open = true;
+    };
+    const after = () => {
+      ref.current!.open = wasOpen;
+    };
+    window.addEventListener("beforeprint", before);
+    window.addEventListener("afterprint", after);
+    return () => {
+      window.removeEventListener("beforeprint", before);
+      window.removeEventListener("afterprint", after);
+    };
   }, [m]);
 
   return (
