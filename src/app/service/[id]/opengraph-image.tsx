@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { notFound } from "next/navigation";
 import { services } from "@/data/services";
 import { isIndexable } from "@/lib/indexable";
 import { placeLabel, views } from "@/lib/display";
@@ -25,6 +26,8 @@ export default async function Image({
 }) {
   const { id } = await params;
   const s = byId.get(id);
+  /* 상세가 없는 id는 그리지 않는다 — 없는 주소마다 함수가 PNG를 새로 구웠다(10-06 점검). */
+  if (!s || !isIndexable(s)) notFound();
 
   return new ImageResponse(
     (

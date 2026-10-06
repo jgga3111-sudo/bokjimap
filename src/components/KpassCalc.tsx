@@ -39,6 +39,7 @@ const toWon = (manwon: string): number | null => {
   /* 쉼표·빈칸·「만원」을 걷는다 — TaxCreditCalc의 `num`과 같은 이유. */
   const t = manwon.replace(/[,\s]/g, "").replace(/만원?$/, "");
   if (t === "") return null;
+  if (!/^\d+(\.\d+)?$/.test(t)) return null;
   const v = Number(t);
   if (!Number.isFinite(v) || v < 0) return null;
   /* 세 자리(=1,000만원)를 넘는 교통비는 오타로 본다. 자가진단에서 아홉
