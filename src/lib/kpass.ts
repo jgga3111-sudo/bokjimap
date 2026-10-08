@@ -43,7 +43,7 @@ export const KPASS_CHECKED = "2026-09-08";
 export const KPASS_HALF_URL = "https://www.korea.kr/news/policyNewsView.do?newsId=148962910";
 /** 10-04 확인 — K-패스 누리집(korea-pass.kr) 공지: 2026-10-01부터 정액제 기준금액 인하가 끝나 평상시 표로 돌아왔고(일반형 3~6.2만원·플러스형 6.5~10만원),
     시차 출퇴근 시간대 환급 혜택은 2026-12-31까지 기존과 같게 유지된다. 국토교통부 보도자료(2026-09-28)도 같은 내용 — 제목·날짜만 직접 확인. */
-export const KPASS_NOTICE_CHECKED = "2026-10-04";
+export const KPASS_NOTICE_CHECKED = "2026-10-09";
 export const KPASS_NOTICE_URL = "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156783288";
 export const KPASS_SITE_URL = "https://korea-pass.kr";
 

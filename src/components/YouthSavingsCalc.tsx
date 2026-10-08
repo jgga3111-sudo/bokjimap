@@ -24,7 +24,11 @@ export default function YouthSavingsCalc() {
 
   const monthly = useMemo(() => {
     /* 쉼표·빈칸·「만원」을 걷는다 — TaxCreditCalc의 `num`과 같은 이유. */
-    const t = manwonRaw.replace(/[,\s]/g, "").replace(/만원?$/, "");
+    const r = manwonRaw.replace(/\s/g, "").replace(/만원?$/, "");
+    /* 쉼표는 천 단위 자리일 때만 걷고, 숫자 꼴이 아니면(1e1·0x10) 읽지 않는다 — KPassCalc와 같게(10-09). */
+    if (r.includes(",") && !/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(r)) return null;
+    const t = r.replace(/,/g, "");
+    if (t !== "" && !/^\d+(\.\d+)?$/.test(t)) return null;
     if (t === "") return null;
     const v = Number(t);
     if (!Number.isFinite(v) || v <= 0) return null;

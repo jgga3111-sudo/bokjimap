@@ -26,7 +26,11 @@ import { won } from "@/lib/display";
 const num = (raw: string, max: number): number | null => {
   /* 쉼표·빈칸·「만원」을 먼저 걷는다. "1,500"을 NaN으로 읽어 값을 넣었는데
      "넣으면 계산됩니다"가 떴다(2026-09-10). IncomeCheck만 쉼표를 걷고 있었다. */
-  const t = raw.replace(/[,\s]/g, "").replace(/만원?$/, "");
+  const r = raw.replace(/\s/g, "").replace(/만원?$/, "");
+  /* 쉼표는 천 단위 자리일 때만 걷고, 숫자 꼴이 아니면(1e1·0x10) 읽지 않는다 — KPassCalc와 같게(10-09). */
+  if (r.includes(",") && !/^\d{1,3}(,\d{3})+(\.\d+)?$/.test(r)) return null;
+  const t = r.replace(/,/g, "");
+  if (t !== "" && !/^\d+(\.\d+)?$/.test(t)) return null;
   if (t === "") return null;
   const v = Number(t);
   if (!Number.isFinite(v) || v < 0 || v > max) return null;

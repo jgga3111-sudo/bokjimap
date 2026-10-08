@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { GUIDES, GUIDE_GROUPS } from "@/lib/guides";
 import { services } from "@/data/services";
-import AdSenseScript from "@/components/AdSenseScript";
 import GuideBrowser from "@/components/GuideBrowser";
 import { SITE } from "@/lib/site";
 
@@ -38,7 +37,7 @@ const GROUPED = GUIDE_GROUPS.map((grp) => ({
 export default function GuideIndex() {
   return (
     <div className="space-y-8">
-      <AdSenseScript />
+      {/* 글 목록은 길잡이 화면이라 광고 코드를 싣지 않는다(10-09 — 글자의 93%가 링크). */}
       <header className="band space-y-2">
         <h1 className="text-2xl font-extrabold sm:text-3xl">복지 신청 안내</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">

@@ -89,7 +89,12 @@ export default function GuideBrowser({ groups }: { groups: GuideGroupView[] }) {
   // 주소의 #갈래를 따른다(첫 화면에서 넘어온 경우, 뒤로 가기).
   useEffect(() => {
     const read = () => {
-      const k = decodeURIComponent(window.location.hash.slice(1));
+      let k = "";
+      try {
+        k = decodeURIComponent(window.location.hash.slice(1));
+      } catch {
+        // 깨진 %(「#100%」)는 모르는 해시로 본다 — 던지면 목록이 오류 화면이 된다.
+      }
       setActive(groups.some((g) => g.key === k) ? k : "all");
     };
     read();
@@ -201,7 +206,7 @@ export default function GuideBrowser({ groups }: { groups: GuideGroupView[] }) {
                     }`}
                   >
                     {t.short}
-                    <span className={`text-xs tabular-nums ${on ? "text-white/80" : "text-slate-500"}`}>
+                    <span className={`text-xs tabular-nums ${on ? "text-white" : "text-slate-500"}`}>
                       {t.count}
                     </span>
                   </button>

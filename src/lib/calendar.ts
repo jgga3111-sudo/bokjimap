@@ -178,7 +178,7 @@ export const CALENDAR: readonly CalendarEntry[] = [
     what: "반기 상반기분 지급",
     months: [12],
     period: "2026년 12월 17일 지급 예정 (지급 기한 12월 30일)",
-    note: "연간 산정액의 35%가 먼저 나옵니다. 나머지는 다음 해 6월 말까지 정산해 나옵니다.",
+    note: "연간 산정액의 35%가 먼저 나옵니다. 나머지는 다음 해 6월 말까지 정산해 나옵니다. 지급액이 15만원 미만이거나 환수가 예상되면 12월에는 나오지 않고 다음 해 6월에 정해집니다.",
     source: "국세청 보도자료(정책브리핑)",
     sourceUrl: "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776384",
     checkedAt: "2026-09-19",

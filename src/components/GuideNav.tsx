@@ -142,7 +142,8 @@ export default function GuideNav({ current }: { current: string }) {
           </ul>
         </aside>
       )}
-      <AdSenseScript />
+      {/* 사업 카드 목록이 본문 대부분인 글(온라인 신청 목록, 글자의 88%가 링크)은 길잡이 화면으로 보고 뺀다(10-09). */}
+      {current !== "online" && <AdSenseScript />}
       {article && (
         <script
           type="application/ld+json"
