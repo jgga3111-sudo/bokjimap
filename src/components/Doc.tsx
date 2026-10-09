@@ -118,7 +118,7 @@ export function DocSection({
         )}
         {title}
       </h2>
-      <div className="mt-3 space-y-3 text-base leading-relaxed sm:text-[15px] text-slate-700">
+      <div className="mt-3 space-y-3 text-base leading-relaxed text-slate-700">
         {children}
       </div>
     </section>

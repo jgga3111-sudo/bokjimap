@@ -102,7 +102,7 @@ export default function HubIntro({
     <section className="card space-y-3 px-5 py-5 text-sm leading-relaxed text-slate-700 sm:px-7 sm:py-6">
       <h2 className="text-lg font-extrabold text-ink">이 목록은 이렇게 모았습니다</h2>
 
-      <p>
+      <p className="max-w-[44rem]">
         {lead ?? (
           <>
             복지로 원문의 <strong>{fieldLabel}</strong> 칸 값이 &ldquo;{axisLabel}
@@ -139,7 +139,7 @@ export default function HubIntro({
         )}
       </p>
 
-      <p>
+      <p className="max-w-[44rem]">
         {formText && <>{formText} </>}
         {incomeLine && (
           <>
@@ -154,10 +154,10 @@ export default function HubIntro({
         으로 내 소득이 기준선 어디쯤인지 먼저 계산해 볼 수 있습니다.
       </p>
 
-      <p>{note.body}</p>
+      <p className="max-w-[44rem]">{note.body}</p>
 
       {guides.length > 0 && (
-        <p className="text-sm">
+        <p className="max-w-[44rem] text-sm">
           <span className="font-semibold text-ink">함께 보면 좋은 글</span>{" "}
           {guides.map((g, i) => (
             <span key={g.slug}>

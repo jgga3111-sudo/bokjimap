@@ -145,7 +145,7 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
               </span>
             </h2>
             {localHits.length > 0 ? (
-              <ServiceList services={shownLocal} />
+              <List items={shownLocal} />
             ) : (
               <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-muted">
                 고른 조건에 맞는 {sido.name} 사업은 수록분에 없습니다. 아래 전국
@@ -165,12 +165,12 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
               <p className="mb-3 text-xs text-muted">
                 중앙부처 사업이라 사는 곳과 상관없이 같습니다. 조회수 순입니다.
               </p>
-              <ServiceList services={shownRest} />
+              <List items={shownRest} />
             </section>
           )}
         </>
       ) : (
-        <ServiceList services={shownRest} />
+        <List items={shownRest} />
       )}
 
       {/* 색인되는 축 페이지로 내보낸다. 이 화면 자체는 noindex라, 좋은 결과를
@@ -198,5 +198,27 @@ export default async function FindPage({ searchParams }: PageProps<"/find">) {
         </nav>
       )}
     </div>
+  );
+}
+
+/* 처음엔 FIRST건만 펴고 나머지는 「더 보기」 안에 둔다(10-09). 휴대폰에서 이 화면이 26,000px까지
+   길어졌다. 이 화면은 noindex라 글자를 HTML에 다 두는 규칙의 대상이 아니지만, 서버에서 그리는
+   <details>라 자바스크립트는 늘지 않는다. */
+const FIRST = 30;
+function List({ items }: { items: Parameters<typeof ServiceList>[0]["services"] }) {
+  if (items.length <= FIRST) return <ServiceList services={items} />;
+  return (
+    <>
+      <ServiceList services={items.slice(0, FIRST)} />
+      <details className="group mt-3">
+        <summary className="flex min-h-11 cursor-pointer items-center justify-center rounded-xl border border-line bg-white px-4 text-sm font-bold text-brand hover:bg-sunken/70">
+          <span className="group-open:hidden">나머지 {items.length - FIRST}건 더 보기</span>
+          <span className="hidden group-open:inline">접기</span>
+        </summary>
+        <div className="mt-3">
+          <ServiceList services={items.slice(FIRST)} />
+        </div>
+      </details>
+    </>
   );
 }

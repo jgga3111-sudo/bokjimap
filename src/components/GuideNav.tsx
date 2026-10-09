@@ -24,6 +24,22 @@ import ShareButton from "@/components/ShareButton";
  */
 const SHOWN = 3;
 
+/* 광고 코드를 싣지 않는 글 — 본문이 1,500자 미만이거나(집계 표·계산기 위주) 글자의 대부분이 링크인 글.
+   애드센스는 「게시자 콘텐츠가 부족한 화면」을 보므로, 심사 결과가 나오기 전에는 이 글들에서 뺀다(2026-10-09).
+   색인·사이트맵에는 영향이 없다. 글이 두꺼워지면 여기서 뺀다. */
+const NO_AD_GUIDES = new Set([
+  "online",
+  "online-share",
+  "deadline-share",
+  "region",
+  "income-line",
+  "mistakes",
+  "documents",
+  "life-stage",
+  "tax-credit-amount",
+  "source-conflicts",
+]);
+
 export default function GuideNav({ current }: { current: string }) {
   const i = GUIDES.findIndex((g) => g.slug === current);
   const rotated = i < 0 ? GUIDES : [...GUIDES.slice(i + 1), ...GUIDES.slice(0, i)];
@@ -143,7 +159,7 @@ export default function GuideNav({ current }: { current: string }) {
         </aside>
       )}
       {/* 사업 카드 목록이 본문 대부분인 글(온라인 신청 목록, 글자의 88%가 링크)은 길잡이 화면으로 보고 뺀다(10-09). */}
-      {current !== "online" && <AdSenseScript />}
+      {!NO_AD_GUIDES.has(current) && <AdSenseScript />}
       {article && (
         <script
           type="application/ld+json"

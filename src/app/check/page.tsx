@@ -6,7 +6,6 @@ import IncomeCheck, {
 import { BASE_YEAR, medianIncome, thresholdOf, CUTOFFS } from "@/lib/midIncome";
 import { won } from "@/lib/display";
 import { services } from "@/data/services";
-import AdSenseScript from "@/components/AdSenseScript";
 
 export const metadata: Metadata = {
   title: `${BASE_YEAR}년 기준 중위소득 계산기 — 내 소득은 기준선의 몇 %인가`,
@@ -34,7 +33,6 @@ for (const c of CUTOFFS) {
 export default function CheckPage() {
   return (
     <div className="space-y-8">
-      <AdSenseScript />
       <header>
         <h1 className="text-2xl font-bold sm:text-3xl">
           내 소득은 기준선 어디쯤?{" "}

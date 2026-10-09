@@ -182,7 +182,7 @@ export default function SearchBox({
         가게 할 이유가 없다.
       */}
       {open && query.trim().length === 0 && popular.length > 0 && (
-        <div className="absolute top-full right-0 left-0 z-40 mt-1 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain rounded-xl border border-line bg-white shadow-lg">
+        <div className="fixed inset-x-3 top-[3.75rem] z-40 max-h-[calc(100dvh-5rem)] sm:absolute sm:inset-x-auto sm:top-full sm:right-0 sm:left-0 sm:mt-1 overflow-y-auto overscroll-contain rounded-xl border border-line bg-white shadow-lg">
           <p className="px-4 pt-3 text-xs font-bold text-muted">많이 찾는 것</p>
           <ul className="flex flex-wrap gap-1.5 px-4 pt-2 pb-3">
             {popular.map((p) => (
@@ -205,7 +205,7 @@ export default function SearchBox({
       )}
 
       {open && query.trim().length > 0 && (
-        <div className="absolute top-full right-0 left-0 z-40 mt-1 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain rounded-xl border border-line bg-white shadow-lg">
+        <div className="fixed inset-x-3 top-[3.75rem] z-40 max-h-[calc(100dvh-5rem)] sm:absolute sm:inset-x-auto sm:top-full sm:right-0 sm:left-0 sm:mt-1 overflow-y-auto overscroll-contain rounded-xl border border-line bg-white shadow-lg">
           {hits.length === 0 ? (
             /*
               여기는 **막다른 골목이면 안 된다.**
