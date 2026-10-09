@@ -3034,6 +3034,12 @@ Pro는 **팀 단위 과금($20/월)**이라 같은 팀에 있는 러닝온·복�
       · ⚠ **에이전트 여럿이 같은 PC에서 라이브를 동시에 긁으면 Vercel이 그 IP에 보안 확인(403 `X-Vercel-Mitigated: challenge`)을 건다**(8개 병렬 407쪽·8초 25건에서 걸림, 약 10분). 사이트 장애가 아니다. 라이브 전수 확인은 **한 세션이 한 줄로** 돌리고, 에이전트에게는 병렬 수를 낮게 준다. 진짜 구글 크롤러가 걸리는지는 Vercel Firewall 로그에서만 볼 수 있다(사용자 확인 몫).
       · 색인 요청은 안 했다 — 내용이 바뀐 `/guide/disability-activity-support`·`tax-credit`·`k-pass`·`youth-tomorrow-savings`·`calendar`는 다음 루틴 몫.
 
+- [x] **10-09 후속 — 방화벽 로그 확인 · 짧은 글 광고 코드 제외 · 화면 손질 (`47fc419`, 배포·라이브 407쪽 전부 200).** 사용자 「1-3번 진행해줘」.
+      · **Vercel Firewall 로그(Past Day)** — 보안 확인(Challenge) 1.3k는 **한 IP(14.34.98.116, 이 PC)** 하나뿐이다(시스템 규칙 DDoS Mitigation, 07:58~08:13). **구글·애드센스·빙 크롤러가 확인 화면에 걸린 기록은 없다.** 거부(Denied) 253은 구글 **클라우드**(AS396982, 벨기에 34.140.234.80) 한 곳이 10-08 오후 한 번에 보낸 243건 — Googlebot(AS15169)이 아니다. 사용자 규칙 「AI 수집 차단」 8건·「auth rate limit」 2건. 로그는 Firewall → Traffic에서 IP 옆 「⋯ → Add to Query」로 시간·ASN별로 쪼갠다(요청 하나하나의 UA 표는 Observability Plus가 있어야 열린다).
+      · **광고 코드를 더 뺐다(82 → 69쪽, 실제 사이트맵 407쪽을 읽어 센 값)** — 본문 1,500자 미만이거나 글자 대부분이 링크인 글: `GuideNav`의 `NO_AD_GUIDES`(online·online-share·deadline-share·region·income-line·mistakes·documents·life-stage·tax-credit-amount·source-conflicts) + `/check`·`/source`. 글이 두꺼워지면 거기서 뺀다. 색인·사이트맵(407)은 그대로.
+      · **화면** — 휴대폰 헤더 검색 목록을 입력칸 폭(235px)이 아니라 화면 폭(351px)으로(`fixed inset-x-3`, sm 이상은 그대로 absolute; 항목 높이 103 → 62px) · 안내 글 PC 본문 15 → 16px · 허브 머리말 문단 최대 폭 44rem(한 줄 94자 → 약 60자) · `/find` 처음 30건만 펴고 나머지는 서버에서 그리는 `<details>` 「더 보기」(기본 화면 휴대폰 26,883 → 8,172px, 경기 14,759px·펴면 29,623px).
+      · 에이전트가 짚은 선택 후보는 안 했다 — 허브 이름 목록 줄 높이(44px 미만 390개)·11px 딱지·에너지바우처 상세 금액 위치(`quick` 상수 끌어오기).
+
 - [ ] 색인 요청 한도는 **고정된 수가 아니다.** 굴러가는 24시간 창이라
       전날 얼마나 썼는지에 따라 그날 들어가는 수가 달라진다. 실측: 09-03 3건,
       09-04 11건, 09-05 11건, 09-06 16건, **09-07 48건(할당량 안 걸림)**,
